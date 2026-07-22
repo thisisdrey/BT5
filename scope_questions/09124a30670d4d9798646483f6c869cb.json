@@ -1,0 +1,152 @@
+[
+  {
+    "question": "'File Name: metric-core/contracts/utils/MetricReentrancyGuardTransient.sol -> Scope: Medium. PriceProviderFactory or AnchoredProviderFactory mis-registers provider parameters, approved factories, or access control in a way that breaks core pool safety.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_a312a0d3-b3c3-4662-878f-1b4906574465?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: metric-periphery/contracts/base/MetricOmmSwapRouterBase.sol -> Scope: Medium. PriceProviderFactory or AnchoredProviderFactory mis-registers provider parameters, approved factories, or access control in a way that breaks core pool safety.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_dadd933d-352d-49d2-9617-1ec8f45df138?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: metric-periphery/contracts/base/PeripheryPayments.sol -> Scope: Medium. PriceProviderFactory or AnchoredProviderFactory mis-registers provider parameters, approved factories, or access control in a way that breaks core pool safety.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_bacba2b3-7cb6-42e1-bb16-88473b11b955?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: metric-periphery/contracts/base/SelfPermit.sol -> Scope: Medium. PriceProviderFactory or AnchoredProviderFactory mis-registers provider parameters, approved factories, or access control in a way that breaks core pool safety.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_06a008d3-1cf2-4595-8f04-37f6602e4400?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: metric-periphery/contracts/common/MetricOmmPoolStateView.sol -> Scope: Medium. PriceProviderFactory or AnchoredProviderFactory mis-registers provider parameters, approved factories, or access control in a way that breaks core pool safety.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_7f84399c-8a69-4ccb-8e35-eaed3ff5ab0f?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: metric-periphery/contracts/extensions/base/BaseMetricExtension.sol -> Scope: Medium. PriceProviderFactory or AnchoredProviderFactory mis-registers provider parameters, approved factories, or access control in a way that breaks core pool safety.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_f8748665-6704-4861-84dd-dbc92516360e?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: metric-periphery/contracts/extensions/DepositAllowlistExtension.sol -> Scope: Medium. PriceProviderFactory or AnchoredProviderFactory mis-registers provider parameters, approved factories, or access control in a way that breaks core pool safety.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_8a86ddff-d09d-4e70-9fa5-af817d206dbd?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: metric-periphery/contracts/extensions/OracleValueStopLossExtension.sol -> Scope: Medium. PriceProviderFactory or AnchoredProviderFactory mis-registers provider parameters, approved factories, or access control in a way that breaks core pool safety.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_5fe72ec3-375d-4dd3-a4ee-7894502589fa?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: metric-periphery/contracts/extensions/PriceVelocityGuardExtension.sol -> Scope: Medium. PriceProviderFactory or AnchoredProviderFactory mis-registers provider parameters, approved factories, or access control in a way that breaks core pool safety.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_d81ae818-3829-43cb-bee0-195ec7265fc0?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: metric-periphery/contracts/extensions/SwapAllowlistExtension.sol -> Scope: Medium. PriceProviderFactory or AnchoredProviderFactory mis-registers provider parameters, approved factories, or access control in a way that breaks core pool safety.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_4e0ddb2c-3afd-4cc8-95d9-2a0e8115e6de?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: metric-periphery/contracts/interfaces/extensions/IDepositAllowlistExtension.sol -> Scope: Medium. PriceProviderFactory or AnchoredProviderFactory mis-registers provider parameters, approved factories, or access control in a way that breaks core pool safety.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_becb943d-e04f-43ab-b3fd-2b6556084bde?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: metric-periphery/contracts/interfaces/extensions/IOracleValueStopLossExtension.sol -> Scope: Medium. PriceProviderFactory or AnchoredProviderFactory mis-registers provider parameters, approved factories, or access control in a way that breaks core pool safety.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_b13fc5d9-167b-451e-a6bd-e95f77e5a84d?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: metric-periphery/contracts/interfaces/extensions/IPriceVelocityGuardExtension.sol -> Scope: Medium. PriceProviderFactory or AnchoredProviderFactory mis-registers provider parameters, approved factories, or access control in a way that breaks core pool safety.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_f9f8097d-6092-4cfb-a626-61200ee89768?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: metric-periphery/contracts/interfaces/extensions/ISwapAllowlistExtension.sol -> Scope: Medium. PriceProviderFactory or AnchoredProviderFactory mis-registers provider parameters, approved factories, or access control in a way that breaks core pool safety.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_edb40576-0ce6-4620-b62f-a07234017748?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: metric-periphery/contracts/interfaces/external/IERC20PermitAllowed.sol -> Scope: Medium. PriceProviderFactory or AnchoredProviderFactory mis-registers provider parameters, approved factories, or access control in a way that breaks core pool safety.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_e86c2dac-a064-4b1c-97ee-a85072679713?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: metric-periphery/contracts/interfaces/IMetricOmmPoolLiquidityAdder.sol -> Scope: Medium. PriceProviderFactory or AnchoredProviderFactory mis-registers provider parameters, approved factories, or access control in a way that breaks core pool safety.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_57a1926a-8bcb-4722-aca2-06370622ac23?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: metric-periphery/contracts/interfaces/IMetricOmmSimpleRouter.sol -> Scope: Medium. PriceProviderFactory or AnchoredProviderFactory mis-registers provider parameters, approved factories, or access control in a way that breaks core pool safety.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_4b10a036-11dc-4afe-a4d0-6b8eddfd19ed?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: metric-periphery/contracts/interfaces/IMetricOmmSwapQuoter.sol -> Scope: Medium. PriceProviderFactory or AnchoredProviderFactory mis-registers provider parameters, approved factories, or access control in a way that breaks core pool safety.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_5332ed91-e48d-49f7-8819-3b81fc4ad39a?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: metric-periphery/contracts/interfaces/IMulticall.sol -> Scope: Medium. PriceProviderFactory or AnchoredProviderFactory mis-registers provider parameters, approved factories, or access control in a way that breaks core pool safety.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_d373f9ff-0972-4241-9e70-6fc5092a026c?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: metric-periphery/contracts/interfaces/IPeripheryPayments.sol -> Scope: Medium. PriceProviderFactory or AnchoredProviderFactory mis-registers provider parameters, approved factories, or access control in a way that breaks core pool safety.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_e2d220bb-eb62-400c-b619-581955427bb8?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: metric-periphery/contracts/interfaces/ISelfPermit.sol -> Scope: Medium. PriceProviderFactory or AnchoredProviderFactory mis-registers provider parameters, approved factories, or access control in a way that breaks core pool safety.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_7e9850e6-16df-4e6c-982e-56e6e2b57330?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: metric-periphery/contracts/interfaces/IWETH9.sol -> Scope: Medium. PriceProviderFactory or AnchoredProviderFactory mis-registers provider parameters, approved factories, or access control in a way that breaks core pool safety.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_bc97e93a-b092-489a-b384-8e8622bd52d2?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: metric-periphery/contracts/libraries/MetricOmmSwapInputs.sol -> Scope: Medium. PriceProviderFactory or AnchoredProviderFactory mis-registers provider parameters, approved factories, or access control in a way that breaks core pool safety.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_21e823b1-3455-4a46-94e9-8aaa79579860?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: metric-periphery/contracts/libraries/MetricOmmSwapPath.sol -> Scope: Medium. PriceProviderFactory or AnchoredProviderFactory mis-registers provider parameters, approved factories, or access control in a way that breaks core pool safety.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_9a29481e-ed45-4105-a1ed-bf2f7e4e3802?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: metric-periphery/contracts/libraries/MetricOmmSwapQuoteDecode.sol -> Scope: Medium. PriceProviderFactory or AnchoredProviderFactory mis-registers provider parameters, approved factories, or access control in a way that breaks core pool safety.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_f9b37855-8193-40ac-b059-e17f809abce9?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: metric-periphery/contracts/libraries/MetricOmmSwapResults.sol -> Scope: Medium. PriceProviderFactory or AnchoredProviderFactory mis-registers provider parameters, approved factories, or access control in a way that breaks core pool safety.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_91b78a39-0618-4156-80fa-40c5373a2497?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: metric-periphery/contracts/libraries/TransientCallbackPool.sol -> Scope: Medium. PriceProviderFactory or AnchoredProviderFactory mis-registers provider parameters, approved factories, or access control in a way that breaks core pool safety.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_01872863-6a17-46e2-a570-c08dc5f6d8ed?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: metric-periphery/contracts/MetricOmmPoolLiquidityAdder.sol -> Scope: Medium. PriceProviderFactory or AnchoredProviderFactory mis-registers provider parameters, approved factories, or access control in a way that breaks core pool safety.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_25d03fd2-2477-4630-a7a3-c1b6df798fe9?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: metric-periphery/contracts/MetricOmmSimpleRouter.sol -> Scope: Medium. PriceProviderFactory or AnchoredProviderFactory mis-registers provider parameters, approved factories, or access control in a way that breaks core pool safety.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_1ed56b1e-6322-4fc2-9e8e-f965577fdd0d?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: smart-contracts-poc/contracts/AnchoredPriceProvider.sol -> Scope: Medium. PriceProviderFactory or AnchoredProviderFactory mis-registers provider parameters, approved factories, or access control in a way that breaks core pool safety.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_f86a1ad8-141d-4fb9-be59-6e9b0090086e?mode=deep",
+    "questions_generated": false
+  }
+]
