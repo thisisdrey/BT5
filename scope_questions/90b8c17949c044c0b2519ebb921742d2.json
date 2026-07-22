@@ -1,0 +1,152 @@
+[
+  {
+    "question": "'File Name: metric-core/contracts/utils/MetricReentrancyGuardTransient.sol -> Scope: Critical. Anchored band math, rounding, staleness, or source-mode clamp lets a pool trade outside mid plus/minus allowed uncertainty and causes direct user or LP loss.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_71c65f94-0a84-4e91-a154-74af3e1cfed7?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: metric-periphery/contracts/base/MetricOmmSwapRouterBase.sol -> Scope: Critical. Anchored band math, rounding, staleness, or source-mode clamp lets a pool trade outside mid plus/minus allowed uncertainty and causes direct user or LP loss.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_2918d0b2-88c6-4684-a8ab-ef00c820a902?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: metric-periphery/contracts/base/PeripheryPayments.sol -> Scope: Critical. Anchored band math, rounding, staleness, or source-mode clamp lets a pool trade outside mid plus/minus allowed uncertainty and causes direct user or LP loss.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_2f192451-0855-4e6e-8ef1-9cbe27d799e7?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: metric-periphery/contracts/base/SelfPermit.sol -> Scope: Critical. Anchored band math, rounding, staleness, or source-mode clamp lets a pool trade outside mid plus/minus allowed uncertainty and causes direct user or LP loss.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_d342a817-98eb-43b2-ac6f-9cbf83850ab7?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: metric-periphery/contracts/common/MetricOmmPoolStateView.sol -> Scope: Critical. Anchored band math, rounding, staleness, or source-mode clamp lets a pool trade outside mid plus/minus allowed uncertainty and causes direct user or LP loss.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_00eb5471-d6d4-4018-82ad-f3132bcf2966?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: metric-periphery/contracts/extensions/base/BaseMetricExtension.sol -> Scope: Critical. Anchored band math, rounding, staleness, or source-mode clamp lets a pool trade outside mid plus/minus allowed uncertainty and causes direct user or LP loss.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_860b26c2-e3ee-43e5-b6a3-96ccda1bcf5d?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: metric-periphery/contracts/extensions/DepositAllowlistExtension.sol -> Scope: Critical. Anchored band math, rounding, staleness, or source-mode clamp lets a pool trade outside mid plus/minus allowed uncertainty and causes direct user or LP loss.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_99555f05-af10-4f1c-b8d2-a981e7685be5?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: metric-periphery/contracts/extensions/OracleValueStopLossExtension.sol -> Scope: Critical. Anchored band math, rounding, staleness, or source-mode clamp lets a pool trade outside mid plus/minus allowed uncertainty and causes direct user or LP loss.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_4e12d882-bcb4-48c9-bb9f-aed477dc3fe2?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: metric-periphery/contracts/extensions/PriceVelocityGuardExtension.sol -> Scope: Critical. Anchored band math, rounding, staleness, or source-mode clamp lets a pool trade outside mid plus/minus allowed uncertainty and causes direct user or LP loss.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_077fb045-38f9-497b-a5bd-f97d87801225?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: metric-periphery/contracts/extensions/SwapAllowlistExtension.sol -> Scope: Critical. Anchored band math, rounding, staleness, or source-mode clamp lets a pool trade outside mid plus/minus allowed uncertainty and causes direct user or LP loss.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_2aec916f-4dff-43d4-b112-694a4a8083ac?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: metric-periphery/contracts/interfaces/extensions/IDepositAllowlistExtension.sol -> Scope: Critical. Anchored band math, rounding, staleness, or source-mode clamp lets a pool trade outside mid plus/minus allowed uncertainty and causes direct user or LP loss.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_3186e232-fd21-418d-8701-12add0afc231?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: metric-periphery/contracts/interfaces/extensions/IOracleValueStopLossExtension.sol -> Scope: Critical. Anchored band math, rounding, staleness, or source-mode clamp lets a pool trade outside mid plus/minus allowed uncertainty and causes direct user or LP loss.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_2d93db16-a45d-486d-bdfc-f955eca2216a?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: metric-periphery/contracts/interfaces/extensions/IPriceVelocityGuardExtension.sol -> Scope: Critical. Anchored band math, rounding, staleness, or source-mode clamp lets a pool trade outside mid plus/minus allowed uncertainty and causes direct user or LP loss.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_329bdf4a-0069-4dd3-9516-173ee8332ecc?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: metric-periphery/contracts/interfaces/extensions/ISwapAllowlistExtension.sol -> Scope: Critical. Anchored band math, rounding, staleness, or source-mode clamp lets a pool trade outside mid plus/minus allowed uncertainty and causes direct user or LP loss.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_af94250d-bd4c-42b5-9528-c10278bc1da2?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: metric-periphery/contracts/interfaces/external/IERC20PermitAllowed.sol -> Scope: Critical. Anchored band math, rounding, staleness, or source-mode clamp lets a pool trade outside mid plus/minus allowed uncertainty and causes direct user or LP loss.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_fd2bf4b4-bbe2-4755-bd85-4e1f7056ffdf?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: metric-periphery/contracts/interfaces/IMetricOmmPoolLiquidityAdder.sol -> Scope: Critical. Anchored band math, rounding, staleness, or source-mode clamp lets a pool trade outside mid plus/minus allowed uncertainty and causes direct user or LP loss.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_1157a126-7c09-4a5d-8724-cb723b7cccff?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: metric-periphery/contracts/interfaces/IMetricOmmSimpleRouter.sol -> Scope: Critical. Anchored band math, rounding, staleness, or source-mode clamp lets a pool trade outside mid plus/minus allowed uncertainty and causes direct user or LP loss.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_b8e51d5a-4f91-4eac-b764-b80ae69a3bf4?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: metric-periphery/contracts/interfaces/IMetricOmmSwapQuoter.sol -> Scope: Critical. Anchored band math, rounding, staleness, or source-mode clamp lets a pool trade outside mid plus/minus allowed uncertainty and causes direct user or LP loss.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_c27e6e09-2daf-464d-9f89-2fb9e050493c?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: metric-periphery/contracts/interfaces/IMulticall.sol -> Scope: Critical. Anchored band math, rounding, staleness, or source-mode clamp lets a pool trade outside mid plus/minus allowed uncertainty and causes direct user or LP loss.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_8c54379d-07d3-4a6f-9110-1c60dbb7e654?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: metric-periphery/contracts/interfaces/IPeripheryPayments.sol -> Scope: Critical. Anchored band math, rounding, staleness, or source-mode clamp lets a pool trade outside mid plus/minus allowed uncertainty and causes direct user or LP loss.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_cb559736-d279-4533-9840-4222a77708ec?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: metric-periphery/contracts/interfaces/ISelfPermit.sol -> Scope: Critical. Anchored band math, rounding, staleness, or source-mode clamp lets a pool trade outside mid plus/minus allowed uncertainty and causes direct user or LP loss.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_22abd873-4ec6-4e0a-ae5c-808e42c6e3ff?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: metric-periphery/contracts/interfaces/IWETH9.sol -> Scope: Critical. Anchored band math, rounding, staleness, or source-mode clamp lets a pool trade outside mid plus/minus allowed uncertainty and causes direct user or LP loss.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_7f0b1264-f5e3-416d-ab29-f6a12bdbed50?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: metric-periphery/contracts/libraries/MetricOmmSwapInputs.sol -> Scope: Critical. Anchored band math, rounding, staleness, or source-mode clamp lets a pool trade outside mid plus/minus allowed uncertainty and causes direct user or LP loss.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_b257f412-88f2-4110-975b-6e1b0b744d34?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: metric-periphery/contracts/libraries/MetricOmmSwapPath.sol -> Scope: Critical. Anchored band math, rounding, staleness, or source-mode clamp lets a pool trade outside mid plus/minus allowed uncertainty and causes direct user or LP loss.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_2f7c7ed0-73c3-47d8-bb0f-66b78fcd0358?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: metric-periphery/contracts/libraries/MetricOmmSwapQuoteDecode.sol -> Scope: Critical. Anchored band math, rounding, staleness, or source-mode clamp lets a pool trade outside mid plus/minus allowed uncertainty and causes direct user or LP loss.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_f40cdc27-3554-4826-80c7-d17486d091c6?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: metric-periphery/contracts/libraries/MetricOmmSwapResults.sol -> Scope: Critical. Anchored band math, rounding, staleness, or source-mode clamp lets a pool trade outside mid plus/minus allowed uncertainty and causes direct user or LP loss.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_65840f0e-c2b1-482d-b73f-82392250f45a?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: metric-periphery/contracts/libraries/TransientCallbackPool.sol -> Scope: Critical. Anchored band math, rounding, staleness, or source-mode clamp lets a pool trade outside mid plus/minus allowed uncertainty and causes direct user or LP loss.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_100d88b0-9bd9-42db-865a-72fef73f27b3?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: metric-periphery/contracts/MetricOmmPoolLiquidityAdder.sol -> Scope: Critical. Anchored band math, rounding, staleness, or source-mode clamp lets a pool trade outside mid plus/minus allowed uncertainty and causes direct user or LP loss.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_e00a611c-e04f-4c69-908e-0c69969ca152?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: metric-periphery/contracts/MetricOmmSimpleRouter.sol -> Scope: Critical. Anchored band math, rounding, staleness, or source-mode clamp lets a pool trade outside mid plus/minus allowed uncertainty and causes direct user or LP loss.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_521926d3-485f-4814-9ce6-707e066ea546?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: smart-contracts-poc/contracts/AnchoredPriceProvider.sol -> Scope: Critical. Anchored band math, rounding, staleness, or source-mode clamp lets a pool trade outside mid plus/minus allowed uncertainty and causes direct user or LP loss.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_3689c4e3-48e8-4742-a31c-5d9ab521dc39?mode=deep",
+    "questions_generated": false
+  }
+]
