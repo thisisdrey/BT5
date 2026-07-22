@@ -1,0 +1,97 @@
+[
+  {
+    "question": "'File Name: smart-contracts-poc/contracts/AnchoredProviderFactory.sol -> Scope: Medium. PriceProviderFactory or AnchoredProviderFactory mis-registers provider parameters, approved factories, or access control in a way that breaks core pool safety.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_97227049-8011-4e2a-8cdf-00eba61de38a?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: smart-contracts-poc/contracts/interfaces/IAnchoredProviderFactory.sol -> Scope: Medium. PriceProviderFactory or AnchoredProviderFactory mis-registers provider parameters, approved factories, or access control in a way that breaks core pool safety.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_a49ce7cc-ca0b-4cff-ad23-c2692074745a?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: smart-contracts-poc/contracts/interfaces/IAnchorSource.sol -> Scope: Medium. PriceProviderFactory or AnchoredProviderFactory mis-registers provider parameters, approved factories, or access control in a way that breaks core pool safety.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_7c5ccbf7-2ba6-47fc-8f2a-3b2928a8e30b?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: smart-contracts-poc/contracts/interfaces/ICompressedOracleV1.sol -> Scope: Medium. PriceProviderFactory or AnchoredProviderFactory mis-registers provider parameters, approved factories, or access control in a way that breaks core pool safety.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_865ff6ef-a239-4477-8baa-730e637b7761?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: smart-contracts-poc/contracts/oracles/compressed/CompressedOracle.sol -> Scope: Medium. PriceProviderFactory or AnchoredProviderFactory mis-registers provider parameters, approved factories, or access control in a way that breaks core pool safety.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_37539357-b75a-4311-b6c3-4b0a80dd1343?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: smart-contracts-poc/contracts/oracles/compressed/OracleBase.sol -> Scope: Medium. PriceProviderFactory or AnchoredProviderFactory mis-registers provider parameters, approved factories, or access control in a way that breaks core pool safety.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_ecee0feb-9e33-47eb-80ad-511a0d38f792?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: smart-contracts-poc/contracts/oracles/providers/ChainlinkOracle.sol -> Scope: Medium. PriceProviderFactory or AnchoredProviderFactory mis-registers provider parameters, approved factories, or access control in a way that breaks core pool safety.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_41fb8161-18a7-4413-8e94-687fca115298?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: smart-contracts-poc/contracts/oracles/providers/docs/en/abuse-protection-integration.md -> Scope: Medium. PriceProviderFactory or AnchoredProviderFactory mis-registers provider parameters, approved factories, or access control in a way that breaks core pool safety.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_8a7a64d2-b3d3-4dc4-a534-7b6c65779074?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: smart-contracts-poc/contracts/oracles/providers/docs/ru/abuse-protection-integration.md -> Scope: Medium. PriceProviderFactory or AnchoredProviderFactory mis-registers provider parameters, approved factories, or access control in a way that breaks core pool safety.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_81c41851-b147-4d18-8772-c87f4ca67593?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: smart-contracts-poc/contracts/oracles/providers/OracleBase.sol -> Scope: Medium. PriceProviderFactory or AnchoredProviderFactory mis-registers provider parameters, approved factories, or access control in a way that breaks core pool safety.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_6f6d9900-22ce-4669-b64f-2b492cfb350b?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: smart-contracts-poc/contracts/oracles/providers/PythOracle.sol -> Scope: Medium. PriceProviderFactory or AnchoredProviderFactory mis-registers provider parameters, approved factories, or access control in a way that breaks core pool safety.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_033a8df7-f61c-41af-9ed9-39353260c7b6?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: smart-contracts-poc/contracts/oracles/utils/Codebook256.sol -> Scope: Medium. PriceProviderFactory or AnchoredProviderFactory mis-registers provider parameters, approved factories, or access control in a way that breaks core pool safety.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_8738b1ae-3db3-4690-9091-9691cd0a859a?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: smart-contracts-poc/contracts/oracles/utils/LazerConsumer.sol -> Scope: Medium. PriceProviderFactory or AnchoredProviderFactory mis-registers provider parameters, approved factories, or access control in a way that breaks core pool safety.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_ea1ce0a7-7288-43c0-bc19-0ed81a04772d?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: smart-contracts-poc/contracts/oracles/utils/TimeMs.sol -> Scope: Medium. PriceProviderFactory or AnchoredProviderFactory mis-registers provider parameters, approved factories, or access control in a way that breaks core pool safety.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_36876cb9-608c-44ac-b90b-4d8f52fcb7c2?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: smart-contracts-poc/contracts/oracles/utils/U64x32.sol -> Scope: Medium. PriceProviderFactory or AnchoredProviderFactory mis-registers provider parameters, approved factories, or access control in a way that breaks core pool safety.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_e307474c-632b-4131-bdaa-add27027b2b4?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: smart-contracts-poc/contracts/PriceProviderFactory.sol -> Scope: Medium. PriceProviderFactory or AnchoredProviderFactory mis-registers provider parameters, approved factories, or access control in a way that breaks core pool safety.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_ff30af02-281a-41a9-8a7d-3667a23a30bd?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: smart-contracts-poc/contracts/PriceProvider.sol -> Scope: Medium. PriceProviderFactory or AnchoredProviderFactory mis-registers provider parameters, approved factories, or access control in a way that breaks core pool safety.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_a40c1bf8-2e9e-44df-95b3-839edf401d8a?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: smart-contracts-poc/contracts/ProtectedPriceProviderL2.sol -> Scope: Medium. PriceProviderFactory or AnchoredProviderFactory mis-registers provider parameters, approved factories, or access control in a way that breaks core pool safety.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_f3f928ce-442d-4c1b-9e0d-830cf314e92c?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: smart-contracts-poc/contracts/ProtectedPriceProvider.sol -> Scope: Medium. PriceProviderFactory or AnchoredProviderFactory mis-registers provider parameters, approved factories, or access control in a way that breaks core pool safety.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_29ec90ef-be3e-4aa1-93ad-c1fc8386c6c5?mode=deep",
+    "questions_generated": false
+  }
+]
