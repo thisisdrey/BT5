@@ -1,0 +1,152 @@
+[
+  {
+    "question": "'File Name: metric-core/contracts/interfaces/callbacks/IMetricOmmModifyLiquidityCallback.sol -> Scope: High. ProtectedPriceProvider or L2 variant accepts stale, sequencer-down, zero, inverted, or excessive-deviation oracle data during swaps.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_e94507c7-f43c-46cf-b110-1303a2af1bb8?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: metric-core/contracts/interfaces/callbacks/IMetricOmmSwapCallback.sol -> Scope: High. ProtectedPriceProvider or L2 variant accepts stale, sequencer-down, zero, inverted, or excessive-deviation oracle data during swaps.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_909e8de6-26c4-4ec0-b150-e21d2ad3a723?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: metric-core/contracts/interfaces/extensions/IMetricOmmExtensions.sol -> Scope: High. ProtectedPriceProvider or L2 variant accepts stale, sequencer-down, zero, inverted, or excessive-deviation oracle data during swaps.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_0d4fca63-5cce-4fca-9e61-d0c4fdc940a8?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: metric-core/contracts/interfaces/IExtsload.sol -> Scope: High. ProtectedPriceProvider or L2 variant accepts stale, sequencer-down, zero, inverted, or excessive-deviation oracle data during swaps.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_4462faf6-4271-4562-b4e8-1cb2ada439fc?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: metric-core/contracts/interfaces/IMetricOmmPoolFactory/IMetricOmmPoolFactoryOwner.sol -> Scope: High. ProtectedPriceProvider or L2 variant accepts stale, sequencer-down, zero, inverted, or excessive-deviation oracle data during swaps.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_77991489-56ca-4430-b609-d9cb0e3f86a9?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: metric-core/contracts/interfaces/IMetricOmmPoolFactory/IMetricOmmPoolFactoryPoolAdmin.sol -> Scope: High. ProtectedPriceProvider or L2 variant accepts stale, sequencer-down, zero, inverted, or excessive-deviation oracle data during swaps.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_cdf86ecd-d0b8-4213-b312-1cb23ff613e4?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: metric-core/contracts/interfaces/IMetricOmmPoolFactory/IMetricOmmPoolFactory.sol -> Scope: High. ProtectedPriceProvider or L2 variant accepts stale, sequencer-down, zero, inverted, or excessive-deviation oracle data during swaps.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_4d02a1a1-396b-410f-add4-096143d890ea?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: metric-core/contracts/interfaces/IMetricOmmPool/IMetricOmmPoolActions.sol -> Scope: High. ProtectedPriceProvider or L2 variant accepts stale, sequencer-down, zero, inverted, or excessive-deviation oracle data during swaps.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_04884158-3617-49bc-b661-9993202e57dd?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: metric-core/contracts/interfaces/IMetricOmmPool/IMetricOmmPoolCollectFees.sol -> Scope: High. ProtectedPriceProvider or L2 variant accepts stale, sequencer-down, zero, inverted, or excessive-deviation oracle data during swaps.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_7d8d2d07-c7c7-4d16-8c7a-4ee290e362fc?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: metric-core/contracts/interfaces/IMetricOmmPool/IMetricOmmPoolFactoryActions.sol -> Scope: High. ProtectedPriceProvider or L2 variant accepts stale, sequencer-down, zero, inverted, or excessive-deviation oracle data during swaps.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_dc85fa55-f645-4ab9-9f75-8cb93d198d9a?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: metric-core/contracts/interfaces/IMetricOmmPool/IMetricOmmPool.sol -> Scope: High. ProtectedPriceProvider or L2 variant accepts stale, sequencer-down, zero, inverted, or excessive-deviation oracle data during swaps.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_261b0d2e-87fc-4c84-95eb-55ad22e49a71?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: metric-core/contracts/interfaces/IPriceProvider/IPriceProvider.sol -> Scope: High. ProtectedPriceProvider or L2 variant accepts stale, sequencer-down, zero, inverted, or excessive-deviation oracle data during swaps.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_bb282077-e7a3-45cc-9752-cbd539064b23?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: metric-core/contracts/libraries/BinDataLibrary.sol -> Scope: High. ProtectedPriceProvider or L2 variant accepts stale, sequencer-down, zero, inverted, or excessive-deviation oracle data during swaps.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_d76c0b3f-4798-4c71-9b09-2fce6ac7786f?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: metric-core/contracts/libraries/CallExtension.sol -> Scope: High. ProtectedPriceProvider or L2 variant accepts stale, sequencer-down, zero, inverted, or excessive-deviation oracle data during swaps.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_09cdd5cb-01d6-450e-bb08-67d58c5c5f69?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: metric-core/contracts/libraries/LiquidityLib.sol -> Scope: High. ProtectedPriceProvider or L2 variant accepts stale, sequencer-down, zero, inverted, or excessive-deviation oracle data during swaps.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_bb6846a8-82bb-4b99-bee5-0ee19f4a191a?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: metric-core/contracts/libraries/PoolActions.sol -> Scope: High. ProtectedPriceProvider or L2 variant accepts stale, sequencer-down, zero, inverted, or excessive-deviation oracle data during swaps.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_b7e9025a-d00e-414a-a07b-f299d91a2523?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: metric-core/contracts/libraries/PoolStateLibrary.sol -> Scope: High. ProtectedPriceProvider or L2 variant accepts stale, sequencer-down, zero, inverted, or excessive-deviation oracle data during swaps.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_9a92ce12-f5f6-4115-a96e-2ddd3ddab0c8?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: metric-core/contracts/libraries/SignedMath.sol -> Scope: High. ProtectedPriceProvider or L2 variant accepts stale, sequencer-down, zero, inverted, or excessive-deviation oracle data during swaps.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_5ae9620b-280d-443e-9098-c91ff6eef2a6?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: metric-core/contracts/libraries/Slot0Library.sol -> Scope: High. ProtectedPriceProvider or L2 variant accepts stale, sequencer-down, zero, inverted, or excessive-deviation oracle data during swaps.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_bb3f94f7-84ae-49b7-9d1c-6ba409ea9b1e?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: metric-core/contracts/libraries/SwapMath.sol -> Scope: High. ProtectedPriceProvider or L2 variant accepts stale, sequencer-down, zero, inverted, or excessive-deviation oracle data during swaps.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_b2566c43-46b0-49e7-9502-b832997170fa?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: metric-core/contracts/libraries/ValidateExtensionsConfig.sol -> Scope: High. ProtectedPriceProvider or L2 variant accepts stale, sequencer-down, zero, inverted, or excessive-deviation oracle data during swaps.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_b7b9a148-4603-4b2f-87c7-9cab0ce6313e?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: metric-core/contracts/MetricOmmPoolDeployer.sol -> Scope: High. ProtectedPriceProvider or L2 variant accepts stale, sequencer-down, zero, inverted, or excessive-deviation oracle data during swaps.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_11b94e6f-bc0d-4866-9037-93794726d218?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: metric-core/contracts/MetricOmmPoolFactory.sol -> Scope: High. ProtectedPriceProvider or L2 variant accepts stale, sequencer-down, zero, inverted, or excessive-deviation oracle data during swaps.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_f234a35a-1470-4cd0-a469-87c50d3cd607?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: metric-core/contracts/MetricOmmPool.sol -> Scope: High. ProtectedPriceProvider or L2 variant accepts stale, sequencer-down, zero, inverted, or excessive-deviation oracle data during swaps.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_5e92a3e7-206f-444f-9c69-4d33eed90226?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: metric-core/contracts/types/FactoryOperation.sol -> Scope: High. ProtectedPriceProvider or L2 variant accepts stale, sequencer-down, zero, inverted, or excessive-deviation oracle data during swaps.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_fde312b0-fc57-464d-ab40-63eabc988efb?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: metric-core/contracts/types/FactoryStorage.sol -> Scope: High. ProtectedPriceProvider or L2 variant accepts stale, sequencer-down, zero, inverted, or excessive-deviation oracle data during swaps.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_0b2ef553-3108-4e63-8cfd-522b9f3232b6?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: metric-core/contracts/types/PoolExtensionsConfig.sol -> Scope: High. ProtectedPriceProvider or L2 variant accepts stale, sequencer-down, zero, inverted, or excessive-deviation oracle data during swaps.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_d03e8b3c-6c8a-404d-8e08-07553a522f18?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: metric-core/contracts/types/PoolOperation.sol -> Scope: High. ProtectedPriceProvider or L2 variant accepts stale, sequencer-down, zero, inverted, or excessive-deviation oracle data during swaps.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_707eb053-f803-4748-8e36-356310a3e51e?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: metric-core/contracts/types/PoolStorage.sol -> Scope: High. ProtectedPriceProvider or L2 variant accepts stale, sequencer-down, zero, inverted, or excessive-deviation oracle data during swaps.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_c0b97454-98f4-40ed-88c7-fd228522f668?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: metric-core/contracts/types/Slot0.sol -> Scope: High. ProtectedPriceProvider or L2 variant accepts stale, sequencer-down, zero, inverted, or excessive-deviation oracle data during swaps.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_0fa8a2c5-2122-4a9b-a8cb-2ea37e0b3684?mode=deep",
+    "questions_generated": false
+  }
+]
