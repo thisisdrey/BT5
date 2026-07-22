@@ -1,0 +1,97 @@
+[
+  {
+    "question": "'File Name: smart-contracts-poc/contracts/AnchoredProviderFactory.sol -> Scope: Critical. Provider/factory token-feed binding error makes a pool consume a quote for the wrong pair, direction, chain, or oracle source.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_d9cf7264-fcbe-4498-8e0b-08e10e65e85a?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: smart-contracts-poc/contracts/interfaces/IAnchoredProviderFactory.sol -> Scope: Critical. Provider/factory token-feed binding error makes a pool consume a quote for the wrong pair, direction, chain, or oracle source.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_5bd764da-690b-42fc-97cf-05c366ee11b8?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: smart-contracts-poc/contracts/interfaces/IAnchorSource.sol -> Scope: Critical. Provider/factory token-feed binding error makes a pool consume a quote for the wrong pair, direction, chain, or oracle source.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_fb59d086-b012-4526-9462-8df07d7c24af?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: smart-contracts-poc/contracts/interfaces/ICompressedOracleV1.sol -> Scope: Critical. Provider/factory token-feed binding error makes a pool consume a quote for the wrong pair, direction, chain, or oracle source.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_15e7c59e-8d74-44e1-b59f-4f0e2fe4305c?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: smart-contracts-poc/contracts/oracles/compressed/CompressedOracle.sol -> Scope: Critical. Provider/factory token-feed binding error makes a pool consume a quote for the wrong pair, direction, chain, or oracle source.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_ef686f37-1ebd-4f36-a3b6-682a80b85197?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: smart-contracts-poc/contracts/oracles/compressed/OracleBase.sol -> Scope: Critical. Provider/factory token-feed binding error makes a pool consume a quote for the wrong pair, direction, chain, or oracle source.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_d01cf372-f763-4dca-b5fa-8e7d70dc4cc6?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: smart-contracts-poc/contracts/oracles/providers/ChainlinkOracle.sol -> Scope: Critical. Provider/factory token-feed binding error makes a pool consume a quote for the wrong pair, direction, chain, or oracle source.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_26390da8-aded-4d4b-bd11-49a60845032a?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: smart-contracts-poc/contracts/oracles/providers/docs/en/abuse-protection-integration.md -> Scope: Critical. Provider/factory token-feed binding error makes a pool consume a quote for the wrong pair, direction, chain, or oracle source.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_c71f132d-3d93-44c6-bbf3-80f6226ff6b9?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: smart-contracts-poc/contracts/oracles/providers/docs/ru/abuse-protection-integration.md -> Scope: Critical. Provider/factory token-feed binding error makes a pool consume a quote for the wrong pair, direction, chain, or oracle source.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_e699cce7-9546-4f5f-b267-e19f23dee84e?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: smart-contracts-poc/contracts/oracles/providers/OracleBase.sol -> Scope: Critical. Provider/factory token-feed binding error makes a pool consume a quote for the wrong pair, direction, chain, or oracle source.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_e41fcfe2-1c46-4a3f-9fee-a9eeeef631f0?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: smart-contracts-poc/contracts/oracles/providers/PythOracle.sol -> Scope: Critical. Provider/factory token-feed binding error makes a pool consume a quote for the wrong pair, direction, chain, or oracle source.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_bc2e5cdb-4325-4c64-b1b4-dc19e2a45293?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: smart-contracts-poc/contracts/oracles/utils/Codebook256.sol -> Scope: Critical. Provider/factory token-feed binding error makes a pool consume a quote for the wrong pair, direction, chain, or oracle source.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_0dc859f3-51c1-42f5-adb0-198fc0824cd5?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: smart-contracts-poc/contracts/oracles/utils/LazerConsumer.sol -> Scope: Critical. Provider/factory token-feed binding error makes a pool consume a quote for the wrong pair, direction, chain, or oracle source.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_9ea11e71-7492-40c0-ae2a-186a3c63dfa6?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: smart-contracts-poc/contracts/oracles/utils/TimeMs.sol -> Scope: Critical. Provider/factory token-feed binding error makes a pool consume a quote for the wrong pair, direction, chain, or oracle source.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_ce6b3f7c-da40-43f9-bce1-6f56249170a7?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: smart-contracts-poc/contracts/oracles/utils/U64x32.sol -> Scope: Critical. Provider/factory token-feed binding error makes a pool consume a quote for the wrong pair, direction, chain, or oracle source.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_d3d921ba-ef67-430c-a2ac-324c90862403?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: smart-contracts-poc/contracts/PriceProviderFactory.sol -> Scope: Critical. Provider/factory token-feed binding error makes a pool consume a quote for the wrong pair, direction, chain, or oracle source.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_2ba1fa0b-9128-4b2b-9d87-75ac4455f329?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: smart-contracts-poc/contracts/PriceProvider.sol -> Scope: Critical. Provider/factory token-feed binding error makes a pool consume a quote for the wrong pair, direction, chain, or oracle source.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_d5e737a4-bbc3-436d-9297-78e7da7addcc?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: smart-contracts-poc/contracts/ProtectedPriceProviderL2.sol -> Scope: Critical. Provider/factory token-feed binding error makes a pool consume a quote for the wrong pair, direction, chain, or oracle source.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_60db9b2e-ac30-4f8c-a4b4-c517b64acb1e?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: smart-contracts-poc/contracts/ProtectedPriceProvider.sol -> Scope: Critical. Provider/factory token-feed binding error makes a pool consume a quote for the wrong pair, direction, chain, or oracle source.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_6976a94b-7aa9-45e5-a1de-e46ddcfe615f?mode=deep",
+    "questions_generated": false
+  }
+]
