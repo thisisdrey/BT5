@@ -1,0 +1,97 @@
+[
+  {
+    "question": "'File Name: smart-contracts-poc/contracts/AnchoredProviderFactory.sol -> Scope: Medium. Bid/ask Q64 conversion, feed ratio mode, decimals, or ceil/floor edge case moves value above Sherlock thresholds.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_023d7fbe-8343-47ce-ac3f-f400935725cf?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: smart-contracts-poc/contracts/interfaces/IAnchoredProviderFactory.sol -> Scope: Medium. Bid/ask Q64 conversion, feed ratio mode, decimals, or ceil/floor edge case moves value above Sherlock thresholds.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_363e57a8-a908-4df0-b2cf-f11366b32540?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: smart-contracts-poc/contracts/interfaces/IAnchorSource.sol -> Scope: Medium. Bid/ask Q64 conversion, feed ratio mode, decimals, or ceil/floor edge case moves value above Sherlock thresholds.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_450c3b9c-54b8-4db6-a43a-bf652b38cae4?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: smart-contracts-poc/contracts/interfaces/ICompressedOracleV1.sol -> Scope: Medium. Bid/ask Q64 conversion, feed ratio mode, decimals, or ceil/floor edge case moves value above Sherlock thresholds.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_bf4554dd-d0f0-4009-bdea-b18afda4489f?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: smart-contracts-poc/contracts/oracles/compressed/CompressedOracle.sol -> Scope: Medium. Bid/ask Q64 conversion, feed ratio mode, decimals, or ceil/floor edge case moves value above Sherlock thresholds.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_f67b5ecb-0969-4a2f-8409-c26add054bb3?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: smart-contracts-poc/contracts/oracles/compressed/OracleBase.sol -> Scope: Medium. Bid/ask Q64 conversion, feed ratio mode, decimals, or ceil/floor edge case moves value above Sherlock thresholds.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_078a6ae8-ce0b-40f9-a76b-e6f7396ee880?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: smart-contracts-poc/contracts/oracles/providers/ChainlinkOracle.sol -> Scope: Medium. Bid/ask Q64 conversion, feed ratio mode, decimals, or ceil/floor edge case moves value above Sherlock thresholds.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_3ffeaf23-49aa-45dc-b6d0-3137ae2926d5?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: smart-contracts-poc/contracts/oracles/providers/docs/en/abuse-protection-integration.md -> Scope: Medium. Bid/ask Q64 conversion, feed ratio mode, decimals, or ceil/floor edge case moves value above Sherlock thresholds.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_37ba0f5b-342d-4625-bab1-c30bef37831c?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: smart-contracts-poc/contracts/oracles/providers/docs/ru/abuse-protection-integration.md -> Scope: Medium. Bid/ask Q64 conversion, feed ratio mode, decimals, or ceil/floor edge case moves value above Sherlock thresholds.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_bd0fac19-495d-4da8-80a4-5096e08587ca?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: smart-contracts-poc/contracts/oracles/providers/OracleBase.sol -> Scope: Medium. Bid/ask Q64 conversion, feed ratio mode, decimals, or ceil/floor edge case moves value above Sherlock thresholds.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_6ffaac94-ec62-4444-aa5a-7fe8f35a7cb5?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: smart-contracts-poc/contracts/oracles/providers/PythOracle.sol -> Scope: Medium. Bid/ask Q64 conversion, feed ratio mode, decimals, or ceil/floor edge case moves value above Sherlock thresholds.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_b02da7d6-d5da-4671-aaa1-a5f47ab5ea2a?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: smart-contracts-poc/contracts/oracles/utils/Codebook256.sol -> Scope: Medium. Bid/ask Q64 conversion, feed ratio mode, decimals, or ceil/floor edge case moves value above Sherlock thresholds.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_9a0e1aba-c180-46f9-ba18-391aaad5a12b?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: smart-contracts-poc/contracts/oracles/utils/LazerConsumer.sol -> Scope: Medium. Bid/ask Q64 conversion, feed ratio mode, decimals, or ceil/floor edge case moves value above Sherlock thresholds.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_2fe48af9-d006-495b-9822-a21b1bffbb44?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: smart-contracts-poc/contracts/oracles/utils/TimeMs.sol -> Scope: Medium. Bid/ask Q64 conversion, feed ratio mode, decimals, or ceil/floor edge case moves value above Sherlock thresholds.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_00cda833-904f-4c4c-a59b-5b1c1662d660?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: smart-contracts-poc/contracts/oracles/utils/U64x32.sol -> Scope: Medium. Bid/ask Q64 conversion, feed ratio mode, decimals, or ceil/floor edge case moves value above Sherlock thresholds.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_18ea1b4f-811b-4436-939f-8c8dd8c1c7f1?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: smart-contracts-poc/contracts/PriceProviderFactory.sol -> Scope: Medium. Bid/ask Q64 conversion, feed ratio mode, decimals, or ceil/floor edge case moves value above Sherlock thresholds.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_c1fa2a28-1a05-412e-920f-81e981bded60?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: smart-contracts-poc/contracts/PriceProvider.sol -> Scope: Medium. Bid/ask Q64 conversion, feed ratio mode, decimals, or ceil/floor edge case moves value above Sherlock thresholds.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_1f5d78cc-0397-48de-8792-cd45710fcb9e?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: smart-contracts-poc/contracts/ProtectedPriceProviderL2.sol -> Scope: Medium. Bid/ask Q64 conversion, feed ratio mode, decimals, or ceil/floor edge case moves value above Sherlock thresholds.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_21db98fb-812a-4018-818e-afe107ed8525?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: smart-contracts-poc/contracts/ProtectedPriceProvider.sol -> Scope: Medium. Bid/ask Q64 conversion, feed ratio mode, decimals, or ceil/floor edge case moves value above Sherlock thresholds.'",
+    "url": "https://deepwiki.com/search/-generate-price-provider-band_44de2ef5-8c46-4096-a574-6f26c1406d3c?mode=deep",
+    "questions_generated": false
+  }
+]
