@@ -1,0 +1,13 @@
+Q18364: rejection-boundary discontinuity in permissionless oracle registration when the provider is in reference mode with no custom source
+
+Question
+Can an unprivileged attacker enter through `smart-contracts-poc/contracts/oracles/providers/OracleBase.sol::register` with provider registration parameters passed through the public oracle registration path while the provider is in reference mode with no custom source, so that crossing a documented spread, staleness, or guard threshold yields a discontinuity the live swap path handles incorrectly along `public register -> approved factory check -> isPool(pool) check -> registeredPool mapping update -> later provider price read`, corrupting the `(feedId, pool)` registration binding, blacklist-clearing side effects, and whether later reads attribute to the intended pool? Registration is intentionally permissionless, so the binding and blacklist semantics have to stay exact even under adversarial public usage. Trade exactly at the transition where the provider should switch from live quote to halt condition.
+
+Target
+- File/function: smart-contracts-poc/contracts/oracles/providers/OracleBase.sol::register
+- Entrypoint: smart-contracts-poc/contracts/oracles/providers/OracleBase.sol::register
+- Attacker controls: provider registration parameters passed through the public oracle registration path
+- Exploit idea: Reach `public register -> approved factory check -> isPool(pool) check -> registeredPool mapping update -> later provider price read` in a live public flow and show that trade exactly at the transition where the provider should switch from live quote to halt condition. The exact value at risk is the `(feedId, pool)` registration binding, blacklist-clearing side effects, and whether later reads attribute to the intended pool.
+- Invariant to test: Every rejection boundary must transition cleanly and fail closed under public access. The concrete assertion should cover the `(feedId, pool)` registration binding, blacklist-clearing side effects, and whether later reads attribute to the intended pool.
+- Expected Immunefi impact: High bad-price execution or broken swap functionality at quote boundaries.
+- Fast validation: Attempt conflicting public registrations and assert only the intended `(feedId, pool)` pair becomes active and no unrelated pool read is re-enabled.

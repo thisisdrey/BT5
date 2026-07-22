@@ -1,0 +1,13 @@
+Q18477: synthetic ratio direction error in provider factory ownership and updater assumptions when the oracle mid is valid but its spread or staleness sits close to the rejection boundary
+
+Question
+Can an unprivileged attacker enter through `metric-core/contracts/MetricOmmPoolFactory.sol::createPool and smart-contracts-poc/contracts/oracles/providers/OracleBase.sol::register` with live source-mode operation where the source quote sits near the anchor-band edge while the oracle mid is valid but its spread or staleness sits close to the rejection boundary, so that two-feed ratio mode uses the right feeds but the wrong direction, spread composition, or rounding convention along `factory-created provider -> later public swap or registration relies on provider ownership and approved-factory assumptions`, corrupting provider creator identity, approved factory assumptions, and whether live users can rely on the provider shape they were routed into? Trusted roles remain trusted, but any bug that lets a permissionless caller bind the wrong provider assumptions into a live pool is in scope. Trigger a public swap through a synthetically priced pool and see whether the ratio quote moves opposite to the intended pair orientation.
+
+Target
+- File/function: smart-contracts-poc/contracts/PriceProviderFactory.sol and smart-contracts-poc/contracts/AnchoredProviderFactory.sol provider ownership model
+- Entrypoint: metric-core/contracts/MetricOmmPoolFactory.sol::createPool and smart-contracts-poc/contracts/oracles/providers/OracleBase.sol::register
+- Attacker controls: live source-mode operation where the source quote sits near the anchor-band edge
+- Exploit idea: Reach `factory-created provider -> later public swap or registration relies on provider ownership and approved-factory assumptions` in a live public flow and show that trigger a public swap through a synthetically priced pool and see whether the ratio quote moves opposite to the intended pair orientation. The exact value at risk is provider creator identity, approved factory assumptions, and whether live users can rely on the provider shape they were routed into.
+- Invariant to test: Synthetic provider mode must preserve pair direction and bounded spread exactly as documented. The concrete assertion should cover provider creator identity, approved factory assumptions, and whether live users can rely on the provider shape they were routed into.
+- Expected Immunefi impact: Critical direct loss if pools trade against an inverted or materially wrong synthetic quote.
+- Fast validation: Create pools around provider ownership and approved-factory boundaries and assert later public swaps always read the intended provider semantics.

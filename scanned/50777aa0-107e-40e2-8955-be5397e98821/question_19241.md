@@ -1,0 +1,13 @@
+Q19241: synthetic ratio direction error in provider-backed state views when the provider is in reference mode with no custom source
+
+Question
+Can an unprivileged attacker enter through `metric-periphery/contracts/lens/MetricOmmPoolDataProvider.sol::distanceFromProvidedPriceX64 and metric-periphery/contracts/lens/MetricOmmSwapQuoter.sol::quoteLiveExactIn` with public swaps that force the pool to read its price provider at a boundary quote while the provider is in reference mode with no custom source, so that two-feed ratio mode uses the right feeds but the wrong direction, spread composition, or rounding convention along `public lens or quote -> provider-backed state read -> integrator or user executes live swap`, corrupting distance from provided price, quoted output, and any live execution that consumes those provider-derived values? Medium-severity provider bugs often show up here first because a public consumer trusts a view that diverges from the live swap path. Trigger a public swap through a synthetically priced pool and see whether the ratio quote moves opposite to the intended pair orientation.
+
+Target
+- File/function: metric-periphery/contracts/lens/MetricOmmPoolDataProvider.sol::distanceFromProvidedPriceX64 and metric-periphery/contracts/lens/MetricOmmSwapQuoter.sol
+- Entrypoint: metric-periphery/contracts/lens/MetricOmmPoolDataProvider.sol::distanceFromProvidedPriceX64 and metric-periphery/contracts/lens/MetricOmmSwapQuoter.sol::quoteLiveExactIn
+- Attacker controls: public swaps that force the pool to read its price provider at a boundary quote
+- Exploit idea: Reach `public lens or quote -> provider-backed state read -> integrator or user executes live swap` in a live public flow and show that trigger a public swap through a synthetically priced pool and see whether the ratio quote moves opposite to the intended pair orientation. The exact value at risk is distance from provided price, quoted output, and any live execution that consumes those provider-derived values.
+- Invariant to test: Synthetic provider mode must preserve pair direction and bounded spread exactly as documented. The concrete assertion should cover distance from provided price, quoted output, and any live execution that consumes those provider-derived values.
+- Expected Immunefi impact: Critical direct loss if pools trade against an inverted or materially wrong synthetic quote.
+- Fast validation: Compare provider-backed view outputs with the next live swap and flag any deterministic divergence that creates a reproducible loss-making execution.

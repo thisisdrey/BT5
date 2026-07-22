@@ -1,10 +1,9 @@
 import json
 import os
 
-# todo: if scope_files is: 500 > 50, 300 > 30 , 100 > 10
-MAX_REPO = 20
-SOURCE_REPO = "crypto-org-chain/chain-main"
-REPO_NAME = "chain-main"
+MAX_REPO = 25
+SOURCE_REPO = 'codertjay/2026-07-metric-dev-oyakhil-main'
+REPO_NAME = '2026-07-metric-dev-oyakhil-main'
 run_number = os.environ.get("GITHUB_RUN_NUMBER") or os.environ.get(
     "CI_PIPELINE_IID", "0"
 )
@@ -46,276 +45,140 @@ else:
         BASE_URL = f"https://deepwiki.com/{SOURCE_REPO}"
 
 
+
 scope_files = [
-    "app/ante.go",
-    "app/app.go",
-    "app/encoding.go",
-    "app/export.go",
-    "app/genesis.go",
-    "app/params/encoding.go",
-    "app/params/proto.go",
-    "app/types.go",
-    "app/upgrades.go",
-    "app/versiondb.go",
-    "app/versiondb_placeholder.go",
-    "cmd/chain-maind/app/app.go",
-    "cmd/chain-maind/app/appunix.go",
-    "cmd/chain-maind/app/appwin.go",
-    "cmd/chain-maind/app/versiondb.go",
-    "cmd/chain-maind/app/versiondb_placeholder.go",
-    "cmd/chain-maind/main.go",
-    "cmd/chain-maind/opendb/opendb.go",
-    "cmd/chain-maind/opendb/opendb_rocksdb.go",
-    "config/config.go",
-    "config/prefix_mainnet.go",
-    "config/prefix_testnet.go",
-    "proto/chainmain/chainmain/v1/genesis.proto",
-    "proto/chainmain/inflation/v1/genesis.proto",
-    "proto/chainmain/inflation/v1/params.proto",
-    "proto/chainmain/inflation/v1/query.proto",
-    "proto/chainmain/inflation/v1/tx.proto",
-    "proto/chainmain/nft/v1/genesis.proto",
-    "proto/chainmain/nft/v1/nft.proto",
-    "proto/chainmain/nft/v1/query.proto",
-    "proto/chainmain/nft/v1/tx.proto",
-    "proto/chainmain/nft_transfer/v1/genesis.proto",
-    "proto/chainmain/nft_transfer/v1/packet.proto",
-    "proto/chainmain/nft_transfer/v1/query.proto",
-    "proto/chainmain/nft_transfer/v1/trace.proto",
-    "proto/chainmain/nft_transfer/v1/tx.proto",
-    "proto/chainmain/supply/v1/accounts.proto",
-    "proto/chainmain/supply/v1/genesis.proto",
-    "proto/chainmain/supply/v1/query.proto",
-    "proto/chainmain/tieredrewards/v1/event.proto",
-    "proto/chainmain/tieredrewards/v1/genesis.proto",
-    "proto/chainmain/tieredrewards/v1/params.proto",
-    "proto/chainmain/tieredrewards/v1/query.proto",
-    "proto/chainmain/tieredrewards/v1/tx.proto",
-    "proto/chainmain/tieredrewards/v1/types.proto",
-    "x/chainmain/client/cli/genaccounts.go",
-    "x/chainmain/client/cli/query.go",
-    "x/chainmain/client/cli/tx.go",
-    "x/chainmain/client/rest/rest.go",
-    "x/chainmain/genesis.go",
-    "x/chainmain/keeper/keeper.go",
-    "x/chainmain/module.go",
-    "x/chainmain/types/errors.go",
-    "x/chainmain/types/genesis.go",
-    "x/chainmain/types/keys.go",
-    "x/chainmain/types/types.go",
-    "x/inflation/abci.go",
-    "x/inflation/client/cli/query.go",
-    "x/inflation/client/cli/tx.go",
-    "x/inflation/keeper/genesis.go",
-    "x/inflation/keeper/grpc_query.go",
-    "x/inflation/keeper/keeper.go",
-    "x/inflation/keeper/mint.go",
-    "x/inflation/keeper/msg_server.go",
-    "x/inflation/module.go",
-    "x/inflation/types/codec.go",
-    "x/inflation/types/expected_keepers.go",
-    "x/inflation/types/genesis.go",
-    "x/inflation/types/keys.go",
-    "x/inflation/types/params.go",
-    "x/nft-transfer/client/cli/cli.go",
-    "x/nft-transfer/client/cli/query.go",
-    "x/nft-transfer/client/cli/tx.go",
-    "x/nft-transfer/ibc_module.go",
-    "x/nft-transfer/keeper/genesis.go",
-    "x/nft-transfer/keeper/grpc_query.go",
-    "x/nft-transfer/keeper/keeper.go",
-    "x/nft-transfer/keeper/msg_server.go",
-    "x/nft-transfer/keeper/packet.go",
-    "x/nft-transfer/keeper/relay.go",
-    "x/nft-transfer/keeper/trace.go",
-    "x/nft-transfer/module.go",
-    "x/nft-transfer/types/ack.go",
-    "x/nft-transfer/types/codec.go",
-    "x/nft-transfer/types/errors.go",
-    "x/nft-transfer/types/events.go",
-    "x/nft-transfer/types/expected_keepers.go",
-    "x/nft-transfer/types/genesis.go",
-    "x/nft-transfer/types/keys.go",
-    "x/nft-transfer/types/msgs.go",
-    "x/nft-transfer/types/packet.go",
-    "x/nft-transfer/types/trace.go",
-    "x/nft/client/cli/flags.go",
-    "x/nft/client/cli/query.go",
-    "x/nft/client/cli/tx.go",
-    "x/nft/exported/nft.go",
-    "x/nft/genesis.go",
-    "x/nft/keeper/collection.go",
-    "x/nft/keeper/denom.go",
-    "x/nft/keeper/grpc_query.go",
-    "x/nft/keeper/keeper.go",
-    "x/nft/keeper/msg_server.go",
-    "x/nft/keeper/nft.go",
-    "x/nft/keeper/owners.go",
-    "x/nft/module.go",
-    "x/nft/types/codec.go",
-    "x/nft/types/collection.go",
-    "x/nft/types/denom.go",
-    "x/nft/types/errors.go",
-    "x/nft/types/events.go",
-    "x/nft/types/expected_keepers.go",
-    "x/nft/types/genesis.go",
-    "x/nft/types/keys.go",
-    "x/nft/types/msgs.go",
-    "x/nft/types/nft.go",
-    "x/nft/types/owners.go",
-    "x/nft/types/querier.go",
-    "x/nft/types/validation.go",
-    "x/supply/client/cli/query.go",
-    "x/supply/keeper/genesis.go",
-    "x/supply/keeper/grpc_query.go",
-    "x/supply/keeper/keeper.go",
-    "x/supply/module.go",
-    "x/supply/types/expected_keepers.go",
-    "x/supply/types/genesis.go",
-    "x/supply/types/keys.go",
-    "x/supply/types/querier.go",
-    "x/tieredrewards/client/cli/helpers.go",
-    "x/tieredrewards/client/cli/query.go",
-    "x/tieredrewards/client/cli/tx.go",
-    "x/tieredrewards/keeper/abci.go",
-    "x/tieredrewards/keeper/bonus_rewards.go",
-    "x/tieredrewards/keeper/claim_rewards.go",
-    "x/tieredrewards/keeper/collections_helpers.go",
-    "x/tieredrewards/keeper/delegation.go",
-    "x/tieredrewards/keeper/force_exit.go",
-    "x/tieredrewards/keeper/genesis.go",
-    "x/tieredrewards/keeper/gov_tally.go",
-    "x/tieredrewards/keeper/grpc_query.go",
-    "x/tieredrewards/keeper/hooks.go",
-    "x/tieredrewards/keeper/keeper.go",
-    "x/tieredrewards/keeper/migrations.go",
-    "x/tieredrewards/keeper/msg_server.go",
-    "x/tieredrewards/keeper/msg_server_auth.go",
-    "x/tieredrewards/keeper/msg_validate.go",
-    "x/tieredrewards/keeper/position.go",
-    "x/tieredrewards/keeper/position_state.go",
-    "x/tieredrewards/keeper/redelegation_mapping.go",
-    "x/tieredrewards/keeper/slash.go",
-    "x/tieredrewards/keeper/tier.go",
-    "x/tieredrewards/keeper/transfer_delegation.go",
-    "x/tieredrewards/keeper/validator_events.go",
-    "x/tieredrewards/keeper/voting_power.go",
-    "x/tieredrewards/migrations/v2/migrate.go",
-    "x/tieredrewards/module.go",
-    "x/tieredrewards/types/codec.go",
-    "x/tieredrewards/types/errors.go",
-    "x/tieredrewards/types/expected_keepers.go",
-    "x/tieredrewards/types/genesis.go",
-    "x/tieredrewards/types/keys.go",
-    "x/tieredrewards/types/msgs.go",
-    "x/tieredrewards/types/params.go",
-    "x/tieredrewards/types/position.go",
-    "x/tieredrewards/types/position_state.go",
-    "x/tieredrewards/types/tier.go",
+    'metric-core/contracts/interfaces/callbacks/IMetricOmmModifyLiquidityCallback.sol',
+    'metric-core/contracts/interfaces/callbacks/IMetricOmmSwapCallback.sol',
+    'metric-core/contracts/interfaces/extensions/IMetricOmmExtensions.sol',
+    'metric-core/contracts/interfaces/IExtsload.sol',
+    'metric-core/contracts/interfaces/IMetricOmmPoolFactory/IMetricOmmPoolFactoryOwner.sol',
+    'metric-core/contracts/interfaces/IMetricOmmPoolFactory/IMetricOmmPoolFactoryPoolAdmin.sol',
+    'metric-core/contracts/interfaces/IMetricOmmPoolFactory/IMetricOmmPoolFactory.sol',
+    'metric-core/contracts/interfaces/IMetricOmmPool/IMetricOmmPoolActions.sol',
+    'metric-core/contracts/interfaces/IMetricOmmPool/IMetricOmmPoolCollectFees.sol',
+    'metric-core/contracts/interfaces/IMetricOmmPool/IMetricOmmPoolFactoryActions.sol',
+    'metric-core/contracts/interfaces/IMetricOmmPool/IMetricOmmPool.sol',
+    'metric-core/contracts/interfaces/IPriceProvider/IPriceProvider.sol',
+    'metric-core/contracts/libraries/BinDataLibrary.sol',
+    'metric-core/contracts/libraries/CallExtension.sol',
+    'metric-core/contracts/libraries/LiquidityLib.sol',
+    'metric-core/contracts/libraries/PoolActions.sol',
+    'metric-core/contracts/libraries/PoolStateLibrary.sol',
+    'metric-core/contracts/libraries/SignedMath.sol',
+    'metric-core/contracts/libraries/Slot0Library.sol',
+    'metric-core/contracts/libraries/SwapMath.sol',
+    'metric-core/contracts/libraries/ValidateExtensionsConfig.sol',
+    'metric-core/contracts/MetricOmmPoolDeployer.sol',
+    'metric-core/contracts/MetricOmmPoolFactory.sol',
+    'metric-core/contracts/MetricOmmPool.sol',
+    'metric-core/contracts/types/FactoryOperation.sol',
+    'metric-core/contracts/types/FactoryStorage.sol',
+    'metric-core/contracts/types/PoolExtensionsConfig.sol',
+    'metric-core/contracts/types/PoolOperation.sol',
+    'metric-core/contracts/types/PoolStorage.sol',
+    'metric-core/contracts/types/Slot0.sol',
+    'metric-core/contracts/utils/MetricReentrancyGuardTransient.sol',
+    'metric-periphery/contracts/base/MetricOmmSwapRouterBase.sol',
+    'metric-periphery/contracts/base/PeripheryPayments.sol',
+    'metric-periphery/contracts/base/SelfPermit.sol',
+    'metric-periphery/contracts/common/MetricOmmPoolStateView.sol',
+    'metric-periphery/contracts/extensions/base/BaseMetricExtension.sol',
+    'metric-periphery/contracts/extensions/DepositAllowlistExtension.sol',
+    'metric-periphery/contracts/extensions/OracleValueStopLossExtension.sol',
+    'metric-periphery/contracts/extensions/PriceVelocityGuardExtension.sol',
+    'metric-periphery/contracts/extensions/SwapAllowlistExtension.sol',
+    'metric-periphery/contracts/interfaces/extensions/IDepositAllowlistExtension.sol',
+    'metric-periphery/contracts/interfaces/extensions/IOracleValueStopLossExtension.sol',
+    'metric-periphery/contracts/interfaces/extensions/IPriceVelocityGuardExtension.sol',
+    'metric-periphery/contracts/interfaces/extensions/ISwapAllowlistExtension.sol',
+    'metric-periphery/contracts/interfaces/external/IERC20PermitAllowed.sol',
+    'metric-periphery/contracts/interfaces/IMetricOmmPoolLiquidityAdder.sol',
+    'metric-periphery/contracts/interfaces/IMetricOmmSimpleRouter.sol',
+    'metric-periphery/contracts/interfaces/IMetricOmmSwapQuoter.sol',
+    'metric-periphery/contracts/interfaces/IMulticall.sol',
+    'metric-periphery/contracts/interfaces/IPeripheryPayments.sol',
+    'metric-periphery/contracts/interfaces/ISelfPermit.sol',
+    'metric-periphery/contracts/interfaces/IWETH9.sol',
+    'metric-periphery/contracts/libraries/MetricOmmSwapInputs.sol',
+    'metric-periphery/contracts/libraries/MetricOmmSwapPath.sol',
+    'metric-periphery/contracts/libraries/MetricOmmSwapQuoteDecode.sol',
+    'metric-periphery/contracts/libraries/MetricOmmSwapResults.sol',
+    'metric-periphery/contracts/libraries/TransientCallbackPool.sol',
+    'metric-periphery/contracts/MetricOmmPoolLiquidityAdder.sol',
+    'metric-periphery/contracts/MetricOmmSimpleRouter.sol',
+    'smart-contracts-poc/contracts/AnchoredPriceProvider.sol',
+    'smart-contracts-poc/contracts/AnchoredProviderFactory.sol',
+    'smart-contracts-poc/contracts/interfaces/IAnchoredProviderFactory.sol',
+    'smart-contracts-poc/contracts/interfaces/IAnchorSource.sol',
+    'smart-contracts-poc/contracts/interfaces/ICompressedOracleV1.sol',
+    'smart-contracts-poc/contracts/oracles/compressed/CompressedOracle.sol',
+    'smart-contracts-poc/contracts/oracles/compressed/OracleBase.sol',
+    'smart-contracts-poc/contracts/oracles/providers/ChainlinkOracle.sol',
+    'smart-contracts-poc/contracts/oracles/providers/docs/en/abuse-protection-integration.md',
+    'smart-contracts-poc/contracts/oracles/providers/docs/ru/abuse-protection-integration.md',
+    'smart-contracts-poc/contracts/oracles/providers/OracleBase.sol',
+    'smart-contracts-poc/contracts/oracles/providers/PythOracle.sol',
+    'smart-contracts-poc/contracts/oracles/utils/Codebook256.sol',
+    'smart-contracts-poc/contracts/oracles/utils/LazerConsumer.sol',
+    'smart-contracts-poc/contracts/oracles/utils/TimeMs.sol',
+    'smart-contracts-poc/contracts/oracles/utils/U64x32.sol',
+    'smart-contracts-poc/contracts/PriceProviderFactory.sol',
+    'smart-contracts-poc/contracts/PriceProvider.sol',
+    'smart-contracts-poc/contracts/ProtectedPriceProviderL2.sol',
+    'smart-contracts-poc/contracts/ProtectedPriceProvider.sol',
 ]
 
 target_scopes = [
-    "Critical. Unprivileged on-chain action causes unintentional withdrawal, draining, loss, theft, burn, or permanent lock of user funds or economically valuable NFTs on Cronos POS Chain.",
-    "Critical. Inflation, supply, bank, module-account, mint, burn, or escrow accounting flaw creates unbacked assets, loses backed assets, or lets value leave the intended module/account boundary.",
-    "Critical. IBC NFT transfer escrow, burn, mint, class-trace, acknowledgement, timeout, or refund flaw enables duplicate withdrawal, unauthorized voucher minting, unauthorized unescrow, or loss of NFTs.",
-    "Critical. NFT module authorization or ownership invariant break lets an attacker mint, transfer, burn, edit, or seize denominations or NFTs they do not control.",
-    "Critical. Tiered rewards position, delegation, redelegation, slashing, exit, withdrawal, or reward-accounting flaw lets an attacker withdraw delegated stake, claim rewards, or move voting power not owned by them.",
-    "Critical. Genesis, migration, upgrade, app wiring, keeper permission, or module account configuration flaw installs unsafe production state that can directly lead to fund loss or unauthorized asset movement.",
-    "High. Reward, inflation-decay, base/bonus reward, or staking hook logic flaw lets a user repeatedly or incorrectly claim material rewards or bypass lock/exit economics with direct economic loss.",
-    "High. Ante, authz, feegrant, address-prefix, signer, or CLI transaction construction flaw causes a signed or authorized production transaction to spend, lock, burn, transfer, or delegate assets contrary to the signer authorization.",
-    "High. Cross-module invariant break between staking, slashing, distribution, bank, NFT, NFT-transfer, supply, inflation, or tieredrewards corrupts balances, shares, ownership, rewards, or escrow state with direct fund-loss impact.",
+    'Critical. Anchored band math, rounding, staleness, or source-mode clamp lets a pool trade outside mid plus/minus allowed uncertainty and causes direct user or LP loss.',
+    'Critical. Provider/factory token-feed binding error makes a pool consume a quote for the wrong pair, direction, chain, or oracle source.',
+    'High. Source, confidenceParam, marginStep, or mutable provider update path bypasses intended bounds, cooldown, or role checks with bad-price swap impact.',
+    'High. ProtectedPriceProvider or L2 variant accepts stale, sequencer-down, zero, inverted, or excessive-deviation oracle data during swaps.',
+    'Medium. PriceProviderFactory or AnchoredProviderFactory mis-registers provider parameters, approved factories, or access control in a way that breaks core pool safety.',
+    'Medium. Bid/ask Q64 conversion, feed ratio mode, decimals, or ceil/floor edge case moves value above Sherlock thresholds.',
 ]
+
+METRIC_ALLOWED_IMPACT_SCOPE = '## Metric OMM Allowed Impact Gate\nOnly accept contest-relevant impacts:\n- Critical/High/Medium direct loss of user principal, protocol fees, or owed LP assets above Sherlock thresholds.\n- Broken core pool functionality causing loss of funds or unusable withdraw/swap/liquidity flows.\n- Pool insolvency: balances fail to cover LP claims, owed fees, or swap settlement.\n- Swap conservation failure: trader receives more than the oracle/bin curve permits or pool fails to receive owed input.\n- Bad-price execution: stale, inverted, unbounded, or unclamped bid/ask quote reaches a pool swap.\n- Admin-boundary break: pool admin exceeds caps, bypasses timelocks, or factory/oracle role checks are bypassed by an unprivileged path.\nOut of scope: non-standard ERC20 behavior except USDC/USDT, malicious initial pool setup, trusted factory owner/oracle admin actions, correct off-chain oracle data, tests, mocks, scripts, deployments, docs-only issues with no code-level impact, gas-only DoS, crashes, style, or low-value dust.'
+
+SMART_AUDIT_PIVOTS = '## Smart Audit Pivots\n- Anchored quote path: pool calls `getBidAndAskPrice`, provider fetches oracle `price(feedId, pool)`, computes mid/spread, enforces staleness/max spread, applies minMargin/confidence/marginStep, clamps source quotes, and rejects zero/inverted outputs.\n- Factory path: provider creation must bind base/quote token, base/quote feed id, offchain oracle, mutable params, source authority, approved factory/pool use, and immutable band parameters.\n- Source path: arbitrary `IAnchorSource` output is allowed only because final quotes cannot be tighter than anchor band; prove clamp, rounding, gas-limit, revert handling, and fallback behavior preserve that guarantee.\n- Protected/provider path: price update gates, maxTimeDelta/maxRefStaleness, L1/L2 sequencer-down checks, and factory-created provider assumptions must block stale or bad-price execution.'
 
 
 def question_generator(target_file: str) -> str:
     """
-    Generate exploit-focused audit and fuzzing questions for one Cronos POS Chain target.
-
-    target_file format:
-    "'File Name: x/tieredrewards/keeper/msg_server.go -> Scope: Critical. Tiered rewards position, delegation, redelegation, slashing, exit, withdrawal, or reward-accounting flaw lets an attacker withdraw delegated stake, claim rewards, or move voting power not owned by them.'"
+    Generate anchored price-provider, provider factory, and protected-provider questions for one Metric OMM target.
     """
 
     prompt = f"""
-    ```
-
-    Generate exploit-focused security audit and fuzzing questions for this exact Cronos POS Chain target:
+    Generate price provider band safety security questions for this exact Metric OMM contest target:
 
     {target_file}
 
-    Project focus:
-    This repository is Cronos POS Chain, a Cosmos SDK/CometBFT application. Production value paths include app wiring and ante handling, module account permissions, genesis/upgrades/version DB, `x/tieredrewards`, `x/nft`, `x/nft-transfer`, `x/inflation`, `x/supply`, `x/chainmain`, protobuf message definitions, and CLI transaction builders. The bounty focus is High/Critical blockchain impact: direct fund loss, draining, unauthorized asset movement, unbacked minting, duplicate claims, or economically meaningful loss of NFTs or rewards.
+    Project lens:
+    Focus on AnchoredPriceProvider, AnchoredProviderFactory, PriceProvider, PriceProviderFactory, ProtectedPriceProvider, ProtectedPriceProviderL2, source mode, reference mode, band clipping, confidence parameters, token/feed binding, and pool-attributed reads.
 
-    Use concrete project mechanisms when relevant: `ChainApp`, `maccPerms`, `moduleAccsAllowedToReceiveExternalFunds`, keeper wiring, `MsgServer` methods, `Validate`/`ValidateBasic`, `GetSigners`, authz/feegrant/ante handling, NFT denom/owner maps, IBC NFT class traces and escrow addresses, packet ack/refund/timeout paths, tiered rewards positions, delegated accounts, slashing hooks, reward checkpoints, inflation decay, supply queries, genesis validation, and migrations.
+    Contest impact gate:
+    {METRIC_ALLOWED_IMPACT_SCOPE}
 
-    Analyst mindset:
-
-    * Think like an exploit engineer, not a linter.
-    * Infer the file's role first, then generate only questions that fit that role.
-    * Reason in state transitions: balances, supply, module account funds, NFT ownership, denom ownership, escrowed assets, vouchers, delegation shares, reward checkpoints, position state, voting power, signer identity, and genesis or migration state before and after the exploit path.
-    * Prefer questions that can produce unauthorized transfer/burn/mint, duplicate withdrawal/claim, bypassed lock/exit/slashing rule, unsafe module permissions, or corrupted accounting in the fewest realistic steps.
-    * If the file is a library, proto, or CLI path, target only reachable production callers or signed transaction flows that depend on it.
-
-    Core invariants:
-
-    * No account or module account may transfer, burn, mint, escrow, unescrow, delegate, undelegate, or withdraw assets without the intended signer, owner, keeper authority, or IBC packet lifecycle.
-    * NFT class traces, voucher class IDs, escrow addresses, denom owners, token owners, acks, timeouts, and refunds must conserve one real NFT per valid cross-chain transfer.
-    * Tiered rewards positions must preserve owner, delegated account, validator, shares, lock/exit status, reward checkpoint, slash, and withdrawal invariants across all message and hook sequences.
-    * Mint, inflation, supply, distribution, staking, and bank accounting must not create unbacked supply or allow value to leave intended module boundaries.
-    * Genesis, migrations, upgrades, address prefixes, protobuf messages, signer extraction, authz, feegrant, and ante wiring must not create a production path to unauthorized asset movement.
+    {SMART_AUDIT_PIVOTS}
 
     Rules:
+    * Treat `File Name:` as the exact file and `Scope:` as the only impact.
+    * Assume repo context is accessible; do not ask for code.
+    * Attacker is unprivileged: trader, LP, router caller, public pool creator, contract caller, or public oracle pusher where the contract allows it.
+    * Standard ERC20 tokens are in scope, including USDC and USDT. Do not rely on non-standard token behavior.
+    * Factory owner and oracle admin are trusted. Pool admin is semi-trusted only inside configured caps and timelocks; bypassing those boundaries can be valid.
+    * Pools are assumed honestly configured and non-malicious at creation unless the question proves a validation bypass in scoped code.
+    * Correct off-chain oracle prices are assumed; only on-chain validation, attribution, staleness, encoding, or clipping failures are in scope.
+    * Exclude tests, mocks, scripts, deployments, local tooling, docs-only issues with no code-level impact, gas-only DoS, crashes, style, and dependency-only behavior.
+    * Generate 20 to 30 high-signal questions. Avoid generic checklist items and repeated root causes.
+    * Name the exact value at risk: token balance, LP shares, owed fees, bin state, bid/ask, price limit, provider address, feed id, timestamp, extension decision, admin cap, or pool registry entry.
+    * Every question must be testable with a Foundry unit, integration, fork, or property test.
 
-    * Treat `File Name:` as the exact file/module.
-    * Treat `Scope:` as the ONLY impact to target.
-    * Assume full repo context is accessible.
-    * Do not ask for code or say anything is missing.
-    * Attacker may be an unprivileged account, NFT owner, delegator, validator/delegator using normal messages, authz grantee, feegrant user, IBC counterparty supplying packets, or CLI user signing a production transaction.
-    * Do not rely on privileged governance, validator majority or 51% control, leaked keys, malicious maintainers, malicious operators or relayers without a project-side validation failure, unsupported local config, social engineering, or upstream-only Cosmos SDK/CometBFT/IBC bugs.
-    * Exclude denial of service, spam, gas-only issues, liveness, best practices, dependency-only issues, harmless query/UI/CLI display bugs, and reward dilution without user-fund loss.
-    * Generate 20 to 30 high-signal questions.
-    * At least 70% must be multi-step flow, invariant, authorization, replay, IBC lifecycle, accounting, signer, migration, hook, or cross-module questions.
-    * Every question must be testable by a runnable `go test`, module keeper test, app integration test, fuzz test, invariant test, or transaction-sequence PoC.
-    * Avoid generic checklist questions and repeated root causes.
-    * Each question must target a plausible issue class for the exact file and scope.
-    * Each question must anchor to concrete symbols when possible: function names, structs, mappings, storage variables, or specific cross-module call sites.
-    * Prefer questions that name the exact value that may be corrupted: account balances, supply, module account balances, NFT owner, denom owner, class trace, voucher class ID, escrow address, position ID, delegated account, delegation shares, reward checkpoints, completion time, signer, grantee, or genesis params.
-    * At least half of the questions should require tracing across 2 or more modules or 2 or more functions in sequence.
-    * Do not waste slots on vague prompts such as "can math break?" without a concrete value path and fund-loss invariant.
-    * For arithmetic ideas, focus on `sdk.Int`, `math.LegacyDec`, shares, rewards, supply, inflation decay, rounding, zero/max amounts, completion heights/times, and overflow/underflow around casts.
-    * For ordering ideas, focus on attacker-controlled sequencing of lock, add, redelegate, undelegate, trigger exit, clear, withdraw, claim, slash, hook, ack, timeout, refund, migration, or upgrade state.
-
-    High-value attack surfaces:
-
-    * `x/tieredrewards/keeper/*`: position lifecycle, delegated accounts, slashing hooks, redelegation mapping, rewards, bonus checkpoints, authz, voting power, migrations.
-    * `x/nft-transfer/*`: IBC NFT transfer, class trace hashing, escrow/burn/mint, packet relay, ack, timeout, refund, source/sink direction.
-    * `x/nft/*`: denom issue, mint, burn, transfer, edit, owners and collection indexes, validation and keeper authority.
-    * `x/inflation`, `x/supply`, `app/*`: inflation decay, mint params, supply/account queries, app module permissions, blocked module accounts, ante/authz/feegrant, genesis and upgrades.
-    * `proto/*` and `client/cli/*`: message fields and transaction construction only when they can cause a signed production tx or module call to move assets incorrectly.
-
-    Impact mapping:
-
-    * High/Critical only: direct user fund or NFT loss, unauthorized asset movement, unbacked minting, duplicate withdrawal or claim, corrupted escrow/backing, or unsafe production state that can lead to those outcomes.
-
-    Question quality bar:
-
-    * A strong question names the actor, entrypoint, manipulated state, missing or bypassed check, and concrete bad outcome.
-    * A weak question is generic, single-function-only without impact, or does not identify what exact invariant fails.
-    * Prefer one sharp question about a realistic exploit chain over several vague variants of the same bug class.
-
-    Each question must include:
-
-    1. target function/module;
-    2. attacker action;
-    3. preconditions;
-    4. call sequence;
-    5. invariant tested;
-    6. scoped impact;
-    7. proof idea.
+    Each question must include target symbol, attacker-controlled input, required state, call path, invariant, corrupted value, scoped impact, and proof idea.
 
     Output only valid Python. No markdown. No explanations.
 
     questions = [
-    "[File: {target_file}] [Function: symbol_or_module] Can an attacker ACTION under PRECONDITIONS trigger CALL_SEQUENCE, violating INVARIANT, causing scoped impact: SCOPE_IMPACT? Proof idea: run a Go unit, keeper, app integration, fuzz, invariant, or transaction-sequence test over PARAMETERS and assert EXPECTED_PROPERTY.",
+    "[File: {target_file}] [Symbol: symbol_or_module] Can attacker-controlled PROVIDER_OR_SOURCE_INPUT under ORACLE_POOL_STATE reach CALL_PATH and violate BAND_OR_FEED_BINDING_INVARIANT, corrupting EXACT_BID_ASK_OR_PROVIDER_VALUE with scoped impact SCOPE_IMPACT? Proof idea: build a Foundry provider/pool integration test over FEEDS_SOURCE_CONFIDENCE_STALENESS and assert EXPECTED_BAND_CLAMP.",
     ]
     """
     return prompt
@@ -323,43 +186,41 @@ def question_generator(target_file: str) -> str:
 
 def audit_format(question: str) -> str:
     """
-    Generate a focused Cronos POS Chain exploit-question validation prompt.
+    Generate a focused Metric OMM exploit-question validation prompt.
     """
-    return f"""# QUESTION SCAN PROMPT
+    return f"""# PRICE PROVIDER BAND QUESTION REVIEW
 
 ## Exploit Question
 {question}
 
 ## Scope Rules
-- Audit only production Cronos POS Chain repository code listed in `scope_files`.
+- Audit only contest-relevant Metric OMM production code for Sherlock contest 1279.
+- Ignore tests, mocks, scripts, deployments, generated artifacts, local tooling, and docs-only issues with no code-level impact.
 - Do not ask for repo contents or claim files are missing.
-- Ignore tests, docs, mocks, generated files, simulations, repo automation scripts, build files, deployment-only files, and local tooling.
 
 ## Objective
-Decide whether the question leads to a real, reachable Cronos POS Chain vulnerability.
-The attacker must enter through a supported production path: Cosmos SDK transaction, module `MsgServer`, authz/feegrant flow, IBC NFT packet lifecycle, genesis/migration/upgrade path with attacker-relevant state, CLI-signed transaction construction, or another externally reachable transaction or data-validation path.
-The impact must match the provided target scope.
-Prefer #NoVulnerability unless the path is concrete, locally testable on an unmodified Go/Cosmos test setup, and proves one of the High/Critical impacts in `target_scopes`.
-Treat the question as a hypothesis that must survive adversarial review. Look for the exact balance, supply, NFT ownership, escrow, position, delegation, reward, signer, or module-permission change that would make the exploit real.
+Decide whether the question leads to a real Metric OMM vulnerability. The attacker must enter through public pool, router, liquidity, permit, oracle-push, provider-read, or pool-creation/admin-boundary flows available in scoped code.
+
+Reject claims needing trusted factory owner, oracle admin, deployment control, malicious pool setup, incorrect off-chain oracle data, or non-standard token behavior. Prefer #NoVulnerability unless the path proves direct fund loss, pool insolvency, bad-price execution, or broken core functionality under the contest rules.
+
+## Required Impacts
+{METRIC_ALLOWED_IMPACT_SCOPE}
+
+{SMART_AUDIT_PIVOTS}
 
 ## Method
-1. Trace the attacker-controlled entrypoint.
-2. Map it to exact production repository files and functions.
-3. Check relevant guards: `Validate`/`ValidateBasic`, `GetSigners`, keeper authority, module account permissions, blocked receives, owner checks, authz/feegrant restrictions, IBC ack/timeout/refund validation, class trace direction, staking hooks, slash handling, reward checkpoints, genesis validation, and migration guards.
-4. Identify the exact state variables, balances, ownership records, reward values, or cross-module assumptions that must change for the exploit to work.
-5. Decide whether the questioned invariant can actually break under intended deployment.
-6. Prove root cause with file, function, and line references.
-7. Confirm realistic likelihood and exact scoped impact.
-8. Reject if current validation already prevents the exploit.
+1. Trace the public or semi-trusted entrypoint.
+2. Map it to exact scoped files and functions.
+3. Check feed/provider construction -> oracle read attribution -> band/staleness/deviation checks -> bid/ask conversion -> pool swap outcome.
+4. Identify the exact corrupted value and who loses funds or functionality.
+5. Reject if existing guards preserve the invariant or impact is below contest thresholds.
 
 ## Reject Immediately
-- Requires governance or privileged-role control, operator compromise, code-deployer compromise, leaked private keys, malicious maintainer, unsupported local configuration, or social engineering.
-- Only affects tests, docs, scripts, mocks, generated code, simulations, local tooling, or deployment choices.
-- External dependency or known upstream Cosmos SDK/CometBFT/IBC behavior is the only cause.
-- Impact is denial of service, spam, gas griefing, performance degradation, harmless revert behavior, logging noise, observability only, reward dilution without fund loss, or theoretical risk.
-- No concrete scoped impact or no realistic exploit path.
-- No exact balance, supply, owner, escrow, position, delegation, reward, signer, or module-permission delta can be named.
-- The question depends on impossible chain behavior or privileges not granted by the scoped code path.
+- Trusted owner/oracle admin/deployer assumptions without an unprivileged bypass.
+- Malicious pool initialization or user-chosen unsafe pool parameters without a scoped validation failure.
+- Non-standard ERC20 behavior, except USDC/USDT-compatible edge cases.
+- Correctly rejected stale/bad oracle data, harmless bad quotes, or view-only differences with no fund impact.
+- Gas-only DoS, crashes, unbounded growth, logs, style, dependency-only behavior, tests, mocks, scripts, deployments, local tooling, or docs-only issues with no code-level impact.
 
 ## Output
 If valid:
@@ -381,43 +242,29 @@ If invalid, output exactly:
 
 def scan_format(report: str) -> str:
     """
-    Generate a short cross-project analog scan prompt for the Cronos POS Chain repository.
+    Generate a cross-project analog scan prompt for Metric OMM issues.
     """
     prompt = f"""# ANALOG SCAN PROMPT
 
 ## External Report
 {report}
 
-## Access Rules (Strict)
-- Treat production Cronos POS Chain repository files in the provided scope as accessible context.
-- Do not claim missing or inaccessible files.
-- Do not ask for repository contents.
-- Do not scan tests, docs, build files, IDE files, generated files, simulations, repo automation scripts, local tooling, or deployment-only choices as audited targets.
+## Task
+Use the external report only as a bug-class seed. Search Metric OMM price-provider and factory code for a native analog where bad or misbound bid/ask data reaches pool swaps with fund impact.
 
-## Objective
-Use the external report's vulnerability class as a hint to find valid issues based on this repository's security impact.
-Focus on externally reachable issues triggered by an unprivileged account, normal Cosmos SDK transaction, authz/feegrant flow, IBC NFT packet lifecycle, NFT owner/denom actor, delegator/validator action, CLI-signed tx path, or another supported production entrypoint.
-Only report an analog if this repository has its own reachable root cause and the impact matches the provided target scope.
-Be strict about analog quality: similarity of bug class is not enough. This repository must have its own concrete trigger, broken invariant, and scoped impact.
+## Required Impacts
+{METRIC_ALLOWED_IMPACT_SCOPE}
 
-## Method
-1. Classify vuln type: unauthorized asset movement, unbacked minting, duplicate claim/withdrawal, escrow/refund/ack mismatch, NFT ownership bypass, signer/authz/feegrant bypass, tiered rewards accounting break, unsafe genesis/migration, module-permission flaw, or cross-module desynchronization.
-2. Map to exact production files and modules.
-3. Identify the exact balance, supply, NFT owner, class trace, escrow, position, delegation shares, reward, signer, or module-account value that the analog would corrupt.
-4. Prove root cause with exact file, function, module, and line references.
-5. Confirm concrete scoped impact and realistic likelihood.
-6. Explain the attacker-controlled entry path and why repository code is a necessary vulnerable step.
-7. Reject if the impact does not match the provided target scope.
+{SMART_AUDIT_PIVOTS}
 
-## Disqualify Immediately
-- No reachable attacker-controlled entry path.
-- Requires privileged-role control, leaked private keys, malicious maintainer, unsupported local configuration, or social engineering.
-- External dependency or known upstream Cosmos SDK/CometBFT/IBC behavior is the only cause.
-- Test, docs, build, generated, simulation, or local-tooling issue.
-- Theoretical-only issue with no protocol impact.
-- Impact is denial of service, spam, gas or performance-only degradation, local misconfiguration, observability noise, harmless rejection, reward dilution without user fund loss, or non-security correctness.
-- Impact or likelihood missing.
-- No exact corrupted balance, supply, owner, escrow, class trace, reward, delegation, signer, module-permission, or authorization assumption can be identified.
+Report only if this repository has its own reachable root cause, unprivileged or valid semi-trusted trigger, broken invariant, exact corrupted value, and matching target scope or allowed impact. Reject privileged operations, malicious setup assumptions, non-standard tokens, resource-only issues, dependency-only behavior, and anything outside the contest-relevant production surface.
+
+## Work Plan
+1. Classify the external bug into one Metric OMM invariant.
+2. Map it to exact scoped files/functions.
+3. Trace attacker input through production validation and state updates.
+4. Identify the wrong token balance, LP claim, fee amount, bid/ask, provider/feed binding, extension decision, callback payment, admin cap, or registry value.
+5. Reject if existing guards preserve the invariant or the loss is not contest-relevant.
 
 ## Output (Strict)
 If valid analog exists, output:
@@ -442,7 +289,7 @@ No extra text.
 
 def validation_format(report: str) -> str:
     """
-    Generate a strict Cronos POS Chain validation prompt for security claims.
+    Generate a strict Metric OMM validation prompt for security claims.
     """
     prompt = f"""# VALIDATION PROMPT
 
@@ -450,52 +297,25 @@ def validation_format(report: str) -> str:
 {report}
 
 ## Rules
-- Validate only the submitted claim.
-- Validate against this repository's production Cronos POS Chain scope and the allowed impact classes below.
-- Do not create a new vulnerability if the submitted claim is weak or invalid.
-- Do not upgrade severity unless the provided evidence proves the higher impact.
-- Reject governance-only, privileged-role-only, validator-majority-only, leaked-key, best-practice, docs or style, gas-only, denial-of-service, spam, performance-only, griefing-only, dependency-only, known upstream-only, and purely theoretical issues.
-- Reject if the exploit requires unrealistic assumptions, victim mistakes, missing external context, or unsupported protocol behavior.
-- A valid report must be triggerable through a normal Cosmos SDK transaction, module message, authz/feegrant flow, IBC NFT packet lifecycle, attacker-relevant genesis/migration state, CLI-signed transaction path, or another supported production entrypoint.
-- The final impact must match one of the High/Critical `target_scopes`, not just a generic code bug.
-- Prefer #NoVulnerability over speculative reports.
-- Be skeptical of reports that describe a bug class without naming the exact balance, supply, ownership, escrow, position, delegation, reward, signer, or permission change produced by the exploit.
+- Validate only the submitted claim against contest-relevant Metric OMM production code in this repository.
+- Do not invent a stronger claim, change target scope, or upgrade severity without evidence.
+- A valid issue must be triggered by an unprivileged trader, LP, router caller, public pool creator, contract caller, or public oracle pusher where allowed by scoped code.
+- Factory owner and oracle admin are trusted. Pool admin is semi-trusted only inside caps and timelocks; prove bypass or fund-impacting cap failure.
+- Reject malicious setup, incorrect off-chain oracle data, non-standard ERC20 behavior except USDC/USDT, gas-only DoS, crashes, unbounded growth, logs, style, dependency-only bugs, tests, mocks, scripts, deployments, local tooling, and docs-only issues with no code-level impact.
+- The final impact must match one `target_scopes` item or allowed impact below, identify the exact corrupted value, and meet Sherlock contest thresholds.
 
-## Allowed Impact Scope
-Only these impacts are valid:
-- Critical. Unprivileged on-chain action causes unintentional withdrawal, draining, loss, theft, burn, or permanent lock of user funds or economically valuable NFTs on Cronos POS Chain.
-- Critical. Inflation, supply, bank, module-account, mint, burn, or escrow accounting flaw creates unbacked assets, loses backed assets, or lets value leave the intended module/account boundary.
-- Critical. IBC NFT transfer escrow, burn, mint, class-trace, acknowledgement, timeout, or refund flaw enables duplicate withdrawal, unauthorized voucher minting, unauthorized unescrow, or loss of NFTs.
-- Critical. NFT module authorization or ownership invariant break lets an attacker mint, transfer, burn, edit, or seize denominations or NFTs they do not control.
-- Critical. Tiered rewards position, delegation, redelegation, slashing, exit, withdrawal, or reward-accounting flaw lets an attacker withdraw delegated stake, claim rewards, or move voting power not owned by them.
-- Critical. Genesis, migration, upgrade, app wiring, keeper permission, or module account configuration flaw installs unsafe production state that can directly lead to fund loss or unauthorized asset movement.
-- High. Reward, inflation-decay, base/bonus reward, or staking hook logic flaw lets a user repeatedly or incorrectly claim material rewards or bypass lock/exit economics with direct economic loss.
-- High. Ante, authz, feegrant, address-prefix, signer, or CLI transaction construction flaw causes a signed or authorized production transaction to spend, lock, burn, transfer, or delegate assets contrary to the signer authorization.
-- High. Cross-module invariant break between staking, slashing, distribution, bank, NFT, NFT-transfer, supply, inflation, or tieredrewards corrupts balances, shares, ownership, rewards, or escrow state with direct fund-loss impact.
+## Required Impacts
+{METRIC_ALLOWED_IMPACT_SCOPE}
 
-If the submitted claim does not concretely prove one of the allowed impacts above, it is invalid.
+{SMART_AUDIT_PIVOTS}
 
-## Required Validation Checks
-All must pass:
-1. Exact in-scope file, function, and line or code references.
-2. Clear root cause and broken protocol, authorization, accounting, ownership, escrow, signer, or module-permission assumption.
-3. Reachable exploit path: preconditions -> attacker action -> trigger -> bad result.
-4. Existing checks or guards reviewed and shown insufficient.
-5. Exact corrupted state or value delta identified: what balance, supply, NFT owner, class trace, escrow, position, delegation shares, reward checkpoint, signer, role boundary, or config value changed incorrectly.
-6. Concrete impact that exactly matches one allowed repository impact above, with realistic likelihood.
-7. Reproducible proof path: Go unit test, keeper test, app integration test, transaction sequence, fuzz or invariant harness, or a justified local reproducer.
-8. No obvious rejection reason from privileges, assumptions, known behavior, or scope exclusions.
-
-## Silent Triage Questions
-Before output, internally answer:
-- Can a normal external user or recipient contract trigger this?
-- Does the code actually behave as claimed?
-- Is the impact caused by this protocol, not by an external dependency alone?
-- Is the protocol-state impact concrete, not hypothetical?
-- What exact balances, supply values, NFT ownership records, escrow records, position fields, reward values, or signed transaction fields are wrong after the exploit?
-- What accounting equation, ownership rule, IBC lifecycle rule, signer rule, staking/reward rule, or authorization rule is broken?
-- Would a security triager accept the proof?
-- What exact test would prove it?
+## Required Checks
+1. Exact file/function references in scoped code.
+2. Clear broken Metric OMM invariant tied to funds, core functionality, bad-price execution, admin boundary, or provider/oracle integrity.
+3. Reachable exploit path: preconditions -> attacker input -> production call path -> bad value.
+4. Existing guards reviewed and shown insufficient.
+5. Exact wrong value named: token balance, LP shares, owed fees, bin totals, bid/ask, price limit, provider/feed id, timestamp, extension decision, callback context, fee cap, or registry entry.
+6. Reproducible proof path: Foundry unit, integration, fork, or property test.
 
 ## Output
 If valid, output exactly:
@@ -521,7 +341,7 @@ Audit Report
 [Specific fix guidance]
 
 ## Proof of Concept
-[Minimal reproducible steps or fuzz, invariant, or state test plan]
+[Minimal reproducible steps or test plan]
 
 If invalid, output exactly:
 #NoVulnerability found for this question.
