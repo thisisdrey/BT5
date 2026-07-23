@@ -1,0 +1,1 @@
+Let me read the oracle interfaces and the MetricOmmPoolFactory to complete the analysis.
