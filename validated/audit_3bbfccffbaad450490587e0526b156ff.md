@@ -1,0 +1,1 @@
+Looking at the repository structure, I need to trace the full price-provider and factory code paths to find any analog to the "state not settled before parameter change" bug class.
