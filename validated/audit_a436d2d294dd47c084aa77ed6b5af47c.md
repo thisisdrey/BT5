@@ -1,1 +1,0 @@
-Let me look at the oracle interfaces and the `CompressedOracleV1` to understand the full price pipeline.

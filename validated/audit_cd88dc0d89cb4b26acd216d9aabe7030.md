@@ -1,1 +1,0 @@
-Let me look at the interfaces and the pool contract to complete the analysis.

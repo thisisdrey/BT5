@@ -1,1 +1,0 @@
-Let me look at the pool factory and pool swap code to check for token pair validation.

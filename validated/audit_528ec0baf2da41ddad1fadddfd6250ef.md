@@ -1,1 +1,0 @@
-Let me look at the factory's pool parameter validation and the swap path to understand if there's a token-pair mismatch check.

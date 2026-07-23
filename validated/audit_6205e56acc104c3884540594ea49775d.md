@@ -1,1 +1,0 @@
-Let me read the pool contract and the interfaces to understand how the pool uses the price provider.

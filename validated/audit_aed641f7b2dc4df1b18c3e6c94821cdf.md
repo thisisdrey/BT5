@@ -1,1 +1,0 @@
-Let me look at the `AnchoredProviderFactory.sol` and the `PriceProviderL2.sol` files, as well as the pool's swap logic to understand the full picture.

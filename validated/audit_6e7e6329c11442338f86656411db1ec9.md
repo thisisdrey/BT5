@@ -1,1 +1,0 @@
-Let me look at the oracle implementation to understand the `spread1` return value and how it's used.

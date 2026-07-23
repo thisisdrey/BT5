@@ -1,1 +1,0 @@
-Let me look at the `_validatePriceProvider` function and the factory validation more carefully.

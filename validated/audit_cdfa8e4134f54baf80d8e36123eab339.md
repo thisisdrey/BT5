@@ -1,1 +1,0 @@
-Let me read the remaining critical factory code for the price provider rotation path.

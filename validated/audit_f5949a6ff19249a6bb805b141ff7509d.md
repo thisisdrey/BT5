@@ -1,5 +1,0 @@
-I was unable to read any of the source files in this repository due to repeated tool errors (`Missing required params: ['file_path']`) across all `read_file` calls. I can see the directory structure — including `AnchoredPriceProvider.sol`, `AnchoredProviderFactory.sol`, `PriceProvider.sol`, `ProtectedPriceProvider.sol`, and related oracle/interface files — but I cannot access their contents.
-
-Without being able to trace the actual arithmetic in `getBidAndAskPrice`, the magnitude/decimal scaling in any price computation, or the factory binding logic, I cannot responsibly confirm or deny the existence of a decimal-scaling analog to the CompoundV2 bug.
-
-Due to index size limits, the file contents of this repository may not be available in the search index. I recommend starting a Devin session to access the full contents of the files under `smart-contracts-poc/contracts/` and `smart-contracts-poc/contracts/oracles/` directly.

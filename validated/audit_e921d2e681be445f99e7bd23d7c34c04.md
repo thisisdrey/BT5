@@ -1,1 +1,0 @@
-After thorough analysis of all price-provider and factory contracts, I need to verify the L2 variants and oracle interfaces before concluding.

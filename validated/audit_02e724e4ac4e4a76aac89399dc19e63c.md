@@ -1,1 +1,0 @@
-Let me look at the oracle contracts and interfaces to complete the analysis.

@@ -1,1 +1,0 @@
-Let me look at the `isPool` function and `nextPoolIdx` initialization more carefully.

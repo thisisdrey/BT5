@@ -1,1 +1,0 @@
-Let me look at the pool's price provider validation and the MetricOmmPool swap logic more carefully.

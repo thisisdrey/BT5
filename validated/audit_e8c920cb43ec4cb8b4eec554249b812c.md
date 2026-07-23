@@ -1,1 +1,0 @@
-Let me look at the `AnchoredProviderFactory` and the pool's `_getBidAndAskPriceX64` function more carefully.

@@ -1,1 +1,0 @@
-Let me look at the pool contract and the swap math to check for any value mismatch analogous to the external bug.
