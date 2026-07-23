@@ -1,0 +1,152 @@
+[
+  {
+    "question": "'File Name: storage/aptosdb/src/schema/transaction_accumulator_root_hash/mod.rs -> Scope: High. Acceptance of forged, stale, malformed, differently encoded, insufficiently bound, or context-confused bytecode, signatures, keyless proofs, JWK material, module metadata, write sets, or state proofs that bypass mainnet execution or verification rules.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_01daa73c-f563-40f9-8c71-987d5f24d110?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: storage/aptosdb/src/schema/transaction_auxiliary_data/mod.rs -> Scope: High. Acceptance of forged, stale, malformed, differently encoded, insufficiently bound, or context-confused bytecode, signatures, keyless proofs, JWK material, module metadata, write sets, or state proofs that bypass mainnet execution or verification rules.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_bb3bea6e-4f12-492e-bd85-c039a46bee48?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: storage/aptosdb/src/schema/transaction_by_hash/mod.rs -> Scope: High. Acceptance of forged, stale, malformed, differently encoded, insufficiently bound, or context-confused bytecode, signatures, keyless proofs, JWK material, module metadata, write sets, or state proofs that bypass mainnet execution or verification rules.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_8642f971-6133-471e-a155-c468452955f1?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: storage/aptosdb/src/schema/transaction_info/mod.rs -> Scope: High. Acceptance of forged, stale, malformed, differently encoded, insufficiently bound, or context-confused bytecode, signatures, keyless proofs, JWK material, module metadata, write sets, or state proofs that bypass mainnet execution or verification rules.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_708b7ee2-6030-4ca1-820f-8b31e2695c81?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: storage/aptosdb/src/schema/transaction_summaries_by_account/mod.rs -> Scope: High. Acceptance of forged, stale, malformed, differently encoded, insufficiently bound, or context-confused bytecode, signatures, keyless proofs, JWK material, module metadata, write sets, or state proofs that bypass mainnet execution or verification rules.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_177e3ccc-7d75-4050-aaae-dd799021a195?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: storage/aptosdb/src/schema/version_data/mod.rs -> Scope: High. Acceptance of forged, stale, malformed, differently encoded, insufficiently bound, or context-confused bytecode, signatures, keyless proofs, JWK material, module metadata, write sets, or state proofs that bypass mainnet execution or verification rules.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_7638be2e-470f-4d83-aa63-38d94acabdca?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: storage/aptosdb/src/schema/write_set/mod.rs -> Scope: High. Acceptance of forged, stale, malformed, differently encoded, insufficiently bound, or context-confused bytecode, signatures, keyless proofs, JWK material, module metadata, write sets, or state proofs that bypass mainnet execution or verification rules.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_273586c3-5ebe-48be-81b4-496f3eeed008?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: storage/aptosdb/src/sharded_jmt_merkle_db.rs -> Scope: High. Acceptance of forged, stale, malformed, differently encoded, insufficiently bound, or context-confused bytecode, signatures, keyless proofs, JWK material, module metadata, write sets, or state proofs that bypass mainnet execution or verification rules.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_ea8d0df1-a890-4e1a-8439-e5b8967178d5?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: storage/aptosdb/src/sharded_kv_db.rs -> Scope: High. Acceptance of forged, stale, malformed, differently encoded, insufficiently bound, or context-confused bytecode, signatures, keyless proofs, JWK material, module metadata, write sets, or state proofs that bypass mainnet execution or verification rules.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_386c0956-ad77-4807-930c-ab65de3e1871?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: storage/aptosdb/src/state_kv_db.rs -> Scope: High. Acceptance of forged, stale, malformed, differently encoded, insufficiently bound, or context-confused bytecode, signatures, keyless proofs, JWK material, module metadata, write sets, or state proofs that bypass mainnet execution or verification rules.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_d9c11758-1d0b-4d6d-9867-f32e75b39a21?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: storage/aptosdb/src/state_merkle_db.rs -> Scope: High. Acceptance of forged, stale, malformed, differently encoded, insufficiently bound, or context-confused bytecode, signatures, keyless proofs, JWK material, module metadata, write sets, or state proofs that bypass mainnet execution or verification rules.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_0e5531ea-d71e-4a83-a95f-96fa59157e4c?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: storage/aptosdb/src/state_restore/mod.rs -> Scope: High. Acceptance of forged, stale, malformed, differently encoded, insufficiently bound, or context-confused bytecode, signatures, keyless proofs, JWK material, module metadata, write sets, or state proofs that bypass mainnet execution or verification rules.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_0750d578-1884-4f6c-ba81-2b156ceb060e?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: storage/aptosdb/src/state_store/buffered_state.rs -> Scope: High. Acceptance of forged, stale, malformed, differently encoded, insufficiently bound, or context-confused bytecode, signatures, keyless proofs, JWK material, module metadata, write sets, or state proofs that bypass mainnet execution or verification rules.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_6ee7fc1c-fc04-493d-8b57-14cfed63f3fe?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: storage/aptosdb/src/state_store/hot_state.rs -> Scope: High. Acceptance of forged, stale, malformed, differently encoded, insufficiently bound, or context-confused bytecode, signatures, keyless proofs, JWK material, module metadata, write sets, or state proofs that bypass mainnet execution or verification rules.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_cfd5950e-1150-49d8-a7e0-aa1af1e496ec?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: storage/aptosdb/src/state_store/mod.rs -> Scope: High. Acceptance of forged, stale, malformed, differently encoded, insufficiently bound, or context-confused bytecode, signatures, keyless proofs, JWK material, module metadata, write sets, or state proofs that bypass mainnet execution or verification rules.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_25ec58e0-a99c-47fc-a01f-d543938ff8d7?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: storage/aptosdb/src/state_store/persisted_state.rs -> Scope: High. Acceptance of forged, stale, malformed, differently encoded, insufficiently bound, or context-confused bytecode, signatures, keyless proofs, JWK material, module metadata, write sets, or state proofs that bypass mainnet execution or verification rules.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_f8b4426f-ea5c-4f5b-b89d-26e6b5ae2730?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: storage/aptosdb/src/state_store/state_merkle_batch_committer.rs -> Scope: High. Acceptance of forged, stale, malformed, differently encoded, insufficiently bound, or context-confused bytecode, signatures, keyless proofs, JWK material, module metadata, write sets, or state proofs that bypass mainnet execution or verification rules.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_da94c42a-08fc-4524-b7ef-cc17620b36a1?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: storage/aptosdb/src/state_store/state_snapshot_committer.rs -> Scope: High. Acceptance of forged, stale, malformed, differently encoded, insufficiently bound, or context-confused bytecode, signatures, keyless proofs, JWK material, module metadata, write sets, or state proofs that bypass mainnet execution or verification rules.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_266a8cfa-2a9f-4f96-88f0-ea571a13a9c3?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: storage/aptosdb/src/state_value_chunk.rs -> Scope: High. Acceptance of forged, stale, malformed, differently encoded, insufficiently bound, or context-confused bytecode, signatures, keyless proofs, JWK material, module metadata, write sets, or state proofs that bypass mainnet execution or verification rules.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_7681508d-2272-4227-8442-35ae36b3713c?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: storage/aptosdb/src/trading_native.rs -> Scope: High. Acceptance of forged, stale, malformed, differently encoded, insufficiently bound, or context-confused bytecode, signatures, keyless proofs, JWK material, module metadata, write sets, or state proofs that bypass mainnet execution or verification rules.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_e397e025-1560-4ec2-945f-65dd7d0db356?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: storage/aptosdb/src/transaction_store/mod.rs -> Scope: High. Acceptance of forged, stale, malformed, differently encoded, insufficiently bound, or context-confused bytecode, signatures, keyless proofs, JWK material, module metadata, write sets, or state proofs that bypass mainnet execution or verification rules.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_36d3d58a-2609-46f9-83dd-2647ce5f3c3a?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: storage/aptosdb/src/utils/iterators.rs -> Scope: High. Acceptance of forged, stale, malformed, differently encoded, insufficiently bound, or context-confused bytecode, signatures, keyless proofs, JWK material, module metadata, write sets, or state proofs that bypass mainnet execution or verification rules.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_6f5d0106-457d-448a-aa97-ab560d123f96?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: storage/aptosdb/src/utils/mod.rs -> Scope: High. Acceptance of forged, stale, malformed, differently encoded, insufficiently bound, or context-confused bytecode, signatures, keyless proofs, JWK material, module metadata, write sets, or state proofs that bypass mainnet execution or verification rules.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_15e06a7d-7df1-4e0d-8524-9462fd041ab9?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: storage/aptosdb/src/utils/truncation_helper.rs -> Scope: High. Acceptance of forged, stale, malformed, differently encoded, insufficiently bound, or context-confused bytecode, signatures, keyless proofs, JWK material, module metadata, write sets, or state proofs that bypass mainnet execution or verification rules.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_402e4103-d382-4fc4-a86e-cc33d6696c4f?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: storage/aptosdb/src/versioned_node_cache.rs -> Scope: High. Acceptance of forged, stale, malformed, differently encoded, insufficiently bound, or context-confused bytecode, signatures, keyless proofs, JWK material, module metadata, write sets, or state proofs that bypass mainnet execution or verification rules.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_7652d618-dc10-4786-8de2-0d2cd300a21f?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: storage/jellyfish-merkle/src/iterator/mod.rs -> Scope: High. Acceptance of forged, stale, malformed, differently encoded, insufficiently bound, or context-confused bytecode, signatures, keyless proofs, JWK material, module metadata, write sets, or state proofs that bypass mainnet execution or verification rules.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_7eeba2e1-f8a2-4c65-a5ba-755eee506110?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: storage/jellyfish-merkle/src/lib.rs -> Scope: High. Acceptance of forged, stale, malformed, differently encoded, insufficiently bound, or context-confused bytecode, signatures, keyless proofs, JWK material, module metadata, write sets, or state proofs that bypass mainnet execution or verification rules.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_8cf9d77e-1918-4be6-9d7d-d33d3309a19e?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: storage/jellyfish-merkle/src/metrics.rs -> Scope: High. Acceptance of forged, stale, malformed, differently encoded, insufficiently bound, or context-confused bytecode, signatures, keyless proofs, JWK material, module metadata, write sets, or state proofs that bypass mainnet execution or verification rules.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_08994e6e-a6a5-40d4-907f-524e2e6400b2?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: storage/jellyfish-merkle/src/node_type/mod.rs -> Scope: High. Acceptance of forged, stale, malformed, differently encoded, insufficiently bound, or context-confused bytecode, signatures, keyless proofs, JWK material, module metadata, write sets, or state proofs that bypass mainnet execution or verification rules.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_9307b777-8379-4bd0-9412-7165102be5a6?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: storage/jellyfish-merkle/src/restore/mod.rs -> Scope: High. Acceptance of forged, stale, malformed, differently encoded, insufficiently bound, or context-confused bytecode, signatures, keyless proofs, JWK material, module metadata, write sets, or state proofs that bypass mainnet execution or verification rules.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_1660e7f4-d9a3-409c-8a16-fc4c86197d53?mode=deep",
+    "questions_generated": false
+  }
+]
