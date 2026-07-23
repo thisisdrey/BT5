@@ -1,0 +1,1 @@
+Let me look at the oracle code and the MetricOmmPool's `_resolvedPriceProvider` to complete the picture.
