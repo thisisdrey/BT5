@@ -1,0 +1,152 @@
+[
+  {
+    "question": "'File Name: types/src/block_executor/partitioner.rs -> Scope: High. Unauthorized transaction execution, replay, signer confusion, signature or proof misbinding, or sequence and authorization bypass that lets an unprivileged attacker cause state transitions on behalf of another user or module context.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_ec90361c-eb88-472a-8801-549163961052?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: types/src/block_executor/transaction_slice_metadata.rs -> Scope: High. Unauthorized transaction execution, replay, signer confusion, signature or proof misbinding, or sequence and authorization bypass that lets an unprivileged attacker cause state transitions on behalf of another user or module context.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_66ccc9ab-b3b8-4b28-b342-771863dd3dba?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: types/src/block_executor/value.rs -> Scope: High. Unauthorized transaction execution, replay, signer confusion, signature or proof misbinding, or sequence and authorization bypass that lets an unprivileged attacker cause state transitions on behalf of another user or module context.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_5dfdd403-cc86-49eb-9892-0fef8990626d?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: types/src/block_info.rs -> Scope: High. Unauthorized transaction execution, replay, signer confusion, signature or proof misbinding, or sequence and authorization bypass that lets an unprivileged attacker cause state transitions on behalf of another user or module context.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_860fd0b8-ba5c-43f7-8a46-118e95486582?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: types/src/block_metadata.rs -> Scope: High. Unauthorized transaction execution, replay, signer confusion, signature or proof misbinding, or sequence and authorization bypass that lets an unprivileged attacker cause state transitions on behalf of another user or module context.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_196f2520-bfd8-4da6-be9d-cf50aff93b06?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: types/src/block_metadata_ext.rs -> Scope: High. Unauthorized transaction execution, replay, signer confusion, signature or proof misbinding, or sequence and authorization bypass that lets an unprivileged attacker cause state transitions on behalf of another user or module context.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_66bb05fe-b750-446a-894c-6a8f12e31c73?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: types/src/bytes.rs -> Scope: High. Unauthorized transaction execution, replay, signer confusion, signature or proof misbinding, or sequence and authorization bypass that lets an unprivileged attacker cause state transitions on behalf of another user or module context.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_8212a028-f0fb-48d2-9fde-1b47d5a68098?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: types/src/chain_id.rs -> Scope: High. Unauthorized transaction execution, replay, signer confusion, signature or proof misbinding, or sequence and authorization bypass that lets an unprivileged attacker cause state transitions on behalf of another user or module context.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_6bfe7663-30ba-491a-a4e6-1c24e42abeef?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: types/src/contract_event.rs -> Scope: High. Unauthorized transaction execution, replay, signer confusion, signature or proof misbinding, or sequence and authorization bypass that lets an unprivileged attacker cause state transitions on behalf of another user or module context.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_d8f1d005-5498-4066-89df-7904d405399f?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: types/src/decryption.rs -> Scope: High. Unauthorized transaction execution, replay, signer confusion, signature or proof misbinding, or sequence and authorization bypass that lets an unprivileged attacker cause state transitions on behalf of another user or module context.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_d6502505-7964-484a-80cf-4dfe56c6c55e?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: types/src/delayed_fields.rs -> Scope: High. Unauthorized transaction execution, replay, signer confusion, signature or proof misbinding, or sequence and authorization bypass that lets an unprivileged attacker cause state transitions on behalf of another user or module context.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_05d3e465-0f2c-4f57-a4c2-afd8fc692a84?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: types/src/dkg/chunky_dkg.rs -> Scope: High. Unauthorized transaction execution, replay, signer confusion, signature or proof misbinding, or sequence and authorization bypass that lets an unprivileged attacker cause state transitions on behalf of another user or module context.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_ee3d7eb0-4f10-4143-bd32-d0ced4a4e542?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: types/src/dkg/dummy_dkg/mod.rs -> Scope: High. Unauthorized transaction execution, replay, signer confusion, signature or proof misbinding, or sequence and authorization bypass that lets an unprivileged attacker cause state transitions on behalf of another user or module context.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_b8510202-e822-486b-8f4b-f369745c3d7d?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: types/src/dkg/mod.rs -> Scope: High. Unauthorized transaction execution, replay, signer confusion, signature or proof misbinding, or sequence and authorization bypass that lets an unprivileged attacker cause state transitions on behalf of another user or module context.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_30f89fe4-e826-441b-8725-7e208a60f0bc?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: types/src/dkg/randomness_dkg.rs -> Scope: High. Unauthorized transaction execution, replay, signer confusion, signature or proof misbinding, or sequence and authorization bypass that lets an unprivileged attacker cause state transitions on behalf of another user or module context.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_0f824e55-3447-4dba-8baf-db33dd025e3e?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: types/src/dkg/real_dkg/mod.rs -> Scope: High. Unauthorized transaction execution, replay, signer confusion, signature or proof misbinding, or sequence and authorization bypass that lets an unprivileged attacker cause state transitions on behalf of another user or module context.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_c5533bd1-5fc6-45a1-b8c9-acae855b909b?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: types/src/dkg/real_dkg/rounding/mod.rs -> Scope: High. Unauthorized transaction execution, replay, signer confusion, signature or proof misbinding, or sequence and authorization bypass that lets an unprivileged attacker cause state transitions on behalf of another user or module context.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_df79740d-4aea-4069-bcc8-f298d854953c?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: types/src/epoch_change.rs -> Scope: High. Unauthorized transaction execution, replay, signer confusion, signature or proof misbinding, or sequence and authorization bypass that lets an unprivileged attacker cause state transitions on behalf of another user or module context.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_2b7f9233-5199-42b8-818a-2c00f4eda34f?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: types/src/epoch_state.rs -> Scope: High. Unauthorized transaction execution, replay, signer confusion, signature or proof misbinding, or sequence and authorization bypass that lets an unprivileged attacker cause state transitions on behalf of another user or module context.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_3a71c8ba-a39d-4d17-9348-2474aa65f191?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: types/src/error.rs -> Scope: High. Unauthorized transaction execution, replay, signer confusion, signature or proof misbinding, or sequence and authorization bypass that lets an unprivileged attacker cause state transitions on behalf of another user or module context.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_06ead317-cdd2-4833-bbea-3c2c1eaa5f6c?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: types/src/event.rs -> Scope: High. Unauthorized transaction execution, replay, signer confusion, signature or proof misbinding, or sequence and authorization bypass that lets an unprivileged attacker cause state transitions on behalf of another user or module context.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_23858abf-f7e1-4cc5-99d8-4ce5cd479070?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: types/src/executable.rs -> Scope: High. Unauthorized transaction execution, replay, signer confusion, signature or proof misbinding, or sequence and authorization bypass that lets an unprivileged attacker cause state transitions on behalf of another user or module context.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_aca07223-b247-4fcd-924c-12314f2fb85c?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: types/src/fee_statement.rs -> Scope: High. Unauthorized transaction execution, replay, signer confusion, signature or proof misbinding, or sequence and authorization bypass that lets an unprivileged attacker cause state transitions on behalf of another user or module context.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_4062ce36-1889-4f86-97b5-2bcf75d84612?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: types/src/function_info.rs -> Scope: High. Unauthorized transaction execution, replay, signer confusion, signature or proof misbinding, or sequence and authorization bypass that lets an unprivileged attacker cause state transitions on behalf of another user or module context.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_ae6cd4b7-4c6e-4184-9ee1-665e7a54a71b?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: types/src/governance.rs -> Scope: High. Unauthorized transaction execution, replay, signer confusion, signature or proof misbinding, or sequence and authorization bypass that lets an unprivileged attacker cause state transitions on behalf of another user or module context.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_863197db-d4f5-4b33-b41b-c923b07c1a21?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: types/src/jwks/jwk/mod.rs -> Scope: High. Unauthorized transaction execution, replay, signer confusion, signature or proof misbinding, or sequence and authorization bypass that lets an unprivileged attacker cause state transitions on behalf of another user or module context.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_a71fa9af-4d65-4d56-ae0c-ff61850680cc?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: types/src/jwks/mod.rs -> Scope: High. Unauthorized transaction execution, replay, signer confusion, signature or proof misbinding, or sequence and authorization bypass that lets an unprivileged attacker cause state transitions on behalf of another user or module context.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_84f7ab0d-e01f-4911-bdec-94b675a7ef93?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: types/src/jwks/patch/mod.rs -> Scope: High. Unauthorized transaction execution, replay, signer confusion, signature or proof misbinding, or sequence and authorization bypass that lets an unprivileged attacker cause state transitions on behalf of another user or module context.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_4f028024-e289-4710-9117-67bd95652ca5?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: types/src/jwks/rsa/mod.rs -> Scope: High. Unauthorized transaction execution, replay, signer confusion, signature or proof misbinding, or sequence and authorization bypass that lets an unprivileged attacker cause state transitions on behalf of another user or module context.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_075c2948-c984-488e-bf37-8b7d0e7ee9e3?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: types/src/jwks/unsupported/mod.rs -> Scope: High. Unauthorized transaction execution, replay, signer confusion, signature or proof misbinding, or sequence and authorization bypass that lets an unprivileged attacker cause state transitions on behalf of another user or module context.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_645b59a8-a452-445d-80af-bca8c3de2572?mode=deep",
+    "questions_generated": false
+  }
+]
