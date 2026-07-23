@@ -1,0 +1,152 @@
+[
+  {
+    "question": "'File Name: crates/aptos-dkg/src/pvss/chunky/hkzg_chunked_elgamal.rs -> Scope: High. Unauthorized transaction execution, replay, signer confusion, signature or proof misbinding, or sequence and authorization bypass that lets an unprivileged attacker cause state transitions on behalf of another user or module context.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_e252acab-6d02-477b-b86f-c6f5a285efc3?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: crates/aptos-dkg/src/pvss/chunky/hkzg_chunked_elgamal_commit.rs -> Scope: High. Unauthorized transaction execution, replay, signer confusion, signature or proof misbinding, or sequence and authorization bypass that lets an unprivileged attacker cause state transitions on behalf of another user or module context.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_182796ea-8389-4da2-9a6f-f07cbd9d89c7?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: crates/aptos-dkg/src/pvss/chunky/input_secret.rs -> Scope: High. Unauthorized transaction execution, replay, signer confusion, signature or proof misbinding, or sequence and authorization bypass that lets an unprivileged attacker cause state transitions on behalf of another user or module context.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_4ba1a5f2-5b3b-49a9-94a9-9e5287d558ac?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: crates/aptos-dkg/src/pvss/chunky/keys.rs -> Scope: High. Unauthorized transaction execution, replay, signer confusion, signature or proof misbinding, or sequence and authorization bypass that lets an unprivileged attacker cause state transitions on behalf of another user or module context.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_b6fa3e91-084b-4dac-957e-ea2adc44c1a0?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: crates/aptos-dkg/src/pvss/chunky/mod.rs -> Scope: High. Unauthorized transaction execution, replay, signer confusion, signature or proof misbinding, or sequence and authorization bypass that lets an unprivileged attacker cause state transitions on behalf of another user or module context.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_42d90d7e-3fbe-4802-b3ff-fbf46f9394fe?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: crates/aptos-dkg/src/pvss/chunky/public_parameters.rs -> Scope: High. Unauthorized transaction execution, replay, signer confusion, signature or proof misbinding, or sequence and authorization bypass that lets an unprivileged attacker cause state transitions on behalf of another user or module context.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_adb961a9-0d22-4bb4-8f19-5f0bafb35b71?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: crates/aptos-dkg/src/pvss/chunky/subtranscript.rs -> Scope: High. Unauthorized transaction execution, replay, signer confusion, signature or proof misbinding, or sequence and authorization bypass that lets an unprivileged attacker cause state transitions on behalf of another user or module context.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_cc6279eb-3b50-4515-a8bf-916b9ce7dd3b?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: crates/aptos-dkg/src/pvss/chunky/verify_common.rs -> Scope: High. Unauthorized transaction execution, replay, signer confusion, signature or proof misbinding, or sequence and authorization bypass that lets an unprivileged attacker cause state transitions on behalf of another user or module context.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_b6a104ee-ad1e-43a6-88b0-2cd32c7667b4?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: crates/aptos-dkg/src/pvss/chunky/weighted_transcript.rs -> Scope: High. Unauthorized transaction execution, replay, signer confusion, signature or proof misbinding, or sequence and authorization bypass that lets an unprivileged attacker cause state transitions on behalf of another user or module context.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_6aeee536-428a-4f0b-a7d2-f6b43daac9bc?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: crates/aptos-dkg/src/pvss/chunky/weighted_transcript_v2.rs -> Scope: High. Unauthorized transaction execution, replay, signer confusion, signature or proof misbinding, or sequence and authorization bypass that lets an unprivileged attacker cause state transitions on behalf of another user or module context.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_d3e86658-2b59-47f8-a1ec-5994033b24c5?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: crates/aptos-dkg/src/pvss/contribution.rs -> Scope: High. Unauthorized transaction execution, replay, signer confusion, signature or proof misbinding, or sequence and authorization bypass that lets an unprivileged attacker cause state transitions on behalf of another user or module context.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_ff9f2f5b-34fe-48cb-ae4d-aa53b70e7ea9?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: crates/aptos-dkg/src/pvss/das/enc.rs -> Scope: High. Unauthorized transaction execution, replay, signer confusion, signature or proof misbinding, or sequence and authorization bypass that lets an unprivileged attacker cause state transitions on behalf of another user or module context.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_e60165b6-e4ca-45a4-bc87-75d88c5d3c55?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: crates/aptos-dkg/src/pvss/das/input_secret.rs -> Scope: High. Unauthorized transaction execution, replay, signer confusion, signature or proof misbinding, or sequence and authorization bypass that lets an unprivileged attacker cause state transitions on behalf of another user or module context.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_884d1053-f734-4e1c-b4e1-53ce62cfdf80?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: crates/aptos-dkg/src/pvss/das/mod.rs -> Scope: High. Unauthorized transaction execution, replay, signer confusion, signature or proof misbinding, or sequence and authorization bypass that lets an unprivileged attacker cause state transitions on behalf of another user or module context.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_8fd479b7-667a-4a46-ba31-ceefa014980e?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: crates/aptos-dkg/src/pvss/das/public_parameters.rs -> Scope: High. Unauthorized transaction execution, replay, signer confusion, signature or proof misbinding, or sequence and authorization bypass that lets an unprivileged attacker cause state transitions on behalf of another user or module context.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_dc1cd735-9eb5-4e7e-b752-df69352424f6?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: crates/aptos-dkg/src/pvss/das/unweighted_protocol.rs -> Scope: High. Unauthorized transaction execution, replay, signer confusion, signature or proof misbinding, or sequence and authorization bypass that lets an unprivileged attacker cause state transitions on behalf of another user or module context.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_838176ae-2547-4302-8f5a-829620834028?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: crates/aptos-dkg/src/pvss/das/weighted_protocol.rs -> Scope: High. Unauthorized transaction execution, replay, signer confusion, signature or proof misbinding, or sequence and authorization bypass that lets an unprivileged attacker cause state transitions on behalf of another user or module context.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_bb4779ad-94b4-438d-91a5-6de9745d2e96?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: crates/aptos-dkg/src/pvss/dealt_pub_key.rs -> Scope: High. Unauthorized transaction execution, replay, signer confusion, signature or proof misbinding, or sequence and authorization bypass that lets an unprivileged attacker cause state transitions on behalf of another user or module context.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_fa4f39a5-6261-403d-9694-5496324a6f15?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: crates/aptos-dkg/src/pvss/dealt_pub_key_share.rs -> Scope: High. Unauthorized transaction execution, replay, signer confusion, signature or proof misbinding, or sequence and authorization bypass that lets an unprivileged attacker cause state transitions on behalf of another user or module context.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_dc27803d-df32-436a-8e5a-30990bf9aad3?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: crates/aptos-dkg/src/pvss/dealt_secret_key.rs -> Scope: High. Unauthorized transaction execution, replay, signer confusion, signature or proof misbinding, or sequence and authorization bypass that lets an unprivileged attacker cause state transitions on behalf of another user or module context.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_ac6783d0-22f1-41ac-8618-7aaace24aff5?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: crates/aptos-dkg/src/pvss/dealt_secret_key_share.rs -> Scope: High. Unauthorized transaction execution, replay, signer confusion, signature or proof misbinding, or sequence and authorization bypass that lets an unprivileged attacker cause state transitions on behalf of another user or module context.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_9ba81173-4532-426f-98ec-897aaf93a199?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: crates/aptos-dkg/src/pvss/encryption_dlog.rs -> Scope: High. Unauthorized transaction execution, replay, signer confusion, signature or proof misbinding, or sequence and authorization bypass that lets an unprivileged attacker cause state transitions on behalf of another user or module context.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_39c9911f-803e-43df-9131-fbf6ba2cb5ef?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: crates/aptos-dkg/src/pvss/encryption_elgamal.rs -> Scope: High. Unauthorized transaction execution, replay, signer confusion, signature or proof misbinding, or sequence and authorization bypass that lets an unprivileged attacker cause state transitions on behalf of another user or module context.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_a3613033-b1a0-4c4c-a6bc-dcd004d76abe?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: crates/aptos-dkg/src/pvss/insecure_field/mod.rs -> Scope: High. Unauthorized transaction execution, replay, signer confusion, signature or proof misbinding, or sequence and authorization bypass that lets an unprivileged attacker cause state transitions on behalf of another user or module context.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_b4a416b3-a3d9-446d-a5cd-cdeb25c3b302?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: crates/aptos-dkg/src/pvss/insecure_field/transcript.rs -> Scope: High. Unauthorized transaction execution, replay, signer confusion, signature or proof misbinding, or sequence and authorization bypass that lets an unprivileged attacker cause state transitions on behalf of another user or module context.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_6e64ac7b-cbdf-495f-b7ca-bccf24740a18?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: crates/aptos-dkg/src/pvss/mod.rs -> Scope: High. Unauthorized transaction execution, replay, signer confusion, signature or proof misbinding, or sequence and authorization bypass that lets an unprivileged attacker cause state transitions on behalf of another user or module context.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_3b2a9c02-58f8-4601-ba24-d8c96f6ee6bc?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: crates/aptos-dkg/src/pvss/schnorr.rs -> Scope: High. Unauthorized transaction execution, replay, signer confusion, signature or proof misbinding, or sequence and authorization bypass that lets an unprivileged attacker cause state transitions on behalf of another user or module context.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_96a6a724-2fda-4524-b493-4ce4f1858e6c?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: crates/aptos-dkg/src/pvss/signed/generic_signing.rs -> Scope: High. Unauthorized transaction execution, replay, signer confusion, signature or proof misbinding, or sequence and authorization bypass that lets an unprivileged attacker cause state transitions on behalf of another user or module context.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_432f5922-1b10-4c61-8f25-1943b15fe9aa?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: crates/aptos-dkg/src/pvss/signed/mod.rs -> Scope: High. Unauthorized transaction execution, replay, signer confusion, signature or proof misbinding, or sequence and authorization bypass that lets an unprivileged attacker cause state transitions on behalf of another user or module context.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_2eb15fff-e49c-4837-b740-533f3aeb2298?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: crates/aptos-dkg/src/pvss/traits/mod.rs -> Scope: High. Unauthorized transaction execution, replay, signer confusion, signature or proof misbinding, or sequence and authorization bypass that lets an unprivileged attacker cause state transitions on behalf of another user or module context.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_c93957c6-2e3c-44ec-833e-b0ff09386b3a?mode=deep",
+    "questions_generated": false
+  }
+]
