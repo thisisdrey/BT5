@@ -1,0 +1,152 @@
+[
+  {
+    "question": "'File Name: crates/aptos-dkg/src/pvss/traits/transcript.rs -> Scope: Critical. Irreversible fund lock, permanently unspendable balances, or non-recoverable loss of access to user or protocol value caused by broken execution, storage, object, staking, vesting, multisig, or resource-account flows.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_4960428a-061e-4553-af27-befdc0d433b6?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: crates/aptos-dkg/src/pvss/weighted/generic_weighting.rs -> Scope: Critical. Irreversible fund lock, permanently unspendable balances, or non-recoverable loss of access to user or protocol value caused by broken execution, storage, object, staking, vesting, multisig, or resource-account flows.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_1bc279f1-2406-44ca-9321-0851d142ea3b?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: crates/aptos-dkg/src/pvss/weighted/mod.rs -> Scope: Critical. Irreversible fund lock, permanently unspendable balances, or non-recoverable loss of access to user or protocol value caused by broken execution, storage, object, staking, vesting, multisig, or resource-account flows.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_cfc705aa-75c5-4b6b-9d03-d4920b7ea949?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: crates/aptos-dkg/src/range_proofs/dekart_univariate_v2.rs -> Scope: Critical. Irreversible fund lock, permanently unspendable balances, or non-recoverable loss of access to user or protocol value caused by broken execution, storage, object, staking, vesting, multisig, or resource-account flows.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_491d71e2-b1f3-42bb-9122-1acb6896abcc?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: crates/aptos-dkg/src/range_proofs/mod.rs -> Scope: Critical. Irreversible fund lock, permanently unspendable balances, or non-recoverable loss of access to user or protocol value caused by broken execution, storage, object, staking, vesting, multisig, or resource-account flows.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_928d6eff-5db4-4bd0-abef-c63350ea1fa9?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: crates/aptos-dkg/src/range_proofs/scalars_to_bits.rs -> Scope: Critical. Irreversible fund lock, permanently unspendable balances, or non-recoverable loss of access to user or protocol value caused by broken execution, storage, object, staking, vesting, multisig, or resource-account flows.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_3a4257a1-e905-4e83-9fd6-f2b21204abcc?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: crates/aptos-dkg/src/range_proofs/traits.rs -> Scope: Critical. Irreversible fund lock, permanently unspendable balances, or non-recoverable loss of access to user or protocol value caused by broken execution, storage, object, staking, vesting, multisig, or resource-account flows.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_83897dfd-c1c7-425b-bee6-b39deafb93b6?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: crates/aptos-dkg/src/sigma_protocol/homomorphism/fixed_base_msms.rs -> Scope: Critical. Irreversible fund lock, permanently unspendable balances, or non-recoverable loss of access to user or protocol value caused by broken execution, storage, object, staking, vesting, multisig, or resource-account flows.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_d9765967-c164-49b8-af68-53ace3a7d511?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: crates/aptos-dkg/src/sigma_protocol/homomorphism/mod.rs -> Scope: Critical. Irreversible fund lock, permanently unspendable balances, or non-recoverable loss of access to user or protocol value caused by broken execution, storage, object, staking, vesting, multisig, or resource-account flows.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_e9a3aee7-bbfc-44e2-ae78-617e1986fd48?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: crates/aptos-dkg/src/sigma_protocol/homomorphism/tuple.rs -> Scope: Critical. Irreversible fund lock, permanently unspendable balances, or non-recoverable loss of access to user or protocol value caused by broken execution, storage, object, staking, vesting, multisig, or resource-account flows.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_9347f169-e2fe-4744-9d86-616d7bdf2621?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: crates/aptos-dkg/src/sigma_protocol/mod.rs -> Scope: Critical. Irreversible fund lock, permanently unspendable balances, or non-recoverable loss of access to user or protocol value caused by broken execution, storage, object, staking, vesting, multisig, or resource-account flows.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_d60ecd48-9543-4a79-8e4b-c7632b220866?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: crates/aptos-dkg/src/sigma_protocol/proof.rs -> Scope: Critical. Irreversible fund lock, permanently unspendable balances, or non-recoverable loss of access to user or protocol value caused by broken execution, storage, object, staking, vesting, multisig, or resource-account flows.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_4ab1ae45-201a-4113-ab50-c77e58775fa8?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: crates/aptos-dkg/src/sigma_protocol/traits.rs -> Scope: Critical. Irreversible fund lock, permanently unspendable balances, or non-recoverable loss of access to user or protocol value caused by broken execution, storage, object, staking, vesting, multisig, or resource-account flows.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_8c9af773-c087-451c-9a28-02b14f7f7129?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: crates/aptos-dkg/src/utils/mod.rs -> Scope: Critical. Irreversible fund lock, permanently unspendable balances, or non-recoverable loss of access to user or protocol value caused by broken execution, storage, object, staking, vesting, multisig, or resource-account flows.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_b030f866-9c59-428c-86a8-68902d52ca1f?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: crates/aptos-dkg/src/utils/parallel_multi_pairing.rs -> Scope: Critical. Irreversible fund lock, permanently unspendable balances, or non-recoverable loss of access to user or protocol value caused by broken execution, storage, object, staking, vesting, multisig, or resource-account flows.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_5482c1fd-abd1-4934-8ad1-b47ebbf1d54f?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: crates/aptos-dkg/src/utils/random.rs -> Scope: Critical. Irreversible fund lock, permanently unspendable balances, or non-recoverable loss of access to user or protocol value caused by broken execution, storage, object, staking, vesting, multisig, or resource-account flows.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_6e9d0f8e-a01a-4a01-a8af-d1e47f3afc08?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: crates/aptos-dkg/src/weighted_vuf/bls/mod.rs -> Scope: Critical. Irreversible fund lock, permanently unspendable balances, or non-recoverable loss of access to user or protocol value caused by broken execution, storage, object, staking, vesting, multisig, or resource-account flows.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_bcb0d559-b4f9-4f0f-8ef9-99e4622f53a3?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: crates/aptos-dkg/src/weighted_vuf/mod.rs -> Scope: Critical. Irreversible fund lock, permanently unspendable balances, or non-recoverable loss of access to user or protocol value caused by broken execution, storage, object, staking, vesting, multisig, or resource-account flows.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_19a8acab-1d48-41d3-b474-569cdd15d11a?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: crates/aptos-dkg/src/weighted_vuf/pinkas/mod.rs -> Scope: Critical. Irreversible fund lock, permanently unspendable balances, or non-recoverable loss of access to user or protocol value caused by broken execution, storage, object, staking, vesting, multisig, or resource-account flows.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_b0eadd7d-908b-4cbd-a592-15c387384519?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: crates/aptos-dkg/src/weighted_vuf/traits.rs -> Scope: Critical. Irreversible fund lock, permanently unspendable balances, or non-recoverable loss of access to user or protocol value caused by broken execution, storage, object, staking, vesting, multisig, or resource-account flows.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_c435ddfd-4d8a-45d7-8b77-be1209bed38d?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: crates/jwk-utils/src/lib.rs -> Scope: Critical. Irreversible fund lock, permanently unspendable balances, or non-recoverable loss of access to user or protocol value caused by broken execution, storage, object, staking, vesting, multisig, or resource-account flows.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_559f2259-9831-4360-ab05-13bd3bbb42e4?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: crates/validator-transaction-pool/src/lib.rs -> Scope: Critical. Irreversible fund lock, permanently unspendable balances, or non-recoverable loss of access to user or protocol value caused by broken execution, storage, object, staking, vesting, multisig, or resource-account flows.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_ebb1589f-b7fb-4963-b5eb-fc010ce5315f?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: dkg/src/agg_trx_producer.rs -> Scope: Critical. Irreversible fund lock, permanently unspendable balances, or non-recoverable loss of access to user or protocol value caused by broken execution, storage, object, staking, vesting, multisig, or resource-account flows.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_1b1f81d2-f2f2-41e6-9382-52e6b36362f5?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: dkg/src/chunky/agg_subtrx_producer.rs -> Scope: Critical. Irreversible fund lock, permanently unspendable balances, or non-recoverable loss of access to user or protocol value caused by broken execution, storage, object, staking, vesting, multisig, or resource-account flows.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_03ec306a-6451-40e2-be30-0e83c7663d15?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: dkg/src/chunky/common.rs -> Scope: Critical. Irreversible fund lock, permanently unspendable balances, or non-recoverable loss of access to user or protocol value caused by broken execution, storage, object, staking, vesting, multisig, or resource-account flows.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_8f8ab211-059c-471b-b837-671d1c2f7c65?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: dkg/src/chunky/dkg_manager/mod.rs -> Scope: Critical. Irreversible fund lock, permanently unspendable balances, or non-recoverable loss of access to user or protocol value caused by broken execution, storage, object, staking, vesting, multisig, or resource-account flows.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_21f906ad-ce96-43cd-bd6c-f86dbd7f02ab?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: dkg/src/chunky/missing_transcript_fetcher.rs -> Scope: Critical. Irreversible fund lock, permanently unspendable balances, or non-recoverable loss of access to user or protocol value caused by broken execution, storage, object, staking, vesting, multisig, or resource-account flows.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_16874e70-823d-42ef-9f82-cf5a29073dd0?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: dkg/src/chunky/mod.rs -> Scope: Critical. Irreversible fund lock, permanently unspendable balances, or non-recoverable loss of access to user or protocol value caused by broken execution, storage, object, staking, vesting, multisig, or resource-account flows.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_c09bacb0-b144-4a8b-8f0b-f9106ae1fef2?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: dkg/src/chunky/subtrx_cert_producer.rs -> Scope: Critical. Irreversible fund lock, permanently unspendable balances, or non-recoverable loss of access to user or protocol value caused by broken execution, storage, object, staking, vesting, multisig, or resource-account flows.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_b6b06a05-1d38-4cc5-919c-56a4fb78100b?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: dkg/src/chunky/types.rs -> Scope: Critical. Irreversible fund lock, permanently unspendable balances, or non-recoverable loss of access to user or protocol value caused by broken execution, storage, object, staking, vesting, multisig, or resource-account flows.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_6e09a59d-10bb-4eb6-8cd9-52eb1263ba33?mode=deep",
+    "questions_generated": false
+  }
+]
