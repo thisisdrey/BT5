@@ -1,0 +1,13 @@
+# Q17936: Replay Domain Slip in to_bytes
+
+## Question
+Can an unprivileged attacker use `types/src/transaction/authenticator.rs::to_bytes` to replay a transaction across sequence, expiration, chain-ID, or domain boundaries that should be unique, causing repeated or cross-context execution?
+
+## Target
+- File/function: types/src/transaction/authenticator.rs::to_bytes
+- Entrypoint: Submit a signed transaction, multisig payload, or keyless transaction until VM validation reaches `to_bytes`.
+- Attacker controls: signed transaction bytes, authenticator variants, secondary signer data, fee-payer fields, sequence numbers, expirations, chain IDs, and payload contents
+- Exploit idea: Look for incomplete replay-domain binding across sequence numbers, expirations, chain IDs, or request domains.
+- Invariant to test: Replay protection must bind transaction uniqueness to the full sender, sequence, expiration, and domain context actually executed on mainnet.
+- Expected Immunefi impact: High. Unauthorized transaction execution, replay, signer confusion, signature or proof misbinding, or sequence and authorization bypass that lets an unprivileged attacker cause state transitions on behalf of another user or module context.
+- Fast validation: Create near-collision transactions that vary only one replay-domain field and assert every mismatched domain is rejected before execution.
