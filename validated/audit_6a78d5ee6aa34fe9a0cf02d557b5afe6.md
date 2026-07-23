@@ -1,0 +1,1 @@
+Let me now look at the pool's swap function and how it uses the bid/ask prices, plus the `_readLeg` function's `spreadBps` accumulation in synthetic mode.
