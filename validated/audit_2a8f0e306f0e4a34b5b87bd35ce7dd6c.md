@@ -1,0 +1,1 @@
+Let me look at the pool's `_getBidAndAskPriceX64` function and the oracle's `OracleBase` to complete the picture.
