@@ -1,0 +1,152 @@
+[
+  {
+    "question": "'File Name: api/types/src/hash.rs -> Scope: Critical. Consensus or safety violation, invalid state commitment, total loss of liveness, validator-crashing input, proven cryptographic break, or unintended permanent chain split requiring a hard fork, when triggered by unprivileged transaction, package, API, or state input rather than by malicious peers or node operators.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_8ae55a76-a831-4955-a530-e365abe81a7b?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: api/types/src/headers.rs -> Scope: Critical. Consensus or safety violation, invalid state commitment, total loss of liveness, validator-crashing input, proven cryptographic break, or unintended permanent chain split requiring a hard fork, when triggered by unprivileged transaction, package, API, or state input rather than by malicious peers or node operators.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_73345626-4325-46fb-88f5-a85b4554838a?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: api/types/src/index.rs -> Scope: Critical. Consensus or safety violation, invalid state commitment, total loss of liveness, validator-crashing input, proven cryptographic break, or unintended permanent chain split requiring a hard fork, when triggered by unprivileged transaction, package, API, or state input rather than by malicious peers or node operators.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_7c4b2581-29bc-4ce5-93f6-89dbffc236b8?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: api/types/src/ledger_info.rs -> Scope: Critical. Consensus or safety violation, invalid state commitment, total loss of liveness, validator-crashing input, proven cryptographic break, or unintended permanent chain split requiring a hard fork, when triggered by unprivileged transaction, package, API, or state input rather than by malicious peers or node operators.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_48714443-1464-4eb8-8e01-a920f1c75276?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: api/types/src/lib.rs -> Scope: Critical. Consensus or safety violation, invalid state commitment, total loss of liveness, validator-crashing input, proven cryptographic break, or unintended permanent chain split requiring a hard fork, when triggered by unprivileged transaction, package, API, or state input rather than by malicious peers or node operators.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_b5781683-c2a2-4dc6-92db-0bbeb5b5532a?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: api/types/src/mime_types.rs -> Scope: Critical. Consensus or safety violation, invalid state commitment, total loss of liveness, validator-crashing input, proven cryptographic break, or unintended permanent chain split requiring a hard fork, when triggered by unprivileged transaction, package, API, or state input rather than by malicious peers or node operators.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_390b99eb-327f-4383-bbba-45fee66fc319?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: api/types/src/move_types.rs -> Scope: Critical. Consensus or safety violation, invalid state commitment, total loss of liveness, validator-crashing input, proven cryptographic break, or unintended permanent chain split requiring a hard fork, when triggered by unprivileged transaction, package, API, or state input rather than by malicious peers or node operators.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_4c311703-19ed-4a0c-b83b-1e7ea48de3be?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: api/types/src/state.rs -> Scope: Critical. Consensus or safety violation, invalid state commitment, total loss of liveness, validator-crashing input, proven cryptographic break, or unintended permanent chain split requiring a hard fork, when triggered by unprivileged transaction, package, API, or state input rather than by malicious peers or node operators.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_20e80709-67ff-4e91-8def-eb462928c983?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: api/types/src/table.rs -> Scope: Critical. Consensus or safety violation, invalid state commitment, total loss of liveness, validator-crashing input, proven cryptographic break, or unintended permanent chain split requiring a hard fork, when triggered by unprivileged transaction, package, API, or state input rather than by malicious peers or node operators.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_acf76e08-d2b8-4166-94aa-138967d694b8?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: api/types/src/transaction.rs -> Scope: Critical. Consensus or safety violation, invalid state commitment, total loss of liveness, validator-crashing input, proven cryptographic break, or unintended permanent chain split requiring a hard fork, when triggered by unprivileged transaction, package, API, or state input rather than by malicious peers or node operators.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_c4cd4f01-1661-4c27-afbb-55f67b14da2d?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: api/types/src/view.rs -> Scope: Critical. Consensus or safety violation, invalid state commitment, total loss of liveness, validator-crashing input, proven cryptographic break, or unintended permanent chain split requiring a hard fork, when triggered by unprivileged transaction, package, API, or state input rather than by malicious peers or node operators.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_257d476b-8943-4669-88e6-32ef3893ddbc?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: api/types/src/wrappers.rs -> Scope: Critical. Consensus or safety violation, invalid state commitment, total loss of liveness, validator-crashing input, proven cryptographic break, or unintended permanent chain split requiring a hard fork, when triggered by unprivileged transaction, package, API, or state input rather than by malicious peers or node operators.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_48c1d9b7-952d-49f3-946c-c6d3a4ef5c34?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: aptos-move/aptos-aggregator/src/aggregator_v1_extension.rs -> Scope: Critical. Consensus or safety violation, invalid state commitment, total loss of liveness, validator-crashing input, proven cryptographic break, or unintended permanent chain split requiring a hard fork, when triggered by unprivileged transaction, package, API, or state input rather than by malicious peers or node operators.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_fe134d44-9b50-461a-b965-e730d93c6c87?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: aptos-move/aptos-aggregator/src/bounded_math.rs -> Scope: Critical. Consensus or safety violation, invalid state commitment, total loss of liveness, validator-crashing input, proven cryptographic break, or unintended permanent chain split requiring a hard fork, when triggered by unprivileged transaction, package, API, or state input rather than by malicious peers or node operators.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_86997081-9bd0-44fe-ac98-c4a1aeed4dca?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: aptos-move/aptos-aggregator/src/delayed_change.rs -> Scope: Critical. Consensus or safety violation, invalid state commitment, total loss of liveness, validator-crashing input, proven cryptographic break, or unintended permanent chain split requiring a hard fork, when triggered by unprivileged transaction, package, API, or state input rather than by malicious peers or node operators.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_30742158-fe9c-45a6-8154-6196c3923922?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: aptos-move/aptos-aggregator/src/delayed_field_extension.rs -> Scope: Critical. Consensus or safety violation, invalid state commitment, total loss of liveness, validator-crashing input, proven cryptographic break, or unintended permanent chain split requiring a hard fork, when triggered by unprivileged transaction, package, API, or state input rather than by malicious peers or node operators.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_e73518d1-81d6-4e2b-9e16-26ac76170a71?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: aptos-move/aptos-aggregator/src/delta_change_set.rs -> Scope: Critical. Consensus or safety violation, invalid state commitment, total loss of liveness, validator-crashing input, proven cryptographic break, or unintended permanent chain split requiring a hard fork, when triggered by unprivileged transaction, package, API, or state input rather than by malicious peers or node operators.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_437df1de-5be3-4db1-b132-78094ebc5a90?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: aptos-move/aptos-aggregator/src/delta_math.rs -> Scope: Critical. Consensus or safety violation, invalid state commitment, total loss of liveness, validator-crashing input, proven cryptographic break, or unintended permanent chain split requiring a hard fork, when triggered by unprivileged transaction, package, API, or state input rather than by malicious peers or node operators.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_87ff398d-e10c-4491-9703-438c2baeb3f5?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: aptos-move/aptos-aggregator/src/lib.rs -> Scope: Critical. Consensus or safety violation, invalid state commitment, total loss of liveness, validator-crashing input, proven cryptographic break, or unintended permanent chain split requiring a hard fork, when triggered by unprivileged transaction, package, API, or state input rather than by malicious peers or node operators.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_62ced02c-24a4-4c37-9d3a-250fc1cedc2b?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: aptos-move/aptos-aggregator/src/resolver.rs -> Scope: Critical. Consensus or safety violation, invalid state commitment, total loss of liveness, validator-crashing input, proven cryptographic break, or unintended permanent chain split requiring a hard fork, when triggered by unprivileged transaction, package, API, or state input rather than by malicious peers or node operators.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_69aacd2e-dd5c-4405-a310-b6ef64aef659?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: aptos-move/aptos-aggregator/src/types.rs -> Scope: Critical. Consensus or safety violation, invalid state commitment, total loss of liveness, validator-crashing input, proven cryptographic break, or unintended permanent chain split requiring a hard fork, when triggered by unprivileged transaction, package, API, or state input rather than by malicious peers or node operators.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_02eb770e-5cbf-407f-a95d-c74729a33333?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: aptos-move/aptos-gas-algebra/src/abstract_algebra.rs -> Scope: Critical. Consensus or safety violation, invalid state commitment, total loss of liveness, validator-crashing input, proven cryptographic break, or unintended permanent chain split requiring a hard fork, when triggered by unprivileged transaction, package, API, or state input rather than by malicious peers or node operators.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_1c3fa8e7-ad4e-4872-90fc-da5646d2ec2d?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: aptos-move/aptos-gas-algebra/src/algebra.rs -> Scope: Critical. Consensus or safety violation, invalid state commitment, total loss of liveness, validator-crashing input, proven cryptographic break, or unintended permanent chain split requiring a hard fork, when triggered by unprivileged transaction, package, API, or state input rather than by malicious peers or node operators.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_cc457407-b7ad-46db-8708-795b1f8ba30b?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: aptos-move/aptos-gas-algebra/src/lib.rs -> Scope: Critical. Consensus or safety violation, invalid state commitment, total loss of liveness, validator-crashing input, proven cryptographic break, or unintended permanent chain split requiring a hard fork, when triggered by unprivileged transaction, package, API, or state input rather than by malicious peers or node operators.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_2d499df3-fc10-476f-882f-e012393579f2?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: aptos-move/aptos-gas-meter/src/algebra.rs -> Scope: Critical. Consensus or safety violation, invalid state commitment, total loss of liveness, validator-crashing input, proven cryptographic break, or unintended permanent chain split requiring a hard fork, when triggered by unprivileged transaction, package, API, or state input rather than by malicious peers or node operators.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_91552a21-d99b-483d-bdb1-71638f4080a7?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: aptos-move/aptos-gas-meter/src/lib.rs -> Scope: Critical. Consensus or safety violation, invalid state commitment, total loss of liveness, validator-crashing input, proven cryptographic break, or unintended permanent chain split requiring a hard fork, when triggered by unprivileged transaction, package, API, or state input rather than by malicious peers or node operators.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_9c3aea31-2129-4fd8-8d2b-2c551b202e78?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: aptos-move/aptos-gas-meter/src/meter.rs -> Scope: Critical. Consensus or safety violation, invalid state commitment, total loss of liveness, validator-crashing input, proven cryptographic break, or unintended permanent chain split requiring a hard fork, when triggered by unprivileged transaction, package, API, or state input rather than by malicious peers or node operators.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_ba9365a2-4566-4d61-be0e-bbe5eeb415f4?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: aptos-move/aptos-gas-meter/src/traits.rs -> Scope: Critical. Consensus or safety violation, invalid state commitment, total loss of liveness, validator-crashing input, proven cryptographic break, or unintended permanent chain split requiring a hard fork, when triggered by unprivileged transaction, package, API, or state input rather than by malicious peers or node operators.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_4edf3690-8bd9-4c50-bfe1-a3978dcc6181?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: aptos-move/aptos-gas-schedule/src/gas_schedule/aptos_framework.rs -> Scope: Critical. Consensus or safety violation, invalid state commitment, total loss of liveness, validator-crashing input, proven cryptographic break, or unintended permanent chain split requiring a hard fork, when triggered by unprivileged transaction, package, API, or state input rather than by malicious peers or node operators.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_f06a0a2c-b3b1-4355-bc58-7996415bbddb?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: aptos-move/aptos-gas-schedule/src/gas_schedule/instr.rs -> Scope: Critical. Consensus or safety violation, invalid state commitment, total loss of liveness, validator-crashing input, proven cryptographic break, or unintended permanent chain split requiring a hard fork, when triggered by unprivileged transaction, package, API, or state input rather than by malicious peers or node operators.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_225f0cd6-1c09-434b-8081-9c3d1224d0e0?mode=deep",
+    "questions_generated": false
+  }
+]
