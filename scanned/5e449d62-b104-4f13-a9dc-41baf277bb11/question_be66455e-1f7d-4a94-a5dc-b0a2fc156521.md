@@ -1,1 +1,0 @@
-[File: 'crates/aptos-dkg/src/pvss/chunky/chunked_scalar_mul.rs -> Scope: Critical.'] [Symbol: DST constant APTOS_CHUNKED_COMMIT_HOM_SIGMA_DST] Can an attacker-controlled proof generated under a different sigma protocol that shares the same DST b\
