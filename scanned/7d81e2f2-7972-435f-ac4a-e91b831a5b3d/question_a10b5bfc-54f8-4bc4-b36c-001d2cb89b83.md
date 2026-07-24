@@ -1,0 +1,1 @@
+[File: 'types/src/keyless/bn254_circom.rs -> Scope: High. Unauthorized transaction execution, replay, signer confusion, signature or proof misbinding, or sequence and authorization bypass.'] [Symbol: hash_public_inputs / EMPTY_EXTRA_FIELD_HASH] Can an attacker submit a ZeroKnowledgeSig with extra_field = Some(\

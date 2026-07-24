@@ -1,0 +1,1 @@
+[File: 'crates/aptos-dkg/src/utils/random.rs -> Scope: High. Unauthorized transaction execution, replay, signer confusion, signature or proof misbinding, or sequence and authorization bypass.'] [Symbol: DST_RAND_CORE_HELL] Can an attacker exploit the fact that both random_g1_point and random_g2_point use the same DST b\
