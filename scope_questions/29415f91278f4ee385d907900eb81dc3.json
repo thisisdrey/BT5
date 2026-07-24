@@ -1,0 +1,152 @@
+[
+  {
+    "question": "'File Name: aptos-move/aptos-vm/src/move_vm_ext/session/user_transaction_sessions/session_change_sets.rs -> Scope: Critical. Unauthorized theft, minting, burning, freezing, or reassignment of APT, fungible assets, tokenized assets, staking balances, vesting balances, or other user-controlled on-chain value through transaction validation, Move execution, native-function handling, or state-commitment failure.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_cf105c62-f34b-458d-90dd-3d37571c8d27?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: aptos-move/aptos-vm/src/move_vm_ext/session/user_transaction_sessions/user.rs -> Scope: Critical. Unauthorized theft, minting, burning, freezing, or reassignment of APT, fungible assets, tokenized assets, staking balances, vesting balances, or other user-controlled on-chain value through transaction validation, Move execution, native-function handling, or state-commitment failure.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_cf21525d-5a1b-4ff9-a59d-001cbbb4aaf9?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: aptos-move/aptos-vm/src/move_vm_ext/session/view_with_change_set.rs -> Scope: Critical. Unauthorized theft, minting, burning, freezing, or reassignment of APT, fungible assets, tokenized assets, staking balances, vesting balances, or other user-controlled on-chain value through transaction validation, Move execution, native-function handling, or state-commitment failure.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_ae00329a-1fbd-4115-a278-c2dbca99c5a1?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: aptos-move/aptos-vm/src/move_vm_ext/vm.rs -> Scope: Critical. Unauthorized theft, minting, burning, freezing, or reassignment of APT, fungible assets, tokenized assets, staking balances, vesting balances, or other user-controlled on-chain value through transaction validation, Move execution, native-function handling, or state-commitment failure.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_5e67f996-46c0-4a05-a8b5-4e8842a2787f?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: aptos-move/aptos-vm/src/move_vm_ext/write_op_converter.rs -> Scope: Critical. Unauthorized theft, minting, burning, freezing, or reassignment of APT, fungible assets, tokenized assets, staking balances, vesting balances, or other user-controlled on-chain value through transaction validation, Move execution, native-function handling, or state-commitment failure.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_3a0ca618-3858-40ff-983d-3132c380d8e2?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: aptos-move/aptos-vm/src/natives.rs -> Scope: Critical. Unauthorized theft, minting, burning, freezing, or reassignment of APT, fungible assets, tokenized assets, staking balances, vesting balances, or other user-controlled on-chain value through transaction validation, Move execution, native-function handling, or state-commitment failure.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_04e88052-9e1c-45d4-8280-d35c31790aa8?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: aptos-move/aptos-vm/src/sharded_block_executor/aggr_overridden_state_view.rs -> Scope: Critical. Unauthorized theft, minting, burning, freezing, or reassignment of APT, fungible assets, tokenized assets, staking balances, vesting balances, or other user-controlled on-chain value through transaction validation, Move execution, native-function handling, or state-commitment failure.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_13518281-69b5-4576-9c76-22955791bf9c?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: aptos-move/aptos-vm/src/sharded_block_executor/coordinator_client.rs -> Scope: Critical. Unauthorized theft, minting, burning, freezing, or reassignment of APT, fungible assets, tokenized assets, staking balances, vesting balances, or other user-controlled on-chain value through transaction validation, Move execution, native-function handling, or state-commitment failure.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_31a4be3f-3472-4211-80d0-d4b8f3f1139e?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: aptos-move/aptos-vm/src/sharded_block_executor/counters.rs -> Scope: Critical. Unauthorized theft, minting, burning, freezing, or reassignment of APT, fungible assets, tokenized assets, staking balances, vesting balances, or other user-controlled on-chain value through transaction validation, Move execution, native-function handling, or state-commitment failure.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_060c5cd7-ab12-487b-9521-36a92416cac2?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: aptos-move/aptos-vm/src/sharded_block_executor/cross_shard_client.rs -> Scope: Critical. Unauthorized theft, minting, burning, freezing, or reassignment of APT, fungible assets, tokenized assets, staking balances, vesting balances, or other user-controlled on-chain value through transaction validation, Move execution, native-function handling, or state-commitment failure.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_9cf665db-fb53-491d-866b-28a85963d66a?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: aptos-move/aptos-vm/src/sharded_block_executor/cross_shard_state_view.rs -> Scope: Critical. Unauthorized theft, minting, burning, freezing, or reassignment of APT, fungible assets, tokenized assets, staking balances, vesting balances, or other user-controlled on-chain value through transaction validation, Move execution, native-function handling, or state-commitment failure.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_5419c547-0ee1-49c4-890b-2a3f8e88f023?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: aptos-move/aptos-vm/src/sharded_block_executor/executor_client.rs -> Scope: Critical. Unauthorized theft, minting, burning, freezing, or reassignment of APT, fungible assets, tokenized assets, staking balances, vesting balances, or other user-controlled on-chain value through transaction validation, Move execution, native-function handling, or state-commitment failure.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_d88737cb-a2f7-4bf8-ac1b-aeae85505801?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: aptos-move/aptos-vm/src/sharded_block_executor/global_executor.rs -> Scope: Critical. Unauthorized theft, minting, burning, freezing, or reassignment of APT, fungible assets, tokenized assets, staking balances, vesting balances, or other user-controlled on-chain value through transaction validation, Move execution, native-function handling, or state-commitment failure.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_defd093e-7820-4806-b8a6-26fae5e15386?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: aptos-move/aptos-vm/src/sharded_block_executor/local_executor_shard.rs -> Scope: Critical. Unauthorized theft, minting, burning, freezing, or reassignment of APT, fungible assets, tokenized assets, staking balances, vesting balances, or other user-controlled on-chain value through transaction validation, Move execution, native-function handling, or state-commitment failure.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_806f2715-e147-4e1c-9d81-38dc99613250?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: aptos-move/aptos-vm/src/sharded_block_executor/messages.rs -> Scope: Critical. Unauthorized theft, minting, burning, freezing, or reassignment of APT, fungible assets, tokenized assets, staking balances, vesting balances, or other user-controlled on-chain value through transaction validation, Move execution, native-function handling, or state-commitment failure.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_a00ca0e9-5cf9-4d87-896e-85e7dd878313?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: aptos-move/aptos-vm/src/sharded_block_executor/mod.rs -> Scope: Critical. Unauthorized theft, minting, burning, freezing, or reassignment of APT, fungible assets, tokenized assets, staking balances, vesting balances, or other user-controlled on-chain value through transaction validation, Move execution, native-function handling, or state-commitment failure.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_985e2134-23db-4e4b-9bcb-0109f6b9a6e7?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: aptos-move/aptos-vm/src/sharded_block_executor/remote_state_value.rs -> Scope: Critical. Unauthorized theft, minting, burning, freezing, or reassignment of APT, fungible assets, tokenized assets, staking balances, vesting balances, or other user-controlled on-chain value through transaction validation, Move execution, native-function handling, or state-commitment failure.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_de3f106f-91af-4f24-844b-c3725565c9bf?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: aptos-move/aptos-vm/src/sharded_block_executor/sharded_aggregator_service.rs -> Scope: Critical. Unauthorized theft, minting, burning, freezing, or reassignment of APT, fungible assets, tokenized assets, staking balances, vesting balances, or other user-controlled on-chain value through transaction validation, Move execution, native-function handling, or state-commitment failure.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_7be9b574-a7a8-466c-b304-9a0cbaade19f?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: aptos-move/aptos-vm/src/sharded_block_executor/sharded_executor_service.rs -> Scope: Critical. Unauthorized theft, minting, burning, freezing, or reassignment of APT, fungible assets, tokenized assets, staking balances, vesting balances, or other user-controlled on-chain value through transaction validation, Move execution, native-function handling, or state-commitment failure.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_dd726054-8f6a-4ee1-91bd-cc1123d79871?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: aptos-move/aptos-vm/src/system_module_names.rs -> Scope: Critical. Unauthorized theft, minting, burning, freezing, or reassignment of APT, fungible assets, tokenized assets, staking balances, vesting balances, or other user-controlled on-chain value through transaction validation, Move execution, native-function handling, or state-commitment failure.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_e339a295-ed02-4204-91ba-0b7cf9de1eba?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: aptos-move/aptos-vm/src/transaction_metadata.rs -> Scope: Critical. Unauthorized theft, minting, burning, freezing, or reassignment of APT, fungible assets, tokenized assets, staking balances, vesting balances, or other user-controlled on-chain value through transaction validation, Move execution, native-function handling, or state-commitment failure.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_19ccf42e-c5f5-4097-bfec-dceed182cf82?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: aptos-move/aptos-vm/src/transaction_validation.rs -> Scope: Critical. Unauthorized theft, minting, burning, freezing, or reassignment of APT, fungible assets, tokenized assets, staking balances, vesting balances, or other user-controlled on-chain value through transaction validation, Move execution, native-function handling, or state-commitment failure.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_364d4468-f388-46d7-8313-a50d7eafb6c3?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: aptos-move/aptos-vm/src/transaction_validation_versioned.rs -> Scope: Critical. Unauthorized theft, minting, burning, freezing, or reassignment of APT, fungible assets, tokenized assets, staking balances, vesting balances, or other user-controlled on-chain value through transaction validation, Move execution, native-function handling, or state-commitment failure.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_19ab4456-2aa6-4592-938f-f74d99ccfcff?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: aptos-move/aptos-vm/src/validator_txns/chunky_dkg.rs -> Scope: Critical. Unauthorized theft, minting, burning, freezing, or reassignment of APT, fungible assets, tokenized assets, staking balances, vesting balances, or other user-controlled on-chain value through transaction validation, Move execution, native-function handling, or state-commitment failure.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_f560d48f-99bd-47a7-9099-a7e2f9764442?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: aptos-move/aptos-vm/src/validator_txns/dkg.rs -> Scope: Critical. Unauthorized theft, minting, burning, freezing, or reassignment of APT, fungible assets, tokenized assets, staking balances, vesting balances, or other user-controlled on-chain value through transaction validation, Move execution, native-function handling, or state-commitment failure.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_da0cb532-c6c6-4569-a9ea-c08cae83fab9?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: aptos-move/aptos-vm/src/validator_txns/jwk.rs -> Scope: Critical. Unauthorized theft, minting, burning, freezing, or reassignment of APT, fungible assets, tokenized assets, staking balances, vesting balances, or other user-controlled on-chain value through transaction validation, Move execution, native-function handling, or state-commitment failure.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_b94d55b7-0873-47b4-bf78-f118504ed319?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: aptos-move/aptos-vm/src/validator_txns/mod.rs -> Scope: Critical. Unauthorized theft, minting, burning, freezing, or reassignment of APT, fungible assets, tokenized assets, staking balances, vesting balances, or other user-controlled on-chain value through transaction validation, Move execution, native-function handling, or state-commitment failure.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_d987e9f9-dc27-4067-a895-eff721729dcc?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: aptos-move/aptos-vm/src/verifier/event_validation.rs -> Scope: Critical. Unauthorized theft, minting, burning, freezing, or reassignment of APT, fungible assets, tokenized assets, staking balances, vesting balances, or other user-controlled on-chain value through transaction validation, Move execution, native-function handling, or state-commitment failure.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_465d3c88-b927-4304-846b-081e7f6cb16c?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: aptos-move/aptos-vm/src/verifier/mod.rs -> Scope: Critical. Unauthorized theft, minting, burning, freezing, or reassignment of APT, fungible assets, tokenized assets, staking balances, vesting balances, or other user-controlled on-chain value through transaction validation, Move execution, native-function handling, or state-commitment failure.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_05b3240c-1125-4d1d-a10b-b45b9a842887?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: aptos-move/aptos-vm/src/verifier/module_init.rs -> Scope: Critical. Unauthorized theft, minting, burning, freezing, or reassignment of APT, fungible assets, tokenized assets, staking balances, vesting balances, or other user-controlled on-chain value through transaction validation, Move execution, native-function handling, or state-commitment failure.'",
+    "url": "https://deepwiki.com/search/-generate-aptos-core-security_1da2ee4a-6374-4291-886a-e99bf1ab966a?mode=deep",
+    "questions_generated": false
+  }
+]
