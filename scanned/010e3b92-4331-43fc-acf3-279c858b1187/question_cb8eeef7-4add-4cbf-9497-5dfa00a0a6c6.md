@@ -1,0 +1,1 @@
+[File: 'types/src/account_config/resources/any.rs -> Scope: High'] [Symbol: AnyResource / Any (move_any.rs) dual representation] Can an attacker-controlled on-chain state value for 0x1::any::Any be deserialized by AnyResource::try_from_bytes (one-round BCS, no serde_bytes on data) differently than by types/src/move_any.rs Any (which uses #[serde(with = \

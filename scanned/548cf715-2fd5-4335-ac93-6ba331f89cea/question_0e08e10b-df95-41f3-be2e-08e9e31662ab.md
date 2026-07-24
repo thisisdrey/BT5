@@ -1,0 +1,1 @@
+[File: 'types/src/account_config/resources/any.rs -> Scope: High'] [Symbol: randomness_config::enabled() byte comparison / AnyResource type_name] Can an attacker-controlled RandomnessConfig on-chain state containing an Any variant whose type_name bytes are b\

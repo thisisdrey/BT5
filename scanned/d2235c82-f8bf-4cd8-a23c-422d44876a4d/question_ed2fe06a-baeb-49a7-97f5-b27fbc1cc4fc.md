@@ -1,0 +1,1 @@
+[File: 'third_party/move/move-vm/types/src/delayed_values/delayed_field_id.rs -> Scope: Critical.'] [Symbol: TryFromMoveValue for DelayedFieldID (DerivedString arm) / from_utf8_bytes] Can a DerivedStringSnapshot struct whose string field contains non-numeric UTF-8 bytes (e.g., b\

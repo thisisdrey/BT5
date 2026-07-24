@@ -1,0 +1,1 @@
+[File: 'third_party/move/move-vm/types/src/views.rs -> Scope: Critical. Irreversible fund lock, permanently unspendable balances, or non-recoverable loss of access to user or protocol value caused by broken execution, storage, object, staking, vesting, multisig, or resource-account flows.'] [Symbol: ValueView::legacy_abstract_memory_size / .expect(\
