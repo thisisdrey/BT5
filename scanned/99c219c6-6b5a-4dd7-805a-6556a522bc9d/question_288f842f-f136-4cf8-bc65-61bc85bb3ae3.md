@@ -1,1 +1,0 @@
-[File: 'third_party/move/move-core/types/src/diag_writer.rs -> Scope: High. Unauthorized transaction execution, replay, signer confusion, signature or proof misbinding, or sequence and authorization bypass.'] [Symbol: DiagWriter::write / io::Error::other from mutex poison vs. real I/O error] Can a DiagWriter whose mutex is poisoned return io::Error::other(\
