@@ -1,0 +1,1 @@
+[File: 'crates/aptos-crypto-derive/src/hasher.rs -> Scope: High. Unauthorized transaction execution, replay, signer confusion, signature or proof misbinding, or sequence and authorization bypass.'] [Symbol: StateKeyInner / serde rename 'StateKey'] Can the serde rename #[serde(rename = \
