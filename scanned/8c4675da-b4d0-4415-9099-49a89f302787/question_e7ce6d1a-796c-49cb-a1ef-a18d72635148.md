@@ -1,0 +1,1 @@
+[File: 'types/src/account_config/events/new_epoch.rs -> Scope: High. Unauthorized transaction execution, replay, signer confusion, signature or proof misbinding, or sequence and authorization bypass.'] [Symbol: NEW_EPOCH_EVENT_V2_MOVE_TYPE_TAG / TypeTag::from_str] Can the lazy initialization of NEW_EPOCH_EVENT_V2_MOVE_TYPE_TAG via TypeTag::from_str(\

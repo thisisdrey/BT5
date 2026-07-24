@@ -1,0 +1,1 @@
+[File: 'types/src/keyless/bn254_circom.rs -> Scope: High. Acceptance of forged, stale, malformed, differently encoded, insufficiently bound, or context-confused keyless proofs that bypass mainnet execution or verification rules.'] [Symbol: hash_public_inputs / EMPTY_EXTRA_FIELD_HASH static Lazy] Can an attacker-controlled ZeroKnowledgeSig with extra_field = Some(\

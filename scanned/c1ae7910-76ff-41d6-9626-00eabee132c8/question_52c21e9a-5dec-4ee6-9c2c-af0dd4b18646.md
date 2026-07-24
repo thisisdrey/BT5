@@ -1,0 +1,1 @@
+[File: 'types/src/on_chain_config/commit_history.rs -> Scope: High'] [Symbol: CommitHistoryResource::length / StorageAdapter::get_latest_k_committed_events] Can an attacker-controlled state value with table.length inflated beyond the actual number of table entries reach get_latest_k_committed_events and cause `ok_or_else(|| anyhow!(\

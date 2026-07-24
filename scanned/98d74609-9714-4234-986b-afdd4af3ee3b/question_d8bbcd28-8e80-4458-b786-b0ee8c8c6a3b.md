@@ -1,0 +1,1 @@
+[File: 'aptos-move/framework/aptos-token/sources/token.move -> Scope: Critical.'] [Symbol: assert_non_standard_reserved_property] Can an unprivileged creator bypass the `TOKEN_` prefix guard in `assert_non_standard_reserved_property` by supplying a property key whose byte length is less than 6 (e.g., `b\
