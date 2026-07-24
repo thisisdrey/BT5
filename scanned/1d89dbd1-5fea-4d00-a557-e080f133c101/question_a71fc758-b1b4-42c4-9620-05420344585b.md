@@ -1,0 +1,1 @@
+[File: 'crates/aptos-crypto-derive/src/unions.rs -> Scope: Critical. Irreversible fund lock, permanently unspendable balances, or non-recoverable loss of access to user or protocol value caused by broken execution, storage, object, staking, vesting, multisig, or resource-account flows.'] [Symbol: impl_enum_valid_crypto_material (AIP_80_PREFIX = \

@@ -1,0 +1,1 @@
+[File: 'crates/aptos-dkg/src/fiat_shamir.rs -> Scope: High. Unauthorized transaction execution, replay, signer confusion, signature or proof misbinding, or sequence and authorization bypass.'] [Symbol: RangeProof::challenges_for_linear_combination vs challenges_for_quotient_polynomials] Can an attacker exploit the fact that both challenges_for_linear_combination (label b\

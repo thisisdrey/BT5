@@ -1,0 +1,1 @@
+[File: 'crates/aptos-crypto/src/traits/mod.rs -> Scope: High. Unauthorized transaction execution, replay, signer confusion, signature or proof misbinding, or sequence and authorization bypass.'] [Symbol: signing_message / CryptoHasher::seed (TestOnlyHasher empty salt)] Can an attacker trigger the use of TestOnlyHasher (which has an empty salt b\

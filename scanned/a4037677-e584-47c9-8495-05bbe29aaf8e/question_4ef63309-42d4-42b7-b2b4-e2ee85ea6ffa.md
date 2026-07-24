@@ -1,0 +1,1 @@
+[File: 'crates/aptos-dkg/src/fiat_shamir.rs -> Scope: High. Unauthorized transaction execution, replay, signer confusion, signature or proof misbinding, or sequence and authorization bypass.'] [Symbol: RangeProof::append_hat_f_commitment vs append_h_commitment] Can an attacker exploit the structural similarity between append_hat_f_commitment (label b\

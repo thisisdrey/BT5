@@ -1,0 +1,1 @@
+[File: 'crates/aptos-dkg/src/fiat_shamir.rs -> Scope: High. Unauthorized transaction execution, replay, signer confusion, signature or proof misbinding, or sequence and authorization bypass.'] [Symbol: SigmaProtocol::challenge_for_sigma_protocol] Can an attacker exploit the fixed Merlin label b\

@@ -1,0 +1,1 @@
+[File: 'api/types/src/block.rs -> Scope: Critical. Irreversible fund lock, permanently unspendable balances, or non-recoverable loss of access to user or protocol value caused by broken execution, storage, object, staking, vesting, multisig, or resource-account flows.'] [Symbol: Block / serde skip_serializing_if] Can the `#[serde(skip_serializing_if = \

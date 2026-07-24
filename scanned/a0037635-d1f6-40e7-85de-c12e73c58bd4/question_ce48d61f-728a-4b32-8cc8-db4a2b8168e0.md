@@ -1,0 +1,1 @@
+[File: 'storage/storage-interface/src/metrics.rs'] [Symbol: StateSummary::update (state_summary.rs)] Can an attacker-controlled ProvableStateSummary whose next_version() is greater than self.next_version() under REQUIRED_STATE of a forked node reach StateSummary::update -> bail!(\

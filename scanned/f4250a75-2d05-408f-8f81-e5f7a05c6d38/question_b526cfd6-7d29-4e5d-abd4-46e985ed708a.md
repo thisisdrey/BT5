@@ -1,0 +1,1 @@
+[File: 'crates/aptos-crypto/src/traits/mod.rs -> Scope: High. Unauthorized transaction execution, replay, signer confusion, signature or proof misbinding, or sequence and authorization bypass.'] [Symbol: signing_message] Can an attacker craft two distinct Rust types T1 and T2 that share the same BCS/Serde serialization name (via #[serde(rename = \
