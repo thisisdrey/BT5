@@ -1,1 +1,0 @@
-[File: 'types/src/account_config/events/collection_uri_mutate.rs -> Scope: Critical. Irreversible fund lock, permanently unspendable balances, or non-recoverable loss of access to user or protocol value caused by broken execution, storage, object, staking, vesting, multisig, or resource-account flows.'] [Symbol: MoveStructType::STRUCT_NAME (ident_str!(\
