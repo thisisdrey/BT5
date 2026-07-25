@@ -1,1 +1,0 @@
-[File: 'storage/storage-interface/src/metrics.rs'] [Symbol: CachedStateView::prime_cache_for_keys (cached_state_view.rs)] Can an attacker-controlled StateKey that causes get_state_value to return an error under REQUIRED_STATE of a node with a partially-corrupted DB reach prime_cache -> prime_cache_for_batched_updates -> prime_cache_for_keys -> get_state_value -> expect(\
