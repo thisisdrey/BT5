@@ -1,0 +1,1 @@
+I'll analyze the bug class (unconditional guard that should be conditional, causing unexpected failures) and search for analogs in the Aptos repository.
