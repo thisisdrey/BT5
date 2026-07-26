@@ -1,0 +1,1 @@
+I'll analyze the external bug's root cause: **funds sent with a transaction are silently discarded/locked due to conditional logic that zeroes out the amount**. Let me search for Aptos analogs where APT or fungible assets could be similarly locked.
