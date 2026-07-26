@@ -1,0 +1,1 @@
+I'll analyze the bug class: **reward/claim state reset before actual distribution, with silent failure path causing permanent fund loss**. Let me search for analogs in the Aptos codebase.
