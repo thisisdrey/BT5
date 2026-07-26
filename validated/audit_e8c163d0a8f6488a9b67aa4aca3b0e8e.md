@@ -1,0 +1,1 @@
+Let me look at how `call_closure` is invoked in the reference safety verifier to complete the analysis.
