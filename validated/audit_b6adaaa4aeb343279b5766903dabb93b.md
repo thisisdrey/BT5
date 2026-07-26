@@ -1,0 +1,1 @@
+I have fully read `check_bounds.rs` and confirmed the critical fact: there is **zero** handling of `AccessSpecifier` or `ResourceSpecifier` anywhere in the bounds checker. Let me trace the exact path.
