@@ -1,0 +1,3 @@
+Looking at the external bug's root cause — a refund/fee being sent to the wrong party because the recipient-check logic uses a stale or incorrect address — I need to find an analogous pattern in the Aptos codebase where funds are routed to the wrong address due to a similar identity-mismatch in a distribution or refund path.
+
+Let me trace the staking contract's operator-switch and commission-distribution flow carefully.
