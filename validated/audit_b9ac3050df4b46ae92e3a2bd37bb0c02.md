@@ -1,0 +1,1 @@
+I'll analyze the external bug's root cause (TOCTOU race: a batch operation accepts a caller-supplied list of items but never verifies the list is exhaustive against the live on-chain set) and search for the same pattern in the Aptos repository.
