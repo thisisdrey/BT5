@@ -1,0 +1,1 @@
+Let me look at the production share assembly path to determine if an unprivileged attacker can control the share list.
