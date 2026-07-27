@@ -1,1 +1,0 @@
-Looking at the H-06 root cause — a rate parameter is updated without first checkpointing accumulated state that accrued under the old rate — I need to find an Aptos analog where a commission/reward rate is changed but pending accumulated balances are not settled first.

@@ -1,1 +1,0 @@
-Looking at the `multisig_account.move` file, I found a direct analog to the external bug. Let me verify the `account::verify_signed_message` serialization behavior.

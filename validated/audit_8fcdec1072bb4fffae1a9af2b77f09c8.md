@@ -1,1 +1,0 @@
-Let me analyze the external bug's root cause: an arbitrary mask/parameter is OR'd with a legitimate pool address, allowing an attacker to redirect fund flows to a malicious pool. I need to find an Aptos analog where an unprivileged caller can pass an arbitrary parameter that substitutes a legitimate target with a malicious one.

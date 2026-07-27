@@ -1,1 +1,0 @@
-Let me look at `add_stake` in `staking_contract.move` to check if `principal` is updated there.

@@ -1,1 +1,0 @@
-Let me look at the vesting schedule creation and the `vest` function more carefully for a potential division-by-zero.

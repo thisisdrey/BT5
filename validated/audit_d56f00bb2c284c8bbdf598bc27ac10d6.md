@@ -1,3 +1,0 @@
-I'll analyze the root cause of the external bug and search for an analog in the Aptos repository. The core issue is: **state is written at `ID=counter`, an external interaction (ETH refund) happens before `counter++`, allowing reentrancy to overwrite the same `ID=counter` slot with different parameters**.
-
-Let me search for similar patterns in the Aptos codebase — specifically counter-based ID assignment where state is written before the counter is incremented, with some external call or callback in between.

@@ -1,1 +1,0 @@
-Let me look at the `update_commision` function and the `switch_operator` function in staking_contract.move, as these involve complex state transitions that could have the analog bug pattern.

@@ -1,1 +1,0 @@
-Let me read the `add_stake` function in `staking_contract.move` and the `total_accumulated_rewards` calculation more carefully.

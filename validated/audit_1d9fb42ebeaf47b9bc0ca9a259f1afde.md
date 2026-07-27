@@ -1,1 +1,0 @@
-Let me analyze the bug class: an identity/address check that can be bypassed because the same asset has multiple identifiers. In Aptos, the analog would be a check that guards against using a specific coin/fungible asset, but only checks one of its possible identifiers (e.g., coin type vs. FA metadata address). Let me search for this pattern.

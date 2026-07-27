@@ -1,1 +1,0 @@
-Let me search the Aptos codebase for withdrawal/redemption patterns that have a single path dependency, analogous to the Reth.sol issue.

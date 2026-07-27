@@ -1,1 +1,0 @@
-Let me read the abstract state and `check_function` to complete the analysis.

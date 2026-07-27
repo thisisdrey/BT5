@@ -1,1 +1,0 @@
-Looking at the external bug's root cause: a function calls user-controlled external code without error handling, so if that code reverts, the entire transaction reverts and the caller loses gas/fee. The Aptos analog maps to distribution loops that call `aptos_account::deposit_coins()` for each recipient without any error isolation.
