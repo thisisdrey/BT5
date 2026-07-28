@@ -1,0 +1,12 @@
+[
+  {
+    "question": "'File Name: tare-io__tare-contracts/contracts/TrustedSpender.sol -> Scope: High. Material corruption of per-loan ledger balances, cash segregation, investor entitlement, vault NAV, async deposit or redeem accounting, offer settlement accounting, or share pricing that lets an unprivileged attacker extract value, shift value between users, or create underbacked claims.'",
+    "url": "https://deepwiki.com/search/-generate-tare-smartcontract-s_f37e302e-b109-4b07-9ae6-69784acf5872?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: tare-io__tare-contracts/contracts/VaultShareToken.sol -> Scope: High. Material corruption of per-loan ledger balances, cash segregation, investor entitlement, vault NAV, async deposit or redeem accounting, offer settlement accounting, or share pricing that lets an unprivileged attacker extract value, shift value between users, or create underbacked claims.'",
+    "url": "https://deepwiki.com/search/-generate-tare-smartcontract-s_0b404b8d-487a-40f9-add7-56b58a6a0d78?mode=deep",
+    "questions_generated": false
+  }
+]
