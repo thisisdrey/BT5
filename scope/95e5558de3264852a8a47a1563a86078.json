@@ -1,4 +1,0 @@
-[
-  "'File Name: tare-io__tare-contracts/contracts/TrustedSpender.sol -> Scope: High. Unauthorized role, whitelist, controller, receiver, delegate, allowance, approval, lock, or ownership bypass that lets an unprivileged attacker execute actions or move value on behalf of another investor, borrower, seller, buyer, vault shareholder, or Safe account.'",
-  "'File Name: tare-io__tare-contracts/contracts/VaultShareToken.sol -> Scope: High. Unauthorized role, whitelist, controller, receiver, delegate, allowance, approval, lock, or ownership bypass that lets an unprivileged attacker execute actions or move value on behalf of another investor, borrower, seller, buyer, vault shareholder, or Safe account.'"
-]
