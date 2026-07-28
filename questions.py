@@ -2,8 +2,8 @@ import json
 import os
 
 MAX_REPO = 25
-SOURCE_REPO = 'tare-io/tare-contracts'
-REPO_NAME = 'tare-contracts'
+SOURCE_REPO = 'codertjay/2026-07-tare-dev-oyakhil-main'
+REPO_NAME = '2026-07-tare-dev-oyakhil-main'
 run_number = os.environ.get("GITHUB_RUN_NUMBER") or os.environ.get(
     "CI_PIPELINE_IID", "0"
 )
