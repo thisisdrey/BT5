@@ -1,0 +1,152 @@
+[
+  {
+    "question": "'File Name: tare-io__tare-contracts/contracts/interfaces/Accounts.sol -> Scope: High. Unauthorized role, whitelist, controller, receiver, delegate, allowance, approval, lock, or ownership bypass that lets an unprivileged attacker execute actions or move value on behalf of another investor, borrower, seller, buyer, vault shareholder, or Safe account.'",
+    "url": "https://deepwiki.com/search/-generate-tare-smartcontract-s_153cc074-80cc-4507-a552-4fe540498d8f?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: tare-io__tare-contracts/contracts/interfaces/IERC1404.sol -> Scope: High. Unauthorized role, whitelist, controller, receiver, delegate, allowance, approval, lock, or ownership bypass that lets an unprivileged attacker execute actions or move value on behalf of another investor, borrower, seller, buyer, vault shareholder, or Safe account.'",
+    "url": "https://deepwiki.com/search/-generate-tare-smartcontract-s_3d41f895-88fa-41c3-a044-1a77e3776729?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: tare-io__tare-contracts/contracts/interfaces/ILoansExchange.sol -> Scope: High. Unauthorized role, whitelist, controller, receiver, delegate, allowance, approval, lock, or ownership bypass that lets an unprivileged attacker execute actions or move value on behalf of another investor, borrower, seller, buyer, vault shareholder, or Safe account.'",
+    "url": "https://deepwiki.com/search/-generate-tare-smartcontract-s_2bb3044b-3cfb-40bc-9253-0af50a958b68?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: tare-io__tare-contracts/contracts/interfaces/ILoansNFT.sol -> Scope: High. Unauthorized role, whitelist, controller, receiver, delegate, allowance, approval, lock, or ownership bypass that lets an unprivileged attacker execute actions or move value on behalf of another investor, borrower, seller, buyer, vault shareholder, or Safe account.'",
+    "url": "https://deepwiki.com/search/-generate-tare-smartcontract-s_585994f2-68da-47e5-a718-36ac06eb635a?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: tare-io__tare-contracts/contracts/interfaces/ILoans.sol -> Scope: High. Unauthorized role, whitelist, controller, receiver, delegate, allowance, approval, lock, or ownership bypass that lets an unprivileged attacker execute actions or move value on behalf of another investor, borrower, seller, buyer, vault shareholder, or Safe account.'",
+    "url": "https://deepwiki.com/search/-generate-tare-smartcontract-s_0404efaf-9db4-4fe3-9c28-56b463bbfbf6?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: tare-io__tare-contracts/contracts/interfaces/INavCalculator.sol -> Scope: High. Unauthorized role, whitelist, controller, receiver, delegate, allowance, approval, lock, or ownership bypass that lets an unprivileged attacker execute actions or move value on behalf of another investor, borrower, seller, buyer, vault shareholder, or Safe account.'",
+    "url": "https://deepwiki.com/search/-generate-tare-smartcontract-s_f23f42bf-b56b-4ca6-ab23-6f1a92355fb2?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: tare-io__tare-contracts/contracts/interfaces/IPortfolioVault.sol -> Scope: High. Unauthorized role, whitelist, controller, receiver, delegate, allowance, approval, lock, or ownership bypass that lets an unprivileged attacker execute actions or move value on behalf of another investor, borrower, seller, buyer, vault shareholder, or Safe account.'",
+    "url": "https://deepwiki.com/search/-generate-tare-smartcontract-s_f23f7dc6-0c9f-4c86-9736-5708f582018a?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: tare-io__tare-contracts/contracts/interfaces/ISmartAccountFactory.sol -> Scope: High. Unauthorized role, whitelist, controller, receiver, delegate, allowance, approval, lock, or ownership bypass that lets an unprivileged attacker execute actions or move value on behalf of another investor, borrower, seller, buyer, vault shareholder, or Safe account.'",
+    "url": "https://deepwiki.com/search/-generate-tare-smartcontract-s_62c853d5-d7c6-48e7-82ff-b384671fad78?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: tare-io__tare-contracts/contracts/interfaces/ITrustedCalls.sol -> Scope: High. Unauthorized role, whitelist, controller, receiver, delegate, allowance, approval, lock, or ownership bypass that lets an unprivileged attacker execute actions or move value on behalf of another investor, borrower, seller, buyer, vault shareholder, or Safe account.'",
+    "url": "https://deepwiki.com/search/-generate-tare-smartcontract-s_c9f5402f-85e4-40c3-944a-364628f2135c?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: tare-io__tare-contracts/contracts/interfaces/ITrustedSpender.sol -> Scope: High. Unauthorized role, whitelist, controller, receiver, delegate, allowance, approval, lock, or ownership bypass that lets an unprivileged attacker execute actions or move value on behalf of another investor, borrower, seller, buyer, vault shareholder, or Safe account.'",
+    "url": "https://deepwiki.com/search/-generate-tare-smartcontract-s_ff0377da-26a2-40be-b28b-f315accb9948?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: tare-io__tare-contracts/contracts/interfaces/IVaultShareToken.sol -> Scope: High. Unauthorized role, whitelist, controller, receiver, delegate, allowance, approval, lock, or ownership bypass that lets an unprivileged attacker execute actions or move value on behalf of another investor, borrower, seller, buyer, vault shareholder, or Safe account.'",
+    "url": "https://deepwiki.com/search/-generate-tare-smartcontract-s_cbc0bbaa-616c-4101-acd4-6d127db13ed3?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: tare-io__tare-contracts/contracts/interfaces/LedgerEntries.sol -> Scope: High. Unauthorized role, whitelist, controller, receiver, delegate, allowance, approval, lock, or ownership bypass that lets an unprivileged attacker execute actions or move value on behalf of another investor, borrower, seller, buyer, vault shareholder, or Safe account.'",
+    "url": "https://deepwiki.com/search/-generate-tare-smartcontract-s_869ca386-9b55-4292-b7c6-6a4ba2905134?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: tare-io__tare-contracts/contracts/LoansExchange.sol -> Scope: High. Unauthorized role, whitelist, controller, receiver, delegate, allowance, approval, lock, or ownership bypass that lets an unprivileged attacker execute actions or move value on behalf of another investor, borrower, seller, buyer, vault shareholder, or Safe account.'",
+    "url": "https://deepwiki.com/search/-generate-tare-smartcontract-s_005bde37-b615-4252-b64c-aab1743d52fe?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: tare-io__tare-contracts/contracts/LoansLedger.sol -> Scope: High. Unauthorized role, whitelist, controller, receiver, delegate, allowance, approval, lock, or ownership bypass that lets an unprivileged attacker execute actions or move value on behalf of another investor, borrower, seller, buyer, vault shareholder, or Safe account.'",
+    "url": "https://deepwiki.com/search/-generate-tare-smartcontract-s_7ab0b91c-d931-4cf3-b5b8-80fff12c9902?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: tare-io__tare-contracts/contracts/LoansNFT.sol -> Scope: High. Unauthorized role, whitelist, controller, receiver, delegate, allowance, approval, lock, or ownership bypass that lets an unprivileged attacker execute actions or move value on behalf of another investor, borrower, seller, buyer, vault shareholder, or Safe account.'",
+    "url": "https://deepwiki.com/search/-generate-tare-smartcontract-s_98228a67-94c9-4174-a402-76af6717f2c6?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: tare-io__tare-contracts/contracts/Loans.sol -> Scope: High. Unauthorized role, whitelist, controller, receiver, delegate, allowance, approval, lock, or ownership bypass that lets an unprivileged attacker execute actions or move value on behalf of another investor, borrower, seller, buyer, vault shareholder, or Safe account.'",
+    "url": "https://deepwiki.com/search/-generate-tare-smartcontract-s_815554c5-e55f-434c-803b-b7fb3d6c4d45?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: tare-io__tare-contracts/contracts/misc/GuardianAccessControl.sol -> Scope: High. Unauthorized role, whitelist, controller, receiver, delegate, allowance, approval, lock, or ownership bypass that lets an unprivileged attacker execute actions or move value on behalf of another investor, borrower, seller, buyer, vault shareholder, or Safe account.'",
+    "url": "https://deepwiki.com/search/-generate-tare-smartcontract-s_aedc6c5a-6e73-4d02-a44f-d80327d66999?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: tare-io__tare-contracts/contracts/misc/interfaces/IERC7540.sol -> Scope: High. Unauthorized role, whitelist, controller, receiver, delegate, allowance, approval, lock, or ownership bypass that lets an unprivileged attacker execute actions or move value on behalf of another investor, borrower, seller, buyer, vault shareholder, or Safe account.'",
+    "url": "https://deepwiki.com/search/-generate-tare-smartcontract-s_2f9cdc4e-7569-46a5-961b-dbc7fe242646?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: tare-io__tare-contracts/contracts/misc/interfaces/IERC7575.sol -> Scope: High. Unauthorized role, whitelist, controller, receiver, delegate, allowance, approval, lock, or ownership bypass that lets an unprivileged attacker execute actions or move value on behalf of another investor, borrower, seller, buyer, vault shareholder, or Safe account.'",
+    "url": "https://deepwiki.com/search/-generate-tare-smartcontract-s_97cdecb4-b45f-4ee4-9140-9bbe9cb2223e?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: tare-io__tare-contracts/contracts/misc/interfaces/IGuardianAccessControl.sol -> Scope: High. Unauthorized role, whitelist, controller, receiver, delegate, allowance, approval, lock, or ownership bypass that lets an unprivileged attacker execute actions or move value on behalf of another investor, borrower, seller, buyer, vault shareholder, or Safe account.'",
+    "url": "https://deepwiki.com/search/-generate-tare-smartcontract-s_b7fdbb3f-5602-4dc3-8602-af9ae46e7764?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: tare-io__tare-contracts/contracts/misc/interfaces/ILoansAuth.sol -> Scope: High. Unauthorized role, whitelist, controller, receiver, delegate, allowance, approval, lock, or ownership bypass that lets an unprivileged attacker execute actions or move value on behalf of another investor, borrower, seller, buyer, vault shareholder, or Safe account.'",
+    "url": "https://deepwiki.com/search/-generate-tare-smartcontract-s_779044e0-3952-43c5-a13c-297635c5691e?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: tare-io__tare-contracts/contracts/misc/interfaces/IModuleManager.sol -> Scope: High. Unauthorized role, whitelist, controller, receiver, delegate, allowance, approval, lock, or ownership bypass that lets an unprivileged attacker execute actions or move value on behalf of another investor, borrower, seller, buyer, vault shareholder, or Safe account.'",
+    "url": "https://deepwiki.com/search/-generate-tare-smartcontract-s_392b1311-f5d8-4259-b2ad-7b3db759737c?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: tare-io__tare-contracts/contracts/misc/interfaces/IRescuable.sol -> Scope: High. Unauthorized role, whitelist, controller, receiver, delegate, allowance, approval, lock, or ownership bypass that lets an unprivileged attacker execute actions or move value on behalf of another investor, borrower, seller, buyer, vault shareholder, or Safe account.'",
+    "url": "https://deepwiki.com/search/-generate-tare-smartcontract-s_b017b057-2fcf-45cc-90df-544501079665?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: tare-io__tare-contracts/contracts/misc/interfaces/ISafe.sol -> Scope: High. Unauthorized role, whitelist, controller, receiver, delegate, allowance, approval, lock, or ownership bypass that lets an unprivileged attacker execute actions or move value on behalf of another investor, borrower, seller, buyer, vault shareholder, or Safe account.'",
+    "url": "https://deepwiki.com/search/-generate-tare-smartcontract-s_231b8f91-3c2a-4872-9bc8-7515d918fac4?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: tare-io__tare-contracts/contracts/misc/LoansAuth.sol -> Scope: High. Unauthorized role, whitelist, controller, receiver, delegate, allowance, approval, lock, or ownership bypass that lets an unprivileged attacker execute actions or move value on behalf of another investor, borrower, seller, buyer, vault shareholder, or Safe account.'",
+    "url": "https://deepwiki.com/search/-generate-tare-smartcontract-s_d1132541-6718-43b4-83df-80d0689607bb?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: tare-io__tare-contracts/contracts/misc/Rescuable.sol -> Scope: High. Unauthorized role, whitelist, controller, receiver, delegate, allowance, approval, lock, or ownership bypass that lets an unprivileged attacker execute actions or move value on behalf of another investor, borrower, seller, buyer, vault shareholder, or Safe account.'",
+    "url": "https://deepwiki.com/search/-generate-tare-smartcontract-s_f9c9d0e2-3f6b-401a-b24a-d01cb9002dd2?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: tare-io__tare-contracts/contracts/NavCalculator.sol -> Scope: High. Unauthorized role, whitelist, controller, receiver, delegate, allowance, approval, lock, or ownership bypass that lets an unprivileged attacker execute actions or move value on behalf of another investor, borrower, seller, buyer, vault shareholder, or Safe account.'",
+    "url": "https://deepwiki.com/search/-generate-tare-smartcontract-s_84534708-eeed-4f24-8241-02a884369554?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: tare-io__tare-contracts/contracts/PortfolioVault.sol -> Scope: High. Unauthorized role, whitelist, controller, receiver, delegate, allowance, approval, lock, or ownership bypass that lets an unprivileged attacker execute actions or move value on behalf of another investor, borrower, seller, buyer, vault shareholder, or Safe account.'",
+    "url": "https://deepwiki.com/search/-generate-tare-smartcontract-s_31c439ad-5fdf-48af-a5e6-d8ddd0d8e2cb?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: tare-io__tare-contracts/contracts/SmartAccountFactory.sol -> Scope: High. Unauthorized role, whitelist, controller, receiver, delegate, allowance, approval, lock, or ownership bypass that lets an unprivileged attacker execute actions or move value on behalf of another investor, borrower, seller, buyer, vault shareholder, or Safe account.'",
+    "url": "https://deepwiki.com/search/-generate-tare-smartcontract-s_408bf243-349e-40dc-a050-fecbc49968e9?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: tare-io__tare-contracts/contracts/TrustedCalls.sol -> Scope: High. Unauthorized role, whitelist, controller, receiver, delegate, allowance, approval, lock, or ownership bypass that lets an unprivileged attacker execute actions or move value on behalf of another investor, borrower, seller, buyer, vault shareholder, or Safe account.'",
+    "url": "https://deepwiki.com/search/-generate-tare-smartcontract-s_d12c28f2-124e-43a2-ac2f-b640b67c92ae?mode=deep",
+    "questions_generated": false
+  }
+]
