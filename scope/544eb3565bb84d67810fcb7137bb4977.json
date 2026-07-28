@@ -1,0 +1,4 @@
+[
+  "'File Name: tare-io__tare-contracts/contracts/TrustedSpender.sol -> Scope: Critical. Permanent or practically unrecoverable lock of USDC, claimable vault assets, loan cashflows, vault shares, or loan NFTs for honest users or the vault caused by an unprivileged path, including bricked async requests, stuck listed loans, or unclaimable withdrawals.'",
+  "'File Name: tare-io__tare-contracts/contracts/VaultShareToken.sol -> Scope: Critical. Permanent or practically unrecoverable lock of USDC, claimable vault assets, loan cashflows, vault shares, or loan NFTs for honest users or the vault caused by an unprivileged path, including bricked async requests, stuck listed loans, or unclaimable withdrawals.'"
+]

@@ -1,0 +1,4 @@
+[
+  "'File Name: tare-io__tare-contracts/contracts/TrustedSpender.sol -> Scope: High. Material production denial of service or forced bad state in Loans, PortfolioVault, LoansExchange, SmartAccountFactory, TrustedCalls, TrustedSpender, or the token contracts, triggered by an unprivileged user and blocking funding, disbursement, trading, claiming, withdrawing, or NAV-sensitive approvals across users.'",
+  "'File Name: tare-io__tare-contracts/contracts/VaultShareToken.sol -> Scope: High. Material production denial of service or forced bad state in Loans, PortfolioVault, LoansExchange, SmartAccountFactory, TrustedCalls, TrustedSpender, or the token contracts, triggered by an unprivileged user and blocking funding, disbursement, trading, claiming, withdrawing, or NAV-sensitive approvals across users.'"
+]
