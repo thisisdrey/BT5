@@ -1,0 +1,13 @@
+# Q0032: Loans create authorization: self-book spoof / toxic loan seed / downstream safety
+
+## Question
+Can an unprivileged caller with no guardian, admin, originator, or servicer powers enter through `Loans.create(address,address,address,address,int128,uint48)` with only a self-curated address book plus attacker-controlled borrower, investor, and servicer addresses while the attacker has only self-registered role bits in its own address book and no canonical approvals and seed a loan that looks valid on-chain even though the attacker never passed the intended canonical-originator gate, breaking the rule that an unprivileged caller should never be able to create a loan whose later funding, withdrawal, or pricing can touch another user without a real originator approval and leading to Accounting issue in Loans caused by unauthorized lifecycle initialization?
+
+## Target
+- File/function: contracts/Loans.sol / create
+- Entrypoint: Loans.create(address,address,address,address,int128,uint48)
+- Attacker controls: only a self-curated address book plus attacker-controlled borrower, investor, and servicer addresses
+- Exploit idea: seed a loan that looks valid on-chain even though the attacker never passed the intended canonical-originator gate
+- Invariant to test: an unprivileged caller should never be able to create a loan whose later funding, withdrawal, or pricing can touch another user without a real originator approval
+- Expected Immunefi impact: Accounting issue in Loans caused by unauthorized lifecycle initialization
+- Fast validation: Check that no combination of overlapping role addresses or registration churn lets `create` mint a usable loan NFT without canonical approval.

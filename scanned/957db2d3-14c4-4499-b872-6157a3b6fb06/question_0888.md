@@ -1,0 +1,13 @@
+# Q0888: Loans payment clearing and borrower effects: vault-held loan / timing gap / no exploitable pricing gap
+
+## Question
+Can an unprivileged borrower or payer acting only through normal `pay` calls enter through `Loans.pay(uint64,int128,uint48,bytes32)` with payments into a loan currently owned by a vault that will later rely on NAV-sensitive approvals while a vault manager could update NAV or approve deposits/redemptions soon after the borrower payment and create a borrower-controlled timing gap where real cash exists on-chain but pricing or withdrawal paths still see the wrong balances, breaking the rule that a borrower-controlled payment timing sequence should not let another unprivileged user exploit a vault approval or withdrawal against stale economic state and leading to User funds stuck or mispriced until a trusted role resolves the clearing state?
+
+## Target
+- File/function: contracts/Loans.sol / pay
+- Entrypoint: Loans.pay(uint64,int128,uint48,bytes32)
+- Attacker controls: payments into a loan currently owned by a vault that will later rely on NAV-sensitive approvals
+- Exploit idea: create a borrower-controlled timing gap where real cash exists on-chain but pricing or withdrawal paths still see the wrong balances
+- Invariant to test: a borrower-controlled payment timing sequence should not let another unprivileged user exploit a vault approval or withdrawal against stale economic state
+- Expected Immunefi impact: User funds stuck or mispriced until a trusted role resolves the clearing state
+- Fast validation: Forge test repeated borrower payments before any waterfall and assert cash, clearing, and later valuation remain consistent.

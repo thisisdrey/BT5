@@ -1,0 +1,13 @@
+# Q2902: Address-book role bit isolation: role reuse / book bleed / book isolation
+
+## Question
+Can an unprivileged address-book owner controlling only its own registrations enter through `LoansAuth.registerAddress(Roles,address) and unregisterAddress(Roles,address)` with the same attacker-controlled grantee registered under several Roles values in the same book while a later `createOffer` or `acceptOffer` flow will read the investor bit from both sides' books and make self-book updates affect canonical-book semantics or another address owner's semantics, breaking the rule that a self-managed address book should never satisfy canonical-book checks or another owner's checks and leading to Loans NFT or cashflow rights entering an unauthorized counterparty context?
+
+## Target
+- File/function: contracts/misc/LoansAuth.sol / registerAddress, unregisterAddress, isRegisteredForRole
+- Entrypoint: LoansAuth.registerAddress(Roles,address) and unregisterAddress(Roles,address)
+- Attacker controls: the same attacker-controlled grantee registered under several Roles values in the same book
+- Exploit idea: make self-book updates affect canonical-book semantics or another address owner's semantics
+- Invariant to test: a self-managed address book should never satisfy canonical-book checks or another owner's checks
+- Expected Immunefi impact: Loans NFT or cashflow rights entering an unauthorized counterparty context
+- Fast validation: Check that mixed legitimate multi-role grantees do not accidentally satisfy unrelated authorization checks.

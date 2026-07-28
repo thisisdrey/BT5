@@ -1,0 +1,13 @@
+# Q2609: Vault NAV freshness and cross-contract state: borrower payment / stale holdings / freshness gate
+
+## Question
+Can an unprivileged borrower, investor, buyer, seller, or shareholder interacting through ordinary protocol entrypoints enter through `Unprivileged user actions that change vault-owned loan state before manager approvals` with a borrower payment into a vault-owned loan while the affected loan is in or near the curated `_navLoanIds` set used for pricing and make a user-controlled holdings change slip past the freshness gates and leave `lastNav` usable when it should not be, breaking the rule that every user-controlled change to vault holdings or user-withdrawable loan value should invalidate price-sensitive approvals before they execute and leading to Protocol state bricking or repeated approval blockage if freshness invalidation can be bypassed or inconsistently triggered?
+
+## Target
+- File/function: contracts/PortfolioVault.sol / _requireFreshNav, updateNav, collectCashflows, fundLoans, createSaleOffer, acceptSaleOffer
+- Entrypoint: Unprivileged user actions that change vault-owned loan state before manager approvals
+- Attacker controls: a borrower payment into a vault-owned loan
+- Exploit idea: make a user-controlled holdings change slip past the freshness gates and leave `lastNav` usable when it should not be
+- Invariant to test: every user-controlled change to vault holdings or user-withdrawable loan value should invalidate price-sensitive approvals before they execute
+- Expected Immunefi impact: Protocol state bricking or repeated approval blockage if freshness invalidation can be bypassed or inconsistently triggered
+- Fast validation: Check that ordinary user timing cannot create underbacked or overbacked claims for other shareholders.
