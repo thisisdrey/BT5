@@ -1,0 +1,1 @@
+functions.grep_search:19{"repo_name": "Kohvert/2026-07-tare-dev-oyakhil-main--021", "pattern": "duplicate|unique|same.*loanId|loanIds\\[i\\].*loanIds\\[j\\]|contains|already", "include": "*.sol"}
