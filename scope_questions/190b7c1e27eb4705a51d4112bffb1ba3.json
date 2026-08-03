@@ -1,0 +1,152 @@
+[
+  {
+    "question": "'File Name: bridges/modules/beefy/src/lib.rs -> Scope: High. An unprivileged attacker can permanently lock user funds, NFTs, staking balances, pool balances, bridge lanes, message queues, or contract state by breaking finalization, cleanup, custody, or one-time settlement accounting in a production flow.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_73056fa4-0f52-4b95-b92e-ffca6cfa1675?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: bridges/modules/beefy/src/utils.rs -> Scope: High. An unprivileged attacker can permanently lock user funds, NFTs, staking balances, pool balances, bridge lanes, message queues, or contract state by breaking finalization, cleanup, custody, or one-time settlement accounting in a production flow.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_ff321744-eeee-4e4b-abcf-b19f217886e2?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: bridges/modules/grandpa/src/call_ext.rs -> Scope: High. An unprivileged attacker can permanently lock user funds, NFTs, staking balances, pool balances, bridge lanes, message queues, or contract state by breaking finalization, cleanup, custody, or one-time settlement accounting in a production flow.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_73758445-4b2e-4d1d-b988-e903cccf4421?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: bridges/modules/grandpa/src/lib.rs -> Scope: High. An unprivileged attacker can permanently lock user funds, NFTs, staking balances, pool balances, bridge lanes, message queues, or contract state by breaking finalization, cleanup, custody, or one-time settlement accounting in a production flow.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_09355c4b-396d-4921-ab92-a62da1216dfb?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: bridges/modules/grandpa/src/storage_types.rs -> Scope: High. An unprivileged attacker can permanently lock user funds, NFTs, staking balances, pool balances, bridge lanes, message queues, or contract state by breaking finalization, cleanup, custody, or one-time settlement accounting in a production flow.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_563a248a-ef08-4ce5-b3e9-0923bc7c20ee?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: bridges/modules/grandpa/src/weights_ext.rs -> Scope: High. An unprivileged attacker can permanently lock user funds, NFTs, staking balances, pool balances, bridge lanes, message queues, or contract state by breaking finalization, cleanup, custody, or one-time settlement accounting in a production flow.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_2e0ad82f-3b0e-4492-ac02-593fa1c5ae21?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: bridges/modules/messages/src/call_ext.rs -> Scope: High. An unprivileged attacker can permanently lock user funds, NFTs, staking balances, pool balances, bridge lanes, message queues, or contract state by breaking finalization, cleanup, custody, or one-time settlement accounting in a production flow.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_a3244d76-9cee-4015-b001-5e207a53062f?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: bridges/modules/messages/src/inbound_lane.rs -> Scope: High. An unprivileged attacker can permanently lock user funds, NFTs, staking balances, pool balances, bridge lanes, message queues, or contract state by breaking finalization, cleanup, custody, or one-time settlement accounting in a production flow.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_a44ec624-9f81-4fb9-a591-cd80067e2fd8?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: bridges/modules/messages/src/lanes_manager.rs -> Scope: High. An unprivileged attacker can permanently lock user funds, NFTs, staking balances, pool balances, bridge lanes, message queues, or contract state by breaking finalization, cleanup, custody, or one-time settlement accounting in a production flow.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_52949aa9-4cad-4ce9-9b53-47a1443ddfd3?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: bridges/modules/messages/src/lib.rs -> Scope: High. An unprivileged attacker can permanently lock user funds, NFTs, staking balances, pool balances, bridge lanes, message queues, or contract state by breaking finalization, cleanup, custody, or one-time settlement accounting in a production flow.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_e23b9e6f-3303-4cc2-82b9-5d0093c3caca?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: bridges/modules/messages/src/outbound_lane.rs -> Scope: High. An unprivileged attacker can permanently lock user funds, NFTs, staking balances, pool balances, bridge lanes, message queues, or contract state by breaking finalization, cleanup, custody, or one-time settlement accounting in a production flow.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_84ab0c2f-9fb8-45b4-a80a-f62f1a4dc53a?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: bridges/modules/messages/src/proofs.rs -> Scope: High. An unprivileged attacker can permanently lock user funds, NFTs, staking balances, pool balances, bridge lanes, message queues, or contract state by breaking finalization, cleanup, custody, or one-time settlement accounting in a production flow.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_124e4dba-aeb7-40f7-b91b-95ef09a652f2?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: bridges/modules/messages/src/weights_ext.rs -> Scope: High. An unprivileged attacker can permanently lock user funds, NFTs, staking balances, pool balances, bridge lanes, message queues, or contract state by breaking finalization, cleanup, custody, or one-time settlement accounting in a production flow.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_bee67629-7813-497a-b35f-4ddfa736dce2?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: bridges/modules/parachains/src/call_ext.rs -> Scope: High. An unprivileged attacker can permanently lock user funds, NFTs, staking balances, pool balances, bridge lanes, message queues, or contract state by breaking finalization, cleanup, custody, or one-time settlement accounting in a production flow.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_3648f65e-be98-4307-8221-c44352304d61?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: bridges/modules/parachains/src/lib.rs -> Scope: High. An unprivileged attacker can permanently lock user funds, NFTs, staking balances, pool balances, bridge lanes, message queues, or contract state by breaking finalization, cleanup, custody, or one-time settlement accounting in a production flow.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_d60d127f-c223-4077-8262-67d702a0729c?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: bridges/modules/parachains/src/proofs.rs -> Scope: High. An unprivileged attacker can permanently lock user funds, NFTs, staking balances, pool balances, bridge lanes, message queues, or contract state by breaking finalization, cleanup, custody, or one-time settlement accounting in a production flow.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_b035d589-0364-48b2-8afb-7ca310e3f013?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: bridges/modules/parachains/src/weights_ext.rs -> Scope: High. An unprivileged attacker can permanently lock user funds, NFTs, staking balances, pool balances, bridge lanes, message queues, or contract state by breaking finalization, cleanup, custody, or one-time settlement accounting in a production flow.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_9ecd9c51-eea8-4d3a-b1df-29721951440a?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: bridges/modules/relayers/src/extension/grandpa_adapter.rs -> Scope: High. An unprivileged attacker can permanently lock user funds, NFTs, staking balances, pool balances, bridge lanes, message queues, or contract state by breaking finalization, cleanup, custody, or one-time settlement accounting in a production flow.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_5c72b8af-6a4a-46b2-99ec-645b3277d3fa?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: bridges/modules/relayers/src/extension/messages_adapter.rs -> Scope: High. An unprivileged attacker can permanently lock user funds, NFTs, staking balances, pool balances, bridge lanes, message queues, or contract state by breaking finalization, cleanup, custody, or one-time settlement accounting in a production flow.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_9c518b3b-b8cb-44ca-911e-361875ae030f?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: bridges/modules/relayers/src/extension/mod.rs -> Scope: High. An unprivileged attacker can permanently lock user funds, NFTs, staking balances, pool balances, bridge lanes, message queues, or contract state by breaking finalization, cleanup, custody, or one-time settlement accounting in a production flow.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_333e77e6-b93c-496c-b572-fd84d3d5ce7c?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: bridges/modules/relayers/src/extension/parachain_adapter.rs -> Scope: High. An unprivileged attacker can permanently lock user funds, NFTs, staking balances, pool balances, bridge lanes, message queues, or contract state by breaking finalization, cleanup, custody, or one-time settlement accounting in a production flow.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_b902dde7-c1d7-4961-9455-8ece45985c55?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: bridges/modules/relayers/src/extension/priority.rs -> Scope: High. An unprivileged attacker can permanently lock user funds, NFTs, staking balances, pool balances, bridge lanes, message queues, or contract state by breaking finalization, cleanup, custody, or one-time settlement accounting in a production flow.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_7a78a907-0fd7-4779-b3a1-98e15390d44e?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: bridges/modules/relayers/src/lib.rs -> Scope: High. An unprivileged attacker can permanently lock user funds, NFTs, staking balances, pool balances, bridge lanes, message queues, or contract state by breaking finalization, cleanup, custody, or one-time settlement accounting in a production flow.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_3be32aaf-a525-46b4-8df5-627e43349a34?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: bridges/modules/relayers/src/payment_adapter.rs -> Scope: High. An unprivileged attacker can permanently lock user funds, NFTs, staking balances, pool balances, bridge lanes, message queues, or contract state by breaking finalization, cleanup, custody, or one-time settlement accounting in a production flow.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_40afaf39-3635-460a-a50d-a70ce6367213?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: bridges/modules/relayers/src/stake_adapter.rs -> Scope: High. An unprivileged attacker can permanently lock user funds, NFTs, staking balances, pool balances, bridge lanes, message queues, or contract state by breaking finalization, cleanup, custody, or one-time settlement accounting in a production flow.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_5ad5ff0c-4284-4403-bb58-4b9f47991a61?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: bridges/modules/relayers/src/weights_ext.rs -> Scope: High. An unprivileged attacker can permanently lock user funds, NFTs, staking balances, pool balances, bridge lanes, message queues, or contract state by breaking finalization, cleanup, custody, or one-time settlement accounting in a production flow.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_520fbc7b-9a51-4362-8482-e5efcb36c743?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: bridges/primitives/header-chain/src/call_info.rs -> Scope: High. An unprivileged attacker can permanently lock user funds, NFTs, staking balances, pool balances, bridge lanes, message queues, or contract state by breaking finalization, cleanup, custody, or one-time settlement accounting in a production flow.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_0ca53517-3c4d-4d32-97dc-2059095463c7?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: bridges/primitives/header-chain/src/justification/mod.rs -> Scope: High. An unprivileged attacker can permanently lock user funds, NFTs, staking balances, pool balances, bridge lanes, message queues, or contract state by breaking finalization, cleanup, custody, or one-time settlement accounting in a production flow.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_71756b14-3246-4e22-bbc1-25ce84f6888b?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: bridges/primitives/header-chain/src/justification/verification/equivocation.rs -> Scope: High. An unprivileged attacker can permanently lock user funds, NFTs, staking balances, pool balances, bridge lanes, message queues, or contract state by breaking finalization, cleanup, custody, or one-time settlement accounting in a production flow.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_e1c04d9e-46f2-49d9-a75f-e7681d816ce3?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: bridges/primitives/header-chain/src/justification/verification/mod.rs -> Scope: High. An unprivileged attacker can permanently lock user funds, NFTs, staking balances, pool balances, bridge lanes, message queues, or contract state by breaking finalization, cleanup, custody, or one-time settlement accounting in a production flow.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_174851c2-5b8c-4d45-9570-9f4e16d9a518?mode=deep",
+    "questions_generated": false
+  }
+]
