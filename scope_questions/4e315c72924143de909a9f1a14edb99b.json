@@ -1,0 +1,152 @@
+[
+  {
+    "question": "'File Name: bridges/primitives/header-chain/src/justification/verification/optimizer.rs -> Scope: Critical. An unprivileged attacker can steal, mint, unlock, withdraw, claim, redirect, or duplicate native assets, fungible assets, NFTs, staking balances, pool funds, treasury payouts, bridge rewards, or contract-held value they do not own.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_5e1f1c41-dd90-4a01-b80d-caf8c711bf15?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: bridges/primitives/header-chain/src/justification/verification/strict.rs -> Scope: Critical. An unprivileged attacker can steal, mint, unlock, withdraw, claim, redirect, or duplicate native assets, fungible assets, NFTs, staking balances, pool funds, treasury payouts, bridge rewards, or contract-held value they do not own.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_e0b9b641-da34-4382-a93d-50c9e7df40ed?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: bridges/primitives/header-chain/src/lib.rs -> Scope: Critical. An unprivileged attacker can steal, mint, unlock, withdraw, claim, redirect, or duplicate native assets, fungible assets, NFTs, staking balances, pool funds, treasury payouts, bridge rewards, or contract-held value they do not own.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_0bb79d1c-eba8-4abd-ac01-425119a98b87?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: bridges/primitives/header-chain/src/storage_keys.rs -> Scope: Critical. An unprivileged attacker can steal, mint, unlock, withdraw, claim, redirect, or duplicate native assets, fungible assets, NFTs, staking balances, pool funds, treasury payouts, bridge rewards, or contract-held value they do not own.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_19aaa523-8ae1-4427-982f-cec77b0c6ce8?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: bridges/primitives/messages/src/call_info.rs -> Scope: Critical. An unprivileged attacker can steal, mint, unlock, withdraw, claim, redirect, or duplicate native assets, fungible assets, NFTs, staking balances, pool funds, treasury payouts, bridge rewards, or contract-held value they do not own.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_1f017c85-139d-476d-bf51-3c16ffbedeba?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: bridges/primitives/messages/src/lane.rs -> Scope: Critical. An unprivileged attacker can steal, mint, unlock, withdraw, claim, redirect, or duplicate native assets, fungible assets, NFTs, staking balances, pool funds, treasury payouts, bridge rewards, or contract-held value they do not own.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_bc1b7583-63aa-481c-af40-8c9bb8b85d87?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: bridges/primitives/messages/src/lib.rs -> Scope: Critical. An unprivileged attacker can steal, mint, unlock, withdraw, claim, redirect, or duplicate native assets, fungible assets, NFTs, staking balances, pool funds, treasury payouts, bridge rewards, or contract-held value they do not own.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_b1277ec8-a2ef-4883-b587-24da0bb72716?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: bridges/primitives/messages/src/source_chain.rs -> Scope: Critical. An unprivileged attacker can steal, mint, unlock, withdraw, claim, redirect, or duplicate native assets, fungible assets, NFTs, staking balances, pool funds, treasury payouts, bridge rewards, or contract-held value they do not own.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_3e5c6358-303f-4ff1-8010-77d62f9fe241?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: bridges/primitives/messages/src/storage_keys.rs -> Scope: Critical. An unprivileged attacker can steal, mint, unlock, withdraw, claim, redirect, or duplicate native assets, fungible assets, NFTs, staking balances, pool funds, treasury payouts, bridge rewards, or contract-held value they do not own.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_ad485063-b2c9-4f2a-af58-0a8216220bfb?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: bridges/primitives/messages/src/target_chain.rs -> Scope: Critical. An unprivileged attacker can steal, mint, unlock, withdraw, claim, redirect, or duplicate native assets, fungible assets, NFTs, staking balances, pool funds, treasury payouts, bridge rewards, or contract-held value they do not own.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_1a10539d-7b72-49b5-8ef6-4ef42509feaa?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: bridges/primitives/parachains/src/call_info.rs -> Scope: Critical. An unprivileged attacker can steal, mint, unlock, withdraw, claim, redirect, or duplicate native assets, fungible assets, NFTs, staking balances, pool funds, treasury payouts, bridge rewards, or contract-held value they do not own.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_68aafe8f-1d81-4e5b-9b57-a2c5259c7c71?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: bridges/primitives/parachains/src/lib.rs -> Scope: Critical. An unprivileged attacker can steal, mint, unlock, withdraw, claim, redirect, or duplicate native assets, fungible assets, NFTs, staking balances, pool funds, treasury payouts, bridge rewards, or contract-held value they do not own.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_6bb4193f-73b4-4efd-8503-b43cc08a7492?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: bridges/primitives/relayers/src/extension.rs -> Scope: Critical. An unprivileged attacker can steal, mint, unlock, withdraw, claim, redirect, or duplicate native assets, fungible assets, NFTs, staking balances, pool funds, treasury payouts, bridge rewards, or contract-held value they do not own.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_28c63f86-627a-4047-82ed-478d81e9c253?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: bridges/primitives/relayers/src/lib.rs -> Scope: Critical. An unprivileged attacker can steal, mint, unlock, withdraw, claim, redirect, or duplicate native assets, fungible assets, NFTs, staking balances, pool funds, treasury payouts, bridge rewards, or contract-held value they do not own.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_d0f6d033-6cca-454c-bc09-962c668186ce?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: bridges/primitives/relayers/src/registration.rs -> Scope: Critical. An unprivileged attacker can steal, mint, unlock, withdraw, claim, redirect, or duplicate native assets, fungible assets, NFTs, staking balances, pool funds, treasury payouts, bridge rewards, or contract-held value they do not own.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_34cd6338-68f3-4e50-9814-edf292279f45?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: bridges/snowbridge/pallets/ethereum-client/src/config/altair.rs -> Scope: Critical. An unprivileged attacker can steal, mint, unlock, withdraw, claim, redirect, or duplicate native assets, fungible assets, NFTs, staking balances, pool funds, treasury payouts, bridge rewards, or contract-held value they do not own.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_e3dc0414-5acd-4b1c-8eab-46f7e1d68ec3?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: bridges/snowbridge/pallets/ethereum-client/src/config/electra.rs -> Scope: Critical. An unprivileged attacker can steal, mint, unlock, withdraw, claim, redirect, or duplicate native assets, fungible assets, NFTs, staking balances, pool funds, treasury payouts, bridge rewards, or contract-held value they do not own.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_eb3feed4-6605-40a9-a6d4-10f60072c2ca?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: bridges/snowbridge/pallets/ethereum-client/src/config/mod.rs -> Scope: Critical. An unprivileged attacker can steal, mint, unlock, withdraw, claim, redirect, or duplicate native assets, fungible assets, NFTs, staking balances, pool funds, treasury payouts, bridge rewards, or contract-held value they do not own.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_cdbbbe73-3574-477f-a4b8-93bd30558043?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: bridges/snowbridge/pallets/ethereum-client/src/functions.rs -> Scope: Critical. An unprivileged attacker can steal, mint, unlock, withdraw, claim, redirect, or duplicate native assets, fungible assets, NFTs, staking balances, pool funds, treasury payouts, bridge rewards, or contract-held value they do not own.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_720bee07-b6c9-4e0d-bd87-94b9bfd0f3b3?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: bridges/snowbridge/pallets/ethereum-client/src/impls.rs -> Scope: Critical. An unprivileged attacker can steal, mint, unlock, withdraw, claim, redirect, or duplicate native assets, fungible assets, NFTs, staking balances, pool funds, treasury payouts, bridge rewards, or contract-held value they do not own.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_debca5f4-e62b-41c1-b91f-bfe7dd2ebf84?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: bridges/snowbridge/pallets/ethereum-client/src/lib.rs -> Scope: Critical. An unprivileged attacker can steal, mint, unlock, withdraw, claim, redirect, or duplicate native assets, fungible assets, NFTs, staking balances, pool funds, treasury payouts, bridge rewards, or contract-held value they do not own.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_65daca09-2c3e-4162-b786-33a09747c59f?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: bridges/snowbridge/pallets/ethereum-client/src/types.rs -> Scope: Critical. An unprivileged attacker can steal, mint, unlock, withdraw, claim, redirect, or duplicate native assets, fungible assets, NFTs, staking balances, pool funds, treasury payouts, bridge rewards, or contract-held value they do not own.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_ed2fa7c0-2c34-4b85-85c1-2cee3cf5000b?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: bridges/snowbridge/pallets/inbound-queue/src/envelope.rs -> Scope: Critical. An unprivileged attacker can steal, mint, unlock, withdraw, claim, redirect, or duplicate native assets, fungible assets, NFTs, staking balances, pool funds, treasury payouts, bridge rewards, or contract-held value they do not own.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_4dc0240e-9a41-42da-8deb-9cf21b87b4b3?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: bridges/snowbridge/pallets/inbound-queue/src/lib.rs -> Scope: Critical. An unprivileged attacker can steal, mint, unlock, withdraw, claim, redirect, or duplicate native assets, fungible assets, NFTs, staking balances, pool funds, treasury payouts, bridge rewards, or contract-held value they do not own.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_e5a08472-4cd5-4c93-9d11-4327698b1848?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: bridges/snowbridge/pallets/inbound-queue-v2/src/lib.rs -> Scope: Critical. An unprivileged attacker can steal, mint, unlock, withdraw, claim, redirect, or duplicate native assets, fungible assets, NFTs, staking balances, pool funds, treasury payouts, bridge rewards, or contract-held value they do not own.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_75880c7c-4fc1-4529-a722-4d6aa639dde0?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: bridges/snowbridge/pallets/outbound-queue/src/api.rs -> Scope: Critical. An unprivileged attacker can steal, mint, unlock, withdraw, claim, redirect, or duplicate native assets, fungible assets, NFTs, staking balances, pool funds, treasury payouts, bridge rewards, or contract-held value they do not own.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_18401a98-342a-4eed-8203-6b05b5e84b05?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: bridges/snowbridge/pallets/outbound-queue/src/lib.rs -> Scope: Critical. An unprivileged attacker can steal, mint, unlock, withdraw, claim, redirect, or duplicate native assets, fungible assets, NFTs, staking balances, pool funds, treasury payouts, bridge rewards, or contract-held value they do not own.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_b59c3850-3a19-428a-87ec-be8593795d6e?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: bridges/snowbridge/pallets/outbound-queue/src/process_message_impl.rs -> Scope: Critical. An unprivileged attacker can steal, mint, unlock, withdraw, claim, redirect, or duplicate native assets, fungible assets, NFTs, staking balances, pool funds, treasury payouts, bridge rewards, or contract-held value they do not own.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_61b5fcdf-6d6f-4f6d-9477-df8030247d6f?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: bridges/snowbridge/pallets/outbound-queue/src/send_message_impl.rs -> Scope: Critical. An unprivileged attacker can steal, mint, unlock, withdraw, claim, redirect, or duplicate native assets, fungible assets, NFTs, staking balances, pool funds, treasury payouts, bridge rewards, or contract-held value they do not own.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_adf22aa9-101c-433e-9bbf-d06b9e0b4b23?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: bridges/snowbridge/pallets/outbound-queue/src/types.rs -> Scope: Critical. An unprivileged attacker can steal, mint, unlock, withdraw, claim, redirect, or duplicate native assets, fungible assets, NFTs, staking balances, pool funds, treasury payouts, bridge rewards, or contract-held value they do not own.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_55aff9a0-c882-4ddf-a28a-dfafefaf39d8?mode=deep",
+    "questions_generated": false
+  }
+]
