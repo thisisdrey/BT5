@@ -1,0 +1,152 @@
+[
+  {
+    "question": "'File Name: substrate/frame/revive/src/precompiles/builtin/ecrecover.rs -> Scope: Critical. An unprivileged attacker can reach unauthorized execution, origin widening, or call-filter bypass through a public extrinsic, wrapper, contract path, meta-transaction, or bridge message and cause stronger-than-user effects.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_80922d72-a7e8-4c96-9e29-ad6a70dafb53?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: substrate/frame/revive/src/precompiles/builtin/identity.rs -> Scope: Critical. An unprivileged attacker can reach unauthorized execution, origin widening, or call-filter bypass through a public extrinsic, wrapper, contract path, meta-transaction, or bridge message and cause stronger-than-user effects.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_f4fe7880-8866-4033-a885-e4a10b0f5d4e?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: substrate/frame/revive/src/precompiles/builtin/modexp.rs -> Scope: Critical. An unprivileged attacker can reach unauthorized execution, origin widening, or call-filter bypass through a public extrinsic, wrapper, contract path, meta-transaction, or bridge message and cause stronger-than-user effects.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_bbd19c4f-b4e8-4449-af07-2b18ae4d2f33?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: substrate/frame/revive/src/precompiles/builtin/p256_verify.rs -> Scope: Critical. An unprivileged attacker can reach unauthorized execution, origin widening, or call-filter bypass through a public extrinsic, wrapper, contract path, meta-transaction, or bridge message and cause stronger-than-user effects.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_a8085ba7-c46c-45d8-947b-748229e4973e?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: substrate/frame/revive/src/precompiles/builtin/point_eval.rs -> Scope: Critical. An unprivileged attacker can reach unauthorized execution, origin widening, or call-filter bypass through a public extrinsic, wrapper, contract path, meta-transaction, or bridge message and cause stronger-than-user effects.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_45e2f202-145d-47a1-8c21-20c3a5ce98af?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: substrate/frame/revive/src/precompiles/builtin/ripemd160.rs -> Scope: Critical. An unprivileged attacker can reach unauthorized execution, origin widening, or call-filter bypass through a public extrinsic, wrapper, contract path, meta-transaction, or bridge message and cause stronger-than-user effects.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_879a1e8e-d380-445d-a1ea-85458ed50c22?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: substrate/frame/revive/src/precompiles/builtin/sha256.rs -> Scope: Critical. An unprivileged attacker can reach unauthorized execution, origin widening, or call-filter bypass through a public extrinsic, wrapper, contract path, meta-transaction, or bridge message and cause stronger-than-user effects.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_e793ed80-2d35-47c4-9be5-a955bf81acd2?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: substrate/frame/revive/src/precompiles/builtin/storage.rs -> Scope: Critical. An unprivileged attacker can reach unauthorized execution, origin widening, or call-filter bypass through a public extrinsic, wrapper, contract path, meta-transaction, or bridge message and cause stronger-than-user effects.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_c85f19c1-504f-44e7-830d-f1f9d349a2f5?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: substrate/frame/revive/src/precompiles/builtin/system.rs -> Scope: Critical. An unprivileged attacker can reach unauthorized execution, origin widening, or call-filter bypass through a public extrinsic, wrapper, contract path, meta-transaction, or bridge message and cause stronger-than-user effects.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_871b367c-8c93-4b73-b028-d008a44757f8?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: substrate/frame/revive/src/precompiles/builtin.rs -> Scope: Critical. An unprivileged attacker can reach unauthorized execution, origin widening, or call-filter bypass through a public extrinsic, wrapper, contract path, meta-transaction, or bridge message and cause stronger-than-user effects.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_5aaf6a16-493e-4fda-aed3-4df191080e89?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: substrate/frame/revive/src/precompiles.rs -> Scope: Critical. An unprivileged attacker can reach unauthorized execution, origin widening, or call-filter bypass through a public extrinsic, wrapper, contract path, meta-transaction, or bridge message and cause stronger-than-user effects.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_f1cff97a-b06d-45c0-9e55-edd774ec4008?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: substrate/frame/revive/src/primitives.rs -> Scope: Critical. An unprivileged attacker can reach unauthorized execution, origin widening, or call-filter bypass through a public extrinsic, wrapper, contract path, meta-transaction, or bridge message and cause stronger-than-user effects.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_6ee5cdda-8a3a-455c-b33f-5060aa1c259e?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: substrate/frame/revive/src/runtime_api/account_id.rs -> Scope: Critical. An unprivileged attacker can reach unauthorized execution, origin widening, or call-filter bypass through a public extrinsic, wrapper, contract path, meta-transaction, or bridge message and cause stronger-than-user effects.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_3ec8beb7-3297-4a4b-adbc-2f75b0a412d7?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: substrate/frame/revive/src/runtime_api/address.rs -> Scope: Critical. An unprivileged attacker can reach unauthorized execution, origin widening, or call-filter bypass through a public extrinsic, wrapper, contract path, meta-transaction, or bridge message and cause stronger-than-user effects.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_e239905b-c6db-44e4-a86f-55f22edf10d8?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: substrate/frame/revive/src/runtime_api/balance.rs -> Scope: Critical. An unprivileged attacker can reach unauthorized execution, origin widening, or call-filter bypass through a public extrinsic, wrapper, contract path, meta-transaction, or bridge message and cause stronger-than-user effects.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_86642a85-c1cd-4455-ba78-ee0d220e5763?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: substrate/frame/revive/src/runtime_api/block_author.rs -> Scope: Critical. An unprivileged attacker can reach unauthorized execution, origin widening, or call-filter bypass through a public extrinsic, wrapper, contract path, meta-transaction, or bridge message and cause stronger-than-user effects.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_e795f9c4-0e89-49a0-bd4b-3a77cfadb012?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: substrate/frame/revive/src/runtime_api/block_gas_limit.rs -> Scope: Critical. An unprivileged attacker can reach unauthorized execution, origin widening, or call-filter bypass through a public extrinsic, wrapper, contract path, meta-transaction, or bridge message and cause stronger-than-user effects.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_7886d30d-fa2f-450b-a312-23573546a8b3?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: substrate/frame/revive/src/runtime_api/block_hash.rs -> Scope: Critical. An unprivileged attacker can reach unauthorized execution, origin widening, or call-filter bypass through a public extrinsic, wrapper, contract path, meta-transaction, or bridge message and cause stronger-than-user effects.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_5e6c3f7e-7e42-43b1-af1d-0af757211179?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: substrate/frame/revive/src/runtime_api/call.rs -> Scope: Critical. An unprivileged attacker can reach unauthorized execution, origin widening, or call-filter bypass through a public extrinsic, wrapper, contract path, meta-transaction, or bridge message and cause stronger-than-user effects.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_f86e7a1d-43b4-40af-9ead-a3ebfc933a82?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: substrate/frame/revive/src/runtime_api/code.rs -> Scope: Critical. An unprivileged attacker can reach unauthorized execution, origin widening, or call-filter bypass through a public extrinsic, wrapper, contract path, meta-transaction, or bridge message and cause stronger-than-user effects.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_dadb09b8-6504-4f38-b08b-7d4829a6f15a?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: substrate/frame/revive/src/runtime_api/eth_block.rs -> Scope: Critical. An unprivileged attacker can reach unauthorized execution, origin widening, or call-filter bypass through a public extrinsic, wrapper, contract path, meta-transaction, or bridge message and cause stronger-than-user effects.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_15680412-5258-4e16-8469-66dff671fa66?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: substrate/frame/revive/src/runtime_api/eth_estimate_gas.rs -> Scope: Critical. An unprivileged attacker can reach unauthorized execution, origin widening, or call-filter bypass through a public extrinsic, wrapper, contract path, meta-transaction, or bridge message and cause stronger-than-user effects.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_832caef4-844a-4772-a437-0f2f76be38d2?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: substrate/frame/revive/src/runtime_api/eth_pre_dispatch_weight.rs -> Scope: Critical. An unprivileged attacker can reach unauthorized execution, origin widening, or call-filter bypass through a public extrinsic, wrapper, contract path, meta-transaction, or bridge message and cause stronger-than-user effects.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_923b50ab-44a3-4c3f-8b77-21ce321eb99a?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: substrate/frame/revive/src/runtime_api/eth_transact.rs -> Scope: Critical. An unprivileged attacker can reach unauthorized execution, origin widening, or call-filter bypass through a public extrinsic, wrapper, contract path, meta-transaction, or bridge message and cause stronger-than-user effects.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_1db9b83f-05c2-429e-9c7e-f142d6303fab?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: substrate/frame/revive/src/runtime_api/gas_price.rs -> Scope: Critical. An unprivileged attacker can reach unauthorized execution, origin widening, or call-filter bypass through a public extrinsic, wrapper, contract path, meta-transaction, or bridge message and cause stronger-than-user effects.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_043bb283-7868-47f8-a03a-a409e39875fa?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: substrate/frame/revive/src/runtime_api/get_storage.rs -> Scope: Critical. An unprivileged attacker can reach unauthorized execution, origin widening, or call-filter bypass through a public extrinsic, wrapper, contract path, meta-transaction, or bridge message and cause stronger-than-user effects.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_2116481d-2357-49ab-ba81-35b823747162?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: substrate/frame/revive/src/runtime_api/instantiate.rs -> Scope: Critical. An unprivileged attacker can reach unauthorized execution, origin widening, or call-filter bypass through a public extrinsic, wrapper, contract path, meta-transaction, or bridge message and cause stronger-than-user effects.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_489fa499-3da9-4cd7-b5e4-85a80ee9067f?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: substrate/frame/revive/src/runtime_api/max_extrinsic_weight_in_gas.rs -> Scope: Critical. An unprivileged attacker can reach unauthorized execution, origin widening, or call-filter bypass through a public extrinsic, wrapper, contract path, meta-transaction, or bridge message and cause stronger-than-user effects.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_c3ab5d32-0c3c-497f-b9b3-c32ab4a662ee?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: substrate/frame/revive/src/runtime_api/mod.rs -> Scope: Critical. An unprivileged attacker can reach unauthorized execution, origin widening, or call-filter bypass through a public extrinsic, wrapper, contract path, meta-transaction, or bridge message and cause stronger-than-user effects.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_3055ddef-03ec-4a98-9bde-3caf25f3a4e0?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: substrate/frame/revive/src/runtime_api/new_balance_with_dust.rs -> Scope: Critical. An unprivileged attacker can reach unauthorized execution, origin widening, or call-filter bypass through a public extrinsic, wrapper, contract path, meta-transaction, or bridge message and cause stronger-than-user effects.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_b4bb6f90-edef-494c-960e-1e09692b87fe?mode=deep",
+    "questions_generated": false
+  }
+]
