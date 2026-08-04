@@ -1,0 +1,1 @@
+Let me examine the `process_delivery_receipt` function to determine whether nonce removal from `PendingOrders` guards against replay before I finalize.
