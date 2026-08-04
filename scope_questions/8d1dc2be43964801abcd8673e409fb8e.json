@@ -1,0 +1,152 @@
+[
+  {
+    "question": "'File Name: substrate/frame/revive/src/vm/evm/stack.rs -> Scope: Critical. An unprivileged attacker can replay or double-settle a message, proof, receipt, payout, withdrawal, refund, claim, unlock, approval, or contract side effect so one logical action executes or pays out more than once.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_47c81bfe-597d-4958-a946-88019714f0b2?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: substrate/frame/revive/src/vm/evm/util.rs -> Scope: Critical. An unprivileged attacker can replay or double-settle a message, proof, receipt, payout, withdrawal, refund, claim, unlock, approval, or contract side effect so one logical action executes or pays out more than once.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_42b3651a-4995-4f6d-a90a-628c21c25c79?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: substrate/frame/revive/src/vm/evm.rs -> Scope: Critical. An unprivileged attacker can replay or double-settle a message, proof, receipt, payout, withdrawal, refund, claim, unlock, approval, or contract side effect so one logical action executes or pays out more than once.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_16dad9cd-7ef4-4f9a-a46b-e0f925e454a0?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: substrate/frame/revive/src/vm/mod.rs -> Scope: Critical. An unprivileged attacker can replay or double-settle a message, proof, receipt, payout, withdrawal, refund, claim, unlock, approval, or contract side effect so one logical action executes or pays out more than once.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_96769fdf-a1f9-4fcf-bd0a-fab67275ea03?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: substrate/frame/revive/src/vm/pvm/env.rs -> Scope: Critical. An unprivileged attacker can replay or double-settle a message, proof, receipt, payout, withdrawal, refund, claim, unlock, approval, or contract side effect so one logical action executes or pays out more than once.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_453fad5a-1b30-4dd8-b589-77a6ecaa112b?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: substrate/frame/revive/src/vm/pvm.rs -> Scope: Critical. An unprivileged attacker can replay or double-settle a message, proof, receipt, payout, withdrawal, refund, claim, unlock, approval, or contract side effect so one logical action executes or pays out more than once.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_87a5d71c-bf68-4482-b98f-8e43ae7a61f0?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: substrate/frame/revive/src/vm/runtime_costs.rs -> Scope: Critical. An unprivileged attacker can replay or double-settle a message, proof, receipt, payout, withdrawal, refund, claim, unlock, approval, or contract side effect so one logical action executes or pays out more than once.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_e4c2af0f-dc5e-40da-95ef-ad495c9e3a68?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: substrate/frame/revive/src/weightinfo_extension.rs -> Scope: Critical. An unprivileged attacker can replay or double-settle a message, proof, receipt, payout, withdrawal, refund, claim, unlock, approval, or contract side effect so one logical action executes or pays out more than once.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_326b3f61-714f-4851-aa50-8836c2905496?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: substrate/frame/scarcity/src/extension.rs -> Scope: Critical. An unprivileged attacker can replay or double-settle a message, proof, receipt, payout, withdrawal, refund, claim, unlock, approval, or contract side effect so one logical action executes or pays out more than once.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_c6a48c5f-ff39-401c-808b-727d4693306d?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: substrate/frame/scarcity/src/lib.rs -> Scope: Critical. An unprivileged attacker can replay or double-settle a message, proof, receipt, payout, withdrawal, refund, claim, unlock, approval, or contract side effect so one logical action executes or pays out more than once.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_62cc48ef-41b9-4223-98e9-81c8fcf0b4ba?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: substrate/frame/staking/src/asset.rs -> Scope: Critical. An unprivileged attacker can replay or double-settle a message, proof, receipt, payout, withdrawal, refund, claim, unlock, approval, or contract side effect so one logical action executes or pays out more than once.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_1830dd37-a7fc-4ecf-887a-25b615cb8dbb?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: substrate/frame/staking/src/election_size_tracker.rs -> Scope: Critical. An unprivileged attacker can replay or double-settle a message, proof, receipt, payout, withdrawal, refund, claim, unlock, approval, or contract side effect so one logical action executes or pays out more than once.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_bb65c40c-6e10-462a-a747-ab15f06a32a7?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: substrate/frame/staking/src/inflation.rs -> Scope: Critical. An unprivileged attacker can replay or double-settle a message, proof, receipt, payout, withdrawal, refund, claim, unlock, approval, or contract side effect so one logical action executes or pays out more than once.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_af20421d-e9f3-48a1-81be-4f57adce5050?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: substrate/frame/staking/src/ledger.rs -> Scope: Critical. An unprivileged attacker can replay or double-settle a message, proof, receipt, payout, withdrawal, refund, claim, unlock, approval, or contract side effect so one logical action executes or pays out more than once.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_050c350f-fd46-4e78-a1ed-bfc3d6f611ec?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: substrate/frame/staking/src/lib.rs -> Scope: Critical. An unprivileged attacker can replay or double-settle a message, proof, receipt, payout, withdrawal, refund, claim, unlock, approval, or contract side effect so one logical action executes or pays out more than once.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_e228301c-0bcc-4051-8e8f-7dde8786f623?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: substrate/frame/staking/src/pallet/impls.rs -> Scope: Critical. An unprivileged attacker can replay or double-settle a message, proof, receipt, payout, withdrawal, refund, claim, unlock, approval, or contract side effect so one logical action executes or pays out more than once.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_ee1c3ca1-3694-41ee-a76e-4e192735d927?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: substrate/frame/staking/src/pallet/mod.rs -> Scope: Critical. An unprivileged attacker can replay or double-settle a message, proof, receipt, payout, withdrawal, refund, claim, unlock, approval, or contract side effect so one logical action executes or pays out more than once.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_88695152-b84b-4f4f-9965-7c2d5bfb9750?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: substrate/frame/staking/src/slashing.rs -> Scope: Critical. An unprivileged attacker can replay or double-settle a message, proof, receipt, payout, withdrawal, refund, claim, unlock, approval, or contract side effect so one logical action executes or pays out more than once.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_bf87947b-959c-4f63-babc-2a30a5d2c5f6?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: substrate/frame/tips/src/lib.rs -> Scope: Critical. An unprivileged attacker can replay or double-settle a message, proof, receipt, payout, withdrawal, refund, claim, unlock, approval, or contract side effect so one logical action executes or pays out more than once.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_dd6eeb0a-b135-4064-bd82-b733fbeb6c17?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: substrate/frame/treasury/src/lib.rs -> Scope: Critical. An unprivileged attacker can replay or double-settle a message, proof, receipt, payout, withdrawal, refund, claim, unlock, approval, or contract side effect so one logical action executes or pays out more than once.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_9bb3cf64-9bf9-4c40-9370-638ecb6ba0bd?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: substrate/frame/uniques/src/asset_ops/collection.rs -> Scope: Critical. An unprivileged attacker can replay or double-settle a message, proof, receipt, payout, withdrawal, refund, claim, unlock, approval, or contract side effect so one logical action executes or pays out more than once.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_24ac8ed2-50df-4e7f-9755-ed2781faa425?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: substrate/frame/uniques/src/asset_ops/item.rs -> Scope: Critical. An unprivileged attacker can replay or double-settle a message, proof, receipt, payout, withdrawal, refund, claim, unlock, approval, or contract side effect so one logical action executes or pays out more than once.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_cd7501b5-d79f-4517-948d-ca88399925a2?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: substrate/frame/uniques/src/asset_ops/mod.rs -> Scope: Critical. An unprivileged attacker can replay or double-settle a message, proof, receipt, payout, withdrawal, refund, claim, unlock, approval, or contract side effect so one logical action executes or pays out more than once.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_d97835ef-7cbd-4885-811f-84340f5145b2?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: substrate/frame/uniques/src/functions.rs -> Scope: Critical. An unprivileged attacker can replay or double-settle a message, proof, receipt, payout, withdrawal, refund, claim, unlock, approval, or contract side effect so one logical action executes or pays out more than once.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_82065db2-7926-4089-906b-357e76f2c0c3?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: substrate/frame/uniques/src/impl_nonfungibles.rs -> Scope: Critical. An unprivileged attacker can replay or double-settle a message, proof, receipt, payout, withdrawal, refund, claim, unlock, approval, or contract side effect so one logical action executes or pays out more than once.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_bf5a1aa9-b7d5-499d-935e-fbf41fc34dcb?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: substrate/frame/uniques/src/lib.rs -> Scope: Critical. An unprivileged attacker can replay or double-settle a message, proof, receipt, payout, withdrawal, refund, claim, unlock, approval, or contract side effect so one logical action executes or pays out more than once.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_3a70a932-ed5a-417b-8ae1-0469848f04d7?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: substrate/frame/uniques/src/types.rs -> Scope: Critical. An unprivileged attacker can replay or double-settle a message, proof, receipt, payout, withdrawal, refund, claim, unlock, approval, or contract side effect so one logical action executes or pays out more than once.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_34f9bddb-5010-4770-b456-f0ec9b636278?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: substrate/frame/utility/src/lib.rs -> Scope: Critical. An unprivileged attacker can replay or double-settle a message, proof, receipt, payout, withdrawal, refund, claim, unlock, approval, or contract side effect so one logical action executes or pays out more than once.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_d15669eb-d0dc-4366-9a14-e8c1ac270b85?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: substrate/frame/vesting/src/lib.rs -> Scope: Critical. An unprivileged attacker can replay or double-settle a message, proof, receipt, payout, withdrawal, refund, claim, unlock, approval, or contract side effect so one logical action executes or pays out more than once.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_89b17fb6-8a03-471a-9eff-3754c14a3855?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: substrate/frame/vesting/src/vesting_info.rs -> Scope: Critical. An unprivileged attacker can replay or double-settle a message, proof, receipt, payout, withdrawal, refund, claim, unlock, approval, or contract side effect so one logical action executes or pays out more than once.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_82659cc4-7739-489b-9416-eb3f5d386a0c?mode=deep",
+    "questions_generated": false
+  }
+]
