@@ -148,5 +148,155 @@
     "question": "'File Name: bridges/primitives/header-chain/src/justification/verification/mod.rs -> Scope: High. An unprivileged attacker can use a public path to trigger underpriced proof verification, VM execution, queue maintenance, or storage-heavy iteration that meaningfully degrades block production, stalls bridge progress, or keeps the chain processing attacker work below true cost.'",
     "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_321e241b-1f1f-4692-88b4-3316fdf0157b?mode=deep",
     "questions_generated": false
+  },
+  {
+    "question": "'File Name: bridges/modules/beefy/src/lib.rs -> Scope: High. An unprivileged attacker can use a public path to trigger underpriced proof verification, VM execution, queue maintenance, or storage-heavy iteration that meaningfully degrades block production, stalls bridge progress, or keeps the chain processing attacker work below true cost.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_b08ace6c-d27f-4396-9841-ac0d4fbd9420?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: bridges/modules/beefy/src/utils.rs -> Scope: High. An unprivileged attacker can use a public path to trigger underpriced proof verification, VM execution, queue maintenance, or storage-heavy iteration that meaningfully degrades block production, stalls bridge progress, or keeps the chain processing attacker work below true cost.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_7a538e19-bfab-4870-8c64-952b62b54490?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: bridges/modules/grandpa/src/call_ext.rs -> Scope: High. An unprivileged attacker can use a public path to trigger underpriced proof verification, VM execution, queue maintenance, or storage-heavy iteration that meaningfully degrades block production, stalls bridge progress, or keeps the chain processing attacker work below true cost.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_d580281f-894c-4109-afce-f9786b11e21c?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: bridges/modules/grandpa/src/lib.rs -> Scope: High. An unprivileged attacker can use a public path to trigger underpriced proof verification, VM execution, queue maintenance, or storage-heavy iteration that meaningfully degrades block production, stalls bridge progress, or keeps the chain processing attacker work below true cost.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_5a7a2cf5-f8c0-4370-a5a2-9579ad3a87a1?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: bridges/modules/grandpa/src/storage_types.rs -> Scope: High. An unprivileged attacker can use a public path to trigger underpriced proof verification, VM execution, queue maintenance, or storage-heavy iteration that meaningfully degrades block production, stalls bridge progress, or keeps the chain processing attacker work below true cost.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_85f75515-62d4-4675-844c-5454c29da431?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: bridges/modules/grandpa/src/weights_ext.rs -> Scope: High. An unprivileged attacker can use a public path to trigger underpriced proof verification, VM execution, queue maintenance, or storage-heavy iteration that meaningfully degrades block production, stalls bridge progress, or keeps the chain processing attacker work below true cost.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_7088d246-76b5-4122-8074-7aeacbb4aba8?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: bridges/modules/messages/src/call_ext.rs -> Scope: High. An unprivileged attacker can use a public path to trigger underpriced proof verification, VM execution, queue maintenance, or storage-heavy iteration that meaningfully degrades block production, stalls bridge progress, or keeps the chain processing attacker work below true cost.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_b8aa3fcd-5052-4285-b62d-fb8a58c8f6a3?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: bridges/modules/messages/src/inbound_lane.rs -> Scope: High. An unprivileged attacker can use a public path to trigger underpriced proof verification, VM execution, queue maintenance, or storage-heavy iteration that meaningfully degrades block production, stalls bridge progress, or keeps the chain processing attacker work below true cost.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_13ccfb31-8812-444b-9ec9-9c06bcef3f06?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: bridges/modules/messages/src/lanes_manager.rs -> Scope: High. An unprivileged attacker can use a public path to trigger underpriced proof verification, VM execution, queue maintenance, or storage-heavy iteration that meaningfully degrades block production, stalls bridge progress, or keeps the chain processing attacker work below true cost.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_6b97c081-7165-40e6-8f3e-3c5e5390a67a?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: bridges/modules/messages/src/lib.rs -> Scope: High. An unprivileged attacker can use a public path to trigger underpriced proof verification, VM execution, queue maintenance, or storage-heavy iteration that meaningfully degrades block production, stalls bridge progress, or keeps the chain processing attacker work below true cost.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_81d5e8bb-cfb7-4117-9596-b234f179214e?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: bridges/modules/messages/src/outbound_lane.rs -> Scope: High. An unprivileged attacker can use a public path to trigger underpriced proof verification, VM execution, queue maintenance, or storage-heavy iteration that meaningfully degrades block production, stalls bridge progress, or keeps the chain processing attacker work below true cost.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_59b0a2cc-1cd5-4538-8798-af7ac6ccc5d6?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: bridges/modules/messages/src/proofs.rs -> Scope: High. An unprivileged attacker can use a public path to trigger underpriced proof verification, VM execution, queue maintenance, or storage-heavy iteration that meaningfully degrades block production, stalls bridge progress, or keeps the chain processing attacker work below true cost.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_d2e88474-45f4-41a8-b9e4-400f097b285f?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: bridges/modules/messages/src/weights_ext.rs -> Scope: High. An unprivileged attacker can use a public path to trigger underpriced proof verification, VM execution, queue maintenance, or storage-heavy iteration that meaningfully degrades block production, stalls bridge progress, or keeps the chain processing attacker work below true cost.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_0529f4c7-0ef6-4f9b-8ec1-a3e1724db1d5?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: bridges/modules/parachains/src/call_ext.rs -> Scope: High. An unprivileged attacker can use a public path to trigger underpriced proof verification, VM execution, queue maintenance, or storage-heavy iteration that meaningfully degrades block production, stalls bridge progress, or keeps the chain processing attacker work below true cost.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_6adaef91-5a67-426d-a27b-0d52e4dc8253?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: bridges/modules/parachains/src/lib.rs -> Scope: High. An unprivileged attacker can use a public path to trigger underpriced proof verification, VM execution, queue maintenance, or storage-heavy iteration that meaningfully degrades block production, stalls bridge progress, or keeps the chain processing attacker work below true cost.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_48c082b4-34e1-4708-a5b5-2ed9d5dfc6f5?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: bridges/modules/parachains/src/proofs.rs -> Scope: High. An unprivileged attacker can use a public path to trigger underpriced proof verification, VM execution, queue maintenance, or storage-heavy iteration that meaningfully degrades block production, stalls bridge progress, or keeps the chain processing attacker work below true cost.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_b2ecfc9d-b8f6-4d29-96c5-34d4f0e69a59?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: bridges/modules/parachains/src/weights_ext.rs -> Scope: High. An unprivileged attacker can use a public path to trigger underpriced proof verification, VM execution, queue maintenance, or storage-heavy iteration that meaningfully degrades block production, stalls bridge progress, or keeps the chain processing attacker work below true cost.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_82dddc2f-87fa-46f1-9335-92fd6f8d8093?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: bridges/modules/relayers/src/extension/grandpa_adapter.rs -> Scope: High. An unprivileged attacker can use a public path to trigger underpriced proof verification, VM execution, queue maintenance, or storage-heavy iteration that meaningfully degrades block production, stalls bridge progress, or keeps the chain processing attacker work below true cost.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_7c3a322f-6139-4b04-83c2-d5cec7d38850?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: bridges/modules/relayers/src/extension/messages_adapter.rs -> Scope: High. An unprivileged attacker can use a public path to trigger underpriced proof verification, VM execution, queue maintenance, or storage-heavy iteration that meaningfully degrades block production, stalls bridge progress, or keeps the chain processing attacker work below true cost.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_216138cf-88ae-4a0f-8812-dd8fcdfa65e6?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: bridges/modules/relayers/src/extension/mod.rs -> Scope: High. An unprivileged attacker can use a public path to trigger underpriced proof verification, VM execution, queue maintenance, or storage-heavy iteration that meaningfully degrades block production, stalls bridge progress, or keeps the chain processing attacker work below true cost.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_86fcb7dc-2f12-40cd-bda1-545f35112953?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: bridges/modules/relayers/src/extension/parachain_adapter.rs -> Scope: High. An unprivileged attacker can use a public path to trigger underpriced proof verification, VM execution, queue maintenance, or storage-heavy iteration that meaningfully degrades block production, stalls bridge progress, or keeps the chain processing attacker work below true cost.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_7fd20f74-62f1-485f-ab7b-fcdbf3b46c83?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: bridges/modules/relayers/src/extension/priority.rs -> Scope: High. An unprivileged attacker can use a public path to trigger underpriced proof verification, VM execution, queue maintenance, or storage-heavy iteration that meaningfully degrades block production, stalls bridge progress, or keeps the chain processing attacker work below true cost.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_9de9b8a4-d717-45cc-8460-dc0861256e53?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: bridges/modules/relayers/src/lib.rs -> Scope: High. An unprivileged attacker can use a public path to trigger underpriced proof verification, VM execution, queue maintenance, or storage-heavy iteration that meaningfully degrades block production, stalls bridge progress, or keeps the chain processing attacker work below true cost.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_cc24315a-cd4d-48fc-839e-8e5f95e2a125?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: bridges/modules/relayers/src/payment_adapter.rs -> Scope: High. An unprivileged attacker can use a public path to trigger underpriced proof verification, VM execution, queue maintenance, or storage-heavy iteration that meaningfully degrades block production, stalls bridge progress, or keeps the chain processing attacker work below true cost.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_23f486fd-d81d-4465-a3c2-81d6b906bd7c?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: bridges/modules/relayers/src/stake_adapter.rs -> Scope: High. An unprivileged attacker can use a public path to trigger underpriced proof verification, VM execution, queue maintenance, or storage-heavy iteration that meaningfully degrades block production, stalls bridge progress, or keeps the chain processing attacker work below true cost.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_50147c00-e530-4f87-8df5-78b738a22b14?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: bridges/modules/relayers/src/weights_ext.rs -> Scope: High. An unprivileged attacker can use a public path to trigger underpriced proof verification, VM execution, queue maintenance, or storage-heavy iteration that meaningfully degrades block production, stalls bridge progress, or keeps the chain processing attacker work below true cost.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_da91b4bc-1eee-48ca-8da1-a1be732486a8?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: bridges/primitives/header-chain/src/call_info.rs -> Scope: High. An unprivileged attacker can use a public path to trigger underpriced proof verification, VM execution, queue maintenance, or storage-heavy iteration that meaningfully degrades block production, stalls bridge progress, or keeps the chain processing attacker work below true cost.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_40861c5e-5d7e-4a12-9478-8a2c3e85fc04?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: bridges/primitives/header-chain/src/justification/mod.rs -> Scope: High. An unprivileged attacker can use a public path to trigger underpriced proof verification, VM execution, queue maintenance, or storage-heavy iteration that meaningfully degrades block production, stalls bridge progress, or keeps the chain processing attacker work below true cost.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_53e492bd-564f-48c4-a91c-e1b38f618388?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: bridges/primitives/header-chain/src/justification/verification/equivocation.rs -> Scope: High. An unprivileged attacker can use a public path to trigger underpriced proof verification, VM execution, queue maintenance, or storage-heavy iteration that meaningfully degrades block production, stalls bridge progress, or keeps the chain processing attacker work below true cost.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_48a4830e-ed0e-498f-9c61-4f87dc76bfc4?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: bridges/primitives/header-chain/src/justification/verification/mod.rs -> Scope: High. An unprivileged attacker can use a public path to trigger underpriced proof verification, VM execution, queue maintenance, or storage-heavy iteration that meaningfully degrades block production, stalls bridge progress, or keeps the chain processing attacker work below true cost.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_3c6f5ae7-0bd9-44a9-8b33-e62a6991a11b?mode=deep",
+    "questions_generated": false
   }
 ]
