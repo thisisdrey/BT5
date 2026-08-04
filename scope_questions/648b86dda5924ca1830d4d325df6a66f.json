@@ -1,0 +1,152 @@
+[
+  {
+    "question": "'File Name: substrate/frame/revive/src/runtime_api/nonce.rs -> Scope: Critical. An unprivileged attacker can make Polkadot SDK or Snowbridge accept a forged, stale, conflicting, or mis-bound finality proof, parachain head, beacon update, message proof, delivery receipt, or state root and then execute or import invalid state.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_20a57ba0-266e-4942-a0ef-b5061e037082?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: substrate/frame/revive/src/runtime_api/receipt_data.rs -> Scope: Critical. An unprivileged attacker can make Polkadot SDK or Snowbridge accept a forged, stale, conflicting, or mis-bound finality proof, parachain head, beacon update, message proof, delivery receipt, or state root and then execute or import invalid state.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_c065793d-b331-4526-a7cc-eb47f52d88ff?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: substrate/frame/revive/src/runtime_api/runtime_pallets_address.rs -> Scope: Critical. An unprivileged attacker can make Polkadot SDK or Snowbridge accept a forged, stale, conflicting, or mis-bound finality proof, parachain head, beacon update, message proof, delivery receipt, or state root and then execute or import invalid state.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_cd9c3559-f6d1-4f0a-bb93-458ea172948f?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: substrate/frame/revive/src/runtime_api/trace_block.rs -> Scope: Critical. An unprivileged attacker can make Polkadot SDK or Snowbridge accept a forged, stale, conflicting, or mis-bound finality proof, parachain head, beacon update, message proof, delivery receipt, or state root and then execute or import invalid state.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_36ab2363-f93f-45f7-8642-b8632752a9f2?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: substrate/frame/revive/src/runtime_api/trace_call.rs -> Scope: Critical. An unprivileged attacker can make Polkadot SDK or Snowbridge accept a forged, stale, conflicting, or mis-bound finality proof, parachain head, beacon update, message proof, delivery receipt, or state root and then execute or import invalid state.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_a31920b1-243b-4817-86b1-bd25a07afe70?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: substrate/frame/revive/src/runtime_api/trace_tx.rs -> Scope: Critical. An unprivileged attacker can make Polkadot SDK or Snowbridge accept a forged, stale, conflicting, or mis-bound finality proof, parachain head, beacon update, message proof, delivery receipt, or state root and then execute or import invalid state.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_ecd2b947-7455-48be-8392-8d758b910dd8?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: substrate/frame/revive/src/runtime_api/upload_code.rs -> Scope: Critical. An unprivileged attacker can make Polkadot SDK or Snowbridge accept a forged, stale, conflicting, or mis-bound finality proof, parachain head, beacon update, message proof, delivery receipt, or state root and then execute or import invalid state.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_304b56cd-8452-4d96-b4a8-eb8d8bf43860?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: substrate/frame/revive/src/state_overrides.rs -> Scope: Critical. An unprivileged attacker can make Polkadot SDK or Snowbridge accept a forged, stale, conflicting, or mis-bound finality proof, parachain head, beacon update, message proof, delivery receipt, or state root and then execute or import invalid state.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_a8713313-bbb4-43fa-ae23-cf75f99ef4bd?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: substrate/frame/revive/src/storage.rs -> Scope: Critical. An unprivileged attacker can make Polkadot SDK or Snowbridge accept a forged, stale, conflicting, or mis-bound finality proof, parachain head, beacon update, message proof, delivery receipt, or state root and then execute or import invalid state.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_314572d8-05dd-493f-ae21-6f54e88dd85b?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: substrate/frame/revive/src/tracing.rs -> Scope: Critical. An unprivileged attacker can make Polkadot SDK or Snowbridge accept a forged, stale, conflicting, or mis-bound finality proof, parachain head, beacon update, message proof, delivery receipt, or state root and then execute or import invalid state.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_4a23fc3a-0297-4bb8-96ff-0988525b6581?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: substrate/frame/revive/src/transient_storage.rs -> Scope: Critical. An unprivileged attacker can make Polkadot SDK or Snowbridge accept a forged, stale, conflicting, or mis-bound finality proof, parachain head, beacon update, message proof, delivery receipt, or state root and then execute or import invalid state.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_fa10a14c-83dd-4383-bb83-d84f05f07976?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: substrate/frame/revive/src/vm/evm/ext_bytecode.rs -> Scope: Critical. An unprivileged attacker can make Polkadot SDK or Snowbridge accept a forged, stale, conflicting, or mis-bound finality proof, parachain head, beacon update, message proof, delivery receipt, or state root and then execute or import invalid state.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_f4233436-5458-41a1-ab35-e88479cdb068?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: substrate/frame/revive/src/vm/evm/instructions/arithmetic/i256.rs -> Scope: Critical. An unprivileged attacker can make Polkadot SDK or Snowbridge accept a forged, stale, conflicting, or mis-bound finality proof, parachain head, beacon update, message proof, delivery receipt, or state root and then execute or import invalid state.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_36cc4e0c-82bb-40de-9bee-c034f1da524e?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: substrate/frame/revive/src/vm/evm/instructions/arithmetic/modular.rs -> Scope: Critical. An unprivileged attacker can make Polkadot SDK or Snowbridge accept a forged, stale, conflicting, or mis-bound finality proof, parachain head, beacon update, message proof, delivery receipt, or state root and then execute or import invalid state.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_aaf49b95-7de0-4552-b26d-f6a57ee702df?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: substrate/frame/revive/src/vm/evm/instructions/arithmetic.rs -> Scope: Critical. An unprivileged attacker can make Polkadot SDK or Snowbridge accept a forged, stale, conflicting, or mis-bound finality proof, parachain head, beacon update, message proof, delivery receipt, or state root and then execute or import invalid state.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_d07a5c45-0a33-416f-8155-29c48cea6673?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: substrate/frame/revive/src/vm/evm/instructions/bitwise/bits.rs -> Scope: Critical. An unprivileged attacker can make Polkadot SDK or Snowbridge accept a forged, stale, conflicting, or mis-bound finality proof, parachain head, beacon update, message proof, delivery receipt, or state root and then execute or import invalid state.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_f1541902-dc29-4ce4-945f-b31e69c41eb8?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: substrate/frame/revive/src/vm/evm/instructions/bitwise.rs -> Scope: Critical. An unprivileged attacker can make Polkadot SDK or Snowbridge accept a forged, stale, conflicting, or mis-bound finality proof, parachain head, beacon update, message proof, delivery receipt, or state root and then execute or import invalid state.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_090ff1a8-05a7-4577-a066-ba7686bc6ca6?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: substrate/frame/revive/src/vm/evm/instructions/block_info.rs -> Scope: Critical. An unprivileged attacker can make Polkadot SDK or Snowbridge accept a forged, stale, conflicting, or mis-bound finality proof, parachain head, beacon update, message proof, delivery receipt, or state root and then execute or import invalid state.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_dfda8f56-5fe7-41b7-858c-8a8db28b0095?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: substrate/frame/revive/src/vm/evm/instructions/contract/call_helpers.rs -> Scope: Critical. An unprivileged attacker can make Polkadot SDK or Snowbridge accept a forged, stale, conflicting, or mis-bound finality proof, parachain head, beacon update, message proof, delivery receipt, or state root and then execute or import invalid state.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_781623c1-8ba3-4144-8a68-809e26a3963c?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: substrate/frame/revive/src/vm/evm/instructions/contract.rs -> Scope: Critical. An unprivileged attacker can make Polkadot SDK or Snowbridge accept a forged, stale, conflicting, or mis-bound finality proof, parachain head, beacon update, message proof, delivery receipt, or state root and then execute or import invalid state.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_d3a355b8-d834-42e2-b778-d25fada7d8c1?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: substrate/frame/revive/src/vm/evm/instructions/control.rs -> Scope: Critical. An unprivileged attacker can make Polkadot SDK or Snowbridge accept a forged, stale, conflicting, or mis-bound finality proof, parachain head, beacon update, message proof, delivery receipt, or state root and then execute or import invalid state.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_c355cd43-4353-4002-b8be-06539ff3637c?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: substrate/frame/revive/src/vm/evm/instructions/host.rs -> Scope: Critical. An unprivileged attacker can make Polkadot SDK or Snowbridge accept a forged, stale, conflicting, or mis-bound finality proof, parachain head, beacon update, message proof, delivery receipt, or state root and then execute or import invalid state.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_ebe12383-fc04-452d-94a1-2e6d47b69148?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: substrate/frame/revive/src/vm/evm/instructions/memory.rs -> Scope: Critical. An unprivileged attacker can make Polkadot SDK or Snowbridge accept a forged, stale, conflicting, or mis-bound finality proof, parachain head, beacon update, message proof, delivery receipt, or state root and then execute or import invalid state.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_235d6eeb-66bc-4f0c-88b4-55e4851153cb?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: substrate/frame/revive/src/vm/evm/instructions/mod.rs -> Scope: Critical. An unprivileged attacker can make Polkadot SDK or Snowbridge accept a forged, stale, conflicting, or mis-bound finality proof, parachain head, beacon update, message proof, delivery receipt, or state root and then execute or import invalid state.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_e647dcd7-1a7b-4bd8-80ec-2b52b2cfa66d?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: substrate/frame/revive/src/vm/evm/instructions/stack.rs -> Scope: Critical. An unprivileged attacker can make Polkadot SDK or Snowbridge accept a forged, stale, conflicting, or mis-bound finality proof, parachain head, beacon update, message proof, delivery receipt, or state root and then execute or import invalid state.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_344779b6-5ee5-4298-ab9d-ded5093583fc?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: substrate/frame/revive/src/vm/evm/instructions/system.rs -> Scope: Critical. An unprivileged attacker can make Polkadot SDK or Snowbridge accept a forged, stale, conflicting, or mis-bound finality proof, parachain head, beacon update, message proof, delivery receipt, or state root and then execute or import invalid state.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_8c128c40-c8f3-468c-b09a-de74d326e0f4?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: substrate/frame/revive/src/vm/evm/instructions/tx_info.rs -> Scope: Critical. An unprivileged attacker can make Polkadot SDK or Snowbridge accept a forged, stale, conflicting, or mis-bound finality proof, parachain head, beacon update, message proof, delivery receipt, or state root and then execute or import invalid state.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_d7cdbf6f-99ec-448e-a718-d921c1fbea39?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: substrate/frame/revive/src/vm/evm/instructions/utility.rs -> Scope: Critical. An unprivileged attacker can make Polkadot SDK or Snowbridge accept a forged, stale, conflicting, or mis-bound finality proof, parachain head, beacon update, message proof, delivery receipt, or state root and then execute or import invalid state.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_736a3f53-3d7a-422d-b414-a7f05481e1d8?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: substrate/frame/revive/src/vm/evm/interpreter.rs -> Scope: Critical. An unprivileged attacker can make Polkadot SDK or Snowbridge accept a forged, stale, conflicting, or mis-bound finality proof, parachain head, beacon update, message proof, delivery receipt, or state root and then execute or import invalid state.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_33548137-728a-4b17-a135-f00a523b85d1?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: substrate/frame/revive/src/vm/evm/memory.rs -> Scope: Critical. An unprivileged attacker can make Polkadot SDK or Snowbridge accept a forged, stale, conflicting, or mis-bound finality proof, parachain head, beacon update, message proof, delivery receipt, or state root and then execute or import invalid state.'",
+    "url": "https://deepwiki.com/search/-draft-18-to-24-exploit-questi_abb00f2c-cdf9-405e-9692-88fb7c7a5d53?mode=deep",
+    "questions_generated": false
+  }
+]
