@@ -1,1 +1,0 @@
-functions.read_file:6{"path": "bridges/snowbridge/pallets/outbound-queue-v2/src/lib.rs", "start": 1, "end": 500}
