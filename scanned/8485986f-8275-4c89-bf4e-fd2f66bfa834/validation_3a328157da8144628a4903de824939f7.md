@@ -1,1 +1,0 @@
-Now let's check `add_external_asset` for the "forbidden ID" analog — specifically, whether it prevents adding the internal asset itself (or another PSM's internal asset) as an external asset.
