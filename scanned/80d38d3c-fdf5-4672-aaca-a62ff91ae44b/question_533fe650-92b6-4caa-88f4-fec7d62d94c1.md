@@ -1,1 +1,0 @@
-[File: 'File Name: programs/vote/src/vote_state/handler.rs -> Scope: Critical. An unprivileged attacker can get a packet accepted into banking with signature verification, dedup, or sanitization effectively skipped, so an unauthorized or malformed transaction reaches execution.'] [Function: unified_scheduler_logic::do_create_task] Given the code comment stating it is currently \
