@@ -1,0 +1,152 @@
+[
+  {
+    "question": "'File Name: svm/src/nonce_info.rs -> Scope: Critical. An unprivileged remote client can send TPU/QUIC traffic or transaction packets that panic, deadlock, or unboundedly grow memory in ingress, sigverify, scheduling, or PoH, halting block production across the cluster.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_9080ddd5-8b41-43ca-b501-83b5ad6c1393?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: svm/src/program_loader.rs -> Scope: Critical. An unprivileged remote client can send TPU/QUIC traffic or transaction packets that panic, deadlock, or unboundedly grow memory in ingress, sigverify, scheduling, or PoH, halting block production across the cluster.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_75c1d7d4-2493-4bec-9b96-90943f416064?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: svm/src/rent_calculator.rs -> Scope: Critical. An unprivileged remote client can send TPU/QUIC traffic or transaction packets that panic, deadlock, or unboundedly grow memory in ingress, sigverify, scheduling, or PoH, halting block production across the cluster.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_2dc647c4-830d-4311-b3d5-59a93e628924?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: svm/src/rollback_accounts.rs -> Scope: Critical. An unprivileged remote client can send TPU/QUIC traffic or transaction packets that panic, deadlock, or unboundedly grow memory in ingress, sigverify, scheduling, or PoH, halting block production across the cluster.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_b19f7046-e8fa-48bb-a836-bfd1c292e3e0?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: svm/src/transaction_account_state_info.rs -> Scope: Critical. An unprivileged remote client can send TPU/QUIC traffic or transaction packets that panic, deadlock, or unboundedly grow memory in ingress, sigverify, scheduling, or PoH, halting block production across the cluster.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_fece6f11-1146-4e4d-aaa4-973c147aefb9?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: svm/src/transaction_balances.rs -> Scope: Critical. An unprivileged remote client can send TPU/QUIC traffic or transaction packets that panic, deadlock, or unboundedly grow memory in ingress, sigverify, scheduling, or PoH, halting block production across the cluster.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_c682c2a9-7f4d-4345-b7f5-950aaf5367d7?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: svm/src/transaction_commit_result.rs -> Scope: Critical. An unprivileged remote client can send TPU/QUIC traffic or transaction packets that panic, deadlock, or unboundedly grow memory in ingress, sigverify, scheduling, or PoH, halting block production across the cluster.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_b32f9a31-f266-41ce-a552-e69e0594ab9a?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: svm/src/transaction_error_metrics.rs -> Scope: Critical. An unprivileged remote client can send TPU/QUIC traffic or transaction packets that panic, deadlock, or unboundedly grow memory in ingress, sigverify, scheduling, or PoH, halting block production across the cluster.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_a5c3794c-0035-4b6d-8974-6ad81f89996b?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: svm/src/transaction_execution_result.rs -> Scope: Critical. An unprivileged remote client can send TPU/QUIC traffic or transaction packets that panic, deadlock, or unboundedly grow memory in ingress, sigverify, scheduling, or PoH, halting block production across the cluster.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_11096d36-b0fb-4488-87e8-aefe2d1673bd?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: svm/src/transaction_processing_callback.rs -> Scope: Critical. An unprivileged remote client can send TPU/QUIC traffic or transaction packets that panic, deadlock, or unboundedly grow memory in ingress, sigverify, scheduling, or PoH, halting block production across the cluster.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_086cf566-f525-43a3-bd0a-eb840e1da7a5?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: svm/src/transaction_processing_result.rs -> Scope: Critical. An unprivileged remote client can send TPU/QUIC traffic or transaction packets that panic, deadlock, or unboundedly grow memory in ingress, sigverify, scheduling, or PoH, halting block production across the cluster.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_5e2c4ae3-2c5f-4195-9918-cf6c48199466?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: svm/src/transaction_processor.rs -> Scope: Critical. An unprivileged remote client can send TPU/QUIC traffic or transaction packets that panic, deadlock, or unboundedly grow memory in ingress, sigverify, scheduling, or PoH, halting block production across the cluster.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_150f5baf-5d75-4725-8f67-0eb4ce28af60?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: svm-callback/src/lib.rs -> Scope: Critical. An unprivileged remote client can send TPU/QUIC traffic or transaction packets that panic, deadlock, or unboundedly grow memory in ingress, sigverify, scheduling, or PoH, halting block production across the cluster.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_24431189-e6c2-4a2f-9c5c-8c8c427303ea?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: svm-feature-set/src/lib.rs -> Scope: Critical. An unprivileged remote client can send TPU/QUIC traffic or transaction packets that panic, deadlock, or unboundedly grow memory in ingress, sigverify, scheduling, or PoH, halting block production across the cluster.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_fcce5613-0283-470b-aa5b-ca00582e764e?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: svm-log-collector/src/lib.rs -> Scope: Critical. An unprivileged remote client can send TPU/QUIC traffic or transaction packets that panic, deadlock, or unboundedly grow memory in ingress, sigverify, scheduling, or PoH, halting block production across the cluster.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_d8f0ac95-0475-4bab-be5d-acdf868ede6c?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: svm-measure/src/lib.rs -> Scope: Critical. An unprivileged remote client can send TPU/QUIC traffic or transaction packets that panic, deadlock, or unboundedly grow memory in ingress, sigverify, scheduling, or PoH, halting block production across the cluster.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_85b453db-c49e-4418-b661-bb8416dd7fb0?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: svm-measure/src/macros.rs -> Scope: Critical. An unprivileged remote client can send TPU/QUIC traffic or transaction packets that panic, deadlock, or unboundedly grow memory in ingress, sigverify, scheduling, or PoH, halting block production across the cluster.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_be238cd6-5517-4564-bf19-282e375cdb4b?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: svm-measure/src/measure.rs -> Scope: Critical. An unprivileged remote client can send TPU/QUIC traffic or transaction packets that panic, deadlock, or unboundedly grow memory in ingress, sigverify, scheduling, or PoH, halting block production across the cluster.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_2631bc0d-7572-4fe7-a99d-2c050bd587a9?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: svm-timings/src/lib.rs -> Scope: Critical. An unprivileged remote client can send TPU/QUIC traffic or transaction packets that panic, deadlock, or unboundedly grow memory in ingress, sigverify, scheduling, or PoH, halting block production across the cluster.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_b89c4f41-76f1-45ba-8c47-1375691445a2?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: svm-type-overrides/src/lib.rs -> Scope: Critical. An unprivileged remote client can send TPU/QUIC traffic or transaction packets that panic, deadlock, or unboundedly grow memory in ingress, sigverify, scheduling, or PoH, halting block production across the cluster.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_42920087-9aca-4c4a-b90d-765e44501138?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: accounts-db/src/account_info.rs -> Scope: Critical. An unprivileged remote client can send TPU/QUIC traffic or transaction packets that panic, deadlock, or unboundedly grow memory in ingress, sigverify, scheduling, or PoH, halting block production across the cluster.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_ed927d5a-550c-46dc-b40a-bdcbe7a3832c?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: accounts-db/src/account_locks.rs -> Scope: Critical. An unprivileged remote client can send TPU/QUIC traffic or transaction packets that panic, deadlock, or unboundedly grow memory in ingress, sigverify, scheduling, or PoH, halting block production across the cluster.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_be7d86d4-cccb-4d6a-82c8-2aa3818c9974?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: accounts-db/src/account_storage/stored_account_info.rs -> Scope: Critical. An unprivileged remote client can send TPU/QUIC traffic or transaction packets that panic, deadlock, or unboundedly grow memory in ingress, sigverify, scheduling, or PoH, halting block production across the cluster.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_4465ea57-614f-4ab0-8ae0-644c52b68c97?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: accounts-db/src/account_storage.rs -> Scope: Critical. An unprivileged remote client can send TPU/QUIC traffic or transaction packets that panic, deadlock, or unboundedly grow memory in ingress, sigverify, scheduling, or PoH, halting block production across the cluster.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_76b53f67-ab91-432b-a576-45f0a6239f88?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: accounts-db/src/account_storage_entry.rs -> Scope: Critical. An unprivileged remote client can send TPU/QUIC traffic or transaction packets that panic, deadlock, or unboundedly grow memory in ingress, sigverify, scheduling, or PoH, halting block production across the cluster.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_5b6190a3-0ef6-4d96-a792-d41bb51d6d14?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: accounts-db/src/account_storage_reader.rs -> Scope: Critical. An unprivileged remote client can send TPU/QUIC traffic or transaction packets that panic, deadlock, or unboundedly grow memory in ingress, sigverify, scheduling, or PoH, halting block production across the cluster.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_41aba570-dfe5-4413-b122-b18cea7d46c1?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: accounts-db/src/accounts.rs -> Scope: Critical. An unprivileged remote client can send TPU/QUIC traffic or transaction packets that panic, deadlock, or unboundedly grow memory in ingress, sigverify, scheduling, or PoH, halting block production across the cluster.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_2746c110-8d89-49c4-940b-6a56bfe7d425?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: accounts-db/src/accounts_cache.rs -> Scope: Critical. An unprivileged remote client can send TPU/QUIC traffic or transaction packets that panic, deadlock, or unboundedly grow memory in ingress, sigverify, scheduling, or PoH, halting block production across the cluster.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_c0bad8ca-f5a7-4c37-a03b-3ef4207ad3cc?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: accounts-db/src/accounts_db/accounts_db_config.rs -> Scope: Critical. An unprivileged remote client can send TPU/QUIC traffic or transaction packets that panic, deadlock, or unboundedly grow memory in ingress, sigverify, scheduling, or PoH, halting block production across the cluster.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_1c778557-9e3e-4c77-a030-66cf477b1cdc?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: accounts-db/src/accounts_db/stats.rs -> Scope: Critical. An unprivileged remote client can send TPU/QUIC traffic or transaction packets that panic, deadlock, or unboundedly grow memory in ingress, sigverify, scheduling, or PoH, halting block production across the cluster.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_e2fb81e9-3654-4883-8b1a-d8489c332afc?mode=deep",
+    "questions_generated": false
+  }
+]
