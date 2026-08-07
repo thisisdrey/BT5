@@ -1,0 +1,152 @@
+[
+  {
+    "question": "'File Name: accounts-db/src/accounts_db.rs -> Scope: Critical. An unprivileged attacker can manipulate scheduling, account locks, or PoH recording so a recorded entry does not match the transactions actually executed, producing an invalid block honest nodes reject.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_b2b63779-0f45-411e-8749-967a778f5a42?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: accounts-db/src/accounts_file.rs -> Scope: Critical. An unprivileged attacker can manipulate scheduling, account locks, or PoH recording so a recorded entry does not match the transactions actually executed, producing an invalid block honest nodes reject.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_e1f1714f-395a-4af4-a87c-481d1fb1b32b?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: accounts-db/src/accounts_hash.rs -> Scope: Critical. An unprivileged attacker can manipulate scheduling, account locks, or PoH recording so a recorded entry does not match the transactions actually executed, producing an invalid block honest nodes reject.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_5070951f-54a0-4e7c-b623-2ee673ac1232?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: accounts-db/src/accounts_index/account_map_entry.rs -> Scope: Critical. An unprivileged attacker can manipulate scheduling, account locks, or PoH recording so a recorded entry does not match the transactions actually executed, producing an invalid block honest nodes reject.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_70ce5a5b-52f8-4377-9b6d-494513e4e778?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: accounts-db/src/accounts_index/accounts_index_storage.rs -> Scope: Critical. An unprivileged attacker can manipulate scheduling, account locks, or PoH recording so a recorded entry does not match the transactions actually executed, producing an invalid block honest nodes reject.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_6d75f3e5-6740-4481-b234-3e4f0e8eb79f?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: accounts-db/src/accounts_index/bucket_map_holder.rs -> Scope: Critical. An unprivileged attacker can manipulate scheduling, account locks, or PoH recording so a recorded entry does not match the transactions actually executed, producing an invalid block honest nodes reject.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_583c7b7c-bcf8-4c2f-9a0a-bbba2161bbe1?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: accounts-db/src/accounts_index/in_mem_accounts_index.rs -> Scope: Critical. An unprivileged attacker can manipulate scheduling, account locks, or PoH recording so a recorded entry does not match the transactions actually executed, producing an invalid block honest nodes reject.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_6f46ae95-d581-4a36-a70f-4fd13f78102f?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: accounts-db/src/accounts_index/iter.rs -> Scope: Critical. An unprivileged attacker can manipulate scheduling, account locks, or PoH recording so a recorded entry does not match the transactions actually executed, producing an invalid block honest nodes reject.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_9c0e46cc-8035-4a06-95bc-d962dc14e37d?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: accounts-db/src/accounts_index/secondary.rs -> Scope: Critical. An unprivileged attacker can manipulate scheduling, account locks, or PoH recording so a recorded entry does not match the transactions actually executed, producing an invalid block honest nodes reject.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_a15771f8-bc7c-45d9-b9d1-44118b713cb1?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: accounts-db/src/accounts_index/stats.rs -> Scope: Critical. An unprivileged attacker can manipulate scheduling, account locks, or PoH recording so a recorded entry does not match the transactions actually executed, producing an invalid block honest nodes reject.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_5fbfc11f-aaf2-4e17-a17b-147106b80248?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: accounts-db/src/accounts_index.rs -> Scope: Critical. An unprivileged attacker can manipulate scheduling, account locks, or PoH recording so a recorded entry does not match the transactions actually executed, producing an invalid block honest nodes reject.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_dcb09aa4-ecf2-4f08-ba15-f2c9ba282aae?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: accounts-db/src/accounts_scan.rs -> Scope: Critical. An unprivileged attacker can manipulate scheduling, account locks, or PoH recording so a recorded entry does not match the transactions actually executed, producing an invalid block honest nodes reject.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_cb39912e-7cd7-418d-98d8-e45b8135bced?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: accounts-db/src/accounts_update_notifier_interface.rs -> Scope: Critical. An unprivileged attacker can manipulate scheduling, account locks, or PoH recording so a recorded entry does not match the transactions actually executed, producing an invalid block honest nodes reject.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_6dd2a563-0541-45ad-9d5c-9638349b8a50?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: accounts-db/src/active_stats.rs -> Scope: Critical. An unprivileged attacker can manipulate scheduling, account locks, or PoH recording so a recorded entry does not match the transactions actually executed, producing an invalid block honest nodes reject.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_c37b6b8c-e4f5-489f-b87e-64eabb3842d0?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: accounts-db/src/ancestors.rs -> Scope: Critical. An unprivileged attacker can manipulate scheduling, account locks, or PoH recording so a recorded entry does not match the transactions actually executed, producing an invalid block honest nodes reject.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_638516db-5dac-4c54-a6e4-8c1496fe4bbc?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: accounts-db/src/ancient_append_vecs.rs -> Scope: Critical. An unprivileged attacker can manipulate scheduling, account locks, or PoH recording so a recorded entry does not match the transactions actually executed, producing an invalid block honest nodes reject.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_a667f77e-247e-4b7b-9278-4ef316ce24cb?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: accounts-db/src/append_vec/meta.rs -> Scope: Critical. An unprivileged attacker can manipulate scheduling, account locks, or PoH recording so a recorded entry does not match the transactions actually executed, producing an invalid block honest nodes reject.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_0b5b9dfe-09ce-4775-89b8-418d1427ce06?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: accounts-db/src/append_vec.rs -> Scope: Critical. An unprivileged attacker can manipulate scheduling, account locks, or PoH recording so a recorded entry does not match the transactions actually executed, producing an invalid block honest nodes reject.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_e26f8c73-86f7-4f01-a09c-26854ed4c41f?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: accounts-db/src/blockhash_queue.rs -> Scope: Critical. An unprivileged attacker can manipulate scheduling, account locks, or PoH recording so a recorded entry does not match the transactions actually executed, producing an invalid block honest nodes reject.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_c2a8f0e8-59e0-4fa0-a5ed-ac5dbf029ebe?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: accounts-db/src/contains.rs -> Scope: Critical. An unprivileged attacker can manipulate scheduling, account locks, or PoH recording so a recorded entry does not match the transactions actually executed, producing an invalid block honest nodes reject.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_442bdf2c-8a74-4706-8787-8997ef35c2b3?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: accounts-db/src/is_loadable.rs -> Scope: Critical. An unprivileged attacker can manipulate scheduling, account locks, or PoH recording so a recorded entry does not match the transactions actually executed, producing an invalid block honest nodes reject.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_a901ff40-5fd2-449f-8818-4d43bde3d556?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: accounts-db/src/is_zero_lamport.rs -> Scope: Critical. An unprivileged attacker can manipulate scheduling, account locks, or PoH recording so a recorded entry does not match the transactions actually executed, producing an invalid block honest nodes reject.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_a5a4dd01-52be-47c0-8a73-67282b111996?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: accounts-db/src/lib.rs -> Scope: Critical. An unprivileged attacker can manipulate scheduling, account locks, or PoH recording so a recorded entry does not match the transactions actually executed, producing an invalid block honest nodes reject.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_c6ba553c-1556-4987-b5c6-4439e6f8d354?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: accounts-db/src/obsolete_accounts.rs -> Scope: Critical. An unprivileged attacker can manipulate scheduling, account locks, or PoH recording so a recorded entry does not match the transactions actually executed, producing an invalid block honest nodes reject.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_9e9931dd-ebc9-4bda-ac18-38d61c28edfa?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: accounts-db/src/partitioned_rewards.rs -> Scope: Critical. An unprivileged attacker can manipulate scheduling, account locks, or PoH recording so a recorded entry does not match the transactions actually executed, producing an invalid block honest nodes reject.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_15365a0e-1489-494d-aaad-3afae47634af?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: accounts-db/src/pubkey_bins.rs -> Scope: Critical. An unprivileged attacker can manipulate scheduling, account locks, or PoH recording so a recorded entry does not match the transactions actually executed, producing an invalid block honest nodes reject.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_113d4f12-bfbe-4346-8f14-d5f8ead95fd3?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: accounts-db/src/read_only_accounts_cache.rs -> Scope: Critical. An unprivileged attacker can manipulate scheduling, account locks, or PoH recording so a recorded entry does not match the transactions actually executed, producing an invalid block honest nodes reject.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_06e43dab-f78e-471d-a3f8-a72214148854?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: accounts-db/src/rolling_bit_field/iterators.rs -> Scope: Critical. An unprivileged attacker can manipulate scheduling, account locks, or PoH recording so a recorded entry does not match the transactions actually executed, producing an invalid block honest nodes reject.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_52f22776-a169-41d1-8b7b-05d78878fbf3?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: accounts-db/src/rolling_bit_field.rs -> Scope: Critical. An unprivileged attacker can manipulate scheduling, account locks, or PoH recording so a recorded entry does not match the transactions actually executed, producing an invalid block honest nodes reject.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_59d21087-043b-44f0-8fc3-9d26594b264c?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: accounts-db/src/sorted_storages.rs -> Scope: Critical. An unprivileged attacker can manipulate scheduling, account locks, or PoH recording so a recorded entry does not match the transactions actually executed, producing an invalid block honest nodes reject.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_ad2544f7-0194-4758-9899-f8cb32bf32e2?mode=deep",
+    "questions_generated": false
+  }
+]
