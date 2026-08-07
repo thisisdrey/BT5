@@ -1,1 +1,0 @@
-[File: svm-measure/src/measure.rs -> Scope: Critical] [Function: PohRecorder::tick + PohService::tick_producer lock contention] Can an unprivileged attacker flood the `record_receiver` channel with maximum-size packet batches at a rate tuned to maximize time spent inside `Measure::start(\
