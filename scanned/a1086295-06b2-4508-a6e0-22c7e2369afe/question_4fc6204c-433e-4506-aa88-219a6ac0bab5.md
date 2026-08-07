@@ -1,1 +1,0 @@
-[File: bucket_map/src/index_entry.rs -> Scope: Critical DoS via ingress/sigverify/scheduling/PoH halt] [Function: MultipleSlots::set_storage_offset] Can an unprivileged attacker who floods a leader's TPU with transactions that create many new distinct accounts drive AccountsIndex bucket growth such that a resulting storage_offset exceeds 2^56-1, triggering the `expect(\
