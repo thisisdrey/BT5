@@ -1,0 +1,1 @@
+[File: transaction-status/src/parse_token/extension/confidential_transfer.rs -> Scope: Critical] [Function: poh_recorder::PohRecorder::record] Can an attacker, by shaping transaction sizes/counts to repeatedly hit the entry_bytes_budget boundary exactly at tick boundaries, force PohRecorder::record's `assert!(!transactions.is_empty(),

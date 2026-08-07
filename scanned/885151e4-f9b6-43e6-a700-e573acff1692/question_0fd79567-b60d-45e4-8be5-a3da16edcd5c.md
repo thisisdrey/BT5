@@ -1,0 +1,1 @@
+[File: poh/src/poh_recorder.rs -> Function: PohRecorder::record] Since record() asserts !transactions.is_empty() and returns PohRecorderError::MaxHeightReached/ChannelDisconnected on failure paths that are converted to panics by callers such as poh_service.rs read_record_receiver_and_process ('panic!(\
