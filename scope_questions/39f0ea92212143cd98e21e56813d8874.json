@@ -1,0 +1,152 @@
+[
+  {
+    "question": "'File Name: core/src/repair/repair_handler.rs -> Scope: High. An unprivileged attacker can cheaply force sigverify, dedup, scheduling, or buffering work that vastly exceeds the fees ever collected, degrading the leader below true cost.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_e69a8ab1-3e21-4a7a-9427-f42304dcc3ea?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/src/repair/repair_response.rs -> Scope: High. An unprivileged attacker can cheaply force sigverify, dedup, scheduling, or buffering work that vastly exceeds the fees ever collected, degrading the leader below true cost.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_381d53cd-e279-42d0-8884-e827852b2f51?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/src/repair/repair_service.rs -> Scope: High. An unprivileged attacker can cheaply force sigverify, dedup, scheduling, or buffering work that vastly exceeds the fees ever collected, degrading the leader below true cost.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_87a68941-379a-4eec-bdf0-b0fb2500cb03?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/src/repair/repair_weight.rs -> Scope: High. An unprivileged attacker can cheaply force sigverify, dedup, scheduling, or buffering work that vastly exceeds the fees ever collected, degrading the leader below true cost.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_a48047e8-b6bf-4869-92ca-73bb84afeab0?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/src/repair/repair_weighted_traversal.rs -> Scope: High. An unprivileged attacker can cheaply force sigverify, dedup, scheduling, or buffering work that vastly exceeds the fees ever collected, degrading the leader below true cost.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_ef930595-4abe-4da9-825e-dcf73d3cc078?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/src/repair/request_response.rs -> Scope: High. An unprivileged attacker can cheaply force sigverify, dedup, scheduling, or buffering work that vastly exceeds the fees ever collected, degrading the leader below true cost.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_2848c9bf-02a9-49db-b83e-f3850b668b58?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/src/repair/result.rs -> Scope: High. An unprivileged attacker can cheaply force sigverify, dedup, scheduling, or buffering work that vastly exceeds the fees ever collected, degrading the leader below true cost.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_327b5b9c-f180-46e2-ba34-c24d54ee363a?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/src/repair/serve_repair.rs -> Scope: High. An unprivileged attacker can cheaply force sigverify, dedup, scheduling, or buffering work that vastly exceeds the fees ever collected, degrading the leader below true cost.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_19380672-b0c4-4686-814d-ef12d29dddbd?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/src/repair/serve_repair_service.rs -> Scope: High. An unprivileged attacker can cheaply force sigverify, dedup, scheduling, or buffering work that vastly exceeds the fees ever collected, degrading the leader below true cost.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_80e2e13f-cb10-4e16-8c42-769844a63eef?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/src/repair/standard_repair_handler.rs -> Scope: High. An unprivileged attacker can cheaply force sigverify, dedup, scheduling, or buffering work that vastly exceeds the fees ever collected, degrading the leader below true cost.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_22aaa373-e29d-4094-b045-743fde4f0649?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/src/replay_stage/dead_slots.rs -> Scope: High. An unprivileged attacker can cheaply force sigverify, dedup, scheduling, or buffering work that vastly exceeds the fees ever collected, degrading the leader below true cost.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_ed523336-c2fd-4304-82a9-2e6c45397042?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/src/replay_stage/update_parent.rs -> Scope: High. An unprivileged attacker can cheaply force sigverify, dedup, scheduling, or buffering work that vastly exceeds the fees ever collected, degrading the leader below true cost.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_e1bde21b-42dd-49f0-9a50-939b859f840b?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/src/replay_stage.rs -> Scope: High. An unprivileged attacker can cheaply force sigverify, dedup, scheduling, or buffering work that vastly exceeds the fees ever collected, degrading the leader below true cost.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_7a1d1be3-4f25-48c2-b107-9d67c0ba4739?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/src/resource_limits.rs -> Scope: High. An unprivileged attacker can cheaply force sigverify, dedup, scheduling, or buffering work that vastly exceeds the fees ever collected, degrading the leader below true cost.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_bf9bdb54-aba8-4699-b74d-5d04ace16a45?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/src/result.rs -> Scope: High. An unprivileged attacker can cheaply force sigverify, dedup, scheduling, or buffering work that vastly exceeds the fees ever collected, degrading the leader below true cost.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_6a97db6c-f7de-40b7-b411-5b64cd8696b0?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/src/sample_performance_service.rs -> Scope: High. An unprivileged attacker can cheaply force sigverify, dedup, scheduling, or buffering work that vastly exceeds the fees ever collected, degrading the leader below true cost.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_30174e1c-d11e-43b0-8e96-c813cf8cc3d9?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/src/scheduler_bindings_server.rs -> Scope: High. An unprivileged attacker can cheaply force sigverify, dedup, scheduling, or buffering work that vastly exceeds the fees ever collected, degrading the leader below true cost.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_5b39bc56-c9df-4dea-bd2a-81bb840363a6?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/src/shred_fetch_stage.rs -> Scope: High. An unprivileged attacker can cheaply force sigverify, dedup, scheduling, or buffering work that vastly exceeds the fees ever collected, degrading the leader below true cost.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_bc3e1f59-9efd-4d5c-a132-8d2964393504?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/src/sigverify.rs -> Scope: High. An unprivileged attacker can cheaply force sigverify, dedup, scheduling, or buffering work that vastly exceeds the fees ever collected, degrading the leader below true cost.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_43549f34-8b90-42e6-85c8-052761322450?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/src/sigverify_stage.rs -> Scope: High. An unprivileged attacker can cheaply force sigverify, dedup, scheduling, or buffering work that vastly exceeds the fees ever collected, degrading the leader below true cost.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_9b7e2eb3-9e48-4d7b-96f1-b6762d15fbf3?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/src/snapshot_packager_service/snapshot_gossip_manager.rs -> Scope: High. An unprivileged attacker can cheaply force sigverify, dedup, scheduling, or buffering work that vastly exceeds the fees ever collected, degrading the leader below true cost.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_710d4b72-6941-4217-8e70-61f3c9af87a6?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/src/snapshot_packager_service.rs -> Scope: High. An unprivileged attacker can cheaply force sigverify, dedup, scheduling, or buffering work that vastly exceeds the fees ever collected, degrading the leader below true cost.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_8c501727-7d3d-4762-9aa2-1f031229d8fc?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/src/staked_nodes_updater_service.rs -> Scope: High. An unprivileged attacker can cheaply force sigverify, dedup, scheduling, or buffering work that vastly exceeds the fees ever collected, degrading the leader below true cost.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_869bc482-fdf1-470a-a00d-d0aad4114783?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/src/stats_reporter_service.rs -> Scope: High. An unprivileged attacker can cheaply force sigverify, dedup, scheduling, or buffering work that vastly exceeds the fees ever collected, degrading the leader below true cost.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_d4bbf876-8136-4f05-85da-062daa094112?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/src/system_monitor_service.rs -> Scope: High. An unprivileged attacker can cheaply force sigverify, dedup, scheduling, or buffering work that vastly exceeds the fees ever collected, degrading the leader below true cost.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_5311d945-0c3d-4468-bf8c-28034f07bc82?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/src/tpu.rs -> Scope: High. An unprivileged attacker can cheaply force sigverify, dedup, scheduling, or buffering work that vastly exceeds the fees ever collected, degrading the leader below true cost.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_23573e6c-a70e-426a-99bf-4acfe1d4dd23?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/src/tpu_entry_notifier.rs -> Scope: High. An unprivileged attacker can cheaply force sigverify, dedup, scheduling, or buffering work that vastly exceeds the fees ever collected, degrading the leader below true cost.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_12a2100d-3ce3-4513-ac8d-892b1139cc94?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/src/transaction_priority.rs -> Scope: High. An unprivileged attacker can cheaply force sigverify, dedup, scheduling, or buffering work that vastly exceeds the fees ever collected, degrading the leader below true cost.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_bef127e9-1c90-4e59-a2eb-6802430b70bf?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/src/tvu.rs -> Scope: High. An unprivileged attacker can cheaply force sigverify, dedup, scheduling, or buffering work that vastly exceeds the fees ever collected, degrading the leader below true cost.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_c994efbc-b19b-4c40-bb46-1f4e0bb8adc4?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/src/unfrozen_gossip_verified_vote_hashes.rs -> Scope: High. An unprivileged attacker can cheaply force sigverify, dedup, scheduling, or buffering work that vastly exceeds the fees ever collected, degrading the leader below true cost.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_c8c04424-4a0c-46ac-bc54-ead4eae8b1fb?mode=deep",
+    "questions_generated": false
+  }
+]
