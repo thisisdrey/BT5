@@ -1,1 +1,0 @@
-[File: io-uring/src/slab.rs -> Scope: High] [Function: FixedSlab::insert] Can an unprivileged attacker who cannot directly reach FixedSlab (only via Ring<T,E>::push in fs/src/io_uring consumers) ever cause Ring's entries slab to exceed the capacity fixed at Ring::new (ring.params().cq_entries()), under concurrent completions racing with pushes, triggering the `panic!(\
