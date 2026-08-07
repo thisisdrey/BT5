@@ -1,1 +1,0 @@
-[File: turbine/src/addr_cache.rs -> Scope: Critical] [Function: AddrCache::maybe_trim_slot_counts] Can rapid alternation of single-shred records for many distinct slots cause `self.window` VecDeque and `self.counts` HashMap to diverge from the invariant `num_shreds <= ROLLING_WINDOW_NUM_SHREDS` before `maybe_trim_slot_counts` catches up, and can the `panic!(\
