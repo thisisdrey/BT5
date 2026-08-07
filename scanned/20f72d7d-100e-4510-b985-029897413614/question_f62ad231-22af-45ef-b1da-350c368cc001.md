@@ -1,1 +1,0 @@
-[File: 'File Name: core/src/stats_reporter_service.rs -> Scope: Critical.'] [Function: entry::poh::Poh::record / entry::entry::Entry construction] Can an unprivileged attacker submit an empty-account-key or otherwise degenerate but sanitization-passing transaction batch that causes `assert!(!transactions.is_empty(), \
