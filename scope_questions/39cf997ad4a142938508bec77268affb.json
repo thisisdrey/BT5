@@ -1,0 +1,152 @@
+[
+  {
+    "question": "'File Name: vote/src/vote_transaction.rs -> Scope: High. An unprivileged, unstaked client can bypass or unfairly capture connection, stream, or per-IP QoS limits and starve legitimate senders of TPU capacity.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_21827f45-57b1-447d-8bdb-32e12c7c08a4?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: precompiles/src/ed25519.rs -> Scope: High. An unprivileged, unstaked client can bypass or unfairly capture connection, stream, or per-IP QoS limits and starve legitimate senders of TPU capacity.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_b6caf0b5-1ab0-4fc2-91a9-352ac2200e4f?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: precompiles/src/lib.rs -> Scope: High. An unprivileged, unstaked client can bypass or unfairly capture connection, stream, or per-IP QoS limits and starve legitimate senders of TPU capacity.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_04a13659-8de0-413c-93e6-e987ea50de5a?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: precompiles/src/secp256k1.rs -> Scope: High. An unprivileged, unstaked client can bypass or unfairly capture connection, stream, or per-IP QoS limits and starve legitimate senders of TPU capacity.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_79f1170d-9bef-44a0-bd94-dfc084c1c926?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: precompiles/src/secp256r1.rs -> Scope: High. An unprivileged, unstaked client can bypass or unfairly capture connection, stream, or per-IP QoS limits and starve legitimate senders of TPU capacity.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_f1afcb08-5f3f-4651-b333-0fe2d4ec59fb?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: program-runtime/src/cpi.rs -> Scope: High. An unprivileged, unstaked client can bypass or unfairly capture connection, stream, or per-IP QoS limits and starve legitimate senders of TPU capacity.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_1d9342bb-5b06-4a03-8ff7-16addbc778c0?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: program-runtime/src/deploy.rs -> Scope: High. An unprivileged, unstaked client can bypass or unfairly capture connection, stream, or per-IP QoS limits and starve legitimate senders of TPU capacity.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_8633a26e-7393-41ac-a77a-4a7184f50e2a?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: program-runtime/src/execution_budget.rs -> Scope: High. An unprivileged, unstaked client can bypass or unfairly capture connection, stream, or per-IP QoS limits and starve legitimate senders of TPU capacity.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_081a0878-4dac-41f0-b573-e4af32f72543?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: program-runtime/src/invoke_context.rs -> Scope: High. An unprivileged, unstaked client can bypass or unfairly capture connection, stream, or per-IP QoS limits and starve legitimate senders of TPU capacity.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_ec2a2668-5bf3-4b7d-af04-63c319c59812?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: program-runtime/src/lib.rs -> Scope: High. An unprivileged, unstaked client can bypass or unfairly capture connection, stream, or per-IP QoS limits and starve legitimate senders of TPU capacity.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_ef722cee-9596-42f3-bf18-46a73eee6017?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: program-runtime/src/loaded_programs.rs -> Scope: High. An unprivileged, unstaked client can bypass or unfairly capture connection, stream, or per-IP QoS limits and starve legitimate senders of TPU capacity.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_d56574ea-6ea0-48f8-a8bb-dbd37fc6f5d3?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: program-runtime/src/loading_task.rs -> Scope: High. An unprivileged, unstaked client can bypass or unfairly capture connection, stream, or per-IP QoS limits and starve legitimate senders of TPU capacity.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_def95a31-cf01-4db6-b0ff-529142f358b6?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: program-runtime/src/mem_pool.rs -> Scope: High. An unprivileged, unstaked client can bypass or unfairly capture connection, stream, or per-IP QoS limits and starve legitimate senders of TPU capacity.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_e2882197-e450-47f3-8162-e06779be8ced?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: program-runtime/src/memory.rs -> Scope: High. An unprivileged, unstaked client can bypass or unfairly capture connection, stream, or per-IP QoS limits and starve legitimate senders of TPU capacity.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_e857aad4-af6e-41fc-ab7d-1fb56d4d2160?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: program-runtime/src/memory_context.rs -> Scope: High. An unprivileged, unstaked client can bypass or unfairly capture connection, stream, or per-IP QoS limits and starve legitimate senders of TPU capacity.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_ff5309d6-b705-4bb9-a84c-01ee301f73de?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: program-runtime/src/program_cache_entry.rs -> Scope: High. An unprivileged, unstaked client can bypass or unfairly capture connection, stream, or per-IP QoS limits and starve legitimate senders of TPU capacity.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_f739802d-0f98-4e71-bbcb-d1223d94d1c8?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: program-runtime/src/program_metrics.rs -> Scope: High. An unprivileged, unstaked client can bypass or unfairly capture connection, stream, or per-IP QoS limits and starve legitimate senders of TPU capacity.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_c33e2518-7c84-4881-96d5-dbf04019faff?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: program-runtime/src/serialization.rs -> Scope: High. An unprivileged, unstaked client can bypass or unfairly capture connection, stream, or per-IP QoS limits and starve legitimate senders of TPU capacity.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_a3f6eb5b-ce62-417f-a314-1ca776481748?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: program-runtime/src/stable_log.rs -> Scope: High. An unprivileged, unstaked client can bypass or unfairly capture connection, stream, or per-IP QoS limits and starve legitimate senders of TPU capacity.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_f11ac5b7-fa39-4644-a244-04175238d465?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: program-runtime/src/sysvar_cache.rs -> Scope: High. An unprivileged, unstaked client can bypass or unfairly capture connection, stream, or per-IP QoS limits and starve legitimate senders of TPU capacity.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_628028e2-2d9a-4e73-a017-d73524a699b9?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: program-runtime/src/vm.rs -> Scope: High. An unprivileged, unstaked client can bypass or unfairly capture connection, stream, or per-IP QoS limits and starve legitimate senders of TPU capacity.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_daf82f77-6eb6-4f59-9eab-d54fce604472?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: syscalls/gen-syscall-list/src/main.rs -> Scope: High. An unprivileged, unstaked client can bypass or unfairly capture connection, stream, or per-IP QoS limits and starve legitimate senders of TPU capacity.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_71c99810-3850-4642-8de1-09fbf028f7da?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: syscalls/src/cpi.rs -> Scope: High. An unprivileged, unstaked client can bypass or unfairly capture connection, stream, or per-IP QoS limits and starve legitimate senders of TPU capacity.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_26e55000-6157-4398-907d-44fe3ed0bc2f?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: syscalls/src/lib.rs -> Scope: High. An unprivileged, unstaked client can bypass or unfairly capture connection, stream, or per-IP QoS limits and starve legitimate senders of TPU capacity.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_784eb452-a741-452b-84b5-c6ccd3f16ec6?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: syscalls/src/logging.rs -> Scope: High. An unprivileged, unstaked client can bypass or unfairly capture connection, stream, or per-IP QoS limits and starve legitimate senders of TPU capacity.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_4d1def2f-3d5b-435e-aeca-d6ad6327f399?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: syscalls/src/mem_ops.rs -> Scope: High. An unprivileged, unstaked client can bypass or unfairly capture connection, stream, or per-IP QoS limits and starve legitimate senders of TPU capacity.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_74149b69-e33e-4b9a-889d-f9d13dd14b2c?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: syscalls/src/sysvar.rs -> Scope: High. An unprivileged, unstaked client can bypass or unfairly capture connection, stream, or per-IP QoS limits and starve legitimate senders of TPU capacity.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_2b3d9c75-3883-49ff-bf9b-b1696c20397a?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: transaction-context/src/instruction.rs -> Scope: High. An unprivileged, unstaked client can bypass or unfairly capture connection, stream, or per-IP QoS limits and starve legitimate senders of TPU capacity.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_880af476-1a77-4bf0-a6db-4513f67d7b30?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: transaction-context/src/instruction_accounts.rs -> Scope: High. An unprivileged, unstaked client can bypass or unfairly capture connection, stream, or per-IP QoS limits and starve legitimate senders of TPU capacity.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_34a1b665-4ece-465b-ae80-7f77263b4c09?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: transaction-context/src/lib.rs -> Scope: High. An unprivileged, unstaked client can bypass or unfairly capture connection, stream, or per-IP QoS limits and starve legitimate senders of TPU capacity.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_107ecf05-4c1e-4bf5-a6ae-3f8152c10e25?mode=deep",
+    "questions_generated": false
+  }
+]
