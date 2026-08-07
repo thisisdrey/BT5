@@ -1,0 +1,1 @@
+[File: poh/src/poh_recorder.rs -> Scope: total TPU DoS via crash] [Function: PohRecorder::record assert!(!transactions.is_empty())] Can any upstream scheduling path (dedup, forwarding, retryable-tx filtering) collapse an attacker-crafted batch to zero transactions right before it reaches PohRecorder::record, tripping the `assert!(!transactions.is_empty(), \
