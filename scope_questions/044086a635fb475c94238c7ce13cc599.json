@@ -1,0 +1,152 @@
+[
+  {
+    "question": "'File Name: vote/src/vote_transaction.rs -> Scope: Critical. An unprivileged attacker can get a packet accepted into banking with signature verification, dedup, or sanitization effectively skipped, so an unauthorized or malformed transaction reaches execution.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_ebd7da6a-89d0-4a39-9a0a-b6d3ed390d43?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: precompiles/src/ed25519.rs -> Scope: Critical. An unprivileged attacker can get a packet accepted into banking with signature verification, dedup, or sanitization effectively skipped, so an unauthorized or malformed transaction reaches execution.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_6115546e-f64a-4ce6-9e47-2bf6fc50d71e?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: precompiles/src/lib.rs -> Scope: Critical. An unprivileged attacker can get a packet accepted into banking with signature verification, dedup, or sanitization effectively skipped, so an unauthorized or malformed transaction reaches execution.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_25997df8-e4bc-4748-9cb6-9d22f7a0726a?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: precompiles/src/secp256k1.rs -> Scope: Critical. An unprivileged attacker can get a packet accepted into banking with signature verification, dedup, or sanitization effectively skipped, so an unauthorized or malformed transaction reaches execution.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_3daf2123-797d-4812-a170-afa0280ba73b?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: precompiles/src/secp256r1.rs -> Scope: Critical. An unprivileged attacker can get a packet accepted into banking with signature verification, dedup, or sanitization effectively skipped, so an unauthorized or malformed transaction reaches execution.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_4e78853d-f2aa-4bc3-9798-221e101dda5f?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: program-runtime/src/cpi.rs -> Scope: Critical. An unprivileged attacker can get a packet accepted into banking with signature verification, dedup, or sanitization effectively skipped, so an unauthorized or malformed transaction reaches execution.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_adb8adaf-2900-4e5d-af47-0fcb648a93b0?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: program-runtime/src/deploy.rs -> Scope: Critical. An unprivileged attacker can get a packet accepted into banking with signature verification, dedup, or sanitization effectively skipped, so an unauthorized or malformed transaction reaches execution.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_01447517-04c9-427f-bddc-5551c37d93a0?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: program-runtime/src/execution_budget.rs -> Scope: Critical. An unprivileged attacker can get a packet accepted into banking with signature verification, dedup, or sanitization effectively skipped, so an unauthorized or malformed transaction reaches execution.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_241dc902-3e12-4cd5-954f-c99ebef70e49?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: program-runtime/src/invoke_context.rs -> Scope: Critical. An unprivileged attacker can get a packet accepted into banking with signature verification, dedup, or sanitization effectively skipped, so an unauthorized or malformed transaction reaches execution.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_a851c0f5-52dd-4ff3-be4c-895a7bf58d0e?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: program-runtime/src/lib.rs -> Scope: Critical. An unprivileged attacker can get a packet accepted into banking with signature verification, dedup, or sanitization effectively skipped, so an unauthorized or malformed transaction reaches execution.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_6341acee-d8bd-47ea-9945-8db16b8dba60?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: program-runtime/src/loaded_programs.rs -> Scope: Critical. An unprivileged attacker can get a packet accepted into banking with signature verification, dedup, or sanitization effectively skipped, so an unauthorized or malformed transaction reaches execution.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_b7ca0612-af74-4d9f-94ee-a2e8e8d0712d?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: program-runtime/src/loading_task.rs -> Scope: Critical. An unprivileged attacker can get a packet accepted into banking with signature verification, dedup, or sanitization effectively skipped, so an unauthorized or malformed transaction reaches execution.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_7dd18361-5f93-41ae-bb59-f8e4f8056f98?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: program-runtime/src/mem_pool.rs -> Scope: Critical. An unprivileged attacker can get a packet accepted into banking with signature verification, dedup, or sanitization effectively skipped, so an unauthorized or malformed transaction reaches execution.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_45260893-7e66-4f95-8c65-ea22f3a8e53c?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: program-runtime/src/memory.rs -> Scope: Critical. An unprivileged attacker can get a packet accepted into banking with signature verification, dedup, or sanitization effectively skipped, so an unauthorized or malformed transaction reaches execution.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_b846dcc6-1c93-487a-b40b-6faa8f881d89?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: program-runtime/src/memory_context.rs -> Scope: Critical. An unprivileged attacker can get a packet accepted into banking with signature verification, dedup, or sanitization effectively skipped, so an unauthorized or malformed transaction reaches execution.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_94c773ee-52db-4b14-9ba6-2d794b60ad0d?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: program-runtime/src/program_cache_entry.rs -> Scope: Critical. An unprivileged attacker can get a packet accepted into banking with signature verification, dedup, or sanitization effectively skipped, so an unauthorized or malformed transaction reaches execution.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_4a07481e-bd49-413c-b119-7fd330467942?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: program-runtime/src/program_metrics.rs -> Scope: Critical. An unprivileged attacker can get a packet accepted into banking with signature verification, dedup, or sanitization effectively skipped, so an unauthorized or malformed transaction reaches execution.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_8ddf6069-c17f-4da3-80f0-9872537ea15c?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: program-runtime/src/serialization.rs -> Scope: Critical. An unprivileged attacker can get a packet accepted into banking with signature verification, dedup, or sanitization effectively skipped, so an unauthorized or malformed transaction reaches execution.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_548c733d-9639-4093-8803-1a6f563e2850?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: program-runtime/src/stable_log.rs -> Scope: Critical. An unprivileged attacker can get a packet accepted into banking with signature verification, dedup, or sanitization effectively skipped, so an unauthorized or malformed transaction reaches execution.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_84fa0169-30b9-49b0-bf93-5c9a4c3b6d95?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: program-runtime/src/sysvar_cache.rs -> Scope: Critical. An unprivileged attacker can get a packet accepted into banking with signature verification, dedup, or sanitization effectively skipped, so an unauthorized or malformed transaction reaches execution.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_c2208da7-afdb-4748-a95b-d56975c05df2?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: program-runtime/src/vm.rs -> Scope: Critical. An unprivileged attacker can get a packet accepted into banking with signature verification, dedup, or sanitization effectively skipped, so an unauthorized or malformed transaction reaches execution.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_577c78d3-75f8-494e-b1c9-7f79d3180dac?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: syscalls/gen-syscall-list/src/main.rs -> Scope: Critical. An unprivileged attacker can get a packet accepted into banking with signature verification, dedup, or sanitization effectively skipped, so an unauthorized or malformed transaction reaches execution.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_a432b6d0-9be7-436a-b5e1-ceff769d084b?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: syscalls/src/cpi.rs -> Scope: Critical. An unprivileged attacker can get a packet accepted into banking with signature verification, dedup, or sanitization effectively skipped, so an unauthorized or malformed transaction reaches execution.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_e6b5f815-95e1-4895-9a3b-65c1f2ab3f17?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: syscalls/src/lib.rs -> Scope: Critical. An unprivileged attacker can get a packet accepted into banking with signature verification, dedup, or sanitization effectively skipped, so an unauthorized or malformed transaction reaches execution.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_1e8792c0-7a3b-40fd-a535-9c73947187a8?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: syscalls/src/logging.rs -> Scope: Critical. An unprivileged attacker can get a packet accepted into banking with signature verification, dedup, or sanitization effectively skipped, so an unauthorized or malformed transaction reaches execution.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_eed1aa48-78d0-4a94-8b1f-7727b79bea3d?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: syscalls/src/mem_ops.rs -> Scope: Critical. An unprivileged attacker can get a packet accepted into banking with signature verification, dedup, or sanitization effectively skipped, so an unauthorized or malformed transaction reaches execution.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_bc7a359e-e496-4a68-ab94-fa2878701ae3?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: syscalls/src/sysvar.rs -> Scope: Critical. An unprivileged attacker can get a packet accepted into banking with signature verification, dedup, or sanitization effectively skipped, so an unauthorized or malformed transaction reaches execution.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_73fcdeab-aeec-4b6d-ae11-5bc8b34d66db?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: transaction-context/src/instruction.rs -> Scope: Critical. An unprivileged attacker can get a packet accepted into banking with signature verification, dedup, or sanitization effectively skipped, so an unauthorized or malformed transaction reaches execution.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_177fa47a-ff87-4b86-9fad-d2102245db24?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: transaction-context/src/instruction_accounts.rs -> Scope: Critical. An unprivileged attacker can get a packet accepted into banking with signature verification, dedup, or sanitization effectively skipped, so an unauthorized or malformed transaction reaches execution.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_8a0f7277-08ec-4103-9f1c-3d8e8407c295?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: transaction-context/src/lib.rs -> Scope: Critical. An unprivileged attacker can get a packet accepted into banking with signature verification, dedup, or sanitization effectively skipped, so an unauthorized or malformed transaction reaches execution.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_71ceeb6f-572a-4627-bda3-2dd53c3fac97?mode=deep",
+    "questions_generated": false
+  }
+]
