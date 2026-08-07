@@ -1,0 +1,1 @@
+[File: streamer/src/nonblocking/connection_rate_limiter.rs -> Function: ConnectionRateLimiter::is_allowed/register_connection] [Scope: per-IP limit bypass] Since is_allowed() returns true for any IP with no prior record (\
