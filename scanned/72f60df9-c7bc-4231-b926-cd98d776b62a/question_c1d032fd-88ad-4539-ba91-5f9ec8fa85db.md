@@ -1,1 +1,0 @@
-[File: scheduler_metrics.rs -> Scope: Critical] [Function: InFlightTracker::complete_batch panic path invoked from SchedulerController::run via Scheduler::receive_completed] Can an unprivileged attacker who crafts packets that get scheduled and then times out or is retried in a way that produces a duplicate/unexpected TransactionBatchId cause complete_batch's `panic!(\
