@@ -1,1 +1,0 @@
-[File: 'bucket_map/src/index_entry.rs' -> Scope: High] [Function: MultipleSlots::set_storage_offset / PackedStorage::set_offset_checked] Can an unprivileged attacker craft transaction traffic that drives a Pubkey's slot list past the 7-byte (56-bit) storage-offset boundary, causing `set_storage_offset`'s `.expect(\
