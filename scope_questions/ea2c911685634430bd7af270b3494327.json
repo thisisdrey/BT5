@@ -1,0 +1,152 @@
+[
+  {
+    "question": "'File Name: poh/src/poh_controller.rs -> Scope: High. An unprivileged attacker can craft transaction batches that permanently strand or silently drop other users' fee-paying transactions through lock conflicts, priority handling, or buffer eviction.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_2cb4193a-d112-49c2-8037-0016abf3a02a?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: poh/src/poh_recorder.rs -> Scope: High. An unprivileged attacker can craft transaction batches that permanently strand or silently drop other users' fee-paying transactions through lock conflicts, priority handling, or buffer eviction.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_8f2ecd67-eb87-41b5-b419-3b2be79fa575?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: poh/src/poh_service.rs -> Scope: High. An unprivileged attacker can craft transaction batches that permanently strand or silently drop other users' fee-paying transactions through lock conflicts, priority handling, or buffer eviction.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_0432d501-7a88-49df-97d4-ceb67f063a7f?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: poh/src/record_channels.rs -> Scope: High. An unprivileged attacker can craft transaction batches that permanently strand or silently drop other users' fee-paying transactions through lock conflicts, priority handling, or buffer eviction.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_d02b1ef5-28ac-4866-9a2c-c94680858725?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: poh/src/transaction_recorder.rs -> Scope: High. An unprivileged attacker can craft transaction batches that permanently strand or silently drop other users' fee-paying transactions through lock conflicts, priority handling, or buffer eviction.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_d66f4812-f419-45ac-a1e3-ab66bf764053?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: quic-client/src/lib.rs -> Scope: High. An unprivileged attacker can craft transaction batches that permanently strand or silently drop other users' fee-paying transactions through lock conflicts, priority handling, or buffer eviction.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_88d3ccb4-1a03-467e-8d3c-2c958401d3f9?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: quic-client/src/nonblocking/mod.rs -> Scope: High. An unprivileged attacker can craft transaction batches that permanently strand or silently drop other users' fee-paying transactions through lock conflicts, priority handling, or buffer eviction.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_df7d4335-68fc-4435-b7f3-34fb4dbb8e0e?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: quic-client/src/nonblocking/quic_client.rs -> Scope: High. An unprivileged attacker can craft transaction batches that permanently strand or silently drop other users' fee-paying transactions through lock conflicts, priority handling, or buffer eviction.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_25071f09-6ec3-4277-8407-0f8cc1c23887?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: quic-client/src/quic_client.rs -> Scope: High. An unprivileged attacker can craft transaction batches that permanently strand or silently drop other users' fee-paying transactions through lock conflicts, priority handling, or buffer eviction.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_acbff08e-732c-4b6f-a1f6-4c06f2630517?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: scheduling-utils/src/error.rs -> Scope: High. An unprivileged attacker can craft transaction batches that permanently strand or silently drop other users' fee-paying transactions through lock conflicts, priority handling, or buffer eviction.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_c2184e0f-8eee-453e-b818-172e11c73f18?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: scheduling-utils/src/lib.rs -> Scope: High. An unprivileged attacker can craft transaction batches that permanently strand or silently drop other users' fee-paying transactions through lock conflicts, priority handling, or buffer eviction.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_b1b127e4-4364-402c-a24e-88eb6a08b584?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: scheduling-utils/src/pubkeys_ptr.rs -> Scope: High. An unprivileged attacker can craft transaction batches that permanently strand or silently drop other users' fee-paying transactions through lock conflicts, priority handling, or buffer eviction.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_9c13bc8e-9330-4b12-a134-9f8b312a121a?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: scheduling-utils/src/responses_region.rs -> Scope: High. An unprivileged attacker can craft transaction batches that permanently strand or silently drop other users' fee-paying transactions through lock conflicts, priority handling, or buffer eviction.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_aa81de09-5a4b-436e-bfe0-6e111c41f72c?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: scheduling-utils/src/thread_aware_account_locks.rs -> Scope: High. An unprivileged attacker can craft transaction batches that permanently strand or silently drop other users' fee-paying transactions through lock conflicts, priority handling, or buffer eviction.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_0a70c45e-be9e-4472-a268-028807e2eca6?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: scheduling-utils/src/transaction_ptr.rs -> Scope: High. An unprivileged attacker can craft transaction batches that permanently strand or silently drop other users' fee-paying transactions through lock conflicts, priority handling, or buffer eviction.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_77c39b05-7efe-4b1c-8c9b-4b552907ffa4?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: streamer/src/evicting_sender.rs -> Scope: High. An unprivileged attacker can craft transaction batches that permanently strand or silently drop other users' fee-paying transactions through lock conflicts, priority handling, or buffer eviction.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_4053777e-0668-485e-b97d-19899dff2e23?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: streamer/src/lib.rs -> Scope: High. An unprivileged attacker can craft transaction batches that permanently strand or silently drop other users' fee-paying transactions through lock conflicts, priority handling, or buffer eviction.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_1264555a-e774-4b72-82c6-f06416752b7a?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: streamer/src/msghdr.rs -> Scope: High. An unprivileged attacker can craft transaction batches that permanently strand or silently drop other users' fee-paying transactions through lock conflicts, priority handling, or buffer eviction.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_04935b30-25cf-4b47-8206-d50eed2222da?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: streamer/src/nonblocking/connection_rate_limiter.rs -> Scope: High. An unprivileged attacker can craft transaction batches that permanently strand or silently drop other users' fee-paying transactions through lock conflicts, priority handling, or buffer eviction.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_a4398756-9ce2-46f7-a816-79e00b7e1853?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: streamer/src/nonblocking/mod.rs -> Scope: High. An unprivileged attacker can craft transaction batches that permanently strand or silently drop other users' fee-paying transactions through lock conflicts, priority handling, or buffer eviction.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_dbf96067-48ff-4966-a26b-794564e9a271?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: streamer/src/nonblocking/qos.rs -> Scope: High. An unprivileged attacker can craft transaction batches that permanently strand or silently drop other users' fee-paying transactions through lock conflicts, priority handling, or buffer eviction.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_0146361a-239a-4ceb-a3b8-62cc5c8f65dc?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: streamer/src/nonblocking/quic.rs -> Scope: High. An unprivileged attacker can craft transaction batches that permanently strand or silently drop other users' fee-paying transactions through lock conflicts, priority handling, or buffer eviction.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_7674befe-da8e-4a3f-8501-63cdb4921c32?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: streamer/src/nonblocking/simple_qos.rs -> Scope: High. An unprivileged attacker can craft transaction batches that permanently strand or silently drop other users' fee-paying transactions through lock conflicts, priority handling, or buffer eviction.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_79f755b0-bb42-4d57-9c48-4474abb0f559?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: streamer/src/nonblocking/stream_throttle.rs -> Scope: High. An unprivileged attacker can craft transaction batches that permanently strand or silently drop other users' fee-paying transactions through lock conflicts, priority handling, or buffer eviction.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_dd5092c3-215b-4eec-93b0-9d5f0a5a0c9e?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: streamer/src/nonblocking/swqos.rs -> Scope: High. An unprivileged attacker can craft transaction batches that permanently strand or silently drop other users' fee-paying transactions through lock conflicts, priority handling, or buffer eviction.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_f7813e26-d5a6-478b-ac25-c344179b52c2?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: streamer/src/packet.rs -> Scope: High. An unprivileged attacker can craft transaction batches that permanently strand or silently drop other users' fee-paying transactions through lock conflicts, priority handling, or buffer eviction.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_6e3dfdcd-9ede-44b7-892e-8880f36099be?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: streamer/src/quic.rs -> Scope: High. An unprivileged attacker can craft transaction batches that permanently strand or silently drop other users' fee-paying transactions through lock conflicts, priority handling, or buffer eviction.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_a1bde77c-69c1-466a-97dc-32f0e23f24fe?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: streamer/src/quic_socket.rs -> Scope: High. An unprivileged attacker can craft transaction batches that permanently strand or silently drop other users' fee-paying transactions through lock conflicts, priority handling, or buffer eviction.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_eaaa8b48-391d-4123-93f8-00b91b6a5e20?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: streamer/src/recvmmsg.rs -> Scope: High. An unprivileged attacker can craft transaction batches that permanently strand or silently drop other users' fee-paying transactions through lock conflicts, priority handling, or buffer eviction.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_ba6f7891-ae47-471b-954b-d0d5a8e6bf49?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: streamer/src/sendmmsg.rs -> Scope: High. An unprivileged attacker can craft transaction batches that permanently strand or silently drop other users' fee-paying transactions through lock conflicts, priority handling, or buffer eviction.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_dc9f1b92-9ee7-4cf3-b588-930512da4b9d?mode=deep",
+    "questions_generated": false
+  }
+]
