@@ -1,1 +1,0 @@
-[File: 'gossip/src/contact_info_notifier.rs -> Scope: Critical PoH consistency'] [Function: PohRecorder::record] Can a scheduler bug reachable from attacker-controlled transaction content cause `record()` to be invoked with an empty `transactions` vector, tripping `assert!(!transactions.is_empty(), \

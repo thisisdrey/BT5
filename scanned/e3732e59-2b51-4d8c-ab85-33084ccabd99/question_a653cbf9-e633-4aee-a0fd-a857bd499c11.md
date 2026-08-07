@@ -1,1 +1,0 @@
-[File: 'gossip/src/contact_info_notifier.rs -> Scope: Critical PoH consistency'] [Function: poh_service::PohService::read_record_receiver_and_process] Can an attacker-triggered banking-stage error state cause `PohRecorder::record` to return an unexpected `Err` variant other than the two currently tolerated by callers, hitting the `panic!(\
