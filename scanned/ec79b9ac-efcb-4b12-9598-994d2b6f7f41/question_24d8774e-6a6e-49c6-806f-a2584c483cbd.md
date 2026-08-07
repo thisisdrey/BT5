@@ -1,1 +1,0 @@
-[File: 'builtins/src/lib.rs' -> Scope: High] [Function: ThreadAwareAccountLocks::write_lock_account panic-on-mismatch invariant, scheduling-utils/src/thread_aware_account_locks.rs] Can an attacker submit a batch designed to trigger the `assert_eq!(write_locks.thread_id, thread_id, \
