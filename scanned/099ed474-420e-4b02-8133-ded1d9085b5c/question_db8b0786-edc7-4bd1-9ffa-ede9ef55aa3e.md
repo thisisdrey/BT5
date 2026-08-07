@@ -1,0 +1,1 @@
+[File: program-runtime/src/loaded_programs.rs::ProgramCache::assign_program interacting with program_cache_entry.rs::ProgramCacheEntryType transitions] [Function target] Can an attacker who cannot deploy or upgrade programs still trigger the `debug_assert!(false, \
