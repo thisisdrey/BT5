@@ -1,1 +1,0 @@
-[File: bucket_map/src/index_entry.rs -> Scope: Critical DoS] [Function: IndexEntryPlaceInBucket::read_value] Can crafted transactions that manipulate account ref-counts/slot-list sizes reach a state where `get_slot_count_enum` returns an unexpected tag causing `read_value`'s `panic!(\
