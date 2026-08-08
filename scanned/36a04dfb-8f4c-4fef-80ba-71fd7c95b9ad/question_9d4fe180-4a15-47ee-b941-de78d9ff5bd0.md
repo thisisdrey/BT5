@@ -1,1 +1,0 @@
-[File: core/src/banking_stage/transaction_scheduler/scheduler_common.rs -> Scope: High] [Function: SchedulingCommon::try_receive_completed / complete_batch] Can a crafted `FinishedConsumeWork` with `retryable_indexes` that are unsorted or reference an out-of-range index trigger the `debug_assert!`/panic path (
