@@ -1,1 +1,0 @@
-[File: 'tpu-client-next/src/send_transaction_stats.rs -> Scope: High'] [Function: ConnectionWorker Drop for ConnectionState::Active] Can an unprivileged attacker force high-frequency Active->Retry->Active transitions (e.g. by accepting then abruptly resetting connections in a tight loop) such that ConnectionState::drop's connection.close(0u32.into(), b\
