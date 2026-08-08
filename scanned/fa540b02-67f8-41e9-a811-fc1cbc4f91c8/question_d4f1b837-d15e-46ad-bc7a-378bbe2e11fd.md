@@ -1,1 +1,0 @@
-[File: 'unified-scheduler-logic/src/lib.rs' -> Scope: High.'] [Function: TaskInner::is_higher_priority] Can an unprivileged attacker submit a transaction whose task_id exactly equals an already-active victim task's task_id (e.g. via task_id wraparound or upstream banking-stage assignment collision), causing is_higher_priority()'s Ordering::Equal arm to panic!(\
