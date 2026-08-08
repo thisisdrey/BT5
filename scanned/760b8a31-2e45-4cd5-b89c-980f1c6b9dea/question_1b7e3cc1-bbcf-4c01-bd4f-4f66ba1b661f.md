@@ -1,1 +1,0 @@
-[File: 'File Name: builtins-default-costs/src/lib.rs -> Scope: Critical.'] [Function: BuiltinProgramsFilter::get_program_kind (FILTER_SIZE indexing)] Can an unprivileged attacker craft a sanitized transaction where `instruction.program_id_index` values collide or exceed FILTER_SIZE (u8::MAX+1) causing the `.get_mut(index).expect(\
