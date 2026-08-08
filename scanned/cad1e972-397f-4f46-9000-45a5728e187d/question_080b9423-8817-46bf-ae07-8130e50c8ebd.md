@@ -1,1 +1,0 @@
-[File: 'tpu-client-next/src/connection_worker.rs' -> Scope: Critical invalid-block risk via scheduling/lock/PoH mismatch] [Function: ConnectionWorker::run / ConnectionState::Drop] Can an unprivileged attacker who is the TPU peer deliberately delay acknowledging `connection.close(0u32.into(), b\
