@@ -1,1 +1,0 @@
-[File: 'ledger/src/blockstore_db.rs' -> Scope: High] [Function: Rocks::cf_handle] Can a malformed or version-skewed but sigverify-passing transaction cause a code path to call Rocks::cf_handle with a column-family name that does not exist, triggering the `.expect(
