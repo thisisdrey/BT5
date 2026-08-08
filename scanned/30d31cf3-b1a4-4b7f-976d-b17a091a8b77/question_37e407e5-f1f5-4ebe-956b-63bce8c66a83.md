@@ -1,1 +1,0 @@
-[File: poh/src/poh_recorder.rs] [Function: PohRecorder::record] Can an attacker-controlled transaction mix cause record() to be invoked with an empty `transactions` Vec via a scheduler path that filters all transactions out after already committing to calling record (violating `assert!(!transactions.is_empty(), \
