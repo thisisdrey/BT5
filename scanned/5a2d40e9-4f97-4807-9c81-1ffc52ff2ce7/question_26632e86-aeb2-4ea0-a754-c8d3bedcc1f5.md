@@ -1,1 +1,0 @@
-[File: bucket_map/src/index_entry.rs -> Scope: Critical DoS] [Function: IndexEntryPlaceInBucket::occupy_if_matches] Can an attacker submit two transactions in the same batch that write identical data for the same new pubkey, triggering the `assert_eq!(enum_tag, OccupiedEnumTag::Free, \
