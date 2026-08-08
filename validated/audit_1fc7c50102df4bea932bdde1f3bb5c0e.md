@@ -1,0 +1,24 @@
+### Title
+Shared-IP connection-table key allows single unstaked attacker to exhaust `max_connections_per_unstaked_peer` and lock out all legitimate co-NAT clients - ([File: streamer/src/nonblocking/quic.rs])
+
+### Summary
+`ConnectionTableKey::new` falls back to `ConnectionTableKey::IP(ip)` whenever no client pubkey is supplied, so all unstaked connections originating from the same source IP (e.g., behind a shared NAT/proxy) are aggregated under one table entry and one shared `max_connections_per_peer` cap. An unstaked attacker sharing that IP can open exactly `max_connections_per_unstaked_peer` connections to saturate this single key, after which `ConnectionTable::try_add_connection` unconditionally rejects any further connection under the same key — including from unrelated, legitimate co-tenant clients on that IP.
+
+### Finding Description
+`ConnectionTableKey::new(ip, maybe_pubkey)` at streamer/src/nonblocking/quic.rs:922-928 collapses to `ConnectionTableKey::IP(ip)` whenever `maybe_pubkey` is `None`, which is the case for unstaked/anonymous clients that do not present a verifiable pubkey. `ConnectionTable::try_add_connection` (streamer/src/nonblocking/quic.rs:1008-1050) then keys its internal `IndexMap<ConnectionTableKey, Vec<ConnectionEntry<S>>>` by this value and enforces `max_connections_per_peer` strictly per key: `connection_entry.len().checked_add(1).map(|c| c <= max_connections_per_peer)`. Because the key is the raw source `IpAddr` and not per-connection/per-client, all unstaked connections sharing that IP — whether from the attacker or from unrelated legitimate clients behind the same NAT/proxy — compete for the same fixed-size slot bucket. Once the attacker fills the bucket to `max_connections_per_peer`, the `else` branch closes any subsequent connection with `CONNECTION_CLOSE_CODE_TOO_MANY` (streamer/src/nonblocking/quic.rs:1043-1048), regardless of whether the rejected connection belongs to the attacker or an innocent co-tenant. There is no mechanism visible in this table logic that distinguishes tenants sharing an IP or that rate-limits per-flow/per-TLS-identity rather than per raw IP; the only mitigations present (`prune_oldest`, `prune_random`) operate at the whole-table level to make room for new *staked* peers, not to protect fairness among unstaked co-tenants of the same IP.
+
+### Impact Explanation
+This is a denial-of-service against the leader's TPU ingress path: any unstaked client sharing a public IP/NAT/proxy with the attacker (common in corporate networks, cloud NAT gateways, VPNs, and CGNAT residential ISPs) can be permanently denied a TPU connection while the attacker holds its slots open, matching the "denial of TPU access" scoped impact described in the question. It does not cause node panics, memory exhaustion, consensus/state issues, or fee evasion — the impact is confined to unstaked-client connection admission.
+
+### Likelihood Explanation
+The precondition (attacker and victims sharing a literal source IP) is realistic in real-world NAT/proxy topologies and requires no privileged access — the attacker only needs to be an unstaked remote client opening ordinary QUIC connections without presenting a pubkey. The attack is trivially repeatable: reopen/keep-alive `max_connections_per_unstaked_peer` connections indefinitely.
+
+### Recommendation
+Do not use raw IP alone as the sole fairness key for unstaked connection admission when no pubkey is available; consider deriving the key from a stronger tuple (e.g., IP + client-presented ephemeral TLS certificate/connection ID) so that unrelated clients sharing an IP are not aggregated into one slot bucket, or apply a separate lower per-connection sub-limit combined with global unstaked capacity/prune_random eviction that already exists for the whole table so an attacker cannot indefinitely hold all slots for a shared IP.
+
+### Proof of Concept
+Integration test plan against `ConnectionTable::try_add_connection` (unit-testable directly, no network needed):
+1. Construct a `ConnectionTable` with `ConnectionTableType::Unstaked` and a fixed `max_connections_per_peer` (e.g., 4).
+2. Simulate "attacker": repeatedly call `try_add_connection` with `key = ConnectionTableKey::new(shared_ip, None)` until it returns `Some` exactly `max_connections_per_peer` times, confirming the bucket for `ConnectionTableKey::IP(shared_ip)` is full.
+3. Simulate "victim": call `try_add_connection` again with the same `key = ConnectionTableKey::IP(shared_ip)` (simulating a distinct legitimate client behind the same NAT) and assert the call returns `None` and that the passed-in `Connection` (if using a real `Connection` mock) is closed with `CONNECTION_CLOSE_CODE_TOO_MANY`.
+4. Assert this rejection happens unconditionally, i.e., independent of the victim's identity, demonstrating that a single attacker can deny all co-tenant unstaked clients sharing that IP.
