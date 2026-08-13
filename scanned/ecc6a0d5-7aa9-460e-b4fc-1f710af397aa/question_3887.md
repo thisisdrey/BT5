@@ -1,0 +1,13 @@
+# Q3887: lending_account_liquidate: liquidation start/end pair can settle inconsistent state [a-repeated-partial-liquidation-investigation] [phase-replay]
+
+## Question
+Can an unprivileged attacker use `lending_account_liquidate` with a repeated partial-liquidation investigation sequence so `lending_account_liquidate` leaves liquidation state inconsistent between start and end phases, violating `liquidation must repay real debt and seize only the allowed value from the correct victim balances` and causing `Critical: direct theft from victims or solvency loss via under-repayment`? Focus specifically on replay or reorder of multi-phase liquidation state after one successful-looking intermediate step.
+
+## Target
+- File/function: `programs/marginfi/src/instructions/marginfi_account/liquidate.rs` / `lending_account_liquidate`
+- Entrypoint: `lending_account_liquidate`
+- Attacker controls: a repeated partial-liquidation investigation sequence
+- Exploit idea: Probe whether the multi-step liquidation state machine can be entered, exited, or replayed from mismatched account/bank context. Focus specifically on replay or reorder of multi-phase liquidation state after one successful-looking intermediate step.
+- Invariant to test: liquidation must repay real debt and seize only the allowed value from the correct victim balances
+- Expected Immunefi impact: Critical: direct theft from victims or solvency loss via under-repayment
+- Fast validation: Exercise start/end under the controlled mismatch and assert the account cannot exit with partially settled debt or duplicated seized assets. Execute start/end phases with replay and reorder attempts and assert no extra seize, skipped repay, or stuck flag survives.

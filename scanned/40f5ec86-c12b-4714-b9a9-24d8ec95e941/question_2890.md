@@ -1,0 +1,13 @@
+# Q2890: lending_account_withdraw: share minting vs health check desync [a-user-with-several-active] [cycle]
+
+## Question
+Can an unprivileged attacker enter through `lending_account_withdraw` and make `lending_account_withdraw` observe a user with several active balances and one recently closed slot so that share minting/burning and health enforcement are evaluated from inconsistent state, breaking `withdraw must release only value actually owned by the caller while preserving fresh post-withdraw health and bank solvency` and leading to `Critical: direct theft or creation of bad debt via over-withdrawal`? Focus specifically on whether the attacker can repeat the same path in a short deterministic cycle to compound a one-step drift.
+
+## Target
+- File/function: `programs/marginfi/src/instructions/marginfi_account/withdraw.rs` / `lending_account_withdraw`
+- Entrypoint: `lending_account_withdraw`
+- Attacker controls: a user with several active balances and one recently closed slot
+- Exploit idea: Drive pre-state checks and post-state share changes through a boundary case so the instruction accepts a state transition that should fail once all balances are recomputed consistently. Focus specifically on whether the attacker can repeat the same path in a short deterministic cycle to compound a one-step drift.
+- Invariant to test: withdraw must release only value actually owned by the caller while preserving fresh post-withdraw health and bank solvency
+- Expected Immunefi impact: Critical: direct theft or creation of bad debt via over-withdrawal
+- Fast validation: Build an integration test around `lending_account_withdraw` with the controlled state, then assert that accepted execution leaves post-instruction health negative or value moved beyond the allowed amount. Run the target path in a short deposit/withdraw or borrow/repay style loop and assert no monotonic gain appears.

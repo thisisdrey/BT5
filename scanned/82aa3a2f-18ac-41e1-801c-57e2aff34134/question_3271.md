@@ -1,0 +1,13 @@
+# Q3271: lending_account_repay: state updated before the transfer outcome is final [a-repay-after-permissionless-interest] [cache-order]
+
+## Question
+Can an unprivileged attacker make `lending_account_repay` reach `lending_account_repay` with a repay after permissionless interest accrual changed bank totals such that accounting mutates before the real token/value transfer is conclusively enforced, breaking `repay must burn exactly the debt it settles and cannot erase liabilities without equivalent economic repayment` and causing `High: understated debt enabling later unauthorized withdrawal or protocol loss`? Focus specifically on whether one earlier public instruction in the same transaction can change a cache, flag, or active-balance view before settlement.
+
+## Target
+- File/function: `programs/marginfi/src/instructions/marginfi_account/repay.rs` / `lending_account_repay`
+- Entrypoint: `lending_account_repay`
+- Attacker controls: a repay after permissionless interest accrual changed bank totals
+- Exploit idea: Check whether partial state mutation can survive a later transfer/accounting edge and leave the user with value or debt inconsistent with actual token movement. Focus specifically on whether one earlier public instruction in the same transaction can change a cache, flag, or active-balance view before settlement.
+- Invariant to test: repay must burn exactly the debt it settles and cannot erase liabilities without equivalent economic repayment
+- Expected Immunefi impact: High: understated debt enabling later unauthorized withdrawal or protocol loss
+- Fast validation: Inject the controlled token/account conditions and assert that any downstream failure rolls back all shares, caches, and flags atomically. Add an adversarial same-transaction precursor that changes dependent cache or balance state before the target call.

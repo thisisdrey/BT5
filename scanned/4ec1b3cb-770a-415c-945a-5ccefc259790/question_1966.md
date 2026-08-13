@@ -1,0 +1,13 @@
+# Q1966: load_kamino_reserve: oracle account selection changes the priced object [a-pulse-where-the-group] [adapter-mismatch]
+
+## Question
+Can an unprivileged attacker supply a pulse where the group/bank binding is valid but external reserve lineage is not to `lending_pool_pulse_bank_price_cache` so `load_kamino_reserve` prices the wrong object or wrong price source while mutating state for another, violating `external reserve or market state loaded for pricing must be exactly the bank-configured one and fresh enough for safe cache writes` and causing `High: exploitable cached misvaluation on a live integration bank`? Focus specifically on integration-backed price adapters where reserve/market and oracle contexts can be cross-wired.
+
+## Target
+- File/function: `programs/marginfi/src/state/price.rs` / `load_kamino_reserve`
+- Entrypoint: `lending_pool_pulse_bank_price_cache`
+- Attacker controls: a pulse where the group/bank binding is valid but external reserve lineage is not
+- Exploit idea: Attack remaining-account binding, oracle-key checks, and asset-tag routing so price lookup cannot be redirected by caller-controlled account order. Focus specifically on integration-backed price adapters where reserve/market and oracle contexts can be cross-wired.
+- Invariant to test: external reserve or market state loaded for pricing must be exactly the bank-configured one and fresh enough for safe cache writes
+- Expected Immunefi impact: High: exploitable cached misvaluation on a live integration bank
+- Fast validation: Provide multiple plausible oracle contexts and assert the path rejects unless the selected price source matches the validated bank configuration exactly. Provide two plausible adapter contexts and assert the price path rejects every mix-and-match combination.

@@ -1,0 +1,13 @@
+# Q2008: load_kamino_reserve: price-type routing picks a safer-looking but wrong value [missing-or-reordered-auxiliary-accounts] [adapter-mismatch]
+
+## Question
+Can an unprivileged attacker use `lending_pool_pulse_bank_price_cache` with missing or reordered auxiliary accounts for the adapter branch so `load_kamino_reserve` routes to the wrong price type for the mutation being performed, violating `external reserve or market state loaded for pricing must be exactly the bank-configured one and fresh enough for safe cache writes` and leading to `High: exploitable cached misvaluation on a live integration bank`? Focus specifically on integration-backed price adapters where reserve/market and oracle contexts can be cross-wired.
+
+## Target
+- File/function: `programs/marginfi/src/state/price.rs` / `load_kamino_reserve`
+- Entrypoint: `lending_pool_pulse_bank_price_cache`
+- Attacker controls: missing or reordered auxiliary accounts for the adapter branch
+- Exploit idea: Audit distinctions like spot vs TWAP vs cache vs confidence-ignored pricing to ensure each value-moving path uses the intended conservative source. Focus specifically on integration-backed price adapters where reserve/market and oracle contexts can be cross-wired.
+- Invariant to test: external reserve or market state loaded for pricing must be exactly the bank-configured one and fresh enough for safe cache writes
+- Expected Immunefi impact: High: exploitable cached misvaluation on a live integration bank
+- Fast validation: Exercise paths where price-type choice matters economically and assert the selected type matches protocol design for that exact action. Provide two plausible adapter contexts and assert the price path rejects every mix-and-match combination.
