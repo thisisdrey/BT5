@@ -1,0 +1,152 @@
+[
+  {
+    "question": "'File Name: programs/marginfi/src/lib.rs -> Scope: Critical. An unprivileged user can create unbacked debt, bypass health or collateral checks, or corrupt share accounting so protocol solvency is reduced or bad debt is socialized incorrectly.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_fe302b82-4de0-44cd-a325-c300ccdbd7f6?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/constants.rs -> Scope: Critical. An unprivileged user can create unbacked debt, bypass health or collateral checks, or corrupt share accounting so protocol solvency is reduced or bad debt is socialized incorrectly.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_46f9d8cc-983b-4af4-9e44-77f25e2b9915?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/errors.rs -> Scope: Critical. An unprivileged user can create unbacked debt, bypass health or collateral checks, or corrupt share accounting so protocol solvency is reduced or bad debt is socialized incorrectly.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_0bad2dc2-5a7c-4d9d-80f4-8e571c6e8075?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/events.rs -> Scope: Critical. An unprivileged user can create unbacked debt, bypass health or collateral checks, or corrupt share accounting so protocol solvency is reduced or bad debt is socialized incorrectly.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_8ca9f905-1314-4950-9cdf-c52eef1d6b2b?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/ix_utils.rs -> Scope: Critical. An unprivileged user can create unbacked debt, bypass health or collateral checks, or corrupt share accounting so protocol solvency is reduced or bad debt is socialized incorrectly.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_bff1ed08-4628-4bdc-8269-4ef905162a7e?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/macros.rs -> Scope: Critical. An unprivileged user can create unbacked debt, bypass health or collateral checks, or corrupt share accounting so protocol solvency is reduced or bad debt is socialized incorrectly.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_bb97a108-e341-4970-beb5-5c7872a73291?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/prelude.rs -> Scope: Critical. An unprivileged user can create unbacked debt, bypass health or collateral checks, or corrupt share accounting so protocol solvency is reduced or bad debt is socialized incorrectly.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_fd4826e8-e74f-4e9c-b792-2752dfcae2d4?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/state/bank.rs -> Scope: Critical. An unprivileged user can create unbacked debt, bypass health or collateral checks, or corrupt share accounting so protocol solvency is reduced or bad debt is socialized incorrectly.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_05828d10-3e70-4ecb-bd71-e6a1b9b40afa?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/state/bank_cache.rs -> Scope: Critical. An unprivileged user can create unbacked debt, bypass health or collateral checks, or corrupt share accounting so protocol solvency is reduced or bad debt is socialized incorrectly.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_4990a644-2e79-49aa-8f0c-4a6fbf173b96?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/state/bank_config.rs -> Scope: Critical. An unprivileged user can create unbacked debt, bypass health or collateral checks, or corrupt share accounting so protocol solvency is reduced or bad debt is socialized incorrectly.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_89eee0dd-1a5b-46d9-b3e6-f104453292d2?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/state/emode.rs -> Scope: Critical. An unprivileged user can create unbacked debt, bypass health or collateral checks, or corrupt share accounting so protocol solvency is reduced or bad debt is socialized incorrectly.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_52bd5bcb-27ae-45b5-8f9c-4dd496281a44?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/state/fee_state.rs -> Scope: Critical. An unprivileged user can create unbacked debt, bypass health or collateral checks, or corrupt share accounting so protocol solvency is reduced or bad debt is socialized incorrectly.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_43ab0b18-f5d7-41ef-af62-2aa81827092b?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/state/interest_rate.rs -> Scope: Critical. An unprivileged user can create unbacked debt, bypass health or collateral checks, or corrupt share accounting so protocol solvency is reduced or bad debt is socialized incorrectly.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_a2922e48-f97c-426a-9755-de93670b604d?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/state/liquidation_record.rs -> Scope: Critical. An unprivileged user can create unbacked debt, bypass health or collateral checks, or corrupt share accounting so protocol solvency is reduced or bad debt is socialized incorrectly.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_fa5c2708-feaa-4a01-a015-be1ae9e4f47a?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/state/marginfi_account.rs -> Scope: Critical. An unprivileged user can create unbacked debt, bypass health or collateral checks, or corrupt share accounting so protocol solvency is reduced or bad debt is socialized incorrectly.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_0d9b2395-0d87-4ba3-8082-fdcf9634df12?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/state/marginfi_group.rs -> Scope: Critical. An unprivileged user can create unbacked debt, bypass health or collateral checks, or corrupt share accounting so protocol solvency is reduced or bad debt is socialized incorrectly.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_f93f6596-2ef1-43a0-80c7-1e03ff533b2e?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/state/mod.rs -> Scope: Critical. An unprivileged user can create unbacked debt, bypass health or collateral checks, or corrupt share accounting so protocol solvency is reduced or bad debt is socialized incorrectly.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_2e691ca6-3b5a-4aea-b850-d20fc94c6fcc?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/state/order.rs -> Scope: Critical. An unprivileged user can create unbacked debt, bypass health or collateral checks, or corrupt share accounting so protocol solvency is reduced or bad debt is socialized incorrectly.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_60301462-cd30-43af-9a10-339cd0398fa6?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/state/panic_state.rs -> Scope: Critical. An unprivileged user can create unbacked debt, bypass health or collateral checks, or corrupt share accounting so protocol solvency is reduced or bad debt is socialized incorrectly.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_95e295b6-f5e8-4c5b-829d-a465106eb97f?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/state/price.rs -> Scope: Critical. An unprivileged user can create unbacked debt, bypass health or collateral checks, or corrupt share accounting so protocol solvency is reduced or bad debt is socialized incorrectly.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_4b4752e8-4b48-4fdc-ac22-42956d340182?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/state/rate_limiter.rs -> Scope: Critical. An unprivileged user can create unbacked debt, bypass health or collateral checks, or corrupt share accounting so protocol solvency is reduced or bad debt is socialized incorrectly.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_9e3cdef9-3cd5-4f8b-bc28-eeb0502489bf?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/state/staked_settings.rs -> Scope: Critical. An unprivileged user can create unbacked debt, bypass health or collateral checks, or corrupt share accounting so protocol solvency is reduced or bad debt is socialized incorrectly.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_87e3493d-ec5a-4436-820e-ac3044b00d8c?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/instructions/mod.rs -> Scope: Critical. An unprivileged user can create unbacked debt, bypass health or collateral checks, or corrupt share accounting so protocol solvency is reduced or bad debt is socialized incorrectly.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_4657dd9a-5692-491f-bbd1-7bfa149dbbb2?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/instructions/marginfi_account/admin_close.rs -> Scope: Critical. An unprivileged user can create unbacked debt, bypass health or collateral checks, or corrupt share accounting so protocol solvency is reduced or bad debt is socialized incorrectly.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_e158f95f-7f12-48fe-9179-e09918e19db8?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/instructions/marginfi_account/borrow.rs -> Scope: Critical. An unprivileged user can create unbacked debt, bypass health or collateral checks, or corrupt share accounting so protocol solvency is reduced or bad debt is socialized incorrectly.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_5ec0ad11-4bb8-450e-b9fd-787a2d1a2410?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/instructions/marginfi_account/close.rs -> Scope: Critical. An unprivileged user can create unbacked debt, bypass health or collateral checks, or corrupt share accounting so protocol solvency is reduced or bad debt is socialized incorrectly.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_978e6445-3eac-4427-a7c3-18149e7c82df?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/instructions/marginfi_account/close_balance.rs -> Scope: Critical. An unprivileged user can create unbacked debt, bypass health or collateral checks, or corrupt share accounting so protocol solvency is reduced or bad debt is socialized incorrectly.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_c3453be0-f5a2-4b5b-90e7-2d5329e27cbd?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/instructions/marginfi_account/close_liquid_record.rs -> Scope: Critical. An unprivileged user can create unbacked debt, bypass health or collateral checks, or corrupt share accounting so protocol solvency is reduced or bad debt is socialized incorrectly.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_5c57eb6c-a2f9-497b-8356-ba8cb10845f3?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/instructions/marginfi_account/deposit.rs -> Scope: Critical. An unprivileged user can create unbacked debt, bypass health or collateral checks, or corrupt share accounting so protocol solvency is reduced or bad debt is socialized incorrectly.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_1dfd12ba-99bd-40b5-b060-6d58ba37dd69?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/instructions/marginfi_account/emissions.rs -> Scope: Critical. An unprivileged user can create unbacked debt, bypass health or collateral checks, or corrupt share accounting so protocol solvency is reduced or bad debt is socialized incorrectly.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_2ce70937-07e8-4b6b-8732-37acb68c97c2?mode=deep",
+    "questions_generated": false
+  }
+]
