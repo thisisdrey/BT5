@@ -1,0 +1,112 @@
+[
+  {
+    "question": "'File Name: programs/marginfi/src/instructions/marginfi_account/flashloan.rs -> Scope: High. A flashloan, order, liquidation, interest-accrual, or fee-collection edge case lets an unprivileged user extract excess value, skip repayment, or leave bank and account state inconsistent.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_c9afc6c2-7575-451d-96e0-093f772d14cd?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/instructions/marginfi_account/freeze.rs -> Scope: High. A flashloan, order, liquidation, interest-accrual, or fee-collection edge case lets an unprivileged user extract excess value, skip repayment, or leave bank and account state inconsistent.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_81762293-029e-4e0d-98af-6a96215d24fe?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/instructions/marginfi_account/init_liquid_record.rs -> Scope: High. A flashloan, order, liquidation, interest-accrual, or fee-collection edge case lets an unprivileged user extract excess value, skip repayment, or leave bank and account state inconsistent.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_800ecbe2-eceb-4452-a51f-dfcab67f218e?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/instructions/marginfi_account/initialize.rs -> Scope: High. A flashloan, order, liquidation, interest-accrual, or fee-collection edge case lets an unprivileged user extract excess value, skip repayment, or leave bank and account state inconsistent.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_ba8b5abe-b563-4646-b50a-00d45379d438?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/instructions/marginfi_account/liquidate.rs -> Scope: High. A flashloan, order, liquidation, interest-accrual, or fee-collection edge case lets an unprivileged user extract excess value, skip repayment, or leave bank and account state inconsistent.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_50deaf7d-bfef-4e1e-81b6-389fa1269ce3?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/instructions/marginfi_account/liquidate_end.rs -> Scope: High. A flashloan, order, liquidation, interest-accrual, or fee-collection edge case lets an unprivileged user extract excess value, skip repayment, or leave bank and account state inconsistent.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_307eae09-bd22-430d-9ef5-c4a8aadf5f30?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/instructions/marginfi_account/liquidate_start.rs -> Scope: High. A flashloan, order, liquidation, interest-accrual, or fee-collection edge case lets an unprivileged user extract excess value, skip repayment, or leave bank and account state inconsistent.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_cbefa932-832c-4866-a9af-3f18b6b12e5b?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/instructions/marginfi_account/mod.rs -> Scope: High. A flashloan, order, liquidation, interest-accrual, or fee-collection edge case lets an unprivileged user extract excess value, skip repayment, or leave bank and account state inconsistent.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_9693c95d-9720-4f18-be38-94be3c03cb9a?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/instructions/marginfi_account/order.rs -> Scope: High. A flashloan, order, liquidation, interest-accrual, or fee-collection edge case lets an unprivileged user extract excess value, skip repayment, or leave bank and account state inconsistent.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_05becafb-d5cf-4d4d-af19-c38a64ab54f9?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/instructions/marginfi_account/pulse_health.rs -> Scope: High. A flashloan, order, liquidation, interest-accrual, or fee-collection edge case lets an unprivileged user extract excess value, skip repayment, or leave bank and account state inconsistent.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_39b02e21-fd7e-41a7-a119-52e512919366?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/instructions/marginfi_account/purge_delev_balance.rs -> Scope: High. A flashloan, order, liquidation, interest-accrual, or fee-collection edge case lets an unprivileged user extract excess value, skip repayment, or leave bank and account state inconsistent.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_6fb047b0-58ff-410f-b002-48b9b39e02c8?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/instructions/marginfi_account/repay.rs -> Scope: High. A flashloan, order, liquidation, interest-accrual, or fee-collection edge case lets an unprivileged user extract excess value, skip repayment, or leave bank and account state inconsistent.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_b48b9e8a-13a0-46b5-88d6-4a169af49140?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/instructions/marginfi_account/sync_indexer_flags.rs -> Scope: High. A flashloan, order, liquidation, interest-accrual, or fee-collection edge case lets an unprivileged user extract excess value, skip repayment, or leave bank and account state inconsistent.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_b39be199-cfb9-4d0e-9e07-e3cb92e32076?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/instructions/marginfi_account/transfer_account.rs -> Scope: High. A flashloan, order, liquidation, interest-accrual, or fee-collection edge case lets an unprivileged user extract excess value, skip repayment, or leave bank and account state inconsistent.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_f1e95567-38c9-43c7-8d6a-7fc77a54b7af?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/instructions/marginfi_account/withdraw.rs -> Scope: High. A flashloan, order, liquidation, interest-accrual, or fee-collection edge case lets an unprivileged user extract excess value, skip repayment, or leave bank and account state inconsistent.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_62514e2e-7cb1-4eb8-b19a-777de8bb43aa?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/instructions/marginfi_group/accrue_bank_interest.rs -> Scope: High. A flashloan, order, liquidation, interest-accrual, or fee-collection edge case lets an unprivileged user extract excess value, skip repayment, or leave bank and account state inconsistent.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_686a451f-d2a6-4b51-b04c-a34255c95e05?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/instructions/marginfi_group/collect_bank_fees.rs -> Scope: High. A flashloan, order, liquidation, interest-accrual, or fee-collection edge case lets an unprivileged user extract excess value, skip repayment, or leave bank and account state inconsistent.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_2efc1d53-8193-44ab-ac0c-f439398ebd7d?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/instructions/marginfi_group/handle_bankruptcy.rs -> Scope: High. A flashloan, order, liquidation, interest-accrual, or fee-collection edge case lets an unprivileged user extract excess value, skip repayment, or leave bank and account state inconsistent.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_a9b6b020-6c6a-4e90-ba04-10b7bda93aad?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/instructions/marginfi_group/mod.rs -> Scope: High. A flashloan, order, liquidation, interest-accrual, or fee-collection edge case lets an unprivileged user extract excess value, skip repayment, or leave bank and account state inconsistent.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_82b244fb-abee-4441-aaaf-836a0830da28?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/instructions/marginfi_group/panic_unpause_permissionless.rs -> Scope: High. A flashloan, order, liquidation, interest-accrual, or fee-collection edge case lets an unprivileged user extract excess value, skip repayment, or leave bank and account state inconsistent.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_1c52b648-6d66-48cb-a6c8-e58097b19b14?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/instructions/marginfi_group/pulse_bank_price_cache.rs -> Scope: High. A flashloan, order, liquidation, interest-accrual, or fee-collection edge case lets an unprivileged user extract excess value, skip repayment, or leave bank and account state inconsistent.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_ce323359-fa08-4681-ac35-03b128340984?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/instructions/marginfi_group/update_group_rate_limiter.rs -> Scope: High. A flashloan, order, liquidation, interest-accrual, or fee-collection edge case lets an unprivileged user extract excess value, skip repayment, or leave bank and account state inconsistent.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_3d63cb7a-8f23-4160-b679-0f3f3fa1ed14?mode=deep",
+    "questions_generated": false
+  }
+]
