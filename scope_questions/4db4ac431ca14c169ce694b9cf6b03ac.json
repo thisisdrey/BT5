@@ -1,0 +1,152 @@
+[
+  {
+    "question": "'File Name: programs/marginfi/src/lib.rs -> Scope: Critical. An unprivileged user can withdraw, borrow, transfer, liquidate, settle, or receive assets they are not entitled to, causing direct theft or unauthorized movement of user or vault funds.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_f42a928a-b0ef-4de3-a250-4d7bf627a3fe?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/constants.rs -> Scope: Critical. An unprivileged user can withdraw, borrow, transfer, liquidate, settle, or receive assets they are not entitled to, causing direct theft or unauthorized movement of user or vault funds.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_38efeca1-6aef-4513-ad3e-592bc07b3529?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/errors.rs -> Scope: Critical. An unprivileged user can withdraw, borrow, transfer, liquidate, settle, or receive assets they are not entitled to, causing direct theft or unauthorized movement of user or vault funds.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_209d191c-b375-4eff-8a7d-7d7603a2ad33?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/events.rs -> Scope: Critical. An unprivileged user can withdraw, borrow, transfer, liquidate, settle, or receive assets they are not entitled to, causing direct theft or unauthorized movement of user or vault funds.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_59ebd81e-cdaa-4a61-9393-ebcc3f5902d0?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/ix_utils.rs -> Scope: Critical. An unprivileged user can withdraw, borrow, transfer, liquidate, settle, or receive assets they are not entitled to, causing direct theft or unauthorized movement of user or vault funds.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_5d309aad-9266-4b77-9b96-9e06ca757951?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/macros.rs -> Scope: Critical. An unprivileged user can withdraw, borrow, transfer, liquidate, settle, or receive assets they are not entitled to, causing direct theft or unauthorized movement of user or vault funds.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_844b464a-2a9f-48f6-a3b9-57725d506850?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/prelude.rs -> Scope: Critical. An unprivileged user can withdraw, borrow, transfer, liquidate, settle, or receive assets they are not entitled to, causing direct theft or unauthorized movement of user or vault funds.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_97dc41ad-ca72-49e5-85cb-41699779c02c?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/state/bank.rs -> Scope: Critical. An unprivileged user can withdraw, borrow, transfer, liquidate, settle, or receive assets they are not entitled to, causing direct theft or unauthorized movement of user or vault funds.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_f614f241-fd1f-4598-8fbc-fe10297eb50e?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/state/bank_cache.rs -> Scope: Critical. An unprivileged user can withdraw, borrow, transfer, liquidate, settle, or receive assets they are not entitled to, causing direct theft or unauthorized movement of user or vault funds.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_6a8c1774-4b27-4263-93e2-2317d0c86fbe?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/state/bank_config.rs -> Scope: Critical. An unprivileged user can withdraw, borrow, transfer, liquidate, settle, or receive assets they are not entitled to, causing direct theft or unauthorized movement of user or vault funds.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_bf8657c5-ad02-471c-9e57-9cea71b9d4e7?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/state/emode.rs -> Scope: Critical. An unprivileged user can withdraw, borrow, transfer, liquidate, settle, or receive assets they are not entitled to, causing direct theft or unauthorized movement of user or vault funds.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_a581ac43-aade-4836-8b43-d52a7278c634?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/state/fee_state.rs -> Scope: Critical. An unprivileged user can withdraw, borrow, transfer, liquidate, settle, or receive assets they are not entitled to, causing direct theft or unauthorized movement of user or vault funds.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_2735f959-ebd0-4568-aeb8-206762d270cc?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/state/interest_rate.rs -> Scope: Critical. An unprivileged user can withdraw, borrow, transfer, liquidate, settle, or receive assets they are not entitled to, causing direct theft or unauthorized movement of user or vault funds.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_d0969c3e-d098-430a-a943-e3f78ff3b0a7?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/state/liquidation_record.rs -> Scope: Critical. An unprivileged user can withdraw, borrow, transfer, liquidate, settle, or receive assets they are not entitled to, causing direct theft or unauthorized movement of user or vault funds.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_486c032c-1548-457d-addb-009e074c4841?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/state/marginfi_account.rs -> Scope: Critical. An unprivileged user can withdraw, borrow, transfer, liquidate, settle, or receive assets they are not entitled to, causing direct theft or unauthorized movement of user or vault funds.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_87067eba-865a-481c-b427-8e14287ff9fe?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/state/marginfi_group.rs -> Scope: Critical. An unprivileged user can withdraw, borrow, transfer, liquidate, settle, or receive assets they are not entitled to, causing direct theft or unauthorized movement of user or vault funds.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_247b95e2-dff7-4491-ab45-81ed0b3d6b0a?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/state/mod.rs -> Scope: Critical. An unprivileged user can withdraw, borrow, transfer, liquidate, settle, or receive assets they are not entitled to, causing direct theft or unauthorized movement of user or vault funds.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_a0fc9a4d-02e4-4e5d-a5d7-f8781d0683f7?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/state/order.rs -> Scope: Critical. An unprivileged user can withdraw, borrow, transfer, liquidate, settle, or receive assets they are not entitled to, causing direct theft or unauthorized movement of user or vault funds.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_987ec991-777d-48e1-b84c-1097289e7546?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/state/panic_state.rs -> Scope: Critical. An unprivileged user can withdraw, borrow, transfer, liquidate, settle, or receive assets they are not entitled to, causing direct theft or unauthorized movement of user or vault funds.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_6aa7877d-d0c4-48f3-a104-d6c297a32aa9?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/state/price.rs -> Scope: Critical. An unprivileged user can withdraw, borrow, transfer, liquidate, settle, or receive assets they are not entitled to, causing direct theft or unauthorized movement of user or vault funds.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_54978278-0319-4982-96ea-e5bd9c7067bf?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/state/rate_limiter.rs -> Scope: Critical. An unprivileged user can withdraw, borrow, transfer, liquidate, settle, or receive assets they are not entitled to, causing direct theft or unauthorized movement of user or vault funds.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_3cf4727d-3779-4e13-8b72-0533fb32ec5a?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/state/staked_settings.rs -> Scope: Critical. An unprivileged user can withdraw, borrow, transfer, liquidate, settle, or receive assets they are not entitled to, causing direct theft or unauthorized movement of user or vault funds.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_df21b619-d926-4c74-9585-e48ec3bb9e88?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/instructions/mod.rs -> Scope: Critical. An unprivileged user can withdraw, borrow, transfer, liquidate, settle, or receive assets they are not entitled to, causing direct theft or unauthorized movement of user or vault funds.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_7b73e3f4-7220-433c-adc7-96f97624d1db?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/instructions/marginfi_account/admin_close.rs -> Scope: Critical. An unprivileged user can withdraw, borrow, transfer, liquidate, settle, or receive assets they are not entitled to, causing direct theft or unauthorized movement of user or vault funds.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_4d0a7ed8-dbdf-4d0f-b458-958b566dc04b?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/instructions/marginfi_account/borrow.rs -> Scope: Critical. An unprivileged user can withdraw, borrow, transfer, liquidate, settle, or receive assets they are not entitled to, causing direct theft or unauthorized movement of user or vault funds.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_b8004302-abbf-461e-a1db-c9d2843c7cb5?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/instructions/marginfi_account/close.rs -> Scope: Critical. An unprivileged user can withdraw, borrow, transfer, liquidate, settle, or receive assets they are not entitled to, causing direct theft or unauthorized movement of user or vault funds.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_d7116ed4-1461-4e27-9303-2e40345dea5c?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/instructions/marginfi_account/close_balance.rs -> Scope: Critical. An unprivileged user can withdraw, borrow, transfer, liquidate, settle, or receive assets they are not entitled to, causing direct theft or unauthorized movement of user or vault funds.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_2625847f-7926-4033-a33f-881fc8ced15e?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/instructions/marginfi_account/close_liquid_record.rs -> Scope: Critical. An unprivileged user can withdraw, borrow, transfer, liquidate, settle, or receive assets they are not entitled to, causing direct theft or unauthorized movement of user or vault funds.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_0fab9155-dda4-43ab-8fb1-d0ee5b0adfd0?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/instructions/marginfi_account/deposit.rs -> Scope: Critical. An unprivileged user can withdraw, borrow, transfer, liquidate, settle, or receive assets they are not entitled to, causing direct theft or unauthorized movement of user or vault funds.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_58ae6cf1-ac85-4ba6-897b-7b881a5194c1?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/instructions/marginfi_account/emissions.rs -> Scope: Critical. An unprivileged user can withdraw, borrow, transfer, liquidate, settle, or receive assets they are not entitled to, causing direct theft or unauthorized movement of user or vault funds.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_0daa30e6-f63a-452f-b56e-48957cc8ce9e?mode=deep",
+    "questions_generated": false
+  }
+]
