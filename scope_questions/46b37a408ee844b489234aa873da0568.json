@@ -1,0 +1,152 @@
+[
+  {
+    "question": "'File Name: programs/marginfi/src/lib.rs -> Scope: High. An unprivileged user can bypass authority checks on account ownership, delegates, liquidator rights, or keeper-only actions and mutate another user's margin state.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_91c02556-9392-4d2a-b462-219e3696145b?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/constants.rs -> Scope: High. An unprivileged user can bypass authority checks on account ownership, delegates, liquidator rights, or keeper-only actions and mutate another user's margin state.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_01981c83-c7fa-4a66-b9b0-225196ebc7ae?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/errors.rs -> Scope: High. An unprivileged user can bypass authority checks on account ownership, delegates, liquidator rights, or keeper-only actions and mutate another user's margin state.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_b73502e4-1ad4-4387-ab0b-582ae464b1be?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/events.rs -> Scope: High. An unprivileged user can bypass authority checks on account ownership, delegates, liquidator rights, or keeper-only actions and mutate another user's margin state.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_88d82698-f257-40b6-99c9-8c129ca5d0ee?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/ix_utils.rs -> Scope: High. An unprivileged user can bypass authority checks on account ownership, delegates, liquidator rights, or keeper-only actions and mutate another user's margin state.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_fbd4cc0d-b129-4bbd-8b7c-b7a3caefe7cd?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/macros.rs -> Scope: High. An unprivileged user can bypass authority checks on account ownership, delegates, liquidator rights, or keeper-only actions and mutate another user's margin state.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_e731ab73-3b78-472b-af48-98d85571033b?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/prelude.rs -> Scope: High. An unprivileged user can bypass authority checks on account ownership, delegates, liquidator rights, or keeper-only actions and mutate another user's margin state.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_a56717c9-9ffa-4e9b-9c9c-94cb3f3ce85e?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/state/bank.rs -> Scope: High. An unprivileged user can bypass authority checks on account ownership, delegates, liquidator rights, or keeper-only actions and mutate another user's margin state.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_7779a097-014f-40e8-bef8-610b8696d8b6?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/state/bank_cache.rs -> Scope: High. An unprivileged user can bypass authority checks on account ownership, delegates, liquidator rights, or keeper-only actions and mutate another user's margin state.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_15111662-73d3-46ac-b282-bf8a4d4bc287?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/state/bank_config.rs -> Scope: High. An unprivileged user can bypass authority checks on account ownership, delegates, liquidator rights, or keeper-only actions and mutate another user's margin state.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_abe6382b-2ed8-4c23-85c4-703f4ce62b79?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/state/emode.rs -> Scope: High. An unprivileged user can bypass authority checks on account ownership, delegates, liquidator rights, or keeper-only actions and mutate another user's margin state.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_8229ea8b-0a8d-436f-9e27-895f82145706?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/state/fee_state.rs -> Scope: High. An unprivileged user can bypass authority checks on account ownership, delegates, liquidator rights, or keeper-only actions and mutate another user's margin state.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_7df8af59-6439-4b29-8e34-d51a18ae9e69?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/state/interest_rate.rs -> Scope: High. An unprivileged user can bypass authority checks on account ownership, delegates, liquidator rights, or keeper-only actions and mutate another user's margin state.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_b35261d6-7955-4b89-969c-db99f75e0315?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/state/liquidation_record.rs -> Scope: High. An unprivileged user can bypass authority checks on account ownership, delegates, liquidator rights, or keeper-only actions and mutate another user's margin state.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_c7cb0619-215d-4931-b472-526dfd36da9f?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/state/marginfi_account.rs -> Scope: High. An unprivileged user can bypass authority checks on account ownership, delegates, liquidator rights, or keeper-only actions and mutate another user's margin state.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_903bc04f-ac96-4681-8c53-8edc22147978?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/state/marginfi_group.rs -> Scope: High. An unprivileged user can bypass authority checks on account ownership, delegates, liquidator rights, or keeper-only actions and mutate another user's margin state.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_433f4c8b-c245-4fb4-a6b0-a348c02631f8?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/state/mod.rs -> Scope: High. An unprivileged user can bypass authority checks on account ownership, delegates, liquidator rights, or keeper-only actions and mutate another user's margin state.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_b8ea95da-0148-4e0d-a218-398b74636f93?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/state/order.rs -> Scope: High. An unprivileged user can bypass authority checks on account ownership, delegates, liquidator rights, or keeper-only actions and mutate another user's margin state.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_608e72d5-1cc1-4bff-8c26-7dc14cffe84f?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/state/panic_state.rs -> Scope: High. An unprivileged user can bypass authority checks on account ownership, delegates, liquidator rights, or keeper-only actions and mutate another user's margin state.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_1f0419eb-0220-4181-9a26-7d5f01e19dd2?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/state/price.rs -> Scope: High. An unprivileged user can bypass authority checks on account ownership, delegates, liquidator rights, or keeper-only actions and mutate another user's margin state.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_6912d28d-4114-4dfb-8357-f68e345749dc?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/state/rate_limiter.rs -> Scope: High. An unprivileged user can bypass authority checks on account ownership, delegates, liquidator rights, or keeper-only actions and mutate another user's margin state.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_f3bbbd72-81b2-4d41-9a9f-42302cde3a88?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/state/staked_settings.rs -> Scope: High. An unprivileged user can bypass authority checks on account ownership, delegates, liquidator rights, or keeper-only actions and mutate another user's margin state.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_b31f12d7-bd98-4e70-a0b1-5bebc68628b9?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/instructions/mod.rs -> Scope: High. An unprivileged user can bypass authority checks on account ownership, delegates, liquidator rights, or keeper-only actions and mutate another user's margin state.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_0275691b-b275-47d7-b630-84e65e25f9ba?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/instructions/marginfi_account/admin_close.rs -> Scope: High. An unprivileged user can bypass authority checks on account ownership, delegates, liquidator rights, or keeper-only actions and mutate another user's margin state.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_47cf5394-e516-4296-bce8-7931e5112b0d?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/instructions/marginfi_account/borrow.rs -> Scope: High. An unprivileged user can bypass authority checks on account ownership, delegates, liquidator rights, or keeper-only actions and mutate another user's margin state.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_eaaa8340-705f-417b-8957-39ec1c92ea1b?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/instructions/marginfi_account/close.rs -> Scope: High. An unprivileged user can bypass authority checks on account ownership, delegates, liquidator rights, or keeper-only actions and mutate another user's margin state.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_da5d6e79-0a8c-403b-86b1-14dddbfe143d?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/instructions/marginfi_account/close_balance.rs -> Scope: High. An unprivileged user can bypass authority checks on account ownership, delegates, liquidator rights, or keeper-only actions and mutate another user's margin state.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_8ae1027b-0203-4b10-9a89-acb19a113e31?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/instructions/marginfi_account/close_liquid_record.rs -> Scope: High. An unprivileged user can bypass authority checks on account ownership, delegates, liquidator rights, or keeper-only actions and mutate another user's margin state.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_c4cc2ea8-4748-4f2b-889d-fb5ff5a38910?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/instructions/marginfi_account/deposit.rs -> Scope: High. An unprivileged user can bypass authority checks on account ownership, delegates, liquidator rights, or keeper-only actions and mutate another user's margin state.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_4dfa4129-dd9b-4991-b8c2-b0314a63d41c?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/instructions/marginfi_account/emissions.rs -> Scope: High. An unprivileged user can bypass authority checks on account ownership, delegates, liquidator rights, or keeper-only actions and mutate another user's margin state.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_7c2b6ace-5f58-4337-b526-b3b9093da158?mode=deep",
+    "questions_generated": false
+  }
+]
