@@ -1,0 +1,152 @@
+[
+  {
+    "question": "'File Name: programs/marginfi/src/lib.rs -> Scope: High. An unprivileged user can permanently freeze, strand, or orphan another user's funds or protocol-owned value through reachable account, liquidation, bankruptcy, or close flows.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_22a833eb-e05f-462a-82ff-d80b9c3bdcf6?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/constants.rs -> Scope: High. An unprivileged user can permanently freeze, strand, or orphan another user's funds or protocol-owned value through reachable account, liquidation, bankruptcy, or close flows.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_a0ddb2f3-65c0-4477-90ba-222e98b569c6?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/errors.rs -> Scope: High. An unprivileged user can permanently freeze, strand, or orphan another user's funds or protocol-owned value through reachable account, liquidation, bankruptcy, or close flows.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_e39aaf12-3c92-4434-adc3-d8f1ea8420ef?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/events.rs -> Scope: High. An unprivileged user can permanently freeze, strand, or orphan another user's funds or protocol-owned value through reachable account, liquidation, bankruptcy, or close flows.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_0e866c4f-94f2-49ca-9e05-d2dd58665d46?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/ix_utils.rs -> Scope: High. An unprivileged user can permanently freeze, strand, or orphan another user's funds or protocol-owned value through reachable account, liquidation, bankruptcy, or close flows.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_311efc1f-312b-407f-9e0d-1455340e9fda?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/macros.rs -> Scope: High. An unprivileged user can permanently freeze, strand, or orphan another user's funds or protocol-owned value through reachable account, liquidation, bankruptcy, or close flows.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_017831c4-79b2-4f4b-af7e-1be48c65ddbd?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/prelude.rs -> Scope: High. An unprivileged user can permanently freeze, strand, or orphan another user's funds or protocol-owned value through reachable account, liquidation, bankruptcy, or close flows.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_4d14e758-527b-4a44-bf96-b34005dbc744?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/state/bank.rs -> Scope: High. An unprivileged user can permanently freeze, strand, or orphan another user's funds or protocol-owned value through reachable account, liquidation, bankruptcy, or close flows.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_173a3f33-968b-43b0-aaea-c3e894261fc9?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/state/bank_cache.rs -> Scope: High. An unprivileged user can permanently freeze, strand, or orphan another user's funds or protocol-owned value through reachable account, liquidation, bankruptcy, or close flows.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_14c4182f-da50-42e9-b177-1bf2b15a87be?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/state/bank_config.rs -> Scope: High. An unprivileged user can permanently freeze, strand, or orphan another user's funds or protocol-owned value through reachable account, liquidation, bankruptcy, or close flows.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_81c134fc-3039-45e2-add6-fe09a3cb1618?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/state/emode.rs -> Scope: High. An unprivileged user can permanently freeze, strand, or orphan another user's funds or protocol-owned value through reachable account, liquidation, bankruptcy, or close flows.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_05af4ecd-a284-499a-9684-501986383983?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/state/fee_state.rs -> Scope: High. An unprivileged user can permanently freeze, strand, or orphan another user's funds or protocol-owned value through reachable account, liquidation, bankruptcy, or close flows.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_72721c32-1d74-48fe-a689-59e06f6b7148?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/state/interest_rate.rs -> Scope: High. An unprivileged user can permanently freeze, strand, or orphan another user's funds or protocol-owned value through reachable account, liquidation, bankruptcy, or close flows.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_8ebb954f-2d59-4cbc-96b1-f06e659668fc?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/state/liquidation_record.rs -> Scope: High. An unprivileged user can permanently freeze, strand, or orphan another user's funds or protocol-owned value through reachable account, liquidation, bankruptcy, or close flows.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_b9eff422-1262-4f2f-a569-c01229cb6f21?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/state/marginfi_account.rs -> Scope: High. An unprivileged user can permanently freeze, strand, or orphan another user's funds or protocol-owned value through reachable account, liquidation, bankruptcy, or close flows.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_33eb7d8c-5c40-42ac-abba-5b4825284a2c?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/state/marginfi_group.rs -> Scope: High. An unprivileged user can permanently freeze, strand, or orphan another user's funds or protocol-owned value through reachable account, liquidation, bankruptcy, or close flows.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_4a19159b-4cf8-4c40-9212-5a842ec13edb?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/state/mod.rs -> Scope: High. An unprivileged user can permanently freeze, strand, or orphan another user's funds or protocol-owned value through reachable account, liquidation, bankruptcy, or close flows.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_b5965468-9928-4916-ae56-600ddbe46b68?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/state/order.rs -> Scope: High. An unprivileged user can permanently freeze, strand, or orphan another user's funds or protocol-owned value through reachable account, liquidation, bankruptcy, or close flows.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_93a835f2-51bd-44a0-9658-4ce6cccf8972?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/state/panic_state.rs -> Scope: High. An unprivileged user can permanently freeze, strand, or orphan another user's funds or protocol-owned value through reachable account, liquidation, bankruptcy, or close flows.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_7ebab5c2-5ec4-4f87-b71d-5380c7d3c450?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/state/price.rs -> Scope: High. An unprivileged user can permanently freeze, strand, or orphan another user's funds or protocol-owned value through reachable account, liquidation, bankruptcy, or close flows.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_51cdab1a-a6c1-4a74-b1eb-43d649cc1259?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/state/rate_limiter.rs -> Scope: High. An unprivileged user can permanently freeze, strand, or orphan another user's funds or protocol-owned value through reachable account, liquidation, bankruptcy, or close flows.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_fc7b1f58-4ca8-4ef9-8a5c-800968d105d4?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/state/staked_settings.rs -> Scope: High. An unprivileged user can permanently freeze, strand, or orphan another user's funds or protocol-owned value through reachable account, liquidation, bankruptcy, or close flows.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_98025ba6-d1ab-4f66-80a9-c8d2f3273741?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/instructions/mod.rs -> Scope: High. An unprivileged user can permanently freeze, strand, or orphan another user's funds or protocol-owned value through reachable account, liquidation, bankruptcy, or close flows.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_f38efb87-9bd7-4bf2-b5b9-0ab68d9a368b?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/instructions/marginfi_account/admin_close.rs -> Scope: High. An unprivileged user can permanently freeze, strand, or orphan another user's funds or protocol-owned value through reachable account, liquidation, bankruptcy, or close flows.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_971d439a-496e-4415-8983-a8fe8b84d923?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/instructions/marginfi_account/borrow.rs -> Scope: High. An unprivileged user can permanently freeze, strand, or orphan another user's funds or protocol-owned value through reachable account, liquidation, bankruptcy, or close flows.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_3a86b539-76ae-429d-ae3c-766478d765f2?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/instructions/marginfi_account/close.rs -> Scope: High. An unprivileged user can permanently freeze, strand, or orphan another user's funds or protocol-owned value through reachable account, liquidation, bankruptcy, or close flows.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_4f1badf2-00e4-4200-9a8d-1120626f6f23?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/instructions/marginfi_account/close_balance.rs -> Scope: High. An unprivileged user can permanently freeze, strand, or orphan another user's funds or protocol-owned value through reachable account, liquidation, bankruptcy, or close flows.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_d6506c2e-9b07-4786-ad91-e883564b2b6b?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/instructions/marginfi_account/close_liquid_record.rs -> Scope: High. An unprivileged user can permanently freeze, strand, or orphan another user's funds or protocol-owned value through reachable account, liquidation, bankruptcy, or close flows.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_71c7b525-7920-414e-b9b6-1330f8a92e2d?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/instructions/marginfi_account/deposit.rs -> Scope: High. An unprivileged user can permanently freeze, strand, or orphan another user's funds or protocol-owned value through reachable account, liquidation, bankruptcy, or close flows.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_f3e8d7a1-0e70-40fa-88c9-8708a0775c8f?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: programs/marginfi/src/instructions/marginfi_account/emissions.rs -> Scope: High. An unprivileged user can permanently freeze, strand, or orphan another user's funds or protocol-owned value through reachable account, liquidation, bankruptcy, or close flows.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_51581dcf-da00-44c4-92b6-ed6465f9912e?mode=deep",
+    "questions_generated": false
+  }
+]
