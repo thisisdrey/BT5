@@ -1,0 +1,5 @@
+[
+  "'File Name: cmd/nebula/main.go -> Scope: High. An unprivileged attacker spoofing UDP source addresses or sending unauthenticated lighthouse, relay, or handshake packets can poison hostmap/remote-list state, hijack roaming, or steer another host's traffic through an attacker-chosen path.'",
+  "'File Name: cmd/nebula-service/main.go -> Scope: High. An unprivileged attacker spoofing UDP source addresses or sending unauthenticated lighthouse, relay, or handshake packets can poison hostmap/remote-list state, hijack roaming, or steer another host's traffic through an attacker-chosen path.'",
+  "'File Name: cmd/nebula-service/service.go -> Scope: High. An unprivileged attacker spoofing UDP source addresses or sending unauthenticated lighthouse, relay, or handshake packets can poison hostmap/remote-list state, hijack roaming, or steer another host's traffic through an attacker-chosen path.'"
+]

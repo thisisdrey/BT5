@@ -1,0 +1,5 @@
+[
+  "'File Name: cmd/nebula/main.go -> Scope: Critical. An unprivileged attacker can bypass firewall or unsafe-route policy so packets they inject reach inside services, tun-routed hosts, or the host network that the configured rules, groups, or CIDRs must deny.'",
+  "'File Name: cmd/nebula-service/main.go -> Scope: Critical. An unprivileged attacker can bypass firewall or unsafe-route policy so packets they inject reach inside services, tun-routed hosts, or the host network that the configured rules, groups, or CIDRs must deny.'",
+  "'File Name: cmd/nebula-service/service.go -> Scope: Critical. An unprivileged attacker can bypass firewall or unsafe-route policy so packets they inject reach inside services, tun-routed hosts, or the host network that the configured rules, groups, or CIDRs must deny.'"
+]

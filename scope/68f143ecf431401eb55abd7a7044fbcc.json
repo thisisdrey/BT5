@@ -1,0 +1,5 @@
+[
+  "'File Name: cmd/nebula/main.go -> Scope: Critical. An unprivileged attacker can break session crypto confidentiality or integrity, such as forcing nonce/counter reuse, key or cipher confusion, or replay-window bypass, so tunnel traffic can be decrypted, forged, or replayed into an established session.'",
+  "'File Name: cmd/nebula-service/main.go -> Scope: Critical. An unprivileged attacker can break session crypto confidentiality or integrity, such as forcing nonce/counter reuse, key or cipher confusion, or replay-window bypass, so tunnel traffic can be decrypted, forged, or replayed into an established session.'",
+  "'File Name: cmd/nebula-service/service.go -> Scope: Critical. An unprivileged attacker can break session crypto confidentiality or integrity, such as forcing nonce/counter reuse, key or cipher confusion, or replay-window bypass, so tunnel traffic can be decrypted, forged, or replayed into an established session.'"
+]

@@ -1,0 +1,5 @@
+[
+  "'File Name: cmd/nebula/main.go -> Scope: High. An unprivileged attacker can use malformed packet headers, certificates, or handshake payloads to panic, deadlock, exhaust memory, or wedge a remote node's packet-processing path, taking the tunnel down for all its peers.'",
+  "'File Name: cmd/nebula-service/main.go -> Scope: High. An unprivileged attacker can use malformed packet headers, certificates, or handshake payloads to panic, deadlock, exhaust memory, or wedge a remote node's packet-processing path, taking the tunnel down for all its peers.'",
+  "'File Name: cmd/nebula-service/service.go -> Scope: High. An unprivileged attacker can use malformed packet headers, certificates, or handshake payloads to panic, deadlock, exhaust memory, or wedge a remote node's packet-processing path, taking the tunnel down for all its peers.'"
+]

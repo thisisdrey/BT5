@@ -1,0 +1,5 @@
+[
+  "'File Name: cmd/nebula/main.go -> Scope: Critical. An unprivileged attacker holding no CA-signed Nebula certificate, sending only UDP packets to a node's listener, can complete or be granted a tunnel session and reach the overlay network as an authenticated host.'",
+  "'File Name: cmd/nebula-service/main.go -> Scope: Critical. An unprivileged attacker holding no CA-signed Nebula certificate, sending only UDP packets to a node's listener, can complete or be granted a tunnel session and reach the overlay network as an authenticated host.'",
+  "'File Name: cmd/nebula-service/service.go -> Scope: Critical. An unprivileged attacker holding no CA-signed Nebula certificate, sending only UDP packets to a node's listener, can complete or be granted a tunnel session and reach the overlay network as an authenticated host.'"
+]
