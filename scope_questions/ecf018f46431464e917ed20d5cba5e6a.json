@@ -1,0 +1,152 @@
+[
+  {
+    "question": "'File Name: cert/crypto.go -> Scope: High. An unprivileged attacker can use malformed packet headers, certificates, or handshake payloads to panic, deadlock, exhaust memory, or wedge a remote node's packet-processing path, taking the tunnel down for all its peers.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_d6d05ec5-4560-44c2-b8a0-7ea09ebf5dce?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: cert/sign.go -> Scope: High. An unprivileged attacker can use malformed packet headers, certificates, or handshake payloads to panic, deadlock, exhaust memory, or wedge a remote node's packet-processing path, taking the tunnel down for all its peers.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_0f7286ca-6ad8-4315-bf68-200cef86077f?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: cert/pem.go -> Scope: High. An unprivileged attacker can use malformed packet headers, certificates, or handshake payloads to panic, deadlock, exhaust memory, or wedge a remote node's packet-processing path, taking the tunnel down for all its peers.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_fb128727-b710-48cf-b432-8a258c97b7c3?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: cert/errors.go -> Scope: High. An unprivileged attacker can use malformed packet headers, certificates, or handshake payloads to panic, deadlock, exhaust memory, or wedge a remote node's packet-processing path, taking the tunnel down for all its peers.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_8b90059b-5867-4ddb-9fd8-692650fceb53?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: cert/p256/p256.go -> Scope: High. An unprivileged attacker can use malformed packet headers, certificates, or handshake payloads to panic, deadlock, exhaust memory, or wedge a remote node's packet-processing path, taking the tunnel down for all its peers.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_c6896dac-4aba-4f2c-b2c8-894c61c46553?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: noiseutil/cipher_state.go -> Scope: High. An unprivileged attacker can use malformed packet headers, certificates, or handshake payloads to panic, deadlock, exhaust memory, or wedge a remote node's packet-processing path, taking the tunnel down for all its peers.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_843f7b57-bc14-4f2d-90c7-2e64f62ab27b?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: noiseutil/aesgcm.go -> Scope: High. An unprivileged attacker can use malformed packet headers, certificates, or handshake payloads to panic, deadlock, exhaust memory, or wedge a remote node's packet-processing path, taking the tunnel down for all its peers.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_c9071bea-d33d-4243-b1d5-8a4ce232dabb?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: noiseutil/chachapoly.go -> Scope: High. An unprivileged attacker can use malformed packet headers, certificates, or handshake payloads to panic, deadlock, exhaust memory, or wedge a remote node's packet-processing path, taking the tunnel down for all its peers.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_1e257c15-ff0f-4cee-8bc8-8fbbd9a3387f?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: noiseutil/nist.go -> Scope: High. An unprivileged attacker can use malformed packet headers, certificates, or handshake payloads to panic, deadlock, exhaust memory, or wedge a remote node's packet-processing path, taking the tunnel down for all its peers.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_de9f5a16-c8d2-4d56-a4ac-7ea349e3b3d9?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: noiseutil/boring.go -> Scope: High. An unprivileged attacker can use malformed packet headers, certificates, or handshake payloads to panic, deadlock, exhaust memory, or wedge a remote node's packet-processing path, taking the tunnel down for all its peers.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_c62d4d36-ecbd-4c91-b203-19afdb03bca1?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: noiseutil/notboring.go -> Scope: High. An unprivileged attacker can use malformed packet headers, certificates, or handshake payloads to panic, deadlock, exhaust memory, or wedge a remote node's packet-processing path, taking the tunnel down for all its peers.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_9fa76de3-ae68-42fb-8461-a5849ae5c823?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: boring.go -> Scope: High. An unprivileged attacker can use malformed packet headers, certificates, or handshake payloads to panic, deadlock, exhaust memory, or wedge a remote node's packet-processing path, taking the tunnel down for all its peers.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_78d1e68a-c95c-4d28-9dfb-dce175d7adb4?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: notboring.go -> Scope: High. An unprivileged attacker can use malformed packet headers, certificates, or handshake payloads to panic, deadlock, exhaust memory, or wedge a remote node's packet-processing path, taking the tunnel down for all its peers.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_f9f37b0a-cf4b-4e7f-92c8-676fba2e414a?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: bits.go -> Scope: High. An unprivileged attacker can use malformed packet headers, certificates, or handshake payloads to panic, deadlock, exhaust memory, or wedge a remote node's packet-processing path, taking the tunnel down for all its peers.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_e8b42b53-3ce7-495e-b12c-6ff1deaa0d91?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: firewall.go -> Scope: High. An unprivileged attacker can use malformed packet headers, certificates, or handshake payloads to panic, deadlock, exhaust memory, or wedge a remote node's packet-processing path, taking the tunnel down for all its peers.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_0e426163-2a65-4e6f-9e81-777bad108cb4?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: firewall/packet.go -> Scope: High. An unprivileged attacker can use malformed packet headers, certificates, or handshake payloads to panic, deadlock, exhaust memory, or wedge a remote node's packet-processing path, taking the tunnel down for all its peers.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_402d5433-c517-4d67-81d4-cdd086fa87a7?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: firewall/cache.go -> Scope: High. An unprivileged attacker can use malformed packet headers, certificates, or handshake payloads to panic, deadlock, exhaust memory, or wedge a remote node's packet-processing path, taking the tunnel down for all its peers.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_e9a58798-e602-42b9-8534-e263f396facc?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: allow_list.go -> Scope: High. An unprivileged attacker can use malformed packet headers, certificates, or handshake payloads to panic, deadlock, exhaust memory, or wedge a remote node's packet-processing path, taking the tunnel down for all its peers.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_3defabba-4103-4739-86b2-ad15d829ae19?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: inside.go -> Scope: High. An unprivileged attacker can use malformed packet headers, certificates, or handshake payloads to panic, deadlock, exhaust memory, or wedge a remote node's packet-processing path, taking the tunnel down for all its peers.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_28bd38d0-c15d-4a7d-a2c1-962826138986?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: inside_generic.go -> Scope: High. An unprivileged attacker can use malformed packet headers, certificates, or handshake payloads to panic, deadlock, exhaust memory, or wedge a remote node's packet-processing path, taking the tunnel down for all its peers.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_86240dfc-a47d-4c61-8b1b-0343d803d6c4?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: inside_bsd.go -> Scope: High. An unprivileged attacker can use malformed packet headers, certificates, or handshake payloads to panic, deadlock, exhaust memory, or wedge a remote node's packet-processing path, taking the tunnel down for all its peers.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_e375dd74-aa4b-4e12-8237-04784a729403?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: hostmap.go -> Scope: High. An unprivileged attacker can use malformed packet headers, certificates, or handshake payloads to panic, deadlock, exhaust memory, or wedge a remote node's packet-processing path, taking the tunnel down for all its peers.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_22129362-1c7c-48fa-b70d-649f4833828b?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: lighthouse.go -> Scope: High. An unprivileged attacker can use malformed packet headers, certificates, or handshake payloads to panic, deadlock, exhaust memory, or wedge a remote node's packet-processing path, taking the tunnel down for all its peers.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_352aa7b4-c35e-42cd-b368-b0b8efa80166?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: remote_list.go -> Scope: High. An unprivileged attacker can use malformed packet headers, certificates, or handshake payloads to panic, deadlock, exhaust memory, or wedge a remote node's packet-processing path, taking the tunnel down for all its peers.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_d402fe78-0199-41f9-8619-05296ff3dc1a?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: relay_manager.go -> Scope: High. An unprivileged attacker can use malformed packet headers, certificates, or handshake payloads to panic, deadlock, exhaust memory, or wedge a remote node's packet-processing path, taking the tunnel down for all its peers.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_b77ceac4-4e49-437f-a4c4-bc341d1f4bac?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: calculated_remote.go -> Scope: High. An unprivileged attacker can use malformed packet headers, certificates, or handshake payloads to panic, deadlock, exhaust memory, or wedge a remote node's packet-processing path, taking the tunnel down for all its peers.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_1757d3c5-2012-4b6a-aa17-97fd6065f177?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: punchy.go -> Scope: High. An unprivileged attacker can use malformed packet headers, certificates, or handshake payloads to panic, deadlock, exhaust memory, or wedge a remote node's packet-processing path, taking the tunnel down for all its peers.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_4b30ed5d-628c-4aab-9d8b-cd9165b5c6a5?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: routing/balance.go -> Scope: High. An unprivileged attacker can use malformed packet headers, certificates, or handshake payloads to panic, deadlock, exhaust memory, or wedge a remote node's packet-processing path, taking the tunnel down for all its peers.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_d2c0e849-da9c-4b9a-82de-7cfd3c8c35c5?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: routing/gateway.go -> Scope: High. An unprivileged attacker can use malformed packet headers, certificates, or handshake payloads to panic, deadlock, exhaust memory, or wedge a remote node's packet-processing path, taking the tunnel down for all its peers.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_07814192-edad-4fa0-8819-2666a2f76a89?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: interface.go -> Scope: High. An unprivileged attacker can use malformed packet headers, certificates, or handshake payloads to panic, deadlock, exhaust memory, or wedge a remote node's packet-processing path, taking the tunnel down for all its peers.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_b2fa53a2-ec63-48d3-9da2-cb4795a2d2d5?mode=deep",
+    "questions_generated": false
+  }
+]
