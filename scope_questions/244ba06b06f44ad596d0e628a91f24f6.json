@@ -1,0 +1,152 @@
+[
+  {
+    "question": "'File Name: cert/crypto.go -> Scope: Critical. An unprivileged attacker can bypass firewall or unsafe-route policy so packets they inject reach inside services, tun-routed hosts, or the host network that the configured rules, groups, or CIDRs must deny.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_0f195834-5968-49c7-a4a5-9e9c4e72ead0?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: cert/sign.go -> Scope: Critical. An unprivileged attacker can bypass firewall or unsafe-route policy so packets they inject reach inside services, tun-routed hosts, or the host network that the configured rules, groups, or CIDRs must deny.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_875e9a94-c7d8-48ec-9fea-0af1024750d5?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: cert/pem.go -> Scope: Critical. An unprivileged attacker can bypass firewall or unsafe-route policy so packets they inject reach inside services, tun-routed hosts, or the host network that the configured rules, groups, or CIDRs must deny.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_19dd3fb6-8a64-422c-aa6f-ffa321008880?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: cert/errors.go -> Scope: Critical. An unprivileged attacker can bypass firewall or unsafe-route policy so packets they inject reach inside services, tun-routed hosts, or the host network that the configured rules, groups, or CIDRs must deny.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_9851aa6e-b4d4-4894-8c70-47a253141fb8?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: cert/p256/p256.go -> Scope: Critical. An unprivileged attacker can bypass firewall or unsafe-route policy so packets they inject reach inside services, tun-routed hosts, or the host network that the configured rules, groups, or CIDRs must deny.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_38ec108e-1415-48b1-832a-9e2a351e9344?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: noiseutil/cipher_state.go -> Scope: Critical. An unprivileged attacker can bypass firewall or unsafe-route policy so packets they inject reach inside services, tun-routed hosts, or the host network that the configured rules, groups, or CIDRs must deny.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_828423bf-ad6f-47a2-aa00-696ef02ead23?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: noiseutil/aesgcm.go -> Scope: Critical. An unprivileged attacker can bypass firewall or unsafe-route policy so packets they inject reach inside services, tun-routed hosts, or the host network that the configured rules, groups, or CIDRs must deny.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_b47f4c37-2a9a-4880-92cc-95b4cf912a50?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: noiseutil/chachapoly.go -> Scope: Critical. An unprivileged attacker can bypass firewall or unsafe-route policy so packets they inject reach inside services, tun-routed hosts, or the host network that the configured rules, groups, or CIDRs must deny.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_faf1a135-4444-425b-b98b-2a469c918ec8?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: noiseutil/nist.go -> Scope: Critical. An unprivileged attacker can bypass firewall or unsafe-route policy so packets they inject reach inside services, tun-routed hosts, or the host network that the configured rules, groups, or CIDRs must deny.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_c135e2e1-5ec8-4d54-b4df-f9806ee4ecb0?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: noiseutil/boring.go -> Scope: Critical. An unprivileged attacker can bypass firewall or unsafe-route policy so packets they inject reach inside services, tun-routed hosts, or the host network that the configured rules, groups, or CIDRs must deny.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_0155b2ec-08b1-4ab2-92c6-a9dd9292d1e7?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: noiseutil/notboring.go -> Scope: Critical. An unprivileged attacker can bypass firewall or unsafe-route policy so packets they inject reach inside services, tun-routed hosts, or the host network that the configured rules, groups, or CIDRs must deny.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_5c3779e8-cad2-4d00-828c-4953a4381848?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: boring.go -> Scope: Critical. An unprivileged attacker can bypass firewall or unsafe-route policy so packets they inject reach inside services, tun-routed hosts, or the host network that the configured rules, groups, or CIDRs must deny.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_6848a75c-1a15-46ae-93d0-3bc1a11caaaf?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: notboring.go -> Scope: Critical. An unprivileged attacker can bypass firewall or unsafe-route policy so packets they inject reach inside services, tun-routed hosts, or the host network that the configured rules, groups, or CIDRs must deny.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_3d0d6f1a-09bf-4389-933b-5881b17ad22d?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: bits.go -> Scope: Critical. An unprivileged attacker can bypass firewall or unsafe-route policy so packets they inject reach inside services, tun-routed hosts, or the host network that the configured rules, groups, or CIDRs must deny.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_54d26d6a-1219-4f9a-9aed-9608b0fe455f?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: firewall.go -> Scope: Critical. An unprivileged attacker can bypass firewall or unsafe-route policy so packets they inject reach inside services, tun-routed hosts, or the host network that the configured rules, groups, or CIDRs must deny.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_0ac773f8-7302-4d20-bea2-87fe130b54ff?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: firewall/packet.go -> Scope: Critical. An unprivileged attacker can bypass firewall or unsafe-route policy so packets they inject reach inside services, tun-routed hosts, or the host network that the configured rules, groups, or CIDRs must deny.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_ad4202b5-05be-4349-80ba-dd2ed9cc7584?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: firewall/cache.go -> Scope: Critical. An unprivileged attacker can bypass firewall or unsafe-route policy so packets they inject reach inside services, tun-routed hosts, or the host network that the configured rules, groups, or CIDRs must deny.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_4d2e0db0-5aca-45d4-ba42-0b88a69b3970?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: allow_list.go -> Scope: Critical. An unprivileged attacker can bypass firewall or unsafe-route policy so packets they inject reach inside services, tun-routed hosts, or the host network that the configured rules, groups, or CIDRs must deny.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_d6b1d879-12c3-401b-8cb7-11b967ca0d15?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: inside.go -> Scope: Critical. An unprivileged attacker can bypass firewall or unsafe-route policy so packets they inject reach inside services, tun-routed hosts, or the host network that the configured rules, groups, or CIDRs must deny.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_e2dd0f30-96b8-4375-a7ee-a02e2df6e9e7?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: inside_generic.go -> Scope: Critical. An unprivileged attacker can bypass firewall or unsafe-route policy so packets they inject reach inside services, tun-routed hosts, or the host network that the configured rules, groups, or CIDRs must deny.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_8451bdd7-8e9a-43c7-ba14-95d0f3866ede?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: inside_bsd.go -> Scope: Critical. An unprivileged attacker can bypass firewall or unsafe-route policy so packets they inject reach inside services, tun-routed hosts, or the host network that the configured rules, groups, or CIDRs must deny.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_6184334d-e4cf-48c6-894d-325aa1afea1b?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: hostmap.go -> Scope: Critical. An unprivileged attacker can bypass firewall or unsafe-route policy so packets they inject reach inside services, tun-routed hosts, or the host network that the configured rules, groups, or CIDRs must deny.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_fd449130-bfa7-412e-b679-97bf3e06dc67?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: lighthouse.go -> Scope: Critical. An unprivileged attacker can bypass firewall or unsafe-route policy so packets they inject reach inside services, tun-routed hosts, or the host network that the configured rules, groups, or CIDRs must deny.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_0231a86e-a9fa-4782-ab0c-7963dd7a3190?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: remote_list.go -> Scope: Critical. An unprivileged attacker can bypass firewall or unsafe-route policy so packets they inject reach inside services, tun-routed hosts, or the host network that the configured rules, groups, or CIDRs must deny.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_56835707-9675-46da-857c-4901a098fcb5?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: relay_manager.go -> Scope: Critical. An unprivileged attacker can bypass firewall or unsafe-route policy so packets they inject reach inside services, tun-routed hosts, or the host network that the configured rules, groups, or CIDRs must deny.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_d94762f5-a7f1-47d8-8d7f-19252c5f72f4?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: calculated_remote.go -> Scope: Critical. An unprivileged attacker can bypass firewall or unsafe-route policy so packets they inject reach inside services, tun-routed hosts, or the host network that the configured rules, groups, or CIDRs must deny.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_405771d1-b7e1-4687-b3bf-aad6935a6247?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: punchy.go -> Scope: Critical. An unprivileged attacker can bypass firewall or unsafe-route policy so packets they inject reach inside services, tun-routed hosts, or the host network that the configured rules, groups, or CIDRs must deny.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_7e3b4818-48cb-43c8-beea-f49a43286534?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: routing/balance.go -> Scope: Critical. An unprivileged attacker can bypass firewall or unsafe-route policy so packets they inject reach inside services, tun-routed hosts, or the host network that the configured rules, groups, or CIDRs must deny.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_bc72deef-9115-48a5-aae1-05864aa41f1c?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: routing/gateway.go -> Scope: Critical. An unprivileged attacker can bypass firewall or unsafe-route policy so packets they inject reach inside services, tun-routed hosts, or the host network that the configured rules, groups, or CIDRs must deny.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_77bd344c-3340-4604-aae1-f64052fe9d0f?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: interface.go -> Scope: Critical. An unprivileged attacker can bypass firewall or unsafe-route policy so packets they inject reach inside services, tun-routed hosts, or the host network that the configured rules, groups, or CIDRs must deny.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_cdaf3a3c-1738-4789-ab2f-0ce2ee14a374?mode=deep",
+    "questions_generated": false
+  }
+]
