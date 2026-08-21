@@ -1,0 +1,152 @@
+[
+  {
+    "question": "'File Name: cert/crypto.go -> Scope: Critical. An unprivileged attacker holding no CA-signed Nebula certificate, sending only UDP packets to a node's listener, can complete or be granted a tunnel session and reach the overlay network as an authenticated host.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_56f8ac86-0319-4375-bce2-4e417a3b8dc0?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: cert/sign.go -> Scope: Critical. An unprivileged attacker holding no CA-signed Nebula certificate, sending only UDP packets to a node's listener, can complete or be granted a tunnel session and reach the overlay network as an authenticated host.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_a97b8509-d2b5-4187-a701-181901628376?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: cert/pem.go -> Scope: Critical. An unprivileged attacker holding no CA-signed Nebula certificate, sending only UDP packets to a node's listener, can complete or be granted a tunnel session and reach the overlay network as an authenticated host.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_5e562482-eeaa-4646-8b11-a921e4adb50b?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: cert/errors.go -> Scope: Critical. An unprivileged attacker holding no CA-signed Nebula certificate, sending only UDP packets to a node's listener, can complete or be granted a tunnel session and reach the overlay network as an authenticated host.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_8af91625-868f-4abf-91a8-a037d629d080?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: cert/p256/p256.go -> Scope: Critical. An unprivileged attacker holding no CA-signed Nebula certificate, sending only UDP packets to a node's listener, can complete or be granted a tunnel session and reach the overlay network as an authenticated host.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_b10cac44-ce0b-4a19-9185-c2eda273141e?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: noiseutil/cipher_state.go -> Scope: Critical. An unprivileged attacker holding no CA-signed Nebula certificate, sending only UDP packets to a node's listener, can complete or be granted a tunnel session and reach the overlay network as an authenticated host.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_5c9e2e91-4a41-41ac-94e9-44890fb18f41?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: noiseutil/aesgcm.go -> Scope: Critical. An unprivileged attacker holding no CA-signed Nebula certificate, sending only UDP packets to a node's listener, can complete or be granted a tunnel session and reach the overlay network as an authenticated host.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_ee70c54b-a627-42de-baa7-1fe2a006ea46?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: noiseutil/chachapoly.go -> Scope: Critical. An unprivileged attacker holding no CA-signed Nebula certificate, sending only UDP packets to a node's listener, can complete or be granted a tunnel session and reach the overlay network as an authenticated host.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_04a89471-c2ff-4d0e-a197-7bf36f9cb04a?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: noiseutil/nist.go -> Scope: Critical. An unprivileged attacker holding no CA-signed Nebula certificate, sending only UDP packets to a node's listener, can complete or be granted a tunnel session and reach the overlay network as an authenticated host.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_ff83c9af-cbfb-4c8f-ae03-9c25d354ecf4?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: noiseutil/boring.go -> Scope: Critical. An unprivileged attacker holding no CA-signed Nebula certificate, sending only UDP packets to a node's listener, can complete or be granted a tunnel session and reach the overlay network as an authenticated host.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_a819754c-aeee-458f-9d1d-7d3e79e433ba?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: noiseutil/notboring.go -> Scope: Critical. An unprivileged attacker holding no CA-signed Nebula certificate, sending only UDP packets to a node's listener, can complete or be granted a tunnel session and reach the overlay network as an authenticated host.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_ddc1bdf5-f8c8-48c5-b640-cb10a2ab0a36?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: boring.go -> Scope: Critical. An unprivileged attacker holding no CA-signed Nebula certificate, sending only UDP packets to a node's listener, can complete or be granted a tunnel session and reach the overlay network as an authenticated host.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_8a101b75-1c03-402f-bede-26c001132b21?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: notboring.go -> Scope: Critical. An unprivileged attacker holding no CA-signed Nebula certificate, sending only UDP packets to a node's listener, can complete or be granted a tunnel session and reach the overlay network as an authenticated host.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_a9e0351e-777a-4828-9077-377d8f45c2b7?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: bits.go -> Scope: Critical. An unprivileged attacker holding no CA-signed Nebula certificate, sending only UDP packets to a node's listener, can complete or be granted a tunnel session and reach the overlay network as an authenticated host.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_fad6cb75-e00e-406a-965e-ba29f57070c8?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: firewall.go -> Scope: Critical. An unprivileged attacker holding no CA-signed Nebula certificate, sending only UDP packets to a node's listener, can complete or be granted a tunnel session and reach the overlay network as an authenticated host.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_7f5d3c64-e346-4004-bb01-5cfb67e75566?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: firewall/packet.go -> Scope: Critical. An unprivileged attacker holding no CA-signed Nebula certificate, sending only UDP packets to a node's listener, can complete or be granted a tunnel session and reach the overlay network as an authenticated host.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_95500bdc-83af-435c-916f-af55686d3cec?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: firewall/cache.go -> Scope: Critical. An unprivileged attacker holding no CA-signed Nebula certificate, sending only UDP packets to a node's listener, can complete or be granted a tunnel session and reach the overlay network as an authenticated host.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_4defe7fd-b57f-4ec9-9c49-53c21af5b897?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: allow_list.go -> Scope: Critical. An unprivileged attacker holding no CA-signed Nebula certificate, sending only UDP packets to a node's listener, can complete or be granted a tunnel session and reach the overlay network as an authenticated host.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_7cbb7ae1-3475-4083-8928-91ad94eb6e2f?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: inside.go -> Scope: Critical. An unprivileged attacker holding no CA-signed Nebula certificate, sending only UDP packets to a node's listener, can complete or be granted a tunnel session and reach the overlay network as an authenticated host.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_e86b2957-3667-4456-88ce-c885174a0624?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: inside_generic.go -> Scope: Critical. An unprivileged attacker holding no CA-signed Nebula certificate, sending only UDP packets to a node's listener, can complete or be granted a tunnel session and reach the overlay network as an authenticated host.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_db93f5e3-f295-454d-ad1c-9fa36e32b755?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: inside_bsd.go -> Scope: Critical. An unprivileged attacker holding no CA-signed Nebula certificate, sending only UDP packets to a node's listener, can complete or be granted a tunnel session and reach the overlay network as an authenticated host.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_8a0e94e9-2fcc-4da6-b1f4-93f141f0d313?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: hostmap.go -> Scope: Critical. An unprivileged attacker holding no CA-signed Nebula certificate, sending only UDP packets to a node's listener, can complete or be granted a tunnel session and reach the overlay network as an authenticated host.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_d62cdce3-46c4-450d-ba7a-bb9ceeaebe9e?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: lighthouse.go -> Scope: Critical. An unprivileged attacker holding no CA-signed Nebula certificate, sending only UDP packets to a node's listener, can complete or be granted a tunnel session and reach the overlay network as an authenticated host.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_4f99e315-c7a8-4696-930b-304739d1c07a?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: remote_list.go -> Scope: Critical. An unprivileged attacker holding no CA-signed Nebula certificate, sending only UDP packets to a node's listener, can complete or be granted a tunnel session and reach the overlay network as an authenticated host.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_0d61d054-f2e0-4802-ad6b-7ef36fda67a0?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: relay_manager.go -> Scope: Critical. An unprivileged attacker holding no CA-signed Nebula certificate, sending only UDP packets to a node's listener, can complete or be granted a tunnel session and reach the overlay network as an authenticated host.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_c8c845b8-63c5-4e23-9286-c549924c1a45?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: calculated_remote.go -> Scope: Critical. An unprivileged attacker holding no CA-signed Nebula certificate, sending only UDP packets to a node's listener, can complete or be granted a tunnel session and reach the overlay network as an authenticated host.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_ad9e9b85-511e-4d00-8713-5ec4cceb9631?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: punchy.go -> Scope: Critical. An unprivileged attacker holding no CA-signed Nebula certificate, sending only UDP packets to a node's listener, can complete or be granted a tunnel session and reach the overlay network as an authenticated host.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_6bfbc17d-abe8-469a-b355-4fd15bd18372?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: routing/balance.go -> Scope: Critical. An unprivileged attacker holding no CA-signed Nebula certificate, sending only UDP packets to a node's listener, can complete or be granted a tunnel session and reach the overlay network as an authenticated host.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_e5bb11a0-849d-4b3b-bd25-6ea176adaa37?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: routing/gateway.go -> Scope: Critical. An unprivileged attacker holding no CA-signed Nebula certificate, sending only UDP packets to a node's listener, can complete or be granted a tunnel session and reach the overlay network as an authenticated host.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_957e7e7a-9257-4fda-9b84-f7c9fb8f2f29?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: interface.go -> Scope: Critical. An unprivileged attacker holding no CA-signed Nebula certificate, sending only UDP packets to a node's listener, can complete or be granted a tunnel session and reach the overlay network as an authenticated host.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_1dd786ae-7eb6-4bb7-ba94-8c75480710f4?mode=deep",
+    "questions_generated": false
+  }
+]
