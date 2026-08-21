@@ -1,0 +1,1 @@
+[File: 'cert/ca_pool.go -> CAPool.VerifyCachedCertificate'] Can an unprivileged attacker who previously obtained a CachedCertificate with signerFingerprint set exploit the early-return path in ncp.verify (\
