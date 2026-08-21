@@ -1,0 +1,17 @@
+[
+  {
+    "question": "'File Name: cmd/nebula/main.go -> Scope: Critical. An unprivileged attacker can break session crypto confidentiality or integrity, such as forcing nonce/counter reuse, key or cipher confusion, or replay-window bypass, so tunnel traffic can be decrypted, forged, or replayed into an established session.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_22920053-23b1-4e50-bb84-760551ad2257?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: cmd/nebula-service/main.go -> Scope: Critical. An unprivileged attacker can break session crypto confidentiality or integrity, such as forcing nonce/counter reuse, key or cipher confusion, or replay-window bypass, so tunnel traffic can be decrypted, forged, or replayed into an established session.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_f3bfb1b5-56c6-4c26-b23c-b35c6490e241?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: cmd/nebula-service/service.go -> Scope: Critical. An unprivileged attacker can break session crypto confidentiality or integrity, such as forcing nonce/counter reuse, key or cipher confusion, or replay-window bypass, so tunnel traffic can be decrypted, forged, or replayed into an established session.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_5988c099-4ae5-4474-ab0f-134ff13e241d?mode=deep",
+    "questions_generated": false
+  }
+]
