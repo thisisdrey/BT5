@@ -1,0 +1,152 @@
+[
+  {
+    "question": "'File Name: cert/crypto.go -> Scope: Critical. An unprivileged attacker can get a forged, self-signed, malformed, or version-confused certificate accepted by CA-pool verification, so an untrusted identity, expiry, network/subnet, or group set is treated as CA-signed and authorized.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_d77e2684-b174-4cd5-b4df-46cd50818eff?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: cert/sign.go -> Scope: Critical. An unprivileged attacker can get a forged, self-signed, malformed, or version-confused certificate accepted by CA-pool verification, so an untrusted identity, expiry, network/subnet, or group set is treated as CA-signed and authorized.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_fa62bad6-f8f6-4dc6-b5b4-a05357d5066a?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: cert/pem.go -> Scope: Critical. An unprivileged attacker can get a forged, self-signed, malformed, or version-confused certificate accepted by CA-pool verification, so an untrusted identity, expiry, network/subnet, or group set is treated as CA-signed and authorized.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_acb16940-bde7-432d-b820-a2f92edfdfd3?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: cert/errors.go -> Scope: Critical. An unprivileged attacker can get a forged, self-signed, malformed, or version-confused certificate accepted by CA-pool verification, so an untrusted identity, expiry, network/subnet, or group set is treated as CA-signed and authorized.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_1a33185b-bd9d-49cd-b94f-9b19d57218cb?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: cert/p256/p256.go -> Scope: Critical. An unprivileged attacker can get a forged, self-signed, malformed, or version-confused certificate accepted by CA-pool verification, so an untrusted identity, expiry, network/subnet, or group set is treated as CA-signed and authorized.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_1f1ee11b-e1d3-4cb6-bebc-e20e50156873?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: noiseutil/cipher_state.go -> Scope: Critical. An unprivileged attacker can get a forged, self-signed, malformed, or version-confused certificate accepted by CA-pool verification, so an untrusted identity, expiry, network/subnet, or group set is treated as CA-signed and authorized.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_3f95c0ad-838b-4778-973a-5fff12ba4500?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: noiseutil/aesgcm.go -> Scope: Critical. An unprivileged attacker can get a forged, self-signed, malformed, or version-confused certificate accepted by CA-pool verification, so an untrusted identity, expiry, network/subnet, or group set is treated as CA-signed and authorized.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_a3d17d52-3868-4d2a-9644-18e418300d4a?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: noiseutil/chachapoly.go -> Scope: Critical. An unprivileged attacker can get a forged, self-signed, malformed, or version-confused certificate accepted by CA-pool verification, so an untrusted identity, expiry, network/subnet, or group set is treated as CA-signed and authorized.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_cd0f7df4-7545-4a8c-a0b0-7101a8d663e1?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: noiseutil/nist.go -> Scope: Critical. An unprivileged attacker can get a forged, self-signed, malformed, or version-confused certificate accepted by CA-pool verification, so an untrusted identity, expiry, network/subnet, or group set is treated as CA-signed and authorized.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_b832cd36-3680-478f-a41e-b07799fbde4b?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: noiseutil/boring.go -> Scope: Critical. An unprivileged attacker can get a forged, self-signed, malformed, or version-confused certificate accepted by CA-pool verification, so an untrusted identity, expiry, network/subnet, or group set is treated as CA-signed and authorized.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_0f6beb3a-b349-4b9f-ac00-0146b7f2b5f4?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: noiseutil/notboring.go -> Scope: Critical. An unprivileged attacker can get a forged, self-signed, malformed, or version-confused certificate accepted by CA-pool verification, so an untrusted identity, expiry, network/subnet, or group set is treated as CA-signed and authorized.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_788f49d1-0938-4726-b3bd-561170b10cc0?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: boring.go -> Scope: Critical. An unprivileged attacker can get a forged, self-signed, malformed, or version-confused certificate accepted by CA-pool verification, so an untrusted identity, expiry, network/subnet, or group set is treated as CA-signed and authorized.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_eaaa8a31-a1db-47a7-9288-d9780c37c9cd?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: notboring.go -> Scope: Critical. An unprivileged attacker can get a forged, self-signed, malformed, or version-confused certificate accepted by CA-pool verification, so an untrusted identity, expiry, network/subnet, or group set is treated as CA-signed and authorized.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_11abf5ac-15a3-4966-8261-d50db4686481?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: bits.go -> Scope: Critical. An unprivileged attacker can get a forged, self-signed, malformed, or version-confused certificate accepted by CA-pool verification, so an untrusted identity, expiry, network/subnet, or group set is treated as CA-signed and authorized.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_8afcfbeb-c641-4ee1-bec7-8281ca5c05ab?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: firewall.go -> Scope: Critical. An unprivileged attacker can get a forged, self-signed, malformed, or version-confused certificate accepted by CA-pool verification, so an untrusted identity, expiry, network/subnet, or group set is treated as CA-signed and authorized.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_4e7c8d36-d027-4130-b8a2-965cd97ea477?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: firewall/packet.go -> Scope: Critical. An unprivileged attacker can get a forged, self-signed, malformed, or version-confused certificate accepted by CA-pool verification, so an untrusted identity, expiry, network/subnet, or group set is treated as CA-signed and authorized.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_b1f713cc-ad3a-4b4b-9db9-13b15b9bcf57?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: firewall/cache.go -> Scope: Critical. An unprivileged attacker can get a forged, self-signed, malformed, or version-confused certificate accepted by CA-pool verification, so an untrusted identity, expiry, network/subnet, or group set is treated as CA-signed and authorized.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_c3513a2a-64dd-4c13-9cd6-4ac306b85052?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: allow_list.go -> Scope: Critical. An unprivileged attacker can get a forged, self-signed, malformed, or version-confused certificate accepted by CA-pool verification, so an untrusted identity, expiry, network/subnet, or group set is treated as CA-signed and authorized.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_3e4015c5-9d8e-45e5-b37b-e6d8873d69f2?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: inside.go -> Scope: Critical. An unprivileged attacker can get a forged, self-signed, malformed, or version-confused certificate accepted by CA-pool verification, so an untrusted identity, expiry, network/subnet, or group set is treated as CA-signed and authorized.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_48caf528-9dce-4475-b5c1-89a6193ef2f3?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: inside_generic.go -> Scope: Critical. An unprivileged attacker can get a forged, self-signed, malformed, or version-confused certificate accepted by CA-pool verification, so an untrusted identity, expiry, network/subnet, or group set is treated as CA-signed and authorized.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_f7d6629b-c8d0-4f8b-8929-6f3558c7436d?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: inside_bsd.go -> Scope: Critical. An unprivileged attacker can get a forged, self-signed, malformed, or version-confused certificate accepted by CA-pool verification, so an untrusted identity, expiry, network/subnet, or group set is treated as CA-signed and authorized.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_e40644ee-dc1d-4f56-97f6-a3057c582e50?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: hostmap.go -> Scope: Critical. An unprivileged attacker can get a forged, self-signed, malformed, or version-confused certificate accepted by CA-pool verification, so an untrusted identity, expiry, network/subnet, or group set is treated as CA-signed and authorized.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_fdb694ff-7e77-4314-8828-50891e1101bc?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: lighthouse.go -> Scope: Critical. An unprivileged attacker can get a forged, self-signed, malformed, or version-confused certificate accepted by CA-pool verification, so an untrusted identity, expiry, network/subnet, or group set is treated as CA-signed and authorized.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_539c7593-d0a4-4abc-86b8-e3c002c87b9f?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: remote_list.go -> Scope: Critical. An unprivileged attacker can get a forged, self-signed, malformed, or version-confused certificate accepted by CA-pool verification, so an untrusted identity, expiry, network/subnet, or group set is treated as CA-signed and authorized.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_74aa421d-d4be-4c75-93b5-01371278cdd1?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: relay_manager.go -> Scope: Critical. An unprivileged attacker can get a forged, self-signed, malformed, or version-confused certificate accepted by CA-pool verification, so an untrusted identity, expiry, network/subnet, or group set is treated as CA-signed and authorized.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_16ba489c-2229-4a94-b002-b0858321fc52?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: calculated_remote.go -> Scope: Critical. An unprivileged attacker can get a forged, self-signed, malformed, or version-confused certificate accepted by CA-pool verification, so an untrusted identity, expiry, network/subnet, or group set is treated as CA-signed and authorized.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_5a468513-5f04-412e-94e6-41936152fe4b?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: punchy.go -> Scope: Critical. An unprivileged attacker can get a forged, self-signed, malformed, or version-confused certificate accepted by CA-pool verification, so an untrusted identity, expiry, network/subnet, or group set is treated as CA-signed and authorized.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_f5063a4c-36db-4995-a61c-83ded6138eac?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: routing/balance.go -> Scope: Critical. An unprivileged attacker can get a forged, self-signed, malformed, or version-confused certificate accepted by CA-pool verification, so an untrusted identity, expiry, network/subnet, or group set is treated as CA-signed and authorized.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_faf44efe-fa39-426a-b2fe-d3159f3fcff4?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: routing/gateway.go -> Scope: Critical. An unprivileged attacker can get a forged, self-signed, malformed, or version-confused certificate accepted by CA-pool verification, so an untrusted identity, expiry, network/subnet, or group set is treated as CA-signed and authorized.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_97031c2a-ff32-482b-b6f8-afbbe2e9d369?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: interface.go -> Scope: Critical. An unprivileged attacker can get a forged, self-signed, malformed, or version-confused certificate accepted by CA-pool verification, so an untrusted identity, expiry, network/subnet, or group set is treated as CA-signed and authorized.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_99182bde-a333-45f4-ac88-87d1ab2dd823?mode=deep",
+    "questions_generated": false
+  }
+]
