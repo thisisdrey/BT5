@@ -1,0 +1,13 @@
+# Q1131: Cipher selection confusion in nistCurve.DHName
+
+## Question
+Can an attacker influence the boringcrypto vs stdlib path so `nistCurve.DHName` (noiseutil/nist.go) decrypts with a different cipher or key schedule than the peer used to encrypt?
+
+## Target
+- File/function: `noiseutil/nist.go` -> `nistCurve.DHName` (declared at noiseutil/nist.go:68)
+- Entrypoint: Attacker-chosen ciphertext, message counter, and header bytes on the wire for an existing or forming session
+- Attacker controls: the boringcrypto vs stdlib path; the attacker holds no CA-signed certificate, no host or root access, no leaked keys, and no configuration control.
+- Exploit idea: Advertise or flip the cipher indicator and observe which routine `nistCurve.DHName` dispatches to.
+- Invariant to test: Cipher choice is fixed by the verified handshake and never re-derived from unauthenticated per-packet data.
+- Expected Immunefi impact: Crypto misuse enabling forged or malleable tunnel traffic.
+- Fast validation: Differential test encrypting with one cipher and decrypting through `nistCurve.DHName` under the other, asserting a hard failure.

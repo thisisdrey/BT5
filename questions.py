@@ -4,13 +4,13 @@ import os
 from decouple import config
 
 # todo: if scope_files is: 500 > 50, 300 > 30 , 100 > 10
-MAX_REPO = 20
+MAX_REPO = 10
 # todo: the GitLab namespace/project path, for example group/project
-SOURCE_REPO = "0dotxyz/marginfi-v2"
+SOURCE_REPO = "slackhq/nebula"
 # todo: the name of the repository
-REPO_NAME = "marginfi-v2"
+REPO_NAME = "nebula"
 
-run_number = os.environ.get("GITHUB_RUN_NUMBER", "0")
+run_number = os.environ.get('GITHUB_RUN_NUMBER', '0')
 
 
 def get_cyclic_index(run_number, max_index=100):
@@ -25,7 +25,7 @@ def load_repository_urls():
         return []
 
     try:
-        with open(repo_file, "r", encoding="utf-8") as f:
+        with open(repo_file, 'r', encoding='utf-8') as f:
             data = json.load(f)
     except (json.JSONDecodeError, OSError):
         return []
@@ -47,68 +47,140 @@ else:
         BASE_URL = f"https://deepwiki.com/{SOURCE_REPO}"
 
 scope_files = [
-    "programs/marginfi/src/lib.rs",
-    "programs/marginfi/src/constants.rs",
-    "programs/marginfi/src/errors.rs",
-    "programs/marginfi/src/events.rs",
-    "programs/marginfi/src/ix_utils.rs",
-    "programs/marginfi/src/macros.rs",
-    "programs/marginfi/src/prelude.rs",
-    "programs/marginfi/src/state/bank.rs",
-    "programs/marginfi/src/state/bank_cache.rs",
-    "programs/marginfi/src/state/bank_config.rs",
-    "programs/marginfi/src/state/emode.rs",
-    "programs/marginfi/src/state/fee_state.rs",
-    "programs/marginfi/src/state/interest_rate.rs",
-    "programs/marginfi/src/state/liquidation_record.rs",
-    "programs/marginfi/src/state/marginfi_account.rs",
-    "programs/marginfi/src/state/marginfi_group.rs",
-    "programs/marginfi/src/state/mod.rs",
-    "programs/marginfi/src/state/order.rs",
-    "programs/marginfi/src/state/panic_state.rs",
-    "programs/marginfi/src/state/price.rs",
-    "programs/marginfi/src/state/rate_limiter.rs",
-    "programs/marginfi/src/state/staked_settings.rs",
-    "programs/marginfi/src/instructions/mod.rs",
-    "programs/marginfi/src/instructions/marginfi_account/admin_close.rs",
-    "programs/marginfi/src/instructions/marginfi_account/borrow.rs",
-    "programs/marginfi/src/instructions/marginfi_account/close.rs",
-    "programs/marginfi/src/instructions/marginfi_account/close_balance.rs",
-    "programs/marginfi/src/instructions/marginfi_account/close_liquid_record.rs",
-    "programs/marginfi/src/instructions/marginfi_account/deposit.rs",
-    "programs/marginfi/src/instructions/marginfi_account/emissions.rs",
-    "programs/marginfi/src/instructions/marginfi_account/flashloan.rs",
-    "programs/marginfi/src/instructions/marginfi_account/freeze.rs",
-    "programs/marginfi/src/instructions/marginfi_account/init_liquid_record.rs",
-    "programs/marginfi/src/instructions/marginfi_account/initialize.rs",
-    "programs/marginfi/src/instructions/marginfi_account/liquidate.rs",
-    "programs/marginfi/src/instructions/marginfi_account/liquidate_end.rs",
-    "programs/marginfi/src/instructions/marginfi_account/liquidate_start.rs",
-    "programs/marginfi/src/instructions/marginfi_account/mod.rs",
-    "programs/marginfi/src/instructions/marginfi_account/order.rs",
-    "programs/marginfi/src/instructions/marginfi_account/pulse_health.rs",
-    "programs/marginfi/src/instructions/marginfi_account/purge_delev_balance.rs",
-    "programs/marginfi/src/instructions/marginfi_account/repay.rs",
-    "programs/marginfi/src/instructions/marginfi_account/sync_indexer_flags.rs",
-    "programs/marginfi/src/instructions/marginfi_account/transfer_account.rs",
-    "programs/marginfi/src/instructions/marginfi_account/withdraw.rs",
-    "programs/marginfi/src/instructions/marginfi_group/accrue_bank_interest.rs",
-    "programs/marginfi/src/instructions/marginfi_group/collect_bank_fees.rs",
-    "programs/marginfi/src/instructions/marginfi_group/handle_bankruptcy.rs",
-    "programs/marginfi/src/instructions/marginfi_group/mod.rs",
-    "programs/marginfi/src/instructions/marginfi_group/panic_unpause_permissionless.rs",
-    "programs/marginfi/src/instructions/marginfi_group/pulse_bank_price_cache.rs",
-    "programs/marginfi/src/instructions/marginfi_group/update_group_rate_limiter.rs",
+    # =================================================================================
+    # Untrusted UDP ingress, packet headers, and wire parsing
+    # =================================================================================
+    "outside.go",
+    "header/header.go",
+    "iputil/packet.go",
+    "udp/conn.go",
+    "udp/errors.go",
+    "udp/udp_generic.go",
+    "udp/udp_linux.go",
+    "udp/udp_linux_64.go",
+    "udp/udp_linux_32.go",
+    "udp/udp_bsd.go",
+    "udp/udp_darwin.go",
+    "udp/udp_android.go",
+    "udp/udp_windows.go",
+    "udp/udp_rio_windows.go",
+    "udp/netchange.go",
+    "udp/netchange_generic.go",
+
+    # =================================================================================
+    # Handshake state machine and peer authentication trust boundary
+    # =================================================================================
+    "handshake_manager.go",
+    "handshake/machine.go",
+    "handshake/credential.go",
+    "handshake/payload.go",
+    "handshake/patterns.go",
+    "handshake/errors.go",
+    "connection_state.go",
+    "connection_manager.go",
+    "pki.go",
+
+    # =================================================================================
+    # Certificate parsing, signature verification, and CA trust decisions
+    # =================================================================================
+    "cert/cert.go",
+    "cert/cert_v1.go",
+    "cert/cert_v2.go",
+    "cert/ca_pool.go",
+    "cert/asn1.go",
+    "cert/crypto.go",
+    "cert/sign.go",
+    "cert/pem.go",
+    "cert/errors.go",
+    "cert/p256/p256.go",
+
+    # =================================================================================
+    # Session crypto: cipher state, nonce/counter handling, and replay windows
+    # =================================================================================
+    "noiseutil/cipher_state.go",
+    "noiseutil/aesgcm.go",
+    "noiseutil/chachapoly.go",
+    "noiseutil/nist.go",
+    "noiseutil/boring.go",
+    "noiseutil/notboring.go",
+    "boring.go",
+    "notboring.go",
+    "bits.go",
+
+    # =================================================================================
+    # Firewall, group/CIDR policy enforcement, and inside-to-outside gating
+    # =================================================================================
+    "firewall.go",
+    "firewall/packet.go",
+    "firewall/cache.go",
+    "allow_list.go",
+    "inside.go",
+    "inside_generic.go",
+    "inside_bsd.go",
+
+    # =================================================================================
+    # Peer address trust: hostmap, lighthouse, relays, roaming, and punching
+    # =================================================================================
+    "hostmap.go",
+    "lighthouse.go",
+    "remote_list.go",
+    "relay_manager.go",
+    "calculated_remote.go",
+    "punchy.go",
+    "routing/balance.go",
+    "routing/gateway.go",
+
+    # =================================================================================
+    # Tunnel egress, virtual device, and route installation
+    # =================================================================================
+    "interface.go",
+    "overlay/tun.go",
+    "overlay/device.go",
+    "overlay/route.go",
+    "overlay/user.go",
+    "overlay/tun_linux.go",
+    "overlay/tun_darwin.go",
+    "overlay/tun_windows.go",
+    "overlay/tun_notwin.go",
+    "overlay/tun_disabled.go",
+    "wintun/tun.go",
+    "wintun/device.go",
+    "wfp/wfp_windows.go",
+
+    # =================================================================================
+    # Local control surfaces, config reload, and process lifecycle
+    # =================================================================================
+    "main.go",
+    "control.go",
+    "config/config.go",
+    "config/default.go",
+    "ssh.go",
+    "sshd/server.go",
+    "sshd/session.go",
+    "sshd/command.go",
+    "sshd/writer.go",
+    "dns_server.go",
+    "service/service.go",
+    "service/listener.go",
+    "scheduler.go",
+    "timeout.go",
+    "stats.go",
+    "message_metrics.go",
+    "util/error.go",
+    "logging/logger.go",
+    "cmd/nebula/main.go",
+    "cmd/nebula-service/main.go",
+    "cmd/nebula-service/service.go",
 ]
 
 
 target_scopes = [
-    "Critical. An unprivileged user can withdraw, borrow, transfer, liquidate, settle, or receive assets they are not entitled to, causing direct theft or unauthorized movement of user or vault funds.",
-    "Critical. An unprivileged user can create unbacked debt, bypass health or collateral checks, or corrupt share accounting so protocol solvency is reduced or bad debt is socialized incorrectly.",
-    "High. An unprivileged user can permanently freeze, strand, or orphan another user's funds or protocol-owned value through reachable account, liquidation, bankruptcy, or close flows.",
-    "High. An unprivileged user can bypass authority checks on account ownership, delegates, liquidator rights, or keeper-only actions and mutate another user's margin state.",
-    "High. A flashloan, order, liquidation, interest-accrual, or fee-collection edge case lets an unprivileged user extract excess value, skip repayment, or leave bank and account state inconsistent.",
-    "Medium. A mainnet-reachable user path misprices collateral or liabilities, misapplies fees, or breaks invariants in a way that is exploitable but does not immediately yield direct theft.",
+    "Critical. An unprivileged attacker holding no CA-signed Nebula certificate, sending only UDP packets to a node's listener, can complete or be granted a tunnel session and reach the overlay network as an authenticated host.",
+    "Critical. An unprivileged attacker can get a forged, self-signed, malformed, or version-confused certificate accepted by CA-pool verification, so an untrusted identity, expiry, network/subnet, or group set is treated as CA-signed and authorized.",
+    "Critical. An unprivileged attacker can break session crypto confidentiality or integrity, such as forcing nonce/counter reuse, key or cipher confusion, or replay-window bypass, so tunnel traffic can be decrypted, forged, or replayed into an established session.",
+    "Critical. An unprivileged attacker can bypass firewall or unsafe-route policy so packets they inject reach inside services, tun-routed hosts, or the host network that the configured rules, groups, or CIDRs must deny.",
+    "High. An unprivileged attacker spoofing UDP source addresses or sending unauthenticated lighthouse, relay, or handshake packets can poison hostmap/remote-list state, hijack roaming, or steer another host's traffic through an attacker-chosen path.",
+    "High. An unprivileged attacker can use malformed packet headers, certificates, or handshake payloads to panic, deadlock, exhaust memory, or wedge a remote node's packet-processing path, taking the tunnel down for all its peers.",
 ]
 
 
@@ -118,49 +190,47 @@ scope_scan = [
 
 def question_generator(target_file: str) -> str:
     """
-    Generate exploit-focused audit and fuzzing questions for one marginfi target.
+    Generate exploit-focused audit and fuzzing questions for one nebula target.
 
     ```
     target_file format:
-    "'File Name: programs/marginfi/src/state/bank.rs -> Scope: Critical. ...'"
-    ```
+    "'File Name: outside.go -> Scope: Critical. ...'"
     """
 
     prompt = f"""
     ```
 
-    Generate exploit-focused security audit and fuzzing questions for this exact marginfi target:
+    Generate exploit-focused security audit and fuzzing questions for this exact nebula target:
 
     {target_file}
 
     Project focus:
-    This set covers the core on-chain margin lending engine: deposits, borrows, withdrawals, repayments, liquidations, orders, flashloans, interest accrual, fee settlement, bankruptcy, and the state/accounting that makes those flows safe.
+    nebula is a Go overlay networking tool. Focus on untrusted UDP packet parsing, Noise handshake authentication, certificate and CA-pool verification, session crypto and nonce handling, firewall/group policy enforcement, and hostmap/lighthouse/relay address trust.
 
     Rules:
-    * Treat `File Name:` as the exact file/module.
+    * Treat `File Name:` as the exact file/package.
     * Treat `Scope:` as the ONLY impact to target.
     * Assume full repo context is accessible.
     * Do not ask for code or say anything is missing.
-    * Use exact Rust symbols when possible.
-    * Attacker is unprivileged only: a normal user, liquidator, keeper, or caller using valid public instructions with arbitrary accounts, amounts, ordering, and timing.
-    * Never assume admin, governance, risk admin, oracle operator, privileged signer, leaked key, malicious validator, malicious peer, or node/config control.
-    * Stay on production/release-relevant behavior. If a path only matters for a feature not used in production, do not frame it as Critical.
-    * Do not rely on tests, mocks, generated files, off-repo assumptions, or direct state mutation.
-    * Out of scope per SECURITY.md: privileged-address assumptions, pure liquidity issues, Sybil/social engineering, high-traffic DoS, third-party oracle bad data by itself, user-chosen order slippage, propagation-only misses, known rate-limit bypasses, known unaccrued-interest-at-risk-check behavior, Solend whitelist omissions, current non-operational Drift-only issues, and admin-chosen T22 listing risk.
-    * Generate 12 to 18 high-signal questions.
-    * At least 70% must be multi-step solvency, authorization, accounting, liquidation, or permanent-freeze questions.
-    * Every question must be testable by unit test, integration test, invariant test, or fuzz test.
+    * Use exact Go symbols (func, method, struct, field) when possible.
+    * Attacker is unprivileged only: a network host with NO certificate signed by a trusted CA, no host/root access, no leaked keys, no config control, no CA compromise. They may send arbitrary UDP to the listener, spoof source addresses, and present self-signed or malformed certificates.
+    * Never assume a malicious peer, malicious node, compromised lighthouse, or any attacker who already holds a valid CA-signed certificate.
+    * Ignore test files, mocks, docs, generated files (*.pb.go), build scripts, config-only findings, and dependency-only issues.
+    * Generate 12 to 16 high-signal questions.
+    * At least 70% must target authentication bypass, certificate/CA verification flaws, session crypto or replay flaws, firewall policy bypass, or remote address/state poisoning.
+    * Every question must be testable by unit test, integration test, fuzz test, invariant test, or differential test.
     * Avoid generic checklist questions and repeated root causes.
 
     Core invariants:
-    * Only the rightful authority can move, close, freeze, or reassign a margin account or balance.
-    * Health checks, share math, fee math, and interest accrual never let a user take more value than they repay or post.
-    * No user instruction sequence can create unbacked assets, erase debt, or socialize losses incorrectly.
-    * Liquidation, bankruptcy, flashloan, and order flows must preserve bank solvency and leave state internally consistent.
-    * Permissionless cranks cannot seize extra value, skip required checks, or strand third-party funds.
+    * No packet is trusted before authentication: unauthenticated input must never mutate hostmap, lighthouse, relay, or session state, or select a decryption key.
+    * Certificate verification is fail-closed: signature, CA chain, version, expiry, network/subnet, and group checks must all pass, and unknown or malformed fields must reject rather than default-allow.
+    * Session crypto is sound: each key is used with a unique nonce, counters never rewind or wrap into reuse, and replayed or out-of-window packets are dropped.
+    * Firewall enforcement is total: every inbound tunnel packet and every routed packet is checked against the sending certificate's identity, groups, and networks before it reaches the tun device.
+    * Peer addressing is authenticated: a remote's underlay address, relay path, or roam only changes on cryptographically verified traffic from that peer.
+    * Untrusted lengths and offsets never drive slicing, allocation, or unbounded loops in packet, header, ASN.1, or protobuf parsing.
 
     Each question must include:
-    1. target function/module;
+    1. target function/package;
     2. attacker action;
     3. preconditions;
     4. call sequence;
@@ -171,7 +241,7 @@ def question_generator(target_file: str) -> str:
     Output only valid Python. No markdown. No explanations.
 
     questions = [
-    "[File: {target_file}] [Function: symbol_or_module] Can an unprivileged ATTACKER_ACTION under PRECONDITIONS trigger CALL_SEQUENCE, violating INVARIANT, causing scoped impact: SCOPE_IMPACT? Proof idea: test/fuzz PARAMETERS and assert AUTHZ_HOLDS, HEALTH_HOLDS, SHARE_ACCOUNTING, SOLVENCY, or NO_STRANDED_FUNDS.",
+    "[File: {target_file}] [Function: symbol_or_package] Can an unprivileged ATTACKER_ACTION under PRECONDITIONS trigger CALL_SEQUENCE, violating INVARIANT, causing scoped impact: SCOPE_IMPACT? Proof idea: unit/integration/fuzz PARAMETERS and assert AUTH_ENFORCEMENT, CERT_VERIFICATION, CRYPTO_INTEGRITY, or FIREWALL_ENFORCEMENT.",
     ]
     """
     return prompt
@@ -179,7 +249,7 @@ def question_generator(target_file: str) -> str:
 
 def audit_format(security_question: str) -> str:
     """
-    Generate a focused marginfi exploit-validation prompt.
+    Generate a focused nebula exploit-validation prompt.
     """
 
     prompt = f"""# SECURITY AUDIT PROMPT
@@ -189,16 +259,16 @@ def audit_format(security_question: str) -> str:
 
 ## Rules
 - Use existing repo context only. Analyze only this question and scoped impact.
-- Attacker is unprivileged only: a normal user, liquidator, keeper, or public caller using reachable on-chain instructions.
-- Reject anything requiring admin/governance/risk-admin control, leaked keys, malicious validators/peers, direct state mutation, mocks, or best-practice-only cleanup.
-- Prefer mainnet or release/pre-release relevant paths. If the claim depends on a non-production feature, do not treat it as Critical.
-- Out of scope per SECURITY.md: pure liquidity issues, third-party oracle bad data by itself, Sybil/social engineering, high-traffic DoS, user-chosen order slippage, propagation-only misses, known rate-limit bypasses, known unaccrued-interest-at-risk-check behavior, Solend whitelist omissions, current non-operational Drift-only issues, and admin-chosen T22 listing risk.
+- Attacker is unprivileged only: no CA-signed certificate, no host/root access, no leaked keys, no config or CA control, no social engineering.
+- Never assume a malicious peer, malicious node, or compromised lighthouse.
+- Reject anything depending only on test/mock/config/docs/generated files, dependency bugs alone, or best-practice cleanup without exploitable impact.
+- Focus on paths reachable from attacker-sent UDP packets, spoofed source addresses, or attacker-presented certificates.
 
 ## Validate
-- Trace the exact reachable Rust path from the public instruction entrypoint into state mutation and settlement logic.
-- Check whether signer, owner, health, share-math, limit, fee, liquidation, and bankruptcy guards already stop it.
-- Accept only real theft, unauthorized transfer, unbacked borrow, insolvency/bad debt, unauthorized state change, or permanent lock/freeze of funds.
-- Require exact file/function support and a reproducible Rust unit, integration, invariant, or fuzz PoC.
+- Trace the exact reachable Go path from attacker input into handshake, certificate verification, session crypto, firewall, or hostmap/relay state.
+- Check whether existing verification, drop paths, replay windows, or firewall checks already stop it.
+- Accept only real authentication bypass, certificate/CA verification bypass, traffic decryption/forgery/replay, firewall bypass, remote state poisoning, or remote crash/wedge.
+- Require exact file/function support and a reproducible unit/integration/fuzz/invariant PoC.
 
 ## Output
 If valid, output exactly:
@@ -213,7 +283,7 @@ If valid, output exactly:
 [Code path, root cause, attacker inputs, exploit flow, and why checks fail]
 
 ### Impact Explanation
-[Concrete scoped impact and why it matters under marginfi's bounty rules]
+[Concrete scoped impact and matching Nebula bounty impact]
 
 ### Likelihood Explanation
 [Preconditions, feasibility, repeatability]
@@ -222,7 +292,7 @@ If valid, output exactly:
 [Specific fix]
 
 ### Proof of Concept
-[Rust unit/integration/invariant/fuzz test plan with expected assertions]
+[Unit/integration test or fuzz/invariant test plan with expected assertions]
 
 If invalid, output exactly:
 #NoVulnerability found for this question.
@@ -234,7 +304,7 @@ No extra text.
 
 def validation_format(report: str) -> str:
     """
-    Generate a strict bounty-style validation prompt for marginfi security claims.
+    Generate a strict bounty-style validation prompt for nebula security claims.
     """
     prompt = f"""# VALIDATION PROMPT
 
@@ -246,30 +316,29 @@ def validation_format(report: str) -> str:
 - Check SECURITY.md and Researcher.Md for scope, exclusions, and valid impact classes.
 - Do not create a new vulnerability if the submitted claim is weak or invalid.
 - Do not upgrade severity unless the provided evidence proves the higher impact.
-- Reject admin-only, governance-only, oracle-operator-only, validator/peer-only, leaked-key, docs/style, mock-only, generated-file, or purely theoretical issues.
-- Reject if the exploit needs unrealistic assumptions, user self-harm, direct state mutation, or unsupported protocol behavior.
-- Reject if the bug is already acknowledged as out of scope in SECURITY.md.
-- A valid report must be triggerable by an unprivileged user unless the claim proves privilege escalation from an unprivileged path.
-- The final impact must fit marginfi's on-chain bounty scope: direct theft, unauthorized state change, protocol insolvency/bad debt, or permanent lock/freeze of funds.
+- Reject malicious-peer, malicious-node, compromised-lighthouse, valid-certificate-holder, root/host-access, leaked-key, CA-compromise, local-network-only, physical-access, dependency-only, docs/style, generated-file, test/mock/config-only, and purely theoretical issues.
+- Reject volumetric DDoS, resource exhaustion requiring flooding, and issues needing operator misconfiguration.
+- A valid report must be triggerable by a network attacker holding no CA-signed certificate, unless the claim proves escalation from that unprivileged position.
+- The final impact must map to an in-scope Nebula impact such as authentication bypass onto the overlay, certificate/CA verification bypass, tunnel traffic decryption/forgery/replay, firewall policy bypass, hostmap/relay/roaming poisoning, or remote node crash from a single crafted packet.
 - Prefer #NoVulnerability over speculative reports.
 
 ## Required Validation Checks
 All must pass:
 1. Exact in-scope file, function, and line/code references.
-2. Clear root cause and broken authorization, accounting, or solvency assumption.
+2. Clear root cause and broken security assumption.
 3. Reachable exploit path: preconditions -> attacker action -> trigger -> bad result.
 4. Existing checks/guards reviewed and shown insufficient.
 5. Concrete in-scope impact with realistic likelihood.
-6. Reproducible proof path: unit PoC, integration test, invariant/fuzz test, or exact manual steps.
-7. No obvious rejection reason from SECURITY.md, known issues, privileges, or scope exclusions.
+6. Reproducible proof path: unit PoC, integration test, invariant/fuzz test, or exact packet-level steps.
+7. No obvious rejection reason from SECURITY.md, known issues, privilege assumptions, or scope exclusions.
 
 ## Silent Triage Questions
 Before output, internally answer:
-- Can a normal user or public keeper trigger this without privileged keys?
+- Can an attacker with no valid certificate and no host access trigger this?
 - Does the code actually behave as claimed?
-- Is the impact caused by this code, not by a malicious node, peer, or privileged operator?
-- Is the loss, lock, or insolvency concrete, not hypothetical?
-- Would the marginfi team treat this as in-scope under the current SECURITY.md?
+- Is the impact caused by this code, not by configuration, a dependency, or a trusted peer's behavior?
+- Is the bypass, disclosure, forgery, or crash concrete, not hypothetical?
+- Would a bounty triager accept the proof?
 - What exact test would prove it?
 
 ## Output
@@ -287,7 +356,7 @@ Audit Report
 [Exact code path, root cause, exploit flow, and why existing checks fail]
 
 ## Impact Explanation
-[Concrete in-scope impact and severity rationale]
+[Concrete in-scope impact, severity rationale, and bounty category]
 
 ## Likelihood Explanation
 [Attacker capability, required conditions, feasibility, repeatability]
@@ -308,7 +377,7 @@ Output only one of the two outcomes above. No extra text.
 
 def scan_format(report: str) -> str:
     """
-    Generate a short cross-project analog scan prompt for core marginfi flows.
+    Generate a short cross-project analog scan prompt for nebula.
     """
     prompt = f"""# ANALOG SCAN PROMPT
 
@@ -318,14 +387,13 @@ def scan_format(report: str) -> str:
 ## Rules
 - Use in-scope production repo context only. Do not ask for code or claim missing files.
 - Use the external report only as a bug-class hint, not as proof.
-- Keep only unprivileged-user analogs in margin account, bank, liquidation, order, flashloan, fee, bankruptcy, and core accounting paths.
-- Reject validator, peer, privileged-admin, mocked-only, theoretical-only, or no-impact analogs.
-- Reject analogs that only match known out-of-scope issues in SECURITY.md.
+- Keep only analogs reachable by an attacker with no CA-signed certificate: packet/header/ASN.1 parsing, handshake authentication, certificate and CA-pool verification, nonce/replay handling, firewall enforcement, or hostmap/lighthouse/relay address trust.
+- Reject malicious-peer/node/lighthouse analogs, valid-certificate-holder analogs, host-access analogs, test-only paths, dependency-only bugs, and no-impact analogs.
 
 ## Validate
-- Map the bug class to the strongest reachable marginfi path.
+- Map the bug class to the strongest reachable nebula path.
 - Prove root cause with exact file/function support.
-- Accept only concrete theft, unauthorized transfer, insolvency/bad debt, unauthorized state change, or permanent lock/freeze.
+- Accept only concrete authentication bypass, certificate verification bypass, traffic decryption/forgery/replay, firewall bypass, remote state poisoning, or remote crash impact.
 
 ## Output (Strict)
 If valid analog exists, output:
