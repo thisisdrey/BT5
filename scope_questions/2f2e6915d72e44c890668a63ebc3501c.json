@@ -1,0 +1,152 @@
+[
+  {
+    "question": "'File Name: overlay/tun.go -> Scope: High. An unprivileged attacker spoofing UDP source addresses or sending unauthenticated lighthouse, relay, or handshake packets can poison hostmap/remote-list state, hijack roaming, or steer another host's traffic through an attacker-chosen path.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_7756985f-7c18-4b93-ab8a-18a14367e970?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: overlay/device.go -> Scope: High. An unprivileged attacker spoofing UDP source addresses or sending unauthenticated lighthouse, relay, or handshake packets can poison hostmap/remote-list state, hijack roaming, or steer another host's traffic through an attacker-chosen path.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_940b76e2-1b69-40e1-aaec-e35a6b16ba2d?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: overlay/route.go -> Scope: High. An unprivileged attacker spoofing UDP source addresses or sending unauthenticated lighthouse, relay, or handshake packets can poison hostmap/remote-list state, hijack roaming, or steer another host's traffic through an attacker-chosen path.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_92241951-d9cb-43f0-89d0-ecb437ee88ce?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: overlay/user.go -> Scope: High. An unprivileged attacker spoofing UDP source addresses or sending unauthenticated lighthouse, relay, or handshake packets can poison hostmap/remote-list state, hijack roaming, or steer another host's traffic through an attacker-chosen path.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_313bb097-210c-4c8d-ae40-9e4f093ec5d7?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: overlay/tun_linux.go -> Scope: High. An unprivileged attacker spoofing UDP source addresses or sending unauthenticated lighthouse, relay, or handshake packets can poison hostmap/remote-list state, hijack roaming, or steer another host's traffic through an attacker-chosen path.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_24f2d9e2-a979-4c77-a14f-e293c28ffc82?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: overlay/tun_darwin.go -> Scope: High. An unprivileged attacker spoofing UDP source addresses or sending unauthenticated lighthouse, relay, or handshake packets can poison hostmap/remote-list state, hijack roaming, or steer another host's traffic through an attacker-chosen path.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_bbb2531d-cb8f-46ee-8862-6bb5ebdb63a7?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: overlay/tun_windows.go -> Scope: High. An unprivileged attacker spoofing UDP source addresses or sending unauthenticated lighthouse, relay, or handshake packets can poison hostmap/remote-list state, hijack roaming, or steer another host's traffic through an attacker-chosen path.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_92de7e28-ba61-4e9a-bd43-d2b66ee4f6e6?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: overlay/tun_notwin.go -> Scope: High. An unprivileged attacker spoofing UDP source addresses or sending unauthenticated lighthouse, relay, or handshake packets can poison hostmap/remote-list state, hijack roaming, or steer another host's traffic through an attacker-chosen path.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_3bee9c4a-f8e6-47f2-847e-e06e666878eb?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: overlay/tun_disabled.go -> Scope: High. An unprivileged attacker spoofing UDP source addresses or sending unauthenticated lighthouse, relay, or handshake packets can poison hostmap/remote-list state, hijack roaming, or steer another host's traffic through an attacker-chosen path.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_d62ad1ad-88ee-4034-b4e6-98cdb165ed7b?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: wintun/tun.go -> Scope: High. An unprivileged attacker spoofing UDP source addresses or sending unauthenticated lighthouse, relay, or handshake packets can poison hostmap/remote-list state, hijack roaming, or steer another host's traffic through an attacker-chosen path.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_1bdba2e8-9187-4f41-99d5-ac55c0b24e12?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: wintun/device.go -> Scope: High. An unprivileged attacker spoofing UDP source addresses or sending unauthenticated lighthouse, relay, or handshake packets can poison hostmap/remote-list state, hijack roaming, or steer another host's traffic through an attacker-chosen path.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_eb3eb986-db2f-43c8-82cc-49966c22d714?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: wfp/wfp_windows.go -> Scope: High. An unprivileged attacker spoofing UDP source addresses or sending unauthenticated lighthouse, relay, or handshake packets can poison hostmap/remote-list state, hijack roaming, or steer another host's traffic through an attacker-chosen path.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_f6d494b6-fc55-4155-8bc3-f2b3f0f426eb?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: main.go -> Scope: High. An unprivileged attacker spoofing UDP source addresses or sending unauthenticated lighthouse, relay, or handshake packets can poison hostmap/remote-list state, hijack roaming, or steer another host's traffic through an attacker-chosen path.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_53004b74-79d6-4ba7-a85a-441bc9b6d987?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: control.go -> Scope: High. An unprivileged attacker spoofing UDP source addresses or sending unauthenticated lighthouse, relay, or handshake packets can poison hostmap/remote-list state, hijack roaming, or steer another host's traffic through an attacker-chosen path.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_c67dd741-47a1-47f4-8549-1558dba44145?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: config/config.go -> Scope: High. An unprivileged attacker spoofing UDP source addresses or sending unauthenticated lighthouse, relay, or handshake packets can poison hostmap/remote-list state, hijack roaming, or steer another host's traffic through an attacker-chosen path.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_726ff5ad-2297-4ae9-97b7-d2784b264733?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: config/default.go -> Scope: High. An unprivileged attacker spoofing UDP source addresses or sending unauthenticated lighthouse, relay, or handshake packets can poison hostmap/remote-list state, hijack roaming, or steer another host's traffic through an attacker-chosen path.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_11bfa6c3-ba15-4665-91c0-4f54ccf68755?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: ssh.go -> Scope: High. An unprivileged attacker spoofing UDP source addresses or sending unauthenticated lighthouse, relay, or handshake packets can poison hostmap/remote-list state, hijack roaming, or steer another host's traffic through an attacker-chosen path.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_f7833fdd-be07-4d9b-bdb8-630aa6639aec?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: sshd/server.go -> Scope: High. An unprivileged attacker spoofing UDP source addresses or sending unauthenticated lighthouse, relay, or handshake packets can poison hostmap/remote-list state, hijack roaming, or steer another host's traffic through an attacker-chosen path.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_45683cc3-9ae6-4263-bef6-5b1ae833d987?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: sshd/session.go -> Scope: High. An unprivileged attacker spoofing UDP source addresses or sending unauthenticated lighthouse, relay, or handshake packets can poison hostmap/remote-list state, hijack roaming, or steer another host's traffic through an attacker-chosen path.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_c0335e67-b057-4206-9c19-4df59205eded?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: sshd/command.go -> Scope: High. An unprivileged attacker spoofing UDP source addresses or sending unauthenticated lighthouse, relay, or handshake packets can poison hostmap/remote-list state, hijack roaming, or steer another host's traffic through an attacker-chosen path.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_51a4afd7-d3ce-495f-8ec8-56dd54788560?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: sshd/writer.go -> Scope: High. An unprivileged attacker spoofing UDP source addresses or sending unauthenticated lighthouse, relay, or handshake packets can poison hostmap/remote-list state, hijack roaming, or steer another host's traffic through an attacker-chosen path.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_e32bd309-a7dc-449c-aba2-955e7db6dbf9?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: dns_server.go -> Scope: High. An unprivileged attacker spoofing UDP source addresses or sending unauthenticated lighthouse, relay, or handshake packets can poison hostmap/remote-list state, hijack roaming, or steer another host's traffic through an attacker-chosen path.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_3c64a6c6-8bb9-4fb5-8042-af7112a74c9d?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: service/service.go -> Scope: High. An unprivileged attacker spoofing UDP source addresses or sending unauthenticated lighthouse, relay, or handshake packets can poison hostmap/remote-list state, hijack roaming, or steer another host's traffic through an attacker-chosen path.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_93b8535b-f04e-48f9-931c-c2cdb143fd9e?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: service/listener.go -> Scope: High. An unprivileged attacker spoofing UDP source addresses or sending unauthenticated lighthouse, relay, or handshake packets can poison hostmap/remote-list state, hijack roaming, or steer another host's traffic through an attacker-chosen path.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_63bf1416-6ec8-4ba7-9856-d8472bc63325?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: scheduler.go -> Scope: High. An unprivileged attacker spoofing UDP source addresses or sending unauthenticated lighthouse, relay, or handshake packets can poison hostmap/remote-list state, hijack roaming, or steer another host's traffic through an attacker-chosen path.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_370fa8fe-c242-491a-984f-053d71ab91a6?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: timeout.go -> Scope: High. An unprivileged attacker spoofing UDP source addresses or sending unauthenticated lighthouse, relay, or handshake packets can poison hostmap/remote-list state, hijack roaming, or steer another host's traffic through an attacker-chosen path.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_991b2023-aa42-4da4-b45a-a43c3d825c55?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: stats.go -> Scope: High. An unprivileged attacker spoofing UDP source addresses or sending unauthenticated lighthouse, relay, or handshake packets can poison hostmap/remote-list state, hijack roaming, or steer another host's traffic through an attacker-chosen path.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_42e0b01a-c439-4560-ac8f-7a8bab637da4?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: message_metrics.go -> Scope: High. An unprivileged attacker spoofing UDP source addresses or sending unauthenticated lighthouse, relay, or handshake packets can poison hostmap/remote-list state, hijack roaming, or steer another host's traffic through an attacker-chosen path.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_f07276c8-ba6e-4041-b95e-6985be5ab29b?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: util/error.go -> Scope: High. An unprivileged attacker spoofing UDP source addresses or sending unauthenticated lighthouse, relay, or handshake packets can poison hostmap/remote-list state, hijack roaming, or steer another host's traffic through an attacker-chosen path.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_74766a39-ae25-43cd-b88f-8071bf768bfe?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: logging/logger.go -> Scope: High. An unprivileged attacker spoofing UDP source addresses or sending unauthenticated lighthouse, relay, or handshake packets can poison hostmap/remote-list state, hijack roaming, or steer another host's traffic through an attacker-chosen path.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_b6f436ab-af0d-4d95-8d46-8cd14dc6cc21?mode=deep",
+    "questions_generated": false
+  }
+]
