@@ -1,1 +1,0 @@
-[File: hostmap.go -> Scope: High] [Function: HostMap.unlockedAddHostInfo -> f.dnsServer.Add] Can an attacker whose certificate has a crafted or empty Certificate.Name() (e.g. empty string, control characters, or extremely long name) cause f.dnsServer.Add(remoteCert.Certificate.Name()+\
