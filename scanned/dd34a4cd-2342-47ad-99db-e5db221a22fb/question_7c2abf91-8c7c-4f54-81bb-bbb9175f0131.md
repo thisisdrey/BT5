@@ -1,0 +1,1 @@
+[File: cert/crypto.go] [Function: EncryptAndMarshalSigningPrivateKey] Can an attacker who controls only the 'curve' argument indirectly (e.g. via a malformed cert.Curve value smuggled through an upstream parser that this function trusts without validating against the Curve enum's known set) cause the 'default: return nil, fmt.Errorf(\

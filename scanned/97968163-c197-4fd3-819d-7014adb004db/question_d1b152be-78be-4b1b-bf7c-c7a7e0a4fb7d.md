@@ -1,0 +1,1 @@
+[File: cert/crypto.go -> Scope: Critical cipher confusion via algorithm field] [Function: DecryptAndUnmarshalSigningPrivateKey] Can an unprivileged attacker set EncryptionAlgorithm to a string that is a case-variant or near-match of \

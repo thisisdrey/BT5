@@ -1,0 +1,1 @@
+[File: 'noiseutil/cipher_state.go'] [Function: NewCipherState] Can an unprivileged attacker who cannot complete a valid Noise handshake nonetheless cause the switch in NewCipherState to fall through the default case and panic(fmt.Sprintf(\

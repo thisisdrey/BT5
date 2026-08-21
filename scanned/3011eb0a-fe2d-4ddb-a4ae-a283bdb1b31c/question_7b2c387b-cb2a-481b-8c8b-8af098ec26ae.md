@@ -1,0 +1,1 @@
+[File: 'cert/ca_pool.go'] [Function: CAPool.GetCAForCert / verify] Can an attacker send a certificate with an empty-string Issuer that happens to collide with the zero-value/default key of the ncp.CAs map under some marshaling bug, or exploit `if issuer == \
