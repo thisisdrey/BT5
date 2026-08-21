@@ -1,0 +1,152 @@
+[
+  {
+    "question": "'File Name: outside.go -> Scope: Critical. An unprivileged attacker can break session crypto confidentiality or integrity, such as forcing nonce/counter reuse, key or cipher confusion, or replay-window bypass, so tunnel traffic can be decrypted, forged, or replayed into an established session.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_aa810b1b-b0c6-4e18-993c-e5708ddd6e7c?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: header/header.go -> Scope: Critical. An unprivileged attacker can break session crypto confidentiality or integrity, such as forcing nonce/counter reuse, key or cipher confusion, or replay-window bypass, so tunnel traffic can be decrypted, forged, or replayed into an established session.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_4b4fd508-2891-43b0-9fed-315be8b63f10?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: iputil/packet.go -> Scope: Critical. An unprivileged attacker can break session crypto confidentiality or integrity, such as forcing nonce/counter reuse, key or cipher confusion, or replay-window bypass, so tunnel traffic can be decrypted, forged, or replayed into an established session.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_0267c55a-2ac3-4b0c-8f16-7ce2086bae3c?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: udp/conn.go -> Scope: Critical. An unprivileged attacker can break session crypto confidentiality or integrity, such as forcing nonce/counter reuse, key or cipher confusion, or replay-window bypass, so tunnel traffic can be decrypted, forged, or replayed into an established session.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_c183da2b-de97-476b-bc0d-df9cda98a295?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: udp/errors.go -> Scope: Critical. An unprivileged attacker can break session crypto confidentiality or integrity, such as forcing nonce/counter reuse, key or cipher confusion, or replay-window bypass, so tunnel traffic can be decrypted, forged, or replayed into an established session.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_4e489be9-0127-44ea-8a74-764a67eeede0?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: udp/udp_generic.go -> Scope: Critical. An unprivileged attacker can break session crypto confidentiality or integrity, such as forcing nonce/counter reuse, key or cipher confusion, or replay-window bypass, so tunnel traffic can be decrypted, forged, or replayed into an established session.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_314a8012-8aee-4e14-ab15-b3f5c041f87e?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: udp/udp_linux.go -> Scope: Critical. An unprivileged attacker can break session crypto confidentiality or integrity, such as forcing nonce/counter reuse, key or cipher confusion, or replay-window bypass, so tunnel traffic can be decrypted, forged, or replayed into an established session.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_2b5a8d2e-493c-45af-a8dd-7280d8a06a18?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: udp/udp_linux_64.go -> Scope: Critical. An unprivileged attacker can break session crypto confidentiality or integrity, such as forcing nonce/counter reuse, key or cipher confusion, or replay-window bypass, so tunnel traffic can be decrypted, forged, or replayed into an established session.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_39ae6a17-6b22-4472-80fd-3105688cd650?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: udp/udp_linux_32.go -> Scope: Critical. An unprivileged attacker can break session crypto confidentiality or integrity, such as forcing nonce/counter reuse, key or cipher confusion, or replay-window bypass, so tunnel traffic can be decrypted, forged, or replayed into an established session.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_47915a4a-627c-4352-b74c-cef1b0277c34?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: udp/udp_bsd.go -> Scope: Critical. An unprivileged attacker can break session crypto confidentiality or integrity, such as forcing nonce/counter reuse, key or cipher confusion, or replay-window bypass, so tunnel traffic can be decrypted, forged, or replayed into an established session.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_6b000e8a-a4eb-4a70-b555-bb4887e7fd40?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: udp/udp_darwin.go -> Scope: Critical. An unprivileged attacker can break session crypto confidentiality or integrity, such as forcing nonce/counter reuse, key or cipher confusion, or replay-window bypass, so tunnel traffic can be decrypted, forged, or replayed into an established session.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_4126342f-a733-4eb8-ae52-a966f0b31853?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: udp/udp_android.go -> Scope: Critical. An unprivileged attacker can break session crypto confidentiality or integrity, such as forcing nonce/counter reuse, key or cipher confusion, or replay-window bypass, so tunnel traffic can be decrypted, forged, or replayed into an established session.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_470c55b1-9af5-43a3-a276-fd08a11f6449?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: udp/udp_windows.go -> Scope: Critical. An unprivileged attacker can break session crypto confidentiality or integrity, such as forcing nonce/counter reuse, key or cipher confusion, or replay-window bypass, so tunnel traffic can be decrypted, forged, or replayed into an established session.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_b204e58a-76b8-4e23-b239-3c79b7874923?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: udp/udp_rio_windows.go -> Scope: Critical. An unprivileged attacker can break session crypto confidentiality or integrity, such as forcing nonce/counter reuse, key or cipher confusion, or replay-window bypass, so tunnel traffic can be decrypted, forged, or replayed into an established session.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_e95dfa34-b627-4e76-bab9-a20ecc83344f?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: udp/netchange.go -> Scope: Critical. An unprivileged attacker can break session crypto confidentiality or integrity, such as forcing nonce/counter reuse, key or cipher confusion, or replay-window bypass, so tunnel traffic can be decrypted, forged, or replayed into an established session.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_746fcaa7-65e0-4b4c-bff1-d5ca115f123a?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: udp/netchange_generic.go -> Scope: Critical. An unprivileged attacker can break session crypto confidentiality or integrity, such as forcing nonce/counter reuse, key or cipher confusion, or replay-window bypass, so tunnel traffic can be decrypted, forged, or replayed into an established session.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_d94531ad-a6e7-4368-b96d-99ed2896a007?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: handshake_manager.go -> Scope: Critical. An unprivileged attacker can break session crypto confidentiality or integrity, such as forcing nonce/counter reuse, key or cipher confusion, or replay-window bypass, so tunnel traffic can be decrypted, forged, or replayed into an established session.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_26c11540-9bac-4aca-9116-d2b31ab6fec2?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: handshake/machine.go -> Scope: Critical. An unprivileged attacker can break session crypto confidentiality or integrity, such as forcing nonce/counter reuse, key or cipher confusion, or replay-window bypass, so tunnel traffic can be decrypted, forged, or replayed into an established session.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_77df382b-54a6-4ec3-a8de-38fcfc46c2b6?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: handshake/credential.go -> Scope: Critical. An unprivileged attacker can break session crypto confidentiality or integrity, such as forcing nonce/counter reuse, key or cipher confusion, or replay-window bypass, so tunnel traffic can be decrypted, forged, or replayed into an established session.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_557c7d36-9b27-4b91-ae5f-47b89f3d04ba?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: handshake/payload.go -> Scope: Critical. An unprivileged attacker can break session crypto confidentiality or integrity, such as forcing nonce/counter reuse, key or cipher confusion, or replay-window bypass, so tunnel traffic can be decrypted, forged, or replayed into an established session.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_b6313609-92ae-498a-a007-394bab431367?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: handshake/patterns.go -> Scope: Critical. An unprivileged attacker can break session crypto confidentiality or integrity, such as forcing nonce/counter reuse, key or cipher confusion, or replay-window bypass, so tunnel traffic can be decrypted, forged, or replayed into an established session.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_f3d154d6-6326-4c9b-a74f-87f0e386da09?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: handshake/errors.go -> Scope: Critical. An unprivileged attacker can break session crypto confidentiality or integrity, such as forcing nonce/counter reuse, key or cipher confusion, or replay-window bypass, so tunnel traffic can be decrypted, forged, or replayed into an established session.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_2009f926-9783-473c-819d-57f4c83d35f5?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: connection_state.go -> Scope: Critical. An unprivileged attacker can break session crypto confidentiality or integrity, such as forcing nonce/counter reuse, key or cipher confusion, or replay-window bypass, so tunnel traffic can be decrypted, forged, or replayed into an established session.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_e6c49bf0-6f26-4500-99b1-057776091ed3?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: connection_manager.go -> Scope: Critical. An unprivileged attacker can break session crypto confidentiality or integrity, such as forcing nonce/counter reuse, key or cipher confusion, or replay-window bypass, so tunnel traffic can be decrypted, forged, or replayed into an established session.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_987d4761-bada-41e9-b53e-05dbfe0c8d4c?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: pki.go -> Scope: Critical. An unprivileged attacker can break session crypto confidentiality or integrity, such as forcing nonce/counter reuse, key or cipher confusion, or replay-window bypass, so tunnel traffic can be decrypted, forged, or replayed into an established session.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_556183f7-4222-4c91-9d0d-f15d6919ea80?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: cert/cert.go -> Scope: Critical. An unprivileged attacker can break session crypto confidentiality or integrity, such as forcing nonce/counter reuse, key or cipher confusion, or replay-window bypass, so tunnel traffic can be decrypted, forged, or replayed into an established session.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_f51e3c01-dd03-44d8-9382-5321a0a8411b?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: cert/cert_v1.go -> Scope: Critical. An unprivileged attacker can break session crypto confidentiality or integrity, such as forcing nonce/counter reuse, key or cipher confusion, or replay-window bypass, so tunnel traffic can be decrypted, forged, or replayed into an established session.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_c458c891-e16c-47dc-8a2a-11ab90ddee25?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: cert/cert_v2.go -> Scope: Critical. An unprivileged attacker can break session crypto confidentiality or integrity, such as forcing nonce/counter reuse, key or cipher confusion, or replay-window bypass, so tunnel traffic can be decrypted, forged, or replayed into an established session.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_42529692-7f2e-4b75-bd39-d63f2222f5be?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: cert/ca_pool.go -> Scope: Critical. An unprivileged attacker can break session crypto confidentiality or integrity, such as forcing nonce/counter reuse, key or cipher confusion, or replay-window bypass, so tunnel traffic can be decrypted, forged, or replayed into an established session.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_3b85e41f-c11f-4649-b0ab-456ada9a8edd?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: cert/asn1.go -> Scope: Critical. An unprivileged attacker can break session crypto confidentiality or integrity, such as forcing nonce/counter reuse, key or cipher confusion, or replay-window bypass, so tunnel traffic can be decrypted, forged, or replayed into an established session.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_b06aaaa2-8299-43ae-9593-119fcc62f3f5?mode=deep",
+    "questions_generated": false
+  }
+]
