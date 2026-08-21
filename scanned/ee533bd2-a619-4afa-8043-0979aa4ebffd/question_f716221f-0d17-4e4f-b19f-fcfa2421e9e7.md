@@ -1,1 +1,0 @@
-[File: 'logging/logger.go'] [Function: Handler.Handle] Since header.H currently has no String()/LogValue() method (header/header.go has no Stringer defined), can slog's default reflection-based formatting of a header.H value passed as \
