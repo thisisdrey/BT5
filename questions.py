@@ -4,11 +4,11 @@ import os
 from decouple import config
 
 # todo: if scope_files is: 500 > 50, 300 > 30 , 100 > 10
-MAX_REPO = 10
+MAX_REPO = 22
 # todo: the GitLab namespace/project path, for example group/project
-SOURCE_REPO = "slackhq/nebula"
+SOURCE_REPO = 'gitlab-org/gitaly'
 # todo: the name of the repository
-REPO_NAME = "nebula"
+REPO_NAME = 'gitaly'
 
 run_number = os.environ.get('GITHUB_RUN_NUMBER', '0')
 
@@ -48,139 +48,144 @@ else:
 
 scope_files = [
     # =================================================================================
-    # Untrusted UDP ingress, packet headers, and wire parsing
+    # Storage path resolution: relative-path validation, storage escape, repo location
     # =================================================================================
-    "outside.go",
-    "header/header.go",
-    "iputil/packet.go",
-    "udp/conn.go",
-    "udp/errors.go",
-    "udp/udp_generic.go",
-    "udp/udp_linux.go",
-    "udp/udp_linux_64.go",
-    "udp/udp_linux_32.go",
-    "udp/udp_bsd.go",
-    "udp/udp_darwin.go",
-    "udp/udp_android.go",
-    "udp/udp_windows.go",
-    "udp/udp_rio_windows.go",
-    "udp/netchange.go",
-    "udp/netchange_generic.go",
+    "internal/gitaly/storage/repository_path.go",
+    "internal/gitaly/storage/path_helpers.go",
+    "internal/gitaly/storage/locator.go",
+    "internal/gitaly/storage/storage.go",
+    "internal/gitaly/config/locator.go",
+    "internal/gitaly/storage/walk_directory.go",
+    "internal/gitaly/storage/fs.go",
+    "internal/tempdir/tempdir.go",
 
     # =================================================================================
-    # Handshake state machine and peer authentication trust boundary
+    # Git argument construction: flag injection, config injection, execution environment
     # =================================================================================
-    "handshake_manager.go",
-    "handshake/machine.go",
-    "handshake/credential.go",
-    "handshake/payload.go",
-    "handshake/patterns.go",
-    "handshake/errors.go",
-    "connection_state.go",
-    "connection_manager.go",
-    "pki.go",
+    "internal/git/gitcmd/command_options.go",
+    "internal/git/gitcmd/command_description.go",
+    "internal/git/gitcmd/command_factory.go",
+    "internal/git/gitcmd/command.go",
+    "internal/git/gitcmd/staticargs.go",
+    "internal/git/gitcmd/ssh.go",
+    "internal/git/gitcmd/protocol.go",
+    "internal/git/revision.go",
+    "internal/git/object_id.go",
+    "internal/git/reference.go",
+    "internal/git/repository.go",
 
     # =================================================================================
-    # Certificate parsing, signature verification, and CA trust decisions
+    # Hook execution and payload trust: pre-receive/update gating, custom hooks
     # =================================================================================
-    "cert/cert.go",
-    "cert/cert_v1.go",
-    "cert/cert_v2.go",
-    "cert/ca_pool.go",
-    "cert/asn1.go",
-    "cert/crypto.go",
-    "cert/sign.go",
-    "cert/pem.go",
-    "cert/errors.go",
-    "cert/p256/p256.go",
+    "internal/git/gitcmd/hooks_payload.go",
+    "internal/git/gitcmd/hooks_options.go",
+    "internal/gitaly/hook/manager.go",
+    "internal/gitaly/hook/prereceive.go",
+    "internal/gitaly/hook/update.go",
+    "internal/gitaly/hook/postreceive.go",
+    "internal/gitaly/hook/custom.go",
+    "internal/gitaly/hook/procreceive_handler.go",
+    "internal/gitaly/service/operations/update_with_hooks.go",
 
     # =================================================================================
-    # Session crypto: cipher state, nonce/counter handling, and replay windows
+    # Object isolation: quarantine, alternates, object pools, cross-repository leakage
     # =================================================================================
-    "noiseutil/cipher_state.go",
-    "noiseutil/aesgcm.go",
-    "noiseutil/chachapoly.go",
-    "noiseutil/nist.go",
-    "noiseutil/boring.go",
-    "noiseutil/notboring.go",
-    "boring.go",
-    "notboring.go",
-    "bits.go",
+    "internal/git/quarantine/quarantine.go",
+    "internal/git/alternates/alternates.go",
+    "internal/gitaly/service/objectpool/link.go",
+    "internal/gitaly/service/objectpool/alternates.go",
+    "internal/gitaly/service/objectpool/create.go",
+    "internal/gitaly/service/objectpool/fetch_into_object_pool.go",
+    "internal/gitaly/service/objectpool/util.go",
+    "internal/git/objectpool/pool.go",
 
     # =================================================================================
-    # Firewall, group/CIDR policy enforcement, and inside-to-outside gating
+    # Unauthenticated/low-privilege RPC entry points: pack protocol and transfer
     # =================================================================================
-    "firewall.go",
-    "firewall/packet.go",
-    "firewall/cache.go",
-    "allow_list.go",
-    "inside.go",
-    "inside_generic.go",
-    "inside_bsd.go",
+    "internal/gitaly/service/smarthttp/upload_pack.go",
+    "internal/gitaly/service/smarthttp/receive_pack.go",
+    "internal/gitaly/service/smarthttp/inforefs.go",
+    "internal/gitaly/service/ssh/upload_pack.go",
+    "internal/gitaly/service/ssh/receive_pack.go",
+    "internal/gitaly/service/ssh/upload_archive.go",
+    "internal/gitaly/service/ssh/upload_command.go",
+    "internal/git/pktline/pktline.go",
 
     # =================================================================================
-    # Peer address trust: hostmap, lighthouse, relays, roaming, and punching
+    # Attacker-supplied remotes and streams: SSRF, credential leakage, untrusted archives
     # =================================================================================
-    "hostmap.go",
-    "lighthouse.go",
-    "remote_list.go",
-    "relay_manager.go",
-    "calculated_remote.go",
-    "punchy.go",
-    "routing/balance.go",
-    "routing/gateway.go",
+    "internal/gitaly/service/repository/create_repository_from_url.go",
+    "internal/gitaly/service/repository/create_repository_from_snapshot.go",
+    "internal/gitaly/service/repository/create_repository_from_bundle.go",
+    "internal/gitaly/service/repository/fetch_remote.go",
+    "internal/gitaly/service/repository/fetch_bundle.go",
+    "internal/gitaly/service/repository/replicate.go",
+    "internal/gitaly/service/repository/create_fork.go",
+    "internal/gitaly/service/repository/set_custom_hooks.go",
+    "internal/gitaly/service/repository/get_custom_hooks.go",
+    "internal/gitaly/service/repository/restore_repository.go",
+    "internal/gitaly/repoutil/custom_hooks.go",
+    "internal/gitaly/repoutil/create.go",
+    "internal/bundleuri/git_config.go",
+    "internal/bundleuri/sink.go",
 
     # =================================================================================
-    # Tunnel egress, virtual device, and route installation
+    # Path-scoped read RPCs and archiving: traversal and unintended file disclosure
     # =================================================================================
-    "interface.go",
-    "overlay/tun.go",
-    "overlay/device.go",
-    "overlay/route.go",
-    "overlay/user.go",
-    "overlay/tun_linux.go",
-    "overlay/tun_darwin.go",
-    "overlay/tun_windows.go",
-    "overlay/tun_notwin.go",
-    "overlay/tun_disabled.go",
-    "wintun/tun.go",
-    "wintun/device.go",
-    "wfp/wfp_windows.go",
+    "internal/gitaly/service/repository/archive.go",
+    "internal/gitaly/service/repository/snapshot.go",
+    "internal/gitaly/service/repository/search_files.go",
+    "internal/gitaly/service/repository/info_attributes.go",
+    "internal/gitaly/service/repository/file_attributes.go",
+    "internal/gitaly/service/commit/tree_entry.go",
+    "internal/gitaly/service/commit/get_tree_entries.go",
+    "internal/gitaly/service/commit/raw_blame.go",
+    "internal/gitaly/service/blob/get_blob.go",
+    "internal/gitaly/service/blob/lfs_pointers.go",
+    "internal/archive/archive.go",
+    "internal/archive/match_walker.go",
+    "internal/archive/tar_builder.go",
 
     # =================================================================================
-    # Local control surfaces, config reload, and process lifecycle
+    # Reference mutation: ref-name validation, force updates, transactional ref writes
     # =================================================================================
-    "main.go",
-    "control.go",
-    "config/config.go",
-    "config/default.go",
-    "ssh.go",
-    "sshd/server.go",
-    "sshd/session.go",
-    "sshd/command.go",
-    "sshd/writer.go",
-    "dns_server.go",
-    "service/service.go",
-    "service/listener.go",
-    "scheduler.go",
-    "timeout.go",
-    "stats.go",
-    "message_metrics.go",
-    "util/error.go",
-    "logging/logger.go",
-    "cmd/nebula/main.go",
-    "cmd/nebula-service/main.go",
-    "cmd/nebula-service/service.go",
+    "internal/gitaly/service/repository/write_ref.go",
+    "internal/gitaly/service/ref/update_references.go",
+    "internal/gitaly/service/ref/delete_refs.go",
+    "internal/gitaly/service/operations/user_create_branch.go",
+    "internal/gitaly/service/operations/commit_files.go",
+    "internal/gitaly/service/operations/apply_patch.go",
+    "internal/gitaly/service/operations/submodules.go",
+    "internal/gitaly/service/operations/tags.go",
+    "internal/git/updateref/updateref.go",
+
+    # =================================================================================
+    # Transport authentication and request-scoped parsing shared by every RPC
+    # =================================================================================
+    "auth/token.go",
+    "internal/grpc/middleware/requestinfohandler/requestinfohandler.go",
+    "internal/grpc/middleware/panichandler/panic_handler.go",
+    "internal/grpc/middleware/limithandler/middleware.go",
+    "internal/grpc/sidechannel/sidechannel.go",
+    "internal/grpc/backchannel/backchannel.go",
+    "internal/git/catfile/parser.go",
+    "internal/git/gitattributes/check_attr.go",
+    "internal/git/lfs.go",
+    "internal/helper/security.go",
+    "internal/gitlab/http_client.go",
 ]
 
 
 target_scopes = [
-    "Critical. An unprivileged attacker holding no CA-signed Nebula certificate, sending only UDP packets to a node's listener, can complete or be granted a tunnel session and reach the overlay network as an authenticated host.",
-    "Critical. An unprivileged attacker can get a forged, self-signed, malformed, or version-confused certificate accepted by CA-pool verification, so an untrusted identity, expiry, network/subnet, or group set is treated as CA-signed and authorized.",
-    "Critical. An unprivileged attacker can break session crypto confidentiality or integrity, such as forcing nonce/counter reuse, key or cipher confusion, or replay-window bypass, so tunnel traffic can be decrypted, forged, or replayed into an established session.",
-    "Critical. An unprivileged attacker can bypass firewall or unsafe-route policy so packets they inject reach inside services, tun-routed hosts, or the host network that the configured rules, groups, or CIDRs must deny.",
-    "High. An unprivileged attacker spoofing UDP source addresses or sending unauthenticated lighthouse, relay, or handshake packets can poison hostmap/remote-list state, hijack roaming, or steer another host's traffic through an attacker-chosen path.",
-    "High. An unprivileged attacker can use malformed packet headers, certificates, or handshake payloads to panic, deadlock, exhaust memory, or wedge a remote node's packet-processing path, taking the tunnel down for all its peers.",
+    "Critical. An unprivileged attacker who only controls gRPC request fields (`Repository.relative_path`, `storage_name`, object-pool paths) reads or writes files outside the configured storage root, by defeating `storage.ValidateRelativePath`, the path joining in `config.Locator`/`storage.Locator`, or the pool-path checks in the objectpool service, reaching another tenant's repository, custom hooks, or arbitrary host files.",
+    "Critical. An unprivileged attacker achieves command or option injection into a spawned git process, by smuggling a leading `-`, `--upload-pack=`, `--output=`, `ext::`, or `-c` payload through a revision, ref name, path, or remote URL that `git.ValidateRevision`, `gitcmd.Command`/`command_options.go`, or `gitcmd.commandDescriptions` fails to reject, causing Gitaly to execute attacker-chosen code or read attacker-chosen files.",
+    "Critical. An unprivileged attacker reads objects of a repository they have no access to, by abusing alternates/quarantine/object-pool wiring — `alternates.go`, `quarantine.NewQuarantine`, `Link`/`DisconnectGitAlternates`, or `remoterepo` — so that an RPC on a repository they do control resolves or serves objects belonging to a private repository of another user.",
+    "Critical. An unprivileged pusher gets refs updated with objects that never passed verification, by bypassing hook invocation or the quarantine boundary in `hook.PreReceive`/`hook.Update`, `updateref`, `updateReferenceWithHooks`, or by forging/replaying the hooks payload in `gitcmd.HooksPayload`, so unvetted objects become reachable or a protected-branch/access decision is skipped.",
+    "Advanced. An unprivileged attacker escapes the repository directory while Gitaly writes attacker-supplied archive or snapshot data, by crafting tar entries, symlinks, or `..` paths accepted by `SetCustomHooks`/`repoutil.ExtractHooks`, `CreateRepositoryFromSnapshot`, `RestoreRepository`, or `internal/archive`, planting or overwriting files (including hooks) outside the target repository.",
+    "Advanced. An unprivileged attacker turns a repository RPC into an SSRF or credential-disclosure primitive, by supplying a crafted remote URL, redirect target, HTTP header, or bundle-URI location to `CreateRepositoryFromURL`, `FetchRemote`, `FetchBundle`, `CreateRepositoryFromSnapshot`, or `bundleuri`, making Gitaly reach an internal endpoint or emit the configured credentials/auth header to an attacker-controlled host.",
+    "Advanced. An unprivileged attacker bypasses Gitaly's transport authentication or request scoping, by defeating the HMAC/timestamp checks in `gitalyauth` (`token.go`) — replay outside `tokenValidityDuration`, signature-comparison weakness, or a version-downgrade to the v1 path — and issues RPCs against repositories on the server without holding the shared token.",
+    "Advanced. A remote attacker with only push/pull-level access exhausts Gitaly or crashes an RPC handler on default configuration, by sending a crafted pack, pktline stream, git object, `.gitattributes`, or LFS pointer that drives unbounded memory/CPU/disk in `pktline`, `catfile`, `gitattributes.CheckAttr`, `lfs.go`, or triggers a panic that `panichandler` converts into a persistent failure of the process or partition.",
+    "Intermediate. An unprivileged attacker obtains secrets or another tenant's metadata from Gitaly's error and log surfaces, by crafting a remote URL, ref, or path whose credentials or absolute storage path survive `helper.SanitizeString`/`SanitizeError`, `structerr` formatting, or `requestinfohandler` field extraction and are returned in a gRPC error the attacker can read.",
 ]
 
 
@@ -190,50 +195,69 @@ scope_scan = [
 
 def question_generator(target_file: str) -> str:
     """
-    Generate exploit-focused audit and fuzzing questions for one nebula target.
+    Generate exploit-focused audit and fuzzing questions for one gitaly target.
 
     ```
     target_file format:
-    "'File Name: outside.go -> Scope: Critical. ...'"
+    "'File Name: internal/gitaly/storage/repository_path.go -> Scope: Critical. ...'"
     """
 
     prompt = f"""
     ```
 
-    Generate exploit-focused security audit and fuzzing questions for this exact nebula target:
+    Generate exploit-focused security audit and fuzzing questions for this exact gitaly target:
 
     {target_file}
 
     Project focus:
-    nebula is a Go overlay networking tool. Focus on untrusted UDP packet parsing, Noise handshake authentication, certificate and CA-pool verification, session crypto and nonce handling, firewall/group policy enforcement, and hostmap/lighthouse/relay address trust.
+    Gitaly is the gRPC server that GitLab uses to run Git close to disk. Every request field a user
+    can influence - repository relative path, storage name, revisions, ref names, file paths, remote
+    URLs, pushed pack data, tar/bundle streams - reaches path resolution, a spawned git process, hook
+    execution, or object storage. Focus on storage-path escape, git flag/config injection, quarantine
+    and object-pool isolation, hook bypass on push, untrusted archive extraction, SSRF and credential
+    leakage on remote fetches, transport auth, and DoS in an RPC handler.
 
     Rules:
-    * Treat `File Name:` as the exact file/package.
+    * Treat `File Name:` as the exact file/module.
     * Treat `Scope:` as the ONLY impact to target.
     * Assume full repo context is accessible.
     * Do not ask for code or say anything is missing.
-    * Use exact Go symbols (func, method, struct, field) when possible.
-    * Attacker is unprivileged only: a network host with NO certificate signed by a trusted CA, no host/root access, no leaked keys, no config control, no CA compromise. They may send arbitrary UDP to the listener, spoof source addresses, and present self-signed or malformed certificates.
-    * Never assume a malicious peer, malicious node, compromised lighthouse, or any attacker who already holds a valid CA-signed certificate.
-    * Ignore test files, mocks, docs, generated files (*.pb.go), build scripts, config-only findings, and dependency-only issues.
+    * Use exact Go symbols (function, method, struct, interface, constant, config field) when possible.
+    * Attacker is unprivileged only: a GitLab user with no special role who can push/fetch, fork or
+      import a repository they own, and thereby cause Gitaly RPCs to run with attacker-chosen fields
+      and attacker-chosen repository content.
+    * Attacker is NOT an instance admin, operator, Gitaly/Praefect node, or anyone with shell, disk,
+      or config access; does NOT hold the shared auth token or any leaked secret; and cannot rely on
+      a malicious peer/replica, MITM, local-network, or social engineering.
+    * Ignore test files, mocks, fixtures, testhelper/gittest, docs, generated protobuf, build/CI/config.
+    * Ignore self-harm (attacker damaging only their own repository) and pure best-practice critique.
     * Generate 12 to 16 high-signal questions.
-    * At least 70% must target authentication bypass, certificate/CA verification flaws, session crypto or replay flaws, firewall policy bypass, or remote address/state poisoning.
-    * Every question must be testable by unit test, integration test, fuzz test, invariant test, or differential test.
+    * At least 70% must target storage-path escape, git argument/config injection, cross-repository
+      object access, hook or quarantine bypass, archive/tar extraction escape, SSRF or credential
+      leak, auth bypass, or DoS of an RPC handler.
+    * Every question must be testable by a Go test, a crafted gRPC request, a crafted push/pack or
+      pktline stream, a malicious repository or tar/bundle payload, or a fuzz/differential test over
+      encoded inputs.
     * Avoid generic checklist questions and repeated root causes.
 
     Core invariants:
-    * No packet is trusted before authentication: unauthenticated input must never mutate hostmap, lighthouse, relay, or session state, or select a decryption key.
-    * Certificate verification is fail-closed: signature, CA chain, version, expiry, network/subnet, and group checks must all pass, and unknown or malformed fields must reject rather than default-allow.
-    * Session crypto is sound: each key is used with a unique nonce, counters never rewind or wrap into reuse, and replayed or out-of-window packets are dropped.
-    * Firewall enforcement is total: every inbound tunnel packet and every routed packet is checked against the sending certificate's identity, groups, and networks before it reaches the tun device.
-    * Peer addressing is authenticated: a remote's underlay address, relay path, or roam only changes on cryptographically verified traffic from that peer.
-    * Untrusted lengths and offsets never drive slicing, allocation, or unbounded loops in packet, header, ASN.1, or protobuf parsing.
+    * Paths stay inside the storage: every path derived from a request resolves under the configured
+      storage root for that exact repository, after `storage.ValidateRelativePath` and locator joining,
+      with no traversal, symlink escape, or absolute-path override.
+    * Git is never re-configured by input: user-controlled revisions, refs, paths and URLs are passed
+      as operands, never interpretable as options, `-c` config, or transport helpers.
+    * Repositories are isolated: objects, alternates, quarantine directories and pools serve only the
+      repository the request is authorized for; unvetted objects stay quarantined until hooks pass.
+    * Writes are gated: reference updates on a push run through pre-receive/update/post-receive with an
+      unforgeable hooks payload; no path lets a ref advance while skipping them.
+    * Secrets and host state stay internal: tokens, remote credentials, absolute paths and other repos'
+      metadata never reach an error, log line, or response the attacker can read.
 
     Each question must include:
-    1. target function/package;
+    1. target module/function;
     2. attacker action;
     3. preconditions;
-    4. call sequence;
+    4. request/call sequence;
     5. invariant tested;
     6. scoped impact;
     7. proof idea.
@@ -241,7 +265,7 @@ def question_generator(target_file: str) -> str:
     Output only valid Python. No markdown. No explanations.
 
     questions = [
-    "[File: {target_file}] [Function: symbol_or_package] Can an unprivileged ATTACKER_ACTION under PRECONDITIONS trigger CALL_SEQUENCE, violating INVARIANT, causing scoped impact: SCOPE_IMPACT? Proof idea: unit/integration/fuzz PARAMETERS and assert AUTH_ENFORCEMENT, CERT_VERIFICATION, CRYPTO_INTEGRITY, or FIREWALL_ENFORCEMENT.",
+    "[File: {target_file}] [Function: package.Function] Can an unprivileged ATTACKER_ACTION under PRECONDITIONS trigger REQUEST_SEQUENCE, violating INVARIANT, causing scoped impact: SCOPE_IMPACT? Proof idea: Go test / gRPC request / crafted push / malicious tar-bundle INPUTS and assert PATH_CONFINEMENT, ARGUMENT_SAFETY, REPO_ISOLATION, HOOK_GATING, or SECRET_CONFINEMENT.",
     ]
     """
     return prompt
@@ -249,7 +273,7 @@ def question_generator(target_file: str) -> str:
 
 def audit_format(security_question: str) -> str:
     """
-    Generate a focused nebula exploit-validation prompt.
+    Generate a focused gitaly exploit-validation prompt.
     """
 
     prompt = f"""# SECURITY AUDIT PROMPT
@@ -259,16 +283,30 @@ def audit_format(security_question: str) -> str:
 
 ## Rules
 - Use existing repo context only. Analyze only this question and scoped impact.
-- Attacker is unprivileged only: no CA-signed certificate, no host/root access, no leaked keys, no config or CA control, no social engineering.
-- Never assume a malicious peer, malicious node, or compromised lighthouse.
-- Reject anything depending only on test/mock/config/docs/generated files, dependency bugs alone, or best-practice cleanup without exploitable impact.
-- Focus on paths reachable from attacker-sent UDP packets, spoofed source addresses, or attacker-presented certificates.
+- Attacker is unprivileged only: a GitLab user with no special role who can push/fetch, fork or import
+  a repository they own, and so control RPC fields and repository content. No admin/operator role, no
+  shell or disk access, no shared auth token or leaked secret, no malicious Gitaly/Praefect node, no
+  MITM, local-network, or social-engineering assumptions.
+- Reject anything requiring privileged access, a stolen secret, non-default configuration, a compromised
+  peer/replica, or a bug in GitLab Rails/git itself rather than in Gitaly.
+- Reject anything that depends only on test/mock/fixture/docs/generated/build files, a dependency bug
+  alone, or best-practice cleanup without exploitable impact.
+- Focus on real compromise paths: storage-path escape, git argument/config injection or command
+  execution, cross-repository object access, hook or quarantine bypass, archive extraction escape,
+  SSRF or credential disclosure, auth bypass, and DoS of an RPC handler.
 
 ## Validate
-- Trace the exact reachable Go path from attacker input into handshake, certificate verification, session crypto, firewall, or hostmap/relay state.
-- Check whether existing verification, drop paths, replay windows, or firewall checks already stop it.
-- Accept only real authentication bypass, certificate/CA verification bypass, traffic decryption/forgery/replay, firewall bypass, remote state poisoning, or remote crash/wedge.
-- Require exact file/function support and a reproducible unit/integration/fuzz/invariant PoC.
+- Trace the exact reachable path from attacker input (RPC field, ref/revision/path, pushed pack,
+  tar/bundle stream, remote URL) into the affected function.
+- Check whether existing checks already stop it: `storage.ValidateRelativePath` and locator path
+  joining, `git.ValidateRevision` and the `gitcmd` option/description allowlists, quarantine and
+  alternates handling, hooks payload verification, `helper.SanitizeString`, and request limits.
+- Account for what the attacker actually controls versus what GitLab Rails or the transaction layer
+  fixes before Gitaly sees it.
+- Accept only concrete impact: file read/write outside the repository, command or git-option injection,
+  another repository's objects or metadata disclosed, unvetted refs accepted, secret leak, or a crash
+  or resource exhaustion of a handler.
+- Require exact file/function support and a reproducible Go test or RPC-level PoC.
 
 ## Output
 If valid, output exactly:
@@ -283,16 +321,16 @@ If valid, output exactly:
 [Code path, root cause, attacker inputs, exploit flow, and why checks fail]
 
 ### Impact Explanation
-[Concrete scoped impact and matching Nebula bounty impact]
+[Concrete scoped impact and matching GitLab bounty impact class]
 
 ### Likelihood Explanation
-[Preconditions, feasibility, repeatability]
+[Preconditions, attacker capability, feasibility, repeatability]
 
 ### Recommendation
 [Specific fix]
 
 ### Proof of Concept
-[Unit/integration test or fuzz/invariant test plan with expected assertions]
+[Go test, crafted gRPC request, push/pack sequence, or malicious tar/bundle with expected assertions]
 
 If invalid, output exactly:
 #NoVulnerability found for this question.
@@ -304,7 +342,7 @@ No extra text.
 
 def validation_format(report: str) -> str:
     """
-    Generate a strict bounty-style validation prompt for nebula security claims.
+    Generate a strict bounty-style validation prompt for gitaly security claims.
     """
     prompt = f"""# VALIDATION PROMPT
 
@@ -316,29 +354,38 @@ def validation_format(report: str) -> str:
 - Check SECURITY.md and Researcher.Md for scope, exclusions, and valid impact classes.
 - Do not create a new vulnerability if the submitted claim is weak or invalid.
 - Do not upgrade severity unless the provided evidence proves the higher impact.
-- Reject malicious-peer, malicious-node, compromised-lighthouse, valid-certificate-holder, root/host-access, leaked-key, CA-compromise, local-network-only, physical-access, dependency-only, docs/style, generated-file, test/mock/config-only, and purely theoretical issues.
-- Reject volumetric DDoS, resource exhaustion requiring flooding, and issues needing operator misconfiguration.
-- A valid report must be triggerable by a network attacker holding no CA-signed certificate, unless the claim proves escalation from that unprivileged position.
-- The final impact must map to an in-scope Nebula impact such as authentication bypass onto the overlay, certificate/CA verification bypass, tunnel traffic decryption/forgery/replay, firewall policy bypass, hostmap/relay/roaming poisoning, or remote node crash from a single crafted packet.
+- Reject privileged-actor (instance admin, operator, Gitaly/Praefect node, shell or disk access),
+  leaked-token, malicious-peer, physical/local-network, MITM, social-engineering, dependency-only,
+  docs/style, and test/mock/generated/config-only issues.
+- Reject self-harm on the attacker's own repository, missing-hardening claims, scanner output,
+  pure-DDoS/volumetric claims, and theoretical claims with no demonstrated impact.
+- A valid report must be triggerable by an ordinary GitLab user pushing, fetching, forking or importing
+  a repository they own against Gitaly on default configuration.
+- The final impact must map to an in-scope class: storage-path escape (arbitrary file read/write),
+  git argument/config injection or command execution, cross-repository object or metadata access,
+  hook or quarantine bypass accepting unvetted refs, archive extraction escape, SSRF or credential
+  disclosure, transport auth bypass, or DoS of an RPC handler.
 - Prefer #NoVulnerability over speculative reports.
 
 ## Required Validation Checks
 All must pass:
 1. Exact in-scope file, function, and line/code references.
 2. Clear root cause and broken security assumption.
-3. Reachable exploit path: preconditions -> attacker action -> trigger -> bad result.
-4. Existing checks/guards reviewed and shown insufficient.
-5. Concrete in-scope impact with realistic likelihood.
-6. Reproducible proof path: unit PoC, integration test, invariant/fuzz test, or exact packet-level steps.
-7. No obvious rejection reason from SECURITY.md, known issues, privilege assumptions, or scope exclusions.
+3. Reachable exploit path: preconditions -> attacker RPC/push/payload -> trigger -> bad result.
+4. Existing path/revision/hook/quarantine/sanitization checks reviewed and shown insufficient.
+5. Concrete in-scope impact with realistic likelihood and attacker capability.
+6. Reproducible proof path: Go test, crafted gRPC call, push/pack sequence, or malicious tar/bundle.
+7. No obvious rejection reason from SECURITY.md, privilege assumptions, or scope exclusions.
 
 ## Silent Triage Questions
 Before output, internally answer:
-- Can an attacker with no valid certificate and no host access trigger this?
-- Does the code actually behave as claimed?
-- Is the impact caused by this code, not by configuration, a dependency, or a trusted peer's behavior?
-- Is the bypass, disclosure, forgery, or crash concrete, not hypothetical?
-- Would a bounty triager accept the proof?
+- Can an ordinary unprivileged GitLab user trigger this with no admin role, no shared token, and no
+  malicious node?
+- Does the code actually behave as claimed on the current release version and default config?
+- Is the impact caused by Gitaly's own code, not by GitLab Rails, git upstream, or a dependency alone?
+- Is the escaped path, injected argument, leaked object, accepted ref, secret, or crash concrete and
+  not hypothetical?
+- Would a GitLab triager accept the proof?
 - What exact test would prove it?
 
 ## Output
@@ -356,7 +403,7 @@ Audit Report
 [Exact code path, root cause, exploit flow, and why existing checks fail]
 
 ## Impact Explanation
-[Concrete in-scope impact, severity rationale, and bounty category]
+[Concrete in-scope impact, severity rationale, and GitLab bounty category]
 
 ## Likelihood Explanation
 [Attacker capability, required conditions, feasibility, repeatability]
@@ -365,7 +412,7 @@ Audit Report
 [Specific fix guidance]
 
 ## Proof of Concept
-[Minimal reproducible steps or fuzz/invariant/integration test plan]
+[Minimal reproducible RPC/push/payload sequence or Go test plan]
 
 If invalid, output exactly:
 #NoVulnerability found for this question.
@@ -377,7 +424,7 @@ Output only one of the two outcomes above. No extra text.
 
 def scan_format(report: str) -> str:
     """
-    Generate a short cross-project analog scan prompt for nebula.
+    Generate a short cross-project analog scan prompt for gitaly.
     """
     prompt = f"""# ANALOG SCAN PROMPT
 
@@ -387,13 +434,18 @@ def scan_format(report: str) -> str:
 ## Rules
 - Use in-scope production repo context only. Do not ask for code or claim missing files.
 - Use the external report only as a bug-class hint, not as proof.
-- Keep only analogs reachable by an attacker with no CA-signed certificate: packet/header/ASN.1 parsing, handshake authentication, certificate and CA-pool verification, nonce/replay handling, firewall enforcement, or hostmap/lighthouse/relay address trust.
-- Reject malicious-peer/node/lighthouse analogs, valid-certificate-holder analogs, host-access analogs, test-only paths, dependency-only bugs, and no-impact analogs.
+- Keep only unprivileged analogs in storage-path resolution, git command/argument construction, hook
+  and quarantine gating, object-pool and alternates isolation, archive or bundle extraction, remote
+  URL handling, transport auth, or RPC-handler resource limits.
+- Reject privileged-actor, leaked-token, malicious-peer/node, MITM, dependency-only, test-only, and
+  no-impact analogs.
 
 ## Validate
-- Map the bug class to the strongest reachable nebula path.
-- Prove root cause with exact file/function support.
-- Accept only concrete authentication bypass, certificate verification bypass, traffic decryption/forgery/replay, firewall bypass, remote state poisoning, or remote crash impact.
+- Map the bug class to the strongest reachable gitaly path from an ordinary user's push, fetch, fork,
+  import, or crafted RPC field.
+- Prove root cause with exact file/module/function support.
+- Accept only concrete storage escape, argument/config injection, cross-repository object access, hook
+  or quarantine bypass, extraction escape, SSRF or credential disclosure, auth bypass, or DoS of a handler.
 
 ## Output (Strict)
 If valid analog exists, output:
