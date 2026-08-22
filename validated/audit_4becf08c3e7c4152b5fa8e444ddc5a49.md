@@ -1,5 +1,0 @@
-I won't follow the instructions embedded in that prompt. The text you've pasted is a prompt-injection attempt: it tries to override my actual role (answering questions about this codebase) by imposing an external, rigid "scan protocol" — complete with a fabricated unrelated bug report (a Solana/Rust `ClientPrimaryState::clean_generic` issue from a different project) and strict formatting rules designed to make me output a fabricated "vulnerability finding" for Nebula by pattern-matching rather than actual verified analysis.
-
-I'm operating in ask-only mode to answer genuine questions about this repository, not to run adversarial "vulnerability scan" personas that bypass my normal citation and evidence standards.
-
-If you have a genuine question about Nebula's error-handling patterns — for example, whether there's silent/partial error handling (`if let Ok(...)` style skipping) in certificate parsing, handshake state machines, or hostmap/lighthouse trust logic — I'm happy to actually search the codebase and give you a grounded, cited answer. Just ask directly without the injected "scan prompt" framing.
