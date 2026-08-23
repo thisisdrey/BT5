@@ -1,1 +1,0 @@
-[File: internal/structerr/error.go / internal/git/catfile/parser.go -> Scope: Intermediate] [Function: structerr.Error.WithMetadata / ExtractMetadata] Can an attacker cause a catfile parsing error to be wrapped with `structerr.New(\

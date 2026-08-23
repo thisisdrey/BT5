@@ -1,1 +1,0 @@
-[File: internal/git/gitattributes/check_attr.go -> Func: (CheckAttrCmd).Check] Can an attacker supply a `path` argument containing embedded NUL-adjacent binary or control bytes that desynchronizes the `-z`-delimited `git check-attr --stdin` protocol parsing in `Check`, so that `buf[0] != path` triggers `fmt.Errorf(\
