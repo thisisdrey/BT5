@@ -1,1 +1,0 @@
-[File: internal/gitaly/storage/storage.go -> Scope: Critical config injection] Target: gitcmd.ConvertConfigOptions in internal/git/gitcmd/command_options.go, which splits a raw string on '=' via strings.SplitN(option, \
