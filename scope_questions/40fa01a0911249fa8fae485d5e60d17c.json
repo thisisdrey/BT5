@@ -1,0 +1,152 @@
+[
+  {
+    "question": "'File Name: internal/gitaly/service/repository/search_files.go -> Scope: Advanced. An unprivileged attacker turns a repository RPC into an SSRF or credential-disclosure primitive, by supplying a crafted remote URL, redirect target, HTTP header, or bundle-URI location to `CreateRepositoryFromURL`, `FetchRemote`, `FetchBundle`, `CreateRepositoryFromSnapshot`, or `bundleuri`, making Gitaly reach an internal endpoint or emit the configured credentials/auth header to an attacker-controlled host.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_4328517e-cf47-45e6-aaf3-72942fdccc54?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/gitaly/service/repository/info_attributes.go -> Scope: Advanced. An unprivileged attacker turns a repository RPC into an SSRF or credential-disclosure primitive, by supplying a crafted remote URL, redirect target, HTTP header, or bundle-URI location to `CreateRepositoryFromURL`, `FetchRemote`, `FetchBundle`, `CreateRepositoryFromSnapshot`, or `bundleuri`, making Gitaly reach an internal endpoint or emit the configured credentials/auth header to an attacker-controlled host.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_3d80d073-b326-4f36-98fe-34968079814e?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/gitaly/service/repository/file_attributes.go -> Scope: Advanced. An unprivileged attacker turns a repository RPC into an SSRF or credential-disclosure primitive, by supplying a crafted remote URL, redirect target, HTTP header, or bundle-URI location to `CreateRepositoryFromURL`, `FetchRemote`, `FetchBundle`, `CreateRepositoryFromSnapshot`, or `bundleuri`, making Gitaly reach an internal endpoint or emit the configured credentials/auth header to an attacker-controlled host.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_5a526f10-852d-4745-8d38-5b971a5b305e?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/gitaly/service/commit/tree_entry.go -> Scope: Advanced. An unprivileged attacker turns a repository RPC into an SSRF or credential-disclosure primitive, by supplying a crafted remote URL, redirect target, HTTP header, or bundle-URI location to `CreateRepositoryFromURL`, `FetchRemote`, `FetchBundle`, `CreateRepositoryFromSnapshot`, or `bundleuri`, making Gitaly reach an internal endpoint or emit the configured credentials/auth header to an attacker-controlled host.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_314717b4-296d-4652-8289-cea2cd73ba74?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/gitaly/service/commit/get_tree_entries.go -> Scope: Advanced. An unprivileged attacker turns a repository RPC into an SSRF or credential-disclosure primitive, by supplying a crafted remote URL, redirect target, HTTP header, or bundle-URI location to `CreateRepositoryFromURL`, `FetchRemote`, `FetchBundle`, `CreateRepositoryFromSnapshot`, or `bundleuri`, making Gitaly reach an internal endpoint or emit the configured credentials/auth header to an attacker-controlled host.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_4e1bd76e-92e9-45fa-a0e2-e14c182853a3?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/gitaly/service/commit/raw_blame.go -> Scope: Advanced. An unprivileged attacker turns a repository RPC into an SSRF or credential-disclosure primitive, by supplying a crafted remote URL, redirect target, HTTP header, or bundle-URI location to `CreateRepositoryFromURL`, `FetchRemote`, `FetchBundle`, `CreateRepositoryFromSnapshot`, or `bundleuri`, making Gitaly reach an internal endpoint or emit the configured credentials/auth header to an attacker-controlled host.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_4708c67f-53b0-49b5-a9e7-0ff91660f2e8?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/gitaly/service/blob/get_blob.go -> Scope: Advanced. An unprivileged attacker turns a repository RPC into an SSRF or credential-disclosure primitive, by supplying a crafted remote URL, redirect target, HTTP header, or bundle-URI location to `CreateRepositoryFromURL`, `FetchRemote`, `FetchBundle`, `CreateRepositoryFromSnapshot`, or `bundleuri`, making Gitaly reach an internal endpoint or emit the configured credentials/auth header to an attacker-controlled host.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_41dccc0f-2383-4e57-a9cf-3363c43fb1ed?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/gitaly/service/blob/lfs_pointers.go -> Scope: Advanced. An unprivileged attacker turns a repository RPC into an SSRF or credential-disclosure primitive, by supplying a crafted remote URL, redirect target, HTTP header, or bundle-URI location to `CreateRepositoryFromURL`, `FetchRemote`, `FetchBundle`, `CreateRepositoryFromSnapshot`, or `bundleuri`, making Gitaly reach an internal endpoint or emit the configured credentials/auth header to an attacker-controlled host.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_6e29291b-bf4c-47ea-8451-fdeae39f2e2b?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/archive/archive.go -> Scope: Advanced. An unprivileged attacker turns a repository RPC into an SSRF or credential-disclosure primitive, by supplying a crafted remote URL, redirect target, HTTP header, or bundle-URI location to `CreateRepositoryFromURL`, `FetchRemote`, `FetchBundle`, `CreateRepositoryFromSnapshot`, or `bundleuri`, making Gitaly reach an internal endpoint or emit the configured credentials/auth header to an attacker-controlled host.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_24407713-5bfd-4e92-b05e-b71e8efb5a00?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/archive/match_walker.go -> Scope: Advanced. An unprivileged attacker turns a repository RPC into an SSRF or credential-disclosure primitive, by supplying a crafted remote URL, redirect target, HTTP header, or bundle-URI location to `CreateRepositoryFromURL`, `FetchRemote`, `FetchBundle`, `CreateRepositoryFromSnapshot`, or `bundleuri`, making Gitaly reach an internal endpoint or emit the configured credentials/auth header to an attacker-controlled host.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_b0fdeb83-45c0-47f6-9e7a-6318cf1b4aa8?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/archive/tar_builder.go -> Scope: Advanced. An unprivileged attacker turns a repository RPC into an SSRF or credential-disclosure primitive, by supplying a crafted remote URL, redirect target, HTTP header, or bundle-URI location to `CreateRepositoryFromURL`, `FetchRemote`, `FetchBundle`, `CreateRepositoryFromSnapshot`, or `bundleuri`, making Gitaly reach an internal endpoint or emit the configured credentials/auth header to an attacker-controlled host.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_9c6795d1-21e2-4eae-b021-772cab9856c3?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/gitaly/service/repository/write_ref.go -> Scope: Advanced. An unprivileged attacker turns a repository RPC into an SSRF or credential-disclosure primitive, by supplying a crafted remote URL, redirect target, HTTP header, or bundle-URI location to `CreateRepositoryFromURL`, `FetchRemote`, `FetchBundle`, `CreateRepositoryFromSnapshot`, or `bundleuri`, making Gitaly reach an internal endpoint or emit the configured credentials/auth header to an attacker-controlled host.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_6b74c5fd-6128-42de-9289-42c4a79733af?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/gitaly/service/ref/update_references.go -> Scope: Advanced. An unprivileged attacker turns a repository RPC into an SSRF or credential-disclosure primitive, by supplying a crafted remote URL, redirect target, HTTP header, or bundle-URI location to `CreateRepositoryFromURL`, `FetchRemote`, `FetchBundle`, `CreateRepositoryFromSnapshot`, or `bundleuri`, making Gitaly reach an internal endpoint or emit the configured credentials/auth header to an attacker-controlled host.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_616e4d8d-d675-4206-af42-c4f84424a73c?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/gitaly/service/ref/delete_refs.go -> Scope: Advanced. An unprivileged attacker turns a repository RPC into an SSRF or credential-disclosure primitive, by supplying a crafted remote URL, redirect target, HTTP header, or bundle-URI location to `CreateRepositoryFromURL`, `FetchRemote`, `FetchBundle`, `CreateRepositoryFromSnapshot`, or `bundleuri`, making Gitaly reach an internal endpoint or emit the configured credentials/auth header to an attacker-controlled host.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_adbc9bee-8057-4d6d-9f0e-63629e5b4b8f?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/gitaly/service/operations/user_create_branch.go -> Scope: Advanced. An unprivileged attacker turns a repository RPC into an SSRF or credential-disclosure primitive, by supplying a crafted remote URL, redirect target, HTTP header, or bundle-URI location to `CreateRepositoryFromURL`, `FetchRemote`, `FetchBundle`, `CreateRepositoryFromSnapshot`, or `bundleuri`, making Gitaly reach an internal endpoint or emit the configured credentials/auth header to an attacker-controlled host.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_02893522-ff8d-4dc5-ae4e-b51e92455486?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/gitaly/service/operations/commit_files.go -> Scope: Advanced. An unprivileged attacker turns a repository RPC into an SSRF or credential-disclosure primitive, by supplying a crafted remote URL, redirect target, HTTP header, or bundle-URI location to `CreateRepositoryFromURL`, `FetchRemote`, `FetchBundle`, `CreateRepositoryFromSnapshot`, or `bundleuri`, making Gitaly reach an internal endpoint or emit the configured credentials/auth header to an attacker-controlled host.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_650e2c84-91c1-4033-be93-c84dd7068af8?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/gitaly/service/operations/apply_patch.go -> Scope: Advanced. An unprivileged attacker turns a repository RPC into an SSRF or credential-disclosure primitive, by supplying a crafted remote URL, redirect target, HTTP header, or bundle-URI location to `CreateRepositoryFromURL`, `FetchRemote`, `FetchBundle`, `CreateRepositoryFromSnapshot`, or `bundleuri`, making Gitaly reach an internal endpoint or emit the configured credentials/auth header to an attacker-controlled host.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_65e25777-ceca-46b2-87ea-9ce55b486cfb?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/gitaly/service/operations/submodules.go -> Scope: Advanced. An unprivileged attacker turns a repository RPC into an SSRF or credential-disclosure primitive, by supplying a crafted remote URL, redirect target, HTTP header, or bundle-URI location to `CreateRepositoryFromURL`, `FetchRemote`, `FetchBundle`, `CreateRepositoryFromSnapshot`, or `bundleuri`, making Gitaly reach an internal endpoint or emit the configured credentials/auth header to an attacker-controlled host.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_70154ff8-374a-4c30-ba4d-468a4558d018?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/gitaly/service/operations/tags.go -> Scope: Advanced. An unprivileged attacker turns a repository RPC into an SSRF or credential-disclosure primitive, by supplying a crafted remote URL, redirect target, HTTP header, or bundle-URI location to `CreateRepositoryFromURL`, `FetchRemote`, `FetchBundle`, `CreateRepositoryFromSnapshot`, or `bundleuri`, making Gitaly reach an internal endpoint or emit the configured credentials/auth header to an attacker-controlled host.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_28ccdfed-0222-4802-982c-cc56fdf162e0?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/git/updateref/updateref.go -> Scope: Advanced. An unprivileged attacker turns a repository RPC into an SSRF or credential-disclosure primitive, by supplying a crafted remote URL, redirect target, HTTP header, or bundle-URI location to `CreateRepositoryFromURL`, `FetchRemote`, `FetchBundle`, `CreateRepositoryFromSnapshot`, or `bundleuri`, making Gitaly reach an internal endpoint or emit the configured credentials/auth header to an attacker-controlled host.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_7a43e43e-bb84-47a0-849f-29d16e59b4b1?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: auth/token.go -> Scope: Advanced. An unprivileged attacker turns a repository RPC into an SSRF or credential-disclosure primitive, by supplying a crafted remote URL, redirect target, HTTP header, or bundle-URI location to `CreateRepositoryFromURL`, `FetchRemote`, `FetchBundle`, `CreateRepositoryFromSnapshot`, or `bundleuri`, making Gitaly reach an internal endpoint or emit the configured credentials/auth header to an attacker-controlled host.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_ae43e8d4-8030-4df4-9c9d-84336bad9e82?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/grpc/middleware/requestinfohandler/requestinfohandler.go -> Scope: Advanced. An unprivileged attacker turns a repository RPC into an SSRF or credential-disclosure primitive, by supplying a crafted remote URL, redirect target, HTTP header, or bundle-URI location to `CreateRepositoryFromURL`, `FetchRemote`, `FetchBundle`, `CreateRepositoryFromSnapshot`, or `bundleuri`, making Gitaly reach an internal endpoint or emit the configured credentials/auth header to an attacker-controlled host.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_12c1e657-2922-465e-bb7e-603f5af29478?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/grpc/middleware/panichandler/panic_handler.go -> Scope: Advanced. An unprivileged attacker turns a repository RPC into an SSRF or credential-disclosure primitive, by supplying a crafted remote URL, redirect target, HTTP header, or bundle-URI location to `CreateRepositoryFromURL`, `FetchRemote`, `FetchBundle`, `CreateRepositoryFromSnapshot`, or `bundleuri`, making Gitaly reach an internal endpoint or emit the configured credentials/auth header to an attacker-controlled host.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_81cd2321-2a64-45d0-adad-da3ebc127886?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/grpc/middleware/limithandler/middleware.go -> Scope: Advanced. An unprivileged attacker turns a repository RPC into an SSRF or credential-disclosure primitive, by supplying a crafted remote URL, redirect target, HTTP header, or bundle-URI location to `CreateRepositoryFromURL`, `FetchRemote`, `FetchBundle`, `CreateRepositoryFromSnapshot`, or `bundleuri`, making Gitaly reach an internal endpoint or emit the configured credentials/auth header to an attacker-controlled host.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_8a95a217-c063-4308-9d43-490da0f34c70?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/grpc/sidechannel/sidechannel.go -> Scope: Advanced. An unprivileged attacker turns a repository RPC into an SSRF or credential-disclosure primitive, by supplying a crafted remote URL, redirect target, HTTP header, or bundle-URI location to `CreateRepositoryFromURL`, `FetchRemote`, `FetchBundle`, `CreateRepositoryFromSnapshot`, or `bundleuri`, making Gitaly reach an internal endpoint or emit the configured credentials/auth header to an attacker-controlled host.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_86cc94ef-ec03-4f1d-be82-a010f8efc960?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/grpc/backchannel/backchannel.go -> Scope: Advanced. An unprivileged attacker turns a repository RPC into an SSRF or credential-disclosure primitive, by supplying a crafted remote URL, redirect target, HTTP header, or bundle-URI location to `CreateRepositoryFromURL`, `FetchRemote`, `FetchBundle`, `CreateRepositoryFromSnapshot`, or `bundleuri`, making Gitaly reach an internal endpoint or emit the configured credentials/auth header to an attacker-controlled host.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_be6a6e92-40c6-4866-ab96-57f332e0e37b?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/git/catfile/parser.go -> Scope: Advanced. An unprivileged attacker turns a repository RPC into an SSRF or credential-disclosure primitive, by supplying a crafted remote URL, redirect target, HTTP header, or bundle-URI location to `CreateRepositoryFromURL`, `FetchRemote`, `FetchBundle`, `CreateRepositoryFromSnapshot`, or `bundleuri`, making Gitaly reach an internal endpoint or emit the configured credentials/auth header to an attacker-controlled host.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_ee90a3af-29d7-43a0-9e77-4a6db16c8851?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/git/gitattributes/check_attr.go -> Scope: Advanced. An unprivileged attacker turns a repository RPC into an SSRF or credential-disclosure primitive, by supplying a crafted remote URL, redirect target, HTTP header, or bundle-URI location to `CreateRepositoryFromURL`, `FetchRemote`, `FetchBundle`, `CreateRepositoryFromSnapshot`, or `bundleuri`, making Gitaly reach an internal endpoint or emit the configured credentials/auth header to an attacker-controlled host.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_0551c0d5-b6c6-4ece-8090-51ca8611b4b8?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/git/lfs.go -> Scope: Advanced. An unprivileged attacker turns a repository RPC into an SSRF or credential-disclosure primitive, by supplying a crafted remote URL, redirect target, HTTP header, or bundle-URI location to `CreateRepositoryFromURL`, `FetchRemote`, `FetchBundle`, `CreateRepositoryFromSnapshot`, or `bundleuri`, making Gitaly reach an internal endpoint or emit the configured credentials/auth header to an attacker-controlled host.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_ea7d775d-8f4d-447d-acbd-9d5e3915b9eb?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/helper/security.go -> Scope: Advanced. An unprivileged attacker turns a repository RPC into an SSRF or credential-disclosure primitive, by supplying a crafted remote URL, redirect target, HTTP header, or bundle-URI location to `CreateRepositoryFromURL`, `FetchRemote`, `FetchBundle`, `CreateRepositoryFromSnapshot`, or `bundleuri`, making Gitaly reach an internal endpoint or emit the configured credentials/auth header to an attacker-controlled host.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_907be0c6-dfb3-487b-8be2-5e75ea3924c5?mode=deep",
+    "questions_generated": false
+  }
+]
