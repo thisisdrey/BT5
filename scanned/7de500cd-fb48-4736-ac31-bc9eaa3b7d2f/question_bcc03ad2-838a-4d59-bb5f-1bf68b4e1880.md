@@ -1,1 +1,0 @@
-[File: internal/gitaly/service/repository/archive.go -> Function: handleArchive, `--prefix` flag] Can an attacker control `GetArchiveRequest.Prefix` to inject a value such as an absolute path or one containing `..`/NUL bytes, given it's concatenated as `p.in.GetPrefix() + \
