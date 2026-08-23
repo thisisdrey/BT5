@@ -1,0 +1,7 @@
+[
+  {
+    "question": "'File Name: internal/gitlab/http_client.go -> Scope: Critical. An unprivileged pusher gets refs updated with objects that never passed verification, by bypassing hook invocation or the quarantine boundary in `hook.PreReceive`/`hook.Update`, `updateref`, `updateReferenceWithHooks`, or by forging/replaying the hooks payload in `gitcmd.HooksPayload`, so unvetted objects become reachable or a protected-branch/access decision is skipped.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_f8133780-fcd0-45b4-aaef-630233ea2a80?mode=deep",
+    "questions_generated": false
+  }
+]
