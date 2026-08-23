@@ -1,1 +1,0 @@
-[File: internal/gitaly/hook/updateref/update_with_hooks.go -> Scope: Critical] [Function: UpdaterWithHooks.UpdateReference] Can an attacker force `reference` to be an empty string bypass via a code path that constructs `git.ReferenceName` from unvalidated request bytes that pass the `reference == \

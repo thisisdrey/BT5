@@ -1,1 +1,0 @@
-[File: internal/gitaly/hook/procreceive_handler.go] [Function: AcceptUpdate / RejectUpdate] Do AcceptUpdate/RejectUpdate write the attacker-controlled `referenceName` (parsed unsanitized in parseRefUpdate) directly into `fmt.Sprintf(\
