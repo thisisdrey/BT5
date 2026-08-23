@@ -1,0 +1,152 @@
+[
+  {
+    "question": "'File Name: internal/gitaly/storage/repository_path.go -> Scope: Critical. An unprivileged attacker achieves command or option injection into a spawned git process, by smuggling a leading `-`, `--upload-pack=`, `--output=`, `ext::`, or `-c` payload through a revision, ref name, path, or remote URL that `git.ValidateRevision`, `gitcmd.Command`/`command_options.go`, or `gitcmd.commandDescriptions` fails to reject, causing Gitaly to execute attacker-chosen code or read attacker-chosen files.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_ad3b5ac4-dd92-4e93-a151-99d68f7c0f1c?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/gitaly/storage/path_helpers.go -> Scope: Critical. An unprivileged attacker achieves command or option injection into a spawned git process, by smuggling a leading `-`, `--upload-pack=`, `--output=`, `ext::`, or `-c` payload through a revision, ref name, path, or remote URL that `git.ValidateRevision`, `gitcmd.Command`/`command_options.go`, or `gitcmd.commandDescriptions` fails to reject, causing Gitaly to execute attacker-chosen code or read attacker-chosen files.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_cca80c3d-1598-4b71-beae-60b6cb3bede8?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/gitaly/storage/locator.go -> Scope: Critical. An unprivileged attacker achieves command or option injection into a spawned git process, by smuggling a leading `-`, `--upload-pack=`, `--output=`, `ext::`, or `-c` payload through a revision, ref name, path, or remote URL that `git.ValidateRevision`, `gitcmd.Command`/`command_options.go`, or `gitcmd.commandDescriptions` fails to reject, causing Gitaly to execute attacker-chosen code or read attacker-chosen files.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_47f753b3-f175-4c7d-9f28-b854798473c6?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/gitaly/storage/storage.go -> Scope: Critical. An unprivileged attacker achieves command or option injection into a spawned git process, by smuggling a leading `-`, `--upload-pack=`, `--output=`, `ext::`, or `-c` payload through a revision, ref name, path, or remote URL that `git.ValidateRevision`, `gitcmd.Command`/`command_options.go`, or `gitcmd.commandDescriptions` fails to reject, causing Gitaly to execute attacker-chosen code or read attacker-chosen files.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_02dd3997-5579-4ff5-baf3-6a165b4cd50d?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/gitaly/config/locator.go -> Scope: Critical. An unprivileged attacker achieves command or option injection into a spawned git process, by smuggling a leading `-`, `--upload-pack=`, `--output=`, `ext::`, or `-c` payload through a revision, ref name, path, or remote URL that `git.ValidateRevision`, `gitcmd.Command`/`command_options.go`, or `gitcmd.commandDescriptions` fails to reject, causing Gitaly to execute attacker-chosen code or read attacker-chosen files.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_74db22bd-9aaf-4260-8cef-6b92cc5948ba?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/gitaly/storage/walk_directory.go -> Scope: Critical. An unprivileged attacker achieves command or option injection into a spawned git process, by smuggling a leading `-`, `--upload-pack=`, `--output=`, `ext::`, or `-c` payload through a revision, ref name, path, or remote URL that `git.ValidateRevision`, `gitcmd.Command`/`command_options.go`, or `gitcmd.commandDescriptions` fails to reject, causing Gitaly to execute attacker-chosen code or read attacker-chosen files.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_cccb5d42-28a5-46b4-9f44-3baac496f0af?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/gitaly/storage/fs.go -> Scope: Critical. An unprivileged attacker achieves command or option injection into a spawned git process, by smuggling a leading `-`, `--upload-pack=`, `--output=`, `ext::`, or `-c` payload through a revision, ref name, path, or remote URL that `git.ValidateRevision`, `gitcmd.Command`/`command_options.go`, or `gitcmd.commandDescriptions` fails to reject, causing Gitaly to execute attacker-chosen code or read attacker-chosen files.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_b26fd45d-e5da-445f-aede-0b1274ccdfb9?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/tempdir/tempdir.go -> Scope: Critical. An unprivileged attacker achieves command or option injection into a spawned git process, by smuggling a leading `-`, `--upload-pack=`, `--output=`, `ext::`, or `-c` payload through a revision, ref name, path, or remote URL that `git.ValidateRevision`, `gitcmd.Command`/`command_options.go`, or `gitcmd.commandDescriptions` fails to reject, causing Gitaly to execute attacker-chosen code or read attacker-chosen files.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_1b0e6550-3b3f-40f6-b657-ab54c062115c?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/git/gitcmd/command_options.go -> Scope: Critical. An unprivileged attacker achieves command or option injection into a spawned git process, by smuggling a leading `-`, `--upload-pack=`, `--output=`, `ext::`, or `-c` payload through a revision, ref name, path, or remote URL that `git.ValidateRevision`, `gitcmd.Command`/`command_options.go`, or `gitcmd.commandDescriptions` fails to reject, causing Gitaly to execute attacker-chosen code or read attacker-chosen files.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_f292cf90-1499-40f0-9095-5eb201febdb2?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/git/gitcmd/command_description.go -> Scope: Critical. An unprivileged attacker achieves command or option injection into a spawned git process, by smuggling a leading `-`, `--upload-pack=`, `--output=`, `ext::`, or `-c` payload through a revision, ref name, path, or remote URL that `git.ValidateRevision`, `gitcmd.Command`/`command_options.go`, or `gitcmd.commandDescriptions` fails to reject, causing Gitaly to execute attacker-chosen code or read attacker-chosen files.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_4e3d67a1-418d-4327-b0c6-5bbd05b3b331?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/git/gitcmd/command_factory.go -> Scope: Critical. An unprivileged attacker achieves command or option injection into a spawned git process, by smuggling a leading `-`, `--upload-pack=`, `--output=`, `ext::`, or `-c` payload through a revision, ref name, path, or remote URL that `git.ValidateRevision`, `gitcmd.Command`/`command_options.go`, or `gitcmd.commandDescriptions` fails to reject, causing Gitaly to execute attacker-chosen code or read attacker-chosen files.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_b47e0e64-8540-4a1f-b7c0-4fd7ba976c33?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/git/gitcmd/command.go -> Scope: Critical. An unprivileged attacker achieves command or option injection into a spawned git process, by smuggling a leading `-`, `--upload-pack=`, `--output=`, `ext::`, or `-c` payload through a revision, ref name, path, or remote URL that `git.ValidateRevision`, `gitcmd.Command`/`command_options.go`, or `gitcmd.commandDescriptions` fails to reject, causing Gitaly to execute attacker-chosen code or read attacker-chosen files.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_8903b09c-8467-439d-b53a-df61d4baba1a?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/git/gitcmd/staticargs.go -> Scope: Critical. An unprivileged attacker achieves command or option injection into a spawned git process, by smuggling a leading `-`, `--upload-pack=`, `--output=`, `ext::`, or `-c` payload through a revision, ref name, path, or remote URL that `git.ValidateRevision`, `gitcmd.Command`/`command_options.go`, or `gitcmd.commandDescriptions` fails to reject, causing Gitaly to execute attacker-chosen code or read attacker-chosen files.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_24463ac0-4896-45e1-b4e0-0c523c79402d?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/git/gitcmd/ssh.go -> Scope: Critical. An unprivileged attacker achieves command or option injection into a spawned git process, by smuggling a leading `-`, `--upload-pack=`, `--output=`, `ext::`, or `-c` payload through a revision, ref name, path, or remote URL that `git.ValidateRevision`, `gitcmd.Command`/`command_options.go`, or `gitcmd.commandDescriptions` fails to reject, causing Gitaly to execute attacker-chosen code or read attacker-chosen files.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_d9f41742-2c9d-4c25-af33-24bacf6957fd?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/git/gitcmd/protocol.go -> Scope: Critical. An unprivileged attacker achieves command or option injection into a spawned git process, by smuggling a leading `-`, `--upload-pack=`, `--output=`, `ext::`, or `-c` payload through a revision, ref name, path, or remote URL that `git.ValidateRevision`, `gitcmd.Command`/`command_options.go`, or `gitcmd.commandDescriptions` fails to reject, causing Gitaly to execute attacker-chosen code or read attacker-chosen files.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_d0d8e6d5-c65f-4afc-9b87-e76b593c86c5?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/git/revision.go -> Scope: Critical. An unprivileged attacker achieves command or option injection into a spawned git process, by smuggling a leading `-`, `--upload-pack=`, `--output=`, `ext::`, or `-c` payload through a revision, ref name, path, or remote URL that `git.ValidateRevision`, `gitcmd.Command`/`command_options.go`, or `gitcmd.commandDescriptions` fails to reject, causing Gitaly to execute attacker-chosen code or read attacker-chosen files.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_8781a8f4-6662-456c-b1a1-fd7fa2f0253d?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/git/object_id.go -> Scope: Critical. An unprivileged attacker achieves command or option injection into a spawned git process, by smuggling a leading `-`, `--upload-pack=`, `--output=`, `ext::`, or `-c` payload through a revision, ref name, path, or remote URL that `git.ValidateRevision`, `gitcmd.Command`/`command_options.go`, or `gitcmd.commandDescriptions` fails to reject, causing Gitaly to execute attacker-chosen code or read attacker-chosen files.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_a4f33220-a9f2-46d7-b6dd-62c24ff534d1?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/git/reference.go -> Scope: Critical. An unprivileged attacker achieves command or option injection into a spawned git process, by smuggling a leading `-`, `--upload-pack=`, `--output=`, `ext::`, or `-c` payload through a revision, ref name, path, or remote URL that `git.ValidateRevision`, `gitcmd.Command`/`command_options.go`, or `gitcmd.commandDescriptions` fails to reject, causing Gitaly to execute attacker-chosen code or read attacker-chosen files.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_251e259c-fb2a-4b20-8f78-507dd54b6c80?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/git/repository.go -> Scope: Critical. An unprivileged attacker achieves command or option injection into a spawned git process, by smuggling a leading `-`, `--upload-pack=`, `--output=`, `ext::`, or `-c` payload through a revision, ref name, path, or remote URL that `git.ValidateRevision`, `gitcmd.Command`/`command_options.go`, or `gitcmd.commandDescriptions` fails to reject, causing Gitaly to execute attacker-chosen code or read attacker-chosen files.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_c3c97b7a-7e44-4d04-9af5-f9d96adbcdca?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/git/gitcmd/hooks_payload.go -> Scope: Critical. An unprivileged attacker achieves command or option injection into a spawned git process, by smuggling a leading `-`, `--upload-pack=`, `--output=`, `ext::`, or `-c` payload through a revision, ref name, path, or remote URL that `git.ValidateRevision`, `gitcmd.Command`/`command_options.go`, or `gitcmd.commandDescriptions` fails to reject, causing Gitaly to execute attacker-chosen code or read attacker-chosen files.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_97d78774-ec0e-42ba-b741-f34dba404d4f?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/git/gitcmd/hooks_options.go -> Scope: Critical. An unprivileged attacker achieves command or option injection into a spawned git process, by smuggling a leading `-`, `--upload-pack=`, `--output=`, `ext::`, or `-c` payload through a revision, ref name, path, or remote URL that `git.ValidateRevision`, `gitcmd.Command`/`command_options.go`, or `gitcmd.commandDescriptions` fails to reject, causing Gitaly to execute attacker-chosen code or read attacker-chosen files.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_dab40eae-70e3-492e-8392-6d66afb2691a?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/gitaly/hook/manager.go -> Scope: Critical. An unprivileged attacker achieves command or option injection into a spawned git process, by smuggling a leading `-`, `--upload-pack=`, `--output=`, `ext::`, or `-c` payload through a revision, ref name, path, or remote URL that `git.ValidateRevision`, `gitcmd.Command`/`command_options.go`, or `gitcmd.commandDescriptions` fails to reject, causing Gitaly to execute attacker-chosen code or read attacker-chosen files.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_d03e4c13-ba9e-47b0-9502-a953b619c5db?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/gitaly/hook/prereceive.go -> Scope: Critical. An unprivileged attacker achieves command or option injection into a spawned git process, by smuggling a leading `-`, `--upload-pack=`, `--output=`, `ext::`, or `-c` payload through a revision, ref name, path, or remote URL that `git.ValidateRevision`, `gitcmd.Command`/`command_options.go`, or `gitcmd.commandDescriptions` fails to reject, causing Gitaly to execute attacker-chosen code or read attacker-chosen files.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_f5e73ca7-8aca-4242-9ec2-d89a0b782dd3?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/gitaly/hook/update.go -> Scope: Critical. An unprivileged attacker achieves command or option injection into a spawned git process, by smuggling a leading `-`, `--upload-pack=`, `--output=`, `ext::`, or `-c` payload through a revision, ref name, path, or remote URL that `git.ValidateRevision`, `gitcmd.Command`/`command_options.go`, or `gitcmd.commandDescriptions` fails to reject, causing Gitaly to execute attacker-chosen code or read attacker-chosen files.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_9e22c019-e127-4012-8d90-06dd608fc4cf?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/gitaly/hook/postreceive.go -> Scope: Critical. An unprivileged attacker achieves command or option injection into a spawned git process, by smuggling a leading `-`, `--upload-pack=`, `--output=`, `ext::`, or `-c` payload through a revision, ref name, path, or remote URL that `git.ValidateRevision`, `gitcmd.Command`/`command_options.go`, or `gitcmd.commandDescriptions` fails to reject, causing Gitaly to execute attacker-chosen code or read attacker-chosen files.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_74d8be48-4154-4e29-8e2c-c938869cc612?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/gitaly/hook/custom.go -> Scope: Critical. An unprivileged attacker achieves command or option injection into a spawned git process, by smuggling a leading `-`, `--upload-pack=`, `--output=`, `ext::`, or `-c` payload through a revision, ref name, path, or remote URL that `git.ValidateRevision`, `gitcmd.Command`/`command_options.go`, or `gitcmd.commandDescriptions` fails to reject, causing Gitaly to execute attacker-chosen code or read attacker-chosen files.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_179374fb-db87-4250-9500-279b380ea417?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/gitaly/hook/procreceive_handler.go -> Scope: Critical. An unprivileged attacker achieves command or option injection into a spawned git process, by smuggling a leading `-`, `--upload-pack=`, `--output=`, `ext::`, or `-c` payload through a revision, ref name, path, or remote URL that `git.ValidateRevision`, `gitcmd.Command`/`command_options.go`, or `gitcmd.commandDescriptions` fails to reject, causing Gitaly to execute attacker-chosen code or read attacker-chosen files.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_ab22980e-7843-4de3-b133-c2cef1e77be3?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/gitaly/service/operations/update_with_hooks.go -> Scope: Critical. An unprivileged attacker achieves command or option injection into a spawned git process, by smuggling a leading `-`, `--upload-pack=`, `--output=`, `ext::`, or `-c` payload through a revision, ref name, path, or remote URL that `git.ValidateRevision`, `gitcmd.Command`/`command_options.go`, or `gitcmd.commandDescriptions` fails to reject, causing Gitaly to execute attacker-chosen code or read attacker-chosen files.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_b605f28c-e5b7-4eec-93bc-4ea2f78b331c?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/git/quarantine/quarantine.go -> Scope: Critical. An unprivileged attacker achieves command or option injection into a spawned git process, by smuggling a leading `-`, `--upload-pack=`, `--output=`, `ext::`, or `-c` payload through a revision, ref name, path, or remote URL that `git.ValidateRevision`, `gitcmd.Command`/`command_options.go`, or `gitcmd.commandDescriptions` fails to reject, causing Gitaly to execute attacker-chosen code or read attacker-chosen files.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_1550a1f1-474e-4ece-907f-4c72c2606d35?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/git/alternates/alternates.go -> Scope: Critical. An unprivileged attacker achieves command or option injection into a spawned git process, by smuggling a leading `-`, `--upload-pack=`, `--output=`, `ext::`, or `-c` payload through a revision, ref name, path, or remote URL that `git.ValidateRevision`, `gitcmd.Command`/`command_options.go`, or `gitcmd.commandDescriptions` fails to reject, causing Gitaly to execute attacker-chosen code or read attacker-chosen files.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_eacd9ee4-c533-416c-a365-1cee941c7694?mode=deep",
+    "questions_generated": false
+  }
+]
