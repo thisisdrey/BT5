@@ -1,1 +1,0 @@
-[File: apply_patch.go -> Function: userApplyPatch, validateUserApplyPatchHeader] Can an attacker set `UserApplyPatchRequest_Header.TargetBranch` to a value containing `^{commit}`-adjacent revision syntax (e.g. embedding `@{upstream}` or a path-like ref) so that `repo.ResolveRevision(ctx, targetBranch.Revision()+\
