@@ -1,1 +1,0 @@
-[File: internal/gitaly/service/repository/replicate.go -> Function: syncGitconfig / writeFile] Because `writeFile` builds `parentDir := filepath.Dir(path)` and calls `os.MkdirAll(parentDir, mode.Directory)` then `safe.NewLockingFileWriter(path, ...)` using the `configPath := filepath.Join(repoPath, \
