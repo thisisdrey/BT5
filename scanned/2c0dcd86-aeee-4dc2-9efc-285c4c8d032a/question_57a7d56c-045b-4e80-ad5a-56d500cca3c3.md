@@ -1,1 +1,0 @@
-[File: auth/token.go -> Scope: Advanced] [Function: gitalyauth.CheckToken called from internal/gitaly/server/auth.checkFunc] Can an attacker send an authorization header where `grpcmwauth.AuthFromMD(ctx, \
