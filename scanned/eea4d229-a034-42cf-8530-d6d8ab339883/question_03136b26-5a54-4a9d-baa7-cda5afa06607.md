@@ -1,1 +1,0 @@
-[File: internal/gitaly/service/ssh/upload_command.go -> Scope: Advanced] [Function: grpcmwauth.AuthFromMD / ExtractAuthInfo] Can an attacker supply multiple `authorization` metadata values or malformed casing/duplicate `Bearer` headers to confuse `grpcmwauth.AuthFromMD(ctx, \
