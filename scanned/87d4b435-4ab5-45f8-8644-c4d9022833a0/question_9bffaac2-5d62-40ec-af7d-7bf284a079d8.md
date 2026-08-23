@@ -1,1 +1,0 @@
-[File: internal/gitaly/storage/storagemgr/partition/snapshot/snapshot.go -> Function: createRepositorySnapshots] Can an attacker who controls a repo's `objects/info/alternates` content (line 183, `gitstorage.ReadAlternatesFile`) craft an alternate relative path such that `alternateRelativePath` (line 188, `filepath.Dir(filepath.Join(relativePath, \
