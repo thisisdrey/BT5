@@ -1,0 +1,1 @@
+[File: internal/git/objectpool/link.go -> Function: Link / getRelativeObjectPath] Can an attacker who forks/imports a project and thereby controls the pool-repository relationship cause `Link` to write an `expectedRelPath` into `repo`'s `objects/info/alternates` file that, via `filepath.Rel(filepath.Join(repoPath, \

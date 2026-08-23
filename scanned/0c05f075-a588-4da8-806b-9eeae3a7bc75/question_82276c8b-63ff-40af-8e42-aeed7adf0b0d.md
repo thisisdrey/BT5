@@ -1,0 +1,1 @@
+[File: internal/gitaly/service/smarthttp/upload_pack.go -> Function: runUploadPack / gitcmd.WithPackObjectsHookEnv] Can an unprivileged attacker whose upload-pack negotiation triggers the pack-objects hook environment (WithPackObjectsHookEnv(objectHash, req.GetRepository(), \

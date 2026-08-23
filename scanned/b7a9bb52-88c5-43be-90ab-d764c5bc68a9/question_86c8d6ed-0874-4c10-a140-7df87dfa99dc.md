@@ -1,0 +1,1 @@
+[File: internal/gitaly/hook/postreceive.go] [Function: (*GitLabHookManager).postReceiveHook] Can an unprivileged attacker who controls their own repository's GL_PROJECT_PATH/GL_REPOSITORY fields (via a fork/import) trigger the `fmt.Errorf(\

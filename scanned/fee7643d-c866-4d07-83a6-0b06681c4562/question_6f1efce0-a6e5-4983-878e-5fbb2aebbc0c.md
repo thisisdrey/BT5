@@ -1,0 +1,1 @@
+[File: internal/git/gitattributes/check_attr.go -> Function: CheckAttrCmd.Check] Can an attacker submit a path argument to GetFileAttributes containing a raw NUL byte in some request encoding path that bypasses the strings.Contains(path,

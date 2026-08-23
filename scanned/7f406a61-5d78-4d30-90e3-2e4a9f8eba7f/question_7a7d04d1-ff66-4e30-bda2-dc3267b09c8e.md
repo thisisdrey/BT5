@@ -1,0 +1,1 @@
+[File: internal/gitaly/service/repository/create_repository_from_snapshot.go] [Function: untar] Can an attacker set CreateRepositoryFromSnapshotRequest.HttpAuth to force Gitaly to send an arbitrary Authorization header value to an attacker-chosen HttpUrl, and since req.Header.Set(\

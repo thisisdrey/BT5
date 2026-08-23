@@ -1,0 +1,1 @@
+[File: internal/git/objectpool/link.go -> Function: getRelativeObjectPath / linkedToRepository] Can an attacker who owns a repository and forks it (triggering `LinkRepositoryToObjectPool`) submit an `ObjectPool.Repository.relative_path` that, after `pool.Path(ctx)` and `filepath.Rel(filepath.Join(repoPath, \

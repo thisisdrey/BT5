@@ -1,0 +1,1 @@
+[File: internal/gitaly/service/commit/find_commits.go -> Scope: Critical config/flag injection via --grep and --author] [Function: getLogCommandSubCmd] Can an attacker-controlled FindCommitsRequest.Author or MessageRegex field, inserted via gitcmd.Flag{Name: fmt.Sprintf(\

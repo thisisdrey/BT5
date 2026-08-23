@@ -1,0 +1,1 @@
+[File: internal/gitaly/service/repository/search_files.go -> Function: SearchFilesByName, line 132-135] Can an attacker force repo.ObjectHash(ctx) to fail (e.g. by racing repository state or supplying a corrupted/empty ref during import) such that fmt.Errorf(\

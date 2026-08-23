@@ -1,0 +1,1 @@
+[File: internal/git/objectpool/link.go -> Function: getRelativeObjectPath, Link] Can an attacker whose repository is used as the `repo` argument to `Link(ctx, pool, repo, txManager)` cause `getRelativeObjectPath` to write an attacker-influenced value into `repo`'s `objects/info/alternates` file (via `filepath.Rel(filepath.Join(repoPath,\

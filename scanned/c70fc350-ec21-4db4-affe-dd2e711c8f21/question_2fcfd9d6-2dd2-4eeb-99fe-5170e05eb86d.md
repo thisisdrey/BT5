@@ -1,0 +1,1 @@
+[File: internal/gitaly/service/ref/delete_refs.go -> Function: validateDeleteRefRequest -> locator.ValidateRepository] Does `locator.ValidateRepository`'s returned error (wrapped as `structerr.NewInvalidArgument(\

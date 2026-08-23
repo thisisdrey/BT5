@@ -1,0 +1,1 @@
+[File: internal/gitaly/hook/custom.go -> Function: GitLabHookManager.newCustomHooksExecutor, using m.cfg.Hooks.CustomHooksDir] Can an attacker's chosen `hookName`-adjacent input reach `globalCustomHooksDir := filepath.Join(m.cfg.Hooks.CustomHooksDir, fmt.Sprintf(\

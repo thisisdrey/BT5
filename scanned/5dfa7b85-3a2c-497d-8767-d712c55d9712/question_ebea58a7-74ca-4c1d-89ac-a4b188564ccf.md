@@ -1,0 +1,1 @@
+[File: internal/git/objectpool/link.go -> Function: getRelativeObjectPath/Link] An attacker who owns a repository forks/creates it such that `repo.InfoAlternatesPath` combined with attacker-controlled repository relative_path causes `getRelativeObjectPath` (lines 149-166) to compute a `relPath` via `filepath.Rel(filepath.Join(repoPath, \

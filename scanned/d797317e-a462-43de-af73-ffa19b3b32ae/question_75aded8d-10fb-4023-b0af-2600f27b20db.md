@@ -1,0 +1,1 @@
+[File: internal/git/objectpool/link.go -> Scope: Critical] [Function: Link / getRelativeObjectPath] Can an attacker who controls their repository's on-disk relative directory depth (via a crafted `relative_path`, e.g. nested subdirectories) cause `filepath.Rel(filepath.Join(repoPath, \

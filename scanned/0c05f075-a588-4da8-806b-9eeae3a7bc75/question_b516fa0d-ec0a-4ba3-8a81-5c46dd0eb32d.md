@@ -1,0 +1,1 @@
+[File: internal/git/objectpool/fetch.go -> Scope: config injection via remote.origin.url] [Function: pruneReferences] The dry-run 'git remote prune origin' is invoked with 'gitcmd.WithConfig(gitcmd.ConfigPair{Key: \

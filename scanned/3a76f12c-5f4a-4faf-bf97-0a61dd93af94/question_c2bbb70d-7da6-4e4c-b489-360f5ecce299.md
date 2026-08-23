@@ -1,0 +1,1 @@
+[File: internal/gitaly/service/repository/create_repository_from_snapshot.go -> Func: untar, lines 101-115] Can an attacker set `HttpAuth` on `CreateRepositoryFromSnapshotRequest` combined with a `HttpUrl` under attacker control that 302-redirects to a third-party host, causing the `Authorization` header set via `req.Header.Set(\

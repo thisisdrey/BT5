@@ -1,0 +1,1 @@
+[File: internal/gitaly/config/locator.go -> Scope: Intermediate] [Function: configLocator.getPath (CacheDir/StateDir/TempDir/PartitionsDir)] Can an attacker supply a storage_name to an RPC surface that indirectly calls getPath and, on the 'no such storage' branch, force `structerr.NewInvalidArgument(\

@@ -1,0 +1,1 @@
+[File: 'internal/git/alternates/alternates.go -> Env'] [Function: alternates.Env(repoPath, objectDirectory, alternateObjectDirectories)] Can an unprivileged attacker who controls the `git_object_directory`/`git_alternate_object_directories` fields of a `gitalypb.Repository` message sent on a non-quarantine RPC (bypassing the `git_object_directory != \

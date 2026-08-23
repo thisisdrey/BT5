@@ -1,0 +1,1 @@
+[File: 'internal/gitaly/service/repository/fetch_remote.go' -> Scope: SSRF/credential-leak via FetchRemote] [Function: buildCommandOpts / (*server).fetchRemoteAtomic] Can an unprivileged attacker owning a repository call `FetchRemoteRequest{RemoteParams:&gitalypb.Remote{Url:\

@@ -1,0 +1,1 @@
+[File: internal/gitaly/storage/storagemgr/partition_assigner.go getAlternatePartitionID] Can an attacker write (via a push containing that literal blob content) an `objects/info/alternates` file whose value, after `filepath.Join(relativePath, \

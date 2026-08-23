@@ -1,0 +1,1 @@
+[File: internal/gitaly/service/operations/tags.go] [Function: UserCreateTag / createTag -> localrepo.MktagError.Stderr()] Can an unprivileged attacker who owns a repo craft a target_revision or tag_name that makes `git mktag` fail with stderr containing another object's or the host's sensitive path/content, such that `structerr.NewNotFound(\

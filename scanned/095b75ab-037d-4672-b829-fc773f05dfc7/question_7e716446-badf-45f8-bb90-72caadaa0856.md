@@ -1,0 +1,1 @@
+[File: internal/gitaly/service/smarthttp/upload_pack.go -> Scope: DoS] [Function: s.runUploadPack / cmd.Wait] Can an attacker abuse the 'deepen' exemption at upload_pack.go:185-193 (where a non-zero exit from `git-upload-pack` is silently accepted as success whenever `stats.Deepen != \

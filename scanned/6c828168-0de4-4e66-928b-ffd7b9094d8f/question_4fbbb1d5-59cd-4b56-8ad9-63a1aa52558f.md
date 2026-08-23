@@ -1,0 +1,1 @@
+[File: internal/gitaly/storage/storagemgr/partition_assigner.go -> Scope: Critical] [Function: getAlternatePartitionID] Can an unprivileged attacker who controls a repository's `objects/info/alternates` file content (via push/import) craft the `alternate` value so `filepath.Join(relativePath, \

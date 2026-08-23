@@ -1,0 +1,1 @@
+[File: 'internal/grpc/sidechannel/sidechannel.go' -> Scope: secret/metadata leak via error and log surfaces] [Function: sidechannel.OpenSidechannel timeout/deadline handling] Can an attacker deliberately stall the sidechannel handshake (never sending the \

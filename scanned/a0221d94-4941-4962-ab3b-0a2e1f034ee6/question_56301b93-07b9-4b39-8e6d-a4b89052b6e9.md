@@ -1,0 +1,1 @@
+[File: internal/gitaly/service/commit/raw_blame.go -> Scope: git argument/flag injection via BlameRange] [Function: `validateRawBlameRequest`, `validBlameRange = regexp.MustCompile(`\\A\\d+,\\d+\\z`)`, `flags = append(flags, gitcmd.ValueFlag{Name: \

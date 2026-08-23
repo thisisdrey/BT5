@@ -1,0 +1,1 @@
+[File: internal/gitaly/service/repository/snapshot.go -> Function: (*server).GetSnapshot] Does `GetSnapshot` leak the attacker-controlled alternates path itself (i.e., absolute host paths configured by the attacker) back to the client through error metadata when `ErrSnapshotAlternates` occurs with a permission or not-exist error, given `s.logger.WithField(\

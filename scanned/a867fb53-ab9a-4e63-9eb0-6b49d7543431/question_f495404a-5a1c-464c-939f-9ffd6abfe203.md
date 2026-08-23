@@ -1,0 +1,1 @@
+[File: 'internal/gitaly/config/config.go' -> Scope: Critical] Target: GitConfig.Validate/GlobalArgs (invoked via gitcmd.ConvertConfigOptions in internal/git/gitcmd/command_options.go). Attacker action: send an RPC that forwards its GitConfigOptions ([]string \

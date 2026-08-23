@@ -1,0 +1,1 @@
+[File: internal/structerr/error.go -> Function: WithMetadataItems / metadata propagation] An unprivileged attacker crafts input (e.g. a stderr-triggering git failure) so that a lower-level function attaches `WithMetadataItems(Key:\

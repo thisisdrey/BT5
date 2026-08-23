@@ -1,0 +1,1 @@
+[File: internal/gitaly/service/repository/fetch_remote.go -> Scope: Advanced DoS] [Function: buildCommandOpts] Can an attacker who fully controls `RemoteParams.Url` (fetch_remote.go:260-304) inject additional git config directives via the templated key `fmt.Sprintf(\

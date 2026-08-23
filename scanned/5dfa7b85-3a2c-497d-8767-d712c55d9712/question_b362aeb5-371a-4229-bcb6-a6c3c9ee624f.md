@@ -1,0 +1,1 @@
+[File: internal/gitaly/hook/custom.go -> Function: customHooksEnv, PATH construction] Can an attacker influence `envs` (the incoming environment list forwarded into `customHooksEnv`, sourced from client-controlled HooksPayload fields) so that `env.ExtractValue(envs, \

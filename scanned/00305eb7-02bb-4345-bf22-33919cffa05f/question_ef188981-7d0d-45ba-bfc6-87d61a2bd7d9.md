@@ -1,0 +1,1 @@
+[File: 'internal/git/gitcmd/protocol.go' -> Scope: Critical. GIT_PROTOCOL env injection.] [Function: gitcmd.gitProtocolEnv, gitcmd.WithGitProtocol] Can an unprivileged client set `GetGitProtocol()` on a push/fetch RPC (e.g. `SSHReceivePackRequest.GitProtocol`) to an attacker-chosen string containing `=` or newline characters that, after `fmt.Sprintf(\

@@ -1,0 +1,1 @@
+[File: 'internal/gitaly/service/repository/create_repository_from_url.go' -> `cloneFromURLCommand`] Given that bundle-URI is explicitly disabled during `CreateRepositoryFromURL` via `gitcmd.WithGlobalOption(gitcmd.ConfigPair{Key: \

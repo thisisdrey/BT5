@@ -1,0 +1,1 @@
+[File: internal/git/reference.go -> Scope: SSRF via bundle-uri] [Function: repository.(*server).cloneFromURLCommand / CreateRepositoryFromURL] Given the fix `gitcmd.WithGlobalOption(gitcmd.ConfigPair{Key: \

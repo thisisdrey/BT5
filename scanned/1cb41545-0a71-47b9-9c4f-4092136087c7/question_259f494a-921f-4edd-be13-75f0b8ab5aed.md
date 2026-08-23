@@ -1,0 +1,1 @@
+[File: internal/gitaly/service/objectpool/create.go + internal/git/objectpool/pool.go -> Scope: Critical] Target: CreateObjectPool RPC path validation chain (objectpool.util.poolForRequest -> objectpool.FromProto -> ErrInvalidPoolDir). Attacker action: request creation of an object pool with ObjectPool.Repository.RelativePath containing a trailing \

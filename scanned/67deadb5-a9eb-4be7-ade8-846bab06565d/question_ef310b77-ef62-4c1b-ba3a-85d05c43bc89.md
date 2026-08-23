@@ -1,0 +1,1 @@
+[File: internal/gitaly/service/repository/search_files.go -> Function: SearchFilesByContent -> sendSearchFilesResultChunked] Can an attacker craft file content in their own repository (a blob whose bytes exactly equal or closely mimic `contentDelimiter` (\

@@ -1,0 +1,1 @@
+[File: internal/gitaly/service/objectpool/fetch_into_object_pool.go -> Scope: Critical.] [Function: objectpool.ObjectPool.pruneReferences in internal/git/objectpool/fetch.go] Can an unprivileged attacker who controls originPath (via a symlinked or crafted repository path under their own storage) cause `gitcmd.WithConfig(gitcmd.ConfigPair{Key: \

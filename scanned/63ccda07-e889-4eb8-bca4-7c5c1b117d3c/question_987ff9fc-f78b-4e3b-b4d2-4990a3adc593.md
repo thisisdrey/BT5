@@ -1,0 +1,1 @@
+[File: 'internal/gitaly/service/remote/find_remote_root_ref.go' -> Scope: SSRF via FindRemoteRootRef] [Function: (*server).findRemoteRootRefCmd] Can an unprivileged attacker invoke `FindRemoteRootRefRequest{RemoteUrl:\

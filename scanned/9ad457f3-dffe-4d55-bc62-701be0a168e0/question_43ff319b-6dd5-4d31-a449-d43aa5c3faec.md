@@ -1,0 +1,1 @@
+[File: internal/gitaly/service/repository/fetch_remote.go -> Function: buildCommandOpts] Can an attacker set `RemoteParams.Url` to a value containing shell/config-injection-relevant characters (e.g. embedded newline, or a value equal to a Git config section terminator) so that the generated `gitcmd.ConfigPair{Key: fmt.Sprintf(

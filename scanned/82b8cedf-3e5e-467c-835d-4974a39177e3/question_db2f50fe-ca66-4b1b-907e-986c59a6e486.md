@@ -1,0 +1,1 @@
+[File: internal/gitaly/config/locator.go -> Scope: Intermediate] [Function: configLocator.ValidateRepository, os.Stat(storagePath) branch] Can an attacker force `os.Stat(storagePath)` to fail with a non-ENOENT OS error (e.g. by supplying a storage_name that resolves to a path Gitaly cannot stat due to permission or a symlink loop induced elsewhere) so that `structerr.New(\

@@ -1,0 +1,1 @@
+[File: 'internal/gitaly/service/repository/fetch_remote.go' -> Scope: git argument/config injection via URL-shaped keys] [Function: buildCommandOpts] The code builds a Git config key as `fmt.Sprintf(\

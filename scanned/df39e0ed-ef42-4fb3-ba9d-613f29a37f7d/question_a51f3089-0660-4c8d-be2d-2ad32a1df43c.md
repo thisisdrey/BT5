@@ -1,0 +1,1 @@
+[File: internal/gitaly/service/repository/fetch_remote.go -> buildCommandOpts (`http.%s.extraHeader`, Value: req.GetRemoteParams().GetUrl())] Since the extraHeader git config key is keyed by the literal, attacker-supplied remote URL string (`fmt.Sprintf(\

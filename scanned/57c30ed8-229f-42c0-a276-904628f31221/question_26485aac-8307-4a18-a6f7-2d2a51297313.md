@@ -1,0 +1,1 @@
+[File: internal/git/localrepo/tree.go -> Function: validateFileCreationPath, used by TreeEntry.Modify from submodules.go] The function only rejects paths whose *first* path component is literally `.git` (line 118: `before, _, _ := strings.Cut(path, \

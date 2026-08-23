@@ -1,0 +1,1 @@
+[File: internal/gitaly/service/operations/submodules.go -> Function: UserUpdateSubmodule] Since `req.GetExpectedOldOid()` is resolved via `quarantineRepo.ResolveRevision(ctx, git.Revision(fmt.Sprintf(\

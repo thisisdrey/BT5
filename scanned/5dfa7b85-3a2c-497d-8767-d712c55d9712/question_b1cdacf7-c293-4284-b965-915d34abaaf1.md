@@ -1,0 +1,1 @@
+[File: internal/gitaly/service/objectpool/create.go (errInvalidPoolDir path) -> Function: pool path validation] An attacker requests `CreateObjectPool` with `ObjectPool.Repository.RelativePath` crafted as `@pools/aa/bb/<64-hex>.git/../../../../victim.git` to test whether the digit-prefix/subdirectory validation (seen rejecting `RelativePath + \

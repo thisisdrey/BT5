@@ -1,0 +1,1 @@
+[File: internal/gitaly/service/commit/raw_blame.go -> Scope: cross-tenant metadata leak via path/revision echo] [Function: RawBlame `fatal: no such path` branch, `structerr.NewNotFound(...).WithMetadata(\

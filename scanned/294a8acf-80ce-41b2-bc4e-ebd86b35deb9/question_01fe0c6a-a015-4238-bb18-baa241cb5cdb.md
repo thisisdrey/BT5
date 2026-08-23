@@ -1,0 +1,1 @@
+[File: 'internal/gitaly/storage/locator.go' -> Scope: Intermediate] [Function: storage.NewRepositoryNotFoundError / NewStorageNotFoundError] Can an unprivileged attacker enumerate other tenants' relative paths or storage names by observing that `structerr.NewNotFound(\

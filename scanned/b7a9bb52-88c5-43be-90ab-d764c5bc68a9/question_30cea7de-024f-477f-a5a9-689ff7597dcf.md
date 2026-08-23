@@ -1,0 +1,1 @@
+[File: internal/gitaly/hook/postreceive.go] [Function: (*GitLabHookManager).postReceiveHook] Can an attacker deliberately fail GitLab's `PostReceive` API check (`ok == false`) after messages have already been printed via `printMessages(messages, stdout)`, then rely on the `errors.New(\
