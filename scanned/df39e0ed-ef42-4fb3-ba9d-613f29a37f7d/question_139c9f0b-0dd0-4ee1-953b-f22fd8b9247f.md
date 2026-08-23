@@ -1,1 +1,0 @@
-[File: internal/gitaly/service/repository/fetch_remote.go -> validateFetchRemoteRequest] Since validation only rejects an empty URL and never restricts scheme, can an attacker set `RemoteParams.Url='ext::sh -c \
