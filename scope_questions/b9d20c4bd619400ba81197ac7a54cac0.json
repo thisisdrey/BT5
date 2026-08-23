@@ -1,7 +1,0 @@
-[
-  {
-    "question": "'File Name: internal/gitlab/http_client.go -> Scope: Advanced. An unprivileged attacker turns a repository RPC into an SSRF or credential-disclosure primitive, by supplying a crafted remote URL, redirect target, HTTP header, or bundle-URI location to `CreateRepositoryFromURL`, `FetchRemote`, `FetchBundle`, `CreateRepositoryFromSnapshot`, or `bundleuri`, making Gitaly reach an internal endpoint or emit the configured credentials/auth header to an attacker-controlled host.'",
-    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_056f8320-3c76-4f95-a877-4204c098c9b4?mode=deep",
-    "questions_generated": false
-  }
-]
