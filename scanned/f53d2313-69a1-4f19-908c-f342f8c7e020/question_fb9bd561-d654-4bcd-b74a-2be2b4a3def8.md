@@ -1,1 +1,0 @@
-[File: 'internal/gitaly/hook/receivepack/receive_pack.go -> setupHooksPayloadEnv'] [Function: setupHooksPayloadEnv] Since `protocol` is derived purely from the Go type of `req` (SSHReceivePackRequest -> \
