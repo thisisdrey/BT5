@@ -1,1 +1,0 @@
-[File: 'internal/gitaly/storage/storagemgr/partition/transaction_manager.go -> Begin/quarantineDirectory setup'] Can two concurrent write transactions targeting sibling repositories under the same storage (one attacker-controlled, one victim) be raced such that `txn.quarantineDirectory = filepath.Join(txn.stagingDirectory, \
