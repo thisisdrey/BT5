@@ -1,0 +1,152 @@
+[
+  {
+    "question": "'File Name: internal/gitaly/service/repository/search_files.go -> Scope: Critical. An unprivileged pusher gets refs updated with objects that never passed verification, by bypassing hook invocation or the quarantine boundary in `hook.PreReceive`/`hook.Update`, `updateref`, `updateReferenceWithHooks`, or by forging/replaying the hooks payload in `gitcmd.HooksPayload`, so unvetted objects become reachable or a protected-branch/access decision is skipped.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_bdde6a1f-6705-4eeb-b3e5-fef88941f892?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/gitaly/service/repository/info_attributes.go -> Scope: Critical. An unprivileged pusher gets refs updated with objects that never passed verification, by bypassing hook invocation or the quarantine boundary in `hook.PreReceive`/`hook.Update`, `updateref`, `updateReferenceWithHooks`, or by forging/replaying the hooks payload in `gitcmd.HooksPayload`, so unvetted objects become reachable or a protected-branch/access decision is skipped.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_767505b0-53a7-48b8-b52c-5f547c84aa06?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/gitaly/service/repository/file_attributes.go -> Scope: Critical. An unprivileged pusher gets refs updated with objects that never passed verification, by bypassing hook invocation or the quarantine boundary in `hook.PreReceive`/`hook.Update`, `updateref`, `updateReferenceWithHooks`, or by forging/replaying the hooks payload in `gitcmd.HooksPayload`, so unvetted objects become reachable or a protected-branch/access decision is skipped.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_84266bcc-ac48-4bac-8142-80ad67a95d46?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/gitaly/service/commit/tree_entry.go -> Scope: Critical. An unprivileged pusher gets refs updated with objects that never passed verification, by bypassing hook invocation or the quarantine boundary in `hook.PreReceive`/`hook.Update`, `updateref`, `updateReferenceWithHooks`, or by forging/replaying the hooks payload in `gitcmd.HooksPayload`, so unvetted objects become reachable or a protected-branch/access decision is skipped.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_00c29149-636b-4652-8a5e-0e3c2f7a574d?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/gitaly/service/commit/get_tree_entries.go -> Scope: Critical. An unprivileged pusher gets refs updated with objects that never passed verification, by bypassing hook invocation or the quarantine boundary in `hook.PreReceive`/`hook.Update`, `updateref`, `updateReferenceWithHooks`, or by forging/replaying the hooks payload in `gitcmd.HooksPayload`, so unvetted objects become reachable or a protected-branch/access decision is skipped.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_73bbb8f6-d05a-4aa2-916d-815f00bc224d?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/gitaly/service/commit/raw_blame.go -> Scope: Critical. An unprivileged pusher gets refs updated with objects that never passed verification, by bypassing hook invocation or the quarantine boundary in `hook.PreReceive`/`hook.Update`, `updateref`, `updateReferenceWithHooks`, or by forging/replaying the hooks payload in `gitcmd.HooksPayload`, so unvetted objects become reachable or a protected-branch/access decision is skipped.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_9105aa35-d06f-4f91-b63f-3784496694af?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/gitaly/service/blob/get_blob.go -> Scope: Critical. An unprivileged pusher gets refs updated with objects that never passed verification, by bypassing hook invocation or the quarantine boundary in `hook.PreReceive`/`hook.Update`, `updateref`, `updateReferenceWithHooks`, or by forging/replaying the hooks payload in `gitcmd.HooksPayload`, so unvetted objects become reachable or a protected-branch/access decision is skipped.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_dc4830e1-ac8a-4186-a677-28ae90d51c7b?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/gitaly/service/blob/lfs_pointers.go -> Scope: Critical. An unprivileged pusher gets refs updated with objects that never passed verification, by bypassing hook invocation or the quarantine boundary in `hook.PreReceive`/`hook.Update`, `updateref`, `updateReferenceWithHooks`, or by forging/replaying the hooks payload in `gitcmd.HooksPayload`, so unvetted objects become reachable or a protected-branch/access decision is skipped.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_1f3b0059-69ed-41e4-b606-5b3cc08d5759?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/archive/archive.go -> Scope: Critical. An unprivileged pusher gets refs updated with objects that never passed verification, by bypassing hook invocation or the quarantine boundary in `hook.PreReceive`/`hook.Update`, `updateref`, `updateReferenceWithHooks`, or by forging/replaying the hooks payload in `gitcmd.HooksPayload`, so unvetted objects become reachable or a protected-branch/access decision is skipped.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_cef7dc14-73ea-4af6-9ac9-c44177087ed4?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/archive/match_walker.go -> Scope: Critical. An unprivileged pusher gets refs updated with objects that never passed verification, by bypassing hook invocation or the quarantine boundary in `hook.PreReceive`/`hook.Update`, `updateref`, `updateReferenceWithHooks`, or by forging/replaying the hooks payload in `gitcmd.HooksPayload`, so unvetted objects become reachable or a protected-branch/access decision is skipped.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_fdded74b-9cea-40ea-9f9b-f02e06826bf6?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/archive/tar_builder.go -> Scope: Critical. An unprivileged pusher gets refs updated with objects that never passed verification, by bypassing hook invocation or the quarantine boundary in `hook.PreReceive`/`hook.Update`, `updateref`, `updateReferenceWithHooks`, or by forging/replaying the hooks payload in `gitcmd.HooksPayload`, so unvetted objects become reachable or a protected-branch/access decision is skipped.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_c49bda08-9159-44d0-9839-4c8e4df65858?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/gitaly/service/repository/write_ref.go -> Scope: Critical. An unprivileged pusher gets refs updated with objects that never passed verification, by bypassing hook invocation or the quarantine boundary in `hook.PreReceive`/`hook.Update`, `updateref`, `updateReferenceWithHooks`, or by forging/replaying the hooks payload in `gitcmd.HooksPayload`, so unvetted objects become reachable or a protected-branch/access decision is skipped.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_ea1357f6-c6ae-4672-9c99-dd7284eb756e?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/gitaly/service/ref/update_references.go -> Scope: Critical. An unprivileged pusher gets refs updated with objects that never passed verification, by bypassing hook invocation or the quarantine boundary in `hook.PreReceive`/`hook.Update`, `updateref`, `updateReferenceWithHooks`, or by forging/replaying the hooks payload in `gitcmd.HooksPayload`, so unvetted objects become reachable or a protected-branch/access decision is skipped.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_11dc72b8-d5c4-4df8-88f0-cab98af086b4?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/gitaly/service/ref/delete_refs.go -> Scope: Critical. An unprivileged pusher gets refs updated with objects that never passed verification, by bypassing hook invocation or the quarantine boundary in `hook.PreReceive`/`hook.Update`, `updateref`, `updateReferenceWithHooks`, or by forging/replaying the hooks payload in `gitcmd.HooksPayload`, so unvetted objects become reachable or a protected-branch/access decision is skipped.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_73ada2da-ce08-4104-82f0-0b7ffc68a190?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/gitaly/service/operations/user_create_branch.go -> Scope: Critical. An unprivileged pusher gets refs updated with objects that never passed verification, by bypassing hook invocation or the quarantine boundary in `hook.PreReceive`/`hook.Update`, `updateref`, `updateReferenceWithHooks`, or by forging/replaying the hooks payload in `gitcmd.HooksPayload`, so unvetted objects become reachable or a protected-branch/access decision is skipped.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_357f7c0e-c68e-418c-99c2-452164a920f2?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/gitaly/service/operations/commit_files.go -> Scope: Critical. An unprivileged pusher gets refs updated with objects that never passed verification, by bypassing hook invocation or the quarantine boundary in `hook.PreReceive`/`hook.Update`, `updateref`, `updateReferenceWithHooks`, or by forging/replaying the hooks payload in `gitcmd.HooksPayload`, so unvetted objects become reachable or a protected-branch/access decision is skipped.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_0b1100ad-eefe-42df-bea7-6088296e6df7?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/gitaly/service/operations/apply_patch.go -> Scope: Critical. An unprivileged pusher gets refs updated with objects that never passed verification, by bypassing hook invocation or the quarantine boundary in `hook.PreReceive`/`hook.Update`, `updateref`, `updateReferenceWithHooks`, or by forging/replaying the hooks payload in `gitcmd.HooksPayload`, so unvetted objects become reachable or a protected-branch/access decision is skipped.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_4fe4fb4c-633a-4d17-9c91-71628dd41a30?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/gitaly/service/operations/submodules.go -> Scope: Critical. An unprivileged pusher gets refs updated with objects that never passed verification, by bypassing hook invocation or the quarantine boundary in `hook.PreReceive`/`hook.Update`, `updateref`, `updateReferenceWithHooks`, or by forging/replaying the hooks payload in `gitcmd.HooksPayload`, so unvetted objects become reachable or a protected-branch/access decision is skipped.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_0393e408-43b9-401b-a0ed-8b5e5f8000c2?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/gitaly/service/operations/tags.go -> Scope: Critical. An unprivileged pusher gets refs updated with objects that never passed verification, by bypassing hook invocation or the quarantine boundary in `hook.PreReceive`/`hook.Update`, `updateref`, `updateReferenceWithHooks`, or by forging/replaying the hooks payload in `gitcmd.HooksPayload`, so unvetted objects become reachable or a protected-branch/access decision is skipped.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_13f65fbf-c345-496d-8e67-6ebd33bf2aee?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/git/updateref/updateref.go -> Scope: Critical. An unprivileged pusher gets refs updated with objects that never passed verification, by bypassing hook invocation or the quarantine boundary in `hook.PreReceive`/`hook.Update`, `updateref`, `updateReferenceWithHooks`, or by forging/replaying the hooks payload in `gitcmd.HooksPayload`, so unvetted objects become reachable or a protected-branch/access decision is skipped.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_7fae70d8-ee4b-4502-aa11-f073f9370241?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: auth/token.go -> Scope: Critical. An unprivileged pusher gets refs updated with objects that never passed verification, by bypassing hook invocation or the quarantine boundary in `hook.PreReceive`/`hook.Update`, `updateref`, `updateReferenceWithHooks`, or by forging/replaying the hooks payload in `gitcmd.HooksPayload`, so unvetted objects become reachable or a protected-branch/access decision is skipped.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_80c73af3-05ce-4685-899c-dfad6a4c5e82?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/grpc/middleware/requestinfohandler/requestinfohandler.go -> Scope: Critical. An unprivileged pusher gets refs updated with objects that never passed verification, by bypassing hook invocation or the quarantine boundary in `hook.PreReceive`/`hook.Update`, `updateref`, `updateReferenceWithHooks`, or by forging/replaying the hooks payload in `gitcmd.HooksPayload`, so unvetted objects become reachable or a protected-branch/access decision is skipped.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_fee519a2-d8eb-4e2f-9383-8d5e48593555?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/grpc/middleware/panichandler/panic_handler.go -> Scope: Critical. An unprivileged pusher gets refs updated with objects that never passed verification, by bypassing hook invocation or the quarantine boundary in `hook.PreReceive`/`hook.Update`, `updateref`, `updateReferenceWithHooks`, or by forging/replaying the hooks payload in `gitcmd.HooksPayload`, so unvetted objects become reachable or a protected-branch/access decision is skipped.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_ffc74e62-8b27-490f-8062-51feeb55e59c?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/grpc/middleware/limithandler/middleware.go -> Scope: Critical. An unprivileged pusher gets refs updated with objects that never passed verification, by bypassing hook invocation or the quarantine boundary in `hook.PreReceive`/`hook.Update`, `updateref`, `updateReferenceWithHooks`, or by forging/replaying the hooks payload in `gitcmd.HooksPayload`, so unvetted objects become reachable or a protected-branch/access decision is skipped.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_3893aaa7-44a0-44b2-8d82-1ba3375e6666?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/grpc/sidechannel/sidechannel.go -> Scope: Critical. An unprivileged pusher gets refs updated with objects that never passed verification, by bypassing hook invocation or the quarantine boundary in `hook.PreReceive`/`hook.Update`, `updateref`, `updateReferenceWithHooks`, or by forging/replaying the hooks payload in `gitcmd.HooksPayload`, so unvetted objects become reachable or a protected-branch/access decision is skipped.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_e46d50ce-e8c1-4e50-a9f0-cf718908ae5f?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/grpc/backchannel/backchannel.go -> Scope: Critical. An unprivileged pusher gets refs updated with objects that never passed verification, by bypassing hook invocation or the quarantine boundary in `hook.PreReceive`/`hook.Update`, `updateref`, `updateReferenceWithHooks`, or by forging/replaying the hooks payload in `gitcmd.HooksPayload`, so unvetted objects become reachable or a protected-branch/access decision is skipped.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_fc36a887-9ccb-419b-b001-cdd07e5b3623?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/git/catfile/parser.go -> Scope: Critical. An unprivileged pusher gets refs updated with objects that never passed verification, by bypassing hook invocation or the quarantine boundary in `hook.PreReceive`/`hook.Update`, `updateref`, `updateReferenceWithHooks`, or by forging/replaying the hooks payload in `gitcmd.HooksPayload`, so unvetted objects become reachable or a protected-branch/access decision is skipped.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_79210ddd-0ed4-4e2f-93ae-d6558a78a0ed?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/git/gitattributes/check_attr.go -> Scope: Critical. An unprivileged pusher gets refs updated with objects that never passed verification, by bypassing hook invocation or the quarantine boundary in `hook.PreReceive`/`hook.Update`, `updateref`, `updateReferenceWithHooks`, or by forging/replaying the hooks payload in `gitcmd.HooksPayload`, so unvetted objects become reachable or a protected-branch/access decision is skipped.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_4430aec4-01bc-4427-a6eb-eef1aecbe5b3?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/git/lfs.go -> Scope: Critical. An unprivileged pusher gets refs updated with objects that never passed verification, by bypassing hook invocation or the quarantine boundary in `hook.PreReceive`/`hook.Update`, `updateref`, `updateReferenceWithHooks`, or by forging/replaying the hooks payload in `gitcmd.HooksPayload`, so unvetted objects become reachable or a protected-branch/access decision is skipped.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_3f41b205-26f4-4b83-984d-e08dec116d20?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/helper/security.go -> Scope: Critical. An unprivileged pusher gets refs updated with objects that never passed verification, by bypassing hook invocation or the quarantine boundary in `hook.PreReceive`/`hook.Update`, `updateref`, `updateReferenceWithHooks`, or by forging/replaying the hooks payload in `gitcmd.HooksPayload`, so unvetted objects become reachable or a protected-branch/access decision is skipped.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_53e19f6b-8ae6-45b9-8324-c0a10e534153?mode=deep",
+    "questions_generated": false
+  }
+]
