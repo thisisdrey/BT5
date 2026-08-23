@@ -1,0 +1,7 @@
+[
+  {
+    "question": "'File Name: internal/gitlab/http_client.go -> Scope: Advanced. An unprivileged attacker bypasses Gitaly's transport authentication or request scoping, by defeating the HMAC/timestamp checks in `gitalyauth` (`token.go`) — replay outside `tokenValidityDuration`, signature-comparison weakness, or a version-downgrade to the v1 path — and issues RPCs against repositories on the server without holding the shared token.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_4b274a09-9e2a-4ce5-af0b-9727c49c833f?mode=deep",
+    "questions_generated": false
+  }
+]
