@@ -1,1 +1,0 @@
-[File: 'auth/token.go'] [Function: ExtractAuthInfo] Can an attacker submit a bearer token with a version prefix other than 'v2' (e.g. 'v1', 'V2', 'v2 ', or a token with more than 3 dot-separated segments) to force `strings.SplitN(token, \
