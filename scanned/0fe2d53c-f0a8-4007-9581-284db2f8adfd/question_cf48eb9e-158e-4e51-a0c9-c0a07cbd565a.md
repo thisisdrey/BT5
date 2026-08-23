@@ -1,1 +1,0 @@
-[File: internal/gitaly/hook/custom.go -> Scope: Critical] [Function: hook.GitLabHookManager.preReceiveHook] Can an unprivileged pusher trigger a request where repo.GetGlRepository() is empty due to a race between repository creation/rename RPCs and a concurrent push, causing preReceiveHook's `if repo.GetGlRepository() == \
