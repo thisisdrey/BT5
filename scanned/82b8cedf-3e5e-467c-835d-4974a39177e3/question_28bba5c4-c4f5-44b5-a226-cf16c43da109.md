@@ -1,1 +1,0 @@
-[File: internal/gitaly/config/locator.go -> Function: configLocator.ValidateRepository] Since `ValidateRepository` treats a repo as unset only when both StorageName and RelativePath are empty (locator.go:56-58), can an attacker send a RelativePath consisting solely of path-traversal segments like `\
