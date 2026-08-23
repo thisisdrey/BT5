@@ -1,1 +1,0 @@
-[File: 'internal/gitaly/service/repository/fetch_remote.go' -> fetchRemoteAtomic error path with stderr] [Function: fetchRemoteAtomic] `errMsg := stderr.String()` from the quarantine `git-fetch` invocation is embedded verbatim into `structerr.NewInternal(\

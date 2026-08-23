@@ -1,1 +1,0 @@
-[File: internal/gitaly/hook/postreceive.go] [Function: (*GitLabHookManager).PostReceiveHook, transaction branch] Can an attacker trigger the `tx.Commit`/`storageHandle.GetStorage`/`storage.LogTransactionCommit` error paths (`fmt.Errorf(\
