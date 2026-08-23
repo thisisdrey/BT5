@@ -1,0 +1,7 @@
+[
+  {
+    "question": "'File Name: internal/gitlab/http_client.go -> Scope: Critical. An unprivileged attacker who only controls gRPC request fields (`Repository.relative_path`, `storage_name`, object-pool paths) reads or writes files outside the configured storage root, by defeating `storage.ValidateRelativePath`, the path joining in `config.Locator`/`storage.Locator`, or the pool-path checks in the objectpool service, reaching another tenant's repository, custom hooks, or arbitrary host files.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_4167416f-d507-4063-8515-8988e12e5c78?mode=deep",
+    "questions_generated": false
+  }
+]
