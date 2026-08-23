@@ -1,7 +1,0 @@
-[
-  {
-    "question": "'File Name: internal/gitlab/http_client.go -> Scope: Advanced. An unprivileged attacker escapes the repository directory while Gitaly writes attacker-supplied archive or snapshot data, by crafting tar entries, symlinks, or `..` paths accepted by `SetCustomHooks`/`repoutil.ExtractHooks`, `CreateRepositoryFromSnapshot`, `RestoreRepository`, or `internal/archive`, planting or overwriting files (including hooks) outside the target repository.'",
-    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_e2827721-2070-4682-b26d-84b930f15aaf?mode=deep",
-    "questions_generated": false
-  }
-]

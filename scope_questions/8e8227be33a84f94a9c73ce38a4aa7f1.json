@@ -1,7 +1,0 @@
-[
-  {
-    "question": "'File Name: internal/gitlab/http_client.go -> Scope: Advanced. A remote attacker with only push/pull-level access exhausts Gitaly or crashes an RPC handler on default configuration, by sending a crafted pack, pktline stream, git object, `.gitattributes`, or LFS pointer that drives unbounded memory/CPU/disk in `pktline`, `catfile`, `gitattributes.CheckAttr`, `lfs.go`, or triggers a panic that `panichandler` converts into a persistent failure of the process or partition.'",
-    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_1b76226e-d312-4b36-91f9-2e082ab76167?mode=deep",
-    "questions_generated": false
-  }
-]
