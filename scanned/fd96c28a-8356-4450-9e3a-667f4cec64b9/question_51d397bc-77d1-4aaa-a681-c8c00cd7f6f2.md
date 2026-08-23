@@ -1,1 +1,0 @@
-[File: internal/gitaly/service/repository/fetch_remote.go -> buildCommandOpts lines 260-299] Can an attacker set `FetchRemoteRequest.RemoteParams.Url` to a value containing crafted characters (e.g. embedded newline, or a URL matching an already-configured `http.<url>.extraHeader` pattern for a different remote) so that the per-URL scoped config key `fmt.Sprintf(\
