@@ -1,1 +1,0 @@
-[File: 'auth/token.go'] [Function: v2HmacInfoValid, ExtractAuthInfo] Can an attacker forge a token by exploiting hex-decoding ambiguity in `hex.DecodeString(sig)` combined with `strings.SplitN(token, \
