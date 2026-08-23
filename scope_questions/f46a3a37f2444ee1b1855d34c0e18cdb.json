@@ -1,0 +1,152 @@
+[
+  {
+    "question": "'File Name: internal/gitaly/service/repository/search_files.go -> Scope: Advanced. An unprivileged attacker escapes the repository directory while Gitaly writes attacker-supplied archive or snapshot data, by crafting tar entries, symlinks, or `..` paths accepted by `SetCustomHooks`/`repoutil.ExtractHooks`, `CreateRepositoryFromSnapshot`, `RestoreRepository`, or `internal/archive`, planting or overwriting files (including hooks) outside the target repository.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_cf3b5619-f8f1-481c-9b1d-18d28cabe86a?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/gitaly/service/repository/info_attributes.go -> Scope: Advanced. An unprivileged attacker escapes the repository directory while Gitaly writes attacker-supplied archive or snapshot data, by crafting tar entries, symlinks, or `..` paths accepted by `SetCustomHooks`/`repoutil.ExtractHooks`, `CreateRepositoryFromSnapshot`, `RestoreRepository`, or `internal/archive`, planting or overwriting files (including hooks) outside the target repository.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_e42b52ac-47a1-4bc9-8486-db8cd6d2728c?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/gitaly/service/repository/file_attributes.go -> Scope: Advanced. An unprivileged attacker escapes the repository directory while Gitaly writes attacker-supplied archive or snapshot data, by crafting tar entries, symlinks, or `..` paths accepted by `SetCustomHooks`/`repoutil.ExtractHooks`, `CreateRepositoryFromSnapshot`, `RestoreRepository`, or `internal/archive`, planting or overwriting files (including hooks) outside the target repository.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_8051dbb0-a8ec-4d91-bc56-40b90db4fd56?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/gitaly/service/commit/tree_entry.go -> Scope: Advanced. An unprivileged attacker escapes the repository directory while Gitaly writes attacker-supplied archive or snapshot data, by crafting tar entries, symlinks, or `..` paths accepted by `SetCustomHooks`/`repoutil.ExtractHooks`, `CreateRepositoryFromSnapshot`, `RestoreRepository`, or `internal/archive`, planting or overwriting files (including hooks) outside the target repository.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_dee153b0-b6dd-4abb-a63f-f2d8907fd04e?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/gitaly/service/commit/get_tree_entries.go -> Scope: Advanced. An unprivileged attacker escapes the repository directory while Gitaly writes attacker-supplied archive or snapshot data, by crafting tar entries, symlinks, or `..` paths accepted by `SetCustomHooks`/`repoutil.ExtractHooks`, `CreateRepositoryFromSnapshot`, `RestoreRepository`, or `internal/archive`, planting or overwriting files (including hooks) outside the target repository.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_02991328-4531-42ca-9a1a-85c5f44ea25d?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/gitaly/service/commit/raw_blame.go -> Scope: Advanced. An unprivileged attacker escapes the repository directory while Gitaly writes attacker-supplied archive or snapshot data, by crafting tar entries, symlinks, or `..` paths accepted by `SetCustomHooks`/`repoutil.ExtractHooks`, `CreateRepositoryFromSnapshot`, `RestoreRepository`, or `internal/archive`, planting or overwriting files (including hooks) outside the target repository.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_74e0e860-b924-421b-886b-c1ff601e1d18?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/gitaly/service/blob/get_blob.go -> Scope: Advanced. An unprivileged attacker escapes the repository directory while Gitaly writes attacker-supplied archive or snapshot data, by crafting tar entries, symlinks, or `..` paths accepted by `SetCustomHooks`/`repoutil.ExtractHooks`, `CreateRepositoryFromSnapshot`, `RestoreRepository`, or `internal/archive`, planting or overwriting files (including hooks) outside the target repository.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_8f873a0a-8705-401c-adb9-39601b29cd95?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/gitaly/service/blob/lfs_pointers.go -> Scope: Advanced. An unprivileged attacker escapes the repository directory while Gitaly writes attacker-supplied archive or snapshot data, by crafting tar entries, symlinks, or `..` paths accepted by `SetCustomHooks`/`repoutil.ExtractHooks`, `CreateRepositoryFromSnapshot`, `RestoreRepository`, or `internal/archive`, planting or overwriting files (including hooks) outside the target repository.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_a52c2211-aeec-4994-b312-1d7a209a6222?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/archive/archive.go -> Scope: Advanced. An unprivileged attacker escapes the repository directory while Gitaly writes attacker-supplied archive or snapshot data, by crafting tar entries, symlinks, or `..` paths accepted by `SetCustomHooks`/`repoutil.ExtractHooks`, `CreateRepositoryFromSnapshot`, `RestoreRepository`, or `internal/archive`, planting or overwriting files (including hooks) outside the target repository.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_255407ad-f63b-43ca-93de-49efffac9f59?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/archive/match_walker.go -> Scope: Advanced. An unprivileged attacker escapes the repository directory while Gitaly writes attacker-supplied archive or snapshot data, by crafting tar entries, symlinks, or `..` paths accepted by `SetCustomHooks`/`repoutil.ExtractHooks`, `CreateRepositoryFromSnapshot`, `RestoreRepository`, or `internal/archive`, planting or overwriting files (including hooks) outside the target repository.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_eaecacc7-4fed-4e21-a34f-a7073661dff3?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/archive/tar_builder.go -> Scope: Advanced. An unprivileged attacker escapes the repository directory while Gitaly writes attacker-supplied archive or snapshot data, by crafting tar entries, symlinks, or `..` paths accepted by `SetCustomHooks`/`repoutil.ExtractHooks`, `CreateRepositoryFromSnapshot`, `RestoreRepository`, or `internal/archive`, planting or overwriting files (including hooks) outside the target repository.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_b156160a-2965-4c35-bbcf-21b99cce30fa?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/gitaly/service/repository/write_ref.go -> Scope: Advanced. An unprivileged attacker escapes the repository directory while Gitaly writes attacker-supplied archive or snapshot data, by crafting tar entries, symlinks, or `..` paths accepted by `SetCustomHooks`/`repoutil.ExtractHooks`, `CreateRepositoryFromSnapshot`, `RestoreRepository`, or `internal/archive`, planting or overwriting files (including hooks) outside the target repository.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_c5081adc-2008-4333-be92-7b3c1ee725d9?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/gitaly/service/ref/update_references.go -> Scope: Advanced. An unprivileged attacker escapes the repository directory while Gitaly writes attacker-supplied archive or snapshot data, by crafting tar entries, symlinks, or `..` paths accepted by `SetCustomHooks`/`repoutil.ExtractHooks`, `CreateRepositoryFromSnapshot`, `RestoreRepository`, or `internal/archive`, planting or overwriting files (including hooks) outside the target repository.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_ec107f0e-ba28-4af8-bd9d-d45b55679254?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/gitaly/service/ref/delete_refs.go -> Scope: Advanced. An unprivileged attacker escapes the repository directory while Gitaly writes attacker-supplied archive or snapshot data, by crafting tar entries, symlinks, or `..` paths accepted by `SetCustomHooks`/`repoutil.ExtractHooks`, `CreateRepositoryFromSnapshot`, `RestoreRepository`, or `internal/archive`, planting or overwriting files (including hooks) outside the target repository.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_ce643e17-f0c6-40f4-861b-24253bb86c30?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/gitaly/service/operations/user_create_branch.go -> Scope: Advanced. An unprivileged attacker escapes the repository directory while Gitaly writes attacker-supplied archive or snapshot data, by crafting tar entries, symlinks, or `..` paths accepted by `SetCustomHooks`/`repoutil.ExtractHooks`, `CreateRepositoryFromSnapshot`, `RestoreRepository`, or `internal/archive`, planting or overwriting files (including hooks) outside the target repository.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_e7bb529a-1b49-404b-9fc4-67c3c71ed857?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/gitaly/service/operations/commit_files.go -> Scope: Advanced. An unprivileged attacker escapes the repository directory while Gitaly writes attacker-supplied archive or snapshot data, by crafting tar entries, symlinks, or `..` paths accepted by `SetCustomHooks`/`repoutil.ExtractHooks`, `CreateRepositoryFromSnapshot`, `RestoreRepository`, or `internal/archive`, planting or overwriting files (including hooks) outside the target repository.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_d115922b-f878-4cf9-b657-6c4a25db27cd?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/gitaly/service/operations/apply_patch.go -> Scope: Advanced. An unprivileged attacker escapes the repository directory while Gitaly writes attacker-supplied archive or snapshot data, by crafting tar entries, symlinks, or `..` paths accepted by `SetCustomHooks`/`repoutil.ExtractHooks`, `CreateRepositoryFromSnapshot`, `RestoreRepository`, or `internal/archive`, planting or overwriting files (including hooks) outside the target repository.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_e9b78f08-c8f7-45aa-a069-6bd12b219183?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/gitaly/service/operations/submodules.go -> Scope: Advanced. An unprivileged attacker escapes the repository directory while Gitaly writes attacker-supplied archive or snapshot data, by crafting tar entries, symlinks, or `..` paths accepted by `SetCustomHooks`/`repoutil.ExtractHooks`, `CreateRepositoryFromSnapshot`, `RestoreRepository`, or `internal/archive`, planting or overwriting files (including hooks) outside the target repository.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_0ccd523a-f4fc-4dd4-8054-59a04014dda5?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/gitaly/service/operations/tags.go -> Scope: Advanced. An unprivileged attacker escapes the repository directory while Gitaly writes attacker-supplied archive or snapshot data, by crafting tar entries, symlinks, or `..` paths accepted by `SetCustomHooks`/`repoutil.ExtractHooks`, `CreateRepositoryFromSnapshot`, `RestoreRepository`, or `internal/archive`, planting or overwriting files (including hooks) outside the target repository.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_2c807ead-3edc-4048-89f7-ffb2902c08ef?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/git/updateref/updateref.go -> Scope: Advanced. An unprivileged attacker escapes the repository directory while Gitaly writes attacker-supplied archive or snapshot data, by crafting tar entries, symlinks, or `..` paths accepted by `SetCustomHooks`/`repoutil.ExtractHooks`, `CreateRepositoryFromSnapshot`, `RestoreRepository`, or `internal/archive`, planting or overwriting files (including hooks) outside the target repository.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_527110ae-b51e-45a9-b020-4ae6e05a02c9?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: auth/token.go -> Scope: Advanced. An unprivileged attacker escapes the repository directory while Gitaly writes attacker-supplied archive or snapshot data, by crafting tar entries, symlinks, or `..` paths accepted by `SetCustomHooks`/`repoutil.ExtractHooks`, `CreateRepositoryFromSnapshot`, `RestoreRepository`, or `internal/archive`, planting or overwriting files (including hooks) outside the target repository.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_f3adc296-46b4-489b-a0ec-43aad7b3dd1b?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/grpc/middleware/requestinfohandler/requestinfohandler.go -> Scope: Advanced. An unprivileged attacker escapes the repository directory while Gitaly writes attacker-supplied archive or snapshot data, by crafting tar entries, symlinks, or `..` paths accepted by `SetCustomHooks`/`repoutil.ExtractHooks`, `CreateRepositoryFromSnapshot`, `RestoreRepository`, or `internal/archive`, planting or overwriting files (including hooks) outside the target repository.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_08c07248-2821-4402-ba79-51789678bef8?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/grpc/middleware/panichandler/panic_handler.go -> Scope: Advanced. An unprivileged attacker escapes the repository directory while Gitaly writes attacker-supplied archive or snapshot data, by crafting tar entries, symlinks, or `..` paths accepted by `SetCustomHooks`/`repoutil.ExtractHooks`, `CreateRepositoryFromSnapshot`, `RestoreRepository`, or `internal/archive`, planting or overwriting files (including hooks) outside the target repository.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_abe7a408-37bf-4d62-aba2-f1ed102af977?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/grpc/middleware/limithandler/middleware.go -> Scope: Advanced. An unprivileged attacker escapes the repository directory while Gitaly writes attacker-supplied archive or snapshot data, by crafting tar entries, symlinks, or `..` paths accepted by `SetCustomHooks`/`repoutil.ExtractHooks`, `CreateRepositoryFromSnapshot`, `RestoreRepository`, or `internal/archive`, planting or overwriting files (including hooks) outside the target repository.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_745692db-2137-4875-9803-e61391e1cb99?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/grpc/sidechannel/sidechannel.go -> Scope: Advanced. An unprivileged attacker escapes the repository directory while Gitaly writes attacker-supplied archive or snapshot data, by crafting tar entries, symlinks, or `..` paths accepted by `SetCustomHooks`/`repoutil.ExtractHooks`, `CreateRepositoryFromSnapshot`, `RestoreRepository`, or `internal/archive`, planting or overwriting files (including hooks) outside the target repository.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_779094dc-f390-40b2-838e-b7e659116de3?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/grpc/backchannel/backchannel.go -> Scope: Advanced. An unprivileged attacker escapes the repository directory while Gitaly writes attacker-supplied archive or snapshot data, by crafting tar entries, symlinks, or `..` paths accepted by `SetCustomHooks`/`repoutil.ExtractHooks`, `CreateRepositoryFromSnapshot`, `RestoreRepository`, or `internal/archive`, planting or overwriting files (including hooks) outside the target repository.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_5a3ef55c-112f-47cd-a5c5-48a340e6a546?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/git/catfile/parser.go -> Scope: Advanced. An unprivileged attacker escapes the repository directory while Gitaly writes attacker-supplied archive or snapshot data, by crafting tar entries, symlinks, or `..` paths accepted by `SetCustomHooks`/`repoutil.ExtractHooks`, `CreateRepositoryFromSnapshot`, `RestoreRepository`, or `internal/archive`, planting or overwriting files (including hooks) outside the target repository.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_ffbafc65-c936-4dca-89d3-40ce2a4b31f5?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/git/gitattributes/check_attr.go -> Scope: Advanced. An unprivileged attacker escapes the repository directory while Gitaly writes attacker-supplied archive or snapshot data, by crafting tar entries, symlinks, or `..` paths accepted by `SetCustomHooks`/`repoutil.ExtractHooks`, `CreateRepositoryFromSnapshot`, `RestoreRepository`, or `internal/archive`, planting or overwriting files (including hooks) outside the target repository.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_c7ef0f09-4cee-4994-8510-3d193fe87d6b?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/git/lfs.go -> Scope: Advanced. An unprivileged attacker escapes the repository directory while Gitaly writes attacker-supplied archive or snapshot data, by crafting tar entries, symlinks, or `..` paths accepted by `SetCustomHooks`/`repoutil.ExtractHooks`, `CreateRepositoryFromSnapshot`, `RestoreRepository`, or `internal/archive`, planting or overwriting files (including hooks) outside the target repository.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_63b3d98e-55e3-4eac-bacb-1f46a17d9460?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/helper/security.go -> Scope: Advanced. An unprivileged attacker escapes the repository directory while Gitaly writes attacker-supplied archive or snapshot data, by crafting tar entries, symlinks, or `..` paths accepted by `SetCustomHooks`/`repoutil.ExtractHooks`, `CreateRepositoryFromSnapshot`, `RestoreRepository`, or `internal/archive`, planting or overwriting files (including hooks) outside the target repository.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_bf98b113-c949-4937-bbbe-9f4219ebf287?mode=deep",
+    "questions_generated": false
+  }
+]
