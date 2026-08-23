@@ -1,1 +1,0 @@
-[File: internal/gitaly/repoutil/custom_hooks.go -> Function: ExtractHooks stderr-based control flow] Can an attacker craft a tar archive whose GNU tar extraction emits stderr text that happens to have the exact prefix `\
