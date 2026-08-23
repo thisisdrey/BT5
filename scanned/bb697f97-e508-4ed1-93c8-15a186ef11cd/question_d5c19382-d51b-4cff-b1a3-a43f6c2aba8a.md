@@ -1,1 +1,0 @@
-[File: internal/gitaly/service/objectpool/create.go -> Scope: Intermediate] [Function: server.CreateObjectPool missing SanitizeError before structerr.New] Given that CreateObjectPool wraps all internal errors via `structerr.New(\

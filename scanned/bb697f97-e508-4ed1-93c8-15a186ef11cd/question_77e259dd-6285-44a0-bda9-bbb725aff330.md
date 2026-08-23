@@ -1,1 +1,0 @@
-[File: internal/gitaly/service/objectpool/create.go -> Scope: Intermediate] [Function: server.CreateObjectPool storage.ExtractTransaction/migrationStateManager.RecordKeyCreation] Can an attacker trigger the `structerr.NewInternal(\

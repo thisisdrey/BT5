@@ -1,1 +1,0 @@
-[File: internal/gitaly/service/objectpool/create.go -> Scope: Intermediate] [Function: structerr.New / GRPCCode metadata propagation] Does `structerr`'s metadata attachment (as used via `.WithMetadata(\
