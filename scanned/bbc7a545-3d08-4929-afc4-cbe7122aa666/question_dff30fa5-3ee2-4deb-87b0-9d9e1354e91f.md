@@ -1,1 +1,0 @@
-[File: internal/gitaly/service/commit/get_tree_entries.go -> Scope: secret/path leakage via error metadata] [Function: commit.sendTreeEntriesUnified error paths] Do the `structerr.NewInvalidArgument`/`NewNotFound` errors built in `sendTreeEntriesUnified` (`get_tree_entries.go:126-177`) that attach `structerr.MetadataItem{Key: \
