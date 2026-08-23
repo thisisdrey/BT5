@@ -1,1 +1,0 @@
-[File: internal/bundleuri/git_config.go -> Scope: Intermediate] [Function: GenerateBundleURI RPC / GenerationManager.Generate] Can an attacker who owns a low-privilege repository extract another tenant's `gl_project_path` or absolute bundle storage path by triggering an error in `repo.CreateBundle` (manager.go:165-174) so that `structerr.NewInternal(\
