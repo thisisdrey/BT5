@@ -1,1 +1,0 @@
-[File: internal/gitaly/service/commit/raw_blame.go -> Scope: metadata leak of attacker-controlled but repo-external content] [Function: `createTemporaryIgnoreRevsFile` NotFound branch, `structerr.NewNotFound(\

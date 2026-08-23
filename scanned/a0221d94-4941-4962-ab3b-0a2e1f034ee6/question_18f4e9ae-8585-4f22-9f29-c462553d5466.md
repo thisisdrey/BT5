@@ -1,1 +1,0 @@
-[File: internal/gitaly/service/commit/raw_blame.go -> Scope: SanitizeString bypass in structerr formatting] [Function: `helper.SanitizeString`/`SanitizeError` (internal/helper/security.go) vs `structerr.New(\
