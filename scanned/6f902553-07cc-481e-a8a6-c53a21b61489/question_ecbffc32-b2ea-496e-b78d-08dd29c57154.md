@@ -1,1 +1,0 @@
-[File: internal/grpc/middleware/panichandler/panic_handler.go -> Scope: DoS] [Function: handleCrash] Since 'panichandler' only wraps the top-level Unary/Stream handler via 'defer handleCrash(...)', can an attacker trigger a panic inside a goroutine spawned *by* an RPC handler (e.g. gitpipe's internal '
