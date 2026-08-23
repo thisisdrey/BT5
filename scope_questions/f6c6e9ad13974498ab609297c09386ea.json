@@ -1,0 +1,152 @@
+[
+  {
+    "question": "'File Name: internal/gitaly/storage/repository_path.go -> Scope: Advanced. An unprivileged attacker bypasses Gitaly's transport authentication or request scoping, by defeating the HMAC/timestamp checks in `gitalyauth` (`token.go`) — replay outside `tokenValidityDuration`, signature-comparison weakness, or a version-downgrade to the v1 path — and issues RPCs against repositories on the server without holding the shared token.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_d08103bf-6daa-4b91-84d3-232c4ac12cd5?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/gitaly/storage/path_helpers.go -> Scope: Advanced. An unprivileged attacker bypasses Gitaly's transport authentication or request scoping, by defeating the HMAC/timestamp checks in `gitalyauth` (`token.go`) — replay outside `tokenValidityDuration`, signature-comparison weakness, or a version-downgrade to the v1 path — and issues RPCs against repositories on the server without holding the shared token.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_2d6d444c-33e9-4e45-89d0-ffda9970b728?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/gitaly/storage/locator.go -> Scope: Advanced. An unprivileged attacker bypasses Gitaly's transport authentication or request scoping, by defeating the HMAC/timestamp checks in `gitalyauth` (`token.go`) — replay outside `tokenValidityDuration`, signature-comparison weakness, or a version-downgrade to the v1 path — and issues RPCs against repositories on the server without holding the shared token.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_6ec0161b-af23-4454-928f-144427ff2dc3?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/gitaly/storage/storage.go -> Scope: Advanced. An unprivileged attacker bypasses Gitaly's transport authentication or request scoping, by defeating the HMAC/timestamp checks in `gitalyauth` (`token.go`) — replay outside `tokenValidityDuration`, signature-comparison weakness, or a version-downgrade to the v1 path — and issues RPCs against repositories on the server without holding the shared token.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_a06c6d9b-2aaa-4e11-a874-a16036a61911?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/gitaly/config/locator.go -> Scope: Advanced. An unprivileged attacker bypasses Gitaly's transport authentication or request scoping, by defeating the HMAC/timestamp checks in `gitalyauth` (`token.go`) — replay outside `tokenValidityDuration`, signature-comparison weakness, or a version-downgrade to the v1 path — and issues RPCs against repositories on the server without holding the shared token.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_a32a327e-c182-408f-bd7c-764f16c7eb7a?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/gitaly/storage/walk_directory.go -> Scope: Advanced. An unprivileged attacker bypasses Gitaly's transport authentication or request scoping, by defeating the HMAC/timestamp checks in `gitalyauth` (`token.go`) — replay outside `tokenValidityDuration`, signature-comparison weakness, or a version-downgrade to the v1 path — and issues RPCs against repositories on the server without holding the shared token.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_59719376-8279-4347-8c3e-dc6c4578b232?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/gitaly/storage/fs.go -> Scope: Advanced. An unprivileged attacker bypasses Gitaly's transport authentication or request scoping, by defeating the HMAC/timestamp checks in `gitalyauth` (`token.go`) — replay outside `tokenValidityDuration`, signature-comparison weakness, or a version-downgrade to the v1 path — and issues RPCs against repositories on the server without holding the shared token.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_b5c138fa-7c87-484f-9091-67c132aee846?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/tempdir/tempdir.go -> Scope: Advanced. An unprivileged attacker bypasses Gitaly's transport authentication or request scoping, by defeating the HMAC/timestamp checks in `gitalyauth` (`token.go`) — replay outside `tokenValidityDuration`, signature-comparison weakness, or a version-downgrade to the v1 path — and issues RPCs against repositories on the server without holding the shared token.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_5173621d-6e14-40c0-b43c-14a001a9be78?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/git/gitcmd/command_options.go -> Scope: Advanced. An unprivileged attacker bypasses Gitaly's transport authentication or request scoping, by defeating the HMAC/timestamp checks in `gitalyauth` (`token.go`) — replay outside `tokenValidityDuration`, signature-comparison weakness, or a version-downgrade to the v1 path — and issues RPCs against repositories on the server without holding the shared token.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_e2477acc-8d84-4e41-ace2-592eb5ca59df?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/git/gitcmd/command_description.go -> Scope: Advanced. An unprivileged attacker bypasses Gitaly's transport authentication or request scoping, by defeating the HMAC/timestamp checks in `gitalyauth` (`token.go`) — replay outside `tokenValidityDuration`, signature-comparison weakness, or a version-downgrade to the v1 path — and issues RPCs against repositories on the server without holding the shared token.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_3c12559b-413e-4335-b1cb-286dcf053ad6?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/git/gitcmd/command_factory.go -> Scope: Advanced. An unprivileged attacker bypasses Gitaly's transport authentication or request scoping, by defeating the HMAC/timestamp checks in `gitalyauth` (`token.go`) — replay outside `tokenValidityDuration`, signature-comparison weakness, or a version-downgrade to the v1 path — and issues RPCs against repositories on the server without holding the shared token.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_acfcf602-1fe0-4ae9-8862-8ee60930a9b7?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/git/gitcmd/command.go -> Scope: Advanced. An unprivileged attacker bypasses Gitaly's transport authentication or request scoping, by defeating the HMAC/timestamp checks in `gitalyauth` (`token.go`) — replay outside `tokenValidityDuration`, signature-comparison weakness, or a version-downgrade to the v1 path — and issues RPCs against repositories on the server without holding the shared token.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_f60e458e-bce5-4d64-be57-840a869f5f74?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/git/gitcmd/staticargs.go -> Scope: Advanced. An unprivileged attacker bypasses Gitaly's transport authentication or request scoping, by defeating the HMAC/timestamp checks in `gitalyauth` (`token.go`) — replay outside `tokenValidityDuration`, signature-comparison weakness, or a version-downgrade to the v1 path — and issues RPCs against repositories on the server without holding the shared token.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_c1345313-3064-432b-b24f-a459835cb90e?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/git/gitcmd/ssh.go -> Scope: Advanced. An unprivileged attacker bypasses Gitaly's transport authentication or request scoping, by defeating the HMAC/timestamp checks in `gitalyauth` (`token.go`) — replay outside `tokenValidityDuration`, signature-comparison weakness, or a version-downgrade to the v1 path — and issues RPCs against repositories on the server without holding the shared token.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_8c0552e7-0e8e-4126-bac1-e595c2b00c68?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/git/gitcmd/protocol.go -> Scope: Advanced. An unprivileged attacker bypasses Gitaly's transport authentication or request scoping, by defeating the HMAC/timestamp checks in `gitalyauth` (`token.go`) — replay outside `tokenValidityDuration`, signature-comparison weakness, or a version-downgrade to the v1 path — and issues RPCs against repositories on the server without holding the shared token.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_f8d269fc-d18c-41b0-a6b6-ea12c5ea2c17?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/git/revision.go -> Scope: Advanced. An unprivileged attacker bypasses Gitaly's transport authentication or request scoping, by defeating the HMAC/timestamp checks in `gitalyauth` (`token.go`) — replay outside `tokenValidityDuration`, signature-comparison weakness, or a version-downgrade to the v1 path — and issues RPCs against repositories on the server without holding the shared token.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_b8b58f7d-6842-4fbb-8abc-aa35d309b734?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/git/object_id.go -> Scope: Advanced. An unprivileged attacker bypasses Gitaly's transport authentication or request scoping, by defeating the HMAC/timestamp checks in `gitalyauth` (`token.go`) — replay outside `tokenValidityDuration`, signature-comparison weakness, or a version-downgrade to the v1 path — and issues RPCs against repositories on the server without holding the shared token.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_dfc9ab0c-b45f-4fc3-8463-c02249f13290?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/git/reference.go -> Scope: Advanced. An unprivileged attacker bypasses Gitaly's transport authentication or request scoping, by defeating the HMAC/timestamp checks in `gitalyauth` (`token.go`) — replay outside `tokenValidityDuration`, signature-comparison weakness, or a version-downgrade to the v1 path — and issues RPCs against repositories on the server without holding the shared token.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_bc42e4a8-ebc0-4b12-8e08-09fea5c0e1b4?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/git/repository.go -> Scope: Advanced. An unprivileged attacker bypasses Gitaly's transport authentication or request scoping, by defeating the HMAC/timestamp checks in `gitalyauth` (`token.go`) — replay outside `tokenValidityDuration`, signature-comparison weakness, or a version-downgrade to the v1 path — and issues RPCs against repositories on the server without holding the shared token.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_720738b5-9219-4a3b-8473-04b2803675e4?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/git/gitcmd/hooks_payload.go -> Scope: Advanced. An unprivileged attacker bypasses Gitaly's transport authentication or request scoping, by defeating the HMAC/timestamp checks in `gitalyauth` (`token.go`) — replay outside `tokenValidityDuration`, signature-comparison weakness, or a version-downgrade to the v1 path — and issues RPCs against repositories on the server without holding the shared token.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_08733f9b-764e-4716-9941-a273613c443f?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/git/gitcmd/hooks_options.go -> Scope: Advanced. An unprivileged attacker bypasses Gitaly's transport authentication or request scoping, by defeating the HMAC/timestamp checks in `gitalyauth` (`token.go`) — replay outside `tokenValidityDuration`, signature-comparison weakness, or a version-downgrade to the v1 path — and issues RPCs against repositories on the server without holding the shared token.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_9f73c7a8-4a14-4e5b-9acb-899621c1a625?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/gitaly/hook/manager.go -> Scope: Advanced. An unprivileged attacker bypasses Gitaly's transport authentication or request scoping, by defeating the HMAC/timestamp checks in `gitalyauth` (`token.go`) — replay outside `tokenValidityDuration`, signature-comparison weakness, or a version-downgrade to the v1 path — and issues RPCs against repositories on the server without holding the shared token.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_b7872b23-b760-4b91-bec8-57e363017cfa?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/gitaly/hook/prereceive.go -> Scope: Advanced. An unprivileged attacker bypasses Gitaly's transport authentication or request scoping, by defeating the HMAC/timestamp checks in `gitalyauth` (`token.go`) — replay outside `tokenValidityDuration`, signature-comparison weakness, or a version-downgrade to the v1 path — and issues RPCs against repositories on the server without holding the shared token.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_266effff-80a2-420a-b184-eedc6718c9b3?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/gitaly/hook/update.go -> Scope: Advanced. An unprivileged attacker bypasses Gitaly's transport authentication or request scoping, by defeating the HMAC/timestamp checks in `gitalyauth` (`token.go`) — replay outside `tokenValidityDuration`, signature-comparison weakness, or a version-downgrade to the v1 path — and issues RPCs against repositories on the server without holding the shared token.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_25bfae2b-2377-499a-8dde-dc7947fa7312?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/gitaly/hook/postreceive.go -> Scope: Advanced. An unprivileged attacker bypasses Gitaly's transport authentication or request scoping, by defeating the HMAC/timestamp checks in `gitalyauth` (`token.go`) — replay outside `tokenValidityDuration`, signature-comparison weakness, or a version-downgrade to the v1 path — and issues RPCs against repositories on the server without holding the shared token.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_4ef63c46-ce95-44e1-b39d-865b0f808230?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/gitaly/hook/custom.go -> Scope: Advanced. An unprivileged attacker bypasses Gitaly's transport authentication or request scoping, by defeating the HMAC/timestamp checks in `gitalyauth` (`token.go`) — replay outside `tokenValidityDuration`, signature-comparison weakness, or a version-downgrade to the v1 path — and issues RPCs against repositories on the server without holding the shared token.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_f4fe9c61-e12a-4b3d-b9c9-a128ed84a07c?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/gitaly/hook/procreceive_handler.go -> Scope: Advanced. An unprivileged attacker bypasses Gitaly's transport authentication or request scoping, by defeating the HMAC/timestamp checks in `gitalyauth` (`token.go`) — replay outside `tokenValidityDuration`, signature-comparison weakness, or a version-downgrade to the v1 path — and issues RPCs against repositories on the server without holding the shared token.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_7a4ad59e-339a-40f1-8081-27d7d642f74f?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/gitaly/service/operations/update_with_hooks.go -> Scope: Advanced. An unprivileged attacker bypasses Gitaly's transport authentication or request scoping, by defeating the HMAC/timestamp checks in `gitalyauth` (`token.go`) — replay outside `tokenValidityDuration`, signature-comparison weakness, or a version-downgrade to the v1 path — and issues RPCs against repositories on the server without holding the shared token.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_fbbabde3-0dc6-4098-be7d-d384904ff21a?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/git/quarantine/quarantine.go -> Scope: Advanced. An unprivileged attacker bypasses Gitaly's transport authentication or request scoping, by defeating the HMAC/timestamp checks in `gitalyauth` (`token.go`) — replay outside `tokenValidityDuration`, signature-comparison weakness, or a version-downgrade to the v1 path — and issues RPCs against repositories on the server without holding the shared token.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_11a603b8-ff42-4fec-b0bb-9d332565ae77?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/git/alternates/alternates.go -> Scope: Advanced. An unprivileged attacker bypasses Gitaly's transport authentication or request scoping, by defeating the HMAC/timestamp checks in `gitalyauth` (`token.go`) — replay outside `tokenValidityDuration`, signature-comparison weakness, or a version-downgrade to the v1 path — and issues RPCs against repositories on the server without holding the shared token.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_ad8e2ad8-71a2-4431-a047-d5c7a004349b?mode=deep",
+    "questions_generated": false
+  }
+]
