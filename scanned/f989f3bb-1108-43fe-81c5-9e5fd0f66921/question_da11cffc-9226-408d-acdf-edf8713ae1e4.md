@@ -1,1 +1,0 @@
-[File: internal/gitaly/storage/locator.go -> Scope: Critical] [Function: storage.ValidateGitDirectory combined with ValidateRelativePath in configLocator.ValidateRepository] Can an attacker supply a `relative_path` of `.` or empty-after-clean (`subfolder/..`) that resolves exactly to `storagePath` itself, passing `ValidateRelativePath` (per its own test table returning `\
