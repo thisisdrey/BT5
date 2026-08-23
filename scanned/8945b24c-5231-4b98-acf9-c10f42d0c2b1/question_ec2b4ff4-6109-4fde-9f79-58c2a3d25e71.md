@@ -1,1 +1,0 @@
-[File: internal/git/gitattributes/check_attr.go -> Function: CheckAttr] Can an attacker supply a revision string via `GetFileAttributesRequest.revision` that is not validated for git-option-injection (only checked non-empty in file_attributes.go:49-51) such that a value like `--foo` or a value beginning with `-` gets passed as `gitcmd.ValueFlag{Name:
