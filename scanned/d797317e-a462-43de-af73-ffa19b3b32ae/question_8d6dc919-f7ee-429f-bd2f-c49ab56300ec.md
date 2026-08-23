@@ -1,1 +1,0 @@
-[File: internal/git/objectpool/link.go -> Scope: Critical] [Function: linkedToRepository] Since `linkedToRepository` (link.go:169-204) compares only `relPath == expectedRelPath` or falls back to `filepath.Clean(relPath) != filepath.Join(poolPath, \
