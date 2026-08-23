@@ -1,1 +1,0 @@
-[File: internal/gitaly/hook/updateref/update_with_hooks.go -> Function: UpdaterWithHooks.UpdateReference] Can an unprivileged user cause the reference name/oldrev/newrev supplied to an OperationService RPC (which ends up in the string `changes := fmt.Sprintf(\
