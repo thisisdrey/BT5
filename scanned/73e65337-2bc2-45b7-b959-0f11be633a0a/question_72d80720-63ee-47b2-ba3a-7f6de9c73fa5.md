@@ -1,1 +1,0 @@
-[File: internal/gitaly/service/objectpool/alternates.go, internal/git/objectpool/link.go] [Function: linkedToRepository, Link] Can an attacker exploit the alternates-content check in `linkedToRepository` (`filepath.Clean(relPath) != filepath.Join(poolPath, \
