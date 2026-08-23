@@ -1,1 +1,0 @@
-[File: internal/gitaly/storage/fs.go -> Scope: Critical] Target: internal/git/objectpool/link.go linkedToRepository, whose final fallback compares a relative alternates value against an absolute path: `filepath.Clean(relPath) != filepath.Join(poolPath, \
