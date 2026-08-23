@@ -1,1 +1,0 @@
-[File: internal/gitaly/service/repository/create_repository_from_url.go -> Func: CreateRepositoryFromURL + validateCreateRepositoryFromURLRequest, lines 87-159] Given `validateCreateRepositoryFromURLRequest` only checks that `Url` is non-empty and does not restrict scheme, can an attacker pass `Url=\
