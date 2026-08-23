@@ -1,1 +1,0 @@
-[File: internal/gitaly/server/auth/auth.go] [Function: IsAuthenticated] Can an attacker exploit the fact that IsAuthenticated only checks for presence of a 'username' key in incoming gRPC metadata (`md.Get(\
