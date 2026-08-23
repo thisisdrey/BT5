@@ -1,1 +1,0 @@
-[File: internal/git/catfile/tag.go -> Function: buildAnnotatedTag / dereferenceTag] Can an attacker create a chain of nested annotated tags (tag->tag->tag->...) whose 'object'/'type' headers parser.parseTag extracts recursively drive dereferenceTag (tag.go:89-105) into unbounded recursion via repeated `oid+\
