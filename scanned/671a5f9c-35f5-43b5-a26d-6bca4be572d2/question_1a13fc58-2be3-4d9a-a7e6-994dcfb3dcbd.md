@@ -1,1 +1,0 @@
-[File: internal/git/objectpool/link.go -> linkedToRepository/getRelativeObjectPath] Can an attacker exploit the loose string comparison in `linkedToRepository` (`filepath.Clean(relPath) != filepath.Join(poolPath, \
