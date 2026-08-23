@@ -1,1 +1,0 @@
-[File: internal/gitaly/repoutil/custom_hooks.go] [Function: ExtractHooks, error-path stderr handling] Can a corrupted or adversarial tar stream cause the spawned `tar` process to emit stderr content containing internal filesystem paths (e.g. tmp dir absolute path, storage root) that gets wrapped via structerr.New(...).WithMetadata(
