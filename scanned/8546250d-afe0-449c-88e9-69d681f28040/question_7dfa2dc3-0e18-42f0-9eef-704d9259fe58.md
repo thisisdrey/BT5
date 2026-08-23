@@ -1,1 +1,0 @@
-[File: internal/gitaly/service/repository/get_custom_hooks.go -> Scope: Intermediate] [Function: (*server).GetCustomHooks] Can an attacker abuse storage.ValidateRelativePath failure path in configLocator.ValidateRepository (internal/gitaly/config/locator.go:81-83), which attaches WithMetadata(\
