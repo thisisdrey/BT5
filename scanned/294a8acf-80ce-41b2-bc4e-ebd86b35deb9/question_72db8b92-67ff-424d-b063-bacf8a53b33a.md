@@ -1,1 +1,0 @@
-[File: 'internal/git/gitcmd/command_factory.go' -> Scope: Intermediate] [Function: ExecCommandFactory.newCommand env construction] Can an unprivileged attacker whose repository triggers a git subcommand failure cause the process's `args` (logged via `command.New`'s deferred `logger.WithFields({\
