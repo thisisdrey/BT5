@@ -1,1 +1,0 @@
-[File: 'internal/git/gitcmd/protocol.go' -> Scope: Critical. Metrics/log-based information disclosure enabling replay.] [Function: gitcmd.gitProtocolEnv, requestinfohandler.Extract] Can an unprivileged attacker cause `logger.WithField(\
