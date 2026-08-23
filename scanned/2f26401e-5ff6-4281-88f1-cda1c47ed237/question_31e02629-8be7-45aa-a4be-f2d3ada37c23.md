@@ -1,1 +1,0 @@
-[File: internal/gitaly/service/repository/search_files.go -> Function: SearchFilesByContent] Can an unprivileged attacker who supplies a crafted req.GetQuery() (used as the value of gitcmd.ValueFlag{Name:\
