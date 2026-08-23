@@ -1,0 +1,152 @@
+[
+  {
+    "question": "'File Name: internal/gitaly/service/objectpool/link.go -> Scope: Advanced. A remote attacker with only push/pull-level access exhausts Gitaly or crashes an RPC handler on default configuration, by sending a crafted pack, pktline stream, git object, `.gitattributes`, or LFS pointer that drives unbounded memory/CPU/disk in `pktline`, `catfile`, `gitattributes.CheckAttr`, `lfs.go`, or triggers a panic that `panichandler` converts into a persistent failure of the process or partition.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_d0e1640c-1b0f-4b31-ae9d-b29d19f88fb3?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/gitaly/service/objectpool/alternates.go -> Scope: Advanced. A remote attacker with only push/pull-level access exhausts Gitaly or crashes an RPC handler on default configuration, by sending a crafted pack, pktline stream, git object, `.gitattributes`, or LFS pointer that drives unbounded memory/CPU/disk in `pktline`, `catfile`, `gitattributes.CheckAttr`, `lfs.go`, or triggers a panic that `panichandler` converts into a persistent failure of the process or partition.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_c82761a4-b98b-4931-aef3-6a9ba7a6414a?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/gitaly/service/objectpool/create.go -> Scope: Advanced. A remote attacker with only push/pull-level access exhausts Gitaly or crashes an RPC handler on default configuration, by sending a crafted pack, pktline stream, git object, `.gitattributes`, or LFS pointer that drives unbounded memory/CPU/disk in `pktline`, `catfile`, `gitattributes.CheckAttr`, `lfs.go`, or triggers a panic that `panichandler` converts into a persistent failure of the process or partition.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_0d70b1c0-2af0-43a5-8cb1-5f6dca798fc4?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/gitaly/service/objectpool/fetch_into_object_pool.go -> Scope: Advanced. A remote attacker with only push/pull-level access exhausts Gitaly or crashes an RPC handler on default configuration, by sending a crafted pack, pktline stream, git object, `.gitattributes`, or LFS pointer that drives unbounded memory/CPU/disk in `pktline`, `catfile`, `gitattributes.CheckAttr`, `lfs.go`, or triggers a panic that `panichandler` converts into a persistent failure of the process or partition.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_737c2344-0630-42a5-8498-356e5d34171a?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/gitaly/service/objectpool/util.go -> Scope: Advanced. A remote attacker with only push/pull-level access exhausts Gitaly or crashes an RPC handler on default configuration, by sending a crafted pack, pktline stream, git object, `.gitattributes`, or LFS pointer that drives unbounded memory/CPU/disk in `pktline`, `catfile`, `gitattributes.CheckAttr`, `lfs.go`, or triggers a panic that `panichandler` converts into a persistent failure of the process or partition.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_167580e1-62dd-456e-99d7-354334f5507c?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/git/objectpool/pool.go -> Scope: Advanced. A remote attacker with only push/pull-level access exhausts Gitaly or crashes an RPC handler on default configuration, by sending a crafted pack, pktline stream, git object, `.gitattributes`, or LFS pointer that drives unbounded memory/CPU/disk in `pktline`, `catfile`, `gitattributes.CheckAttr`, `lfs.go`, or triggers a panic that `panichandler` converts into a persistent failure of the process or partition.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_a6ece36b-0857-4019-a39d-8dab0a1d97ea?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/gitaly/service/smarthttp/upload_pack.go -> Scope: Advanced. A remote attacker with only push/pull-level access exhausts Gitaly or crashes an RPC handler on default configuration, by sending a crafted pack, pktline stream, git object, `.gitattributes`, or LFS pointer that drives unbounded memory/CPU/disk in `pktline`, `catfile`, `gitattributes.CheckAttr`, `lfs.go`, or triggers a panic that `panichandler` converts into a persistent failure of the process or partition.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_7f82d34f-895e-472b-94f9-0bdbe8594c33?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/gitaly/service/smarthttp/receive_pack.go -> Scope: Advanced. A remote attacker with only push/pull-level access exhausts Gitaly or crashes an RPC handler on default configuration, by sending a crafted pack, pktline stream, git object, `.gitattributes`, or LFS pointer that drives unbounded memory/CPU/disk in `pktline`, `catfile`, `gitattributes.CheckAttr`, `lfs.go`, or triggers a panic that `panichandler` converts into a persistent failure of the process or partition.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_486ddb46-e428-40c3-a24f-ec4cfb08f405?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/gitaly/service/smarthttp/inforefs.go -> Scope: Advanced. A remote attacker with only push/pull-level access exhausts Gitaly or crashes an RPC handler on default configuration, by sending a crafted pack, pktline stream, git object, `.gitattributes`, or LFS pointer that drives unbounded memory/CPU/disk in `pktline`, `catfile`, `gitattributes.CheckAttr`, `lfs.go`, or triggers a panic that `panichandler` converts into a persistent failure of the process or partition.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_59d583f9-d1bc-4024-8709-3fe9458ae603?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/gitaly/service/ssh/upload_pack.go -> Scope: Advanced. A remote attacker with only push/pull-level access exhausts Gitaly or crashes an RPC handler on default configuration, by sending a crafted pack, pktline stream, git object, `.gitattributes`, or LFS pointer that drives unbounded memory/CPU/disk in `pktline`, `catfile`, `gitattributes.CheckAttr`, `lfs.go`, or triggers a panic that `panichandler` converts into a persistent failure of the process or partition.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_e490a97c-62a9-4b51-a91c-d97950612182?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/gitaly/service/ssh/receive_pack.go -> Scope: Advanced. A remote attacker with only push/pull-level access exhausts Gitaly or crashes an RPC handler on default configuration, by sending a crafted pack, pktline stream, git object, `.gitattributes`, or LFS pointer that drives unbounded memory/CPU/disk in `pktline`, `catfile`, `gitattributes.CheckAttr`, `lfs.go`, or triggers a panic that `panichandler` converts into a persistent failure of the process or partition.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_fd68858d-3c75-4607-b556-f9f570e3f263?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/gitaly/service/ssh/upload_archive.go -> Scope: Advanced. A remote attacker with only push/pull-level access exhausts Gitaly or crashes an RPC handler on default configuration, by sending a crafted pack, pktline stream, git object, `.gitattributes`, or LFS pointer that drives unbounded memory/CPU/disk in `pktline`, `catfile`, `gitattributes.CheckAttr`, `lfs.go`, or triggers a panic that `panichandler` converts into a persistent failure of the process or partition.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_3825a0dc-d74f-4499-ab65-4f258b57b4f9?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/gitaly/service/ssh/upload_command.go -> Scope: Advanced. A remote attacker with only push/pull-level access exhausts Gitaly or crashes an RPC handler on default configuration, by sending a crafted pack, pktline stream, git object, `.gitattributes`, or LFS pointer that drives unbounded memory/CPU/disk in `pktline`, `catfile`, `gitattributes.CheckAttr`, `lfs.go`, or triggers a panic that `panichandler` converts into a persistent failure of the process or partition.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_9762a3ac-6ca4-4b72-9f3d-15963e2313f8?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/git/pktline/pktline.go -> Scope: Advanced. A remote attacker with only push/pull-level access exhausts Gitaly or crashes an RPC handler on default configuration, by sending a crafted pack, pktline stream, git object, `.gitattributes`, or LFS pointer that drives unbounded memory/CPU/disk in `pktline`, `catfile`, `gitattributes.CheckAttr`, `lfs.go`, or triggers a panic that `panichandler` converts into a persistent failure of the process or partition.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_756ef6c7-984a-42e1-a889-33ae71c9f176?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/gitaly/service/repository/create_repository_from_url.go -> Scope: Advanced. A remote attacker with only push/pull-level access exhausts Gitaly or crashes an RPC handler on default configuration, by sending a crafted pack, pktline stream, git object, `.gitattributes`, or LFS pointer that drives unbounded memory/CPU/disk in `pktline`, `catfile`, `gitattributes.CheckAttr`, `lfs.go`, or triggers a panic that `panichandler` converts into a persistent failure of the process or partition.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_c6fe9a8d-2302-45e5-ac6c-ce5af8a6001a?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/gitaly/service/repository/create_repository_from_snapshot.go -> Scope: Advanced. A remote attacker with only push/pull-level access exhausts Gitaly or crashes an RPC handler on default configuration, by sending a crafted pack, pktline stream, git object, `.gitattributes`, or LFS pointer that drives unbounded memory/CPU/disk in `pktline`, `catfile`, `gitattributes.CheckAttr`, `lfs.go`, or triggers a panic that `panichandler` converts into a persistent failure of the process or partition.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_ec284870-544c-414f-bd7b-4231dd56bdfe?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/gitaly/service/repository/create_repository_from_bundle.go -> Scope: Advanced. A remote attacker with only push/pull-level access exhausts Gitaly or crashes an RPC handler on default configuration, by sending a crafted pack, pktline stream, git object, `.gitattributes`, or LFS pointer that drives unbounded memory/CPU/disk in `pktline`, `catfile`, `gitattributes.CheckAttr`, `lfs.go`, or triggers a panic that `panichandler` converts into a persistent failure of the process or partition.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_0cf26c82-6297-4eb8-afdf-7db18e4b8206?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/gitaly/service/repository/fetch_remote.go -> Scope: Advanced. A remote attacker with only push/pull-level access exhausts Gitaly or crashes an RPC handler on default configuration, by sending a crafted pack, pktline stream, git object, `.gitattributes`, or LFS pointer that drives unbounded memory/CPU/disk in `pktline`, `catfile`, `gitattributes.CheckAttr`, `lfs.go`, or triggers a panic that `panichandler` converts into a persistent failure of the process or partition.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_cf373799-3623-408c-be00-3f9f6c0da77d?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/gitaly/service/repository/fetch_bundle.go -> Scope: Advanced. A remote attacker with only push/pull-level access exhausts Gitaly or crashes an RPC handler on default configuration, by sending a crafted pack, pktline stream, git object, `.gitattributes`, or LFS pointer that drives unbounded memory/CPU/disk in `pktline`, `catfile`, `gitattributes.CheckAttr`, `lfs.go`, or triggers a panic that `panichandler` converts into a persistent failure of the process or partition.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_3027ce84-63ab-4759-ba5f-d4f13a6b0a87?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/gitaly/service/repository/replicate.go -> Scope: Advanced. A remote attacker with only push/pull-level access exhausts Gitaly or crashes an RPC handler on default configuration, by sending a crafted pack, pktline stream, git object, `.gitattributes`, or LFS pointer that drives unbounded memory/CPU/disk in `pktline`, `catfile`, `gitattributes.CheckAttr`, `lfs.go`, or triggers a panic that `panichandler` converts into a persistent failure of the process or partition.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_6a185188-04b3-489d-a504-97209fdda137?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/gitaly/service/repository/create_fork.go -> Scope: Advanced. A remote attacker with only push/pull-level access exhausts Gitaly or crashes an RPC handler on default configuration, by sending a crafted pack, pktline stream, git object, `.gitattributes`, or LFS pointer that drives unbounded memory/CPU/disk in `pktline`, `catfile`, `gitattributes.CheckAttr`, `lfs.go`, or triggers a panic that `panichandler` converts into a persistent failure of the process or partition.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_549d478a-db8e-4ac6-acff-e94dfd120b69?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/gitaly/service/repository/set_custom_hooks.go -> Scope: Advanced. A remote attacker with only push/pull-level access exhausts Gitaly or crashes an RPC handler on default configuration, by sending a crafted pack, pktline stream, git object, `.gitattributes`, or LFS pointer that drives unbounded memory/CPU/disk in `pktline`, `catfile`, `gitattributes.CheckAttr`, `lfs.go`, or triggers a panic that `panichandler` converts into a persistent failure of the process or partition.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_1cdb64ee-3309-4d43-ae81-3ad8dc3ff50b?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/gitaly/service/repository/get_custom_hooks.go -> Scope: Advanced. A remote attacker with only push/pull-level access exhausts Gitaly or crashes an RPC handler on default configuration, by sending a crafted pack, pktline stream, git object, `.gitattributes`, or LFS pointer that drives unbounded memory/CPU/disk in `pktline`, `catfile`, `gitattributes.CheckAttr`, `lfs.go`, or triggers a panic that `panichandler` converts into a persistent failure of the process or partition.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_ab5ef021-b6ab-4757-b70c-5cb4b46b8c4b?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/gitaly/service/repository/restore_repository.go -> Scope: Advanced. A remote attacker with only push/pull-level access exhausts Gitaly or crashes an RPC handler on default configuration, by sending a crafted pack, pktline stream, git object, `.gitattributes`, or LFS pointer that drives unbounded memory/CPU/disk in `pktline`, `catfile`, `gitattributes.CheckAttr`, `lfs.go`, or triggers a panic that `panichandler` converts into a persistent failure of the process or partition.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_2291aa0f-cd0f-4399-9ba1-80edf761c430?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/gitaly/repoutil/custom_hooks.go -> Scope: Advanced. A remote attacker with only push/pull-level access exhausts Gitaly or crashes an RPC handler on default configuration, by sending a crafted pack, pktline stream, git object, `.gitattributes`, or LFS pointer that drives unbounded memory/CPU/disk in `pktline`, `catfile`, `gitattributes.CheckAttr`, `lfs.go`, or triggers a panic that `panichandler` converts into a persistent failure of the process or partition.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_c268ddb5-8d54-41b4-8289-fb42e652d2ea?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/gitaly/repoutil/create.go -> Scope: Advanced. A remote attacker with only push/pull-level access exhausts Gitaly or crashes an RPC handler on default configuration, by sending a crafted pack, pktline stream, git object, `.gitattributes`, or LFS pointer that drives unbounded memory/CPU/disk in `pktline`, `catfile`, `gitattributes.CheckAttr`, `lfs.go`, or triggers a panic that `panichandler` converts into a persistent failure of the process or partition.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_61e63f35-24d0-402e-9b39-8725b6ebe6ac?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/bundleuri/git_config.go -> Scope: Advanced. A remote attacker with only push/pull-level access exhausts Gitaly or crashes an RPC handler on default configuration, by sending a crafted pack, pktline stream, git object, `.gitattributes`, or LFS pointer that drives unbounded memory/CPU/disk in `pktline`, `catfile`, `gitattributes.CheckAttr`, `lfs.go`, or triggers a panic that `panichandler` converts into a persistent failure of the process or partition.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_091835cd-08fa-48de-8c22-087bbe1d4b62?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/bundleuri/sink.go -> Scope: Advanced. A remote attacker with only push/pull-level access exhausts Gitaly or crashes an RPC handler on default configuration, by sending a crafted pack, pktline stream, git object, `.gitattributes`, or LFS pointer that drives unbounded memory/CPU/disk in `pktline`, `catfile`, `gitattributes.CheckAttr`, `lfs.go`, or triggers a panic that `panichandler` converts into a persistent failure of the process or partition.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_ef927c13-5acb-48a9-893c-f258964b71cd?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/gitaly/service/repository/archive.go -> Scope: Advanced. A remote attacker with only push/pull-level access exhausts Gitaly or crashes an RPC handler on default configuration, by sending a crafted pack, pktline stream, git object, `.gitattributes`, or LFS pointer that drives unbounded memory/CPU/disk in `pktline`, `catfile`, `gitattributes.CheckAttr`, `lfs.go`, or triggers a panic that `panichandler` converts into a persistent failure of the process or partition.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_fd856c3f-9062-4916-9501-5db4a70aed65?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/gitaly/service/repository/snapshot.go -> Scope: Advanced. A remote attacker with only push/pull-level access exhausts Gitaly or crashes an RPC handler on default configuration, by sending a crafted pack, pktline stream, git object, `.gitattributes`, or LFS pointer that drives unbounded memory/CPU/disk in `pktline`, `catfile`, `gitattributes.CheckAttr`, `lfs.go`, or triggers a panic that `panichandler` converts into a persistent failure of the process or partition.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_f6125426-29de-4ee7-8bff-8b2261ce8d29?mode=deep",
+    "questions_generated": false
+  }
+]
