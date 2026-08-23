@@ -1,1 +1,0 @@
-[File: internal/gitaly/service/operations/commit_files.go -> Scope: Critical] [Function: validatePath] Can an attacker use UserCommitFiles with an action `filePath` containing a single-character-per-segment traversal that survives the `strings.Contains(relPath, \
