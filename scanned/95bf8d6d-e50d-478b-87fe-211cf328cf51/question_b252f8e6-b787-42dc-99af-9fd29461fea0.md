@@ -1,1 +1,0 @@
-[File: 'internal/git/objectpool/link.go' -> Function: linkedToRepository / getRelativeObjectPath] Can an attacker push a repository whose `objects/info/alternates` file is manually crafted (via a Git bundle/pack upload prior to quarantine validation) with a relative path string that satisfies `filepath.Clean(relPath) != filepath.Join(poolPath,

@@ -1,1 +1,0 @@
-[File: 'internal/gitaly/storage/storagemgr/partition/snapshot/snapshot.go' -> Function: createRepositorySnapshots] Can an attacker-controlled repository's `objects/info/alternates` entry cause `createRepositorySnapshots` to compute `alternateRelativePath` via `filepath.Dir(filepath.Join(relativePath,

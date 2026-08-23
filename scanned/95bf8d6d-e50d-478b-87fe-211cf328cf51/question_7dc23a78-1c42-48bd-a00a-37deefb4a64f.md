@@ -1,1 +1,0 @@
-[File: 'internal/gitaly/storage/storagemgr/partition_assigner.go' -> Function: partitionAssigner.getAlternatePartitionID] Can an attacker plant an `objects/info/alternates` file in their own repository (reachable pre-hook via a crafted push pack) whose content, once joined via `filepath.Join(relativePath,
