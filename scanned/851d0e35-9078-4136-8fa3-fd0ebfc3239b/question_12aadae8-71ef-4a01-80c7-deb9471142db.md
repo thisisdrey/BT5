@@ -1,1 +1,0 @@
-[File: internal/git/gitcmd/hooks_options.go -> Function: (cc *cmdCfg) configureHooks] Can an unprivileged pusher trigger a second invocation of configureHooks on the same cmdCfg (e.g. by chaining WithRefTxHook and WithReceivePackHooks on a single git-receive-pack invocation through a crafted internal RPC sequence) to hit the guard 'if cc.hooksConfigured { return errors.New(\
