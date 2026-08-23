@@ -1,1 +1,0 @@
-[File: internal/gitaly/service/smarthttp/upload_pack.go -> runUploadPack, internal/gitaly/hook pack-objects hook] Can an attacker abuse gitcmd.WithPackObjectsHookEnv(objectHash, req.GetRepository(), \
