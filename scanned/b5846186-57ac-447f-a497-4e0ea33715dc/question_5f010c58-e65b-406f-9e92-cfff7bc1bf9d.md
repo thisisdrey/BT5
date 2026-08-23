@@ -1,1 +1,0 @@
-[File: internal/git/gitcmd/command_factory.go -> Scope: Advanced auth bypass, argument injection adjacent] Target: newCommand's GIT_DEFAULT_REF_FORMAT branch ('sc.Flags = append(sc.Flags, Flag{Name: fmt.Sprintf(\
