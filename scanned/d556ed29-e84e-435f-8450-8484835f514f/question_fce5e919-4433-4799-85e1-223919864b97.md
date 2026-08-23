@@ -1,1 +1,0 @@
-[File: internal/gitaly/service/remote/find_remote_root_ref.go -> Function: findRemoteRootRefCmd, lines 17-38] Can an attacker supply FindRemoteRootRefRequest.RemoteUrl together with HttpAuthorizationHeader such that the constructed git config key `fmt.Sprintf(\
