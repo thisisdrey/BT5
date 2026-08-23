@@ -1,1 +1,0 @@
-[File: internal/gitaly/service/blob/lfs_pointers.go -> Function: ListLFSPointers/sendLFSPointers] Can an attacker push a repository with a graph containing millions of reachable blob objects at or under `lfsPointerMaxSize`, then invoke ListLFSPointers with `revisions: [\
