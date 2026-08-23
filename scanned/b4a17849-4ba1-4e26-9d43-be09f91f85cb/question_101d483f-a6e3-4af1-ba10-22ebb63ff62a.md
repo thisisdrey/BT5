@@ -1,1 +1,0 @@
-[File: 'internal/gitaly/service/repository/fetch_remote.go' -> func buildCommandOpts] Unlike `cloneFromURLCommand` (which sets `transfer.bundleURI=false`), does `buildCommandOpts` fail to disable `transfer.bundleURI` before invoking `quarantineRepo.FetchRemote(ctx, \
