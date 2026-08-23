@@ -1,1 +1,0 @@
-[File: internal/git/localrepo/snapshot.go -> Function: filterGitConfig] Can an attacker push a repository whose config file contains a maliciously large or deeply repeated [extensions] section (filterGitConfig includes the entire [extensions] section verbatim into the snapshot with no size cap, per internal/git/localrepo/snapshot.go:120-123) so that GetSnapshot's FileWithEdit(
