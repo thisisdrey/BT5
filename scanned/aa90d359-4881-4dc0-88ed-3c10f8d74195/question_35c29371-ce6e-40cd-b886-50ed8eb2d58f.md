@@ -1,1 +1,0 @@
-[File: internal/gitaly/service/operations/tags.go -> UserCreateTag] Does `validateUserCreateTag`'s `git.ValidateRevision(req.GetTagName())` reject tag names containing NUL bytes, path traversal segments (`../`), or `refs/tags/` control characters that could later be embedded verbatim into `fmt.Sprintf(\
