@@ -1,1 +1,0 @@
-[File: internal/gitaly/storage/repository_path.go + auth/token.go] [Function: gitalyauth.CheckToken / ValidateRelativePath] Can an unauthenticated attacker who never received a shared token exploit a hex-decoding or SplitN edge case in auth.ExtractAuthInfo (token.go:85-104) — e.g. a message field containing embedded '.' characters that gets absorbed by strings.SplitN(token, \
