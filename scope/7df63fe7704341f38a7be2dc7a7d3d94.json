@@ -1,3 +1,0 @@
-[
-  "'File Name: internal/gitlab/http_client.go -> Scope: Advanced. An unprivileged attacker escapes the repository directory while Gitaly writes attacker-supplied archive or snapshot data, by crafting tar entries, symlinks, or `..` paths accepted by `SetCustomHooks`/`repoutil.ExtractHooks`, `CreateRepositoryFromSnapshot`, `RestoreRepository`, or `internal/archive`, planting or overwriting files (including hooks) outside the target repository.'"
-]
