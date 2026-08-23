@@ -1,0 +1,152 @@
+[
+  {
+    "question": "'File Name: internal/gitaly/service/objectpool/link.go -> Scope: Intermediate. An unprivileged attacker obtains secrets or another tenant's metadata from Gitaly's error and log surfaces, by crafting a remote URL, ref, or path whose credentials or absolute storage path survive `helper.SanitizeString`/`SanitizeError`, `structerr` formatting, or `requestinfohandler` field extraction and are returned in a gRPC error the attacker can read.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_207515c5-4340-41f7-8c6f-5f1bcc2cec02?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/gitaly/service/objectpool/alternates.go -> Scope: Intermediate. An unprivileged attacker obtains secrets or another tenant's metadata from Gitaly's error and log surfaces, by crafting a remote URL, ref, or path whose credentials or absolute storage path survive `helper.SanitizeString`/`SanitizeError`, `structerr` formatting, or `requestinfohandler` field extraction and are returned in a gRPC error the attacker can read.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_db398a9f-2349-41eb-9caf-20194c5da9b4?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/gitaly/service/objectpool/create.go -> Scope: Intermediate. An unprivileged attacker obtains secrets or another tenant's metadata from Gitaly's error and log surfaces, by crafting a remote URL, ref, or path whose credentials or absolute storage path survive `helper.SanitizeString`/`SanitizeError`, `structerr` formatting, or `requestinfohandler` field extraction and are returned in a gRPC error the attacker can read.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_edc4bc04-fc54-4320-b884-32198c7aa12d?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/gitaly/service/objectpool/fetch_into_object_pool.go -> Scope: Intermediate. An unprivileged attacker obtains secrets or another tenant's metadata from Gitaly's error and log surfaces, by crafting a remote URL, ref, or path whose credentials or absolute storage path survive `helper.SanitizeString`/`SanitizeError`, `structerr` formatting, or `requestinfohandler` field extraction and are returned in a gRPC error the attacker can read.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_32996bff-59a1-4479-8349-1faead4ac941?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/gitaly/service/objectpool/util.go -> Scope: Intermediate. An unprivileged attacker obtains secrets or another tenant's metadata from Gitaly's error and log surfaces, by crafting a remote URL, ref, or path whose credentials or absolute storage path survive `helper.SanitizeString`/`SanitizeError`, `structerr` formatting, or `requestinfohandler` field extraction and are returned in a gRPC error the attacker can read.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_ac0affa5-abaf-4533-837b-7e4a1667417e?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/git/objectpool/pool.go -> Scope: Intermediate. An unprivileged attacker obtains secrets or another tenant's metadata from Gitaly's error and log surfaces, by crafting a remote URL, ref, or path whose credentials or absolute storage path survive `helper.SanitizeString`/`SanitizeError`, `structerr` formatting, or `requestinfohandler` field extraction and are returned in a gRPC error the attacker can read.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_251122f7-d872-4f59-8ffe-a5af86acccdc?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/gitaly/service/smarthttp/upload_pack.go -> Scope: Intermediate. An unprivileged attacker obtains secrets or another tenant's metadata from Gitaly's error and log surfaces, by crafting a remote URL, ref, or path whose credentials or absolute storage path survive `helper.SanitizeString`/`SanitizeError`, `structerr` formatting, or `requestinfohandler` field extraction and are returned in a gRPC error the attacker can read.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_86575574-67d0-4e77-b907-9345eb182fd6?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/gitaly/service/smarthttp/receive_pack.go -> Scope: Intermediate. An unprivileged attacker obtains secrets or another tenant's metadata from Gitaly's error and log surfaces, by crafting a remote URL, ref, or path whose credentials or absolute storage path survive `helper.SanitizeString`/`SanitizeError`, `structerr` formatting, or `requestinfohandler` field extraction and are returned in a gRPC error the attacker can read.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_f0e226d5-d3ae-4ff9-b8bd-533b6f028667?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/gitaly/service/smarthttp/inforefs.go -> Scope: Intermediate. An unprivileged attacker obtains secrets or another tenant's metadata from Gitaly's error and log surfaces, by crafting a remote URL, ref, or path whose credentials or absolute storage path survive `helper.SanitizeString`/`SanitizeError`, `structerr` formatting, or `requestinfohandler` field extraction and are returned in a gRPC error the attacker can read.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_d66ceb80-0bdc-4186-87df-bb7f82162e58?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/gitaly/service/ssh/upload_pack.go -> Scope: Intermediate. An unprivileged attacker obtains secrets or another tenant's metadata from Gitaly's error and log surfaces, by crafting a remote URL, ref, or path whose credentials or absolute storage path survive `helper.SanitizeString`/`SanitizeError`, `structerr` formatting, or `requestinfohandler` field extraction and are returned in a gRPC error the attacker can read.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_740ca86f-9670-4d46-b4c6-435f8f306a1c?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/gitaly/service/ssh/receive_pack.go -> Scope: Intermediate. An unprivileged attacker obtains secrets or another tenant's metadata from Gitaly's error and log surfaces, by crafting a remote URL, ref, or path whose credentials or absolute storage path survive `helper.SanitizeString`/`SanitizeError`, `structerr` formatting, or `requestinfohandler` field extraction and are returned in a gRPC error the attacker can read.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_5038f88f-c2fa-4ff4-85ca-231b76bdee6b?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/gitaly/service/ssh/upload_archive.go -> Scope: Intermediate. An unprivileged attacker obtains secrets or another tenant's metadata from Gitaly's error and log surfaces, by crafting a remote URL, ref, or path whose credentials or absolute storage path survive `helper.SanitizeString`/`SanitizeError`, `structerr` formatting, or `requestinfohandler` field extraction and are returned in a gRPC error the attacker can read.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_d2cde4a9-f803-49b8-bca0-ce31ea954af6?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/gitaly/service/ssh/upload_command.go -> Scope: Intermediate. An unprivileged attacker obtains secrets or another tenant's metadata from Gitaly's error and log surfaces, by crafting a remote URL, ref, or path whose credentials or absolute storage path survive `helper.SanitizeString`/`SanitizeError`, `structerr` formatting, or `requestinfohandler` field extraction and are returned in a gRPC error the attacker can read.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_81d88bee-68bd-461f-acce-0dbd847e92f2?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/git/pktline/pktline.go -> Scope: Intermediate. An unprivileged attacker obtains secrets or another tenant's metadata from Gitaly's error and log surfaces, by crafting a remote URL, ref, or path whose credentials or absolute storage path survive `helper.SanitizeString`/`SanitizeError`, `structerr` formatting, or `requestinfohandler` field extraction and are returned in a gRPC error the attacker can read.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_9bc223eb-318f-4576-8e4b-5f5eb7adbd7e?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/gitaly/service/repository/create_repository_from_url.go -> Scope: Intermediate. An unprivileged attacker obtains secrets or another tenant's metadata from Gitaly's error and log surfaces, by crafting a remote URL, ref, or path whose credentials or absolute storage path survive `helper.SanitizeString`/`SanitizeError`, `structerr` formatting, or `requestinfohandler` field extraction and are returned in a gRPC error the attacker can read.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_addefb78-2071-4580-bc94-c5196bff01a8?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/gitaly/service/repository/create_repository_from_snapshot.go -> Scope: Intermediate. An unprivileged attacker obtains secrets or another tenant's metadata from Gitaly's error and log surfaces, by crafting a remote URL, ref, or path whose credentials or absolute storage path survive `helper.SanitizeString`/`SanitizeError`, `structerr` formatting, or `requestinfohandler` field extraction and are returned in a gRPC error the attacker can read.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_06999969-c7b4-4f08-b0a6-c638afde3c8f?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/gitaly/service/repository/create_repository_from_bundle.go -> Scope: Intermediate. An unprivileged attacker obtains secrets or another tenant's metadata from Gitaly's error and log surfaces, by crafting a remote URL, ref, or path whose credentials or absolute storage path survive `helper.SanitizeString`/`SanitizeError`, `structerr` formatting, or `requestinfohandler` field extraction and are returned in a gRPC error the attacker can read.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_f3e2b187-8c57-4830-a18a-432d9a7e8ac9?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/gitaly/service/repository/fetch_remote.go -> Scope: Intermediate. An unprivileged attacker obtains secrets or another tenant's metadata from Gitaly's error and log surfaces, by crafting a remote URL, ref, or path whose credentials or absolute storage path survive `helper.SanitizeString`/`SanitizeError`, `structerr` formatting, or `requestinfohandler` field extraction and are returned in a gRPC error the attacker can read.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_7bf2ca8b-c696-456b-8050-504181a44b0b?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/gitaly/service/repository/fetch_bundle.go -> Scope: Intermediate. An unprivileged attacker obtains secrets or another tenant's metadata from Gitaly's error and log surfaces, by crafting a remote URL, ref, or path whose credentials or absolute storage path survive `helper.SanitizeString`/`SanitizeError`, `structerr` formatting, or `requestinfohandler` field extraction and are returned in a gRPC error the attacker can read.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_75d8c1a5-a2c9-4b24-a5e8-44246f48dcc8?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/gitaly/service/repository/replicate.go -> Scope: Intermediate. An unprivileged attacker obtains secrets or another tenant's metadata from Gitaly's error and log surfaces, by crafting a remote URL, ref, or path whose credentials or absolute storage path survive `helper.SanitizeString`/`SanitizeError`, `structerr` formatting, or `requestinfohandler` field extraction and are returned in a gRPC error the attacker can read.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_171a7839-2e58-41c3-a52d-af89c009d874?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/gitaly/service/repository/create_fork.go -> Scope: Intermediate. An unprivileged attacker obtains secrets or another tenant's metadata from Gitaly's error and log surfaces, by crafting a remote URL, ref, or path whose credentials or absolute storage path survive `helper.SanitizeString`/`SanitizeError`, `structerr` formatting, or `requestinfohandler` field extraction and are returned in a gRPC error the attacker can read.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_50dc21de-83d9-41cb-ab72-f091c0cd4011?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/gitaly/service/repository/set_custom_hooks.go -> Scope: Intermediate. An unprivileged attacker obtains secrets or another tenant's metadata from Gitaly's error and log surfaces, by crafting a remote URL, ref, or path whose credentials or absolute storage path survive `helper.SanitizeString`/`SanitizeError`, `structerr` formatting, or `requestinfohandler` field extraction and are returned in a gRPC error the attacker can read.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_19b753b7-2556-4c8d-8e68-3ace6cd3ab77?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/gitaly/service/repository/get_custom_hooks.go -> Scope: Intermediate. An unprivileged attacker obtains secrets or another tenant's metadata from Gitaly's error and log surfaces, by crafting a remote URL, ref, or path whose credentials or absolute storage path survive `helper.SanitizeString`/`SanitizeError`, `structerr` formatting, or `requestinfohandler` field extraction and are returned in a gRPC error the attacker can read.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_82b705e4-ca84-4146-8d93-3fbe3765ab32?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/gitaly/service/repository/restore_repository.go -> Scope: Intermediate. An unprivileged attacker obtains secrets or another tenant's metadata from Gitaly's error and log surfaces, by crafting a remote URL, ref, or path whose credentials or absolute storage path survive `helper.SanitizeString`/`SanitizeError`, `structerr` formatting, or `requestinfohandler` field extraction and are returned in a gRPC error the attacker can read.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_22fc75a3-4de9-47b9-9f27-f6f889ce3651?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/gitaly/repoutil/custom_hooks.go -> Scope: Intermediate. An unprivileged attacker obtains secrets or another tenant's metadata from Gitaly's error and log surfaces, by crafting a remote URL, ref, or path whose credentials or absolute storage path survive `helper.SanitizeString`/`SanitizeError`, `structerr` formatting, or `requestinfohandler` field extraction and are returned in a gRPC error the attacker can read.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_c75393ec-9fa0-4001-b71a-c2a7e040cc9e?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/gitaly/repoutil/create.go -> Scope: Intermediate. An unprivileged attacker obtains secrets or another tenant's metadata from Gitaly's error and log surfaces, by crafting a remote URL, ref, or path whose credentials or absolute storage path survive `helper.SanitizeString`/`SanitizeError`, `structerr` formatting, or `requestinfohandler` field extraction and are returned in a gRPC error the attacker can read.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_923ec46a-7f88-4168-9be2-ad47e8a5e6e2?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/bundleuri/git_config.go -> Scope: Intermediate. An unprivileged attacker obtains secrets or another tenant's metadata from Gitaly's error and log surfaces, by crafting a remote URL, ref, or path whose credentials or absolute storage path survive `helper.SanitizeString`/`SanitizeError`, `structerr` formatting, or `requestinfohandler` field extraction and are returned in a gRPC error the attacker can read.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_9a8651df-72b7-4f08-8bb9-a0166c0ffb46?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/bundleuri/sink.go -> Scope: Intermediate. An unprivileged attacker obtains secrets or another tenant's metadata from Gitaly's error and log surfaces, by crafting a remote URL, ref, or path whose credentials or absolute storage path survive `helper.SanitizeString`/`SanitizeError`, `structerr` formatting, or `requestinfohandler` field extraction and are returned in a gRPC error the attacker can read.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_15f63807-c270-45ca-9bd8-8b7920a88d23?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/gitaly/service/repository/archive.go -> Scope: Intermediate. An unprivileged attacker obtains secrets or another tenant's metadata from Gitaly's error and log surfaces, by crafting a remote URL, ref, or path whose credentials or absolute storage path survive `helper.SanitizeString`/`SanitizeError`, `structerr` formatting, or `requestinfohandler` field extraction and are returned in a gRPC error the attacker can read.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_1f6f468e-a3b1-4425-aaef-2a1d8c9189f8?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/gitaly/service/repository/snapshot.go -> Scope: Intermediate. An unprivileged attacker obtains secrets or another tenant's metadata from Gitaly's error and log surfaces, by crafting a remote URL, ref, or path whose credentials or absolute storage path survive `helper.SanitizeString`/`SanitizeError`, `structerr` formatting, or `requestinfohandler` field extraction and are returned in a gRPC error the attacker can read.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_6ef685a5-428d-4f83-9128-be1257970265?mode=deep",
+    "questions_generated": false
+  }
+]
