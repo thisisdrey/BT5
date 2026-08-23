@@ -1,1 +1,0 @@
-[File: internal/tempdir/tempdir.go NewRepository -> Scope: Critical] Target: tempdir.NewRepository's filepath.Rel(storagePath, dir.Path()) (lines 60-79). Attacker action: exploit a misconfigured storage where TempDir's computed root (storagePath+\
