@@ -1,1 +1,0 @@
-[File: internal/git/gitattributes/check_attr.go -> Scope: Advanced NUL-byte bypass] [Function: CheckAttrCmd.Check path validation] Attacker action: an unprivileged caller of GetFileAttributesRequest supplies a `Paths` entry containing a NUL byte, which `Check()` explicitly rejects (`strings.Contains(path, \
