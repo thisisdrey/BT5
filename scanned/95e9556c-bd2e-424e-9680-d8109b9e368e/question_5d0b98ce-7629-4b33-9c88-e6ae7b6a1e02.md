@@ -1,1 +1,0 @@
-[File: internal/git/reference.go -> Scope: Advanced auth bypass] Target: auth.RPCCredentialsV2 client-side token minting used to derive expected wire format, cross-checked against auth.ExtractAuthInfo server parsing (auth/token.go:91-104). Attacker action: send a bearer value with more than two dots, e.g. 'v2.<sig>.<ts>.<extra>', to see if 'SplitN(token, \
