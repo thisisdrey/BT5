@@ -1,1 +1,0 @@
-[File: internal/git/gitcmd/ssh.go -> Function: BuildSSHInvocation] Can an attacker-controlled sshKey or knownHosts value containing a shell-metacharacter-laden string (e.g. spaces, quotes) break out of the `strings.Join(args, \
