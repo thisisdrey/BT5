@@ -1,0 +1,7 @@
+[
+  {
+    "question": "'File Name: internal/gitlab/http_client.go -> Scope: Intermediate. An unprivileged attacker obtains secrets or another tenant's metadata from Gitaly's error and log surfaces, by crafting a remote URL, ref, or path whose credentials or absolute storage path survive `helper.SanitizeString`/`SanitizeError`, `structerr` formatting, or `requestinfohandler` field extraction and are returned in a gRPC error the attacker can read.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_cd95410b-5f7e-4be8-8ee9-f0c0db71ef21?mode=deep",
+    "questions_generated": false
+  }
+]
