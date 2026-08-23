@@ -1,0 +1,152 @@
+[
+  {
+    "question": "'File Name: internal/gitaly/storage/repository_path.go -> Scope: Critical. An unprivileged attacker who only controls gRPC request fields (`Repository.relative_path`, `storage_name`, object-pool paths) reads or writes files outside the configured storage root, by defeating `storage.ValidateRelativePath`, the path joining in `config.Locator`/`storage.Locator`, or the pool-path checks in the objectpool service, reaching another tenant's repository, custom hooks, or arbitrary host files.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_693378ba-4d8d-4cc6-848f-f66a67bda3be?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/gitaly/storage/path_helpers.go -> Scope: Critical. An unprivileged attacker who only controls gRPC request fields (`Repository.relative_path`, `storage_name`, object-pool paths) reads or writes files outside the configured storage root, by defeating `storage.ValidateRelativePath`, the path joining in `config.Locator`/`storage.Locator`, or the pool-path checks in the objectpool service, reaching another tenant's repository, custom hooks, or arbitrary host files.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_9dc12863-0937-4f43-bd1c-28c489a3a053?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/gitaly/storage/locator.go -> Scope: Critical. An unprivileged attacker who only controls gRPC request fields (`Repository.relative_path`, `storage_name`, object-pool paths) reads or writes files outside the configured storage root, by defeating `storage.ValidateRelativePath`, the path joining in `config.Locator`/`storage.Locator`, or the pool-path checks in the objectpool service, reaching another tenant's repository, custom hooks, or arbitrary host files.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_8e9e3977-fa9d-4a87-b7b1-a44439e03a26?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/gitaly/storage/storage.go -> Scope: Critical. An unprivileged attacker who only controls gRPC request fields (`Repository.relative_path`, `storage_name`, object-pool paths) reads or writes files outside the configured storage root, by defeating `storage.ValidateRelativePath`, the path joining in `config.Locator`/`storage.Locator`, or the pool-path checks in the objectpool service, reaching another tenant's repository, custom hooks, or arbitrary host files.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_98abe539-a9ea-4922-be20-6568fa7a8ddc?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/gitaly/config/locator.go -> Scope: Critical. An unprivileged attacker who only controls gRPC request fields (`Repository.relative_path`, `storage_name`, object-pool paths) reads or writes files outside the configured storage root, by defeating `storage.ValidateRelativePath`, the path joining in `config.Locator`/`storage.Locator`, or the pool-path checks in the objectpool service, reaching another tenant's repository, custom hooks, or arbitrary host files.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_5f9e2945-6e4f-4490-9374-7e74abb1b34f?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/gitaly/storage/walk_directory.go -> Scope: Critical. An unprivileged attacker who only controls gRPC request fields (`Repository.relative_path`, `storage_name`, object-pool paths) reads or writes files outside the configured storage root, by defeating `storage.ValidateRelativePath`, the path joining in `config.Locator`/`storage.Locator`, or the pool-path checks in the objectpool service, reaching another tenant's repository, custom hooks, or arbitrary host files.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_3adf5859-c9b4-4661-96b4-f32348e2fdbd?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/gitaly/storage/fs.go -> Scope: Critical. An unprivileged attacker who only controls gRPC request fields (`Repository.relative_path`, `storage_name`, object-pool paths) reads or writes files outside the configured storage root, by defeating `storage.ValidateRelativePath`, the path joining in `config.Locator`/`storage.Locator`, or the pool-path checks in the objectpool service, reaching another tenant's repository, custom hooks, or arbitrary host files.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_55983e76-3a00-47f4-aaaa-92be10db75de?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/tempdir/tempdir.go -> Scope: Critical. An unprivileged attacker who only controls gRPC request fields (`Repository.relative_path`, `storage_name`, object-pool paths) reads or writes files outside the configured storage root, by defeating `storage.ValidateRelativePath`, the path joining in `config.Locator`/`storage.Locator`, or the pool-path checks in the objectpool service, reaching another tenant's repository, custom hooks, or arbitrary host files.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_3b2aa427-f399-44aa-a4dd-c0eaab301cbf?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/git/gitcmd/command_options.go -> Scope: Critical. An unprivileged attacker who only controls gRPC request fields (`Repository.relative_path`, `storage_name`, object-pool paths) reads or writes files outside the configured storage root, by defeating `storage.ValidateRelativePath`, the path joining in `config.Locator`/`storage.Locator`, or the pool-path checks in the objectpool service, reaching another tenant's repository, custom hooks, or arbitrary host files.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_e0bc53d1-24df-4ab5-994f-e2ffa0a82018?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/git/gitcmd/command_description.go -> Scope: Critical. An unprivileged attacker who only controls gRPC request fields (`Repository.relative_path`, `storage_name`, object-pool paths) reads or writes files outside the configured storage root, by defeating `storage.ValidateRelativePath`, the path joining in `config.Locator`/`storage.Locator`, or the pool-path checks in the objectpool service, reaching another tenant's repository, custom hooks, or arbitrary host files.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_1077c81f-0d40-45db-88f5-f31eb9f82376?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/git/gitcmd/command_factory.go -> Scope: Critical. An unprivileged attacker who only controls gRPC request fields (`Repository.relative_path`, `storage_name`, object-pool paths) reads or writes files outside the configured storage root, by defeating `storage.ValidateRelativePath`, the path joining in `config.Locator`/`storage.Locator`, or the pool-path checks in the objectpool service, reaching another tenant's repository, custom hooks, or arbitrary host files.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_cd11c872-b3f8-4daf-80ea-9a767ff6c147?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/git/gitcmd/command.go -> Scope: Critical. An unprivileged attacker who only controls gRPC request fields (`Repository.relative_path`, `storage_name`, object-pool paths) reads or writes files outside the configured storage root, by defeating `storage.ValidateRelativePath`, the path joining in `config.Locator`/`storage.Locator`, or the pool-path checks in the objectpool service, reaching another tenant's repository, custom hooks, or arbitrary host files.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_523d3431-6762-481c-a14c-95551b9c3326?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/git/gitcmd/staticargs.go -> Scope: Critical. An unprivileged attacker who only controls gRPC request fields (`Repository.relative_path`, `storage_name`, object-pool paths) reads or writes files outside the configured storage root, by defeating `storage.ValidateRelativePath`, the path joining in `config.Locator`/`storage.Locator`, or the pool-path checks in the objectpool service, reaching another tenant's repository, custom hooks, or arbitrary host files.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_a6c4d4cc-ec5c-400b-a282-47ee3cb2fe5c?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/git/gitcmd/ssh.go -> Scope: Critical. An unprivileged attacker who only controls gRPC request fields (`Repository.relative_path`, `storage_name`, object-pool paths) reads or writes files outside the configured storage root, by defeating `storage.ValidateRelativePath`, the path joining in `config.Locator`/`storage.Locator`, or the pool-path checks in the objectpool service, reaching another tenant's repository, custom hooks, or arbitrary host files.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_c8eb615f-3b7e-4714-b4e2-ae4347a85461?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/git/gitcmd/protocol.go -> Scope: Critical. An unprivileged attacker who only controls gRPC request fields (`Repository.relative_path`, `storage_name`, object-pool paths) reads or writes files outside the configured storage root, by defeating `storage.ValidateRelativePath`, the path joining in `config.Locator`/`storage.Locator`, or the pool-path checks in the objectpool service, reaching another tenant's repository, custom hooks, or arbitrary host files.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_f1854827-2f5f-4d55-ad62-0c5810808581?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/git/revision.go -> Scope: Critical. An unprivileged attacker who only controls gRPC request fields (`Repository.relative_path`, `storage_name`, object-pool paths) reads or writes files outside the configured storage root, by defeating `storage.ValidateRelativePath`, the path joining in `config.Locator`/`storage.Locator`, or the pool-path checks in the objectpool service, reaching another tenant's repository, custom hooks, or arbitrary host files.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_28c70170-ec3e-43e4-bb0e-d826e05e8350?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/git/object_id.go -> Scope: Critical. An unprivileged attacker who only controls gRPC request fields (`Repository.relative_path`, `storage_name`, object-pool paths) reads or writes files outside the configured storage root, by defeating `storage.ValidateRelativePath`, the path joining in `config.Locator`/`storage.Locator`, or the pool-path checks in the objectpool service, reaching another tenant's repository, custom hooks, or arbitrary host files.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_57b2f6fe-0453-4674-91ca-7e4b5460d200?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/git/reference.go -> Scope: Critical. An unprivileged attacker who only controls gRPC request fields (`Repository.relative_path`, `storage_name`, object-pool paths) reads or writes files outside the configured storage root, by defeating `storage.ValidateRelativePath`, the path joining in `config.Locator`/`storage.Locator`, or the pool-path checks in the objectpool service, reaching another tenant's repository, custom hooks, or arbitrary host files.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_b27b4bb2-7833-45fe-b134-f11bc9c2fd02?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/git/repository.go -> Scope: Critical. An unprivileged attacker who only controls gRPC request fields (`Repository.relative_path`, `storage_name`, object-pool paths) reads or writes files outside the configured storage root, by defeating `storage.ValidateRelativePath`, the path joining in `config.Locator`/`storage.Locator`, or the pool-path checks in the objectpool service, reaching another tenant's repository, custom hooks, or arbitrary host files.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_a4d9c959-50c5-4fb6-a2a7-74836a221f61?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/git/gitcmd/hooks_payload.go -> Scope: Critical. An unprivileged attacker who only controls gRPC request fields (`Repository.relative_path`, `storage_name`, object-pool paths) reads or writes files outside the configured storage root, by defeating `storage.ValidateRelativePath`, the path joining in `config.Locator`/`storage.Locator`, or the pool-path checks in the objectpool service, reaching another tenant's repository, custom hooks, or arbitrary host files.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_5be86a29-70a7-4ac4-942d-71930c524324?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/git/gitcmd/hooks_options.go -> Scope: Critical. An unprivileged attacker who only controls gRPC request fields (`Repository.relative_path`, `storage_name`, object-pool paths) reads or writes files outside the configured storage root, by defeating `storage.ValidateRelativePath`, the path joining in `config.Locator`/`storage.Locator`, or the pool-path checks in the objectpool service, reaching another tenant's repository, custom hooks, or arbitrary host files.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_aac9afec-bce3-4a2b-bb69-f0f7957d121a?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/gitaly/hook/manager.go -> Scope: Critical. An unprivileged attacker who only controls gRPC request fields (`Repository.relative_path`, `storage_name`, object-pool paths) reads or writes files outside the configured storage root, by defeating `storage.ValidateRelativePath`, the path joining in `config.Locator`/`storage.Locator`, or the pool-path checks in the objectpool service, reaching another tenant's repository, custom hooks, or arbitrary host files.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_62dd5dd9-753e-425d-8bab-a903997ae3a3?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/gitaly/hook/prereceive.go -> Scope: Critical. An unprivileged attacker who only controls gRPC request fields (`Repository.relative_path`, `storage_name`, object-pool paths) reads or writes files outside the configured storage root, by defeating `storage.ValidateRelativePath`, the path joining in `config.Locator`/`storage.Locator`, or the pool-path checks in the objectpool service, reaching another tenant's repository, custom hooks, or arbitrary host files.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_16f03fe8-ef6f-407b-b73c-1fd622c406ff?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/gitaly/hook/update.go -> Scope: Critical. An unprivileged attacker who only controls gRPC request fields (`Repository.relative_path`, `storage_name`, object-pool paths) reads or writes files outside the configured storage root, by defeating `storage.ValidateRelativePath`, the path joining in `config.Locator`/`storage.Locator`, or the pool-path checks in the objectpool service, reaching another tenant's repository, custom hooks, or arbitrary host files.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_6bf77ed9-88f3-4696-a41d-aee1b97f2a11?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/gitaly/hook/postreceive.go -> Scope: Critical. An unprivileged attacker who only controls gRPC request fields (`Repository.relative_path`, `storage_name`, object-pool paths) reads or writes files outside the configured storage root, by defeating `storage.ValidateRelativePath`, the path joining in `config.Locator`/`storage.Locator`, or the pool-path checks in the objectpool service, reaching another tenant's repository, custom hooks, or arbitrary host files.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_7c2641d2-040f-482d-83a4-3286dd9bbc76?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/gitaly/hook/custom.go -> Scope: Critical. An unprivileged attacker who only controls gRPC request fields (`Repository.relative_path`, `storage_name`, object-pool paths) reads or writes files outside the configured storage root, by defeating `storage.ValidateRelativePath`, the path joining in `config.Locator`/`storage.Locator`, or the pool-path checks in the objectpool service, reaching another tenant's repository, custom hooks, or arbitrary host files.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_b8d2ad16-7596-4ebc-b367-3b2de05e6867?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/gitaly/hook/procreceive_handler.go -> Scope: Critical. An unprivileged attacker who only controls gRPC request fields (`Repository.relative_path`, `storage_name`, object-pool paths) reads or writes files outside the configured storage root, by defeating `storage.ValidateRelativePath`, the path joining in `config.Locator`/`storage.Locator`, or the pool-path checks in the objectpool service, reaching another tenant's repository, custom hooks, or arbitrary host files.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_d98551c5-9216-4f2a-b182-0a31f078da69?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/gitaly/service/operations/update_with_hooks.go -> Scope: Critical. An unprivileged attacker who only controls gRPC request fields (`Repository.relative_path`, `storage_name`, object-pool paths) reads or writes files outside the configured storage root, by defeating `storage.ValidateRelativePath`, the path joining in `config.Locator`/`storage.Locator`, or the pool-path checks in the objectpool service, reaching another tenant's repository, custom hooks, or arbitrary host files.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_5b25bd52-7fd3-4275-ae85-57ba89c17499?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/git/quarantine/quarantine.go -> Scope: Critical. An unprivileged attacker who only controls gRPC request fields (`Repository.relative_path`, `storage_name`, object-pool paths) reads or writes files outside the configured storage root, by defeating `storage.ValidateRelativePath`, the path joining in `config.Locator`/`storage.Locator`, or the pool-path checks in the objectpool service, reaching another tenant's repository, custom hooks, or arbitrary host files.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_a664fa60-b6df-4530-9594-eb66a1887570?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: internal/git/alternates/alternates.go -> Scope: Critical. An unprivileged attacker who only controls gRPC request fields (`Repository.relative_path`, `storage_name`, object-pool paths) reads or writes files outside the configured storage root, by defeating `storage.ValidateRelativePath`, the path joining in `config.Locator`/`storage.Locator`, or the pool-path checks in the objectpool service, reaching another tenant's repository, custom hooks, or arbitrary host files.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_cb5862cf-7916-4445-8421-be53cf3c3782?mode=deep",
+    "questions_generated": false
+  }
+]
