@@ -1,1 +1,0 @@
-[File: 'internal/structerr/error.go' -> Error.GRPCStatus, Error.WithMetadata] [Function: structerr.Error.GRPCStatus()] Since `GRPCStatus()` builds `status.New(e.Code(), e.Error())` purely from the formatted message chain (ignoring `metadata`), can an unprivileged attacker find a call site where a value intended to stay server-side-only (attached via `.WithMetadata(\

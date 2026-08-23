@@ -1,1 +1,0 @@
-[File: 'internal/gitaly/service/repository/fetch_remote.go' -> buildCommandOpts] [Function: buildCommandOpts, gitcmd.ConfigPair 'http.%s.extraHeader'] Can an unprivileged attacker supply RemoteParams.Url and RemoteParams.HttpAuthorizationHeader such that the generated git config key `fmt.Sprintf(\
