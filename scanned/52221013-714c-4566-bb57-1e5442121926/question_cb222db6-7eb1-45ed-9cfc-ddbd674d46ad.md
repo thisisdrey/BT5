@@ -1,0 +1,1 @@
+[File: internal/gitaly/service/repository/fetch_remote.go -> Function: fetchRemoteAtomic, quarantine.New usage] Attacker action: trigger FetchRemote against a malicious remote server that returns pack objects designed to be committed before quarantine migration completes, exploiting the DryRun/Porcelain parsing path (`errMsg != \

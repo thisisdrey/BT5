@@ -1,0 +1,1 @@
+[File: internal/git/pktline/pktline.go -> Scope: error-oracle metadata leak] [Function: Payload] Can an attacker exploit the mismatch check in `Payload` (`if uint64(len(pkt)) != length { return nil, fmt.Errorf(\

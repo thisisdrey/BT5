@@ -1,0 +1,1 @@
+[File: write_ref.go:136-141 validateWriteRefRequest] [Function: git.ValidateRevision(req.GetRef()) / git.ValidateRevision(req.GetRevision())] Once authenticated via a bypass, can req.GetRevision() or req.GetOldRevision(), which are validated only by git.ValidateRevision (syntax-level) before being concatenated as repo.ResolveRevision(ctx, git.Revision(req.GetRevision())+\

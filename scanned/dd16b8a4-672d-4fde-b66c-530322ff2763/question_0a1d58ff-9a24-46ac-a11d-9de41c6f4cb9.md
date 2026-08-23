@@ -1,0 +1,1 @@
+[File: internal/gitaly/service/operations/tags.go -> Function: UserCreateTag] The RPC never re-validates that TagName resolves to a ref strictly under 'refs/tags/' before constructing 'referenceName := git.ReferenceName(fmt.Sprintf(\

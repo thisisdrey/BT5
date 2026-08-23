@@ -1,0 +1,1 @@
+[File: archive.go -> Scope: Critical] [Function: server.GetArchive in.GetElidePath() exclude prefix check] Can an attacker bypass the `strings.HasPrefix(exclude[i], pathSlash)` subdirectory check by supplying an `Exclude` entry that is byte-prefix-equal to `path+\

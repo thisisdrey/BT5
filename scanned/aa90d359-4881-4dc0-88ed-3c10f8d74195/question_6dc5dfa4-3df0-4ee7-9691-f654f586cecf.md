@@ -1,0 +1,1 @@
+[File: internal/gitaly/service/operations/submodules.go -> Scope: Critical] [Function: (*Server).UserUpdateSubmodule] Can an attacker supply req.GetExpectedOldOid() as a non-existent or foreign OID combined with an empty repo state to force quarantineRepo.ResolveRevision(fmt.Sprintf(\

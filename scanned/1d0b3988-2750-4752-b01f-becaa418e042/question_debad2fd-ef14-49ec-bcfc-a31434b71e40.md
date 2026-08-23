@@ -1,0 +1,1 @@
+[File: internal/git/gitattributes/check_attr.go -> Function: CheckAttrCmd.Check, path NUL check] Can an attacker send a GetFileAttributesRequest.Paths entry containing embedded NUL bytes via gRPC (bypassing any string-level validation elsewhere) to trigger the `strings.Contains(path, \

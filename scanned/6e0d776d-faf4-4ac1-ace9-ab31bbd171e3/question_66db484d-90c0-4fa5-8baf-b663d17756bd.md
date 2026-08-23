@@ -1,0 +1,1 @@
+[File: auth/token.go -> Function: v2HmacInfoValid] Can an attacker force integer parsing edge cases in `strconv.ParseInt(message, 10, 64)` (token.go:116) by supplying a `message` timestamp string like `\

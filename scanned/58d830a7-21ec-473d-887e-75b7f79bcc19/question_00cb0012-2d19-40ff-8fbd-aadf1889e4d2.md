@@ -1,0 +1,1 @@
+[File: internal/gitaly/service/ref/delete_refs.go -> Scope: Critical] Target: validateDeleteRefRequest / hasAnyPrefix used in refsToRemove. Attacker action: supply ExceptWithPrefix values that are substrings of unrelated ref namespaces (e.g. \

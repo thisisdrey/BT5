@@ -1,0 +1,1 @@
+[File: internal/gitaly/service/repository/replicate.go -> Scope: metadata/secret leak] [Function: fetchInternalRemote] Can an attacker who controls the content or reachability of an internal remote used during `ReplicateRepository` cause `structerr.New(\

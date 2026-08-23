@@ -1,0 +1,1 @@
+[File: 'internal/gitaly/hook/custom.go -> Scope: Critical'] [Function: GitLabHookManager.updateHook / newCustomHooksExecutor] Can an unprivileged attacker who pushes a ref update supply a `ref` value that passes the `ref == \

@@ -1,0 +1,1 @@
+[File: 'internal/git/localrepo/repo.go -> Quarantine (referenced from transaction_manager.go)'] Can an attacker exploit the code path where a non-existent-repository write transaction sets `txn.quarantineDirectory = filepath.Join(mgr.storagePath, txn.snapshot.RelativePath(txn.relativePath), \

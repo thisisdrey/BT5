@@ -1,0 +1,1 @@
+[File: internal/gitaly/service/objectpool/create.go -> Scope: Intermediate] [Function: objectpool.Create config --remove-section error path] Can an attacker cause the `objectPool.ExecAndWait(ctx, gitcmd.Command{Name:\

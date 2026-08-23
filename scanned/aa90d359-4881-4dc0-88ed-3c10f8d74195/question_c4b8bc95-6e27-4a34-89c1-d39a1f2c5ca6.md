@@ -1,0 +1,1 @@
+[File: internal/gitaly/service/operations/submodules.go -> Scope: Critical] [Function: (*Server).UserUpdateSubmodule] Can an attacker supply req.GetBranch() containing git ref-format metacharacters (e.g. \

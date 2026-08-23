@@ -1,0 +1,1 @@
+[File: internal/gitaly/service/ssh/upload_command.go -> runUploadCommand, error wrap at line 60] Attacker action: forces `repo.Exec` to fail during process start (e.g. via resource exhaustion or malformed `gitcmd.Command` interaction) so `fmt.Errorf(\

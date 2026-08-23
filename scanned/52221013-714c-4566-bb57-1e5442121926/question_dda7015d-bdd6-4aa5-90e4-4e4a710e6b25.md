@@ -1,0 +1,1 @@
+[File: internal/gitlab/http_client.go -> Function: HTTPClient.Allowed, field allowedRequest.Project] Attacker action: submit a RepoPath containing characters that survive `strings.Replace(params.RepoPath, \

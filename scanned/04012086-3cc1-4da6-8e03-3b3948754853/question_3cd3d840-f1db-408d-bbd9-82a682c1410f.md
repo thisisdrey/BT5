@@ -1,0 +1,1 @@
+[File: internal/git/pktline/pktline.go -> Scope: credential/metadata leak via error surfaces] [Function: pktLineSplitter] Can an unprivileged attacker who controls a git pkt-line stream consumed by Gitaly (e.g. a crafted upload-pack/receive-pack response line, or a pack-objects cache negotiation line) trigger `pktLineSplitter`'s `fmt.Errorf(\

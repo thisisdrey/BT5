@@ -1,0 +1,1 @@
+[File: internal/gitaly/config/locator.go -> Function: configLocator.ValidateRepository, GetRepoPath] Assuming the attacker somehow obtains a validly-signed v2 token for their own repository's storage (a legitimate, unprivileged credential from GitLab-Shell/Workhorse), can they still supply a `Repository{StorageName: <same storage>, RelativePath: \

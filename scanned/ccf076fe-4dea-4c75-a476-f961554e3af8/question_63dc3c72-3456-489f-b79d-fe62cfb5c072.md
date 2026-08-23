@@ -1,0 +1,1 @@
+[File: internal/gitaly/service/commit/raw_blame.go -> Function: RawBlame / createTemporaryIgnoreRevsFile] Can an attacker supply `IgnoreRevisionsBlob` referencing an oversized or maliciously crafted blob (e.g. a multi-gigabyte blob committed to their own repo) to cause `blobObj.WriteTo(tmpFile)` (raw_blame.go:198) to write unbounded data to `os.CreateTemp(

@@ -1,0 +1,1 @@
+[File: internal/git/gitcmd/command_description.go + gitattributes/check_attr.go -> Scope: Advanced (git argument/config injection adjacent to DoS)] [Function: CheckAttr's `--source` ValueFlag] `CheckAttr` passes the caller-controlled `revision` directly as `gitcmd.ValueFlag{Name: \

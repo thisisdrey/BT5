@@ -1,0 +1,1 @@
+[File: internal/git/gitcmd/command_options.go -> Scope: Critical] Target: ConvertConfigOptions, which splits `<key>=<value>` config option strings on the first '=' with no further validation of key or value content (no rejection of newlines, no restriction on key namespace). Attacker action: submit a --config-style option string like 'core.fsmonitor=/bin/sh -c

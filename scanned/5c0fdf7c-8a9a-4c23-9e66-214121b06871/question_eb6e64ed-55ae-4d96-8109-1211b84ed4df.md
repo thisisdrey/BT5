@@ -1,0 +1,1 @@
+[File: internal/gitaly/service/operations/commit_files.go -> Function: validatePath / storage.ValidateRelativePath] Attacker action: submit a UserCommitFilesActionHeader.FilePath crafted with Unicode normalization tricks, NTFS-style alternate separators, or trailing '/..'-adjacent sequences not caught by the `strings.Contains(relPath, \
