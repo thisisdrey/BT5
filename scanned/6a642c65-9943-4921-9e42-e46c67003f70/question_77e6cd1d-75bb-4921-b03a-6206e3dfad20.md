@@ -1,1 +1,0 @@
-[File: internal/gitaly/service/operations/tags.go] [Function: validateUserCreateTag -> git.ValidateRevision] Can an attacker set `tag_name` to a value that fails git.ValidateRevision but whose error message from the underlying git library leaks another tenant's repository's on-disk relative path via error interpolation in `fmt.Errorf(\

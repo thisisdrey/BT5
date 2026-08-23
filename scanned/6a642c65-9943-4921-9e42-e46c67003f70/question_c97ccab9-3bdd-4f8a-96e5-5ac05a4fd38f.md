@@ -1,1 +1,0 @@
-[File: internal/gitaly/service/operations/tags.go] [Function: UserCreateTag -> targetRevision resolution via objectInfoReader.Info] Can an attacker pass a `target_revision` crafted as `HEAD@{upstream}` or a revision expression that cat-file resolves against alternates/pool objects, so that `structerr.NewFailedPrecondition(\

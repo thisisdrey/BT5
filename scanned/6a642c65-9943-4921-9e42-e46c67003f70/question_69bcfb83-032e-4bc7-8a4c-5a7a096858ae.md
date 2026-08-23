@@ -1,1 +1,0 @@
-[File: internal/gitaly/service/operations/tags.go] [Function: UserDeleteTag -> expectedOldOid handling] Can an attacker submit `expected_old_object_id` as a malformed/oversized string engineered to make `objectHash.FromHex` or `repo.ResolveRevision` error messages include the resolved absolute `.git/objects` path (from a git subprocess stderr) via `structerr.NewInvalidArgument(\
