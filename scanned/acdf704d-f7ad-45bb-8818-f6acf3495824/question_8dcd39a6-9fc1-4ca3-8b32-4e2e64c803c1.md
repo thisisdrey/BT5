@@ -1,1 +1,0 @@
-[File: internal/git/lfs.go] [Function: IsLFSPointer] Is there any upper bound on the size of `b []byte` passed into IsLFSPointer by its callers (e.g., blob-content readers in internal/gitaly/service/blob/lfs_pointers.go) before the prefix check `bytes.HasPrefix(b, []byte(\
