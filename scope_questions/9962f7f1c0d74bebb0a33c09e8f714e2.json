@@ -1,0 +1,7 @@
+[
+  {
+    "question": "'File Name: internal/gitlab/http_client.go -> Scope: Critical. An unprivileged attacker reads objects of a repository they have no access to, by abusing alternates/quarantine/object-pool wiring — `alternates.go`, `quarantine.NewQuarantine`, `Link`/`DisconnectGitAlternates`, or `remoterepo` — so that an RPC on a repository they do control resolves or serves objects belonging to a private repository of another user.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_5e7946e2-d15b-4548-b2eb-4fafcf6e1818?mode=deep",
+    "questions_generated": false
+  }
+]
