@@ -1,1 +1,0 @@
-[File: internal/gitaly/service/repository/archive.go -> Function: ExtractAuthInfo] Can an attacker force a version-downgrade by sending a token with `Version` field set to something other than `tokenVersionV2` (e.g. a legacy 'v1'-shaped 2-part token) to see if any code path in `CheckToken` falls back to a weaker or missing check instead of the `newPermissionDeniedError(
