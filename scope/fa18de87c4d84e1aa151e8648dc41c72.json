@@ -1,3 +1,0 @@
-[
-  "'File Name: internal/gitlab/http_client.go -> Scope: Critical. An unprivileged attacker achieves command or option injection into a spawned git process, by smuggling a leading `-`, `--upload-pack=`, `--output=`, `ext::`, or `-c` payload through a revision, ref name, path, or remote URL that `git.ValidateRevision`, `gitcmd.Command`/`command_options.go`, or `gitcmd.commandDescriptions` fails to reject, causing Gitaly to execute attacker-chosen code or read attacker-chosen files.'"
-]
