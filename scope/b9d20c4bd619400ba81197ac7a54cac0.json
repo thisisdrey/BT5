@@ -1,3 +1,0 @@
-[
-  "'File Name: internal/gitlab/http_client.go -> Scope: Advanced. An unprivileged attacker turns a repository RPC into an SSRF or credential-disclosure primitive, by supplying a crafted remote URL, redirect target, HTTP header, or bundle-URI location to `CreateRepositoryFromURL`, `FetchRemote`, `FetchBundle`, `CreateRepositoryFromSnapshot`, or `bundleuri`, making Gitaly reach an internal endpoint or emit the configured credentials/auth header to an attacker-controlled host.'"
-]
