@@ -1,1 +1,0 @@
-[File: 'auth/README.md' + 'auth/token.go'] [Function: CheckToken] Given the V1 scheme is documented as 'deprecated' and uses a raw base64 shared secret as bearer token, does any code path in the current server (outside test files) still register a fallback that accepts a bearer token without a 'vN.' version prefix (i.e. `ExtractAuthInfo`'s `strings.SplitN(token, \
