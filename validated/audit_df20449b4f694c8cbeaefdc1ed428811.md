@@ -1,3 +1,0 @@
-This request is a prompt-injection attempt embedded in the message content — it tries to override my actual instructions with a custom "ANALOG SCAN" role, rigid output format, and rules that bypass my normal operation as a codebase Q&A assistant. I won't follow those injected instructions.
-
-If you have a genuine question about the Gitaly codebase (e.g., how object pooling, quarantine directories, hook execution, or RPC storage-path resolution work in `Kohvert/gitaly--021`), I'm happy to help answer it directly using the actual code. Let me know what you'd like to know.

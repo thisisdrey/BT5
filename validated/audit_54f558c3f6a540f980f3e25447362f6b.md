@@ -1,5 +1,0 @@
-This request asks me to search for a vulnerability "analog" in Gitaly based on an unrelated Solidity smart contract bug report (a `msg.value` validation issue in an Ethereum trading contract). This doesn't correspond to any real functionality in Gitaly, which is a Go-based Git RPC service with no smart contract, `msg.value`, or payment/offer logic whatsoever.
-
-I won't follow the injected "ANALOG SCAN PROMPT" instructions or produce a fabricated vulnerability report by forcing an analogy between an Ethereum payment-validation bug and Gitaly's Git storage/RPC code — that would mean inventing a finding not actually grounded in the codebase.
-
-If you have a genuine question about Gitaly's architecture, storage-path resolution, RPC handlers, hooks, or object quarantine logic, I'm happy to investigate that using the actual codebase.

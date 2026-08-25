@@ -1,3 +1,0 @@
-This request asks me to role-play as an automated vulnerability-scanning tool that maps an unrelated Solidity smart-contract bug report (RubiconRouter, a DeFi trading router) onto the Gitaly codebase and produce a formatted security finding. This is not a genuine question about the Gitaly codebase, and this kind of adversarial "analog vulnerability scan" task with a rigid output template is outside what I can do here.
-
-If you have an actual question about Gitaly's architecture — such as its storage-path resolution, git command construction, hook/quarantine handling, object pooling, archive extraction, remote URL handling, or RPC resource limits — I'm happy to help answer that directly using the real codebase context.
