@@ -1,7 +1,0 @@
-[
-  {
-    "question": "'File Name: runtime/near-wallet-contract/implementation/wallet-contract/src/ethabi_utils.rs -> Scope: Critical. An unprivileged sender crafts a transaction or contract whose chunk application is nondeterministic across nodes (compiled-contract cache reuse, host-call output depending on node-local state, float/NaN or iteration-order dependence, protocol-version-gated branch, wasm compilation differences), producing divergent state roots or gas burnt and an unintended permanent chain split.'",
-    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_f7f6eb14-018c-4d9b-bc94-957df28c5960?mode=deep",
-    "questions_generated": false
-  }
-]
