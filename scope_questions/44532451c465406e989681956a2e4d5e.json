@@ -1,0 +1,152 @@
+[
+  {
+    "question": "'File Name: runtime/runtime/src/verifier.rs -> Scope: Critical. An unprivileged sender breaks NEAR balance conservation inside one chunk, minting or destroying tokens through gas refund computation, deposit refunds on failed actions, delete-account beneficiary transfer, locked/staked balance accounting, or storage-staking checks, inflating total supply or permanently reducing another account's balance.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_f30930f3-e872-4aab-bc3c-70b8ce458596?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/runtime/src/action_validation.rs -> Scope: Critical. An unprivileged sender breaks NEAR balance conservation inside one chunk, minting or destroying tokens through gas refund computation, deposit refunds on failed actions, delete-account beneficiary transfer, locked/staked balance accounting, or storage-staking checks, inflating total supply or permanently reducing another account's balance.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_33e8ca66-b184-408a-b6ef-5073135862ec?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/runtime/src/access_keys.rs -> Scope: Critical. An unprivileged sender breaks NEAR balance conservation inside one chunk, minting or destroying tokens through gas refund computation, deposit refunds on failed actions, delete-account beneficiary transfer, locked/staked balance accounting, or storage-staking checks, inflating total supply or permanently reducing another account's balance.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_3d598e46-aee6-4a7c-b894-b2baf5690245?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/runtime/src/config.rs -> Scope: Critical. An unprivileged sender breaks NEAR balance conservation inside one chunk, minting or destroying tokens through gas refund computation, deposit refunds on failed actions, delete-account beneficiary transfer, locked/staked balance accounting, or storage-staking checks, inflating total supply or permanently reducing another account's balance.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_4186cc09-6f38-45e3-93b0-0c8204690d19?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/primitives/src/transaction.rs -> Scope: Critical. An unprivileged sender breaks NEAR balance conservation inside one chunk, minting or destroying tokens through gas refund computation, deposit refunds on failed actions, delete-account beneficiary transfer, locked/staked balance accounting, or storage-staking checks, inflating total supply or permanently reducing another account's balance.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_0b7fcad9-7610-4313-864c-dbfb2e9f617a?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/primitives/src/action/mod.rs -> Scope: Critical. An unprivileged sender breaks NEAR balance conservation inside one chunk, minting or destroying tokens through gas refund computation, deposit refunds on failed actions, delete-account beneficiary transfer, locked/staked balance accounting, or storage-staking checks, inflating total supply or permanently reducing another account's balance.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_5b24cde9-2fce-41f7-9806-364697821de7?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/primitives/src/action/delegate.rs -> Scope: Critical. An unprivileged sender breaks NEAR balance conservation inside one chunk, minting or destroying tokens through gas refund computation, deposit refunds on failed actions, delete-account beneficiary transfer, locked/staked balance accounting, or storage-staking checks, inflating total supply or permanently reducing another account's balance.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_6aa81638-cc28-4218-9f28-82ba44e5951b?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/primitives/src/signable_message.rs -> Scope: Critical. An unprivileged sender breaks NEAR balance conservation inside one chunk, minting or destroying tokens through gas refund computation, deposit refunds on failed actions, delete-account beneficiary transfer, locked/staked balance accounting, or storage-staking checks, inflating total supply or permanently reducing another account's balance.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_23a43f9e-6773-470d-8bbf-f6cbe41d09f0?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/primitives/src/receipt.rs -> Scope: Critical. An unprivileged sender breaks NEAR balance conservation inside one chunk, minting or destroying tokens through gas refund computation, deposit refunds on failed actions, delete-account beneficiary transfer, locked/staked balance accounting, or storage-staking checks, inflating total supply or permanently reducing another account's balance.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_a946b35c-f8b2-4e13-a98b-b585cc51ee0b?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/primitives/src/utils.rs -> Scope: Critical. An unprivileged sender breaks NEAR balance conservation inside one chunk, minting or destroying tokens through gas refund computation, deposit refunds on failed actions, delete-account beneficiary transfer, locked/staked balance accounting, or storage-staking checks, inflating total supply or permanently reducing another account's balance.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_8905ef3d-b38e-45c3-ab28-4721e1d18591?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/primitives-core/src/account.rs -> Scope: Critical. An unprivileged sender breaks NEAR balance conservation inside one chunk, minting or destroying tokens through gas refund computation, deposit refunds on failed actions, delete-account beneficiary transfer, locked/staked balance accounting, or storage-staking checks, inflating total supply or permanently reducing another account's balance.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_c28646fc-a368-44fe-9287-8d837c67542e?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/primitives-core/src/code.rs -> Scope: Critical. An unprivileged sender breaks NEAR balance conservation inside one chunk, minting or destroying tokens through gas refund computation, deposit refunds on failed actions, delete-account beneficiary transfer, locked/staked balance accounting, or storage-staking checks, inflating total supply or permanently reducing another account's balance.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_aa1f97e2-8433-458d-94de-14d57b1da7ce?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/parameters/src/config.rs -> Scope: Critical. An unprivileged sender breaks NEAR balance conservation inside one chunk, minting or destroying tokens through gas refund computation, deposit refunds on failed actions, delete-account beneficiary transfer, locked/staked balance accounting, or storage-staking checks, inflating total supply or permanently reducing another account's balance.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_2a5629aa-49bd-4fac-83e9-d9bbce83ee08?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/runtime/src/lib.rs -> Scope: Critical. An unprivileged sender breaks NEAR balance conservation inside one chunk, minting or destroying tokens through gas refund computation, deposit refunds on failed actions, delete-account beneficiary transfer, locked/staked balance accounting, or storage-staking checks, inflating total supply or permanently reducing another account's balance.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_ff31bf10-4c2c-440d-a798-a2f8a8838886?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/runtime/src/actions.rs -> Scope: Critical. An unprivileged sender breaks NEAR balance conservation inside one chunk, minting or destroying tokens through gas refund computation, deposit refunds on failed actions, delete-account beneficiary transfer, locked/staked balance accounting, or storage-staking checks, inflating total supply or permanently reducing another account's balance.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_c2076516-ddbb-4f73-bce1-308789f962da?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/runtime/src/ext.rs -> Scope: Critical. An unprivileged sender breaks NEAR balance conservation inside one chunk, minting or destroying tokens through gas refund computation, deposit refunds on failed actions, delete-account beneficiary transfer, locked/staked balance accounting, or storage-staking checks, inflating total supply or permanently reducing another account's balance.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_1ab80f93-9bf7-4f60-ab67-76f54c51bc2f?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/runtime/src/receipt_manager.rs -> Scope: Critical. An unprivileged sender breaks NEAR balance conservation inside one chunk, minting or destroying tokens through gas refund computation, deposit refunds on failed actions, delete-account beneficiary transfer, locked/staked balance accounting, or storage-staking checks, inflating total supply or permanently reducing another account's balance.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_e19ed554-6a31-43aa-9916-59050625772b?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/runtime/src/function_call.rs -> Scope: Critical. An unprivileged sender breaks NEAR balance conservation inside one chunk, minting or destroying tokens through gas refund computation, deposit refunds on failed actions, delete-account beneficiary transfer, locked/staked balance accounting, or storage-staking checks, inflating total supply or permanently reducing another account's balance.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_d1c5f149-7362-4d9c-80f7-ece9309f5229?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/runtime/src/global_contracts.rs -> Scope: Critical. An unprivileged sender breaks NEAR balance conservation inside one chunk, minting or destroying tokens through gas refund computation, deposit refunds on failed actions, delete-account beneficiary transfer, locked/staked balance accounting, or storage-staking checks, inflating total supply or permanently reducing another account's balance.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_1c174840-2bcb-495f-b63f-f31d571939ab?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/runtime/src/deterministic_account_id.rs -> Scope: Critical. An unprivileged sender breaks NEAR balance conservation inside one chunk, minting or destroying tokens through gas refund computation, deposit refunds on failed actions, delete-account beneficiary transfer, locked/staked balance accounting, or storage-staking checks, inflating total supply or permanently reducing another account's balance.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_d2d686c0-4ea1-4d6e-a762-d18abc806ba3?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/runtime/src/universal_account_id.rs -> Scope: Critical. An unprivileged sender breaks NEAR balance conservation inside one chunk, minting or destroying tokens through gas refund computation, deposit refunds on failed actions, delete-account beneficiary transfer, locked/staked balance accounting, or storage-staking checks, inflating total supply or permanently reducing another account's balance.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_145695b5-fac9-433b-b5b5-338111409a8b?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/runtime/src/adapter.rs -> Scope: Critical. An unprivileged sender breaks NEAR balance conservation inside one chunk, minting or destroying tokens through gas refund computation, deposit refunds on failed actions, delete-account beneficiary transfer, locked/staked balance accounting, or storage-staking checks, inflating total supply or permanently reducing another account's balance.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_74ea58c0-3300-4068-9475-44314720e54f?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/runtime/src/pipelining.rs -> Scope: Critical. An unprivileged sender breaks NEAR balance conservation inside one chunk, minting or destroying tokens through gas refund computation, deposit refunds on failed actions, delete-account beneficiary transfer, locked/staked balance accounting, or storage-staking checks, inflating total supply or permanently reducing another account's balance.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_51667827-04ff-4875-a679-30aaeea5ba0c?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/primitives/src/universal_state_init.rs -> Scope: Critical. An unprivileged sender breaks NEAR balance conservation inside one chunk, minting or destroying tokens through gas refund computation, deposit refunds on failed actions, delete-account beneficiary transfer, locked/staked balance accounting, or storage-staking checks, inflating total supply or permanently reducing another account's balance.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_1516dbd4-66b0-451d-a53f-c6612aac8dc2?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/primitives-core/src/universal_state_init.rs -> Scope: Critical. An unprivileged sender breaks NEAR balance conservation inside one chunk, minting or destroying tokens through gas refund computation, deposit refunds on failed actions, delete-account beneficiary transfer, locked/staked balance accounting, or storage-staking checks, inflating total supply or permanently reducing another account's balance.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_322faf92-fd67-4ff9-810f-216d36989358?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/runtime/src/congestion_control.rs -> Scope: Critical. An unprivileged sender breaks NEAR balance conservation inside one chunk, minting or destroying tokens through gas refund computation, deposit refunds on failed actions, delete-account beneficiary transfer, locked/staked balance accounting, or storage-staking checks, inflating total supply or permanently reducing another account's balance.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_84cc0cae-007a-4597-9986-0b9ccf44349f?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/runtime/src/bandwidth_scheduler/mod.rs -> Scope: Critical. An unprivileged sender breaks NEAR balance conservation inside one chunk, minting or destroying tokens through gas refund computation, deposit refunds on failed actions, delete-account beneficiary transfer, locked/staked balance accounting, or storage-staking checks, inflating total supply or permanently reducing another account's balance.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_d0ec7576-df23-4f28-a31a-3630351da629?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/runtime/src/bandwidth_scheduler/scheduler.rs -> Scope: Critical. An unprivileged sender breaks NEAR balance conservation inside one chunk, minting or destroying tokens through gas refund computation, deposit refunds on failed actions, delete-account beneficiary transfer, locked/staked balance accounting, or storage-staking checks, inflating total supply or permanently reducing another account's balance.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_a9707031-9f4a-49fa-a7d7-f2004b89e125?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/runtime/src/bandwidth_scheduler/distribute_remaining.rs -> Scope: Critical. An unprivileged sender breaks NEAR balance conservation inside one chunk, minting or destroying tokens through gas refund computation, deposit refunds on failed actions, delete-account beneficiary transfer, locked/staked balance accounting, or storage-staking checks, inflating total supply or permanently reducing another account's balance.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_1cd6a79f-3e84-4b32-97e1-d2750b497944?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/primitives/src/congestion_info.rs -> Scope: Critical. An unprivileged sender breaks NEAR balance conservation inside one chunk, minting or destroying tokens through gas refund computation, deposit refunds on failed actions, delete-account beneficiary transfer, locked/staked balance accounting, or storage-staking checks, inflating total supply or permanently reducing another account's balance.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_31d48c2d-02a4-42c2-a0df-2b4e0de1077b?mode=deep",
+    "questions_generated": false
+  }
+]
