@@ -1,1 +1,0 @@
-[File: runtime/near-vm-runner/src/imports.rs -> Scope: Critical] [Function: prepare_v3::SimpleMaxStackCfg::size_of_function_activation (prepare/prepare_v3.rs:478-495)] Can an unprivileged attacker deploy a wasm contract with a locals table crafted so that `prefix_sum_vec::PrefixSumVec` indices are non-monotonic, hitting `idx.checked_sub(last_idx_plus_one).expect(\
