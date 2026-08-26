@@ -1,0 +1,3 @@
+[
+  "'File Name: runtime/near-wallet-contract/implementation/wallet-contract/src/ethabi_utils.rs -> Scope: Critical. An unprivileged sender permanently freezes funds: an account's tokens or a cross-shard receipt become unrecoverable because a receipt is stuck forever in the delayed, postponed, yield, or outgoing buffer queue, storage_usage underflow or overflow blocks every future action on the account, or a promise/yield resume path drops the value transfer.'"
+]
