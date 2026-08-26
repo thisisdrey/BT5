@@ -1,3 +1,0 @@
-[
-  "'File Name: runtime/near-wallet-contract/implementation/wallet-contract/src/ethabi_utils.rs -> Scope: High. An unprivileged sender abuses cross-shard flow control, manipulating congestion info, delayed/buffered receipt accounting, or bandwidth-scheduler grant allocation so its own receipts are admitted while a target shard is starved or held congested, denying cross-shard service to other users.'"
-]
