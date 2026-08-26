@@ -1,0 +1,1 @@
+[File: runtime/near-vm-runner/src/logic/bls12381.rs -> Scope: Critical] [Function: check_input_size format! string allocation in hot loop] Can an attacker force repeated calls to check_input_size with mismatched lengths across many sequential bls12381 host calls within one contract execution, each allocating a `format!(\

@@ -1,0 +1,1 @@
+[File: 'core/store/src/trie/receipts_column_helper.rs' -> Scope: Critical] [Function: TrieQueueIterator::next_back combined with OutgoingReceiptBuffer double-borrow] Can an attacker exploit the documented but code-enforced-only-by-convention invariant \

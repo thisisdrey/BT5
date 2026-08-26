@@ -1,0 +1,1 @@
+[File: 'File Name: runtime/near-vm-runner/src/logic/logic.rs -> Scope: Critical.'] [Function: VMLogic::promise_batch_action_add_key_with_full_access] Can an unprivileged attacker submit a promise batch action adding a full-access key to a subaccount created within the same batch (Promise::CreateAccount followed by AddKey), such that the sir (\

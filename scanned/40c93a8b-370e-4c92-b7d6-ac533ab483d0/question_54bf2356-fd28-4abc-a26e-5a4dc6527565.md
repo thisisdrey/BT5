@@ -1,0 +1,1 @@
+[File: near_action.rs -> Scope: High] [Function: action_to_promise, create_ban_relayer_promise] When a faulty relayer triggers `create_ban_relayer_promise`, which chains `delete_key(pk).function_call_weight(\

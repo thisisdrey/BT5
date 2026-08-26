@@ -1,0 +1,1 @@
+[File: 'runtime/near-vm-runner/src/logic/alt_bn128.rs' -> Scope: state-root divergence via non-deterministic error message size] [Function: InvalidInput::new] Can an unprivileged sender submit a value to alt_bn128_g1_multiexp/g1_sum/pairing_check that is invalid (e.g., x,y not on curve) so that InvalidInput::new formats bad_value via format!(\

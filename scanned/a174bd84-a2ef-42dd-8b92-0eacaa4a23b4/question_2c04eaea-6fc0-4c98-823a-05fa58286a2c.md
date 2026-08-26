@@ -1,0 +1,1 @@
+[File: 'File Name: core/store/src/trie/trie_storage_update.rs -> Scope: Critical...'] [Function: verify_function_call_permission] Can an attacker with a FunctionCall access key restricted to receiver_id=X and method_names=[\

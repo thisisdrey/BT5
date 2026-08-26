@@ -1,0 +1,1 @@
+[File: 'ethabi_utils.rs' -> Scope: High.] [Function: TryFromToken for Vec<String>] Can an attacker craft ABI-encoded `method_names: Vec<String>` data (used in internal.rs ADD_KEY_SIGNATURE parsing) with the maximum number of array elements permitted by the outer NEAR transaction size limit, each a near-maximal string, so the resulting AddKeyAction's `method_names.join(

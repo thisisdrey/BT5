@@ -1,0 +1,1 @@
+[File: 'core/store/src/trie/outgoing_metadata.rs' -> Scope: Critical] [Function: ReceiptGroupsQueueDataV0::total_receipts_num] Can an attacker cause `self.data.total_receipts_num.checked_sub(1).expect(\

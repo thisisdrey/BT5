@@ -1,0 +1,1 @@
+[File: eth_emulation.rs -> Scope: Critical] [Function: try_emulation, ERC20_BALANCE_OF_SELECTOR arm] Can an attacker supply an `address` argument whose hex-encoding, concatenated with a non-empty `suffix` in a testing/aliased deployment, produces an `account_id` JSON field containing characters that break out of the manually constructed JSON string `format!(r#\
