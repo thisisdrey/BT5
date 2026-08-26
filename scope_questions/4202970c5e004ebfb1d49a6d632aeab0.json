@@ -1,7 +1,0 @@
-[
-  {
-    "question": "'File Name: runtime/near-wallet-contract/implementation/wallet-contract/src/ethabi_utils.rs -> Scope: High. An unprivileged sender makes a produced chunk exceed a validation limit, driving recorded storage-proof size, outgoing receipt size, or per-receipt action limits past what the receiving validators accept, so the chunk cannot be validated and the shard stalls.'",
-    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_6c4e1846-8e36-4fc8-800b-905260a6c2eb?mode=deep",
-    "questions_generated": false
-  }
-]

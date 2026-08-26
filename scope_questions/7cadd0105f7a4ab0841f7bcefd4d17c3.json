@@ -1,7 +1,0 @@
-[
-  {
-    "question": "'File Name: runtime/near-wallet-contract/implementation/wallet-contract/src/ethabi_utils.rs -> Scope: Critical. An unprivileged sender gets one transaction, receipt, or DelegateAction applied twice, by defeating access-key nonce monotonicity, transaction-hash uniqueness, delegate nonce/max_block_height checks, or receipt-id and implicit/deterministic account-id derivation, double-spending the attached deposit.'",
-    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_8e7886e0-e115-45c5-bb9c-ced4d0cf7eba?mode=deep",
-    "questions_generated": false
-  }
-]
