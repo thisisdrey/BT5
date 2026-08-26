@@ -1,0 +1,152 @@
+[
+  {
+    "question": "'File Name: runtime/runtime/src/verifier.rs -> Scope: Critical. An unprivileged sender permanently freezes funds: an account's tokens or a cross-shard receipt become unrecoverable because a receipt is stuck forever in the delayed, postponed, yield, or outgoing buffer queue, storage_usage underflow or overflow blocks every future action on the account, or a promise/yield resume path drops the value transfer.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_11390330-c61c-4f4b-ade1-4686bf925bdb?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/runtime/src/action_validation.rs -> Scope: Critical. An unprivileged sender permanently freezes funds: an account's tokens or a cross-shard receipt become unrecoverable because a receipt is stuck forever in the delayed, postponed, yield, or outgoing buffer queue, storage_usage underflow or overflow blocks every future action on the account, or a promise/yield resume path drops the value transfer.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_23c5ed62-c57a-45d3-9e3c-59c5400ff2d2?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/runtime/src/access_keys.rs -> Scope: Critical. An unprivileged sender permanently freezes funds: an account's tokens or a cross-shard receipt become unrecoverable because a receipt is stuck forever in the delayed, postponed, yield, or outgoing buffer queue, storage_usage underflow or overflow blocks every future action on the account, or a promise/yield resume path drops the value transfer.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_82528b7a-b1a5-4317-836d-6835e5f8deca?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/runtime/src/config.rs -> Scope: Critical. An unprivileged sender permanently freezes funds: an account's tokens or a cross-shard receipt become unrecoverable because a receipt is stuck forever in the delayed, postponed, yield, or outgoing buffer queue, storage_usage underflow or overflow blocks every future action on the account, or a promise/yield resume path drops the value transfer.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_407f30c5-db3a-4a54-b140-6b7e96c8bbad?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/primitives/src/transaction.rs -> Scope: Critical. An unprivileged sender permanently freezes funds: an account's tokens or a cross-shard receipt become unrecoverable because a receipt is stuck forever in the delayed, postponed, yield, or outgoing buffer queue, storage_usage underflow or overflow blocks every future action on the account, or a promise/yield resume path drops the value transfer.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_2cfdbda3-a80f-4f69-b49d-49555731f1c1?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/primitives/src/action/mod.rs -> Scope: Critical. An unprivileged sender permanently freezes funds: an account's tokens or a cross-shard receipt become unrecoverable because a receipt is stuck forever in the delayed, postponed, yield, or outgoing buffer queue, storage_usage underflow or overflow blocks every future action on the account, or a promise/yield resume path drops the value transfer.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_6e9fe6d6-0df6-49d1-8c85-949251746d49?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/primitives/src/action/delegate.rs -> Scope: Critical. An unprivileged sender permanently freezes funds: an account's tokens or a cross-shard receipt become unrecoverable because a receipt is stuck forever in the delayed, postponed, yield, or outgoing buffer queue, storage_usage underflow or overflow blocks every future action on the account, or a promise/yield resume path drops the value transfer.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_19f4cbf9-49ad-4c3c-8742-bab4c4a90429?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/primitives/src/signable_message.rs -> Scope: Critical. An unprivileged sender permanently freezes funds: an account's tokens or a cross-shard receipt become unrecoverable because a receipt is stuck forever in the delayed, postponed, yield, or outgoing buffer queue, storage_usage underflow or overflow blocks every future action on the account, or a promise/yield resume path drops the value transfer.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_688c1a0a-38ee-40c0-abf8-9acb5bd498f8?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/primitives/src/receipt.rs -> Scope: Critical. An unprivileged sender permanently freezes funds: an account's tokens or a cross-shard receipt become unrecoverable because a receipt is stuck forever in the delayed, postponed, yield, or outgoing buffer queue, storage_usage underflow or overflow blocks every future action on the account, or a promise/yield resume path drops the value transfer.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_80656aa8-948f-4c9c-b50d-200bdaf64ee3?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/primitives/src/utils.rs -> Scope: Critical. An unprivileged sender permanently freezes funds: an account's tokens or a cross-shard receipt become unrecoverable because a receipt is stuck forever in the delayed, postponed, yield, or outgoing buffer queue, storage_usage underflow or overflow blocks every future action on the account, or a promise/yield resume path drops the value transfer.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_622a03d8-bd87-4ab8-81dc-5f08c5f20224?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/primitives-core/src/account.rs -> Scope: Critical. An unprivileged sender permanently freezes funds: an account's tokens or a cross-shard receipt become unrecoverable because a receipt is stuck forever in the delayed, postponed, yield, or outgoing buffer queue, storage_usage underflow or overflow blocks every future action on the account, or a promise/yield resume path drops the value transfer.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_d3789c7b-b7c1-4bb6-95b1-1cbc6e860cd1?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/primitives-core/src/code.rs -> Scope: Critical. An unprivileged sender permanently freezes funds: an account's tokens or a cross-shard receipt become unrecoverable because a receipt is stuck forever in the delayed, postponed, yield, or outgoing buffer queue, storage_usage underflow or overflow blocks every future action on the account, or a promise/yield resume path drops the value transfer.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_07b51483-18f7-42e5-a94e-6f4fe705a1eb?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/parameters/src/config.rs -> Scope: Critical. An unprivileged sender permanently freezes funds: an account's tokens or a cross-shard receipt become unrecoverable because a receipt is stuck forever in the delayed, postponed, yield, or outgoing buffer queue, storage_usage underflow or overflow blocks every future action on the account, or a promise/yield resume path drops the value transfer.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_5791988f-dd9e-4df5-9ba8-b8fe6d3d300b?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/runtime/src/lib.rs -> Scope: Critical. An unprivileged sender permanently freezes funds: an account's tokens or a cross-shard receipt become unrecoverable because a receipt is stuck forever in the delayed, postponed, yield, or outgoing buffer queue, storage_usage underflow or overflow blocks every future action on the account, or a promise/yield resume path drops the value transfer.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_38210377-904b-46eb-8e2b-7647f7b104b0?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/runtime/src/actions.rs -> Scope: Critical. An unprivileged sender permanently freezes funds: an account's tokens or a cross-shard receipt become unrecoverable because a receipt is stuck forever in the delayed, postponed, yield, or outgoing buffer queue, storage_usage underflow or overflow blocks every future action on the account, or a promise/yield resume path drops the value transfer.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_b0d7ced1-bea6-40e5-b438-a2d6084278e9?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/runtime/src/ext.rs -> Scope: Critical. An unprivileged sender permanently freezes funds: an account's tokens or a cross-shard receipt become unrecoverable because a receipt is stuck forever in the delayed, postponed, yield, or outgoing buffer queue, storage_usage underflow or overflow blocks every future action on the account, or a promise/yield resume path drops the value transfer.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_0fe4a2ad-0ead-4202-af9f-b478cba89cb7?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/runtime/src/receipt_manager.rs -> Scope: Critical. An unprivileged sender permanently freezes funds: an account's tokens or a cross-shard receipt become unrecoverable because a receipt is stuck forever in the delayed, postponed, yield, or outgoing buffer queue, storage_usage underflow or overflow blocks every future action on the account, or a promise/yield resume path drops the value transfer.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_657eb30a-ffc5-4ae4-bd1a-9f90aeda41cf?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/runtime/src/function_call.rs -> Scope: Critical. An unprivileged sender permanently freezes funds: an account's tokens or a cross-shard receipt become unrecoverable because a receipt is stuck forever in the delayed, postponed, yield, or outgoing buffer queue, storage_usage underflow or overflow blocks every future action on the account, or a promise/yield resume path drops the value transfer.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_ec68b607-795a-4172-8f00-e30298c79800?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/runtime/src/global_contracts.rs -> Scope: Critical. An unprivileged sender permanently freezes funds: an account's tokens or a cross-shard receipt become unrecoverable because a receipt is stuck forever in the delayed, postponed, yield, or outgoing buffer queue, storage_usage underflow or overflow blocks every future action on the account, or a promise/yield resume path drops the value transfer.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_e5802355-a06d-4def-9263-8b7ddd3845fd?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/runtime/src/deterministic_account_id.rs -> Scope: Critical. An unprivileged sender permanently freezes funds: an account's tokens or a cross-shard receipt become unrecoverable because a receipt is stuck forever in the delayed, postponed, yield, or outgoing buffer queue, storage_usage underflow or overflow blocks every future action on the account, or a promise/yield resume path drops the value transfer.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_a5629cf4-d8e8-4947-a7b0-437746eb7d2f?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/runtime/src/universal_account_id.rs -> Scope: Critical. An unprivileged sender permanently freezes funds: an account's tokens or a cross-shard receipt become unrecoverable because a receipt is stuck forever in the delayed, postponed, yield, or outgoing buffer queue, storage_usage underflow or overflow blocks every future action on the account, or a promise/yield resume path drops the value transfer.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_09126617-23e3-459c-b462-5f5252b0efae?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/runtime/src/adapter.rs -> Scope: Critical. An unprivileged sender permanently freezes funds: an account's tokens or a cross-shard receipt become unrecoverable because a receipt is stuck forever in the delayed, postponed, yield, or outgoing buffer queue, storage_usage underflow or overflow blocks every future action on the account, or a promise/yield resume path drops the value transfer.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_92c11841-5546-44a5-9793-46b7dd1527b8?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/runtime/src/pipelining.rs -> Scope: Critical. An unprivileged sender permanently freezes funds: an account's tokens or a cross-shard receipt become unrecoverable because a receipt is stuck forever in the delayed, postponed, yield, or outgoing buffer queue, storage_usage underflow or overflow blocks every future action on the account, or a promise/yield resume path drops the value transfer.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_45613cd5-07d8-48f7-becd-48bebfe44d89?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/primitives/src/universal_state_init.rs -> Scope: Critical. An unprivileged sender permanently freezes funds: an account's tokens or a cross-shard receipt become unrecoverable because a receipt is stuck forever in the delayed, postponed, yield, or outgoing buffer queue, storage_usage underflow or overflow blocks every future action on the account, or a promise/yield resume path drops the value transfer.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_fa57cac5-1579-49ad-94cf-d206c2615073?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/primitives-core/src/universal_state_init.rs -> Scope: Critical. An unprivileged sender permanently freezes funds: an account's tokens or a cross-shard receipt become unrecoverable because a receipt is stuck forever in the delayed, postponed, yield, or outgoing buffer queue, storage_usage underflow or overflow blocks every future action on the account, or a promise/yield resume path drops the value transfer.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_23f17a4b-caa2-4ba6-bbb5-fdccb6353bfb?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/runtime/src/congestion_control.rs -> Scope: Critical. An unprivileged sender permanently freezes funds: an account's tokens or a cross-shard receipt become unrecoverable because a receipt is stuck forever in the delayed, postponed, yield, or outgoing buffer queue, storage_usage underflow or overflow blocks every future action on the account, or a promise/yield resume path drops the value transfer.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_1a999909-e3fe-417b-a50c-deba7ca59a93?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/runtime/src/bandwidth_scheduler/mod.rs -> Scope: Critical. An unprivileged sender permanently freezes funds: an account's tokens or a cross-shard receipt become unrecoverable because a receipt is stuck forever in the delayed, postponed, yield, or outgoing buffer queue, storage_usage underflow or overflow blocks every future action on the account, or a promise/yield resume path drops the value transfer.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_b0ab3a01-6ff1-4ba4-89fc-d3103b570825?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/runtime/src/bandwidth_scheduler/scheduler.rs -> Scope: Critical. An unprivileged sender permanently freezes funds: an account's tokens or a cross-shard receipt become unrecoverable because a receipt is stuck forever in the delayed, postponed, yield, or outgoing buffer queue, storage_usage underflow or overflow blocks every future action on the account, or a promise/yield resume path drops the value transfer.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_20eb998c-3238-4d53-a41e-3445bf7e40a6?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/runtime/src/bandwidth_scheduler/distribute_remaining.rs -> Scope: Critical. An unprivileged sender permanently freezes funds: an account's tokens or a cross-shard receipt become unrecoverable because a receipt is stuck forever in the delayed, postponed, yield, or outgoing buffer queue, storage_usage underflow or overflow blocks every future action on the account, or a promise/yield resume path drops the value transfer.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_2a48f0cf-c758-4db8-a97e-d88d2a53613e?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/primitives/src/congestion_info.rs -> Scope: Critical. An unprivileged sender permanently freezes funds: an account's tokens or a cross-shard receipt become unrecoverable because a receipt is stuck forever in the delayed, postponed, yield, or outgoing buffer queue, storage_usage underflow or overflow blocks every future action on the account, or a promise/yield resume path drops the value transfer.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_f690306a-c2ce-4b33-8135-112a74e949eb?mode=deep",
+    "questions_generated": false
+  }
+]
