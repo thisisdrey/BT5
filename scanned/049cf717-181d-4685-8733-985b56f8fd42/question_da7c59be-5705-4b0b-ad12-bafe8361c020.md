@@ -1,1 +1,0 @@
-[File: 'core/primitives/src/utils.rs' -> Scope: Critical] [Function: derive_eth_implicit_account_id] Can an attacker with a chosen Secp256K1 public key (e.g. one whose keccak256 hash's byte-slice [12..32] happens to include characters outside the allowed AccountId charset after hex-encoding) cause the `format!(\
