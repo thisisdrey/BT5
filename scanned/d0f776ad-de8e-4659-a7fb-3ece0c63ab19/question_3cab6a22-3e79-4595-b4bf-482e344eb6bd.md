@@ -1,1 +1,0 @@
-[File: 'core/store/src/trie/outgoing_metadata.rs' -> Scope: Critical] [Function: ReceiptGroupsQueue::update_on_receipt_popped -> ReceiptGroup::is_empty] Can an unprivileged attacker craft a receipt sequence where accumulated size reaches exactly zero while accumulated gas remains nonzero (or vice versa) in a receipt group, triggering `assert_eq!(self.gas(), 0, \
