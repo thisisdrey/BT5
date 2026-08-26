@@ -1,0 +1,7 @@
+[
+  {
+    "question": "'File Name: runtime/near-wallet-contract/implementation/wallet-contract/src/ethabi_utils.rs -> Scope: Critical. An attacker-deployed contract escapes its sandbox through near-vm-runner host logic, reading or writing guest memory out of bounds, reusing or forging registers, or building a promise batch that attaches predecessor/signer privileges or gas the caller never held, letting it act as another account and steal from contracts holding user funds.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_4966593b-9175-4956-b8f2-ff89a4c23716?mode=deep",
+    "questions_generated": false
+  }
+]
