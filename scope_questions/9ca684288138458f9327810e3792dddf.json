@@ -1,0 +1,152 @@
+[
+  {
+    "question": "'File Name: core/primitives/src/bandwidth_scheduler.rs -> Scope: High. An unprivileged sender performs work far exceeding the gas burnt, through host-function metering, wasm instruction instrumentation, contract preparation and compilation charged after the work is done, storage read/write and recorded-proof accounting, or prepaid/attached gas arithmetic, obtaining near-free execution and blowing up block application time.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_87340036-9a88-4e80-9a6a-4af44b7399bc?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/near-vm-runner/src/logic/logic.rs -> Scope: High. An unprivileged sender performs work far exceeding the gas burnt, through host-function metering, wasm instruction instrumentation, contract preparation and compilation charged after the work is done, storage read/write and recorded-proof accounting, or prepaid/attached gas arithmetic, obtaining near-free execution and blowing up block application time.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_54c8c7cc-c3b6-4027-89b7-02f83eae6729?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/near-vm-runner/src/logic/gas_counter.rs -> Scope: High. An unprivileged sender performs work far exceeding the gas burnt, through host-function metering, wasm instruction instrumentation, contract preparation and compilation charged after the work is done, storage read/write and recorded-proof accounting, or prepaid/attached gas arithmetic, obtaining near-free execution and blowing up block application time.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_fe139d11-95b5-4394-8aeb-f29334491b12?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/near-vm-runner/src/logic/vmstate.rs -> Scope: High. An unprivileged sender performs work far exceeding the gas burnt, through host-function metering, wasm instruction instrumentation, contract preparation and compilation charged after the work is done, storage read/write and recorded-proof accounting, or prepaid/attached gas arithmetic, obtaining near-free execution and blowing up block application time.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_8485ef66-4d85-419e-9876-ad166e2ce79c?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/near-vm-runner/src/logic/recorded_storage_counter.rs -> Scope: High. An unprivileged sender performs work far exceeding the gas burnt, through host-function metering, wasm instruction instrumentation, contract preparation and compilation charged after the work is done, storage read/write and recorded-proof accounting, or prepaid/attached gas arithmetic, obtaining near-free execution and blowing up block application time.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_a4e49c50-e297-4d3e-85a8-736ccdcc3aa6?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/near-vm-runner/src/logic/context.rs -> Scope: High. An unprivileged sender performs work far exceeding the gas burnt, through host-function metering, wasm instruction instrumentation, contract preparation and compilation charged after the work is done, storage read/write and recorded-proof accounting, or prepaid/attached gas arithmetic, obtaining near-free execution and blowing up block application time.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_58a7df11-225a-4400-b2eb-93bb29e8afa3?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/near-vm-runner/src/logic/alt_bn128.rs -> Scope: High. An unprivileged sender performs work far exceeding the gas burnt, through host-function metering, wasm instruction instrumentation, contract preparation and compilation charged after the work is done, storage read/write and recorded-proof accounting, or prepaid/attached gas arithmetic, obtaining near-free execution and blowing up block application time.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_912ca9b8-1b37-4ebf-94b1-b319e878b8c0?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/near-vm-runner/src/logic/bls12381.rs -> Scope: High. An unprivileged sender performs work far exceeding the gas burnt, through host-function metering, wasm instruction instrumentation, contract preparation and compilation charged after the work is done, storage read/write and recorded-proof accounting, or prepaid/attached gas arithmetic, obtaining near-free execution and blowing up block application time.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_e31c85f7-22d3-4650-9c4e-064cadb11f48?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/near-vm-runner/src/imports.rs -> Scope: High. An unprivileged sender performs work far exceeding the gas burnt, through host-function metering, wasm instruction instrumentation, contract preparation and compilation charged after the work is done, storage read/write and recorded-proof accounting, or prepaid/attached gas arithmetic, obtaining near-free execution and blowing up block application time.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_747d4cbb-e2c2-4a36-a999-17bd455a50e7?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/near-vm-runner/src/prepare.rs -> Scope: High. An unprivileged sender performs work far exceeding the gas burnt, through host-function metering, wasm instruction instrumentation, contract preparation and compilation charged after the work is done, storage read/write and recorded-proof accounting, or prepaid/attached gas arithmetic, obtaining near-free execution and blowing up block application time.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_023fbced-9da7-4b81-999a-76e2b03caae3?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/near-vm-runner/src/prepare/prepare_v2.rs -> Scope: High. An unprivileged sender performs work far exceeding the gas burnt, through host-function metering, wasm instruction instrumentation, contract preparation and compilation charged after the work is done, storage read/write and recorded-proof accounting, or prepaid/attached gas arithmetic, obtaining near-free execution and blowing up block application time.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_b4454686-2b63-469d-a600-26f2bd16024c?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/near-vm-runner/src/prepare/prepare_v3.rs -> Scope: High. An unprivileged sender performs work far exceeding the gas burnt, through host-function metering, wasm instruction instrumentation, contract preparation and compilation charged after the work is done, storage read/write and recorded-proof accounting, or prepaid/attached gas arithmetic, obtaining near-free execution and blowing up block application time.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_80592116-0f19-4a62-8e91-184a61be5d75?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/near-vm-runner/src/prepare/instrument_v3.rs -> Scope: High. An unprivileged sender performs work far exceeding the gas burnt, through host-function metering, wasm instruction instrumentation, contract preparation and compilation charged after the work is done, storage read/write and recorded-proof accounting, or prepaid/attached gas arithmetic, obtaining near-free execution and blowing up block application time.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_fc24afc6-8dd3-4ed3-83e0-5a54b57aa52c?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/near-vm-runner/src/cache.rs -> Scope: High. An unprivileged sender performs work far exceeding the gas burnt, through host-function metering, wasm instruction instrumentation, contract preparation and compilation charged after the work is done, storage read/write and recorded-proof accounting, or prepaid/attached gas arithmetic, obtaining near-free execution and blowing up block application time.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_717a6014-7c91-4b15-9493-2920c03d831b?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/near-vm-runner/src/runner.rs -> Scope: High. An unprivileged sender performs work far exceeding the gas burnt, through host-function metering, wasm instruction instrumentation, contract preparation and compilation charged after the work is done, storage read/write and recorded-proof accounting, or prepaid/attached gas arithmetic, obtaining near-free execution and blowing up block application time.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_e05f6d5b-a405-4d25-a2ae-776654da51f7?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/near-vm-runner/src/wasmtime_runner/logic.rs -> Scope: High. An unprivileged sender performs work far exceeding the gas burnt, through host-function metering, wasm instruction instrumentation, contract preparation and compilation charged after the work is done, storage read/write and recorded-proof accounting, or prepaid/attached gas arithmetic, obtaining near-free execution and blowing up block application time.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_148eae44-21e9-4638-928b-6d6d153cb01e?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/store/src/trie/mod.rs -> Scope: High. An unprivileged sender performs work far exceeding the gas burnt, through host-function metering, wasm instruction instrumentation, contract preparation and compilation charged after the work is done, storage read/write and recorded-proof accounting, or prepaid/attached gas arithmetic, obtaining near-free execution and blowing up block application time.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_d3093dec-c5d2-45a0-872d-430dc29e4b6e?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/store/src/trie/update.rs -> Scope: High. An unprivileged sender performs work far exceeding the gas burnt, through host-function metering, wasm instruction instrumentation, contract preparation and compilation charged after the work is done, storage read/write and recorded-proof accounting, or prepaid/attached gas arithmetic, obtaining near-free execution and blowing up block application time.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_0540a1fb-8fe5-4026-99f3-e5cb110a1dc7?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/store/src/trie/trie_storage_update.rs -> Scope: High. An unprivileged sender performs work far exceeding the gas burnt, through host-function metering, wasm instruction instrumentation, contract preparation and compilation charged after the work is done, storage read/write and recorded-proof accounting, or prepaid/attached gas arithmetic, obtaining near-free execution and blowing up block application time.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_a5604218-96a3-4c4f-bf35-ab4c252ddb61?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/store/src/trie/ops/insert_delete.rs -> Scope: High. An unprivileged sender performs work far exceeding the gas burnt, through host-function metering, wasm instruction instrumentation, contract preparation and compilation charged after the work is done, storage read/write and recorded-proof accounting, or prepaid/attached gas arithmetic, obtaining near-free execution and blowing up block application time.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_36669507-c85a-47f1-9504-e4a079d33834?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/store/src/trie/ops/squash.rs -> Scope: High. An unprivileged sender performs work far exceeding the gas burnt, through host-function metering, wasm instruction instrumentation, contract preparation and compilation charged after the work is done, storage read/write and recorded-proof accounting, or prepaid/attached gas arithmetic, obtaining near-free execution and blowing up block application time.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_19a7aad3-bb28-4a30-8008-06a78f6a7d84?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/store/src/trie/raw_node.rs -> Scope: High. An unprivileged sender performs work far exceeding the gas burnt, through host-function metering, wasm instruction instrumentation, contract preparation and compilation charged after the work is done, storage read/write and recorded-proof accounting, or prepaid/attached gas arithmetic, obtaining near-free execution and blowing up block application time.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_926c5b11-d385-4ee5-9405-150caa9878c2?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/store/src/trie/trie_recording.rs -> Scope: High. An unprivileged sender performs work far exceeding the gas burnt, through host-function metering, wasm instruction instrumentation, contract preparation and compilation charged after the work is done, storage read/write and recorded-proof accounting, or prepaid/attached gas arithmetic, obtaining near-free execution and blowing up block application time.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_2581660a-9e26-4a4b-9fed-eb58a11e5725?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/store/src/trie/receipts_column_helper.rs -> Scope: High. An unprivileged sender performs work far exceeding the gas burnt, through host-function metering, wasm instruction instrumentation, contract preparation and compilation charged after the work is done, storage read/write and recorded-proof accounting, or prepaid/attached gas arithmetic, obtaining near-free execution and blowing up block application time.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_4ec73aed-c3c7-44e0-91ef-fa9318655fdf?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/store/src/trie/outgoing_metadata.rs -> Scope: High. An unprivileged sender performs work far exceeding the gas burnt, through host-function metering, wasm instruction instrumentation, contract preparation and compilation charged after the work is done, storage read/write and recorded-proof accounting, or prepaid/attached gas arithmetic, obtaining near-free execution and blowing up block application time.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_ceb57d17-1c0d-4d8c-a465-8c73c5c4ef14?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/primitives-core/src/trie_key.rs -> Scope: High. An unprivileged sender performs work far exceeding the gas burnt, through host-function metering, wasm instruction instrumentation, contract preparation and compilation charged after the work is done, storage read/write and recorded-proof accounting, or prepaid/attached gas arithmetic, obtaining near-free execution and blowing up block application time.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_1f0711d2-951f-4a9d-95d3-cf776ce9349e?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/near-wallet-contract/implementation/wallet-contract/src/lib.rs -> Scope: High. An unprivileged sender performs work far exceeding the gas burnt, through host-function metering, wasm instruction instrumentation, contract preparation and compilation charged after the work is done, storage read/write and recorded-proof accounting, or prepaid/attached gas arithmetic, obtaining near-free execution and blowing up block application time.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_0433f13a-c361-4037-b595-a92c228c0433?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/near-wallet-contract/implementation/wallet-contract/src/internal.rs -> Scope: High. An unprivileged sender performs work far exceeding the gas burnt, through host-function metering, wasm instruction instrumentation, contract preparation and compilation charged after the work is done, storage read/write and recorded-proof accounting, or prepaid/attached gas arithmetic, obtaining near-free execution and blowing up block application time.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_73bcfece-158d-4332-afa4-703392cabf11?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/near-wallet-contract/implementation/wallet-contract/src/eth_emulation.rs -> Scope: High. An unprivileged sender performs work far exceeding the gas burnt, through host-function metering, wasm instruction instrumentation, contract preparation and compilation charged after the work is done, storage read/write and recorded-proof accounting, or prepaid/attached gas arithmetic, obtaining near-free execution and blowing up block application time.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_cbdc7a85-c1dd-4b1f-9a1c-7f7271a1d53d?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/near-wallet-contract/implementation/wallet-contract/src/near_action.rs -> Scope: High. An unprivileged sender performs work far exceeding the gas burnt, through host-function metering, wasm instruction instrumentation, contract preparation and compilation charged after the work is done, storage read/write and recorded-proof accounting, or prepaid/attached gas arithmetic, obtaining near-free execution and blowing up block application time.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_de42c27a-ce4c-49ed-9f6f-263acac1d9ca?mode=deep",
+    "questions_generated": false
+  }
+]
