@@ -1,1 +1,0 @@
-[File: 'core/store/src/trie/receipts_column_helper.rs' -> Scope: Critical] [Function: TrieQueue::iter / TrieQueueIterator::next] Can an attacker cause `TrieQueueIterator::next` to encounter a missing trie entry for an index within `[first_index, next_available_index)`, hitting `StorageError::StorageInconsistentState(\
