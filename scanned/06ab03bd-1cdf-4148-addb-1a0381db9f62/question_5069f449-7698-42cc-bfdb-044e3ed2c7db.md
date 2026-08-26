@@ -1,0 +1,1 @@
+[File: runtime/runtime/src/receipt_manager.rs -> Scope: Critical] [Function: ReceiptManager::get_receipt_receiver] Can an attacker's contract call a promise host function (e.g., `promise_batch_then`) with a `promise_index` that was already consumed/removed conceptually by an execution path, causing `get_receipt_receiver`'s `.expect(
