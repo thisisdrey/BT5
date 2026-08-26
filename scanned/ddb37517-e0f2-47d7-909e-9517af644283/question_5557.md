@@ -1,0 +1,13 @@
+# Q5557: memtrie arena allocation reuse after delete — extension.rs
+
+## Question
+Can an unprivileged mainnet account, entering through attacker WASM driving `storage_write` / `storage_remove` / `storage_read` over attacker-chosen keys, a workload that repeatedly allocates and frees nodes of the same size class, when the same value is written and deleted by many accounts in one chunk, and additionally when a delete forces sibling nodes to be squashed, reach `flexible_data_length` in `core/store/src/trie/mem/flexible_data/extension.rs` and get a freed arena slot reused while still referenced, corrupting live state, breaking the invariant that no arena allocation is reused while any live node references it, leading to Critical - Unintended permanent chain split requiring a hard fork?
+
+## Target
+- File/function: `core/store/src/trie/mem/flexible_data/extension.rs` :: `flexible_data_length`
+- Entrypoint: attacker WASM driving `storage_write` / `storage_remove` / `storage_read` over attacker-chosen keys
+- Attacker controls: a workload that repeatedly allocates and frees nodes of the same size class; when the same value is written and deleted by many accounts in one chunk; when a delete forces sibling nodes to be squashed
+- Exploit idea: get a freed arena slot reused while still referenced, corrupting live state
+- Invariant to test: no arena allocation is reused while any live node references it
+- Expected Immunefi impact: Critical - Unintended permanent chain split requiring a hard fork
+- Fast validation: stress test alternating insert/delete over one size class with root assertions

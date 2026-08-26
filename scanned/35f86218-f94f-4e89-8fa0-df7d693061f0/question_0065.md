@@ -1,0 +1,13 @@
+# Q0065: borsh non-canonical encoding accepted on the wire — trie_key.rs
+
+## Question
+Can an unprivileged mainnet account, entering through `broadcast_tx_commit` / `send_tx` RPC carrying a SignedTransaction signed by an ordinary FullAccess key, an encoding with trailing bytes, a non-minimal length prefix, or a duplicate enum discriminant, with trailing bytes appended after a valid encoding, reach the primary handler in this file in `core/primitives/src/trie_key.rs` and have two byte strings deserialise to the same object so the hash and the content disagree, breaking the invariant that deserialisation is canonical: one object has exactly one accepted encoding, leading to Critical - Unintended permanent chain split requiring a hard fork?
+
+## Target
+- File/function: `core/primitives/src/trie_key.rs` :: primary handler
+- Entrypoint: `broadcast_tx_commit` / `send_tx` RPC carrying a SignedTransaction signed by an ordinary FullAccess key
+- Attacker controls: an encoding with trailing bytes, a non-minimal length prefix, or a duplicate enum discriminant; with trailing bytes appended after a valid encoding
+- Exploit idea: have two byte strings deserialise to the same object so the hash and the content disagree
+- Invariant to test: deserialisation is canonical: one object has exactly one accepted encoding
+- Expected Immunefi impact: Critical - Unintended permanent chain split requiring a hard fork
+- Fast validation: fuzz test asserting re-serialisation equals the accepted input bytes

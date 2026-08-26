@@ -1,0 +1,13 @@
+# Q4233: WASM preparation limits at their exact boundaries — prepare_v3.rs
+
+## Question
+Can an unprivileged mainnet account, entering through a `DeployContract` action carrying attacker-authored WASM, a module with function count, local count, table size, and nesting depth exactly at the configured limits, with a module one structural unit past a preparation limit, and additionally with deeply nested loops and a maximal br_table target list, reach `size_of_value` in `runtime/near-vm-runner/src/prepare/prepare_v3.rs` and get a module past preparation whose compiled form exceeds what the limits were meant to bound, breaking the invariant that every prepared module respects the declared structural limits after instrumentation, leading to High - Temporary freezing of network transactions (chunk/block production delayed 500%+ over recent average)?
+
+## Target
+- File/function: `runtime/near-vm-runner/src/prepare/prepare_v3.rs` :: `size_of_value`
+- Entrypoint: a `DeployContract` action carrying attacker-authored WASM
+- Attacker controls: a module with function count, local count, table size, and nesting depth exactly at the configured limits; with a module one structural unit past a preparation limit; with deeply nested loops and a maximal br_table target list
+- Exploit idea: get a module past preparation whose compiled form exceeds what the limits were meant to bound
+- Invariant to test: every prepared module respects the declared structural limits after instrumentation
+- Expected Immunefi impact: High - Temporary freezing of network transactions (chunk/block production delayed 500%+ over recent average)
+- Fast validation: unit test compiling boundary modules and measuring artifact size and time
