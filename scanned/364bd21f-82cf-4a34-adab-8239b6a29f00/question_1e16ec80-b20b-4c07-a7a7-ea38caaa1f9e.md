@@ -1,1 +1,0 @@
-[File: 'File Name: runtime/near-vm-runner/src/logic/context.rs'] [Function: VMLogic::refund_to_account_id / promise_set_refund_to] Can an attacker's contract call promise_set_refund_to on a Promise::NotReceipt (joint promise created via promise_and) to trigger a panic in receipt_manager::set_refund_to's `.expect(\
