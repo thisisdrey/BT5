@@ -1,0 +1,7 @@
+[
+  {
+    "question": "'File Name: runtime/near-wallet-contract/implementation/wallet-contract/src/ethabi_utils.rs -> Scope: Critical. An unprivileged sender lands a single transaction or receipt that panics, aborts, overflows, or fails to terminate on the chunk apply path, so every node processing that shard crashes or the shard stalls permanently and requires human intervention to recover.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_8966da1a-ce33-4be5-9e9e-4d832d2ba7c3?mode=deep",
+    "questions_generated": false
+  }
+]
