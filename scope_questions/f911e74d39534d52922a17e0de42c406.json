@@ -1,0 +1,152 @@
+[
+  {
+    "question": "'File Name: runtime/runtime/src/verifier.rs -> Scope: High. An unprivileged sender makes a produced chunk exceed a validation limit, driving recorded storage-proof size, outgoing receipt size, or per-receipt action limits past what the receiving validators accept, so the chunk cannot be validated and the shard stalls.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_03535cf2-1d52-48fd-b416-b400a916d351?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/runtime/src/action_validation.rs -> Scope: High. An unprivileged sender makes a produced chunk exceed a validation limit, driving recorded storage-proof size, outgoing receipt size, or per-receipt action limits past what the receiving validators accept, so the chunk cannot be validated and the shard stalls.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_2b5c95bd-681a-4753-bf33-1509bba9004c?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/runtime/src/access_keys.rs -> Scope: High. An unprivileged sender makes a produced chunk exceed a validation limit, driving recorded storage-proof size, outgoing receipt size, or per-receipt action limits past what the receiving validators accept, so the chunk cannot be validated and the shard stalls.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_bac1371b-3b93-4ac1-9818-693144eba189?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/runtime/src/config.rs -> Scope: High. An unprivileged sender makes a produced chunk exceed a validation limit, driving recorded storage-proof size, outgoing receipt size, or per-receipt action limits past what the receiving validators accept, so the chunk cannot be validated and the shard stalls.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_3cd416e1-5238-486a-b1a0-049bfd59e166?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/primitives/src/transaction.rs -> Scope: High. An unprivileged sender makes a produced chunk exceed a validation limit, driving recorded storage-proof size, outgoing receipt size, or per-receipt action limits past what the receiving validators accept, so the chunk cannot be validated and the shard stalls.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_85eb93d4-8044-41df-91f3-3459df7f768b?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/primitives/src/action/mod.rs -> Scope: High. An unprivileged sender makes a produced chunk exceed a validation limit, driving recorded storage-proof size, outgoing receipt size, or per-receipt action limits past what the receiving validators accept, so the chunk cannot be validated and the shard stalls.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_725a3376-b2d3-47ef-8aef-40907b9f3791?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/primitives/src/action/delegate.rs -> Scope: High. An unprivileged sender makes a produced chunk exceed a validation limit, driving recorded storage-proof size, outgoing receipt size, or per-receipt action limits past what the receiving validators accept, so the chunk cannot be validated and the shard stalls.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_a0816d5a-770f-4af7-b411-907f590349d5?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/primitives/src/signable_message.rs -> Scope: High. An unprivileged sender makes a produced chunk exceed a validation limit, driving recorded storage-proof size, outgoing receipt size, or per-receipt action limits past what the receiving validators accept, so the chunk cannot be validated and the shard stalls.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_be654826-ae7a-45eb-9dff-81478ebbd5b6?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/primitives/src/receipt.rs -> Scope: High. An unprivileged sender makes a produced chunk exceed a validation limit, driving recorded storage-proof size, outgoing receipt size, or per-receipt action limits past what the receiving validators accept, so the chunk cannot be validated and the shard stalls.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_72e3d8c0-ad9d-4d5e-b83c-c01c871ad85a?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/primitives/src/utils.rs -> Scope: High. An unprivileged sender makes a produced chunk exceed a validation limit, driving recorded storage-proof size, outgoing receipt size, or per-receipt action limits past what the receiving validators accept, so the chunk cannot be validated and the shard stalls.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_783dfa28-e7b6-4405-a267-1e107768cc32?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/primitives-core/src/account.rs -> Scope: High. An unprivileged sender makes a produced chunk exceed a validation limit, driving recorded storage-proof size, outgoing receipt size, or per-receipt action limits past what the receiving validators accept, so the chunk cannot be validated and the shard stalls.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_35185dd2-d078-4928-ba63-9a7f000a812b?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/primitives-core/src/code.rs -> Scope: High. An unprivileged sender makes a produced chunk exceed a validation limit, driving recorded storage-proof size, outgoing receipt size, or per-receipt action limits past what the receiving validators accept, so the chunk cannot be validated and the shard stalls.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_bebf618a-8578-44ae-9682-fad3aefcab32?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/parameters/src/config.rs -> Scope: High. An unprivileged sender makes a produced chunk exceed a validation limit, driving recorded storage-proof size, outgoing receipt size, or per-receipt action limits past what the receiving validators accept, so the chunk cannot be validated and the shard stalls.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_6e5b66e0-7512-4d1d-be5b-7a148b8fae57?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/runtime/src/lib.rs -> Scope: High. An unprivileged sender makes a produced chunk exceed a validation limit, driving recorded storage-proof size, outgoing receipt size, or per-receipt action limits past what the receiving validators accept, so the chunk cannot be validated and the shard stalls.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_84c5b650-596a-463c-b1a7-6eed8c76334d?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/runtime/src/actions.rs -> Scope: High. An unprivileged sender makes a produced chunk exceed a validation limit, driving recorded storage-proof size, outgoing receipt size, or per-receipt action limits past what the receiving validators accept, so the chunk cannot be validated and the shard stalls.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_a7c0e3aa-5dc9-43ce-8c83-d4bbd14ab85d?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/runtime/src/ext.rs -> Scope: High. An unprivileged sender makes a produced chunk exceed a validation limit, driving recorded storage-proof size, outgoing receipt size, or per-receipt action limits past what the receiving validators accept, so the chunk cannot be validated and the shard stalls.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_8da2ab60-cea9-4fc8-a0a5-3e17b8656eaf?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/runtime/src/receipt_manager.rs -> Scope: High. An unprivileged sender makes a produced chunk exceed a validation limit, driving recorded storage-proof size, outgoing receipt size, or per-receipt action limits past what the receiving validators accept, so the chunk cannot be validated and the shard stalls.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_fcd73985-d042-43c4-a55d-56c2952b2fdd?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/runtime/src/function_call.rs -> Scope: High. An unprivileged sender makes a produced chunk exceed a validation limit, driving recorded storage-proof size, outgoing receipt size, or per-receipt action limits past what the receiving validators accept, so the chunk cannot be validated and the shard stalls.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_0d1578d4-1f66-41f1-9676-0edadcd28ce5?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/runtime/src/global_contracts.rs -> Scope: High. An unprivileged sender makes a produced chunk exceed a validation limit, driving recorded storage-proof size, outgoing receipt size, or per-receipt action limits past what the receiving validators accept, so the chunk cannot be validated and the shard stalls.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_33b484a6-c772-4db6-8f2f-1bd6065ba3a2?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/runtime/src/deterministic_account_id.rs -> Scope: High. An unprivileged sender makes a produced chunk exceed a validation limit, driving recorded storage-proof size, outgoing receipt size, or per-receipt action limits past what the receiving validators accept, so the chunk cannot be validated and the shard stalls.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_ea2bf3ed-67a9-4283-a82d-d5c5a1d01d54?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/runtime/src/universal_account_id.rs -> Scope: High. An unprivileged sender makes a produced chunk exceed a validation limit, driving recorded storage-proof size, outgoing receipt size, or per-receipt action limits past what the receiving validators accept, so the chunk cannot be validated and the shard stalls.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_56c03723-a99b-4d87-bdd1-83891d608080?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/runtime/src/adapter.rs -> Scope: High. An unprivileged sender makes a produced chunk exceed a validation limit, driving recorded storage-proof size, outgoing receipt size, or per-receipt action limits past what the receiving validators accept, so the chunk cannot be validated and the shard stalls.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_fdc6f9c4-7f01-4d4b-8817-4d2a3c06ddfb?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/runtime/src/pipelining.rs -> Scope: High. An unprivileged sender makes a produced chunk exceed a validation limit, driving recorded storage-proof size, outgoing receipt size, or per-receipt action limits past what the receiving validators accept, so the chunk cannot be validated and the shard stalls.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_65119fc4-cd3d-4a7f-8e80-e0b7aa171b3c?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/primitives/src/universal_state_init.rs -> Scope: High. An unprivileged sender makes a produced chunk exceed a validation limit, driving recorded storage-proof size, outgoing receipt size, or per-receipt action limits past what the receiving validators accept, so the chunk cannot be validated and the shard stalls.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_78a73909-261f-4db8-9281-ecb809167249?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/primitives-core/src/universal_state_init.rs -> Scope: High. An unprivileged sender makes a produced chunk exceed a validation limit, driving recorded storage-proof size, outgoing receipt size, or per-receipt action limits past what the receiving validators accept, so the chunk cannot be validated and the shard stalls.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_76d31fa8-1f1b-40a8-b9b5-a06d4ec6a82d?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/runtime/src/congestion_control.rs -> Scope: High. An unprivileged sender makes a produced chunk exceed a validation limit, driving recorded storage-proof size, outgoing receipt size, or per-receipt action limits past what the receiving validators accept, so the chunk cannot be validated and the shard stalls.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_e6a51eee-d420-46b3-9de2-39280f5564a9?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/runtime/src/bandwidth_scheduler/mod.rs -> Scope: High. An unprivileged sender makes a produced chunk exceed a validation limit, driving recorded storage-proof size, outgoing receipt size, or per-receipt action limits past what the receiving validators accept, so the chunk cannot be validated and the shard stalls.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_dc26013e-9b1d-4fb5-adea-14fc3fcd4f9a?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/runtime/src/bandwidth_scheduler/scheduler.rs -> Scope: High. An unprivileged sender makes a produced chunk exceed a validation limit, driving recorded storage-proof size, outgoing receipt size, or per-receipt action limits past what the receiving validators accept, so the chunk cannot be validated and the shard stalls.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_61ec60ed-2acf-4b0c-822b-9b548e2f0b48?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/runtime/src/bandwidth_scheduler/distribute_remaining.rs -> Scope: High. An unprivileged sender makes a produced chunk exceed a validation limit, driving recorded storage-proof size, outgoing receipt size, or per-receipt action limits past what the receiving validators accept, so the chunk cannot be validated and the shard stalls.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_150fa028-c9fe-4502-8e8f-bd6c5e18eb2d?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/primitives/src/congestion_info.rs -> Scope: High. An unprivileged sender makes a produced chunk exceed a validation limit, driving recorded storage-proof size, outgoing receipt size, or per-receipt action limits past what the receiving validators accept, so the chunk cannot be validated and the shard stalls.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_55622342-85dc-4746-b68d-db0435fbd1f6?mode=deep",
+    "questions_generated": false
+  }
+]
