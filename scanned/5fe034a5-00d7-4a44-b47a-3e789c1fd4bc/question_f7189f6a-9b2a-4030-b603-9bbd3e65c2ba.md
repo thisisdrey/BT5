@@ -1,1 +1,0 @@
-[File: 'core/primitives/src/transaction.rs' -> Scope: Critical] [Function: SignedTransaction::get_hash_and_size / Transaction::get_hash_and_size] Can an attacker submit a Transaction with the maximum permitted Vec<Action> length and largest permissible per-action payloads (e.g. many DeployContractAction/FunctionCallAction with max args) such that `borsh::to_vec(&self).expect(\
