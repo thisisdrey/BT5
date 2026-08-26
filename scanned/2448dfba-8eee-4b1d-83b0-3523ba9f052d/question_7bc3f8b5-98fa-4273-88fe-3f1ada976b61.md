@@ -1,1 +1,0 @@
-[File: ethabi_utils.rs] [Function: TryFromToken for Address in FUNCTION_CALL_SIGNATURE-adjacent ERC20 paths, and account_id_to_address hashing in internal.rs] Can an attacker exploit a hash collision or crafted Ethereum address input to ERC20_TRANSFER_SIGNATURE's 'to' Address token such that format!(\
