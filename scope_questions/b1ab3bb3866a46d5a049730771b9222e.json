@@ -1,7 +1,0 @@
-[
-  {
-    "question": "'File Name: runtime/near-wallet-contract/implementation/wallet-contract/src/ethabi_utils.rs -> Scope: High. An unprivileged sender exploits a protocol blind spot the design never anticipated: an unmodelled interaction between two individually correct mechanisms (global or deterministic contract deployment vs the compiled-contract cache, yield-resume vs the delayed receipt queue, resharding trie split vs buffered receipts and congestion state, universal account init vs implicit account derivation, meta-transaction relaying vs access-key allowance refunds, storage staking vs state resizing mid-receipt) where each side's assumption holds alone but their composition breaks balance conservation, determinism, or authorization.'",
-    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_cb8f0fa2-cbe4-4e8b-a599-26c868bf386a?mode=deep",
-    "questions_generated": false
-  }
-]
