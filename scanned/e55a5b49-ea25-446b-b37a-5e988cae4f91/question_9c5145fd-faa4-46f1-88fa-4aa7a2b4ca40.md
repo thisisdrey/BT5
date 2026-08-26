@@ -1,1 +1,0 @@
-[File: 'runtime/near-vm-runner/src/logic/logic.rs' -> Scope: Critical] [Function: VMLogic::promise_batch_create / VMLogic::promise_batch_action_transfer] Can an unprivileged attacker deploy contract A and, in one FunctionCall receipt, call promise_batch_create(account_id=\
