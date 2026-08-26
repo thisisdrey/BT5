@@ -1,1 +1,0 @@
-[File: 'runtime/near-vm-runner/src/logic/gas_counter.rs' -> Scope: Critical] [Function: GasCounter::used_gas / determinism across VM backends] Can an unprivileged attacker deploy a contract whose execution path differs subtly between the wasmtime and near_vm backends in how often `pay_base`/`pay_per` are invoked (e.g., due to `#[cfg(feature =
