@@ -1,0 +1,152 @@
+[
+  {
+    "question": "'File Name: runtime/runtime/src/verifier.rs -> Scope: Critical. An unprivileged sender crafts a transaction or contract whose chunk application is nondeterministic across nodes (compiled-contract cache reuse, host-call output depending on node-local state, float/NaN or iteration-order dependence, protocol-version-gated branch, wasm compilation differences), producing divergent state roots or gas burnt and an unintended permanent chain split.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_bb666169-22d7-4d80-95dd-3c0282a81b70?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/runtime/src/action_validation.rs -> Scope: Critical. An unprivileged sender crafts a transaction or contract whose chunk application is nondeterministic across nodes (compiled-contract cache reuse, host-call output depending on node-local state, float/NaN or iteration-order dependence, protocol-version-gated branch, wasm compilation differences), producing divergent state roots or gas burnt and an unintended permanent chain split.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_29187f02-8a66-4003-b034-8a78bf585f70?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/runtime/src/access_keys.rs -> Scope: Critical. An unprivileged sender crafts a transaction or contract whose chunk application is nondeterministic across nodes (compiled-contract cache reuse, host-call output depending on node-local state, float/NaN or iteration-order dependence, protocol-version-gated branch, wasm compilation differences), producing divergent state roots or gas burnt and an unintended permanent chain split.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_de97f8bb-d420-4763-98e3-96b5b62b6bd0?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/runtime/src/config.rs -> Scope: Critical. An unprivileged sender crafts a transaction or contract whose chunk application is nondeterministic across nodes (compiled-contract cache reuse, host-call output depending on node-local state, float/NaN or iteration-order dependence, protocol-version-gated branch, wasm compilation differences), producing divergent state roots or gas burnt and an unintended permanent chain split.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_b0b29a50-1fc6-4c46-ac95-70745c3c6a29?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/primitives/src/transaction.rs -> Scope: Critical. An unprivileged sender crafts a transaction or contract whose chunk application is nondeterministic across nodes (compiled-contract cache reuse, host-call output depending on node-local state, float/NaN or iteration-order dependence, protocol-version-gated branch, wasm compilation differences), producing divergent state roots or gas burnt and an unintended permanent chain split.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_dc5b4996-7629-45ce-b8c3-e625b18f44e4?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/primitives/src/action/mod.rs -> Scope: Critical. An unprivileged sender crafts a transaction or contract whose chunk application is nondeterministic across nodes (compiled-contract cache reuse, host-call output depending on node-local state, float/NaN or iteration-order dependence, protocol-version-gated branch, wasm compilation differences), producing divergent state roots or gas burnt and an unintended permanent chain split.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_2c2a1a2c-e7af-4d9b-83d0-1497d4b7f3fa?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/primitives/src/action/delegate.rs -> Scope: Critical. An unprivileged sender crafts a transaction or contract whose chunk application is nondeterministic across nodes (compiled-contract cache reuse, host-call output depending on node-local state, float/NaN or iteration-order dependence, protocol-version-gated branch, wasm compilation differences), producing divergent state roots or gas burnt and an unintended permanent chain split.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_f28dfce7-1e35-43d6-be08-c49903959de5?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/primitives/src/signable_message.rs -> Scope: Critical. An unprivileged sender crafts a transaction or contract whose chunk application is nondeterministic across nodes (compiled-contract cache reuse, host-call output depending on node-local state, float/NaN or iteration-order dependence, protocol-version-gated branch, wasm compilation differences), producing divergent state roots or gas burnt and an unintended permanent chain split.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_3928ba9f-1210-4a8c-968a-75ca23bbaf87?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/primitives/src/receipt.rs -> Scope: Critical. An unprivileged sender crafts a transaction or contract whose chunk application is nondeterministic across nodes (compiled-contract cache reuse, host-call output depending on node-local state, float/NaN or iteration-order dependence, protocol-version-gated branch, wasm compilation differences), producing divergent state roots or gas burnt and an unintended permanent chain split.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_8b9a5ed4-52b5-4215-80c9-3353b4cf1b28?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/primitives/src/utils.rs -> Scope: Critical. An unprivileged sender crafts a transaction or contract whose chunk application is nondeterministic across nodes (compiled-contract cache reuse, host-call output depending on node-local state, float/NaN or iteration-order dependence, protocol-version-gated branch, wasm compilation differences), producing divergent state roots or gas burnt and an unintended permanent chain split.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_80cdfad2-c558-4ab8-a6b2-35cb941385d8?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/primitives-core/src/account.rs -> Scope: Critical. An unprivileged sender crafts a transaction or contract whose chunk application is nondeterministic across nodes (compiled-contract cache reuse, host-call output depending on node-local state, float/NaN or iteration-order dependence, protocol-version-gated branch, wasm compilation differences), producing divergent state roots or gas burnt and an unintended permanent chain split.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_889e4e7f-e26c-4610-ac10-96b508a4e5e8?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/primitives-core/src/code.rs -> Scope: Critical. An unprivileged sender crafts a transaction or contract whose chunk application is nondeterministic across nodes (compiled-contract cache reuse, host-call output depending on node-local state, float/NaN or iteration-order dependence, protocol-version-gated branch, wasm compilation differences), producing divergent state roots or gas burnt and an unintended permanent chain split.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_e84dc036-adc2-425f-bf9d-7f3ea18225c3?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/parameters/src/config.rs -> Scope: Critical. An unprivileged sender crafts a transaction or contract whose chunk application is nondeterministic across nodes (compiled-contract cache reuse, host-call output depending on node-local state, float/NaN or iteration-order dependence, protocol-version-gated branch, wasm compilation differences), producing divergent state roots or gas burnt and an unintended permanent chain split.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_69d288a0-d6fc-4155-9e46-4ab270ad1809?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/runtime/src/lib.rs -> Scope: Critical. An unprivileged sender crafts a transaction or contract whose chunk application is nondeterministic across nodes (compiled-contract cache reuse, host-call output depending on node-local state, float/NaN or iteration-order dependence, protocol-version-gated branch, wasm compilation differences), producing divergent state roots or gas burnt and an unintended permanent chain split.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_1ae807c6-0855-419f-b543-f104f44bcc0e?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/runtime/src/actions.rs -> Scope: Critical. An unprivileged sender crafts a transaction or contract whose chunk application is nondeterministic across nodes (compiled-contract cache reuse, host-call output depending on node-local state, float/NaN or iteration-order dependence, protocol-version-gated branch, wasm compilation differences), producing divergent state roots or gas burnt and an unintended permanent chain split.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_4431950b-47cb-45ca-8ab8-cd2bc8f098c3?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/runtime/src/ext.rs -> Scope: Critical. An unprivileged sender crafts a transaction or contract whose chunk application is nondeterministic across nodes (compiled-contract cache reuse, host-call output depending on node-local state, float/NaN or iteration-order dependence, protocol-version-gated branch, wasm compilation differences), producing divergent state roots or gas burnt and an unintended permanent chain split.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_97431ddb-fae9-4113-a4a2-bc17a8abefd6?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/runtime/src/receipt_manager.rs -> Scope: Critical. An unprivileged sender crafts a transaction or contract whose chunk application is nondeterministic across nodes (compiled-contract cache reuse, host-call output depending on node-local state, float/NaN or iteration-order dependence, protocol-version-gated branch, wasm compilation differences), producing divergent state roots or gas burnt and an unintended permanent chain split.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_d01bac97-7b0d-40a8-ac30-e804ed987ebc?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/runtime/src/function_call.rs -> Scope: Critical. An unprivileged sender crafts a transaction or contract whose chunk application is nondeterministic across nodes (compiled-contract cache reuse, host-call output depending on node-local state, float/NaN or iteration-order dependence, protocol-version-gated branch, wasm compilation differences), producing divergent state roots or gas burnt and an unintended permanent chain split.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_cd2736c8-c22e-450d-8959-9ce3e0ab7010?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/runtime/src/global_contracts.rs -> Scope: Critical. An unprivileged sender crafts a transaction or contract whose chunk application is nondeterministic across nodes (compiled-contract cache reuse, host-call output depending on node-local state, float/NaN or iteration-order dependence, protocol-version-gated branch, wasm compilation differences), producing divergent state roots or gas burnt and an unintended permanent chain split.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_3322e3c6-2c28-4914-af1d-2419610e0697?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/runtime/src/deterministic_account_id.rs -> Scope: Critical. An unprivileged sender crafts a transaction or contract whose chunk application is nondeterministic across nodes (compiled-contract cache reuse, host-call output depending on node-local state, float/NaN or iteration-order dependence, protocol-version-gated branch, wasm compilation differences), producing divergent state roots or gas burnt and an unintended permanent chain split.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_a028b991-4e99-42c1-83f3-1d5f707e79f2?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/runtime/src/universal_account_id.rs -> Scope: Critical. An unprivileged sender crafts a transaction or contract whose chunk application is nondeterministic across nodes (compiled-contract cache reuse, host-call output depending on node-local state, float/NaN or iteration-order dependence, protocol-version-gated branch, wasm compilation differences), producing divergent state roots or gas burnt and an unintended permanent chain split.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_5c3c21ca-a15e-42f8-9bfe-88da886a8bdb?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/runtime/src/adapter.rs -> Scope: Critical. An unprivileged sender crafts a transaction or contract whose chunk application is nondeterministic across nodes (compiled-contract cache reuse, host-call output depending on node-local state, float/NaN or iteration-order dependence, protocol-version-gated branch, wasm compilation differences), producing divergent state roots or gas burnt and an unintended permanent chain split.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_3ae5e3fe-0c46-4a61-a862-9fc133a547f7?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/runtime/src/pipelining.rs -> Scope: Critical. An unprivileged sender crafts a transaction or contract whose chunk application is nondeterministic across nodes (compiled-contract cache reuse, host-call output depending on node-local state, float/NaN or iteration-order dependence, protocol-version-gated branch, wasm compilation differences), producing divergent state roots or gas burnt and an unintended permanent chain split.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_f8d022d1-6ef2-4878-85cd-357375e3c3ea?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/primitives/src/universal_state_init.rs -> Scope: Critical. An unprivileged sender crafts a transaction or contract whose chunk application is nondeterministic across nodes (compiled-contract cache reuse, host-call output depending on node-local state, float/NaN or iteration-order dependence, protocol-version-gated branch, wasm compilation differences), producing divergent state roots or gas burnt and an unintended permanent chain split.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_bb56bcfc-90bf-4d96-a1cd-17c07d8186d9?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/primitives-core/src/universal_state_init.rs -> Scope: Critical. An unprivileged sender crafts a transaction or contract whose chunk application is nondeterministic across nodes (compiled-contract cache reuse, host-call output depending on node-local state, float/NaN or iteration-order dependence, protocol-version-gated branch, wasm compilation differences), producing divergent state roots or gas burnt and an unintended permanent chain split.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_60cf1090-06c4-4e47-8f1a-18fa7dc2f61c?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/runtime/src/congestion_control.rs -> Scope: Critical. An unprivileged sender crafts a transaction or contract whose chunk application is nondeterministic across nodes (compiled-contract cache reuse, host-call output depending on node-local state, float/NaN or iteration-order dependence, protocol-version-gated branch, wasm compilation differences), producing divergent state roots or gas burnt and an unintended permanent chain split.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_9be99fde-f8da-417c-8c19-2e852d29445b?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/runtime/src/bandwidth_scheduler/mod.rs -> Scope: Critical. An unprivileged sender crafts a transaction or contract whose chunk application is nondeterministic across nodes (compiled-contract cache reuse, host-call output depending on node-local state, float/NaN or iteration-order dependence, protocol-version-gated branch, wasm compilation differences), producing divergent state roots or gas burnt and an unintended permanent chain split.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_6b817ec6-53b1-425e-a144-e987f78e6752?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/runtime/src/bandwidth_scheduler/scheduler.rs -> Scope: Critical. An unprivileged sender crafts a transaction or contract whose chunk application is nondeterministic across nodes (compiled-contract cache reuse, host-call output depending on node-local state, float/NaN or iteration-order dependence, protocol-version-gated branch, wasm compilation differences), producing divergent state roots or gas burnt and an unintended permanent chain split.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_cca1b05a-4369-4cdb-9b5e-90cef6617be0?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/runtime/src/bandwidth_scheduler/distribute_remaining.rs -> Scope: Critical. An unprivileged sender crafts a transaction or contract whose chunk application is nondeterministic across nodes (compiled-contract cache reuse, host-call output depending on node-local state, float/NaN or iteration-order dependence, protocol-version-gated branch, wasm compilation differences), producing divergent state roots or gas burnt and an unintended permanent chain split.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_884b25a3-26f5-4e2b-9f1e-7a20c3d52e3b?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/primitives/src/congestion_info.rs -> Scope: Critical. An unprivileged sender crafts a transaction or contract whose chunk application is nondeterministic across nodes (compiled-contract cache reuse, host-call output depending on node-local state, float/NaN or iteration-order dependence, protocol-version-gated branch, wasm compilation differences), producing divergent state roots or gas burnt and an unintended permanent chain split.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_f8290528-4824-4b06-82d8-8b4654f1abff?mode=deep",
+    "questions_generated": false
+  }
+]
