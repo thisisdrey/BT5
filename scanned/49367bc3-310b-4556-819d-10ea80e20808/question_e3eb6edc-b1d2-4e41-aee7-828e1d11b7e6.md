@@ -1,1 +1,0 @@
-[File: 'runtime/runtime/src/pipelining.rs' -> Scope: Critical apply-path halt] [Function: ReceiptPreparationPipeline::get_contract] Can an attacker craft a `PromiseYield`/`PromiseYieldV2` receipt whose resumed action list differs in length or ordering from the list seen at `submit` time, causing `.expect(\
