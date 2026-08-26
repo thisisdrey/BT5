@@ -1,1 +1,0 @@
-[File: 'File Name: runtime/near-vm-runner/src/logic/recorded_storage_counter.rs -> Scope: Critical.'] [Function: RecordedStorageCounter (per-FunctionCall instantiation) vs multi-action receipts with EnforceStorageProofLimitForAllActions] Can an unprivileged attacker exploit the comment \

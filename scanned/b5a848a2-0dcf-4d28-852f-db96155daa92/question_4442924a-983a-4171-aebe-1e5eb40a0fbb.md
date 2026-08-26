@@ -1,1 +1,0 @@
-[File: 'File Name: runtime/near-vm-runner/src/logic/recorded_storage_counter.rs -> Scope: Critical.'] [Function: RecordedStorageCounter (per-VM-backend instance) + concurrency permit] Can an unprivileged attacker exploit the wasmtime `ConcurrencySemaphore`/execution-slot acquisition failure path (`mod.rs:1029`, `LinkError \
