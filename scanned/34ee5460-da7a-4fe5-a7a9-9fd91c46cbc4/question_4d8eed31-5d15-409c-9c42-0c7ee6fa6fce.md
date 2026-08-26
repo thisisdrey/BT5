@@ -1,0 +1,1 @@
+[File: ethabi_utils.rs -> Scope: Critical] [Function: TryFromToken<u128> value bound check reused for both ERC20_TRANSFER_SIGNATURE 'value' and any future NEP-141 amount field, combined with eth_emulation.rs's format!('{{...\

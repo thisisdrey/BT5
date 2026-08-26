@@ -1,0 +1,1 @@
+[File: ethabi_utils.rs] [Function: TryFromToken for u128 (ERC20_TRANSFER_SIGNATURE `value` field mapped directly to NEP-141 amount)] Can an attacker encode an ERC20 `transfer(to,value)` calldata where `value` decodes successfully as u128 at the maximum (U128_MAX) and the resulting `ft_transfer` args JSON string embeds `\

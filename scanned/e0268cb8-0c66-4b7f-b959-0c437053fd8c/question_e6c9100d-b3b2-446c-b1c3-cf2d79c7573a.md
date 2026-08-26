@@ -1,0 +1,1 @@
+[File: 'File Name: core/primitives/src/trie_key.rs -> Scope: Critical.'] [Function: outgoing_metadatas ReceiptGroupsQueueDataV0 total_size/total_gas/total_receipts_num checked math outgoing_metadata.rs:275-314] Can an unprivileged attacker push receipts to the outgoing buffer until `self.data.total_receipts_num.checked_add(1).expect(\

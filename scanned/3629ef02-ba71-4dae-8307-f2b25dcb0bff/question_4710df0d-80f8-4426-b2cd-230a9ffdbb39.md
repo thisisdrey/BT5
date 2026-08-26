@@ -1,0 +1,1 @@
+[File: core/store/src/trie/outgoing_metadata.rs -> Scope: balance conservation] [Function: OutgoingMetadatas::update_on_receipt_popped] Can an attacker force a shard state where update_on_receipt_popped is called for a shard_id whose metadata was never created via update_on_receipt_pushed, triggering the `.expect(\

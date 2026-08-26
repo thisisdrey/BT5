@@ -1,0 +1,1 @@
+[File: 'internal.rs'] [Function: extract_address] Can an attacker create a named NEAR account whose id starts with '0x' followed by 40 lowercase hex characters matching an existing eth-implicit account's address, then a longer sub-account string (e.g. '0x<address><anything>') so that extract_address's `hex_str.len() < 42` check passes and `&hex_str[0..2] == b\

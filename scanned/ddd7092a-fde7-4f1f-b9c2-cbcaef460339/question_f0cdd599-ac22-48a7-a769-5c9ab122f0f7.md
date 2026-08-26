@@ -1,0 +1,1 @@
+[File: runtime/runtime/src/actions.rs -> Scope: Critical double-spend via method_names bypass] [Function: validate_delegate_action_key FunctionCall permission branch] Can an attacker whose access key is restricted to `method_names: [

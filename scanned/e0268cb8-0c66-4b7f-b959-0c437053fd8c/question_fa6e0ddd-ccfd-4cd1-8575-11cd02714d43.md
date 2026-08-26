@@ -1,0 +1,1 @@
+[File: eth_emulation.rs -> Scope: Critical] [Function: try_emulation ERC20_BALANCE_OF_SELECTOR args JSON construction] Can an attacker's address bytes, when hex-encoded and concatenated with suffix inside format!(r#'{{\

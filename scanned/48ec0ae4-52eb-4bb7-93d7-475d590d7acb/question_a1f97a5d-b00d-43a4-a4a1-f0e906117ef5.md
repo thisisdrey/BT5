@@ -1,0 +1,1 @@
+[File: outgoing_metadata.rs -> ReceiptGroupsConfig::should_start_new_group] Can an attacker who knows `size_upper_bound = ByteSize::kb(100)` is a fixed constant (not derived from `max_receipt_size` which can be up to 4MB) submit a single receipt just over 100kB (still far under max_receipt_size) so it always starts its own group of exactly that size (comment: \

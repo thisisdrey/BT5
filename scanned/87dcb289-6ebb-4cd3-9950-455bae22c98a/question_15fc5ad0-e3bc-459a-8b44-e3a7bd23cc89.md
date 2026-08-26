@@ -1,0 +1,1 @@
+[File: 'runtime/near-vm-runner/src/prepare/prepare_v2.rs' -> Scope: Metering totality -> theft via undercharged instrumentation] [Function: SimpleMaxStackCfg::size_of_function_activation, prefix_sum_vec index assumption `.expect(\

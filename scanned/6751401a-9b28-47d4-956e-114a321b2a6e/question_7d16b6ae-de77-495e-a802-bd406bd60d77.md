@@ -1,0 +1,1 @@
+[File: 'runtime/near-vm-runner/src/prepare/prepare_v3.rs' -> Scope: High] [Function: PrepareContext::transform_import_section] Can an unprivileged sender craft a wasm module whose import section declares an import named identically to an internal instrumentation function inserted by `InstrumentContext::new(..., \

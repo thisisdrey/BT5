@@ -1,0 +1,1 @@
+[File: internal.rs -> Scope: High] [Function: parse_target / TargetKind::EthImplicit derivation vs eth_wallet_global_contract_hash caching] Can an attacker exploit the fact that the wallet contract's `CHAIN_ID` constant is baked in at compile time (`std::include!(\

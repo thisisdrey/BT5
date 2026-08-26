@@ -1,0 +1,1 @@
+[File: runtime/runtime/src/pipelining.rs -> Scope: Critical] [Function: ReceiptPreparationPipeline::get_contract panic paths] Can an attacker force `action_index` out of range for a receipt's `actions` vector reaching `.get(action_index).expect(\
