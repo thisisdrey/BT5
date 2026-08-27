@@ -1,1 +1,0 @@
-[File: internal.rs -> Scope: Critical] [Function: parse_tx_data, method_names.join(',') downstream in lib.rs::action_to_promise] Can an attacker supply `method_names` entries in an `ADD_KEY_SELECTOR` payload that themselves contain comma characters (e.g., `\
