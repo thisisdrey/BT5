@@ -1,1 +1,0 @@
-[File: 'near_action.rs' -> Scope: Critical] [Function: near_action::FunctionCallAction.method_name/args reachable via eth_emulation::ERC20_TRANSFER_SELECTOR memo construction] Can an attacker craft the eth transaction `data` field so that bytes after offset 68 (used as `memo`) contain a raw, unescaped double-quote or backslash sequence, causing `format!(r#\
