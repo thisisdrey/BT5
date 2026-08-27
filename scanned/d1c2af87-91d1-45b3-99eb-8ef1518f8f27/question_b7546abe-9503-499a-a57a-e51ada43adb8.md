@@ -1,1 +1,0 @@
-[File: core/primitives/src/trie_key.rs -> Scope: Critical] [Function: TrieKey::append_into for TrieKey::BufferedReceipt] Can an attacker who inflates account count/state to force shard resharding indirectly cause a cross-shard receipt's receiving_shard ShardId to exceed u16::MAX, hitting `assert!(receiving_shard <= u16::MAX as u64, \
