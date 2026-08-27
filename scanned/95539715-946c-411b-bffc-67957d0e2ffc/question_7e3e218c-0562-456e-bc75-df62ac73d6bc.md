@@ -1,1 +1,0 @@
-)` in chain/chain/src/runtime/mod.rs::apply_chunk) halts the shard for every validator hitting this path. Proof idea: construct a differential test running the same receipt with StorageDataSource::Db vs StorageDataSource::Recorded(storage) built from the producer's PartialStorage and assert both produce identical results and never hit MissingTrieValue.
