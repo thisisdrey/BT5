@@ -1,1 +1,0 @@
-[File: 'runtime/runtime/src/bandwidth_scheduler/scheduler.rs'] [Function: BandwidthScheduler::iter_links, scheduler.rs:427-435] Can an attacker trigger a resharding-adjacent condition where `shard_layout.num_shards()` briefly exceeds `usize::MAX` on a 32-bit target or where `.try_into().expect(\
