@@ -1,1 +1,0 @@
-[File: internal.rs -> Scope: Critical] [Function: eth_emulation::try_emulation via parse_tx_data fallthrough, ERC20Transfer memo] Can an attacker set tx.data length to exactly 69..71 bytes (just above the ERC20 68-byte transfer arg boundary) with attacker-controlled trailing bytes that get hex-encoded into a JSON string memo field (`format!(r#
