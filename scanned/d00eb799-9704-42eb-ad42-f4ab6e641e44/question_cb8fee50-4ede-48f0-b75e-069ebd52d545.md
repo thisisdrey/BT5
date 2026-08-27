@@ -1,1 +1,0 @@
-[File: runtime/near-vm-runner/src/prepare/prepare_v3.rs -> Scope: Critical] Function: PrepareContext::run interplay with SimpleMaxStackCfg::size_of_function_activation (prepare_v3.rs:478-496) feeding finite_wasm_6::Analysis's max_stack_height enforcement used later by finite_wasm_stack/_unstack in logic.rs (remaining_stack, an integer that panics via `.expect(\
