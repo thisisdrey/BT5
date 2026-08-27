@@ -1,1 +1,0 @@
-[File: 'runtime/near-vm-runner/src/prepare/prepare_v2.rs' -> Scope: High] [Function: prepare_contract] Can an unprivileged attacker deploy a wasm contract sized just under `max_contract_size` that is engineered to maximize finite-wasm instrumentation blowup (many nested blocks/branches needing stack bookkeeping) so the `instrument(\
