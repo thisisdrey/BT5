@@ -1,1 +1,0 @@
-[File: eth_emulation.rs -> Scope: Critical] [Function: try_emulation, ERC20_TRANSFER_SELECTOR arm] Can an unprivileged attacker submit an rlp_execute transaction whose calldata is the ERC20 transfer selector 0xa9059cbb with a `to` address that ABI-decodes to a valid 20-byte address but produces a receiver_id via format!(\
