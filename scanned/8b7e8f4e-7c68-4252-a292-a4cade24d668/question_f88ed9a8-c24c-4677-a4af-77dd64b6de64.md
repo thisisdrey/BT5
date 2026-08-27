@@ -1,1 +1,0 @@
-[File: function_call.rs] [Function: execute_function_call, VMContext construction] Can an attacker set `action_receipt.signer_public_key()` to a value whose borsh serialization at line 260-261 (`borsh::to_vec(&action_receipt.signer_public_key()).expect(\
