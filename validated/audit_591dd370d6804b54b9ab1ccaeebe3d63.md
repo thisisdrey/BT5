@@ -1,0 +1,132 @@
+### Title
+Permanent burn of `DeleteAccount` beneficiary refund when the beneficiary account does not exist - (File: `runtime/runtime/src/actions.rs`, `runtime/runtime/src/lib.rs`)
+
+### Summary
+The external report flags a loss-of-funds pattern where an operation (`removeConnectedChain`) tears down state (a connected chain) without accounting for messages/value still in flight to it, permanently stranding the pending value. The closest reachable analog in nearcore is `DeleteAccountAction`: deleting an account creates a `Transfer`-style balance-refund receipt to `beneficiary_id`, but that refund receipt is itself validated with the same existence rules as an ordinary `Transfer` action, and it is not eligible for implicit-account creation. If `beneficiary_id` does not exist at execution time, the refund receipt fails, and per the runtime's refund-handling rules, a failed refund does not retry or bounce back — its deposit is burned into `other_burnt_amount` instead of being credited anywhere.
+
+### Finding Description
+`action_delete_account` unconditionally creates a system-predecessor `Transfer` refund receipt for the deleted account's remaining balance and sends it to `beneficiary_id`, with no check that `beneficiary_id` currently exists: [1](#0-0) 
+
+That refund receipt is processed like any other receipt. `check_account_existence` treats `Action::Transfer` targeting a non-existent account as valid only when `implicit_account_creation_eligible` is true (a property of top-level, single-action, implicit-account transactions), otherwise it returns `AccountDoesNotExist`: [2](#0-1) [3](#0-2) 
+
+The comment at the call site explicitly documents that refunds are deliberately excluded from implicit-account creation ("Refunds don't automatically create accounts, because refunds are free... Account deletion with beneficiary creates a refund, so it'll not create a new account.") — i.e., this is a known, intentional design choice, not an oversight in that specific line, but its downstream consequence for value handling is what constitutes the bug.
+
+Per the protocol-model execution notes, refund receipts (system-predecessor) are treated specially: they never generate a refund-of-a-refund, and if a refund receipt itself fails, its attached deposit is burned rather than returned to anyone: [4](#0-3) [5](#0-4) 
+
+Consequently, any `DeleteAccountAction` naming a `beneficiary_id` that:
+- has never been created (fresh named account never initialized), or
+- is an eth-implicit/near-implicit address that has not yet been created via a real `Transfer`, or
+- was itself deleted concurrently/earlier in the same or a later chunk (the same class of "remove entity while messages/value are still targeting it" race highlighted by the external report),
+
+causes the resulting balance-refund receipt to fail `check_account_existence`, and the account's entire remaining balance is irreversibly burned instead of transferred or bounced back to the account owner or a fallback.
+
+### Impact Explanation
+This is a direct, permanent loss of user funds triggered by an ordinary, unprivileged action available to any account (self-`DeleteAccount`, or via a promise batch/meta-transaction/relayer on someone else's behalf where permitted). No malicious node, network-layer behavior, or operator privilege is required — a normal signer choosing/mistyping a `beneficiary_id` that doesn't exist (or racing a delete of the beneficiary) is sufficient to burn the deleted account's balance. This matches "concrete... permanent freezing of funds, token inflation or loss" in the acceptance criteria: value is destroyed from circulation (burned) rather than parked recoverably, mirroring the "stuck/lost token transfer" impact in the original report.
+
+### Likelihood Explanation
+Likelihood is moderate-to-high for accidental triggering: users/dApps commonly pass an unvalidated or user-supplied `beneficiary_id` string to `promise_batch_action_delete_account` (see the near-vm-runner binding), and there is no on-chain existence check of `beneficiary_id` prior to executing the delete: [6](#0-5) 
+
+Typos, deleted/never-created named accounts, or unregistered implicit addresses used as beneficiaries will silently burn the account's balance instead of failing the whole `DeleteAccount` operation up front. It is also reachable adversarially: an attacker convincing a contract/relayer to delete an account with an attacker-chosen bogus beneficiary, or racing to delete the intended beneficiary account beforehand, deterministically burns the victim account's funds.
+
+### Recommendation
+- Validate `beneficiary_id` existence (or make it implicit-account-creation eligible) before or during `action_delete_account`, and reject the delete (return an `ActionError`, e.g. a new `BeneficiaryDoesNotExist`-style error) if the beneficiary account does not exist, rather than silently deleting the source account and burning its balance later.
+- Alternatively, allow the balance-refund receipt generated by `DeleteAccount` to implicitly create the beneficiary account (treat it as eligible for implicit-account creation) when `beneficiary_id` is a valid implicit account id, so genuine implicit beneficiaries aren't penalized.
+- At minimum, do not silently burn a failed refund's deposit when it originates from a `DeleteAccountAction`; instead route it back to a recoverable location (e.g., fail the whole delete atomically, since `state_update.rollback()` on receipt failure already discards all state changes for that receipt, so gating the check earlier in `action_delete_account` is the cleanest fix).
+
+### Proof of Concept
+1. Account `victim.near` holds `N` NEAR and no locked stake.
+2. `victim.near` sends a `DeleteAccount { beneficiary_id: "nonexistent.near" }` action (self-delete), where `nonexistent.near` has never been created.
+3. `action_delete_account` runs: it removes `victim.near` from state and enqueues `Receipt::new_balance_refund("nonexistent.near", N)`: [7](#0-6) 
+4. That system-predecessor `Transfer` receipt is later processed; `check_account_existence` sees `account.is_none()` for `nonexistent.near` and, since the receipt is a refund (not `implicit_account_creation_eligible`), returns `AccountDoesNotExist`: [2](#0-1) [3](#0-2) 
+5. Per the documented refund-failure handling, since the failing receipt is itself a refund, its `N` NEAR deposit is burned into `other_burnt_amount` instead of being returned anywhere: [5](#0-4) 
+6. Net effect: `victim.near`'s entire balance `N` is permanently destroyed with no recipient, purely because `beneficiary_id` didn't exist — analogous to the referenced report's loss of pending value when a connection is torn down without accounting for in-flight state.
+
+Note: I could not directly execute nearcore to observe the runtime behavior at chunk-apply time (no sandbox/terminal access in this mode); the analysis above is based on static code/documentation review of `runtime/runtime/src/actions.rs`, `runtime/runtime/src/lib.rs`, and `protocol-model/spec/runtime-execution.md`. Confirming the exact refund-burn code path (line-level in `refund_unspent_gas_and_deposits`/`apply_action_receipt`) would benefit from a live/test-loop run (e.g., extending `test-loop-tests/src/tests/create_delete_account.rs`) to observe `other_burnt_amount` accounting for this specific scenario.
+
+### Citations
+
+**File:** runtime/runtime/src/actions.rs (L364-371)
+```rust
+    // We use current amount as a pay out to beneficiary.
+    let account_balance = account_ref.amount();
+    if account_balance > Balance::ZERO {
+        result
+            .new_receipts
+            .push(Receipt::new_balance_refund(&delete_account.beneficiary_id, account_balance));
+    }
+    let remove_result = remove_account(state_update, account_id)?;
+```
+
+**File:** runtime/runtime/src/actions.rs (L819-827)
+```rust
+        Action::Transfer(_) => {
+            if account.is_none() {
+                return check_transfer_to_nonexisting_account(
+                    config,
+                    account_id,
+                    implicit_account_creation_eligible,
+                );
+            }
+        }
+```
+
+**File:** runtime/runtime/src/actions.rs (L857-877)
+```rust
+fn check_transfer_to_nonexisting_account(
+    config: &RuntimeConfig,
+    account_id: &AccountId,
+    implicit_account_creation_eligible: bool,
+) -> Result<(), ActionError> {
+    if implicit_account_creation_eligible
+        && account_is_implicit(account_id, config.wasm_config.eth_implicit_accounts)
+    {
+        // OK. It's implicit account creation.
+        // Notes:
+        // - Transfer action has to be the only action in the transaction to avoid
+        // abuse by hijacking this account with other public keys or contracts.
+        // - Refunds don't automatically create accounts, because refunds are free and
+        // we don't want some type of abuse.
+        // - Account deletion with beneficiary creates a refund, so it'll not create a
+        // new account.
+        Ok(())
+    } else {
+        Err(ActionErrorKind::AccountDoesNotExist { account_id: account_id.clone() }.into())
+    }
+}
+```
+
+**File:** protocol-model/spec/runtime-execution.md (L69-69)
+```markdown
+6. **Refunds** (see below): system-predecessor receipts (refund receipts) are free — no refund generated, and a failed refund burns its deposit into `other_burnt_amount` (`runtime/runtime/src/lib.rs:929`). Otherwise `refund_unspent_gas_and_deposits` runs (`:943`).
+```
+
+**File:** protocol-model/spec/runtime-execution.md (L152-152)
+```markdown
+- **Refund receipts are free**: system-predecessor receipts burn zero gas; a failed refund burns its deposit into `other_burnt_amount` rather than refunding (`runtime/runtime/src/lib.rs:929`, `:972`).
+```
+
+**File:** runtime/near-vm-runner/src/logic/logic.rs (L3598-3619)
+```rust
+    pub fn promise_batch_action_delete_account(
+        &mut self,
+        promise_idx: u64,
+        beneficiary_id_len: u64,
+        beneficiary_id_ptr: u64,
+    ) -> Result<()> {
+        self.result_state.gas_counter.pay_base(base)?;
+        if self.context.is_view() {
+            return Err(HostError::ProhibitedInView {
+                method_name: "promise_batch_action_delete_account".to_string(),
+            }
+            .into());
+        }
+        let beneficiary_id =
+            self.read_and_parse_account_id(beneficiary_id_ptr, beneficiary_id_len)?;
+
+        let (receipt_idx, sir) = self.promise_idx_to_receipt_idx_with_sir(promise_idx)?;
+        self.pay_action_base(ActionCosts::delete_account, sir)?;
+
+        self.ext.append_action_delete_account(receipt_idx, beneficiary_id);
+        Ok(())
+    }
+```
