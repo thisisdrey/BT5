@@ -1,0 +1,1 @@
+Now let me look at `verify_function_call_permission` itself to confirm the actual authorization check.
