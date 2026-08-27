@@ -1,1 +1,0 @@
-[File: 'File Name: core/store/src/trie/outgoing_metadata.rs'] [Function: ReceiptGroup::is_empty] Can an unprivileged attacker construct a push/pop sequence of receipts (varying sizes near the size_upper_bound of ReceiptGroupsConfig) that leaves a ReceiptGroupV0 with size == 0 but gas != 0 (or vice versa), triggering `assert_eq!(self.gas(), 0, \
