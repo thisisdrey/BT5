@@ -1,1 +1,0 @@
-[File: runtime/runtime/src/bandwidth_scheduler/scheduler.rs -> Scope: Critical] [Function: BandwidthRequest::make_from_receipt_sizes upstream of SchedulerBandwidthRequest::new] Can an attacker cause `total_size.checked_add(receipt_size).expect(\
