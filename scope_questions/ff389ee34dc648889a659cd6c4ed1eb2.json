@@ -1,0 +1,62 @@
+[
+  {
+    "question": "'File Name: runtime/near-vm-runner/src/cache.rs -> Scope: Critical. SEED-VERSUS-BOUND COLLISION. A value re-initialised from block height, epoch, or an index lands INSIDE the window of values already consumed under the old instance, rather than strictly above it, so a previously used nonce, id, or sequence number becomes valid again. Compare every re-initialisation constant against the admission bound enforced elsewhere and check whether the reseed dominates or merely re-enters the live range. This pattern produced confirmed finding F4.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_32a1bf9b-c930-497b-9da6-430e99628965?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/near-vm-runner/src/runner.rs -> Scope: Critical. SEED-VERSUS-BOUND COLLISION. A value re-initialised from block height, epoch, or an index lands INSIDE the window of values already consumed under the old instance, rather than strictly above it, so a previously used nonce, id, or sequence number becomes valid again. Compare every re-initialisation constant against the admission bound enforced elsewhere and check whether the reseed dominates or merely re-enters the live range. This pattern produced confirmed finding F4.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_d31c3eac-e4f4-41c0-b494-83d79d2525c4?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/near-vm-runner/src/wasmtime_runner/logic.rs -> Scope: Critical. SEED-VERSUS-BOUND COLLISION. A value re-initialised from block height, epoch, or an index lands INSIDE the window of values already consumed under the old instance, rather than strictly above it, so a previously used nonce, id, or sequence number becomes valid again. Compare every re-initialisation constant against the admission bound enforced elsewhere and check whether the reseed dominates or merely re-enters the live range. This pattern produced confirmed finding F4.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_ee0c7fc9-e7c8-4d5d-8421-05c5e0130af7?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/store/src/trie/mod.rs -> Scope: Critical. SEED-VERSUS-BOUND COLLISION. A value re-initialised from block height, epoch, or an index lands INSIDE the window of values already consumed under the old instance, rather than strictly above it, so a previously used nonce, id, or sequence number becomes valid again. Compare every re-initialisation constant against the admission bound enforced elsewhere and check whether the reseed dominates or merely re-enters the live range. This pattern produced confirmed finding F4.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_4e6522e9-e508-4e17-8bda-33a30f769b9d?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/store/src/trie/update.rs -> Scope: Critical. SEED-VERSUS-BOUND COLLISION. A value re-initialised from block height, epoch, or an index lands INSIDE the window of values already consumed under the old instance, rather than strictly above it, so a previously used nonce, id, or sequence number becomes valid again. Compare every re-initialisation constant against the admission bound enforced elsewhere and check whether the reseed dominates or merely re-enters the live range. This pattern produced confirmed finding F4.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_f0f2248a-600d-40c7-b09c-b4ec042bc5dc?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/store/src/trie/trie_storage_update.rs -> Scope: Critical. SEED-VERSUS-BOUND COLLISION. A value re-initialised from block height, epoch, or an index lands INSIDE the window of values already consumed under the old instance, rather than strictly above it, so a previously used nonce, id, or sequence number becomes valid again. Compare every re-initialisation constant against the admission bound enforced elsewhere and check whether the reseed dominates or merely re-enters the live range. This pattern produced confirmed finding F4.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_e23ace25-2b9c-4dfe-a4f9-8b839ccbe463?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/store/src/trie/ops/insert_delete.rs -> Scope: Critical. SEED-VERSUS-BOUND COLLISION. A value re-initialised from block height, epoch, or an index lands INSIDE the window of values already consumed under the old instance, rather than strictly above it, so a previously used nonce, id, or sequence number becomes valid again. Compare every re-initialisation constant against the admission bound enforced elsewhere and check whether the reseed dominates or merely re-enters the live range. This pattern produced confirmed finding F4.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_d50f6db7-a983-48d1-9f38-e095e35aad93?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/store/src/trie/ops/squash.rs -> Scope: Critical. SEED-VERSUS-BOUND COLLISION. A value re-initialised from block height, epoch, or an index lands INSIDE the window of values already consumed under the old instance, rather than strictly above it, so a previously used nonce, id, or sequence number becomes valid again. Compare every re-initialisation constant against the admission bound enforced elsewhere and check whether the reseed dominates or merely re-enters the live range. This pattern produced confirmed finding F4.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_2841b85b-6f26-4b95-a697-415fc9614118?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/store/src/trie/raw_node.rs -> Scope: Critical. SEED-VERSUS-BOUND COLLISION. A value re-initialised from block height, epoch, or an index lands INSIDE the window of values already consumed under the old instance, rather than strictly above it, so a previously used nonce, id, or sequence number becomes valid again. Compare every re-initialisation constant against the admission bound enforced elsewhere and check whether the reseed dominates or merely re-enters the live range. This pattern produced confirmed finding F4.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_99ef2d48-16ff-4cf1-9dda-60381509b12d?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/store/src/trie/trie_recording.rs -> Scope: Critical. SEED-VERSUS-BOUND COLLISION. A value re-initialised from block height, epoch, or an index lands INSIDE the window of values already consumed under the old instance, rather than strictly above it, so a previously used nonce, id, or sequence number becomes valid again. Compare every re-initialisation constant against the admission bound enforced elsewhere and check whether the reseed dominates or merely re-enters the live range. This pattern produced confirmed finding F4.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_7299c0da-5993-454d-96d8-890d72e63021?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/store/src/trie/receipts_column_helper.rs -> Scope: Critical. SEED-VERSUS-BOUND COLLISION. A value re-initialised from block height, epoch, or an index lands INSIDE the window of values already consumed under the old instance, rather than strictly above it, so a previously used nonce, id, or sequence number becomes valid again. Compare every re-initialisation constant against the admission bound enforced elsewhere and check whether the reseed dominates or merely re-enters the live range. This pattern produced confirmed finding F4.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_164b3ce6-b3a0-4a79-bcc8-a265d9427b36?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/store/src/trie/outgoing_metadata.rs -> Scope: Critical. SEED-VERSUS-BOUND COLLISION. A value re-initialised from block height, epoch, or an index lands INSIDE the window of values already consumed under the old instance, rather than strictly above it, so a previously used nonce, id, or sequence number becomes valid again. Compare every re-initialisation constant against the admission bound enforced elsewhere and check whether the reseed dominates or merely re-enters the live range. This pattern produced confirmed finding F4.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_5d980fce-af56-44b6-8168-8e282893bc6a?mode=deep",
+    "questions_generated": false
+  }
+]
