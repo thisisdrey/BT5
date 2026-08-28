@@ -1,0 +1,152 @@
+[
+  {
+    "question": "'File Name: runtime/runtime/src/bandwidth_scheduler/scheduler.rs -> Scope: High. TWO WRITERS, ONE KEY SPACE. Two code paths write per-account amounts into one map, counter, or accumulator with a last-write-wins operation such as HashMap::insert, while a separately computed total counts both contributions. When one account satisfies both roles the map and the total silently disagree, minting or destroying value that no reconciliation pass ever notices. This pattern produced confirmed finding F5.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_6db16e7f-4a55-49d8-b63e-0b17894f8318?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/runtime/src/bandwidth_scheduler/distribute_remaining.rs -> Scope: High. TWO WRITERS, ONE KEY SPACE. Two code paths write per-account amounts into one map, counter, or accumulator with a last-write-wins operation such as HashMap::insert, while a separately computed total counts both contributions. When one account satisfies both roles the map and the total silently disagree, minting or destroying value that no reconciliation pass ever notices. This pattern produced confirmed finding F5.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_049f3ae8-6d02-443f-9543-39e401ffbfcb?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/primitives/src/congestion_info.rs -> Scope: High. TWO WRITERS, ONE KEY SPACE. Two code paths write per-account amounts into one map, counter, or accumulator with a last-write-wins operation such as HashMap::insert, while a separately computed total counts both contributions. When one account satisfies both roles the map and the total silently disagree, minting or destroying value that no reconciliation pass ever notices. This pattern produced confirmed finding F5.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_146f393e-a182-4f8b-916f-8aca48b91bc2?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/primitives/src/bandwidth_scheduler.rs -> Scope: High. TWO WRITERS, ONE KEY SPACE. Two code paths write per-account amounts into one map, counter, or accumulator with a last-write-wins operation such as HashMap::insert, while a separately computed total counts both contributions. When one account satisfies both roles the map and the total silently disagree, minting or destroying value that no reconciliation pass ever notices. This pattern produced confirmed finding F5.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_fe898d9a-670b-48a4-ab77-52e71e360a1f?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: chain/epoch-manager/src/reward_calculator.rs -> Scope: High. TWO WRITERS, ONE KEY SPACE. Two code paths write per-account amounts into one map, counter, or accumulator with a last-write-wins operation such as HashMap::insert, while a separately computed total counts both contributions. When one account satisfies both roles the map and the total silently disagree, minting or destroying value that no reconciliation pass ever notices. This pattern produced confirmed finding F5.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_7cef887e-ec79-461b-88be-4666c41e2365?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: chain/epoch-manager/src/lib.rs -> Scope: High. TWO WRITERS, ONE KEY SPACE. Two code paths write per-account amounts into one map, counter, or accumulator with a last-write-wins operation such as HashMap::insert, while a separately computed total counts both contributions. When one account satisfies both roles the map and the total silently disagree, minting or destroying value that no reconciliation pass ever notices. This pattern produced confirmed finding F5.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_201d8b7b-1dea-46b3-8e68-a60c2014b7d8?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: chain/epoch-manager/src/validator_selection.rs -> Scope: High. TWO WRITERS, ONE KEY SPACE. Two code paths write per-account amounts into one map, counter, or accumulator with a last-write-wins operation such as HashMap::insert, while a separately computed total counts both contributions. When one account satisfies both roles the map and the total silently disagree, minting or destroying value that no reconciliation pass ever notices. This pattern produced confirmed finding F5.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_29ccdbd6-2ff6-43c2-8e55-139c3187e697?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: chain/chain/src/runtime/mod.rs -> Scope: High. TWO WRITERS, ONE KEY SPACE. Two code paths write per-account amounts into one map, counter, or accumulator with a last-write-wins operation such as HashMap::insert, while a separately computed total counts both contributions. When one account satisfies both roles the map and the total silently disagree, minting or destroying value that no reconciliation pass ever notices. This pattern produced confirmed finding F5.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_70cfb63d-31fe-4fbd-ab18-a6c7dad18e31?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/primitives/src/chunk_apply_stats.rs -> Scope: High. TWO WRITERS, ONE KEY SPACE. Two code paths write per-account amounts into one map, counter, or accumulator with a last-write-wins operation such as HashMap::insert, while a separately computed total counts both contributions. When one account satisfies both roles the map and the total silently disagree, minting or destroying value that no reconciliation pass ever notices. This pattern produced confirmed finding F5.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_a8b5caa3-058e-4a19-9401-09873a957cae?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: chain/client/src/pending_transaction_queue.rs -> Scope: High. TWO WRITERS, ONE KEY SPACE. Two code paths write per-account amounts into one map, counter, or accumulator with a last-write-wins operation such as HashMap::insert, while a separately computed total counts both contributions. When one account satisfies both roles the map and the total silently disagree, minting or destroying value that no reconciliation pass ever notices. This pattern produced confirmed finding F5.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_09dac6e6-d5ac-4c4d-8258-5aa6967bcaca?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: chain/client/src/chunk_producer.rs -> Scope: High. TWO WRITERS, ONE KEY SPACE. Two code paths write per-account amounts into one map, counter, or accumulator with a last-write-wins operation such as HashMap::insert, while a separately computed total counts both contributions. When one account satisfies both roles the map and the total silently disagree, minting or destroying value that no reconciliation pass ever notices. This pattern produced confirmed finding F5.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_8d880022-bc1f-4121-bf4a-cef60a15bba4?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: chain/client/src/rpc_handler.rs -> Scope: High. TWO WRITERS, ONE KEY SPACE. Two code paths write per-account amounts into one map, counter, or accumulator with a last-write-wins operation such as HashMap::insert, while a separately computed total counts both contributions. When one account satisfies both roles the map and the total silently disagree, minting or destroying value that no reconciliation pass ever notices. This pattern produced confirmed finding F5.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_675ef400-8487-46d7-afa2-0df379658664?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: chain/client/src/stateless_validation/chunk_endorsement.rs -> Scope: High. TWO WRITERS, ONE KEY SPACE. Two code paths write per-account amounts into one map, counter, or accumulator with a last-write-wins operation such as HashMap::insert, while a separately computed total counts both contributions. When one account satisfies both roles the map and the total silently disagree, minting or destroying value that no reconciliation pass ever notices. This pattern produced confirmed finding F5.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_1e78cca0-57ab-4ef1-8f39-d276b7bf3a4e?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/primitives/src/stateless_validation/chunk_endorsement.rs -> Scope: High. TWO WRITERS, ONE KEY SPACE. Two code paths write per-account amounts into one map, counter, or accumulator with a last-write-wins operation such as HashMap::insert, while a separately computed total counts both contributions. When one account satisfies both roles the map and the total silently disagree, minting or destroying value that no reconciliation pass ever notices. This pattern produced confirmed finding F5.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_016cfad6-7574-42da-8ec9-2be6143dbde7?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: chain/chain/src/validate.rs -> Scope: High. TWO WRITERS, ONE KEY SPACE. Two code paths write per-account amounts into one map, counter, or accumulator with a last-write-wins operation such as HashMap::insert, while a separately computed total counts both contributions. When one account satisfies both roles the map and the total silently disagree, minting or destroying value that no reconciliation pass ever notices. This pattern produced confirmed finding F5.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_bec2529d-0861-4fe4-b81e-3c7964497d3c?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: chain/jsonrpc/src/api/transactions.rs -> Scope: High. TWO WRITERS, ONE KEY SPACE. Two code paths write per-account amounts into one map, counter, or accumulator with a last-write-wins operation such as HashMap::insert, while a separately computed total counts both contributions. When one account satisfies both roles the map and the total silently disagree, minting or destroying value that no reconciliation pass ever notices. This pattern produced confirmed finding F5.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_85f50439-ebbf-48db-be42-970af6b47307?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: chain/chain/src/resharding/manager.rs -> Scope: High. TWO WRITERS, ONE KEY SPACE. Two code paths write per-account amounts into one map, counter, or accumulator with a last-write-wins operation such as HashMap::insert, while a separately computed total counts both contributions. When one account satisfies both roles the map and the total silently disagree, minting or destroying value that no reconciliation pass ever notices. This pattern produced confirmed finding F5.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_b2b946df-98ea-486d-90c5-c300a6a3cf7b?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: chain/chain/src/resharding/event_type.rs -> Scope: High. TWO WRITERS, ONE KEY SPACE. Two code paths write per-account amounts into one map, counter, or accumulator with a last-write-wins operation such as HashMap::insert, while a separately computed total counts both contributions. When one account satisfies both roles the map and the total silently disagree, minting or destroying value that no reconciliation pass ever notices. This pattern produced confirmed finding F5.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_86abdde2-9115-4f7b-bf32-9821d5d74435?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/near-vm-runner/src/logic/logic.rs -> Scope: High. TWO WRITERS, ONE KEY SPACE. Two code paths write per-account amounts into one map, counter, or accumulator with a last-write-wins operation such as HashMap::insert, while a separately computed total counts both contributions. When one account satisfies both roles the map and the total silently disagree, minting or destroying value that no reconciliation pass ever notices. This pattern produced confirmed finding F5.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_ebd7ab2a-70ad-4aaf-9fb5-6314db82d368?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/near-vm-runner/src/logic/gas_counter.rs -> Scope: High. TWO WRITERS, ONE KEY SPACE. Two code paths write per-account amounts into one map, counter, or accumulator with a last-write-wins operation such as HashMap::insert, while a separately computed total counts both contributions. When one account satisfies both roles the map and the total silently disagree, minting or destroying value that no reconciliation pass ever notices. This pattern produced confirmed finding F5.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_65615fcf-4146-4a95-8943-58d6b886edbe?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/near-vm-runner/src/logic/vmstate.rs -> Scope: High. TWO WRITERS, ONE KEY SPACE. Two code paths write per-account amounts into one map, counter, or accumulator with a last-write-wins operation such as HashMap::insert, while a separately computed total counts both contributions. When one account satisfies both roles the map and the total silently disagree, minting or destroying value that no reconciliation pass ever notices. This pattern produced confirmed finding F5.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_3719e0eb-ef55-4adc-ac92-9eed8ab0f7ee?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/near-vm-runner/src/logic/recorded_storage_counter.rs -> Scope: High. TWO WRITERS, ONE KEY SPACE. Two code paths write per-account amounts into one map, counter, or accumulator with a last-write-wins operation such as HashMap::insert, while a separately computed total counts both contributions. When one account satisfies both roles the map and the total silently disagree, minting or destroying value that no reconciliation pass ever notices. This pattern produced confirmed finding F5.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_62ca65be-8611-49f2-9f1a-d78ecfda11fe?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/near-vm-runner/src/logic/context.rs -> Scope: High. TWO WRITERS, ONE KEY SPACE. Two code paths write per-account amounts into one map, counter, or accumulator with a last-write-wins operation such as HashMap::insert, while a separately computed total counts both contributions. When one account satisfies both roles the map and the total silently disagree, minting or destroying value that no reconciliation pass ever notices. This pattern produced confirmed finding F5.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_4abc4c8a-636e-4728-a65b-7a6f1b22769f?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/near-vm-runner/src/logic/alt_bn128.rs -> Scope: High. TWO WRITERS, ONE KEY SPACE. Two code paths write per-account amounts into one map, counter, or accumulator with a last-write-wins operation such as HashMap::insert, while a separately computed total counts both contributions. When one account satisfies both roles the map and the total silently disagree, minting or destroying value that no reconciliation pass ever notices. This pattern produced confirmed finding F5.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_ecab5496-62ec-47db-b5a0-e047df679f80?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/near-vm-runner/src/logic/bls12381.rs -> Scope: High. TWO WRITERS, ONE KEY SPACE. Two code paths write per-account amounts into one map, counter, or accumulator with a last-write-wins operation such as HashMap::insert, while a separately computed total counts both contributions. When one account satisfies both roles the map and the total silently disagree, minting or destroying value that no reconciliation pass ever notices. This pattern produced confirmed finding F5.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_a0642851-7598-4af6-9029-2dd3d4808796?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/near-vm-runner/src/imports.rs -> Scope: High. TWO WRITERS, ONE KEY SPACE. Two code paths write per-account amounts into one map, counter, or accumulator with a last-write-wins operation such as HashMap::insert, while a separately computed total counts both contributions. When one account satisfies both roles the map and the total silently disagree, minting or destroying value that no reconciliation pass ever notices. This pattern produced confirmed finding F5.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_e4c88c13-dd8b-4214-b902-7b8b21cf0ca8?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/near-vm-runner/src/prepare.rs -> Scope: High. TWO WRITERS, ONE KEY SPACE. Two code paths write per-account amounts into one map, counter, or accumulator with a last-write-wins operation such as HashMap::insert, while a separately computed total counts both contributions. When one account satisfies both roles the map and the total silently disagree, minting or destroying value that no reconciliation pass ever notices. This pattern produced confirmed finding F5.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_70e69b50-44fd-4ac9-9877-c92f78ba79e2?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/near-vm-runner/src/prepare/prepare_v2.rs -> Scope: High. TWO WRITERS, ONE KEY SPACE. Two code paths write per-account amounts into one map, counter, or accumulator with a last-write-wins operation such as HashMap::insert, while a separately computed total counts both contributions. When one account satisfies both roles the map and the total silently disagree, minting or destroying value that no reconciliation pass ever notices. This pattern produced confirmed finding F5.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_86648499-7f22-43ff-855b-ba144546bfd2?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/near-vm-runner/src/prepare/prepare_v3.rs -> Scope: High. TWO WRITERS, ONE KEY SPACE. Two code paths write per-account amounts into one map, counter, or accumulator with a last-write-wins operation such as HashMap::insert, while a separately computed total counts both contributions. When one account satisfies both roles the map and the total silently disagree, minting or destroying value that no reconciliation pass ever notices. This pattern produced confirmed finding F5.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_c462a36c-1456-4d9e-82a0-e2b5cbcfed42?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/near-vm-runner/src/prepare/instrument_v3.rs -> Scope: High. TWO WRITERS, ONE KEY SPACE. Two code paths write per-account amounts into one map, counter, or accumulator with a last-write-wins operation such as HashMap::insert, while a separately computed total counts both contributions. When one account satisfies both roles the map and the total silently disagree, minting or destroying value that no reconciliation pass ever notices. This pattern produced confirmed finding F5.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_e3845382-ecbe-47c1-809d-bea298b2c26d?mode=deep",
+    "questions_generated": false
+  }
+]
