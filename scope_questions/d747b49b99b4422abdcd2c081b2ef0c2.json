@@ -1,0 +1,152 @@
+[
+  {
+    "question": "'File Name: runtime/runtime/src/bandwidth_scheduler/scheduler.rs -> Scope: High. An unprivileged sender exploits a protocol blind spot the design never anticipated: an unmodelled interaction between two individually correct mechanisms (global or deterministic contract deployment vs the compiled-contract cache, yield-resume vs the delayed receipt queue, resharding trie split vs buffered receipts and congestion state, universal account init vs implicit account derivation, meta-transaction relaying vs access-key allowance refunds, storage staking vs state resizing mid-receipt) where each side's assumption holds alone but their composition breaks balance conservation, determinism, or authorization.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_f9b1c574-1068-4a7d-852f-2fa61f6014ae?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/runtime/src/bandwidth_scheduler/distribute_remaining.rs -> Scope: High. An unprivileged sender exploits a protocol blind spot the design never anticipated: an unmodelled interaction between two individually correct mechanisms (global or deterministic contract deployment vs the compiled-contract cache, yield-resume vs the delayed receipt queue, resharding trie split vs buffered receipts and congestion state, universal account init vs implicit account derivation, meta-transaction relaying vs access-key allowance refunds, storage staking vs state resizing mid-receipt) where each side's assumption holds alone but their composition breaks balance conservation, determinism, or authorization.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_465aeb99-aeb0-48cd-8822-c634edbc23fe?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/primitives/src/congestion_info.rs -> Scope: High. An unprivileged sender exploits a protocol blind spot the design never anticipated: an unmodelled interaction between two individually correct mechanisms (global or deterministic contract deployment vs the compiled-contract cache, yield-resume vs the delayed receipt queue, resharding trie split vs buffered receipts and congestion state, universal account init vs implicit account derivation, meta-transaction relaying vs access-key allowance refunds, storage staking vs state resizing mid-receipt) where each side's assumption holds alone but their composition breaks balance conservation, determinism, or authorization.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_b06c7c57-ce9e-4722-80e8-c32890f03b2e?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/primitives/src/bandwidth_scheduler.rs -> Scope: High. An unprivileged sender exploits a protocol blind spot the design never anticipated: an unmodelled interaction between two individually correct mechanisms (global or deterministic contract deployment vs the compiled-contract cache, yield-resume vs the delayed receipt queue, resharding trie split vs buffered receipts and congestion state, universal account init vs implicit account derivation, meta-transaction relaying vs access-key allowance refunds, storage staking vs state resizing mid-receipt) where each side's assumption holds alone but their composition breaks balance conservation, determinism, or authorization.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_32319cde-abde-4390-815f-0ded7702b9f3?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: chain/epoch-manager/src/reward_calculator.rs -> Scope: High. An unprivileged sender exploits a protocol blind spot the design never anticipated: an unmodelled interaction between two individually correct mechanisms (global or deterministic contract deployment vs the compiled-contract cache, yield-resume vs the delayed receipt queue, resharding trie split vs buffered receipts and congestion state, universal account init vs implicit account derivation, meta-transaction relaying vs access-key allowance refunds, storage staking vs state resizing mid-receipt) where each side's assumption holds alone but their composition breaks balance conservation, determinism, or authorization.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_32e4aa16-f7c3-47bd-b1ce-52dd0476c2ca?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: chain/epoch-manager/src/lib.rs -> Scope: High. An unprivileged sender exploits a protocol blind spot the design never anticipated: an unmodelled interaction between two individually correct mechanisms (global or deterministic contract deployment vs the compiled-contract cache, yield-resume vs the delayed receipt queue, resharding trie split vs buffered receipts and congestion state, universal account init vs implicit account derivation, meta-transaction relaying vs access-key allowance refunds, storage staking vs state resizing mid-receipt) where each side's assumption holds alone but their composition breaks balance conservation, determinism, or authorization.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_12e5420a-baae-4b21-b1ab-abcdf58c7527?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: chain/epoch-manager/src/validator_selection.rs -> Scope: High. An unprivileged sender exploits a protocol blind spot the design never anticipated: an unmodelled interaction between two individually correct mechanisms (global or deterministic contract deployment vs the compiled-contract cache, yield-resume vs the delayed receipt queue, resharding trie split vs buffered receipts and congestion state, universal account init vs implicit account derivation, meta-transaction relaying vs access-key allowance refunds, storage staking vs state resizing mid-receipt) where each side's assumption holds alone but their composition breaks balance conservation, determinism, or authorization.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_b6bbf1a8-fc34-4eec-981e-83869d569bae?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: chain/chain/src/runtime/mod.rs -> Scope: High. An unprivileged sender exploits a protocol blind spot the design never anticipated: an unmodelled interaction between two individually correct mechanisms (global or deterministic contract deployment vs the compiled-contract cache, yield-resume vs the delayed receipt queue, resharding trie split vs buffered receipts and congestion state, universal account init vs implicit account derivation, meta-transaction relaying vs access-key allowance refunds, storage staking vs state resizing mid-receipt) where each side's assumption holds alone but their composition breaks balance conservation, determinism, or authorization.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_cb0e41d7-e14a-4889-a292-b406072eba9a?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/primitives/src/chunk_apply_stats.rs -> Scope: High. An unprivileged sender exploits a protocol blind spot the design never anticipated: an unmodelled interaction between two individually correct mechanisms (global or deterministic contract deployment vs the compiled-contract cache, yield-resume vs the delayed receipt queue, resharding trie split vs buffered receipts and congestion state, universal account init vs implicit account derivation, meta-transaction relaying vs access-key allowance refunds, storage staking vs state resizing mid-receipt) where each side's assumption holds alone but their composition breaks balance conservation, determinism, or authorization.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_fdb5ea3f-6f26-41ed-8413-56de0d987d59?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: chain/client/src/pending_transaction_queue.rs -> Scope: High. An unprivileged sender exploits a protocol blind spot the design never anticipated: an unmodelled interaction between two individually correct mechanisms (global or deterministic contract deployment vs the compiled-contract cache, yield-resume vs the delayed receipt queue, resharding trie split vs buffered receipts and congestion state, universal account init vs implicit account derivation, meta-transaction relaying vs access-key allowance refunds, storage staking vs state resizing mid-receipt) where each side's assumption holds alone but their composition breaks balance conservation, determinism, or authorization.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_ec7bbe6e-a975-45cd-a4fe-f3e5188b1451?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: chain/client/src/chunk_producer.rs -> Scope: High. An unprivileged sender exploits a protocol blind spot the design never anticipated: an unmodelled interaction between two individually correct mechanisms (global or deterministic contract deployment vs the compiled-contract cache, yield-resume vs the delayed receipt queue, resharding trie split vs buffered receipts and congestion state, universal account init vs implicit account derivation, meta-transaction relaying vs access-key allowance refunds, storage staking vs state resizing mid-receipt) where each side's assumption holds alone but their composition breaks balance conservation, determinism, or authorization.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_0379d960-4fdc-45c9-ba1b-9ece7c70c6d6?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: chain/client/src/rpc_handler.rs -> Scope: High. An unprivileged sender exploits a protocol blind spot the design never anticipated: an unmodelled interaction between two individually correct mechanisms (global or deterministic contract deployment vs the compiled-contract cache, yield-resume vs the delayed receipt queue, resharding trie split vs buffered receipts and congestion state, universal account init vs implicit account derivation, meta-transaction relaying vs access-key allowance refunds, storage staking vs state resizing mid-receipt) where each side's assumption holds alone but their composition breaks balance conservation, determinism, or authorization.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_e4ce0227-c252-40c9-bafd-afcdfcfe1d96?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: chain/client/src/stateless_validation/chunk_endorsement.rs -> Scope: High. An unprivileged sender exploits a protocol blind spot the design never anticipated: an unmodelled interaction between two individually correct mechanisms (global or deterministic contract deployment vs the compiled-contract cache, yield-resume vs the delayed receipt queue, resharding trie split vs buffered receipts and congestion state, universal account init vs implicit account derivation, meta-transaction relaying vs access-key allowance refunds, storage staking vs state resizing mid-receipt) where each side's assumption holds alone but their composition breaks balance conservation, determinism, or authorization.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_50310153-2bbd-4ef4-9674-74449bcf1b82?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/primitives/src/stateless_validation/chunk_endorsement.rs -> Scope: High. An unprivileged sender exploits a protocol blind spot the design never anticipated: an unmodelled interaction between two individually correct mechanisms (global or deterministic contract deployment vs the compiled-contract cache, yield-resume vs the delayed receipt queue, resharding trie split vs buffered receipts and congestion state, universal account init vs implicit account derivation, meta-transaction relaying vs access-key allowance refunds, storage staking vs state resizing mid-receipt) where each side's assumption holds alone but their composition breaks balance conservation, determinism, or authorization.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_d92dacd3-a0b9-496d-8b30-3527809a3373?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: chain/chain/src/validate.rs -> Scope: High. An unprivileged sender exploits a protocol blind spot the design never anticipated: an unmodelled interaction between two individually correct mechanisms (global or deterministic contract deployment vs the compiled-contract cache, yield-resume vs the delayed receipt queue, resharding trie split vs buffered receipts and congestion state, universal account init vs implicit account derivation, meta-transaction relaying vs access-key allowance refunds, storage staking vs state resizing mid-receipt) where each side's assumption holds alone but their composition breaks balance conservation, determinism, or authorization.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_81a2b0e8-4e20-4372-94ee-427697fa0af1?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: chain/jsonrpc/src/api/transactions.rs -> Scope: High. An unprivileged sender exploits a protocol blind spot the design never anticipated: an unmodelled interaction between two individually correct mechanisms (global or deterministic contract deployment vs the compiled-contract cache, yield-resume vs the delayed receipt queue, resharding trie split vs buffered receipts and congestion state, universal account init vs implicit account derivation, meta-transaction relaying vs access-key allowance refunds, storage staking vs state resizing mid-receipt) where each side's assumption holds alone but their composition breaks balance conservation, determinism, or authorization.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_09f63781-9c64-43f0-b441-328f54a3f8f2?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: chain/chain/src/resharding/manager.rs -> Scope: High. An unprivileged sender exploits a protocol blind spot the design never anticipated: an unmodelled interaction between two individually correct mechanisms (global or deterministic contract deployment vs the compiled-contract cache, yield-resume vs the delayed receipt queue, resharding trie split vs buffered receipts and congestion state, universal account init vs implicit account derivation, meta-transaction relaying vs access-key allowance refunds, storage staking vs state resizing mid-receipt) where each side's assumption holds alone but their composition breaks balance conservation, determinism, or authorization.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_5c4007c4-f8c3-4598-bd53-bbeb492bed73?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: chain/chain/src/resharding/event_type.rs -> Scope: High. An unprivileged sender exploits a protocol blind spot the design never anticipated: an unmodelled interaction between two individually correct mechanisms (global or deterministic contract deployment vs the compiled-contract cache, yield-resume vs the delayed receipt queue, resharding trie split vs buffered receipts and congestion state, universal account init vs implicit account derivation, meta-transaction relaying vs access-key allowance refunds, storage staking vs state resizing mid-receipt) where each side's assumption holds alone but their composition breaks balance conservation, determinism, or authorization.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_74f91437-668e-4f90-8ea2-49148fa38b3b?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/near-vm-runner/src/logic/logic.rs -> Scope: High. An unprivileged sender exploits a protocol blind spot the design never anticipated: an unmodelled interaction between two individually correct mechanisms (global or deterministic contract deployment vs the compiled-contract cache, yield-resume vs the delayed receipt queue, resharding trie split vs buffered receipts and congestion state, universal account init vs implicit account derivation, meta-transaction relaying vs access-key allowance refunds, storage staking vs state resizing mid-receipt) where each side's assumption holds alone but their composition breaks balance conservation, determinism, or authorization.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_4c0567ee-a37e-4a2e-8e34-ecce84047d06?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/near-vm-runner/src/logic/gas_counter.rs -> Scope: High. An unprivileged sender exploits a protocol blind spot the design never anticipated: an unmodelled interaction between two individually correct mechanisms (global or deterministic contract deployment vs the compiled-contract cache, yield-resume vs the delayed receipt queue, resharding trie split vs buffered receipts and congestion state, universal account init vs implicit account derivation, meta-transaction relaying vs access-key allowance refunds, storage staking vs state resizing mid-receipt) where each side's assumption holds alone but their composition breaks balance conservation, determinism, or authorization.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_ef2287b0-f3a8-4348-be20-436fcce2428d?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/near-vm-runner/src/logic/vmstate.rs -> Scope: High. An unprivileged sender exploits a protocol blind spot the design never anticipated: an unmodelled interaction between two individually correct mechanisms (global or deterministic contract deployment vs the compiled-contract cache, yield-resume vs the delayed receipt queue, resharding trie split vs buffered receipts and congestion state, universal account init vs implicit account derivation, meta-transaction relaying vs access-key allowance refunds, storage staking vs state resizing mid-receipt) where each side's assumption holds alone but their composition breaks balance conservation, determinism, or authorization.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_6ed5ae58-16e2-41c5-aee6-08c7b07c57df?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/near-vm-runner/src/logic/recorded_storage_counter.rs -> Scope: High. An unprivileged sender exploits a protocol blind spot the design never anticipated: an unmodelled interaction between two individually correct mechanisms (global or deterministic contract deployment vs the compiled-contract cache, yield-resume vs the delayed receipt queue, resharding trie split vs buffered receipts and congestion state, universal account init vs implicit account derivation, meta-transaction relaying vs access-key allowance refunds, storage staking vs state resizing mid-receipt) where each side's assumption holds alone but their composition breaks balance conservation, determinism, or authorization.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_2b95c994-bf39-45a4-a223-b12a199d3115?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/near-vm-runner/src/logic/context.rs -> Scope: High. An unprivileged sender exploits a protocol blind spot the design never anticipated: an unmodelled interaction between two individually correct mechanisms (global or deterministic contract deployment vs the compiled-contract cache, yield-resume vs the delayed receipt queue, resharding trie split vs buffered receipts and congestion state, universal account init vs implicit account derivation, meta-transaction relaying vs access-key allowance refunds, storage staking vs state resizing mid-receipt) where each side's assumption holds alone but their composition breaks balance conservation, determinism, or authorization.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_7973f675-3d02-48fd-b8b6-7450a071300a?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/near-vm-runner/src/logic/alt_bn128.rs -> Scope: High. An unprivileged sender exploits a protocol blind spot the design never anticipated: an unmodelled interaction between two individually correct mechanisms (global or deterministic contract deployment vs the compiled-contract cache, yield-resume vs the delayed receipt queue, resharding trie split vs buffered receipts and congestion state, universal account init vs implicit account derivation, meta-transaction relaying vs access-key allowance refunds, storage staking vs state resizing mid-receipt) where each side's assumption holds alone but their composition breaks balance conservation, determinism, or authorization.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_d75da0eb-b62e-4343-8bf2-5babf7159772?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/near-vm-runner/src/logic/bls12381.rs -> Scope: High. An unprivileged sender exploits a protocol blind spot the design never anticipated: an unmodelled interaction between two individually correct mechanisms (global or deterministic contract deployment vs the compiled-contract cache, yield-resume vs the delayed receipt queue, resharding trie split vs buffered receipts and congestion state, universal account init vs implicit account derivation, meta-transaction relaying vs access-key allowance refunds, storage staking vs state resizing mid-receipt) where each side's assumption holds alone but their composition breaks balance conservation, determinism, or authorization.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_459840dc-de54-4ac4-9cf1-ab675712fa54?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/near-vm-runner/src/imports.rs -> Scope: High. An unprivileged sender exploits a protocol blind spot the design never anticipated: an unmodelled interaction between two individually correct mechanisms (global or deterministic contract deployment vs the compiled-contract cache, yield-resume vs the delayed receipt queue, resharding trie split vs buffered receipts and congestion state, universal account init vs implicit account derivation, meta-transaction relaying vs access-key allowance refunds, storage staking vs state resizing mid-receipt) where each side's assumption holds alone but their composition breaks balance conservation, determinism, or authorization.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_5b013504-bcfe-45c8-bd7b-cb724d14f5e2?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/near-vm-runner/src/prepare.rs -> Scope: High. An unprivileged sender exploits a protocol blind spot the design never anticipated: an unmodelled interaction between two individually correct mechanisms (global or deterministic contract deployment vs the compiled-contract cache, yield-resume vs the delayed receipt queue, resharding trie split vs buffered receipts and congestion state, universal account init vs implicit account derivation, meta-transaction relaying vs access-key allowance refunds, storage staking vs state resizing mid-receipt) where each side's assumption holds alone but their composition breaks balance conservation, determinism, or authorization.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_0a3ef8ba-c20b-4674-bed0-09d5b7211e78?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/near-vm-runner/src/prepare/prepare_v2.rs -> Scope: High. An unprivileged sender exploits a protocol blind spot the design never anticipated: an unmodelled interaction between two individually correct mechanisms (global or deterministic contract deployment vs the compiled-contract cache, yield-resume vs the delayed receipt queue, resharding trie split vs buffered receipts and congestion state, universal account init vs implicit account derivation, meta-transaction relaying vs access-key allowance refunds, storage staking vs state resizing mid-receipt) where each side's assumption holds alone but their composition breaks balance conservation, determinism, or authorization.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_0290579c-36c1-425e-a777-109977a95a8c?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/near-vm-runner/src/prepare/prepare_v3.rs -> Scope: High. An unprivileged sender exploits a protocol blind spot the design never anticipated: an unmodelled interaction between two individually correct mechanisms (global or deterministic contract deployment vs the compiled-contract cache, yield-resume vs the delayed receipt queue, resharding trie split vs buffered receipts and congestion state, universal account init vs implicit account derivation, meta-transaction relaying vs access-key allowance refunds, storage staking vs state resizing mid-receipt) where each side's assumption holds alone but their composition breaks balance conservation, determinism, or authorization.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_331930b1-ddcd-4ac7-ba90-3da058577ef8?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/near-vm-runner/src/prepare/instrument_v3.rs -> Scope: High. An unprivileged sender exploits a protocol blind spot the design never anticipated: an unmodelled interaction between two individually correct mechanisms (global or deterministic contract deployment vs the compiled-contract cache, yield-resume vs the delayed receipt queue, resharding trie split vs buffered receipts and congestion state, universal account init vs implicit account derivation, meta-transaction relaying vs access-key allowance refunds, storage staking vs state resizing mid-receipt) where each side's assumption holds alone but their composition breaks balance conservation, determinism, or authorization.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_360a3946-3daa-474d-9f91-9b785f672c0b?mode=deep",
+    "questions_generated": false
+  }
+]
