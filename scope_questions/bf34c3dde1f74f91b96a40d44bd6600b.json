@@ -1,0 +1,152 @@
+[
+  {
+    "question": "'File Name: runtime/runtime/src/bandwidth_scheduler/scheduler.rs -> Scope: High. An unprivileged sender abuses cross-shard flow control, manipulating congestion info, delayed/buffered receipt accounting, or bandwidth-scheduler grant allocation so its own receipts are admitted while a target shard is starved or held congested, denying cross-shard service to other users.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_27927cbd-716f-4be5-b8a4-2e7d8f2c4c83?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/runtime/src/bandwidth_scheduler/distribute_remaining.rs -> Scope: High. An unprivileged sender abuses cross-shard flow control, manipulating congestion info, delayed/buffered receipt accounting, or bandwidth-scheduler grant allocation so its own receipts are admitted while a target shard is starved or held congested, denying cross-shard service to other users.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_bb7a34aa-53a3-4998-978b-a68744f1d6e3?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/primitives/src/congestion_info.rs -> Scope: High. An unprivileged sender abuses cross-shard flow control, manipulating congestion info, delayed/buffered receipt accounting, or bandwidth-scheduler grant allocation so its own receipts are admitted while a target shard is starved or held congested, denying cross-shard service to other users.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_9d5a87ec-841a-468b-99ff-c7888b28e06b?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/primitives/src/bandwidth_scheduler.rs -> Scope: High. An unprivileged sender abuses cross-shard flow control, manipulating congestion info, delayed/buffered receipt accounting, or bandwidth-scheduler grant allocation so its own receipts are admitted while a target shard is starved or held congested, denying cross-shard service to other users.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_4ae5fb90-cada-4b06-96b5-80ed9410b85c?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: chain/epoch-manager/src/reward_calculator.rs -> Scope: High. An unprivileged sender abuses cross-shard flow control, manipulating congestion info, delayed/buffered receipt accounting, or bandwidth-scheduler grant allocation so its own receipts are admitted while a target shard is starved or held congested, denying cross-shard service to other users.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_69e7eb94-691b-4bbd-94c7-252009c05551?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: chain/epoch-manager/src/lib.rs -> Scope: High. An unprivileged sender abuses cross-shard flow control, manipulating congestion info, delayed/buffered receipt accounting, or bandwidth-scheduler grant allocation so its own receipts are admitted while a target shard is starved or held congested, denying cross-shard service to other users.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_dc373e1d-dcbc-4bee-9f24-13596b0b3210?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: chain/epoch-manager/src/validator_selection.rs -> Scope: High. An unprivileged sender abuses cross-shard flow control, manipulating congestion info, delayed/buffered receipt accounting, or bandwidth-scheduler grant allocation so its own receipts are admitted while a target shard is starved or held congested, denying cross-shard service to other users.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_03af4d9b-8bf2-4e85-b0c4-ab27082a7611?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: chain/chain/src/runtime/mod.rs -> Scope: High. An unprivileged sender abuses cross-shard flow control, manipulating congestion info, delayed/buffered receipt accounting, or bandwidth-scheduler grant allocation so its own receipts are admitted while a target shard is starved or held congested, denying cross-shard service to other users.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_b17ea7ab-d06e-406d-8808-9dd6e6afca44?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/primitives/src/chunk_apply_stats.rs -> Scope: High. An unprivileged sender abuses cross-shard flow control, manipulating congestion info, delayed/buffered receipt accounting, or bandwidth-scheduler grant allocation so its own receipts are admitted while a target shard is starved or held congested, denying cross-shard service to other users.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_27729056-09e6-47c1-9985-215ad0995cf7?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: chain/client/src/pending_transaction_queue.rs -> Scope: High. An unprivileged sender abuses cross-shard flow control, manipulating congestion info, delayed/buffered receipt accounting, or bandwidth-scheduler grant allocation so its own receipts are admitted while a target shard is starved or held congested, denying cross-shard service to other users.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_9b84a976-de8a-4b23-b6ac-710b1f2a0627?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: chain/client/src/chunk_producer.rs -> Scope: High. An unprivileged sender abuses cross-shard flow control, manipulating congestion info, delayed/buffered receipt accounting, or bandwidth-scheduler grant allocation so its own receipts are admitted while a target shard is starved or held congested, denying cross-shard service to other users.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_7ac2d184-3bea-44e0-8484-4238ea9dbae9?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: chain/client/src/rpc_handler.rs -> Scope: High. An unprivileged sender abuses cross-shard flow control, manipulating congestion info, delayed/buffered receipt accounting, or bandwidth-scheduler grant allocation so its own receipts are admitted while a target shard is starved or held congested, denying cross-shard service to other users.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_a03d5f1c-30f8-4a68-a69a-bb9a7578b196?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: chain/client/src/stateless_validation/chunk_endorsement.rs -> Scope: High. An unprivileged sender abuses cross-shard flow control, manipulating congestion info, delayed/buffered receipt accounting, or bandwidth-scheduler grant allocation so its own receipts are admitted while a target shard is starved or held congested, denying cross-shard service to other users.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_2c30fb89-3415-486d-a010-27c7d4d1808e?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/primitives/src/stateless_validation/chunk_endorsement.rs -> Scope: High. An unprivileged sender abuses cross-shard flow control, manipulating congestion info, delayed/buffered receipt accounting, or bandwidth-scheduler grant allocation so its own receipts are admitted while a target shard is starved or held congested, denying cross-shard service to other users.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_a4d5e08e-4d3a-453a-b930-62fae60648df?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: chain/chain/src/validate.rs -> Scope: High. An unprivileged sender abuses cross-shard flow control, manipulating congestion info, delayed/buffered receipt accounting, or bandwidth-scheduler grant allocation so its own receipts are admitted while a target shard is starved or held congested, denying cross-shard service to other users.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_757ad8cd-3864-400d-89cb-a601c91e188b?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: chain/jsonrpc/src/api/transactions.rs -> Scope: High. An unprivileged sender abuses cross-shard flow control, manipulating congestion info, delayed/buffered receipt accounting, or bandwidth-scheduler grant allocation so its own receipts are admitted while a target shard is starved or held congested, denying cross-shard service to other users.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_5671503a-3352-4c7f-8e6d-4f57750a26aa?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: chain/chain/src/resharding/manager.rs -> Scope: High. An unprivileged sender abuses cross-shard flow control, manipulating congestion info, delayed/buffered receipt accounting, or bandwidth-scheduler grant allocation so its own receipts are admitted while a target shard is starved or held congested, denying cross-shard service to other users.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_e271e776-c99d-47b5-a3fd-ae71fa196a8f?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: chain/chain/src/resharding/event_type.rs -> Scope: High. An unprivileged sender abuses cross-shard flow control, manipulating congestion info, delayed/buffered receipt accounting, or bandwidth-scheduler grant allocation so its own receipts are admitted while a target shard is starved or held congested, denying cross-shard service to other users.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_3290df7c-eb44-493a-a43d-cef6f6ece418?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/near-vm-runner/src/logic/logic.rs -> Scope: High. An unprivileged sender abuses cross-shard flow control, manipulating congestion info, delayed/buffered receipt accounting, or bandwidth-scheduler grant allocation so its own receipts are admitted while a target shard is starved or held congested, denying cross-shard service to other users.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_4a371fce-eb53-467b-8675-8a3c57bf8fe6?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/near-vm-runner/src/logic/gas_counter.rs -> Scope: High. An unprivileged sender abuses cross-shard flow control, manipulating congestion info, delayed/buffered receipt accounting, or bandwidth-scheduler grant allocation so its own receipts are admitted while a target shard is starved or held congested, denying cross-shard service to other users.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_4e7d8d92-9f2b-4e59-b907-4391d5d661ce?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/near-vm-runner/src/logic/vmstate.rs -> Scope: High. An unprivileged sender abuses cross-shard flow control, manipulating congestion info, delayed/buffered receipt accounting, or bandwidth-scheduler grant allocation so its own receipts are admitted while a target shard is starved or held congested, denying cross-shard service to other users.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_871c2154-8975-45d0-acde-d76b4c847574?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/near-vm-runner/src/logic/recorded_storage_counter.rs -> Scope: High. An unprivileged sender abuses cross-shard flow control, manipulating congestion info, delayed/buffered receipt accounting, or bandwidth-scheduler grant allocation so its own receipts are admitted while a target shard is starved or held congested, denying cross-shard service to other users.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_009296a2-cff6-4f29-8300-72b77dec8474?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/near-vm-runner/src/logic/context.rs -> Scope: High. An unprivileged sender abuses cross-shard flow control, manipulating congestion info, delayed/buffered receipt accounting, or bandwidth-scheduler grant allocation so its own receipts are admitted while a target shard is starved or held congested, denying cross-shard service to other users.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_9cb55ec1-377a-4ccb-8b41-4c39475fd265?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/near-vm-runner/src/logic/alt_bn128.rs -> Scope: High. An unprivileged sender abuses cross-shard flow control, manipulating congestion info, delayed/buffered receipt accounting, or bandwidth-scheduler grant allocation so its own receipts are admitted while a target shard is starved or held congested, denying cross-shard service to other users.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_67630c74-7854-4b33-a3c1-b0dea83b04e7?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/near-vm-runner/src/logic/bls12381.rs -> Scope: High. An unprivileged sender abuses cross-shard flow control, manipulating congestion info, delayed/buffered receipt accounting, or bandwidth-scheduler grant allocation so its own receipts are admitted while a target shard is starved or held congested, denying cross-shard service to other users.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_10ccc22c-8865-4cc0-9bef-54d96c2e27f1?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/near-vm-runner/src/imports.rs -> Scope: High. An unprivileged sender abuses cross-shard flow control, manipulating congestion info, delayed/buffered receipt accounting, or bandwidth-scheduler grant allocation so its own receipts are admitted while a target shard is starved or held congested, denying cross-shard service to other users.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_4bbcf186-eefe-4a31-a7b9-daf238e14718?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/near-vm-runner/src/prepare.rs -> Scope: High. An unprivileged sender abuses cross-shard flow control, manipulating congestion info, delayed/buffered receipt accounting, or bandwidth-scheduler grant allocation so its own receipts are admitted while a target shard is starved or held congested, denying cross-shard service to other users.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_fa5ac21f-c192-4fa3-a5c6-dce32faa9a1e?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/near-vm-runner/src/prepare/prepare_v2.rs -> Scope: High. An unprivileged sender abuses cross-shard flow control, manipulating congestion info, delayed/buffered receipt accounting, or bandwidth-scheduler grant allocation so its own receipts are admitted while a target shard is starved or held congested, denying cross-shard service to other users.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_4eadfea3-ef9b-4919-a19e-fc00464f8f05?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/near-vm-runner/src/prepare/prepare_v3.rs -> Scope: High. An unprivileged sender abuses cross-shard flow control, manipulating congestion info, delayed/buffered receipt accounting, or bandwidth-scheduler grant allocation so its own receipts are admitted while a target shard is starved or held congested, denying cross-shard service to other users.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_7481d169-c4aa-43e7-9aab-04fc70eb948b?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/near-vm-runner/src/prepare/instrument_v3.rs -> Scope: High. An unprivileged sender abuses cross-shard flow control, manipulating congestion info, delayed/buffered receipt accounting, or bandwidth-scheduler grant allocation so its own receipts are admitted while a target shard is starved or held congested, denying cross-shard service to other users.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_f490c987-2de3-4662-bf3a-58de6f7ecb6c?mode=deep",
+    "questions_generated": false
+  }
+]
