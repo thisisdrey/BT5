@@ -1,0 +1,1 @@
+check (lib.rs:1499) takes effect. Proof idea: test-loop test asserting exactly one register-population / memory-write sequence (one execution) of the callback method across the real-resume-vs-timeout race, verified by checking the contract's persisted state was mutated exactly once.
