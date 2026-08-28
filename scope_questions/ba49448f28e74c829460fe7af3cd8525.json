@@ -1,0 +1,62 @@
+[
+  {
+    "question": "'File Name: runtime/near-vm-runner/src/cache.rs -> Scope: Critical. An unprivileged signer gets an action executed against an account it does not control, because signature binding, nonce/access-key lookup, FunctionCall access-key method/receiver/allowance restrictions, or DelegateAction relaying let the receiver, predecessor, or signer identity be forged, letting the attacker transfer, deploy, add keys to, or delete the victim's account without the victim's key.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_3c40ca15-4d63-49b0-8209-338591a8bcc6?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/near-vm-runner/src/runner.rs -> Scope: Critical. An unprivileged signer gets an action executed against an account it does not control, because signature binding, nonce/access-key lookup, FunctionCall access-key method/receiver/allowance restrictions, or DelegateAction relaying let the receiver, predecessor, or signer identity be forged, letting the attacker transfer, deploy, add keys to, or delete the victim's account without the victim's key.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_7d0d7102-c5bf-46f0-ab59-ac1cc2ad3731?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/near-vm-runner/src/wasmtime_runner/logic.rs -> Scope: Critical. An unprivileged signer gets an action executed against an account it does not control, because signature binding, nonce/access-key lookup, FunctionCall access-key method/receiver/allowance restrictions, or DelegateAction relaying let the receiver, predecessor, or signer identity be forged, letting the attacker transfer, deploy, add keys to, or delete the victim's account without the victim's key.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_cf92002c-31fd-4b03-a97c-8b2c69c1ce6f?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/store/src/trie/mod.rs -> Scope: Critical. An unprivileged signer gets an action executed against an account it does not control, because signature binding, nonce/access-key lookup, FunctionCall access-key method/receiver/allowance restrictions, or DelegateAction relaying let the receiver, predecessor, or signer identity be forged, letting the attacker transfer, deploy, add keys to, or delete the victim's account without the victim's key.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_fea3163d-e8d7-43a4-a4b3-8f26751e7300?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/store/src/trie/update.rs -> Scope: Critical. An unprivileged signer gets an action executed against an account it does not control, because signature binding, nonce/access-key lookup, FunctionCall access-key method/receiver/allowance restrictions, or DelegateAction relaying let the receiver, predecessor, or signer identity be forged, letting the attacker transfer, deploy, add keys to, or delete the victim's account without the victim's key.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_55aefaa7-a9e9-4d37-b47b-aaa315d08f12?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/store/src/trie/trie_storage_update.rs -> Scope: Critical. An unprivileged signer gets an action executed against an account it does not control, because signature binding, nonce/access-key lookup, FunctionCall access-key method/receiver/allowance restrictions, or DelegateAction relaying let the receiver, predecessor, or signer identity be forged, letting the attacker transfer, deploy, add keys to, or delete the victim's account without the victim's key.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_f85a5851-5d3e-4d35-8746-e27ffe2bed27?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/store/src/trie/ops/insert_delete.rs -> Scope: Critical. An unprivileged signer gets an action executed against an account it does not control, because signature binding, nonce/access-key lookup, FunctionCall access-key method/receiver/allowance restrictions, or DelegateAction relaying let the receiver, predecessor, or signer identity be forged, letting the attacker transfer, deploy, add keys to, or delete the victim's account without the victim's key.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_138a83a2-c427-45ae-b6bd-cb1f5f06e168?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/store/src/trie/ops/squash.rs -> Scope: Critical. An unprivileged signer gets an action executed against an account it does not control, because signature binding, nonce/access-key lookup, FunctionCall access-key method/receiver/allowance restrictions, or DelegateAction relaying let the receiver, predecessor, or signer identity be forged, letting the attacker transfer, deploy, add keys to, or delete the victim's account without the victim's key.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_b772902e-ab2e-4785-9667-5850510da4b4?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/store/src/trie/raw_node.rs -> Scope: Critical. An unprivileged signer gets an action executed against an account it does not control, because signature binding, nonce/access-key lookup, FunctionCall access-key method/receiver/allowance restrictions, or DelegateAction relaying let the receiver, predecessor, or signer identity be forged, letting the attacker transfer, deploy, add keys to, or delete the victim's account without the victim's key.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_9e955633-cd8a-42f1-a8ba-c25598209bb5?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/store/src/trie/trie_recording.rs -> Scope: Critical. An unprivileged signer gets an action executed against an account it does not control, because signature binding, nonce/access-key lookup, FunctionCall access-key method/receiver/allowance restrictions, or DelegateAction relaying let the receiver, predecessor, or signer identity be forged, letting the attacker transfer, deploy, add keys to, or delete the victim's account without the victim's key.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_b0dd5781-f874-461a-892f-8c7911aa6ba7?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/store/src/trie/receipts_column_helper.rs -> Scope: Critical. An unprivileged signer gets an action executed against an account it does not control, because signature binding, nonce/access-key lookup, FunctionCall access-key method/receiver/allowance restrictions, or DelegateAction relaying let the receiver, predecessor, or signer identity be forged, letting the attacker transfer, deploy, add keys to, or delete the victim's account without the victim's key.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_1f4ae9e0-b9a4-4246-9f8c-cab216916497?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/store/src/trie/outgoing_metadata.rs -> Scope: Critical. An unprivileged signer gets an action executed against an account it does not control, because signature binding, nonce/access-key lookup, FunctionCall access-key method/receiver/allowance restrictions, or DelegateAction relaying let the receiver, predecessor, or signer identity be forged, letting the attacker transfer, deploy, add keys to, or delete the victim's account without the victim's key.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_9515b2ea-292d-4e1c-b7c4-cae9eb46f154?mode=deep",
+    "questions_generated": false
+  }
+]
