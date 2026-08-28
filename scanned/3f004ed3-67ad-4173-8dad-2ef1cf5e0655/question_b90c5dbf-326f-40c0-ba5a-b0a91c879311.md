@@ -1,0 +1,1 @@
+)` at manager.rs:353-357) halting the shard at the resharding boundary. Proof idea: test-loop resharding test that saturates the parent shard's outgoing buffer to the splitting shard right at the boundary block and asserts get_child_congestion_info_not_finalized never panics regardless of receipt timing/ordering right at the split block.

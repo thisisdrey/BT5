@@ -1,0 +1,1 @@
+implicit account, enabling double-spend against a counterparty who observed the original execution as final. Proof idea: test-loop test spanning delete + re-creation within a tight height window and asserting the stale nonce passes verify_nonce on the recreated key.
