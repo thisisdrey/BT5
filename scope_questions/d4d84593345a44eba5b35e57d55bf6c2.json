@@ -1,0 +1,62 @@
+[
+  {
+    "question": "'File Name: runtime/near-vm-runner/src/cache.rs -> Scope: High. A GUARD WHOSE COMPENSATING BRANCH IS WRONG. One site skips work because a comment or an invariant asserts another site already did it, but that other site does not, cannot, or no longer does. Read the skipped branch and the branch it defers to together and verify the handoff actually happens rather than trusting the comment. This is how F5 escaped detection despite existing tests.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_761fe84c-546c-4d19-b6c1-b5bbcb6c5d4a?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/near-vm-runner/src/runner.rs -> Scope: High. A GUARD WHOSE COMPENSATING BRANCH IS WRONG. One site skips work because a comment or an invariant asserts another site already did it, but that other site does not, cannot, or no longer does. Read the skipped branch and the branch it defers to together and verify the handoff actually happens rather than trusting the comment. This is how F5 escaped detection despite existing tests.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_a6c8f7b4-4534-4a3b-ad12-215794f8d46e?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/near-vm-runner/src/wasmtime_runner/logic.rs -> Scope: High. A GUARD WHOSE COMPENSATING BRANCH IS WRONG. One site skips work because a comment or an invariant asserts another site already did it, but that other site does not, cannot, or no longer does. Read the skipped branch and the branch it defers to together and verify the handoff actually happens rather than trusting the comment. This is how F5 escaped detection despite existing tests.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_03ece030-2c9c-4687-8fbc-4b4750d06930?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/store/src/trie/mod.rs -> Scope: High. A GUARD WHOSE COMPENSATING BRANCH IS WRONG. One site skips work because a comment or an invariant asserts another site already did it, but that other site does not, cannot, or no longer does. Read the skipped branch and the branch it defers to together and verify the handoff actually happens rather than trusting the comment. This is how F5 escaped detection despite existing tests.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_2957f0e3-3e34-4831-a2f0-752a94518aeb?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/store/src/trie/update.rs -> Scope: High. A GUARD WHOSE COMPENSATING BRANCH IS WRONG. One site skips work because a comment or an invariant asserts another site already did it, but that other site does not, cannot, or no longer does. Read the skipped branch and the branch it defers to together and verify the handoff actually happens rather than trusting the comment. This is how F5 escaped detection despite existing tests.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_a62719a5-97da-4661-82da-f64d7e31a050?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/store/src/trie/trie_storage_update.rs -> Scope: High. A GUARD WHOSE COMPENSATING BRANCH IS WRONG. One site skips work because a comment or an invariant asserts another site already did it, but that other site does not, cannot, or no longer does. Read the skipped branch and the branch it defers to together and verify the handoff actually happens rather than trusting the comment. This is how F5 escaped detection despite existing tests.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_b0adfa14-f521-4417-a30f-5b07df65a64c?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/store/src/trie/ops/insert_delete.rs -> Scope: High. A GUARD WHOSE COMPENSATING BRANCH IS WRONG. One site skips work because a comment or an invariant asserts another site already did it, but that other site does not, cannot, or no longer does. Read the skipped branch and the branch it defers to together and verify the handoff actually happens rather than trusting the comment. This is how F5 escaped detection despite existing tests.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_b1a4f432-da8f-4a74-8731-efff2c761c27?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/store/src/trie/ops/squash.rs -> Scope: High. A GUARD WHOSE COMPENSATING BRANCH IS WRONG. One site skips work because a comment or an invariant asserts another site already did it, but that other site does not, cannot, or no longer does. Read the skipped branch and the branch it defers to together and verify the handoff actually happens rather than trusting the comment. This is how F5 escaped detection despite existing tests.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_fde9ccde-1760-4ac9-92a5-4a05346b214c?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/store/src/trie/raw_node.rs -> Scope: High. A GUARD WHOSE COMPENSATING BRANCH IS WRONG. One site skips work because a comment or an invariant asserts another site already did it, but that other site does not, cannot, or no longer does. Read the skipped branch and the branch it defers to together and verify the handoff actually happens rather than trusting the comment. This is how F5 escaped detection despite existing tests.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_9145b881-a176-47fb-a96b-d1ec6bdfcdda?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/store/src/trie/trie_recording.rs -> Scope: High. A GUARD WHOSE COMPENSATING BRANCH IS WRONG. One site skips work because a comment or an invariant asserts another site already did it, but that other site does not, cannot, or no longer does. Read the skipped branch and the branch it defers to together and verify the handoff actually happens rather than trusting the comment. This is how F5 escaped detection despite existing tests.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_7a9b1429-a53d-4d0f-8a3d-9ff97b138a23?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/store/src/trie/receipts_column_helper.rs -> Scope: High. A GUARD WHOSE COMPENSATING BRANCH IS WRONG. One site skips work because a comment or an invariant asserts another site already did it, but that other site does not, cannot, or no longer does. Read the skipped branch and the branch it defers to together and verify the handoff actually happens rather than trusting the comment. This is how F5 escaped detection despite existing tests.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_76a9641d-173c-4fc3-96d5-cf29b9fb091a?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/store/src/trie/outgoing_metadata.rs -> Scope: High. A GUARD WHOSE COMPENSATING BRANCH IS WRONG. One site skips work because a comment or an invariant asserts another site already did it, but that other site does not, cannot, or no longer does. Read the skipped branch and the branch it defers to together and verify the handoff actually happens rather than trusting the comment. This is how F5 escaped detection despite existing tests.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_481b03f1-8cb5-4c0d-9132-563523edcb1b?mode=deep",
+    "questions_generated": false
+  }
+]
