@@ -1,0 +1,1 @@
+)` panic and halting the shard apply, permanently freezing every account's queued receipts on that shard? Proof idea: differential test that pushes N receipts of known sizes/gas into the outgoing buffer, pops them all via forward_from_buffer, and asserts total_size/total_gas return to exactly zero without hitting the checked-subtraction panic path.

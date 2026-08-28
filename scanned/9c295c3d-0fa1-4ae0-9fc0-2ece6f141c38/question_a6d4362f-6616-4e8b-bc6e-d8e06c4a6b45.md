@@ -1,0 +1,1 @@
+outcome on one node ordering and success on another, violating Determinism if receipt ordering itself isn't already a deterministic input? Proof idea: runtime integration test with a state-init receipt and a UseGlobalContract/DeployGlobalContract receipt targeting the same account in one chunk, assert identical outcome regardless of the shard's internal receipt-processing order.

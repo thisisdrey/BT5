@@ -1,0 +1,1 @@
+) never changes anything observable in `VMOutcome` (gas burnt, return value, storage writes) versus a well-formed name section, since the name section is metadata-only. Preconditions: funded account, contract with a corrupted custom

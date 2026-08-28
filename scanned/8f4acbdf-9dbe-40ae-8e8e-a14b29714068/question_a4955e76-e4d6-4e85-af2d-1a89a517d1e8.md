@@ -1,0 +1,1 @@
+(the whole FunctionCall) receives no debit for it, breaking VALUE_CONSERVATION? Proof idea: integration test creating exactly the promise limit, having the last promise_batch_then reference an out-of-range PromiseIndex from a failed checked_push_promise call, and assert receipts.len() == successfully-charged promise count.
