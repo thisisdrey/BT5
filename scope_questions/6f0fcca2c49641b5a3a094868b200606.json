@@ -1,0 +1,62 @@
+[
+  {
+    "question": "'File Name: runtime/near-vm-runner/src/cache.rs -> Scope: Critical. An attacker-deployed contract escapes its sandbox through near-vm-runner host logic, reading or writing guest memory out of bounds, reusing or forging registers, or building a promise batch that attaches predecessor/signer privileges or gas the caller never held, letting it act as another account and steal from contracts holding user funds.'",
+    "url": "https://deepwiki.com/Loderfordw/nearcore--023",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/near-vm-runner/src/runner.rs -> Scope: Critical. An attacker-deployed contract escapes its sandbox through near-vm-runner host logic, reading or writing guest memory out of bounds, reusing or forging registers, or building a promise batch that attaches predecessor/signer privileges or gas the caller never held, letting it act as another account and steal from contracts holding user funds.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_74e1f4cd-2401-4f3d-bf3d-966510976b8e?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/near-vm-runner/src/wasmtime_runner/logic.rs -> Scope: Critical. An attacker-deployed contract escapes its sandbox through near-vm-runner host logic, reading or writing guest memory out of bounds, reusing or forging registers, or building a promise batch that attaches predecessor/signer privileges or gas the caller never held, letting it act as another account and steal from contracts holding user funds.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_b011736a-3dd3-4888-92be-2f546246364f?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/store/src/trie/mod.rs -> Scope: Critical. An attacker-deployed contract escapes its sandbox through near-vm-runner host logic, reading or writing guest memory out of bounds, reusing or forging registers, or building a promise batch that attaches predecessor/signer privileges or gas the caller never held, letting it act as another account and steal from contracts holding user funds.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_ae6b9e7e-c241-4ecc-98c7-cd4c46837b0c?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/store/src/trie/update.rs -> Scope: Critical. An attacker-deployed contract escapes its sandbox through near-vm-runner host logic, reading or writing guest memory out of bounds, reusing or forging registers, or building a promise batch that attaches predecessor/signer privileges or gas the caller never held, letting it act as another account and steal from contracts holding user funds.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_b1c6ab0e-99bd-4571-8e0a-60b6ead78bda?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/store/src/trie/trie_storage_update.rs -> Scope: Critical. An attacker-deployed contract escapes its sandbox through near-vm-runner host logic, reading or writing guest memory out of bounds, reusing or forging registers, or building a promise batch that attaches predecessor/signer privileges or gas the caller never held, letting it act as another account and steal from contracts holding user funds.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_03a32e40-e657-4b4a-87e8-9f98f20188bc?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/store/src/trie/ops/insert_delete.rs -> Scope: Critical. An attacker-deployed contract escapes its sandbox through near-vm-runner host logic, reading or writing guest memory out of bounds, reusing or forging registers, or building a promise batch that attaches predecessor/signer privileges or gas the caller never held, letting it act as another account and steal from contracts holding user funds.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_9d0193d2-41b2-4541-946d-daf3e1506873?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/store/src/trie/ops/squash.rs -> Scope: Critical. An attacker-deployed contract escapes its sandbox through near-vm-runner host logic, reading or writing guest memory out of bounds, reusing or forging registers, or building a promise batch that attaches predecessor/signer privileges or gas the caller never held, letting it act as another account and steal from contracts holding user funds.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_aa32918e-d321-4758-9405-b52695509ed0?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/store/src/trie/raw_node.rs -> Scope: Critical. An attacker-deployed contract escapes its sandbox through near-vm-runner host logic, reading or writing guest memory out of bounds, reusing or forging registers, or building a promise batch that attaches predecessor/signer privileges or gas the caller never held, letting it act as another account and steal from contracts holding user funds.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_bebb70f0-3d3e-43d5-a21f-60d8428b1801?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/store/src/trie/trie_recording.rs -> Scope: Critical. An attacker-deployed contract escapes its sandbox through near-vm-runner host logic, reading or writing guest memory out of bounds, reusing or forging registers, or building a promise batch that attaches predecessor/signer privileges or gas the caller never held, letting it act as another account and steal from contracts holding user funds.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_5d2358a0-f8ab-45ec-b4d5-3e8d3e6da29a?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/store/src/trie/receipts_column_helper.rs -> Scope: Critical. An attacker-deployed contract escapes its sandbox through near-vm-runner host logic, reading or writing guest memory out of bounds, reusing or forging registers, or building a promise batch that attaches predecessor/signer privileges or gas the caller never held, letting it act as another account and steal from contracts holding user funds.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_d647ee74-3eae-4e0b-ac65-16805a141b5f?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/store/src/trie/outgoing_metadata.rs -> Scope: Critical. An attacker-deployed contract escapes its sandbox through near-vm-runner host logic, reading or writing guest memory out of bounds, reusing or forging registers, or building a promise batch that attaches predecessor/signer privileges or gas the caller never held, letting it act as another account and steal from contracts holding user funds.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_5b370559-da4e-4a4e-ac31-76a07eaed63f?mode=deep",
+    "questions_generated": false
+  }
+]
