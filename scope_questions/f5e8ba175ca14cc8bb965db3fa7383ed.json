@@ -1,0 +1,62 @@
+[
+  {
+    "question": "'File Name: runtime/near-vm-runner/src/cache.rs -> Scope: Critical. An unprivileged sender lands a single transaction or receipt that panics, aborts, overflows, or fails to terminate on the chunk apply path, so every node processing that shard crashes or the shard stalls permanently and requires human intervention to recover.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_dc7b5516-8c19-4f4c-a36b-307bffe47f57?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/near-vm-runner/src/runner.rs -> Scope: Critical. An unprivileged sender lands a single transaction or receipt that panics, aborts, overflows, or fails to terminate on the chunk apply path, so every node processing that shard crashes or the shard stalls permanently and requires human intervention to recover.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_89551126-ce34-42fe-8117-be0621cc0753?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/near-vm-runner/src/wasmtime_runner/logic.rs -> Scope: Critical. An unprivileged sender lands a single transaction or receipt that panics, aborts, overflows, or fails to terminate on the chunk apply path, so every node processing that shard crashes or the shard stalls permanently and requires human intervention to recover.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_fbe9c06b-7c80-4970-9b8b-de1bd73bd26d?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/store/src/trie/mod.rs -> Scope: Critical. An unprivileged sender lands a single transaction or receipt that panics, aborts, overflows, or fails to terminate on the chunk apply path, so every node processing that shard crashes or the shard stalls permanently and requires human intervention to recover.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_0f80101f-0d81-426d-96de-c89c3e555e4e?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/store/src/trie/update.rs -> Scope: Critical. An unprivileged sender lands a single transaction or receipt that panics, aborts, overflows, or fails to terminate on the chunk apply path, so every node processing that shard crashes or the shard stalls permanently and requires human intervention to recover.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_e77cab49-812e-4a03-b182-d78aac59e7cd?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/store/src/trie/trie_storage_update.rs -> Scope: Critical. An unprivileged sender lands a single transaction or receipt that panics, aborts, overflows, or fails to terminate on the chunk apply path, so every node processing that shard crashes or the shard stalls permanently and requires human intervention to recover.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_93a55319-ba19-400a-aa89-83c5abdbee52?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/store/src/trie/ops/insert_delete.rs -> Scope: Critical. An unprivileged sender lands a single transaction or receipt that panics, aborts, overflows, or fails to terminate on the chunk apply path, so every node processing that shard crashes or the shard stalls permanently and requires human intervention to recover.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_a46295cc-6465-4d14-862f-2ffe7866e9c1?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/store/src/trie/ops/squash.rs -> Scope: Critical. An unprivileged sender lands a single transaction or receipt that panics, aborts, overflows, or fails to terminate on the chunk apply path, so every node processing that shard crashes or the shard stalls permanently and requires human intervention to recover.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_3cf01935-823e-4662-aaab-35f163a1bf7a?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/store/src/trie/raw_node.rs -> Scope: Critical. An unprivileged sender lands a single transaction or receipt that panics, aborts, overflows, or fails to terminate on the chunk apply path, so every node processing that shard crashes or the shard stalls permanently and requires human intervention to recover.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_efcc2a5d-3abf-4b59-9484-3a7c168b0f73?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/store/src/trie/trie_recording.rs -> Scope: Critical. An unprivileged sender lands a single transaction or receipt that panics, aborts, overflows, or fails to terminate on the chunk apply path, so every node processing that shard crashes or the shard stalls permanently and requires human intervention to recover.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_d63080ee-b1ef-46c3-9daa-e5b463644aba?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/store/src/trie/receipts_column_helper.rs -> Scope: Critical. An unprivileged sender lands a single transaction or receipt that panics, aborts, overflows, or fails to terminate on the chunk apply path, so every node processing that shard crashes or the shard stalls permanently and requires human intervention to recover.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_cb819389-ed7a-4207-af00-9795d8dbfe07?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/store/src/trie/outgoing_metadata.rs -> Scope: Critical. An unprivileged sender lands a single transaction or receipt that panics, aborts, overflows, or fails to terminate on the chunk apply path, so every node processing that shard crashes or the shard stalls permanently and requires human intervention to recover.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_f8af2525-edf1-46fc-963c-aed8cbeb7655?mode=deep",
+    "questions_generated": false
+  }
+]
