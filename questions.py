@@ -81,6 +81,18 @@ scope_files = [
     "core/primitives-core/src/universal_state_init.rs",
 
     # =================================================================================
+    # Account lifecycle and per-account trie rows.
+    # HIGHEST-YIELD REGION SO FAR: the one ACCEPTED submission to date lives in
+    # core/store/src/utils/mod.rs (`remove_account` clears only 5 of ~14 account-scoped
+    # TrieKey variants, and NEAR account names are reusable). Confirmed finding F4
+    # (`initial_nonce_value` reseed) lives in access_keys.rs. Audit creation and
+    # deletion of every account-scoped key SIDE BY SIDE.
+    # =================================================================================
+    "core/store/src/utils/mod.rs",
+    "core/primitives/src/trie_key.rs",
+    "core/primitives-core/src/trie_key.rs",
+
+    # =================================================================================
     # Cross-shard flow control: congestion info, delayed/buffered queues, bandwidth
     # =================================================================================
     "runtime/runtime/src/congestion_control.rs",
@@ -89,6 +101,41 @@ scope_files = [
     "runtime/runtime/src/bandwidth_scheduler/distribute_remaining.rs",
     "core/primitives/src/congestion_info.rs",
     "core/primitives/src/bandwidth_scheduler.rs",
+
+    # =================================================================================
+    # Epoch rewards, inflation and supply reconciliation.
+    # Confirmed finding F5 lives in reward_calculator.rs: the protocol-treasury reward
+    # and the per-validator reward are written to ONE HashMap with plain `insert`, so a
+    # treasury account that is also a validator loses its share while the returned total
+    # still counts it. Audit every place a minted total and a per-account credit are
+    # computed separately and must agree.
+    # =================================================================================
+    "chain/epoch-manager/src/reward_calculator.rs",
+    "chain/epoch-manager/src/lib.rs",
+    "chain/epoch-manager/src/validator_selection.rs",
+    "chain/chain/src/runtime/mod.rs",
+    "core/primitives/src/chunk_apply_stats.rs",
+
+    # =================================================================================
+    # Chunk production, admission and validation: where a produced chunk is accepted
+    # or rejected. The one submission currently IN REVIEW lives in
+    # chain/client/src/stateless_validation/chunk_endorsement.rs.
+    # chain/client/src/pending_transaction_queue.rs is the NEWEST, highest-churn code
+    # in the repo (Spice) and carries several unaudited double-spend claims.
+    # =================================================================================
+    "chain/client/src/pending_transaction_queue.rs",
+    "chain/client/src/chunk_producer.rs",
+    "chain/client/src/rpc_handler.rs",
+    "chain/client/src/stateless_validation/chunk_endorsement.rs",
+    "core/primitives/src/stateless_validation/chunk_endorsement.rs",
+    "chain/chain/src/validate.rs",
+    "chain/jsonrpc/src/api/transactions.rs",
+
+    # =================================================================================
+    # Resharding: trie split vs in-flight queues and per-account state
+    # =================================================================================
+    "chain/chain/src/resharding/manager.rs",
+    "chain/chain/src/resharding/event_type.rs",
 
     # =================================================================================
     # VM logic reachable from any attacker-deployed contract: host calls and gas
@@ -125,16 +172,13 @@ scope_files = [
     "core/store/src/trie/trie_recording.rs",
     "core/store/src/trie/receipts_column_helper.rs",
     "core/store/src/trie/outgoing_metadata.rs",
-    "core/primitives-core/src/trie_key.rs",
 
     # =================================================================================
-    # Wallet contract backing eth-implicit accounts, driven by attacker-signed payloads
+    # REMOVED: runtime/near-wallet-contract/** .
+    # A wallet-contract report carrying a WORKING localnet PoC was ruled OUT OF SCOPE by
+    # the program (see submitted/out_of_scope_wallet_contract_*.md). It previously
+    # absorbed ~50% of all generated reports for zero payable output. Do not re-add.
     # =================================================================================
-    "runtime/near-wallet-contract/implementation/wallet-contract/src/lib.rs",
-    "runtime/near-wallet-contract/implementation/wallet-contract/src/internal.rs",
-    "runtime/near-wallet-contract/implementation/wallet-contract/src/eth_emulation.rs",
-    "runtime/near-wallet-contract/implementation/wallet-contract/src/near_action.rs",
-    "runtime/near-wallet-contract/implementation/wallet-contract/src/ethabi_utils.rs",
 ]
 
 
@@ -146,6 +190,10 @@ target_scopes = [
     "Critical. An unprivileged sender lands a single transaction or receipt that panics, aborts, overflows, or fails to terminate on the chunk apply path, so every node processing that shard crashes or the shard stalls permanently and requires human intervention to recover.",
     "Critical. An unprivileged sender permanently freezes funds: an account's tokens or a cross-shard receipt become unrecoverable because a receipt is stuck forever in the delayed, postponed, yield, or outgoing buffer queue, storage_usage underflow or overflow blocks every future action on the account, or a promise/yield resume path drops the value transfer.",
     "Critical. An attacker-deployed contract escapes its sandbox through near-vm-runner host logic, reading or writing guest memory out of bounds, reusing or forging registers, or building a promise batch that attaches predecessor/signer privileges or gas the caller never held, letting it act as another account and steal from contracts holding user funds.",
+    "Critical. ACCOUNT-LIFECYCLE CLEANUP ASYMMETRY. State keyed by an account NAME survives that account's deletion and is inherited by a re-created account of the same name, because the teardown path clears only some of the per-account trie rows that the creation and mutation paths write. Enumerate every account-scoped TrieKey variant and diff the set written against the set cleared by remove_account; a survivor that is later delivered with predecessor_id == receiver_id passes check_actor_permissions and carries owner privilege. This pattern produced the only submission accepted so far.",
+    "Critical. SEED-VERSUS-BOUND COLLISION. A value re-initialised from block height, epoch, or an index lands INSIDE the window of values already consumed under the old instance, rather than strictly above it, so a previously used nonce, id, or sequence number becomes valid again. Compare every re-initialisation constant against the admission bound enforced elsewhere and check whether the reseed dominates or merely re-enters the live range. This pattern produced confirmed finding F4.",
+    "High. TWO WRITERS, ONE KEY SPACE. Two code paths write per-account amounts into one map, counter, or accumulator with a last-write-wins operation such as HashMap::insert, while a separately computed total counts both contributions. When one account satisfies both roles the map and the total silently disagree, minting or destroying value that no reconciliation pass ever notices. This pattern produced confirmed finding F5.",
+    "High. A GUARD WHOSE COMPENSATING BRANCH IS WRONG. One site skips work because a comment or an invariant asserts another site already did it, but that other site does not, cannot, or no longer does. Read the skipped branch and the branch it defers to together and verify the handoff actually happens rather than trusting the comment. This is how F5 escaped detection despite existing tests.",
     "High. An unprivileged sender performs work far exceeding the gas burnt, through host-function metering, wasm instruction instrumentation, contract preparation and compilation charged after the work is done, storage read/write and recorded-proof accounting, or prepaid/attached gas arithmetic, obtaining near-free execution and blowing up block application time.",
     "High. An unprivileged sender makes a produced chunk exceed a validation limit, driving recorded storage-proof size, outgoing receipt size, or per-receipt action limits past what the receiving validators accept, so the chunk cannot be validated and the shard stalls.",
     "High. An unprivileged sender abuses cross-shard flow control, manipulating congestion info, delayed/buffered receipt accounting, or bandwidth-scheduler grant allocation so its own receipts are admitted while a target shard is starved or held congested, denying cross-shard service to other users.",
@@ -174,7 +222,7 @@ def question_generator(target_file: str) -> str:
     {target_file}
 
     Project focus:
-    nearcore is the NEAR Protocol reference client. Focus on what a transaction submitted by any internet client reaches: transaction and receipt validation, access keys and nonces, meta-transactions (DelegateAction), action execution and balance/refund accounting, storage staking, cross-shard receipts with congestion control and the bandwidth scheduler, trie state and recorded storage proofs, near-vm-runner host functions, gas metering, contract preparation and caching, and the wallet contract behind eth-implicit accounts.
+    nearcore is the NEAR Protocol reference client. Focus on what a transaction submitted by any internet client reaches: transaction and receipt validation, access keys and nonces, meta-transactions (DelegateAction), action execution and balance/refund accounting, account creation and DELETION together with every per-account trie row, storage staking, cross-shard receipts with congestion control and the bandwidth scheduler, trie state and recorded storage proofs, near-vm-runner host functions, gas metering, contract preparation and caching, epoch reward and inflation accounting, and chunk admission and validation. The eth-implicit wallet contract is OUT OF SCOPE and must never be targeted.
 
     Rules:
     * Treat `File Name:` as the exact file/module.
@@ -183,7 +231,8 @@ def question_generator(target_file: str) -> str:
     * Do not ask for code or say anything is missing.
     * Use exact Rust symbols (fn, method, struct, field, const) when possible.
     * Attacker is unprivileged only: an ordinary client that funds a NEAR account, signs and submits transactions to a public RPC endpoint, deploys its own wasm contract, relays meta-transactions, and fully controls action arguments, deposits, attached gas, contract bytecode, and contract call arguments.
-    * Attacker is NOT a validator, block or chunk producer, chunk validator, node or RPC operator, or network peer. Ignore malicious-node, malicious-peer, gossip/network-layer, block/chunk production, state-sync, epoch-manager, and social-engineering assumptions.
+    * Attacker is NOT a validator, block or chunk producer, chunk validator, node or RPC operator, or network peer. Ignore malicious-node, malicious-peer, gossip/network-layer, state-sync, and social-engineering assumptions.
+    * Epoch reward, inflation and chunk-validation code IS in scope, but only for defects an unprivileged sender or an ordinary configuration reaches - never for attacks that require the attacker to BE a validator or chunk producer. A supply-accounting error at an epoch boundary counts; forging an endorsement does not.
     * Ignore tests, benches, mocks, fuzz harnesses, docs, generated files, params estimator, sandbox/test-only features, CLI and config, indexer and tooling, and dependency-only issues.
     * Only consider paths reachable under the current mainnet protocol version and default feature set.
     * Every question must be a concrete real-world scenario an unprivileged sender can perform on mainnet. No speculative "unbounded memory/allocation" or resource-hygiene questions unless the scope explicitly targets gas or size accounting.
@@ -191,6 +240,40 @@ def question_generator(target_file: str) -> str:
     * At least 70% must target theft or permanent freezing of funds, token minting or destruction, double-spend or replay, authorization escalation across accounts or promises, state-root divergence and chain split, or an apply-path panic that halts a shard.
     * Every question must be testable by a Rust unit test, a runtime/apply or test-loop integration test, or a differential/table test.
     * Avoid generic checklist questions and repeated root causes.
+    * Prefer questions that name TWO code sites and ask whether they agree: a writer and
+      its cleanup, a total and its per-account breakdown, a re-initialisation and the
+      bound that admits values, a guard and the branch it defers to. Every finding
+      confirmed in this repo so far had that shape, and every refuted cluster came from
+      reading one site alone.
+    * Prefer a question whose disagreement can be asserted numerically in one test
+      (sum of parts equals total, reseeded value exceeds every consumed value, set of
+      keys written equals set of keys cleared) over a narrative question.
+
+
+    Known dead ends - do NOT generate questions about these. Each was audited to a cited
+    conclusion and rejected; regenerating them wastes the whole batch:
+    * DeleteAccount to a non-existent or self beneficiary "burning" the balance. Intended
+      and documented at runtime/runtime/src/actions.rs:895-898; the beneficiary is chosen
+      by the account owner and no attacker influences it.
+    * action_delete_account burning Account.locked (staked) balance. Unreachable:
+      check_actor_permissions rejects DeleteAccount with DeleteAccountStaking whenever
+      locked is non-zero.
+    * AddressRegistrar::register keeping excess deposit, and any wallet-contract issue.
+      Out of scope.
+    * DelegateAction lacking chain_id / genesis_hash binding (cross-network replay).
+      Already known and already submitted.
+    * Duplicate entries in ActionReceipt::input_data_ids desyncing PendingDataCount. The
+      desync is real but unreachable: ext.rs mints a fresh data_id per dependency from a
+      monotonic counter, so promise_and cannot produce duplicates.
+    * Outgoing receipts being forwarded, or validator proposals surviving, after a
+      receipt-level failure. ActionResult::set_error clears both and every action routes
+      through merge.
+    * Unbounded minting via the subsidized_amount skip-deduct path. Capped at 1 yoctoNEAR
+      per call and reconciled out of total_balance_burnt in chain/chain/src/runtime/mod.rs.
+    * The gas-key nonce prefetch cache going stale within a chunk. It is written back
+      immediately after set_gas_key_nonce.
+    * Anything whose only "attacker" is the account owner harming their own account, with
+      no third party and no protocol invariant broken.
 
     Core invariants:
     * Authorization exactness: only the transaction signer's own account is acted on, access-key permissions and delegate limits are never widened, and a promise never carries privileges its creator did not hold.
