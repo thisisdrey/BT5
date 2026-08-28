@@ -1,0 +1,62 @@
+[
+  {
+    "question": "'File Name: runtime/near-vm-runner/src/cache.rs -> Scope: Critical. An unprivileged sender gets one transaction, receipt, or DelegateAction applied twice, by defeating access-key nonce monotonicity, transaction-hash uniqueness, delegate nonce/max_block_height checks, or receipt-id and implicit/deterministic account-id derivation, double-spending the attached deposit.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_c3d9497f-2223-4384-96d2-8f0b809446d0?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/near-vm-runner/src/runner.rs -> Scope: Critical. An unprivileged sender gets one transaction, receipt, or DelegateAction applied twice, by defeating access-key nonce monotonicity, transaction-hash uniqueness, delegate nonce/max_block_height checks, or receipt-id and implicit/deterministic account-id derivation, double-spending the attached deposit.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_6c8f148c-93e1-40d2-8e8c-377200b04219?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: runtime/near-vm-runner/src/wasmtime_runner/logic.rs -> Scope: Critical. An unprivileged sender gets one transaction, receipt, or DelegateAction applied twice, by defeating access-key nonce monotonicity, transaction-hash uniqueness, delegate nonce/max_block_height checks, or receipt-id and implicit/deterministic account-id derivation, double-spending the attached deposit.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_18401e22-68c7-425a-9980-e96ace3ecd43?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/store/src/trie/mod.rs -> Scope: Critical. An unprivileged sender gets one transaction, receipt, or DelegateAction applied twice, by defeating access-key nonce monotonicity, transaction-hash uniqueness, delegate nonce/max_block_height checks, or receipt-id and implicit/deterministic account-id derivation, double-spending the attached deposit.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_5644d32c-41fd-41c8-9f54-129f46f455b5?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/store/src/trie/update.rs -> Scope: Critical. An unprivileged sender gets one transaction, receipt, or DelegateAction applied twice, by defeating access-key nonce monotonicity, transaction-hash uniqueness, delegate nonce/max_block_height checks, or receipt-id and implicit/deterministic account-id derivation, double-spending the attached deposit.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_ba6bb949-8632-4e61-8422-6902533f4cf9?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/store/src/trie/trie_storage_update.rs -> Scope: Critical. An unprivileged sender gets one transaction, receipt, or DelegateAction applied twice, by defeating access-key nonce monotonicity, transaction-hash uniqueness, delegate nonce/max_block_height checks, or receipt-id and implicit/deterministic account-id derivation, double-spending the attached deposit.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_673a7404-0f69-4263-a531-0de0cfe7c5e7?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/store/src/trie/ops/insert_delete.rs -> Scope: Critical. An unprivileged sender gets one transaction, receipt, or DelegateAction applied twice, by defeating access-key nonce monotonicity, transaction-hash uniqueness, delegate nonce/max_block_height checks, or receipt-id and implicit/deterministic account-id derivation, double-spending the attached deposit.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_124f93c7-fbdc-4df1-b567-c78795c3d348?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/store/src/trie/ops/squash.rs -> Scope: Critical. An unprivileged sender gets one transaction, receipt, or DelegateAction applied twice, by defeating access-key nonce monotonicity, transaction-hash uniqueness, delegate nonce/max_block_height checks, or receipt-id and implicit/deterministic account-id derivation, double-spending the attached deposit.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_431aa3cc-d09c-4456-9718-870a0779a20d?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/store/src/trie/raw_node.rs -> Scope: Critical. An unprivileged sender gets one transaction, receipt, or DelegateAction applied twice, by defeating access-key nonce monotonicity, transaction-hash uniqueness, delegate nonce/max_block_height checks, or receipt-id and implicit/deterministic account-id derivation, double-spending the attached deposit.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_b9267321-abb0-41a3-9cbc-c81ef77ac322?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/store/src/trie/trie_recording.rs -> Scope: Critical. An unprivileged sender gets one transaction, receipt, or DelegateAction applied twice, by defeating access-key nonce monotonicity, transaction-hash uniqueness, delegate nonce/max_block_height checks, or receipt-id and implicit/deterministic account-id derivation, double-spending the attached deposit.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_42e604ed-a21a-4693-b507-3472271bc9d0?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/store/src/trie/receipts_column_helper.rs -> Scope: Critical. An unprivileged sender gets one transaction, receipt, or DelegateAction applied twice, by defeating access-key nonce monotonicity, transaction-hash uniqueness, delegate nonce/max_block_height checks, or receipt-id and implicit/deterministic account-id derivation, double-spending the attached deposit.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_3b7a9f56-3795-4715-961d-64c6e98dc19b?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: core/store/src/trie/outgoing_metadata.rs -> Scope: Critical. An unprivileged sender gets one transaction, receipt, or DelegateAction applied twice, by defeating access-key nonce monotonicity, transaction-hash uniqueness, delegate nonce/max_block_height checks, or receipt-id and implicit/deterministic account-id derivation, double-spending the attached deposit.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_821cc889-23be-42e9-ac10-dafd9cd71446?mode=deep",
+    "questions_generated": false
+  }
+]
