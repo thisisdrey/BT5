@@ -1,1 +1,0 @@
-)` panics and halts chunk application on that shard? Proof idea: integration test that resizes shard layout between two chunks and asserts update_on_receipt_popped never panics for any shard present in the outgoing buffer.
