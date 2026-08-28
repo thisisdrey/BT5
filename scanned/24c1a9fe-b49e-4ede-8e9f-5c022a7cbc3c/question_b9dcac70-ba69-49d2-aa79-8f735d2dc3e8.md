@@ -1,1 +1,0 @@
-risking delayed-queue overflow (liveness / freezing of other users' receipts). Proof idea: differential test comparing sum of admission_gas actually admitted vs sum of true gas values pushed to outgoing_receipts across many chunks; assert the two diverge only within one receipt's worth as documented, not unboundedly.
