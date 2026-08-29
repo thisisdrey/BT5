@@ -1,0 +1,37 @@
+[
+  {
+    "question": "'File Name: mainnet/contracts/market/v0-4-market.clar -> Scope: Critical. An unprivileged contract reenters the protocol mid-operation WITHOUT using a flashloan. Every registered asset is invoked through an `<ft-trait>` principal, and the composite entry points interleave writes across two contracts: `supply-collateral-add` transfers, deposits and pledges in three steps with health evaluated only at the end; `collateral-remove-redeem` checks health, then redeems shares whose redemption moves the very `lindex` the health check priced; `liquidate-redeem` does the same during a seizure. Show control returning to attacker code, or to a second Zest call, while an invariant is mid-flight. Impact: direct theft of user funds.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_5ba4a6ea-8c3b-4330-83f4-7b35f5c3ad7a?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: mainnet/contracts/market/v0-market-vault.clar -> Scope: Critical. An unprivileged contract reenters the protocol mid-operation WITHOUT using a flashloan. Every registered asset is invoked through an `<ft-trait>` principal, and the composite entry points interleave writes across two contracts: `supply-collateral-add` transfers, deposits and pledges in three steps with health evaluated only at the end; `collateral-remove-redeem` checks health, then redeems shares whose redemption moves the very `lindex` the health check priced; `liquidate-redeem` does the same during a seizure. Show control returning to attacker code, or to a second Zest call, while an invariant is mid-flight. Impact: direct theft of user funds.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_31b36afd-3187-468c-8523-49ec2457e5b0?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: mainnet/contracts/vault/v0-vault-stx.clar -> Scope: Critical. An unprivileged contract reenters the protocol mid-operation WITHOUT using a flashloan. Every registered asset is invoked through an `<ft-trait>` principal, and the composite entry points interleave writes across two contracts: `supply-collateral-add` transfers, deposits and pledges in three steps with health evaluated only at the end; `collateral-remove-redeem` checks health, then redeems shares whose redemption moves the very `lindex` the health check priced; `liquidate-redeem` does the same during a seizure. Show control returning to attacker code, or to a second Zest call, while an invariant is mid-flight. Impact: direct theft of user funds.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_b51a467e-be97-46d1-a9de-01fe18c3d9f8?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: mainnet/contracts/vault/v0-vault-sbtc.clar -> Scope: Critical. An unprivileged contract reenters the protocol mid-operation WITHOUT using a flashloan. Every registered asset is invoked through an `<ft-trait>` principal, and the composite entry points interleave writes across two contracts: `supply-collateral-add` transfers, deposits and pledges in three steps with health evaluated only at the end; `collateral-remove-redeem` checks health, then redeems shares whose redemption moves the very `lindex` the health check priced; `liquidate-redeem` does the same during a seizure. Show control returning to attacker code, or to a second Zest call, while an invariant is mid-flight. Impact: direct theft of user funds.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_bb16f001-90cb-45e4-a614-cabd3f7df08f?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: mainnet/contracts/vault/v0-vault-ststx.clar -> Scope: Critical. An unprivileged contract reenters the protocol mid-operation WITHOUT using a flashloan. Every registered asset is invoked through an `<ft-trait>` principal, and the composite entry points interleave writes across two contracts: `supply-collateral-add` transfers, deposits and pledges in three steps with health evaluated only at the end; `collateral-remove-redeem` checks health, then redeems shares whose redemption moves the very `lindex` the health check priced; `liquidate-redeem` does the same during a seizure. Show control returning to attacker code, or to a second Zest call, while an invariant is mid-flight. Impact: direct theft of user funds.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_91d07ba3-758d-4ea5-8f38-a3a43ecd0da8?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: mainnet/contracts/registry/v0-assets.clar -> Scope: Critical. An unprivileged contract reenters the protocol mid-operation WITHOUT using a flashloan. Every registered asset is invoked through an `<ft-trait>` principal, and the composite entry points interleave writes across two contracts: `supply-collateral-add` transfers, deposits and pledges in three steps with health evaluated only at the end; `collateral-remove-redeem` checks health, then redeems shares whose redemption moves the very `lindex` the health check priced; `liquidate-redeem` does the same during a seizure. Show control returning to attacker code, or to a second Zest call, while an invariant is mid-flight. Impact: direct theft of user funds.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_00d385a1-b78f-41da-a770-326f1135a839?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: mainnet/contracts/registry/v0-egroup.clar -> Scope: Critical. An unprivileged contract reenters the protocol mid-operation WITHOUT using a flashloan. Every registered asset is invoked through an `<ft-trait>` principal, and the composite entry points interleave writes across two contracts: `supply-collateral-add` transfers, deposits and pledges in three steps with health evaluated only at the end; `collateral-remove-redeem` checks health, then redeems shares whose redemption moves the very `lindex` the health check priced; `liquidate-redeem` does the same during a seizure. Show control returning to attacker code, or to a second Zest call, while an invariant is mid-flight. Impact: direct theft of user funds.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_5cd66ff8-ce56-442d-9758-d2694389f570?mode=deep",
+    "questions_generated": false
+  }
+]
