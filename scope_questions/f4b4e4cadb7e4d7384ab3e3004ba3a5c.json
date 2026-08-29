@@ -1,0 +1,37 @@
+[
+  {
+    "question": "'File Name: mainnet/contracts/market/v0-4-market.clar -> Scope: Critical. THE INVISIBLE-DEBT BLIND SPOT. Every position read is filtered through the enabled bitmap: `relevant`, `iter-lookup-collateral` and `iter-lookup-debt` drop rows whose bit is clear, `get-assets` and `get-notional-evaluation` fold only over enabled assets, and `collateral-remove` decides `has-debt` from the enabled-only `get-position`, then takes a NO-DEBT branch that skips price resolution and every health check. This is NOT about liquidating disabled collateral; it is about a live debt obligation vanishing from a solvency check. Show a `debt` row that survives in the map but is invisible to `has-debt` and to `debt-total`, and withdraw all collateral while still owing. Impact: protocol insolvency.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_03be0a0d-15a8-4e80-967f-7ebcc421896b?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: mainnet/contracts/market/v0-market-vault.clar -> Scope: Critical. THE INVISIBLE-DEBT BLIND SPOT. Every position read is filtered through the enabled bitmap: `relevant`, `iter-lookup-collateral` and `iter-lookup-debt` drop rows whose bit is clear, `get-assets` and `get-notional-evaluation` fold only over enabled assets, and `collateral-remove` decides `has-debt` from the enabled-only `get-position`, then takes a NO-DEBT branch that skips price resolution and every health check. This is NOT about liquidating disabled collateral; it is about a live debt obligation vanishing from a solvency check. Show a `debt` row that survives in the map but is invisible to `has-debt` and to `debt-total`, and withdraw all collateral while still owing. Impact: protocol insolvency.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_ef5d2548-522b-44fb-80eb-58d65c68f373?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: mainnet/contracts/vault/v0-vault-stx.clar -> Scope: Critical. THE INVISIBLE-DEBT BLIND SPOT. Every position read is filtered through the enabled bitmap: `relevant`, `iter-lookup-collateral` and `iter-lookup-debt` drop rows whose bit is clear, `get-assets` and `get-notional-evaluation` fold only over enabled assets, and `collateral-remove` decides `has-debt` from the enabled-only `get-position`, then takes a NO-DEBT branch that skips price resolution and every health check. This is NOT about liquidating disabled collateral; it is about a live debt obligation vanishing from a solvency check. Show a `debt` row that survives in the map but is invisible to `has-debt` and to `debt-total`, and withdraw all collateral while still owing. Impact: protocol insolvency.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_e58c87de-3d5a-47c4-92f8-9cb9732e1669?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: mainnet/contracts/vault/v0-vault-sbtc.clar -> Scope: Critical. THE INVISIBLE-DEBT BLIND SPOT. Every position read is filtered through the enabled bitmap: `relevant`, `iter-lookup-collateral` and `iter-lookup-debt` drop rows whose bit is clear, `get-assets` and `get-notional-evaluation` fold only over enabled assets, and `collateral-remove` decides `has-debt` from the enabled-only `get-position`, then takes a NO-DEBT branch that skips price resolution and every health check. This is NOT about liquidating disabled collateral; it is about a live debt obligation vanishing from a solvency check. Show a `debt` row that survives in the map but is invisible to `has-debt` and to `debt-total`, and withdraw all collateral while still owing. Impact: protocol insolvency.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_2df90557-aedf-4ccc-af11-d6647ebe706d?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: mainnet/contracts/vault/v0-vault-ststx.clar -> Scope: Critical. THE INVISIBLE-DEBT BLIND SPOT. Every position read is filtered through the enabled bitmap: `relevant`, `iter-lookup-collateral` and `iter-lookup-debt` drop rows whose bit is clear, `get-assets` and `get-notional-evaluation` fold only over enabled assets, and `collateral-remove` decides `has-debt` from the enabled-only `get-position`, then takes a NO-DEBT branch that skips price resolution and every health check. This is NOT about liquidating disabled collateral; it is about a live debt obligation vanishing from a solvency check. Show a `debt` row that survives in the map but is invisible to `has-debt` and to `debt-total`, and withdraw all collateral while still owing. Impact: protocol insolvency.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_37618d0b-30a2-4ac1-8554-0886bcf1925b?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: mainnet/contracts/registry/v0-assets.clar -> Scope: Critical. THE INVISIBLE-DEBT BLIND SPOT. Every position read is filtered through the enabled bitmap: `relevant`, `iter-lookup-collateral` and `iter-lookup-debt` drop rows whose bit is clear, `get-assets` and `get-notional-evaluation` fold only over enabled assets, and `collateral-remove` decides `has-debt` from the enabled-only `get-position`, then takes a NO-DEBT branch that skips price resolution and every health check. This is NOT about liquidating disabled collateral; it is about a live debt obligation vanishing from a solvency check. Show a `debt` row that survives in the map but is invisible to `has-debt` and to `debt-total`, and withdraw all collateral while still owing. Impact: protocol insolvency.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_c70b63c1-13fa-4895-b55d-6c7bd60b10a4?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: mainnet/contracts/registry/v0-egroup.clar -> Scope: Critical. THE INVISIBLE-DEBT BLIND SPOT. Every position read is filtered through the enabled bitmap: `relevant`, `iter-lookup-collateral` and `iter-lookup-debt` drop rows whose bit is clear, `get-assets` and `get-notional-evaluation` fold only over enabled assets, and `collateral-remove` decides `has-debt` from the enabled-only `get-position`, then takes a NO-DEBT branch that skips price resolution and every health check. This is NOT about liquidating disabled collateral; it is about a live debt obligation vanishing from a solvency check. Show a `debt` row that survives in the map but is invisible to `has-debt` and to `debt-total`, and withdraw all collateral while still owing. Impact: protocol insolvency.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_d6e40f10-d5d0-48d4-a6fc-73b32b56d0aa?mode=deep",
+    "questions_generated": false
+  }
+]
