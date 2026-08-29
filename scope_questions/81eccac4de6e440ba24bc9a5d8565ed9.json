@@ -1,0 +1,37 @@
+[
+  {
+    "question": "'File Name: mainnet/contracts/market/v0-4-market.clar -> Scope: High. A POSITION RESOLVES TO A LOOSER EFFICIENCY GROUP THAN ITS ASSET SET. With the registry correctly configured by the DAO, the lookup itself may still be wrong: `resolve` -> `active` -> `find-superset` -> `iter-find-superset` walks `buckets` in population order and returns the FIRST superset rather than the tightest, and `population`, `filter-u128` and `iter-find` maintain that search. Show a mask whose resolved `LTV-BORROW`, `LTV-LIQ-PARTIAL` or `LTV-LIQ-FULL` exceeds what the correct group for that exact set allows, and borrow on it. Do not premise this on a bad or accidental DAO update. Impact: protocol insolvency.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_461d87ef-0b49-4ee9-b37e-85ea585a4a2d?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: mainnet/contracts/market/v0-market-vault.clar -> Scope: High. A POSITION RESOLVES TO A LOOSER EFFICIENCY GROUP THAN ITS ASSET SET. With the registry correctly configured by the DAO, the lookup itself may still be wrong: `resolve` -> `active` -> `find-superset` -> `iter-find-superset` walks `buckets` in population order and returns the FIRST superset rather than the tightest, and `population`, `filter-u128` and `iter-find` maintain that search. Show a mask whose resolved `LTV-BORROW`, `LTV-LIQ-PARTIAL` or `LTV-LIQ-FULL` exceeds what the correct group for that exact set allows, and borrow on it. Do not premise this on a bad or accidental DAO update. Impact: protocol insolvency.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_9848ea0e-4c67-492c-be95-229e75cd3415?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: mainnet/contracts/vault/v0-vault-stx.clar -> Scope: High. A POSITION RESOLVES TO A LOOSER EFFICIENCY GROUP THAN ITS ASSET SET. With the registry correctly configured by the DAO, the lookup itself may still be wrong: `resolve` -> `active` -> `find-superset` -> `iter-find-superset` walks `buckets` in population order and returns the FIRST superset rather than the tightest, and `population`, `filter-u128` and `iter-find` maintain that search. Show a mask whose resolved `LTV-BORROW`, `LTV-LIQ-PARTIAL` or `LTV-LIQ-FULL` exceeds what the correct group for that exact set allows, and borrow on it. Do not premise this on a bad or accidental DAO update. Impact: protocol insolvency.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_959e7173-43cc-4402-b60f-443b1eee66b2?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: mainnet/contracts/vault/v0-vault-sbtc.clar -> Scope: High. A POSITION RESOLVES TO A LOOSER EFFICIENCY GROUP THAN ITS ASSET SET. With the registry correctly configured by the DAO, the lookup itself may still be wrong: `resolve` -> `active` -> `find-superset` -> `iter-find-superset` walks `buckets` in population order and returns the FIRST superset rather than the tightest, and `population`, `filter-u128` and `iter-find` maintain that search. Show a mask whose resolved `LTV-BORROW`, `LTV-LIQ-PARTIAL` or `LTV-LIQ-FULL` exceeds what the correct group for that exact set allows, and borrow on it. Do not premise this on a bad or accidental DAO update. Impact: protocol insolvency.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_db3ea042-7bfb-4c7e-90e0-93a9c3896dd6?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: mainnet/contracts/vault/v0-vault-ststx.clar -> Scope: High. A POSITION RESOLVES TO A LOOSER EFFICIENCY GROUP THAN ITS ASSET SET. With the registry correctly configured by the DAO, the lookup itself may still be wrong: `resolve` -> `active` -> `find-superset` -> `iter-find-superset` walks `buckets` in population order and returns the FIRST superset rather than the tightest, and `population`, `filter-u128` and `iter-find` maintain that search. Show a mask whose resolved `LTV-BORROW`, `LTV-LIQ-PARTIAL` or `LTV-LIQ-FULL` exceeds what the correct group for that exact set allows, and borrow on it. Do not premise this on a bad or accidental DAO update. Impact: protocol insolvency.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_b8c25a62-a863-4754-8649-e42f7c189ef2?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: mainnet/contracts/registry/v0-assets.clar -> Scope: High. A POSITION RESOLVES TO A LOOSER EFFICIENCY GROUP THAN ITS ASSET SET. With the registry correctly configured by the DAO, the lookup itself may still be wrong: `resolve` -> `active` -> `find-superset` -> `iter-find-superset` walks `buckets` in population order and returns the FIRST superset rather than the tightest, and `population`, `filter-u128` and `iter-find` maintain that search. Show a mask whose resolved `LTV-BORROW`, `LTV-LIQ-PARTIAL` or `LTV-LIQ-FULL` exceeds what the correct group for that exact set allows, and borrow on it. Do not premise this on a bad or accidental DAO update. Impact: protocol insolvency.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_b6b6c400-9c25-4fa8-bace-92204ee041cd?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: mainnet/contracts/registry/v0-egroup.clar -> Scope: High. A POSITION RESOLVES TO A LOOSER EFFICIENCY GROUP THAN ITS ASSET SET. With the registry correctly configured by the DAO, the lookup itself may still be wrong: `resolve` -> `active` -> `find-superset` -> `iter-find-superset` walks `buckets` in population order and returns the FIRST superset rather than the tightest, and `population`, `filter-u128` and `iter-find` maintain that search. Show a mask whose resolved `LTV-BORROW`, `LTV-LIQ-PARTIAL` or `LTV-LIQ-FULL` exceeds what the correct group for that exact set allows, and borrow on it. Do not premise this on a bad or accidental DAO update. Impact: protocol insolvency.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_9828b492-cf59-4b68-bde2-87ec9c2e14c7?mode=deep",
+    "questions_generated": false
+  }
+]
