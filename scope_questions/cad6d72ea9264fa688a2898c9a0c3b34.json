@@ -1,0 +1,37 @@
+[
+  {
+    "question": "'File Name: mainnet/contracts/market/v0-4-market.clar -> Scope: High. THE ORACLE FRONT-RUNNING GUARD IS DEFEATED OR WEAPONISED. `last-borrow-block` is written only by `debt-add-scaled`, carried forward by `refresh` on every other write, and read by the same-block check behind `ERR-LIQUIDATION-BORROW-SAME-BLOCK`, alongside `is-liquidation-paused` reading `pause-liquidation` and the per-asset and `GLOBAL-LIQUIDATION-GRACE-ID` entries of `liquidation-grace-periods` against `stacks-block-time`. Show a one-unit dust borrow repeated each block that keeps an underwater position unliquidatable while it accrues, and quantify the supplier loss. Impact: protocol insolvency.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_f0744eea-198b-4765-a8b8-6b3876d9dc6d?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: mainnet/contracts/market/v0-market-vault.clar -> Scope: High. THE ORACLE FRONT-RUNNING GUARD IS DEFEATED OR WEAPONISED. `last-borrow-block` is written only by `debt-add-scaled`, carried forward by `refresh` on every other write, and read by the same-block check behind `ERR-LIQUIDATION-BORROW-SAME-BLOCK`, alongside `is-liquidation-paused` reading `pause-liquidation` and the per-asset and `GLOBAL-LIQUIDATION-GRACE-ID` entries of `liquidation-grace-periods` against `stacks-block-time`. Show a one-unit dust borrow repeated each block that keeps an underwater position unliquidatable while it accrues, and quantify the supplier loss. Impact: protocol insolvency.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_20ad7c9f-a247-4ebb-86b6-a9856afbee79?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: mainnet/contracts/vault/v0-vault-stx.clar -> Scope: High. THE ORACLE FRONT-RUNNING GUARD IS DEFEATED OR WEAPONISED. `last-borrow-block` is written only by `debt-add-scaled`, carried forward by `refresh` on every other write, and read by the same-block check behind `ERR-LIQUIDATION-BORROW-SAME-BLOCK`, alongside `is-liquidation-paused` reading `pause-liquidation` and the per-asset and `GLOBAL-LIQUIDATION-GRACE-ID` entries of `liquidation-grace-periods` against `stacks-block-time`. Show a one-unit dust borrow repeated each block that keeps an underwater position unliquidatable while it accrues, and quantify the supplier loss. Impact: protocol insolvency.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_409770e7-9737-40eb-8b8e-1ed64c5ccc42?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: mainnet/contracts/vault/v0-vault-sbtc.clar -> Scope: High. THE ORACLE FRONT-RUNNING GUARD IS DEFEATED OR WEAPONISED. `last-borrow-block` is written only by `debt-add-scaled`, carried forward by `refresh` on every other write, and read by the same-block check behind `ERR-LIQUIDATION-BORROW-SAME-BLOCK`, alongside `is-liquidation-paused` reading `pause-liquidation` and the per-asset and `GLOBAL-LIQUIDATION-GRACE-ID` entries of `liquidation-grace-periods` against `stacks-block-time`. Show a one-unit dust borrow repeated each block that keeps an underwater position unliquidatable while it accrues, and quantify the supplier loss. Impact: protocol insolvency.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_f46ea54f-32c5-469d-95ac-e9a9fd8f9ff4?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: mainnet/contracts/vault/v0-vault-ststx.clar -> Scope: High. THE ORACLE FRONT-RUNNING GUARD IS DEFEATED OR WEAPONISED. `last-borrow-block` is written only by `debt-add-scaled`, carried forward by `refresh` on every other write, and read by the same-block check behind `ERR-LIQUIDATION-BORROW-SAME-BLOCK`, alongside `is-liquidation-paused` reading `pause-liquidation` and the per-asset and `GLOBAL-LIQUIDATION-GRACE-ID` entries of `liquidation-grace-periods` against `stacks-block-time`. Show a one-unit dust borrow repeated each block that keeps an underwater position unliquidatable while it accrues, and quantify the supplier loss. Impact: protocol insolvency.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_05ebcdbd-8a16-41c9-ac29-2c7def0b06d8?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: mainnet/contracts/registry/v0-assets.clar -> Scope: High. THE ORACLE FRONT-RUNNING GUARD IS DEFEATED OR WEAPONISED. `last-borrow-block` is written only by `debt-add-scaled`, carried forward by `refresh` on every other write, and read by the same-block check behind `ERR-LIQUIDATION-BORROW-SAME-BLOCK`, alongside `is-liquidation-paused` reading `pause-liquidation` and the per-asset and `GLOBAL-LIQUIDATION-GRACE-ID` entries of `liquidation-grace-periods` against `stacks-block-time`. Show a one-unit dust borrow repeated each block that keeps an underwater position unliquidatable while it accrues, and quantify the supplier loss. Impact: protocol insolvency.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_db9a36a6-6e48-43ef-a917-35e74d2144f6?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: mainnet/contracts/registry/v0-egroup.clar -> Scope: High. THE ORACLE FRONT-RUNNING GUARD IS DEFEATED OR WEAPONISED. `last-borrow-block` is written only by `debt-add-scaled`, carried forward by `refresh` on every other write, and read by the same-block check behind `ERR-LIQUIDATION-BORROW-SAME-BLOCK`, alongside `is-liquidation-paused` reading `pause-liquidation` and the per-asset and `GLOBAL-LIQUIDATION-GRACE-ID` entries of `liquidation-grace-periods` against `stacks-block-time`. Show a one-unit dust borrow repeated each block that keeps an underwater position unliquidatable while it accrues, and quantify the supplier loss. Impact: protocol insolvency.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_babadc87-c4e1-4231-bcd1-6107271edae3?mode=deep",
+    "questions_generated": false
+  }
+]
