@@ -1,0 +1,1 @@
+Now let's find `apply_delegate_action` itself to confirm it checks `sender_id == account_id`.
