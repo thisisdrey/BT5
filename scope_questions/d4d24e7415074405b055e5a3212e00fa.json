@@ -1,0 +1,37 @@
+[
+  {
+    "question": "'File Name: mainnet/contracts/market/v0-4-market.clar -> Scope: Critical. `system-repay` SPLITS ONE PAYMENT WITH THREE DISAGREEING FORMULAS. `capped-amount` is clamped to `total-debt`, `principal-reduction` comes from `calc-principal-ratio-reduction`, `principal-repaid` from `capped-amount x total-borrowed / debt`, and `interest-paid` is the remainder; `principal-scaled`, `total-borrowed` and `assets` are then written from three different quantities. Show a repay - direct or through `liquidate` - that clears more `principal-scaled` than value delivered, credits `assets` with interest never received, or zeroes `total-borrowed` while `principal-scaled` remains, so `total-assets` misreports solvency permanently. Impact: protocol insolvency.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_59c9f39f-92a5-4a67-8b04-7873148cfa40?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: mainnet/contracts/market/v0-market-vault.clar -> Scope: Critical. `system-repay` SPLITS ONE PAYMENT WITH THREE DISAGREEING FORMULAS. `capped-amount` is clamped to `total-debt`, `principal-reduction` comes from `calc-principal-ratio-reduction`, `principal-repaid` from `capped-amount x total-borrowed / debt`, and `interest-paid` is the remainder; `principal-scaled`, `total-borrowed` and `assets` are then written from three different quantities. Show a repay - direct or through `liquidate` - that clears more `principal-scaled` than value delivered, credits `assets` with interest never received, or zeroes `total-borrowed` while `principal-scaled` remains, so `total-assets` misreports solvency permanently. Impact: protocol insolvency.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_6c781b18-92bb-4373-b344-95229eee521d?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: mainnet/contracts/vault/v0-vault-stx.clar -> Scope: Critical. `system-repay` SPLITS ONE PAYMENT WITH THREE DISAGREEING FORMULAS. `capped-amount` is clamped to `total-debt`, `principal-reduction` comes from `calc-principal-ratio-reduction`, `principal-repaid` from `capped-amount x total-borrowed / debt`, and `interest-paid` is the remainder; `principal-scaled`, `total-borrowed` and `assets` are then written from three different quantities. Show a repay - direct or through `liquidate` - that clears more `principal-scaled` than value delivered, credits `assets` with interest never received, or zeroes `total-borrowed` while `principal-scaled` remains, so `total-assets` misreports solvency permanently. Impact: protocol insolvency.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_f56b5e01-5628-4575-8b3a-f485c07225c1?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: mainnet/contracts/vault/v0-vault-sbtc.clar -> Scope: Critical. `system-repay` SPLITS ONE PAYMENT WITH THREE DISAGREEING FORMULAS. `capped-amount` is clamped to `total-debt`, `principal-reduction` comes from `calc-principal-ratio-reduction`, `principal-repaid` from `capped-amount x total-borrowed / debt`, and `interest-paid` is the remainder; `principal-scaled`, `total-borrowed` and `assets` are then written from three different quantities. Show a repay - direct or through `liquidate` - that clears more `principal-scaled` than value delivered, credits `assets` with interest never received, or zeroes `total-borrowed` while `principal-scaled` remains, so `total-assets` misreports solvency permanently. Impact: protocol insolvency.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_35830095-86cc-4c8e-9770-63575e4d3743?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: mainnet/contracts/vault/v0-vault-ststx.clar -> Scope: Critical. `system-repay` SPLITS ONE PAYMENT WITH THREE DISAGREEING FORMULAS. `capped-amount` is clamped to `total-debt`, `principal-reduction` comes from `calc-principal-ratio-reduction`, `principal-repaid` from `capped-amount x total-borrowed / debt`, and `interest-paid` is the remainder; `principal-scaled`, `total-borrowed` and `assets` are then written from three different quantities. Show a repay - direct or through `liquidate` - that clears more `principal-scaled` than value delivered, credits `assets` with interest never received, or zeroes `total-borrowed` while `principal-scaled` remains, so `total-assets` misreports solvency permanently. Impact: protocol insolvency.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_48afef89-5422-40c7-b26e-0e7d2ac99cec?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: mainnet/contracts/registry/v0-assets.clar -> Scope: Critical. `system-repay` SPLITS ONE PAYMENT WITH THREE DISAGREEING FORMULAS. `capped-amount` is clamped to `total-debt`, `principal-reduction` comes from `calc-principal-ratio-reduction`, `principal-repaid` from `capped-amount x total-borrowed / debt`, and `interest-paid` is the remainder; `principal-scaled`, `total-borrowed` and `assets` are then written from three different quantities. Show a repay - direct or through `liquidate` - that clears more `principal-scaled` than value delivered, credits `assets` with interest never received, or zeroes `total-borrowed` while `principal-scaled` remains, so `total-assets` misreports solvency permanently. Impact: protocol insolvency.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_64a5c79a-251d-4f10-a710-64110c536608?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: mainnet/contracts/registry/v0-egroup.clar -> Scope: Critical. `system-repay` SPLITS ONE PAYMENT WITH THREE DISAGREEING FORMULAS. `capped-amount` is clamped to `total-debt`, `principal-reduction` comes from `calc-principal-ratio-reduction`, `principal-repaid` from `capped-amount x total-borrowed / debt`, and `interest-paid` is the remainder; `principal-scaled`, `total-borrowed` and `assets` are then written from three different quantities. Show a repay - direct or through `liquidate` - that clears more `principal-scaled` than value delivered, credits `assets` with interest never received, or zeroes `total-borrowed` while `principal-scaled` remains, so `total-assets` misreports solvency permanently. Impact: protocol insolvency.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_dee2fd16-37bd-4975-9024-6329ccca4083?mode=deep",
+    "questions_generated": false
+  }
+]
