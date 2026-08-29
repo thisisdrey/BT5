@@ -1,0 +1,37 @@
+[
+  {
+    "question": "'File Name: mainnet/contracts/market/v0-4-market.clar -> Scope: Critical. An unprivileged principal moves or encumbers a position it does not own. market.clar derives the acting account from `contract-caller`, yet only `collateral-add`, `supply-collateral-add` and `repay` assert `(is-eq contract-caller tx-sender)` - `collateral-remove`, `collateral-remove-redeem`, `borrow`, `liquidate`, `liquidate-multi` and `liquidate-redeem` do not. Every `receiver`, `collateral-receiver`, `funds-receiver` and `on-behalf-of` is an attacker-chosen delegation, and market-vault trusts a single `impl` var. Find one path where an intermediary contract or an attacker-supplied `<ft-trait>` makes `contract-caller` resolve to a principal that is not the funds owner. Impact: direct theft of user funds.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_e41f26c7-b884-414f-a6ce-02bfc3137d76?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: mainnet/contracts/market/v0-market-vault.clar -> Scope: Critical. An unprivileged principal moves or encumbers a position it does not own. market.clar derives the acting account from `contract-caller`, yet only `collateral-add`, `supply-collateral-add` and `repay` assert `(is-eq contract-caller tx-sender)` - `collateral-remove`, `collateral-remove-redeem`, `borrow`, `liquidate`, `liquidate-multi` and `liquidate-redeem` do not. Every `receiver`, `collateral-receiver`, `funds-receiver` and `on-behalf-of` is an attacker-chosen delegation, and market-vault trusts a single `impl` var. Find one path where an intermediary contract or an attacker-supplied `<ft-trait>` makes `contract-caller` resolve to a principal that is not the funds owner. Impact: direct theft of user funds.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_b8d177c7-2e42-4dcc-b49b-0c39a4d4be7d?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: mainnet/contracts/vault/v0-vault-stx.clar -> Scope: Critical. An unprivileged principal moves or encumbers a position it does not own. market.clar derives the acting account from `contract-caller`, yet only `collateral-add`, `supply-collateral-add` and `repay` assert `(is-eq contract-caller tx-sender)` - `collateral-remove`, `collateral-remove-redeem`, `borrow`, `liquidate`, `liquidate-multi` and `liquidate-redeem` do not. Every `receiver`, `collateral-receiver`, `funds-receiver` and `on-behalf-of` is an attacker-chosen delegation, and market-vault trusts a single `impl` var. Find one path where an intermediary contract or an attacker-supplied `<ft-trait>` makes `contract-caller` resolve to a principal that is not the funds owner. Impact: direct theft of user funds.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_9ec13f65-4b54-44a2-bee9-1ee0829ba938?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: mainnet/contracts/vault/v0-vault-sbtc.clar -> Scope: Critical. An unprivileged principal moves or encumbers a position it does not own. market.clar derives the acting account from `contract-caller`, yet only `collateral-add`, `supply-collateral-add` and `repay` assert `(is-eq contract-caller tx-sender)` - `collateral-remove`, `collateral-remove-redeem`, `borrow`, `liquidate`, `liquidate-multi` and `liquidate-redeem` do not. Every `receiver`, `collateral-receiver`, `funds-receiver` and `on-behalf-of` is an attacker-chosen delegation, and market-vault trusts a single `impl` var. Find one path where an intermediary contract or an attacker-supplied `<ft-trait>` makes `contract-caller` resolve to a principal that is not the funds owner. Impact: direct theft of user funds.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_49162262-7420-4216-9b43-33537dfe9d81?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: mainnet/contracts/vault/v0-vault-ststx.clar -> Scope: Critical. An unprivileged principal moves or encumbers a position it does not own. market.clar derives the acting account from `contract-caller`, yet only `collateral-add`, `supply-collateral-add` and `repay` assert `(is-eq contract-caller tx-sender)` - `collateral-remove`, `collateral-remove-redeem`, `borrow`, `liquidate`, `liquidate-multi` and `liquidate-redeem` do not. Every `receiver`, `collateral-receiver`, `funds-receiver` and `on-behalf-of` is an attacker-chosen delegation, and market-vault trusts a single `impl` var. Find one path where an intermediary contract or an attacker-supplied `<ft-trait>` makes `contract-caller` resolve to a principal that is not the funds owner. Impact: direct theft of user funds.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_f3a831d6-dd4c-47b3-83df-fa4e10f78286?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: mainnet/contracts/registry/v0-assets.clar -> Scope: Critical. An unprivileged principal moves or encumbers a position it does not own. market.clar derives the acting account from `contract-caller`, yet only `collateral-add`, `supply-collateral-add` and `repay` assert `(is-eq contract-caller tx-sender)` - `collateral-remove`, `collateral-remove-redeem`, `borrow`, `liquidate`, `liquidate-multi` and `liquidate-redeem` do not. Every `receiver`, `collateral-receiver`, `funds-receiver` and `on-behalf-of` is an attacker-chosen delegation, and market-vault trusts a single `impl` var. Find one path where an intermediary contract or an attacker-supplied `<ft-trait>` makes `contract-caller` resolve to a principal that is not the funds owner. Impact: direct theft of user funds.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_11b80155-52d0-415b-b8f2-e4cbb08a3a21?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: mainnet/contracts/registry/v0-egroup.clar -> Scope: Critical. An unprivileged principal moves or encumbers a position it does not own. market.clar derives the acting account from `contract-caller`, yet only `collateral-add`, `supply-collateral-add` and `repay` assert `(is-eq contract-caller tx-sender)` - `collateral-remove`, `collateral-remove-redeem`, `borrow`, `liquidate`, `liquidate-multi` and `liquidate-redeem` do not. Every `receiver`, `collateral-receiver`, `funds-receiver` and `on-behalf-of` is an attacker-chosen delegation, and market-vault trusts a single `impl` var. Find one path where an intermediary contract or an attacker-supplied `<ft-trait>` makes `contract-caller` resolve to a principal that is not the funds owner. Impact: direct theft of user funds.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_a4cde76d-614b-45f8-9912-b931f873edff?mode=deep",
+    "questions_generated": false
+  }
+]
