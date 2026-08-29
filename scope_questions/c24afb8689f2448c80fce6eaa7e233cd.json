@@ -1,0 +1,37 @@
+[
+  {
+    "question": "'File Name: mainnet/contracts/market/v0-4-market.clar -> Scope: High. ROUNDING IS SYSTEMATICALLY IN THE USER'S FAVOUR. Compare each paired conversion: `convert-to-scaled-debt` rounding up on borrow against `repay`'s `mul-div-down` / `mul-div-up` and `min` capping; `scale-debt-for-liquidation`'s round-down; `normalize` with per-asset `decimals` - round up for debt, round down for collateral - in `calculate-asset-notional-value` and `find-and-resolve-asset-value`; `mul-bps-down` and `div-bps-down`; `calc-utilization`. Show debt that rounds to zero, a repay credited for more scaled debt than tokens received, an 8-decimal versus 6-decimal asymmetry, or a dust-per-call extraction. Impact: theft of unclaimed yield, or permanently unrepayable dust debt freezing the collateral behind it.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_75f1a57f-3b8d-4802-a4b4-8d9b9f5e35b4?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: mainnet/contracts/market/v0-market-vault.clar -> Scope: High. ROUNDING IS SYSTEMATICALLY IN THE USER'S FAVOUR. Compare each paired conversion: `convert-to-scaled-debt` rounding up on borrow against `repay`'s `mul-div-down` / `mul-div-up` and `min` capping; `scale-debt-for-liquidation`'s round-down; `normalize` with per-asset `decimals` - round up for debt, round down for collateral - in `calculate-asset-notional-value` and `find-and-resolve-asset-value`; `mul-bps-down` and `div-bps-down`; `calc-utilization`. Show debt that rounds to zero, a repay credited for more scaled debt than tokens received, an 8-decimal versus 6-decimal asymmetry, or a dust-per-call extraction. Impact: theft of unclaimed yield, or permanently unrepayable dust debt freezing the collateral behind it.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_ba420204-7ec4-4885-a7d3-651f5568ea26?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: mainnet/contracts/vault/v0-vault-stx.clar -> Scope: High. ROUNDING IS SYSTEMATICALLY IN THE USER'S FAVOUR. Compare each paired conversion: `convert-to-scaled-debt` rounding up on borrow against `repay`'s `mul-div-down` / `mul-div-up` and `min` capping; `scale-debt-for-liquidation`'s round-down; `normalize` with per-asset `decimals` - round up for debt, round down for collateral - in `calculate-asset-notional-value` and `find-and-resolve-asset-value`; `mul-bps-down` and `div-bps-down`; `calc-utilization`. Show debt that rounds to zero, a repay credited for more scaled debt than tokens received, an 8-decimal versus 6-decimal asymmetry, or a dust-per-call extraction. Impact: theft of unclaimed yield, or permanently unrepayable dust debt freezing the collateral behind it.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_c2fc7390-f2a5-4f0b-9e32-7dfa1457f0b6?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: mainnet/contracts/vault/v0-vault-sbtc.clar -> Scope: High. ROUNDING IS SYSTEMATICALLY IN THE USER'S FAVOUR. Compare each paired conversion: `convert-to-scaled-debt` rounding up on borrow against `repay`'s `mul-div-down` / `mul-div-up` and `min` capping; `scale-debt-for-liquidation`'s round-down; `normalize` with per-asset `decimals` - round up for debt, round down for collateral - in `calculate-asset-notional-value` and `find-and-resolve-asset-value`; `mul-bps-down` and `div-bps-down`; `calc-utilization`. Show debt that rounds to zero, a repay credited for more scaled debt than tokens received, an 8-decimal versus 6-decimal asymmetry, or a dust-per-call extraction. Impact: theft of unclaimed yield, or permanently unrepayable dust debt freezing the collateral behind it.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_6651c866-273a-461c-a519-94458ca3c7de?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: mainnet/contracts/vault/v0-vault-ststx.clar -> Scope: High. ROUNDING IS SYSTEMATICALLY IN THE USER'S FAVOUR. Compare each paired conversion: `convert-to-scaled-debt` rounding up on borrow against `repay`'s `mul-div-down` / `mul-div-up` and `min` capping; `scale-debt-for-liquidation`'s round-down; `normalize` with per-asset `decimals` - round up for debt, round down for collateral - in `calculate-asset-notional-value` and `find-and-resolve-asset-value`; `mul-bps-down` and `div-bps-down`; `calc-utilization`. Show debt that rounds to zero, a repay credited for more scaled debt than tokens received, an 8-decimal versus 6-decimal asymmetry, or a dust-per-call extraction. Impact: theft of unclaimed yield, or permanently unrepayable dust debt freezing the collateral behind it.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_001366bd-58b3-44c4-ae49-792d4e0181dc?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: mainnet/contracts/registry/v0-assets.clar -> Scope: High. ROUNDING IS SYSTEMATICALLY IN THE USER'S FAVOUR. Compare each paired conversion: `convert-to-scaled-debt` rounding up on borrow against `repay`'s `mul-div-down` / `mul-div-up` and `min` capping; `scale-debt-for-liquidation`'s round-down; `normalize` with per-asset `decimals` - round up for debt, round down for collateral - in `calculate-asset-notional-value` and `find-and-resolve-asset-value`; `mul-bps-down` and `div-bps-down`; `calc-utilization`. Show debt that rounds to zero, a repay credited for more scaled debt than tokens received, an 8-decimal versus 6-decimal asymmetry, or a dust-per-call extraction. Impact: theft of unclaimed yield, or permanently unrepayable dust debt freezing the collateral behind it.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_7dfdc7dd-1191-4c74-9036-2c6a108d6945?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: mainnet/contracts/registry/v0-egroup.clar -> Scope: High. ROUNDING IS SYSTEMATICALLY IN THE USER'S FAVOUR. Compare each paired conversion: `convert-to-scaled-debt` rounding up on borrow against `repay`'s `mul-div-down` / `mul-div-up` and `min` capping; `scale-debt-for-liquidation`'s round-down; `normalize` with per-asset `decimals` - round up for debt, round down for collateral - in `calculate-asset-notional-value` and `find-and-resolve-asset-value`; `mul-bps-down` and `div-bps-down`; `calc-utilization`. Show debt that rounds to zero, a repay credited for more scaled debt than tokens received, an 8-decimal versus 6-decimal asymmetry, or a dust-per-call extraction. Impact: theft of unclaimed yield, or permanently unrepayable dust debt freezing the collateral behind it.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_91cda771-ce59-40d7-b5a5-f10de0127711?mode=deep",
+    "questions_generated": false
+  }
+]
