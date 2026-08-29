@@ -1,0 +1,37 @@
+[
+  {
+    "question": "'File Name: mainnet/contracts/market/v0-4-market.clar -> Scope: Critical. An unprivileged borrower gets collateral priced too high or debt priced too low and walks away with more than it can be liquidated for. Attack `price-resolve`, `resolve-callcode`, `resolve-ztoken` (which reads `lindex` out of the market's own per-block `index-cache`, not the vault), `resolve-ststx`, `normalize-pyth` (int and expo sign handling), `check-confidence` against `max-confidence-ratio`, `oracle-timestamp-fresh` (monotonic `last-update` per feed key, and a future timestamp yielding a zero delta) and `write-feeds`. The bug must be in this code, not in what a real oracle published. Impact: protocol insolvency through uncollateralised debt.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_077fcbd0-c048-41d2-8785-3d897da86365?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: mainnet/contracts/market/v0-market-vault.clar -> Scope: Critical. An unprivileged borrower gets collateral priced too high or debt priced too low and walks away with more than it can be liquidated for. Attack `price-resolve`, `resolve-callcode`, `resolve-ztoken` (which reads `lindex` out of the market's own per-block `index-cache`, not the vault), `resolve-ststx`, `normalize-pyth` (int and expo sign handling), `check-confidence` against `max-confidence-ratio`, `oracle-timestamp-fresh` (monotonic `last-update` per feed key, and a future timestamp yielding a zero delta) and `write-feeds`. The bug must be in this code, not in what a real oracle published. Impact: protocol insolvency through uncollateralised debt.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_26a5278f-93c2-4387-ac3b-1cef9966de2b?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: mainnet/contracts/vault/v0-vault-stx.clar -> Scope: Critical. An unprivileged borrower gets collateral priced too high or debt priced too low and walks away with more than it can be liquidated for. Attack `price-resolve`, `resolve-callcode`, `resolve-ztoken` (which reads `lindex` out of the market's own per-block `index-cache`, not the vault), `resolve-ststx`, `normalize-pyth` (int and expo sign handling), `check-confidence` against `max-confidence-ratio`, `oracle-timestamp-fresh` (monotonic `last-update` per feed key, and a future timestamp yielding a zero delta) and `write-feeds`. The bug must be in this code, not in what a real oracle published. Impact: protocol insolvency through uncollateralised debt.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_bfa85f88-c2ae-46f2-a422-6a5714c6c53c?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: mainnet/contracts/vault/v0-vault-sbtc.clar -> Scope: Critical. An unprivileged borrower gets collateral priced too high or debt priced too low and walks away with more than it can be liquidated for. Attack `price-resolve`, `resolve-callcode`, `resolve-ztoken` (which reads `lindex` out of the market's own per-block `index-cache`, not the vault), `resolve-ststx`, `normalize-pyth` (int and expo sign handling), `check-confidence` against `max-confidence-ratio`, `oracle-timestamp-fresh` (monotonic `last-update` per feed key, and a future timestamp yielding a zero delta) and `write-feeds`. The bug must be in this code, not in what a real oracle published. Impact: protocol insolvency through uncollateralised debt.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_99b7b113-2dd6-4e42-ad6b-826f6470b5b8?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: mainnet/contracts/vault/v0-vault-ststx.clar -> Scope: Critical. An unprivileged borrower gets collateral priced too high or debt priced too low and walks away with more than it can be liquidated for. Attack `price-resolve`, `resolve-callcode`, `resolve-ztoken` (which reads `lindex` out of the market's own per-block `index-cache`, not the vault), `resolve-ststx`, `normalize-pyth` (int and expo sign handling), `check-confidence` against `max-confidence-ratio`, `oracle-timestamp-fresh` (monotonic `last-update` per feed key, and a future timestamp yielding a zero delta) and `write-feeds`. The bug must be in this code, not in what a real oracle published. Impact: protocol insolvency through uncollateralised debt.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_1e6d7562-e051-449c-995b-3b92870c7807?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: mainnet/contracts/registry/v0-assets.clar -> Scope: Critical. An unprivileged borrower gets collateral priced too high or debt priced too low and walks away with more than it can be liquidated for. Attack `price-resolve`, `resolve-callcode`, `resolve-ztoken` (which reads `lindex` out of the market's own per-block `index-cache`, not the vault), `resolve-ststx`, `normalize-pyth` (int and expo sign handling), `check-confidence` against `max-confidence-ratio`, `oracle-timestamp-fresh` (monotonic `last-update` per feed key, and a future timestamp yielding a zero delta) and `write-feeds`. The bug must be in this code, not in what a real oracle published. Impact: protocol insolvency through uncollateralised debt.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_8f041a26-1198-4323-87ef-e358904c00c7?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: mainnet/contracts/registry/v0-egroup.clar -> Scope: Critical. An unprivileged borrower gets collateral priced too high or debt priced too low and walks away with more than it can be liquidated for. Attack `price-resolve`, `resolve-callcode`, `resolve-ztoken` (which reads `lindex` out of the market's own per-block `index-cache`, not the vault), `resolve-ststx`, `normalize-pyth` (int and expo sign handling), `check-confidence` against `max-confidence-ratio`, `oracle-timestamp-fresh` (monotonic `last-update` per feed key, and a future timestamp yielding a zero delta) and `write-feeds`. The bug must be in this code, not in what a real oracle published. Impact: protocol insolvency through uncollateralised debt.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_d483ff51-8474-4ae0-857c-9742331217a5?mode=deep",
+    "questions_generated": false
+  }
+]
