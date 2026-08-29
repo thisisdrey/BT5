@@ -1,0 +1,37 @@
+[
+  {
+    "question": "'File Name: mainnet/contracts/market/v0-4-market.clar -> Scope: Critical. An unprivileged user makes interest accrual disagree with itself. `accrue` writes `index` and `lindex` but bumps `last-update` only when one of them changed; `next-index` and `next-liquidity-index` return stale values while the `accrue` pause state is set, which is a pass-through rather than a revert; `calc-multiplier-delta` rounds debt and liquidity in different directions; the market caches indexes per `stacks-block-time` and reuses them for every operation in that block. Show interest skipped, applied twice, or a `lindex` that inflates zToken collateral value. Impact: theft of unclaimed yield, or insolvency.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_f9436d58-03c0-4bf5-a276-79c162bcb783?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: mainnet/contracts/market/v0-market-vault.clar -> Scope: Critical. An unprivileged user makes interest accrual disagree with itself. `accrue` writes `index` and `lindex` but bumps `last-update` only when one of them changed; `next-index` and `next-liquidity-index` return stale values while the `accrue` pause state is set, which is a pass-through rather than a revert; `calc-multiplier-delta` rounds debt and liquidity in different directions; the market caches indexes per `stacks-block-time` and reuses them for every operation in that block. Show interest skipped, applied twice, or a `lindex` that inflates zToken collateral value. Impact: theft of unclaimed yield, or insolvency.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_e77453b3-c066-409f-bfd0-278477dd4954?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: mainnet/contracts/vault/v0-vault-stx.clar -> Scope: Critical. An unprivileged user makes interest accrual disagree with itself. `accrue` writes `index` and `lindex` but bumps `last-update` only when one of them changed; `next-index` and `next-liquidity-index` return stale values while the `accrue` pause state is set, which is a pass-through rather than a revert; `calc-multiplier-delta` rounds debt and liquidity in different directions; the market caches indexes per `stacks-block-time` and reuses them for every operation in that block. Show interest skipped, applied twice, or a `lindex` that inflates zToken collateral value. Impact: theft of unclaimed yield, or insolvency.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_3308e6a6-0c40-4b5e-9186-d9224ec7f480?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: mainnet/contracts/vault/v0-vault-sbtc.clar -> Scope: Critical. An unprivileged user makes interest accrual disagree with itself. `accrue` writes `index` and `lindex` but bumps `last-update` only when one of them changed; `next-index` and `next-liquidity-index` return stale values while the `accrue` pause state is set, which is a pass-through rather than a revert; `calc-multiplier-delta` rounds debt and liquidity in different directions; the market caches indexes per `stacks-block-time` and reuses them for every operation in that block. Show interest skipped, applied twice, or a `lindex` that inflates zToken collateral value. Impact: theft of unclaimed yield, or insolvency.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_9352a24e-22d5-4b00-897d-fb1638c37e34?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: mainnet/contracts/vault/v0-vault-ststx.clar -> Scope: Critical. An unprivileged user makes interest accrual disagree with itself. `accrue` writes `index` and `lindex` but bumps `last-update` only when one of them changed; `next-index` and `next-liquidity-index` return stale values while the `accrue` pause state is set, which is a pass-through rather than a revert; `calc-multiplier-delta` rounds debt and liquidity in different directions; the market caches indexes per `stacks-block-time` and reuses them for every operation in that block. Show interest skipped, applied twice, or a `lindex` that inflates zToken collateral value. Impact: theft of unclaimed yield, or insolvency.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_6065ed68-253f-45fa-8320-cc4cbda150ec?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: mainnet/contracts/registry/v0-assets.clar -> Scope: Critical. An unprivileged user makes interest accrual disagree with itself. `accrue` writes `index` and `lindex` but bumps `last-update` only when one of them changed; `next-index` and `next-liquidity-index` return stale values while the `accrue` pause state is set, which is a pass-through rather than a revert; `calc-multiplier-delta` rounds debt and liquidity in different directions; the market caches indexes per `stacks-block-time` and reuses them for every operation in that block. Show interest skipped, applied twice, or a `lindex` that inflates zToken collateral value. Impact: theft of unclaimed yield, or insolvency.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_5ef3bb17-7be7-4f3a-9d71-4eeb928ac696?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: mainnet/contracts/registry/v0-egroup.clar -> Scope: Critical. An unprivileged user makes interest accrual disagree with itself. `accrue` writes `index` and `lindex` but bumps `last-update` only when one of them changed; `next-index` and `next-liquidity-index` return stale values while the `accrue` pause state is set, which is a pass-through rather than a revert; `calc-multiplier-delta` rounds debt and liquidity in different directions; the market caches indexes per `stacks-block-time` and reuses them for every operation in that block. Show interest skipped, applied twice, or a `lindex` that inflates zToken collateral value. Impact: theft of unclaimed yield, or insolvency.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_5df245d8-3bce-46ae-a419-ee40d5cf38b7?mode=deep",
+    "questions_generated": false
+  }
+]
