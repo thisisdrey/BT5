@@ -1,0 +1,13 @@
+# Q0833: oracle-price-legal via supply-collateral-add: make two code sites that must agree disagree by an attacke
+
+## Question
+Can an unprivileged attacker entering through `supply-collateral-add` (mainnet/contracts/market/v0-4-market.clar:1175), controlling the `ft` trait principal deciding which vault is routed to, drive `oracle-price-legal` (mainnet/contracts/market/v0-4-market.clar:362) — which accepts any price strictly greater than zero, with no upper bound and no sanity band — to make two code sites that must agree disagree by an attacker-chosen amount, breaking the invariant that only the acting principal's own position is mutated, and cause protocol insolvency through uncollateralised debt?
+
+## Target
+- File/function: `mainnet/contracts/market/v0-4-market.clar:362` -> `oracle-price-legal`
+- Entrypoint: `supply-collateral-add` (`mainnet/contracts/market/v0-4-market.clar:1175`), unprivileged and publicly callable
+- Attacker controls: the `ft` trait principal deciding which vault is routed to
+- Exploit idea: `oracle-price-legal` accepts any price strictly greater than zero, with no upper bound and no sanity band. Reach it through `supply-collateral-add` and make two code sites that must agree disagree by an attacker-chosen amount.
+- Invariant to test: only the acting principal's own position is mutated
+- Expected Immunefi impact: Critical - protocol insolvency through uncollateralised debt
+- Fast validation: Run the baseline `supply-collateral-add` call, then the attacker-shaped one with the `ft` trait principal deciding which vault is routed to, and assert the attacker's net token balance change is zero or negative.

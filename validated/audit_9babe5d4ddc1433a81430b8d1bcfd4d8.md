@@ -1,1 +1,0 @@
-Now let's find where `report_recorded_column_sizes` is called to confirm it's only invoked after full apply, not mid-apply.

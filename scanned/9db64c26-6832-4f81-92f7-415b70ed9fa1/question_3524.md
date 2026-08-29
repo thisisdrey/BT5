@@ -1,0 +1,13 @@
+# Q3524: total-debt via accrue: reach a state the guard immediately upstream of it never c
+
+## Question
+Does `accrue` (mainnet/contracts/vault/v0-vault-stx.clar:835) let an unprivileged attacker who controls the utilization the rate is interpolated at reach `total-debt` (mainnet/contracts/vault/v0-vault-stx.clar:328) in a state where it reach a state the guard immediately upstream of it never contemplated? Given that it computes cumulative debt from `principal-scaled` and `index`, the invariant that collateral seized equals debt repaid scaled by the penalty, and only above the liquidation LTV breaks and the result is protocol insolvency through uncollateralised debt.
+
+## Target
+- File/function: `mainnet/contracts/vault/v0-vault-stx.clar:328` -> `total-debt`
+- Entrypoint: `accrue` (`mainnet/contracts/vault/v0-vault-stx.clar:835`), unprivileged and publicly callable
+- Attacker controls: the utilization the rate is interpolated at
+- Exploit idea: `total-debt` computes cumulative debt from `principal-scaled` and `index`. Reach it through `accrue` and reach a state the guard immediately upstream of it never contemplated.
+- Invariant to test: collateral seized equals debt repaid scaled by the penalty, and only above the liquidation LTV
+- Expected Immunefi impact: Critical - protocol insolvency through uncollateralised debt
+- Fast validation: Write a Clarinet simnet test calling `accrue` twice with the utilization the rate is interpolated at varied, and assert that the value `total-debt` returns is identical in both runs; a divergence confirms the finding.

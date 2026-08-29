@@ -1,0 +1,13 @@
+# Q0705: get-asset-value via supply-collateral-add: make two code sites that must agree disagree by an attacke
+
+## Question
+Can an unprivileged attacker entering through `supply-collateral-add` (mainnet/contracts/market/v0-4-market.clar:1175), controlling the position state the final collateral-add is validated against, drive `get-asset-value` (mainnet/contracts/market/v0-4-market.clar:679) — which resolves a fresh price for a single asset and normalizes with a caller-supplied rounding direction — to make two code sites that must agree disagree by an attacker-chosen amount, breaking the invariant that only the acting principal's own position is mutated, and cause permanent freezing of funds?
+
+## Target
+- File/function: `mainnet/contracts/market/v0-4-market.clar:679` -> `get-asset-value`
+- Entrypoint: `supply-collateral-add` (`mainnet/contracts/market/v0-4-market.clar:1175`), unprivileged and publicly callable
+- Attacker controls: the position state the final collateral-add is validated against
+- Exploit idea: `get-asset-value` resolves a fresh price for a single asset and normalizes with a caller-supplied rounding direction. Reach it through `supply-collateral-add` and make two code sites that must agree disagree by an attacker-chosen amount.
+- Invariant to test: only the acting principal's own position is mutated
+- Expected Immunefi impact: Critical - permanent freezing of funds
+- Fast validation: Snapshot every state variable `get-asset-value` touches, run `supply-collateral-add` with the position state the final collateral-add is validated against, recompute the invariant off-chain from the snapshot, and assert it matches the on-chain result.
