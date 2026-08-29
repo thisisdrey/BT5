@@ -1,0 +1,37 @@
+[
+  {
+    "question": "'File Name: mainnet/contracts/market/v0-4-market.clar -> Scope: Critical. THE MARKET CONTRACT HOLDS USER FUNDS MID-TRANSACTION. `supply-collateral-add` transfers the underlying to `current-contract`, deposits under an `as-contract?` scope carrying a wildcard fungible-token post condition, mints shares to the user, then re-enters `collateral-add` with a different trait principal. `collateral-remove-redeem` removes collateral to `(some current-contract)` and then redeems the SAME `amount` as shares, sending underlying to an attacker-chosen `funds-receiver`. Show a `shares-minted` versus `amount` mismatch, a `min-shares` or `min-underlying` bound that does not bind, or a way to capture the market's transient balance. Impact: direct theft of funds in motion.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_b9f8132a-762b-471e-ba62-c4a2d19ad988?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: mainnet/contracts/market/v0-market-vault.clar -> Scope: Critical. THE MARKET CONTRACT HOLDS USER FUNDS MID-TRANSACTION. `supply-collateral-add` transfers the underlying to `current-contract`, deposits under an `as-contract?` scope carrying a wildcard fungible-token post condition, mints shares to the user, then re-enters `collateral-add` with a different trait principal. `collateral-remove-redeem` removes collateral to `(some current-contract)` and then redeems the SAME `amount` as shares, sending underlying to an attacker-chosen `funds-receiver`. Show a `shares-minted` versus `amount` mismatch, a `min-shares` or `min-underlying` bound that does not bind, or a way to capture the market's transient balance. Impact: direct theft of funds in motion.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_683fc463-3e3f-471e-b36e-04549cbab26a?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: mainnet/contracts/vault/v0-vault-stx.clar -> Scope: Critical. THE MARKET CONTRACT HOLDS USER FUNDS MID-TRANSACTION. `supply-collateral-add` transfers the underlying to `current-contract`, deposits under an `as-contract?` scope carrying a wildcard fungible-token post condition, mints shares to the user, then re-enters `collateral-add` with a different trait principal. `collateral-remove-redeem` removes collateral to `(some current-contract)` and then redeems the SAME `amount` as shares, sending underlying to an attacker-chosen `funds-receiver`. Show a `shares-minted` versus `amount` mismatch, a `min-shares` or `min-underlying` bound that does not bind, or a way to capture the market's transient balance. Impact: direct theft of funds in motion.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_3d796d0c-5e49-4359-aa40-a287d5961924?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: mainnet/contracts/vault/v0-vault-sbtc.clar -> Scope: Critical. THE MARKET CONTRACT HOLDS USER FUNDS MID-TRANSACTION. `supply-collateral-add` transfers the underlying to `current-contract`, deposits under an `as-contract?` scope carrying a wildcard fungible-token post condition, mints shares to the user, then re-enters `collateral-add` with a different trait principal. `collateral-remove-redeem` removes collateral to `(some current-contract)` and then redeems the SAME `amount` as shares, sending underlying to an attacker-chosen `funds-receiver`. Show a `shares-minted` versus `amount` mismatch, a `min-shares` or `min-underlying` bound that does not bind, or a way to capture the market's transient balance. Impact: direct theft of funds in motion.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_255e9686-7dbd-4a23-bf14-7e2fc4acf4cf?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: mainnet/contracts/vault/v0-vault-ststx.clar -> Scope: Critical. THE MARKET CONTRACT HOLDS USER FUNDS MID-TRANSACTION. `supply-collateral-add` transfers the underlying to `current-contract`, deposits under an `as-contract?` scope carrying a wildcard fungible-token post condition, mints shares to the user, then re-enters `collateral-add` with a different trait principal. `collateral-remove-redeem` removes collateral to `(some current-contract)` and then redeems the SAME `amount` as shares, sending underlying to an attacker-chosen `funds-receiver`. Show a `shares-minted` versus `amount` mismatch, a `min-shares` or `min-underlying` bound that does not bind, or a way to capture the market's transient balance. Impact: direct theft of funds in motion.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_11443644-5d67-4648-a519-ddc76593f082?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: mainnet/contracts/registry/v0-assets.clar -> Scope: Critical. THE MARKET CONTRACT HOLDS USER FUNDS MID-TRANSACTION. `supply-collateral-add` transfers the underlying to `current-contract`, deposits under an `as-contract?` scope carrying a wildcard fungible-token post condition, mints shares to the user, then re-enters `collateral-add` with a different trait principal. `collateral-remove-redeem` removes collateral to `(some current-contract)` and then redeems the SAME `amount` as shares, sending underlying to an attacker-chosen `funds-receiver`. Show a `shares-minted` versus `amount` mismatch, a `min-shares` or `min-underlying` bound that does not bind, or a way to capture the market's transient balance. Impact: direct theft of funds in motion.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_7cc04b9e-5e04-4d0f-ab15-e69422390f76?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: mainnet/contracts/registry/v0-egroup.clar -> Scope: Critical. THE MARKET CONTRACT HOLDS USER FUNDS MID-TRANSACTION. `supply-collateral-add` transfers the underlying to `current-contract`, deposits under an `as-contract?` scope carrying a wildcard fungible-token post condition, mints shares to the user, then re-enters `collateral-add` with a different trait principal. `collateral-remove-redeem` removes collateral to `(some current-contract)` and then redeems the SAME `amount` as shares, sending underlying to an attacker-chosen `funds-receiver`. Show a `shares-minted` versus `amount` mismatch, a `min-shares` or `min-underlying` bound that does not bind, or a way to capture the market's transient balance. Impact: direct theft of funds in motion.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_90fddb09-b553-40c0-af66-55f42e1d75b3?mode=deep",
+    "questions_generated": false
+  }
+]
