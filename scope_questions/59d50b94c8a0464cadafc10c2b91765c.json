@@ -1,0 +1,37 @@
+[
+  {
+    "question": "'File Name: mainnet/contracts/market/v0-4-market.clar -> Scope: Critical. `status-multi` PAIRS THE WRONG VALUES. `(map unwrap-status ids mask)` is a TWO-LIST map in which `mask` is `uint-to-list-u64` of the enabled bitmap, so each asset id is paired positionally with one element of that expansion rather than with the whole bitmap, and `map` silently truncates to the shorter list. Trace what `collateral:` and `debt:` flags `status` therefore returns into `get-assets`, and show a position whose ids do not line up positionally receiving a flag it should not have, or being dropped from the notional fold entirely. Impact: insolvency or direct theft.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_45bccd77-a7af-4fe1-935b-875cca5f5083?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: mainnet/contracts/market/v0-market-vault.clar -> Scope: Critical. `status-multi` PAIRS THE WRONG VALUES. `(map unwrap-status ids mask)` is a TWO-LIST map in which `mask` is `uint-to-list-u64` of the enabled bitmap, so each asset id is paired positionally with one element of that expansion rather than with the whole bitmap, and `map` silently truncates to the shorter list. Trace what `collateral:` and `debt:` flags `status` therefore returns into `get-assets`, and show a position whose ids do not line up positionally receiving a flag it should not have, or being dropped from the notional fold entirely. Impact: insolvency or direct theft.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_7360c033-4845-4861-8024-5ca0f6bf3279?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: mainnet/contracts/vault/v0-vault-stx.clar -> Scope: Critical. `status-multi` PAIRS THE WRONG VALUES. `(map unwrap-status ids mask)` is a TWO-LIST map in which `mask` is `uint-to-list-u64` of the enabled bitmap, so each asset id is paired positionally with one element of that expansion rather than with the whole bitmap, and `map` silently truncates to the shorter list. Trace what `collateral:` and `debt:` flags `status` therefore returns into `get-assets`, and show a position whose ids do not line up positionally receiving a flag it should not have, or being dropped from the notional fold entirely. Impact: insolvency or direct theft.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_98036292-ff20-4b91-a4ce-c5a10960ae11?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: mainnet/contracts/vault/v0-vault-sbtc.clar -> Scope: Critical. `status-multi` PAIRS THE WRONG VALUES. `(map unwrap-status ids mask)` is a TWO-LIST map in which `mask` is `uint-to-list-u64` of the enabled bitmap, so each asset id is paired positionally with one element of that expansion rather than with the whole bitmap, and `map` silently truncates to the shorter list. Trace what `collateral:` and `debt:` flags `status` therefore returns into `get-assets`, and show a position whose ids do not line up positionally receiving a flag it should not have, or being dropped from the notional fold entirely. Impact: insolvency or direct theft.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_345d1dda-90f4-46cb-be37-9ba11b393229?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: mainnet/contracts/vault/v0-vault-ststx.clar -> Scope: Critical. `status-multi` PAIRS THE WRONG VALUES. `(map unwrap-status ids mask)` is a TWO-LIST map in which `mask` is `uint-to-list-u64` of the enabled bitmap, so each asset id is paired positionally with one element of that expansion rather than with the whole bitmap, and `map` silently truncates to the shorter list. Trace what `collateral:` and `debt:` flags `status` therefore returns into `get-assets`, and show a position whose ids do not line up positionally receiving a flag it should not have, or being dropped from the notional fold entirely. Impact: insolvency or direct theft.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_e8ae260b-84e0-48e5-a5e9-c0bbd6b3fb45?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: mainnet/contracts/registry/v0-assets.clar -> Scope: Critical. `status-multi` PAIRS THE WRONG VALUES. `(map unwrap-status ids mask)` is a TWO-LIST map in which `mask` is `uint-to-list-u64` of the enabled bitmap, so each asset id is paired positionally with one element of that expansion rather than with the whole bitmap, and `map` silently truncates to the shorter list. Trace what `collateral:` and `debt:` flags `status` therefore returns into `get-assets`, and show a position whose ids do not line up positionally receiving a flag it should not have, or being dropped from the notional fold entirely. Impact: insolvency or direct theft.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_e3d1a908-73b0-4e23-a1d5-268b6bf5eef2?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: mainnet/contracts/registry/v0-egroup.clar -> Scope: Critical. `status-multi` PAIRS THE WRONG VALUES. `(map unwrap-status ids mask)` is a TWO-LIST map in which `mask` is `uint-to-list-u64` of the enabled bitmap, so each asset id is paired positionally with one element of that expansion rather than with the whole bitmap, and `map` silently truncates to the shorter list. Trace what `collateral:` and `debt:` flags `status` therefore returns into `get-assets`, and show a position whose ids do not line up positionally receiving a flag it should not have, or being dropped from the notional fold entirely. Impact: insolvency or direct theft.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_d0d9cf85-9e4b-4f89-bba1-6601fbd958e2?mode=deep",
+    "questions_generated": false
+  }
+]
