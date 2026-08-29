@@ -1,0 +1,37 @@
+[
+  {
+    "question": "'File Name: mainnet/contracts/market/v0-4-market.clar -> Scope: Critical. An unprivileged actor forces or abuses bad-debt socialization so honest suppliers pay. market `socialize-debt-asset` calls the vault's `socialize-debt`, re-accrues, then removes the obligation; the vault reduces `lindex`, `principal-scaled`, `total-borrowed` and `assets` with four independent saturating formulas, `principal-reduction` from `borrowed / scaled-principal` and `new-lindex` from `old-total-assets`. Show a self-created dust or oracle-edge position that triggers socialization for profit, a write-down larger than the loss, or `lindex` driven to zero so every zToken collateral in that vault prices at 0. Impact: insolvency, or permanent freezing of funds.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_5828d9d8-d691-4302-908b-d3f6e28f54f6?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: mainnet/contracts/market/v0-market-vault.clar -> Scope: Critical. An unprivileged actor forces or abuses bad-debt socialization so honest suppliers pay. market `socialize-debt-asset` calls the vault's `socialize-debt`, re-accrues, then removes the obligation; the vault reduces `lindex`, `principal-scaled`, `total-borrowed` and `assets` with four independent saturating formulas, `principal-reduction` from `borrowed / scaled-principal` and `new-lindex` from `old-total-assets`. Show a self-created dust or oracle-edge position that triggers socialization for profit, a write-down larger than the loss, or `lindex` driven to zero so every zToken collateral in that vault prices at 0. Impact: insolvency, or permanent freezing of funds.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_a9e091bb-5251-42e3-8911-6c5d0d42551d?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: mainnet/contracts/vault/v0-vault-stx.clar -> Scope: Critical. An unprivileged actor forces or abuses bad-debt socialization so honest suppliers pay. market `socialize-debt-asset` calls the vault's `socialize-debt`, re-accrues, then removes the obligation; the vault reduces `lindex`, `principal-scaled`, `total-borrowed` and `assets` with four independent saturating formulas, `principal-reduction` from `borrowed / scaled-principal` and `new-lindex` from `old-total-assets`. Show a self-created dust or oracle-edge position that triggers socialization for profit, a write-down larger than the loss, or `lindex` driven to zero so every zToken collateral in that vault prices at 0. Impact: insolvency, or permanent freezing of funds.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_2417165e-c4e5-4c0c-a445-0855b70beb87?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: mainnet/contracts/vault/v0-vault-sbtc.clar -> Scope: Critical. An unprivileged actor forces or abuses bad-debt socialization so honest suppliers pay. market `socialize-debt-asset` calls the vault's `socialize-debt`, re-accrues, then removes the obligation; the vault reduces `lindex`, `principal-scaled`, `total-borrowed` and `assets` with four independent saturating formulas, `principal-reduction` from `borrowed / scaled-principal` and `new-lindex` from `old-total-assets`. Show a self-created dust or oracle-edge position that triggers socialization for profit, a write-down larger than the loss, or `lindex` driven to zero so every zToken collateral in that vault prices at 0. Impact: insolvency, or permanent freezing of funds.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_1c10d04f-203d-4a88-8328-613bd381a2a1?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: mainnet/contracts/vault/v0-vault-ststx.clar -> Scope: Critical. An unprivileged actor forces or abuses bad-debt socialization so honest suppliers pay. market `socialize-debt-asset` calls the vault's `socialize-debt`, re-accrues, then removes the obligation; the vault reduces `lindex`, `principal-scaled`, `total-borrowed` and `assets` with four independent saturating formulas, `principal-reduction` from `borrowed / scaled-principal` and `new-lindex` from `old-total-assets`. Show a self-created dust or oracle-edge position that triggers socialization for profit, a write-down larger than the loss, or `lindex` driven to zero so every zToken collateral in that vault prices at 0. Impact: insolvency, or permanent freezing of funds.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_6c79d23f-c752-414f-822f-68d128676960?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: mainnet/contracts/registry/v0-assets.clar -> Scope: Critical. An unprivileged actor forces or abuses bad-debt socialization so honest suppliers pay. market `socialize-debt-asset` calls the vault's `socialize-debt`, re-accrues, then removes the obligation; the vault reduces `lindex`, `principal-scaled`, `total-borrowed` and `assets` with four independent saturating formulas, `principal-reduction` from `borrowed / scaled-principal` and `new-lindex` from `old-total-assets`. Show a self-created dust or oracle-edge position that triggers socialization for profit, a write-down larger than the loss, or `lindex` driven to zero so every zToken collateral in that vault prices at 0. Impact: insolvency, or permanent freezing of funds.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_290f714b-fd92-422a-945c-000ec10cdf69?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: mainnet/contracts/registry/v0-egroup.clar -> Scope: Critical. An unprivileged actor forces or abuses bad-debt socialization so honest suppliers pay. market `socialize-debt-asset` calls the vault's `socialize-debt`, re-accrues, then removes the obligation; the vault reduces `lindex`, `principal-scaled`, `total-borrowed` and `assets` with four independent saturating formulas, `principal-reduction` from `borrowed / scaled-principal` and `new-lindex` from `old-total-assets`. Show a self-created dust or oracle-edge position that triggers socialization for profit, a write-down larger than the loss, or `lindex` driven to zero so every zToken collateral in that vault prices at 0. Impact: insolvency, or permanent freezing of funds.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_5cff315e-658d-4af0-bcb4-040fcbf16783?mode=deep",
+    "questions_generated": false
+  }
+]
