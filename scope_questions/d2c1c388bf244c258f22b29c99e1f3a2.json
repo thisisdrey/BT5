@@ -1,0 +1,37 @@
+[
+  {
+    "question": "'File Name: mainnet/contracts/market/v0-4-market.clar -> Scope: Critical. An unprivileged liquidator is paid more collateral than the debt it actually repays, or seizes from a healthy position. Follow `calc-liquidation-params` -> `calc-liq-factor` -> `calc-liq-factor-exp` (integer `pow` and `sqrti`) -> `calc-liq-factor-bound` -> `process-debt-asset` -> `calc-final-liquidation-amounts` -> `scale-debt-for-liquidation`, plus `liquidate-multi` and `liquidate-redeem` which run with no `price-feeds`. Assert seized collateral USD equals repaid debt USD times (BPS + liq-penalty), never more. Do NOT frame this around disabled collateral, which is an accepted design decision. Impact: direct theft of borrower funds.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_96b58c1b-f188-4e11-a23b-304f8bed475f?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: mainnet/contracts/market/v0-market-vault.clar -> Scope: Critical. An unprivileged liquidator is paid more collateral than the debt it actually repays, or seizes from a healthy position. Follow `calc-liquidation-params` -> `calc-liq-factor` -> `calc-liq-factor-exp` (integer `pow` and `sqrti`) -> `calc-liq-factor-bound` -> `process-debt-asset` -> `calc-final-liquidation-amounts` -> `scale-debt-for-liquidation`, plus `liquidate-multi` and `liquidate-redeem` which run with no `price-feeds`. Assert seized collateral USD equals repaid debt USD times (BPS + liq-penalty), never more. Do NOT frame this around disabled collateral, which is an accepted design decision. Impact: direct theft of borrower funds.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_0679526c-8b37-4113-8bc3-4b6ed693bec2?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: mainnet/contracts/vault/v0-vault-stx.clar -> Scope: Critical. An unprivileged liquidator is paid more collateral than the debt it actually repays, or seizes from a healthy position. Follow `calc-liquidation-params` -> `calc-liq-factor` -> `calc-liq-factor-exp` (integer `pow` and `sqrti`) -> `calc-liq-factor-bound` -> `process-debt-asset` -> `calc-final-liquidation-amounts` -> `scale-debt-for-liquidation`, plus `liquidate-multi` and `liquidate-redeem` which run with no `price-feeds`. Assert seized collateral USD equals repaid debt USD times (BPS + liq-penalty), never more. Do NOT frame this around disabled collateral, which is an accepted design decision. Impact: direct theft of borrower funds.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_6ecdc27c-cc46-4c3a-bca1-7b9c4613bfc0?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: mainnet/contracts/vault/v0-vault-sbtc.clar -> Scope: Critical. An unprivileged liquidator is paid more collateral than the debt it actually repays, or seizes from a healthy position. Follow `calc-liquidation-params` -> `calc-liq-factor` -> `calc-liq-factor-exp` (integer `pow` and `sqrti`) -> `calc-liq-factor-bound` -> `process-debt-asset` -> `calc-final-liquidation-amounts` -> `scale-debt-for-liquidation`, plus `liquidate-multi` and `liquidate-redeem` which run with no `price-feeds`. Assert seized collateral USD equals repaid debt USD times (BPS + liq-penalty), never more. Do NOT frame this around disabled collateral, which is an accepted design decision. Impact: direct theft of borrower funds.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_d60493e7-e223-4b0e-b4f6-ea3ea6147898?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: mainnet/contracts/vault/v0-vault-ststx.clar -> Scope: Critical. An unprivileged liquidator is paid more collateral than the debt it actually repays, or seizes from a healthy position. Follow `calc-liquidation-params` -> `calc-liq-factor` -> `calc-liq-factor-exp` (integer `pow` and `sqrti`) -> `calc-liq-factor-bound` -> `process-debt-asset` -> `calc-final-liquidation-amounts` -> `scale-debt-for-liquidation`, plus `liquidate-multi` and `liquidate-redeem` which run with no `price-feeds`. Assert seized collateral USD equals repaid debt USD times (BPS + liq-penalty), never more. Do NOT frame this around disabled collateral, which is an accepted design decision. Impact: direct theft of borrower funds.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_4882991a-8e5e-4e2b-8016-18bda5875fb6?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: mainnet/contracts/registry/v0-assets.clar -> Scope: Critical. An unprivileged liquidator is paid more collateral than the debt it actually repays, or seizes from a healthy position. Follow `calc-liquidation-params` -> `calc-liq-factor` -> `calc-liq-factor-exp` (integer `pow` and `sqrti`) -> `calc-liq-factor-bound` -> `process-debt-asset` -> `calc-final-liquidation-amounts` -> `scale-debt-for-liquidation`, plus `liquidate-multi` and `liquidate-redeem` which run with no `price-feeds`. Assert seized collateral USD equals repaid debt USD times (BPS + liq-penalty), never more. Do NOT frame this around disabled collateral, which is an accepted design decision. Impact: direct theft of borrower funds.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_b8d18613-0779-4c29-9dcb-59fff6c3753e?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: mainnet/contracts/registry/v0-egroup.clar -> Scope: Critical. An unprivileged liquidator is paid more collateral than the debt it actually repays, or seizes from a healthy position. Follow `calc-liquidation-params` -> `calc-liq-factor` -> `calc-liq-factor-exp` (integer `pow` and `sqrti`) -> `calc-liq-factor-bound` -> `process-debt-asset` -> `calc-final-liquidation-amounts` -> `scale-debt-for-liquidation`, plus `liquidate-multi` and `liquidate-redeem` which run with no `price-feeds`. Assert seized collateral USD equals repaid debt USD times (BPS + liq-penalty), never more. Do NOT frame this around disabled collateral, which is an accepted design decision. Impact: direct theft of borrower funds.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_cff8d95d-fb83-49dd-88e0-dbeb33e6c695?mode=deep",
+    "questions_generated": false
+  }
+]
