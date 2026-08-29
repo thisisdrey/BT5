@@ -1,0 +1,37 @@
+[
+  {
+    "question": "'File Name: mainnet/contracts/market/v0-4-market.clar -> Scope: Critical. THE LEDGER AND ITS MASK STOP AGREEING. In market-vault `collateral-add`, `collateral-remove`, `debt-add-scaled` and `debt-remove-scaled`, the map mutation and `mask-update` are `let` bindings evaluated BEFORE `check-impl-auth`, the pause states and the amount assertions; `resolve-or-create` allocates ids through `increment`; `insert` rewrites the whole entry while `refresh` replaces `mask` and `last-update`. Show a non-zero collateral or debt row whose mask bit is clear - invisible to every health check and to liquidation - or a cleared bit for a row that still exists. Impact: insolvency, or permanent freezing of the affected collateral.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_ec0de5c4-1a34-4ea3-a127-1c86777c631a?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: mainnet/contracts/market/v0-market-vault.clar -> Scope: Critical. THE LEDGER AND ITS MASK STOP AGREEING. In market-vault `collateral-add`, `collateral-remove`, `debt-add-scaled` and `debt-remove-scaled`, the map mutation and `mask-update` are `let` bindings evaluated BEFORE `check-impl-auth`, the pause states and the amount assertions; `resolve-or-create` allocates ids through `increment`; `insert` rewrites the whole entry while `refresh` replaces `mask` and `last-update`. Show a non-zero collateral or debt row whose mask bit is clear - invisible to every health check and to liquidation - or a cleared bit for a row that still exists. Impact: insolvency, or permanent freezing of the affected collateral.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_fe47d450-1bdd-4daa-a5c9-28aec6827468?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: mainnet/contracts/vault/v0-vault-stx.clar -> Scope: Critical. THE LEDGER AND ITS MASK STOP AGREEING. In market-vault `collateral-add`, `collateral-remove`, `debt-add-scaled` and `debt-remove-scaled`, the map mutation and `mask-update` are `let` bindings evaluated BEFORE `check-impl-auth`, the pause states and the amount assertions; `resolve-or-create` allocates ids through `increment`; `insert` rewrites the whole entry while `refresh` replaces `mask` and `last-update`. Show a non-zero collateral or debt row whose mask bit is clear - invisible to every health check and to liquidation - or a cleared bit for a row that still exists. Impact: insolvency, or permanent freezing of the affected collateral.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_43cb73b4-fd7c-4d3b-a20a-47258e024119?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: mainnet/contracts/vault/v0-vault-sbtc.clar -> Scope: Critical. THE LEDGER AND ITS MASK STOP AGREEING. In market-vault `collateral-add`, `collateral-remove`, `debt-add-scaled` and `debt-remove-scaled`, the map mutation and `mask-update` are `let` bindings evaluated BEFORE `check-impl-auth`, the pause states and the amount assertions; `resolve-or-create` allocates ids through `increment`; `insert` rewrites the whole entry while `refresh` replaces `mask` and `last-update`. Show a non-zero collateral or debt row whose mask bit is clear - invisible to every health check and to liquidation - or a cleared bit for a row that still exists. Impact: insolvency, or permanent freezing of the affected collateral.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_011fedd1-a221-49c5-84aa-729dcbacea50?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: mainnet/contracts/vault/v0-vault-ststx.clar -> Scope: Critical. THE LEDGER AND ITS MASK STOP AGREEING. In market-vault `collateral-add`, `collateral-remove`, `debt-add-scaled` and `debt-remove-scaled`, the map mutation and `mask-update` are `let` bindings evaluated BEFORE `check-impl-auth`, the pause states and the amount assertions; `resolve-or-create` allocates ids through `increment`; `insert` rewrites the whole entry while `refresh` replaces `mask` and `last-update`. Show a non-zero collateral or debt row whose mask bit is clear - invisible to every health check and to liquidation - or a cleared bit for a row that still exists. Impact: insolvency, or permanent freezing of the affected collateral.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_2a8c748f-f41c-44f9-b8b1-bfc00f9d68a4?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: mainnet/contracts/registry/v0-assets.clar -> Scope: Critical. THE LEDGER AND ITS MASK STOP AGREEING. In market-vault `collateral-add`, `collateral-remove`, `debt-add-scaled` and `debt-remove-scaled`, the map mutation and `mask-update` are `let` bindings evaluated BEFORE `check-impl-auth`, the pause states and the amount assertions; `resolve-or-create` allocates ids through `increment`; `insert` rewrites the whole entry while `refresh` replaces `mask` and `last-update`. Show a non-zero collateral or debt row whose mask bit is clear - invisible to every health check and to liquidation - or a cleared bit for a row that still exists. Impact: insolvency, or permanent freezing of the affected collateral.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_78b4071e-20ea-49b2-83bf-895e17aa9470?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: mainnet/contracts/registry/v0-egroup.clar -> Scope: Critical. THE LEDGER AND ITS MASK STOP AGREEING. In market-vault `collateral-add`, `collateral-remove`, `debt-add-scaled` and `debt-remove-scaled`, the map mutation and `mask-update` are `let` bindings evaluated BEFORE `check-impl-auth`, the pause states and the amount assertions; `resolve-or-create` allocates ids through `increment`; `insert` rewrites the whole entry while `refresh` replaces `mask` and `last-update`. Show a non-zero collateral or debt row whose mask bit is clear - invisible to every health check and to liquidation - or a cleared bit for a row that still exists. Impact: insolvency, or permanent freezing of the affected collateral.'",
+    "url": "https://deepwiki.com/search/-generate-exploitfocused-secur_f2577d37-9d35-440e-bef1-8ea07e54fe8f?mode=deep",
+    "questions_generated": false
+  }
+]
