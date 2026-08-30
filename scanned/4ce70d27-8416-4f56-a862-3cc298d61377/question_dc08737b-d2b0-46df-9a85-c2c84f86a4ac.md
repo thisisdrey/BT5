@@ -1,1 +1,0 @@
-computation. Impact: theft of unclaimed yield (High). Proof idea: Clarinet test computing `get-interest-rate` for utilization = point value, point value - 1, and point value + 1, asserting continuity (no discontinuous jump an attacker can dodge below).

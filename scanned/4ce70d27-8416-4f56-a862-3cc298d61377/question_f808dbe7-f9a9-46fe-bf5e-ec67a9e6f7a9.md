@@ -1,1 +1,0 @@
-the point (a 1-unit utilization difference) to select whichever branch yields a lower rate for their own borrow. Invariant: the rate at exactly a configured point must be single-valued and match both the
