@@ -1,1 +1,0 @@
-signal used as a rate-limit-like authorization gate. Proof idea: near-workspaces test submitting a transaction with two `w_execute_extension` actions where only the first attaches 1 yN, assert the second still independently fails `InsufficientDeposit`.
