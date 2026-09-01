@@ -1,1 +1,0 @@
-[File: contracts/defuse/core/src/engine/state/cached.rs -> Scope: Critical] Target: `MultiPayload::verify` (multi.rs:80-95) dispatch vs `MultiPayload::extract_defuse_payload` (multi.rs:97-115) dispatch, both keyed by the same `Self::Variant` match arm chosen by `#[serde(tag =
