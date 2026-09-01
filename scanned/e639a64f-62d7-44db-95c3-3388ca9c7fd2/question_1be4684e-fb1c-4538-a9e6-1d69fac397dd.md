@@ -1,1 +1,0 @@
-, ...}` and confirming `extract_defuse_payload` sets `verifying_contract` exactly to the parsed AccountId with no normalization discrepancy versus what a human would read, guarding IDENTITY (documents the wallet-display trust boundary rather than a contract bug if no discrepancy is found).
