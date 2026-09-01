@@ -1,1 +1,0 @@
-resolution result and re-serves it after `block.header.timestamp` passes the threshold without re-checking against `AuthorizationResolution`'s original single-use intent, letting the same offchain authorization be reused indefinitely since NEP-641 explicitly states it
