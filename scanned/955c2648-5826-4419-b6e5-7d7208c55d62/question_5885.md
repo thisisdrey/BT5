@@ -1,0 +1,13 @@
+# Q5885: mod - fee_collector credit re-enters the matcher (19)
+
+## Question
+Given the attacker signs both counterparties using accounts they control, can an unprivileged attacker, entering through `simulate_intents` to find a batch that reports balanced, then `execute_intents` to commit it, exploit that `State` in `contracts/defuse/core/src/engine/state/mod.rs` credits `fee_collector` through `internal_add_balance`, which itself records a matcher deposit, so the fee itself must be matched by a withdrawal that no intent supplies, breaking the invariant `fee deposits recorded in the matcher == fee amounts subtracted from the paying legs` and leading to protocol insolvency: sum of `token_balances` owed exceeds assets actually custodied by the Verifier?
+
+## Target
+- File/function: [contracts/defuse/core/src/engine/state/mod.rs](contracts/defuse/core/src/engine/state/mod.rs) - `State` (cross-check `native_withdraw` in the same file)
+- Entrypoint: `simulate_intents` to find a batch that reports balanced, then `execute_intents` to commit it
+- Attacker controls: the entire batch across both calls
+- Exploit idea: Trace whether fee deposits are excluded from the conservation check or must be balanced by the fee-paying legs; a mismatch either blocks honest batches or permits unbalanced ones. Set-up: the attacker signs both counterparties using accounts they control.
+- Invariant to test: fee deposits recorded in the matcher == fee amounts subtracted from the paying legs
+- Expected Immunefi impact: Critical - Protocol insolvency: sum of `token_balances` owed exceeds assets actually custodied by the Verifier
+- Fast validation: Execute a fee-bearing `TokenDiff`; assert `finalize()` succeeds and total credits equal total debits including fees.

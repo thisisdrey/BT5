@@ -1,0 +1,13 @@
+# Q2059: contract - token transfer path allows self-transfer or zero-amount accounting drift (3)
+
+## Question
+Given the account is registered and still holds a non-zero balance, can an unprivileged attacker, entering through a race against an honest party's deployment or initialisation call, call `storage_deposit` in `contracts/poa/token/src/contract.rs` with `receiver_id == sender_id`, a zero amount, or a duplicated entry in a batch so the balance accounting double-counts, breaking the invariant `total supply and the sum of balances are unchanged by any transfer` and leading to unauthorized minting / balance inflation: a balance is credited with no matching asset received?
+
+## Target
+- File/function: [contracts/poa/token/src/contract.rs](contracts/poa/token/src/contract.rs) - `storage_deposit` (cross-check `ft_transfer_call` in the same file)
+- Entrypoint: a race against an honest party's deployment or initialisation call
+- Attacker controls: the timing and the arguments of the competing call
+- Exploit idea: Self-transfer must be a no-op or rejected; a batch containing the same account twice can add before subtracting. Set-up: the account is registered and still holds a non-zero balance.
+- Invariant to test: total supply and the sum of balances are unchanged by any transfer
+- Expected Immunefi impact: Critical - Unauthorized minting / balance inflation: a balance is credited with no matching asset received
+- Fast validation: Self-transfer and duplicate-entry batch; assert supply invariance.

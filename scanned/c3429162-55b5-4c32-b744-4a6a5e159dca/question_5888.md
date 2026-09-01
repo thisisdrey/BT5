@@ -1,0 +1,13 @@
+# Q5888: imt - token_id re-parse panic inside a private callback (8)
+
+## Question
+Given the receiver accepts the assets and then panics, can an unprivileged attacker, entering through `mt_transfer_call` / `mt_batch_transfer_call` to a receiver contract the attacker deployed, supply a `token_id` string at the entrypoint that `ImtBurn` in `contracts/defuse/core/src/intents/imt.rs` re-parses with `unwrap_or_else(|e| panic!(...))`, so the callback aborts and the transferred balance is stranded, breaking the invariant `every `token_id` string a transfer entrypoint accepts round-trips through `TokenId::from_str` in the resolver` and leading to permanent freezing of user funds (unrecoverable without a privileged action)?
+
+## Target
+- File/function: [contracts/defuse/core/src/intents/imt.rs](contracts/defuse/core/src/intents/imt.rs) - `ImtBurn` (cross-check `ImtMint` in the same file)
+- Entrypoint: `mt_transfer_call` / `mt_batch_transfer_call` to a receiver contract the attacker deployed
+- Attacker controls: `receiver_id`, `token_ids`, `amounts`, `memo`, `msg`, and the receiver's return value
+- Exploit idea: `mt_resolve_transfer` re-parses `token_ids` from strings that originated in caller-supplied arguments; a value that passes the outbound path but fails the inbound parse freezes the refund. Set-up: the receiver accepts the assets and then panics.
+- Invariant to test: every `token_id` string a transfer entrypoint accepts round-trips through `TokenId::from_str` in the resolver
+- Expected Immunefi impact: Critical - Permanent freezing of user funds (unrecoverable without a privileged action)
+- Fast validation: Fuzz `mt_batch_transfer_call` token ids; assert every accepted id parses in the resolver.

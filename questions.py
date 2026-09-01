@@ -6,9 +6,9 @@ from decouple import config
 # todo: if scope_files is: 500 > 50, 300 > 30 , 100 > 10
 MAX_REPO = 20
 # todo: the GitLab namespace/project path, for example group/project
-SOURCE_REPO = 'Zest-Protocol/zest-v2-contracts'
+SOURCE_REPO = 'near/intents'
 # todo: the name of the repository
-REPO_NAME = 'zest-v2-contracts'
+REPO_NAME = 'intents'
 
 run_number = os.environ.get('GITHUB_RUN_NUMBER', '0')
 
@@ -48,92 +48,327 @@ else:
 
 scope_files = [
     # =================================================================================
-    # LENS: BROAD COVERAGE. The generalist sweep across every contract an unprivileged
-    # user call actually executes. The other variants each take one axis; this one takes
-    # the whole surface and is the default when no lens is obviously right.
-    #
-    # PROGRAM BOUNDARIES BAKED INTO THIS LIST:
-    # * dao-multisig / dao-executor / dao-treasury are NOT here. Any impact requiring DAO
-    #   compromise is out of scope, and full DAO control of the registries is intended.
-    # * The registries below are in scope ONLY for the read and resolution paths that an
-    #   ordinary user call runs. Their DAO-gated writes are intended design.
-    # * Flashloan logic is out of scope protocol-wide. A flashloan may fund an attack;
-    #   it may never be the bug.
+    # LENS: FROM A MESSAGE AN ORDINARY USER SIGNS OFF-CHAIN TO SOMEBODY ELSE'S TOKENS
+    # LEAVING `intents.near`.
+    # NEAR Intents is a custodial multi-token ledger ("the Verifier"): users deposit
+    # NEP-141 / NEP-171 / NEP-245 assets, and every later move of those assets is
+    # authorised by an off-chain signature over a `DefusePayload`. Untrusted bytes enter
+    # through doors any unprivileged party fully controls: a `MultiPayload` handed to
+    # `execute_intents` / `simulate_intents` by ANY caller (the signature is the only
+    # authority - the predecessor is irrelevant), a `ft_on_transfer` / `nft_on_transfer` /
+    # `mt_on_transfer` deposit `msg`, a direct `ft_withdraw`-family call from an account
+    # that enabled `auth_by_predecessor_id`, and the return value of a receiver contract
+    # the attacker deploys and names in `msg` / `AuthCall::contract_id` /
+    # `NotifyOnTransfer` - which comes back into `*_resolve_*` callbacks.
+    # Those bytes end in one place: the `token_balances` of accounts inside the Verifier,
+    # and the real assets those balances are a claim on. A file belongs here only if an
+    # authorisation, conservation, replay or settlement invariant must hold across it.
     # =================================================================================
 
-    # -- The hub: every unprivileged entry point ---------------------------------------
-    # collateral-add, collateral-remove, supply-collateral-add, collateral-remove-redeem,
-    # borrow, repay, liquidate, liquidate-multi, liquidate-redeem; oracle resolution and
-    # callcode transforms; the per-block index-cache; health evaluation against egroup
-    # LTVs; graduated liquidation and bad-debt socialization. AUDIT THIS FIRST.
-    "mainnet/contracts/market/v0-4-market.clar",
+    # -- The engine: the only thing between a signed blob and someone else's balance ------
+    # `execute_signed_intent` verifies, binds a signer, commits a nonce and runs intents;
+    # `Deltas`/`TransferMatcher` must net every `TokenDiff` back to zero in `finalize`.
+    "contracts/defuse/core/src/engine/mod.rs",
+    "contracts/defuse/core/src/engine/state/mod.rs",
+    "contracts/defuse/core/src/engine/state/deltas.rs",
+    "contracts/defuse/core/src/engine/state/cached.rs",
+    "contracts/defuse/core/src/engine/inspector.rs",
+    "contracts/defuse/core/src/intents/mod.rs",
+    "contracts/defuse/core/src/intents/token_diff.rs",
+    "contracts/defuse/core/src/intents/tokens.rs",
+    "contracts/defuse/core/src/intents/account.rs",
+    "contracts/defuse/core/src/intents/auth.rs",
+    "contracts/defuse/core/src/intents/imt.rs",
+    "contracts/defuse/core/src/accounts.rs",
+    "contracts/defuse/core/src/amounts.rs",
+    "contracts/defuse/core/src/fees.rs",
+    "contracts/defuse/core/src/lock.rs",
+    "contracts/defuse/core/src/tokens.rs",
+    "contracts/defuse/core/src/error.rs",
+    "contracts/defuse/core/src/events/mod.rs",
+    "contracts/defuse/core/src/lib.rs",
 
-    # -- The position ledger ------------------------------------------------------------
-    # user-id registry, collateral and debt maps, and the 128-bit mask (collateral bits
-    # 0-63, debt bits 64-127). The yield is accounting drift: a row that exists but is not
-    # represented in the mask is invisible to every health check and to liquidation.
-    "mainnet/contracts/market/v0-market-vault.clar",
+    # -- Who signed it: the identity binding every intent rests on ------------------------
+    # Seven external signing standards collapse into one `PublicKey`, and a missing
+    # account falls back to `to_implicit_account_id()`.
+    "contracts/defuse/core/src/payload/mod.rs",
+    "contracts/defuse/core/src/payload/multi.rs",
+    "contracts/defuse/core/src/payload/nep413.rs",
+    "contracts/defuse/core/src/payload/erc191.rs",
+    "contracts/defuse/core/src/payload/tip191.rs",
+    "contracts/defuse/core/src/payload/sep53.rs",
+    "contracts/defuse/core/src/payload/raw.rs",
+    "contracts/defuse/core/src/payload/ton_connect.rs",
+    "contracts/defuse/core/src/payload/webauthn.rs",
+    "contracts/defuse/core/src/public_key.rs",
+    "contracts/defuse/core/src/signature.rs",
+    "crates/signatures/nep413/src/lib.rs",
+    "crates/signatures/nep461/src/lib.rs",
+    "crates/signatures/erc191/src/lib.rs",
+    "crates/signatures/tip191/src/lib.rs",
+    "crates/signatures/sep53/src/lib.rs",
+    "crates/signatures/ton-connect/src/lib.rs",
+    "crates/signatures/ton-connect/src/cell.rs",
+    "crates/signatures/webauthn/src/lib.rs",
+    "crates/signatures/webauthn/src/ed25519.rs",
+    "crates/signatures/webauthn/src/p256.rs",
+    "crates/crypto/src/curve.rs",
+    "crates/crypto/src/ed25519.rs",
+    "crates/crypto/src/secp256k1.rs",
+    "crates/crypto/src/p256.rs",
+    "crates/crypto/src/signer.rs",
+    "crates/crypto/src/fmt.rs",
+    "crates/crypto/src/lib.rs",
+    "crates/digest/src/lib.rs",
+    "crates/digest/src/sha2/mod.rs",
+    "crates/digest/src/sha2/near.rs",
+    "crates/digest/src/sha3/mod.rs",
+    "crates/digest/src/sha3/near.rs",
+    "crates/digest/src/ripemd/mod.rs",
+    "crates/digest/src/ripemd/near.rs",
+    "crates/digest/src/utils.rs",
 
-    # -- Vaults: share math, index accrual, system borrow/repay, socialize-debt ---------
-    # NOT the flashloan function. v0-vault-stx is the only native-STX path (.wstx and
-    # `as-contract? ((with-stx amt))`); v0-vault-sbtc is the 8-decimal case; v0-vault-ststx
-    # backs the CALLCODE-STSTX / CALLCODE-ZSTSTX double transform. usdc, usdh and ststxbtc
-    # are byte-identical apart from constants, so findings port - do not spend batches on them.
-    "mainnet/contracts/vault/v0-vault-stx.clar",
-    "mainnet/contracts/vault/v0-vault-sbtc.clar",
-    "mainnet/contracts/vault/v0-vault-ststx.clar",
+    # -- Replay: one signature must move funds exactly once --------------------------------
+    "contracts/defuse/core/src/nonce/mod.rs",
+    "contracts/defuse/core/src/nonce/versioned.rs",
+    "contracts/defuse/core/src/nonce/salted.rs",
+    "contracts/defuse/core/src/nonce/expirable.rs",
+    "contracts/defuse/src/contract/accounts/account/nonces.rs",
+    "contracts/defuse/src/contract/state/salt_registry.rs",
+    "contracts/defuse/src/contract/salts.rs",
+    "contracts/defuse/src/contract/garbage_collector.rs",
+    "contracts/defuse/src/garbage_collector.rs",
+    "contracts/defuse/src/salts.rs",
+    "crates/bitmap/src/lib.rs",
+    "crates/bitmap/src/b256.rs",
+    "crates/primitives/time/src/lib.rs",
+    "crates/primitives/time/src/borsh.rs",
+    "crates/primitives/time/src/serde.rs",
+    "crates/primitives/time/src/error.rs",
 
-    # -- Registry READ paths only -------------------------------------------------------
-    # v0-assets: `status`, `status-multi`, `lookup`, `find`, `get-bitmap`, `mask-pos`,
-    # `subset`, `uint-to-list-u64` - executed on every health check.
-    # v0-egroup: `resolve`, `active`, `find-superset`, `population`, `filter-u128` - the
-    # lookup that decides which LTV a live position is priced under. Assume the stored
-    # configuration is correct; the bug must be in the lookup, not in the data.
-    "mainnet/contracts/registry/v0-assets.clar",
-    "mainnet/contracts/registry/v0-egroup.clar",
+    # -- The Verifier contract: entry points, accounts and persisted balances --------------
+    "contracts/defuse/src/contract/mod.rs",
+    "contracts/defuse/src/contract/intents/mod.rs",
+    "contracts/defuse/src/contract/intents/state.rs",
+    "contracts/defuse/src/contract/intents/execute.rs",
+    "contracts/defuse/src/contract/intents/simulate.rs",
+    "contracts/defuse/src/contract/intents/auth_call.rs",
+    "contracts/defuse/src/contract/intents/relayer.rs",
+    "contracts/defuse/src/contract/accounts/mod.rs",
+    "contracts/defuse/src/contract/accounts/state.rs",
+    "contracts/defuse/src/contract/accounts/force.rs",
+    "contracts/defuse/src/contract/accounts/account/mod.rs",
+    "contracts/defuse/src/contract/accounts/account/entry/mod.rs",
+    "contracts/defuse/src/contract/accounts/account/entry/v0.rs",
+    "contracts/defuse/src/contract/accounts/account/entry/v1.rs",
+    "contracts/defuse/src/contract/state/mod.rs",
+    "contracts/defuse/src/contract/state/v0.rs",
+    "contracts/defuse/src/contract/versioned/mod.rs",
+    "contracts/defuse/src/contract/versioned/v0.rs",
+    "contracts/defuse/src/contract/config.rs",
+    "contracts/defuse/src/contract/fees.rs",
+    "contracts/defuse/src/contract/admin.rs",
+    "contracts/defuse/src/contract/upgrade.rs",
+    "contracts/defuse/src/contract/events.rs",
+    "contracts/defuse/src/contract/prefix.rs",
+    "contracts/defuse/src/accounts.rs",
+    "contracts/defuse/src/intents.rs",
+    "contracts/defuse/src/fees.rs",
+    "contracts/defuse/src/far.rs",
+    "contracts/defuse/src/simulation_output.rs",
+    "contracts/defuse/src/lib.rs",
+
+    # -- Settlement: assets crossing the contract boundary, and the callbacks that undo it --
+    # Balances are debited before the Promise resolves; every `*_resolve_*` re-credits.
+    "contracts/defuse/src/contract/tokens/mod.rs",
+    "contracts/defuse/src/contract/tokens/imt.rs",
+    "contracts/defuse/src/contract/tokens/nep141/mod.rs",
+    "contracts/defuse/src/contract/tokens/nep141/deposit.rs",
+    "contracts/defuse/src/contract/tokens/nep141/withdraw.rs",
+    "contracts/defuse/src/contract/tokens/nep141/native.rs",
+    "contracts/defuse/src/contract/tokens/nep141/storage_deposit.rs",
+    "contracts/defuse/src/contract/tokens/nep171/mod.rs",
+    "contracts/defuse/src/contract/tokens/nep171/deposit.rs",
+    "contracts/defuse/src/contract/tokens/nep171/withdraw.rs",
+    "contracts/defuse/src/contract/tokens/nep245/mod.rs",
+    "contracts/defuse/src/contract/tokens/nep245/core.rs",
+    "contracts/defuse/src/contract/tokens/nep245/deposit.rs",
+    "contracts/defuse/src/contract/tokens/nep245/withdraw.rs",
+    "contracts/defuse/src/contract/tokens/nep245/resolver.rs",
+    "contracts/defuse/src/contract/tokens/nep245/enumeration.rs",
+    "contracts/defuse/src/contract/tokens/nep245/force.rs",
+    "contracts/defuse/src/tokens/mod.rs",
+    "contracts/defuse/src/tokens/imt.rs",
+    "contracts/defuse/src/tokens/nep141.rs",
+    "contracts/defuse/src/tokens/nep171.rs",
+    "contracts/defuse/src/tokens/nep245.rs",
+    "crates/near/nep245/src/core.rs",
+    "crates/near/nep245/src/checked.rs",
+    "crates/near/nep245/src/resolver.rs",
+    "crates/near/nep245/src/receiver.rs",
+    "crates/near/nep245/src/enumeration.rs",
+    "crates/near/nep245/src/events.rs",
+    "crates/near/nep245/src/token.rs",
+    "crates/near/nep245/src/errors.rs",
+    "crates/near/nep245/src/lib.rs",
+    "crates/near/wnear/src/lib.rs",
+    "crates/near/auth-call/src/lib.rs",
+    "crates/near/promise/src/lib.rs",
+    "crates/near/promise/src/actions/mod.rs",
+    "crates/near/promise/src/actions/function_call.rs",
+    "crates/near/promise/src/actions/state_init.rs",
+    "crates/near/promise/src/actions/transfer.rs",
+    "crates/near/utils/src/lib.rs",
+    "crates/near/utils/src/promise.rs",
+    "crates/near/utils/src/event.rs",
+    "crates/near/utils/src/panic_on_clone.rs",
+    "crates/near/sender/src/lib.rs",
+    "crates/near/controller/src/lib.rs",
+    "crates/near/admin-utils/src/lib.rs",
+    "crates/near/admin-utils/src/full_access_keys.rs",
+
+    # -- Token identity and arithmetic: what a balance is a claim on, and how much ---------
+    "crates/primitives/token-id/src/lib.rs",
+    "crates/primitives/token-id/src/nep141.rs",
+    "crates/primitives/token-id/src/nep171.rs",
+    "crates/primitives/token-id/src/nep245.rs",
+    "crates/primitives/token-id/src/imt.rs",
+    "crates/primitives/token-id/src/error.rs",
+    "crates/primitives/fees/src/lib.rs",
+    "crates/primitives/decimal/src/lib.rs",
+    "crates/primitives/decimal/src/ops.rs",
+    "crates/primitives/decimal/src/str.rs",
+    "crates/num-utils/src/lib.rs",
+    "crates/num-utils/src/add_sub.rs",
+    "crates/num-utils/src/mul.rs",
+    "crates/num-utils/src/div.rs",
+    "crates/num-utils/src/mul_div.rs",
+    "crates/map-utils/src/lib.rs",
+    "crates/map-utils/src/cleanup.rs",
+    "crates/map-utils/src/btree_map.rs",
+    "crates/map-utils/src/hash_map.rs",
+    "crates/map-utils/src/near.rs",
+    "crates/map-utils/src/iter.rs",
+    "crates/serde-utils/src/lib.rs",
+    "crates/serde-utils/src/base64.rs",
+    "crates/serde-utils/src/hex.rs",
+    "crates/serde-utils/src/seq.rs",
+    "crates/serde-utils/src/cow.rs",
+    "crates/serde-utils/src/tlb.rs",
+    "crates/borsh-utils/src/lib.rs",
+    "crates/borsh-utils/src/duration.rs",
+    "crates/borsh-utils/src/schema.rs",
+    "crates/io-utils/src/lib.rs",
+
+    # -- Wallet contracts: NEP-641 authorisation for accounts that hold Verifier balances ---
+    "contracts/wallet/src/contract.rs",
+    "contracts/wallet/src/message.rs",
+    "contracts/wallet/src/nonces.rs",
+    "contracts/wallet/src/request/mod.rs",
+    "contracts/wallet/src/request/ops.rs",
+    "contracts/wallet/src/state.rs",
+    "contracts/wallet/src/schema.rs",
+    "contracts/wallet/src/events.rs",
+    "contracts/wallet/src/error.rs",
+    "contracts/wallet/src/lib.rs",
+    "contracts/wallet/signatures/ed25519/src/contract.rs",
+    "contracts/wallet/signatures/ed25519/src/signer.rs",
+    "contracts/wallet/signatures/ed25519/src/lib.rs",
+    "contracts/wallet/signatures/no-sign/src/contract.rs",
+    "contracts/wallet/signatures/no-sign/src/lib.rs",
+    "contracts/wallet/signatures/webauthn/src/lib.rs",
+    "contracts/wallet/signatures/webauthn/src/ed25519.rs",
+    "contracts/wallet/signatures/webauthn/src/p256.rs",
+    "contracts/wallet/signatures/webauthn/ed25519/src/lib.rs",
+    "contracts/wallet/signatures/webauthn/p256/src/lib.rs",
+    "crates/signatures/nep641/src/lib.rs",
+    "crates/signatures/nep641/src/message.rs",
+    "crates/signatures/nep641/src/access_keys.rs",
+    "crates/signatures/nep641/src/client.rs",
+    "crates/signatures/nep641/src/resolver/mod.rs",
+    "crates/signatures/nep641/src/resolver/contract.rs",
+    "crates/signatures/nep641/src/resolver/access_keys.rs",
+    "crates/signatures/nep641/src/resolver/error.rs",
+    "crates/mpc/signer/src/contract.rs",
+    "crates/mpc/signer/src/secp256k1.rs",
+    "crates/mpc/signer/src/ed25519.rs",
+    "crates/mpc/signer/src/convert.rs",
+    "crates/mpc/signer/src/lib.rs",
+    "crates/mpc/kdf/src/lib.rs",
+    "crates/mpc/kdf/src/ckd.rs",
+    "crates/mpc/kdf/src/tweak/mod.rs",
+    "crates/mpc/kdf/src/tweak/secp256k1.rs",
+    "crates/mpc/kdf/src/tweak/ed25519.rs",
+    "crates/mpc/ckd/src/lib.rs",
+    "crates/mpc/ckd/src/types.rs",
+    "crates/kdf/src/lib.rs",
+    "crates/kdf/src/ed25519.rs",
+    "crates/kdf/src/secp256k1.rs",
+    "crates/kdf/src/signer.rs",
+    "crates/kdf/src/schema/mod.rs",
+    "crates/kdf/src/schema/borsh.rs",
+    "crates/kdf/src/schema/digest.rs",
+    "crates/kdf/src/schema/hex.rs",
+    "crates/kdf/src/schema/additive.rs",
+    "crates/kdf/src/schema/reduce.rs",
+
+    # -- Token issuers and deployers whose output the Verifier treats as a real asset -------
+    "contracts/poa/factory/src/contract.rs",
+    "contracts/poa/factory/src/lib.rs",
+    "contracts/poa/token/src/contract.rs",
+    "contracts/poa/token/src/lib.rs",
+    "contracts/global-deployer/src/contract.rs",
+    "contracts/global-deployer/src/state.rs",
+    "contracts/global-deployer/src/client.rs",
+    "contracts/global-deployer/src/events.rs",
+    "contracts/global-deployer/src/error.rs",
+    "contracts/global-deployer/src/lib.rs",
+    "contracts/outlayer/app/src/contract.rs",
+    "contracts/outlayer/app/src/state.rs",
+    "contracts/outlayer/app/src/client.rs",
+    "contracts/outlayer/app/src/events.rs",
+    "contracts/outlayer/app/src/error.rs",
+    "contracts/outlayer/app/src/lib.rs",
+    "contracts/treasury-logger/src/lib.rs",
+    "contracts/treasury-logger/src/state.rs",
+    "contracts/treasury-logger/src/event.rs",
+
+    # =================================================================================
+    # NOT IN THIS VARIANT:
+    # * `contracts/escrow-swap/**` - explicitly out of scope in the NEAR Intents
+    #   Smart Contracts bounty program.
+    # * `tests/**`, `**/tests/**`, `**/tests.rs`, `crates/testing/**`, `**/mock.rs`,
+    #   `**/arbitrary.rs`, `**/fuzz/**`, `**/examples/**` - tests, fixtures and mocks.
+    # * `**/build.rs`, `contracts/defuse/src/contract/abi.rs`, `**/near-gds/src/main.rs`,
+    #   `**/near-oa/src/main.rs`, `crates/cli-utils/**`, `crates/rand-compat/**`,
+    #   `crates/wallet/sdk/**` - generated artefacts, CLIs and off-chain SDK code with no
+    #   on-chain decision.
+    # * `*.toml`, `*.md`, `LICENSE`, `Makefile`, `scripts/**`, `releases/**`,
+    #   `rust-toolchain` - configuration, documentation and tooling.
+    # =================================================================================
 ]
 
 
 target_scopes = [
-    "Critical. An unprivileged principal moves or encumbers a position it does not own. market.clar derives the acting account from `contract-caller`, yet only `collateral-add`, `supply-collateral-add` and `repay` assert `(is-eq contract-caller tx-sender)` - `collateral-remove`, `collateral-remove-redeem`, `borrow`, `liquidate`, `liquidate-multi` and `liquidate-redeem` do not. Every `receiver`, `collateral-receiver`, `funds-receiver` and `on-behalf-of` is an attacker-chosen delegation, and market-vault trusts a single `impl` var. Find one path where an intermediary contract or an attacker-supplied `<ft-trait>` makes `contract-caller` resolve to a principal that is not the funds owner. Impact: direct theft of user funds.",
+    "Critical. A `TokenDiff` THAT DOES NOT NET TO ZERO. `TokenDiff::execute_intent` calls `Deltas::internal_apply_deltas` per `(token_id, delta)` and takes fees only on negative deltas via `TokenDiff::token_fee(...).fee_ceil(amount)`; the ONLY thing forcing the batch to conserve value is `TransferMatcher::finalize` at the very end of `Engine::finalize`, where `TokenTransferMatcher::finalize_into` pairs sorted deposits against withdrawals and `deltas.apply_delta` must leave `TokenDeltas` empty. Show an unprivileged signer who crafts a `MultiPayload` batch - self-cancelling deltas inside one `TokenDiff`, `i128::MIN` / `unsigned_abs` edges, an `Amounts::add` / `sub` path returning `None` late, a `saturating_sub` in `sub_add`, or an `unmatched == 0` overflow branch treated as success - so `execute_intents` commits balance changes whose sum is non-zero. Binding: sum of every `token_balances` change for token T across one `execute_intents` call == 0, and every `Transfers` entry has a signer who authorised it.",
 
-    "Critical. An unprivileged borrower gets collateral priced too high or debt priced too low and walks away with more than it can be liquidated for. Attack `price-resolve`, `resolve-callcode`, `resolve-ztoken` (which reads `lindex` out of the market's own per-block `index-cache`, not the vault), `resolve-ststx`, `normalize-pyth` (int and expo sign handling), `check-confidence` against `max-confidence-ratio`, `oracle-timestamp-fresh` (monotonic `last-update` per feed key, and a future timestamp yielding a zero delta) and `write-feeds`. The bug must be in this code, not in what a real oracle published. Impact: protocol insolvency through uncollateralised debt.",
+    "Critical. THE SIGNATURE SAYS ONE THING, `signer_id` SAYS ANOTHER. `Engine::execute_signed_intent` takes the `PublicKey` returned by `MultiPayload::verify()`, then trusts `DefusePayload::signer_id` from `extract_defuse_payload()` and only asks `StateView::has_public_key(&signer_id, &public_key)` - which, for an account with no entry in `self.accounts`, falls back to `account_id == public_key.to_implicit_account_id()`. Seven standards (`Nep413`, `Erc191`, `Tip191`, `RawEd25519`, `WebAuthn`, `TonConnect`, `Sep53`) feed that one check, each with its own envelope and `Payload::hash()`. Show an unprivileged party who gets `execute_signed_intent` to accept a payload as signed by a victim: an envelope byte-string one standard's `verify()` accepts that decodes to a different `DefusePayload` under another, `SignedWebAuthnPayload::extract_defuse_payload` reading `self.payload` while `hash()` digests it separately, a malleable or recoverable signature yielding an attacker-chosen `PublicKey`, a `serde(flatten)` field-shadowing in `Nep413DefuseMessage` / `DefusePayload`, or an implicit-account derivation the victim never registered. Binding: the `(signer_id, public_key)` pair the engine authorises with == the pair the holder of the private key actually signed for.",
 
-    "Critical. An unprivileged depositor extracts value through vault share math. `convert-to-shares-preview` and `convert-to-assets-preview` divide by `total-assets-preview` and `total-supply-preview`, which include unrealised interest and the not-yet-minted `calc-treasury-lp-preview`, while `deposit` and `redeem` mutate the `assets` var rather than the real balance, and `convert-to-shares-preview` returns u0 outright when assets exist but supply is zero. Show a share-price manipulation, a mint worth more than the underlying received, or a depositor credited zero shares for real tokens. Impact: direct theft of supplier principal.",
+    "Critical. ONE SIGNATURE, TWO SETTLEMENTS. Replay protection is `verify_intent_nonce` plus `State::commit_nonce`. `VersionedNonce::maybe_from` returns `None` for any nonce lacking `VERSIONED_MAGIC_PREFIX`, and `verify_intent_nonce` then returns `Ok(())` with NO salt, NO nonce deadline and NO expiry check; for `V1(SaltedNonce { salt, nonce: ExpirableNonce { deadline, .. } })` the checks are `is_valid_salt`, `intent_deadline > deadline` and expiry. Commitment goes through `MaybeLegacyNonces::commit`, which rejects legacy-map hits but writes only to `self.nonces`, a `BitMap256` keyed by the top 248 bits; `Nonces::cleanup_by_prefix` clears a whole 256-bit word. Show an unprivileged party who executes one signed `DefuseIntents` twice - a borsh re-encoding of the same `VersionedNonce` producing a different 32-byte `Nonce`, a `Timestamp::now()` / `deadline` boundary, a nonce whose word was cleaned while the signature is still live, or `commit_nonce` succeeding on an account path that never persisted. Binding: the number of times a given signed `MultiPayload` moves funds == 1, for all time.",
 
-    "Critical. An unprivileged user makes interest accrual disagree with itself. `accrue` writes `index` and `lindex` but bumps `last-update` only when one of them changed; `next-index` and `next-liquidity-index` return stale values while the `accrue` pause state is set, which is a pass-through rather than a revert; `calc-multiplier-delta` rounds debt and liquidity in different directions; the market caches indexes per `stacks-block-time` and reuses them for every operation in that block. Show interest skipped, applied twice, or a `lindex` that inflates zToken collateral value. Impact: theft of unclaimed yield, or insolvency.",
+    "Critical. THE BALANCE IS GONE BEFORE THE PROMISE RESOLVES. `internal_ft_withdraw` / `internal_nft_withdraw` / `internal_mt_withdraw` call `Contract::withdraw` to debit `token_balances` immediately, then schedule `do_*_withdraw` and a `#[private]` resolver - `ft_resolve_withdraw`, `mt_resolve_transfer`, `resolve_deposit_internal` - that re-credits from `promise_result_checked_json*`, a value the attacker's own token or receiver contract chooses. `ft_resolve_withdraw` credits `amount - used` where `used = amount` on ANY promise error for `is_call`, and `mt_resolve_transfer` clamps `refund.0` to `receiver_balance` and mutates `amounts` in place. Show an unprivileged party - the withdrawal target, a contract they deployed and named in `msg`, or a receiver they lock/drain between the call and the callback - who makes the refunded amount differ from the amount that failed to settle: a double credit, a refund routed to `previous_owner_ids.first()` rather than the real owner, a `token_ids.parse()` mismatch, or a settled transfer that is refunded anyway. Binding: (balance debited) == (assets that actually left the contract) + (amount re-credited by the resolver), per token, per receipt.",
 
-    "Critical. An unprivileged liquidator is paid more collateral than the debt it actually repays, or seizes from a healthy position. Follow `calc-liquidation-params` -> `calc-liq-factor` -> `calc-liq-factor-exp` (integer `pow` and `sqrti`) -> `calc-liq-factor-bound` -> `process-debt-asset` -> `calc-final-liquidation-amounts` -> `scale-debt-for-liquidation`, plus `liquidate-multi` and `liquidate-redeem` which run with no `price-feeds`. Assert seized collateral USD equals repaid debt USD times (BPS + liq-penalty), never more. Do NOT frame this around disabled collateral, which is an accepted design decision. Impact: direct theft of borrower funds.",
+    "Critical. RE-ENTERING THE VERIFIER FROM A CONTRACT THE ATTACKER WROTE. `AuthCall::execute_intent`, `Transfer`'s `NotifyOnTransfer` and `DepositMessage`'s `DepositAction::Notify` / `Execute` all hand control to an attacker-chosen `contract_id` / `receiver_id` via `on_auth()`, `mt_on_transfer()` or a re-entrant `execute_intents`, optionally deploying it first with `p.state_init(state_init, NearToken::ZERO)` (NEP-616) and `Contract::auth_call_callback_gas`. `Engine::finalize` has already run and the intents in one `DefuseIntents` fire concurrently. Show an unprivileged signer whose callee re-enters `execute_intents`, `ft_withdraw`, `mt_resolve_transfer` or `ft_resolve_deposit` and observes or mutates state between the debit and the settlement - spending a balance twice, taking a refund plus the goods, or having `do_auth_call`'s `promise_result_checked_void(0)` pass while the wNEAR unwrap did not fund it. Binding: the set of balance changes an `execute_intents` receipt commits == the set the signed intents authorise, regardless of what any callee does while it is in flight.",
 
-    "Critical. An unprivileged actor forces or abuses bad-debt socialization so honest suppliers pay. market `socialize-debt-asset` calls the vault's `socialize-debt`, re-accrues, then removes the obligation; the vault reduces `lindex`, `principal-scaled`, `total-borrowed` and `assets` with four independent saturating formulas, `principal-reduction` from `borrowed / scaled-principal` and `new-lindex` from `old-total-assets`. Show a self-created dust or oracle-edge position that triggers socialization for profit, a write-down larger than the loss, or `lindex` driven to zero so every zToken collateral in that vault prices at 0. Impact: insolvency, or permanent freezing of funds.",
+    "Critical. FEES AND ROUNDING THAT DO NOT CLOSE. `Pips::fee_ceil`, `Pips::invert`, `TokenDiff::token_fee` (which returns `Pips::ZERO` for `Nep171` and for `Nep245`/`Imt` when `amount <= 1`), `TokenDiff::supply_delta` / `closure_supply_delta` with `checked_mul_div_ceil` and `checked_mul_div_euclid`, and `UD128` arithmetic in `defuse_decimal` decide how much the `fee_collector` receives and how much a counterparty must supply. Show an unprivileged signer who splits or shapes deltas - many `|delta| == 1` NEP-245 legs, a token id whose `TokenIdType` classification changes the fee, a `fee_ceil` / `mul_div_euclid` rounding direction, or a `closure` that a solver signs against - so the protocol fee actually collected is less than the fee the executed deltas owed, or so the counterparty settles at a price the closure never implied. Binding: fees credited to `fee_collector` for token T == `Pips::fee_ceil` over every negative delta of T in the batch, and the value each party gives up == the value the signed deltas say.",
 
-    "Critical. An unprivileged user obtains a position whose efficiency group grants a higher LTV than its real asset set. Attack the 128-bit mask plumbing end to end: `mask-update`, `mask-pos` and `subset` in market-vault; `mask-shift-combine` and `user-safe-mask` (which ANDs collateral against the enabled bitmap but keeps ALL debt bits); `mask-to-list-internal` and `mask-to-list-iter`; `get-position` versus `get-full-position` versus `get-liquidation-position`. Show a collateral or debt asset that a health check ignores, and borrow beyond real capacity. Impact: protocol insolvency.",
+    "Critical. TWO NAMES FOR ONE ASSET, ONE NAME FOR TWO. Every balance is keyed by a `TokenId` whose `Display` / `FromStr` round-trip in `defuse_token_id` (`nep141`, `nep171`, `nep245`, `imt`) is the only thing tying it to a real contract and token: `mt_resolve_transfer` re-parses `token_ids` from strings, `ft_on_transfer` builds a key from `env::predecessor_account_id()`, `MtTransferEvent` and `TokenDiff` carry `token_id.to_string()`, and `Nep245TokenId` / `Nep171TokenId` embed an arbitrary user-chosen sub-token string. Show an unprivileged party who mints a token, NFT or MT whose id makes two distinct `TokenId` values collide on `to_string()` - or one `TokenId` parse back to a different asset - so a deposit of a worthless asset credits a valuable balance, a withdrawal drains a different token than the one debited, or a resolver refunds the wrong key. Binding: `TokenId::from_str(&t.to_string()) == t` for every constructible `t`, and each `TokenId` maps to exactly one `(contract, token)` on chain.",
 
-    "Critical. An unprivileged contract reenters the protocol mid-operation WITHOUT using a flashloan. Every registered asset is invoked through an `<ft-trait>` principal, and the composite entry points interleave writes across two contracts: `supply-collateral-add` transfers, deposits and pledges in three steps with health evaluated only at the end; `collateral-remove-redeem` checks health, then redeems shares whose redemption moves the very `lindex` the health check priced; `liquidate-redeem` does the same during a seizure. Show control returning to attacker code, or to a second Zest call, while an invariant is mid-flight. Impact: direct theft of user funds.",
+    "Critical. wNEAR SPENT, NEAR NEVER DELIVERED. `native_withdraw`, `storage_deposit` and a deposit-bearing `auth_call` all debit the signer's NEP-141 wNEAR balance through `Contract::withdraw`, then chain `ext_wnear::near_withdraw` into `do_native_withdraw` / `do_storage_deposit` / `do_auth_call`, and `FtWithdraw::storage_deposit` does the same inside `internal_ft_withdraw`. Each documents that the wNEAR is NOT refunded on failure, and the only guards are the `min_gas()` floors (`FT_TRANSFER_CALL_GAS_MIN`, `MT_BATCH_TRANSFER_GAS_MIN`, `AuthCall::MIN_GAS_DEFAULT`, `STATE_INIT_GAS`) plus `with_unused_gas_weight(0)` and `auth_call_callback_gas`'s `checked_add`. Show an unprivileged party who makes another user's wNEAR leave without the corresponding NEAR, storage deposit or `on_auth` ever happening - an attacker-chosen `receiver_id` or `contract_id` that makes the callback abort after the debit, a `min_gas` value that starves the callback but passes the floor, or a `state_init` that consumes the gas the settlement needed. Binding: wNEAR debited from an account == NEAR that actually reached the named receiver, or was returned to that account.",
 
-    "Critical. THE INVISIBLE-DEBT BLIND SPOT. Every position read is filtered through the enabled bitmap: `relevant`, `iter-lookup-collateral` and `iter-lookup-debt` drop rows whose bit is clear, `get-assets` and `get-notional-evaluation` fold only over enabled assets, and `collateral-remove` decides `has-debt` from the enabled-only `get-position`, then takes a NO-DEBT branch that skips price resolution and every health check. This is NOT about liquidating disabled collateral; it is about a live debt obligation vanishing from a solvency check. Show a `debt` row that survives in the map but is invisible to `has-debt` and to `debt-total`, and withdraw all collateral while still owing. Impact: protocol insolvency.",
+    "High. A WALLET THAT EXECUTES A REQUEST NOBODY SIGNED FOR IT. `Wallet::w_execute_signed(msg, proof)` must reject a `RequestMessage` whose `chain_id` is another network, whose `signer_id` is not `env::current_account_id()`, or whose `nonce` is used, expired or from the future; `Nonces` is a dual-window `BitMap<BTreeMap<u32, u32>>` rotated by `timeout` and `last_cleaned_at`, and `w_execute_extension` trusts `env::predecessor_account_id()` against the enabled-extension set while `WalletOp::SetSignatureMode` / `AddExtension` mutate who may act. `SignatureSchema::verify_request_msg` (ed25519, webauthn-p256, webauthn-ed25519, no-sign) and the NEP-641 `AuthResolver` / `AuthorizationResolution` are the only authority. Show an unprivileged party who gets a wallet holding Verifier balances to execute a `Request` - a nonce replayed across the `old` / `current` window rotation, a `RequestMessage` re-encoded so `proof` still verifies, a `no-sign` or extension path reachable without authorisation, or an `AuthorizationResolution` accepted for the wrong `signer_id`. Binding: every `NearAction` a wallet executes == one its owner signed, for this chain and this account, exactly once.",
 
-    "Critical. `status-multi` PAIRS THE WRONG VALUES. `(map unwrap-status ids mask)` is a TWO-LIST map in which `mask` is `uint-to-list-u64` of the enabled bitmap, so each asset id is paired positionally with one element of that expansion rather than with the whole bitmap, and `map` silently truncates to the shorter list. Trace what `collateral:` and `debt:` flags `status` therefore returns into `get-assets`, and show a position whose ids do not line up positionally receiving a flag it should not have, or being dropped from the notional fold entirely. Impact: insolvency or direct theft.",
-
-    "Critical. THE MARKET CONTRACT HOLDS USER FUNDS MID-TRANSACTION. `supply-collateral-add` transfers the underlying to `current-contract`, deposits under an `as-contract?` scope carrying a wildcard fungible-token post condition, mints shares to the user, then re-enters `collateral-add` with a different trait principal. `collateral-remove-redeem` removes collateral to `(some current-contract)` and then redeems the SAME `amount` as shares, sending underlying to an attacker-chosen `funds-receiver`. Show a `shares-minted` versus `amount` mismatch, a `min-shares` or `min-underlying` bound that does not bind, or a way to capture the market's transient balance. Impact: direct theft of funds in motion.",
-
-    "High. An unprivileged borrower drives the interest-rate curve into a degenerate segment. `interest-rate` unpacks the curve through `unpack-u16`, `unpack-u16-at` and `iter-unpack-u16` from two packed words, zips them with `zip` and `combine-elements`, then `resolve-interpolation-points`, `resolve-and-interpolate` and `linear-interpolate` interpolate at `calc-utilization` of available liquidity against `total-debt`. Show a utilization at or past the final point, at an equal x1/x2 pair, or above BPS when debt exceeds available assets, producing a zero or aborting rate. Impact: theft of unclaimed yield, or temporary freezing of every function that calls `accrue`.",
-
-    "Critical. THE VAULT'S `assets` VAR DIVERGES FROM THE UNDERLYING IT HOLDS. `deposit` and `redeem` adjust `assets` directly, `system-repay` adds only `interest-paid`, `socialize-debt` subtracts a saturating `principal-reduction`, while `get-available-assets` and `ubalance` read the real balance and `redeem` gates on both `(>= current-assets inkind)` and `(>= available-assets inkind)`. Show a sequence after which `assets` overstates reality so the last suppliers cannot redeem, or understates it so a withdrawal exceeds the shares' worth. Impact: permanent freezing of funds, or insolvency.",
-
-    "Critical. `system-repay` SPLITS ONE PAYMENT WITH THREE DISAGREEING FORMULAS. `capped-amount` is clamped to `total-debt`, `principal-reduction` comes from `calc-principal-ratio-reduction`, `principal-repaid` from `capped-amount x total-borrowed / debt`, and `interest-paid` is the remainder; `principal-scaled`, `total-borrowed` and `assets` are then written from three different quantities. Show a repay - direct or through `liquidate` - that clears more `principal-scaled` than value delivered, credits `assets` with interest never received, or zeroes `total-borrowed` while `principal-scaled` remains, so `total-assets` misreports solvency permanently. Impact: protocol insolvency.",
-
-    "High. TREASURY LP MINTING DILUTES OR BRICKS THE VAULT. `accrue` mints zft to .dao-treasury as `reserve-inc x total-supply / (- (total-assets-preview) reserve-inc)`, and `total-supply-preview` adds that same not-yet-minted figure to the live supply that both conversion previews price against. Show a state where the subtraction underflows or the denominator is zero so `accrue` aborts and every deposit, redeem, borrow, repay and liquidation in that vault is frozen, or where more shares are minted than the reserve fee earned. Impact: permanent freezing of funds, or theft of unclaimed yield from suppliers.",
-
-    "High. A POSITION RESOLVES TO A LOOSER EFFICIENCY GROUP THAN ITS ASSET SET. With the registry correctly configured by the DAO, the lookup itself may still be wrong: `resolve` -> `active` -> `find-superset` -> `iter-find-superset` walks `buckets` in population order and returns the FIRST superset rather than the tightest, and `population`, `filter-u128` and `iter-find` maintain that search. Show a mask whose resolved `LTV-BORROW`, `LTV-LIQ-PARTIAL` or `LTV-LIQ-FULL` exceeds what the correct group for that exact set allows, and borrow on it. Do not premise this on a bad or accidental DAO update. Impact: protocol insolvency.",
-
-    "Critical. THE LEDGER AND ITS MASK STOP AGREEING. In market-vault `collateral-add`, `collateral-remove`, `debt-add-scaled` and `debt-remove-scaled`, the map mutation and `mask-update` are `let` bindings evaluated BEFORE `check-impl-auth`, the pause states and the amount assertions; `resolve-or-create` allocates ids through `increment`; `insert` rewrites the whole entry while `refresh` replaces `mask` and `last-update`. Show a non-zero collateral or debt row whose mask bit is clear - invisible to every health check and to liquidation - or a cleared bit for a row that still exists. Impact: insolvency, or permanent freezing of the affected collateral.",
-
-    "High. THE ORACLE FRONT-RUNNING GUARD IS DEFEATED OR WEAPONISED. `last-borrow-block` is written only by `debt-add-scaled`, carried forward by `refresh` on every other write, and read by the same-block check behind `ERR-LIQUIDATION-BORROW-SAME-BLOCK`, alongside `is-liquidation-paused` reading `pause-liquidation` and the per-asset and `GLOBAL-LIQUIDATION-GRACE-ID` entries of `liquidation-grace-periods` against `stacks-block-time`. Show a one-unit dust borrow repeated each block that keeps an underwater position unliquidatable while it accrues, and quantify the supplier loss. Impact: protocol insolvency.",
-
-    "High. ROUNDING IS SYSTEMATICALLY IN THE USER'S FAVOUR. Compare each paired conversion: `convert-to-scaled-debt` rounding up on borrow against `repay`'s `mul-div-down` / `mul-div-up` and `min` capping; `scale-debt-for-liquidation`'s round-down; `normalize` with per-asset `decimals` - round up for debt, round down for collateral - in `calculate-asset-notional-value` and `find-and-resolve-asset-value`; `mul-bps-down` and `div-bps-down`; `calc-utilization`. Show debt that rounds to zero, a repay credited for more scaled debt than tokens received, an 8-decimal versus 6-decimal asymmetry, or a dust-per-call extraction. Impact: theft of unclaimed yield, or permanently unrepayable dust debt freezing the collateral behind it.",
-
-    "Critical. THE UNMODELLED COMPOSITION - what the design never considered. Each mechanism is correct alone; the break is where two meet, and no audit covered the seam. Look for: rehypothecated zToken collateral priced from the SAME vault's `lindex` that the holder can move by borrowing or repaying in the same transaction, a self-referential collateral loop; the ztoken-to-vault-id mapping falling through to the `u100` sentinel; a zToken freely transferable through the vault's `transfer` while the same shares back a market position; `supply-collateral-add` and `collateral-remove-redeem` combining a vault state change with a market health check that reads an `index-cache` primed before that change; `liquidate-multi` running N seizures against one price snapshot and one cache. Prove the composed sequence with a single transaction chain and assert the invariant each side assumed the other enforced. Impact: name it as direct theft, permanent freezing, or insolvency.",
+    "Critical. THE MISSING BINDING - what nobody built. Nothing in this repository re-derives, after `execute_intents` returns, that the assets the Verifier still custodies equal the sum of all `token_balances` it owes; nothing ties a `TokenId` back to a live on-chain asset at withdrawal time; nothing bounds what an attacker-controlled callee does to state between a debit and its `*_resolve_*` callback; and nothing checks that a legacy (non-versioned) nonce was ever bounded by a salt or an expiry. Identify the FIRST point at which a byte an unprivileged party chose - a `MultiPayload` handed to `execute_intents`, a deposit `msg`, a `ft_withdraw`-family call under `auth_by_predecessor_id`, a value returned by a contract they deployed, or a `RequestMessage` sent to a wallet - becomes a credited balance, a released asset or a committed nonce with no independent party ever re-deriving it. Prove it with one `cargo test` asserting both the value used and the value that should have authorised it, and show that once they diverge nothing in the protocol reconciles them.",
 ]
 
 
@@ -143,119 +378,138 @@ scope_scan = [
 
 def question_generator(target_file: str) -> str:
     """
-    Generate exploit-focused audit and fuzzing questions for one Zest v2 target.
+    Generate custody and authorization audit questions for one NEAR Intents target.
 
     ```
     target_file format:
-    "'File Name: mainnet/contracts/market/v0-4-market.clar -> Scope: Critical. ...'"
+    "'File Name: contracts/defuse/core/src/engine/state/deltas.rs -> Scope: Critical. ...'"
     """
 
     prompt = f"""
     ```
 
-    Generate exploit-focused security audit questions for this exact Zest Protocol v2 target:
+    Generate custody and authorization security audit questions for this exact
+    NEAR Intents target:
 
     {target_file}
 
     Project focus:
-    Zest v2 is a Clarity lending market on Stacks. `v0-4-market.clar` is the hub: it holds every
-    user entry point (collateral-add, collateral-remove, supply-collateral-add,
-    collateral-remove-redeem, borrow, repay, liquidate, liquidate-multi, liquidate-redeem),
-    resolves Pyth and DIA prices with callcode transforms, caches indexes per block, evaluates
-    health against efficiency-group LTVs, and runs graduated liquidation and bad-debt
-    socialization. `v0-market-vault.clar` stores positions as a 128-bit mask (collateral bits
-    0-63, debt bits 64-127) plus collateral and debt maps. Six vaults issue ztokens, accrue borrow
-    and liquidity indexes, mint treasury LP, and serve system-borrow, system-repay and
-    socialize-debt. v0-assets and v0-egroup supply asset ids, oracle config, decimals and
-    per-combination risk parameters. Collateral can be plain or rehypothecated - a ztoken whose
-    price is derived from its own vault's liquidity index.
+    NEAR Intents ("the Verifier", `intents.near`) is a custodial multi-token ledger on
+    NEAR. Users deposit NEP-141 / NEP-171 / NEP-245 assets, and every later move is
+    authorised by an off-chain signature over a `DefusePayload` carried in a
+    `MultiPayload`. Untrusted bytes enter through doors any unprivileged party controls:
+    a `MultiPayload` batch handed to `execute_intents` / `simulate_intents` by ANY caller
+    (the signature is the only authority - the predecessor is irrelevant), a
+    `ft_on_transfer` / `nft_on_transfer` / `mt_on_transfer` deposit `msg`, a direct
+    `ft_withdraw`-family call from an account that enabled `auth_by_predecessor_id`, a
+    `RequestMessage` sent to a wallet contract, and the return value of any contract the
+    attacker deploys and names in `msg`, `AuthCall::contract_id` or `NotifyOnTransfer` -
+    which flows back into the `*_resolve_*` callbacks. Those bytes end in one place: the
+    `token_balances` of accounts inside the Verifier and the real assets those balances
+    are a claim on. Anything that moves value the signer did not authorise, replays one
+    signature, breaks conservation across a batch, or leaves the ledger owing more than
+    it custodies is the bug.
 
     Rules:
-    * Treat `File Name:` as the exact contract.
+    * Treat `File Name:` as the exact file.
     * Treat `Scope:` as the ONLY impact to target.
     * Assume full repo context is accessible.
     * Do not ask for code or say anything is missing.
-    * Use exact Clarity symbols (define-public/private/read-only names, map, data-var, constant).
-    * Attacker is unprivileged only: an ordinary Stacks principal that funds a wallet, calls any
-      public function, deploys its own Clarity contract, passes it as `<ft-trait>`, supplies its
-      own `price-feeds` buffers, and controls amounts, receivers, `on-behalf-of` and call
-      ordering within a block.
-    * Attacker is NOT a DAO signer, executor, market impl, authorized contract, miner, oracle
-      publisher or node operator. Ignore malicious-miner, chain-reorg, MEV-only and
-      social-engineering assumptions.
+    * Use exact Rust symbols (module, struct, enum, fn, const, field) as they appear in the file.
+    * EVERY question must close on a binding that must hold across a call. State it explicitly
+      as an equality between two named values. Narrative questions are rejected.
+    * Attacker is unprivileged only: anyone who can send a NEAR transaction, call
+      `execute_intents` / `simulate_intents` with any `MultiPayload` batch, deposit tokens with
+      an arbitrary `msg`, deploy and control their own FT/NFT/MT and receiver contracts, create
+      accounts inside the Verifier and hold their own balances, and sign with their own keys
+      under any supported standard.
+    * Attacker is NOT the DAO or any `Role` holder (`UnrestrictedWithdrawer`, `SaltManager`,
+      `GarbageCollector`, `RelayerKeysManager`, `Pauser`, `UnrestrictedAccountUnlocker`), not a
+      relayer key holder, not a contract upgrader, and not the fee collector. They hold no
+      victim private key and no access-control role. No malicious validator or node, no key
+      compromise, no RPC or TLS interception, no local or physical access, no compromised
+      dependency, no social engineering.
     * PROGRAM EXCLUSIONS - a question landing in any of these wastes the whole batch:
-      - ANY logic related to flashloans is OUT OF SCOPE. A flashloan may be used as a source of
-        capital for a different attack, but never target `flashloan` itself, its fee, its
-        `flashloan-permissions` / `default-flashloan-permissions` whitelist, or `in-flashloan`.
-      - Liquidation of disabled collateral, and any other deliberate protocol safety design
-        decision, is OUT OF SCOPE.
-      - Anything requiring DAO compromise, or an accidental or incorrect registry update by the
-        DAO, is OUT OF SCOPE. Full DAO control of the asset and egroup registries is intended
-        design, and every egroup invariant needing global market and position knowledge is
-        verified off-chain by the DAO before approval. Assume both registries are correctly
-        configured, and target only the read and resolution paths an ordinary user call executes.
-      - Also excluded everywhere: leaked keys or credentials, privileged addresses, external
-        stablecoin depegs the attacker did not cause through a bug in this code, 51% and basic
-        economic or governance attacks, Sybil attacks, centralization risk, lack of liquidity,
-        incorrect data supplied by third-party oracles, best-practice notes, feature requests,
-        and test or configuration files.
-      - Oracle manipulation caused by a bug in THIS code remains fully in scope.
+      - `contracts/escrow-swap/**` is OUT OF SCOPE for this program.
+      - Tests, fixtures and mocks (`tests/**`, `**/tests/**`, `**/tests.rs`,
+        `crates/testing/**`, `**/mock.rs`, `**/arbitrary.rs`, `**/fuzz/**`, `**/examples/**`),
+        generated and tooling files (`**/build.rs`, `contract/abi.rs`, `**/near-gds/**`,
+        `**/near-oa/**`, `crates/cli-utils/**`, `crates/wallet/sdk/**`), `*.toml`, `*.md`,
+        `scripts/**`, `releases/**` are OUT OF SCOPE.
+      - Unbounded gas or storage consumption, denial of service, rate limiting, retry
+        behaviour, queue depth, resource exhaustion, unbounded collections, memory hygiene
+        and log volume are OUT OF SCOPE.
+      - Griefing with no attacker profit, anything that only costs the attacker their own
+        funds, and anything requiring a DAO/role holder, relayer key or an upgrade are OUT OF
+        SCOPE.
+      - Defects in third-party crates (near-sdk, near-contract-standards, near-plugins, serde,
+        borsh, k256, p256, ed25519-dalek, bs58) with no exploit path through this repository's
+        own code are OUT OF SCOPE.
+      - Also excluded: leaked keys, best-practice notes, feature requests, and theoretical
+        findings with no demonstration.
+      - A weakness in this repository that manipulates a third-party crate into unsafe
+        behaviour remains fully in scope.
     * IN-SCOPE IMPACTS - every question must land on one and name it:
-      Critical: direct theft of user funds at rest or in motion, other than unclaimed yield;
-      permanent freezing of funds; protocol insolvency.
-      High: theft of unclaimed yield or royalties; permanent freezing of unclaimed yield or
-      royalties; temporary freezing of funds.
-    * Every question must be a concrete real-world scenario an unprivileged principal can execute
-      on mainnet with its own capital. No speculative unbounded-list, memory or resource-hygiene
-      questions.
-    * Clarity `+` `-` `*` abort on overflow and underflow; an abort is a finding only when it
-      permanently or temporarily freezes a funds path - say which.
-    * Generate 30 to 40 high-signal questions.
+      Critical: tokens moved, credited or withdrawn without the owner's valid signature or
+      authorisation; one signed payload settling more than once; a batch whose balance changes
+      do not net to zero, so the Verifier owes more than it custodies; a refund or resolver
+      credit that does not match what failed to settle; a `TokenId` collision that lets a
+      worthless asset claim a valuable balance; protocol fees bypassed or over-collected; user
+      funds permanently frozen or unrecoverable.
+      High: an intent executed against a locked account, or a lock/unlock state that
+      contradicts what the contract enforces; a wallet contract executing a `Request` its owner
+      did not authorise for this chain and account; `simulate_intents` reporting an outcome
+      that `execute_intents` does not produce, when a party settles on that report.
+    * Every question must be a concrete real-world scenario an unprivileged attacker can
+      execute against the deployed Verifier - a `MultiPayload` they sign and submit, a deposit
+      `msg` they craft, a contract they deploy and name, a direct contract call they make. No
+      speculative resource-hygiene or memory questions.
+    * A panic or error is a finding only when it freezes funds, lets an unauthorised move
+      through, or leaves the ledger unbalanced - say which.
+    * Generate 40 to 80 high-signal questions.
     * At least 70% must land on a Critical impact rather than a High one.
-    * Every question must be testable by a Clarinet / vitest simnet test in `local-testing/tests`
-      against a local fork. Never propose testing on mainnet or a public testnet.
+    * Every question must be testable by a `cargo test` in this workspace (unit test, or the
+      `near-workspaces` sandbox harness), with no mainnet.
     * Avoid generic checklist questions and repeated root causes.
-    * Prefer questions that name TWO code sites and ask whether they agree: a writer and the guard
-      that reads it, a preview function and the function that mutates state, a mask update and the
-      health check that consumes it, a cached value and its source, a round-up and its paired
-      round-down.
-    * Prefer a question whose disagreement can be asserted numerically in one test - collateral
-      seized equals repaid debt times penalty, shares out times share price equals assets in, sum
-      of user debt equals `principal-scaled` times index, mask bits equal the set of non-zero rows.
+    * Prefer questions that name TWO values that must be equal and ask whether they are: the
+      value debited and the value delivered, the signer the signature proves and the
+      `signer_id` the engine uses, the times a nonce settles and one, the sum of deltas and
+      zero, the fee owed and the fee collected, the asset a `TokenId` names and the asset moved.
 
     Known dead ends - do NOT generate questions about these:
-    * Governance setting a bad LTV, cap, interest curve, penalty, staleness or fee.
-    * Pyth or DIA publishing a wrong price, or an external oracle going stale on its own.
-    * Any pause switch, grace period or cap being used by the DAO as designed.
-    * A user harming only their own position with no third party and no protocol invariant broken.
-    * Findings requiring the attacker to already be an authorized contract, market impl or signer.
-    * Anything only reproducible against mock tokens or the mock oracle.
+    * Anything needing a DAO or `Role` holder, a relayer key, a contract upgrade, or a victim's
+      private key.
+    * A bug in a dependency with no reachable path through this repository.
+    * Gas, storage growth, event log size, or an attacker burning only their own funds with no
+      protocol value moved and no other party harmed.
+    * Findings only reproducible in tests, mocks, fixtures or generated files.
+    * `contracts/escrow-swap/**`.
 
-    Core invariants:
-    * Authorization exactness: only the acting principal's own position is mutated, and privileged
-      writes come only from the registered impl or an authorized contract.
-    * Solvency: every vault's underlying plus outstanding debt covers all ztoken shares and all
-      supplier claims; no position leaves the protocol under-collateralised for its egroup LTV.
-    * Conversion symmetry: shares to assets to shares, and tokens to scaled debt to tokens, never
-      round in the user's favour.
-    * Price integrity: a resolved price reflects a fresh, confidence-checked feed and a callcode
-      transform whose inputs the caller cannot move within the same transaction.
-    * Liquidation fairness: collateral seized equals the debt actually repaid scaled by the
-      penalty, never more, and only above the liquidation LTV.
+    Core bindings (each question must close on one):
+    * AUTHORISATION: every balance change == one a valid signature or `auth_by_predecessor_id`
+      caller authorised, for that exact account and amount.
+    * REPLAY: the number of times a signed `MultiPayload` settles == 1, forever.
+    * CONSERVATION: the sum of all `token_balances` changes for a token across one call == 0,
+      and total balances owed == assets actually custodied.
+    * SETTLEMENT: value debited == value delivered plus value re-credited by the resolver.
+    * IDENTITY: the `(contract, token)` a `TokenId` names == the asset actually moved; the
+      `(signer_id, public_key)` authorised == the pair actually signed.
+    * FEES: fees credited to `fee_collector` == fees the executed deltas owed.
 
     Each question must include:
-    1. target function/method;
-    2. attacker action (a concrete contract call with arguments);
-    3. preconditions (funded principal, deployed contract, existing position, vault state);
-    4. call sequence;
-    5. invariant tested;
-    6. the in-scope impact class it lands on;
+    1. target struct/fn;
+    2. attacker action (a concrete signed `MultiPayload`, deposit `msg`, contract call, or a
+       contract they deploy, with its fields);
+    3. preconditions (existing accounts, balances, lock state, salt, deposited tokens);
+    4. call sequence through the code;
+    5. the binding that breaks, written as an equality;
+    6. scoped impact and whose funds are affected;
     7. proof idea.
 
     Output only valid Python. No markdown. No explanations.
 
     questions = [
-    "[File: {target_file}] [Function: symbol_or_method] Can an unprivileged ATTACKER_ACTION under PRECONDITIONS trigger CALL_SEQUENCE, violating INVARIANT, causing IMPACT_CLASS: SCOPE_IMPACT? Proof idea: Clarinet simnet test PARAMETERS and assert AUTHORIZATION_EXACTNESS, SOLVENCY, CONVERSION_SYMMETRY, PRICE_INTEGRITY, or LIQUIDATION_FAIRNESS.",
+    "[File: {target_file}] [Method: struct_or_fn] Can an unprivileged ATTACKER_ACTION under PRECONDITIONS trigger CALL_SEQUENCE, breaking the binding BINDING_EQUALITY, causing scoped impact: SCOPE_IMPACT against PARTY? Proof idea: cargo test PARAMETERS asserting AUTHORISATION, REPLAY, CONSERVATION, SETTLEMENT, IDENTITY, or FEES.",
     ]
     """
     return prompt
@@ -263,7 +517,7 @@ def question_generator(target_file: str) -> str:
 
 def audit_format(security_question: str) -> str:
     """
-    Generate a focused Zest v2 exploit-validation prompt.
+    Generate a custody and authorization exploit-validation prompt for NEAR Intents.
     """
 
     prompt = f"""# SECURITY AUDIT PROMPT
@@ -273,20 +527,19 @@ def audit_format(security_question: str) -> str:
 
 ## Rules
 - Use existing repo context only. Analyze only this question and scoped impact.
-- Attacker is unprivileged only: an ordinary Stacks principal that funds a wallet, calls any public function, deploys its own Clarity contract and passes it as `<ft-trait>`, supplies its own `price-feeds`, and controls amounts, receivers, `on-behalf-of` and call ordering. No DAO signer, executor, market impl, authorized contract, miner, oracle publisher or node operator access.
-- Reject malicious-miner, chain-reorg, MEV-only and social-engineering paths.
-- OUT OF SCOPE, reject on sight: any flashloan logic (`flashloan`, its fee, its permission whitelist, `in-flashloan`) - though a flashloan used purely as capital for a different attack is fine; liquidation of disabled collateral and other deliberate safety design decisions; anything requiring DAO compromise or an accidental or incorrect DAO registry update, since full DAO control of the asset and egroup registries is intended design and egroup invariants needing global position knowledge are verified off-chain before approval.
-- Also reject: leaked keys, privileged addresses, external stablecoin depegs the attacker did not cause through a bug here, 51% / basic economic / governance attacks, Sybil, centralization risk, lack of liquidity, incorrect data supplied by third-party oracles, best-practice notes, feature requests, and test or configuration files. Oracle manipulation caused by a bug in THIS code stays in scope.
-- The impact must be one of: Critical - direct theft of user funds at rest or in motion other than unclaimed yield, permanent freezing of funds, or protocol insolvency; High - theft of unclaimed yield or royalties, permanent freezing of unclaimed yield or royalties, or temporary freezing of funds.
-- Reject Pyth and Wormhole internals, third-party token behaviour, `local-testing/**`, tests, mocks, deployment plans, docs, read-only aggregators, and dependency-only findings.
-- Reject speculative resource-hygiene claims with no reachable mainnet scenario.
+- Attacker is unprivileged only: anyone who can send a NEAR transaction, call `execute_intents` / `simulate_intents` with any `MultiPayload` batch, deposit tokens with an arbitrary `msg`, deploy and control their own FT/NFT/MT and receiver contracts, hold their own Verifier balances, and sign with their own keys. They are not the DAO or any `Role` holder (`UnrestrictedWithdrawer`, `SaltManager`, `GarbageCollector`, `RelayerKeysManager`, `Pauser`, `UnrestrictedAccountUnlocker`), not a relayer key holder, not an upgrader, not the fee collector, and hold no victim private key.
+- Reject malicious validators or nodes, key compromise, RPC or TLS interception, local or physical access, compromised dependencies and social engineering.
+- OUT OF SCOPE, reject on sight: `contracts/escrow-swap/**`; tests, fixtures and mocks (`tests/**`, `**/tests/**`, `**/tests.rs`, `crates/testing/**`, `**/mock.rs`, `**/arbitrary.rs`, `**/fuzz/**`, `**/examples/**`); generated and tooling files (`**/build.rs`, `contract/abi.rs`, `**/near-gds/**`, `**/near-oa/**`, `crates/cli-utils/**`, `crates/wallet/sdk/**`), `*.toml`, `*.md`, `scripts/**`, `releases/**`; unbounded gas or storage consumption, denial of service, rate limiting, retry behaviour and resource exhaustion; griefing with no attacker profit; anything requiring a DAO/role holder, relayer key or upgrade; third-party crate defects with no path through this repository; best-practice notes; feature requests; theoretical findings with no demonstration.
+- The impact must be one of: Critical - tokens moved, credited or withdrawn without the owner's valid signature or authorisation, one signed payload settling more than once, a batch whose balance changes do not net to zero so the Verifier owes more than it custodies, a refund or resolver credit that does not match what failed to settle, a `TokenId` collision letting a worthless asset claim a valuable balance, protocol fees bypassed or over-collected, or user funds permanently frozen; High - an intent executed against a locked account or a lock state contradicting what is enforced, a wallet contract executing a `Request` its owner did not authorise for this chain and account, or `simulate_intents` reporting an outcome `execute_intents` does not produce when a party settles on that report.
+- Focus on real impact: value leaving the Verifier that the signer never authorised.
 
 ## Validate
-- Trace the exact reachable path from the attacker's call (function, arguments, trait principal passed, price-feeds buffer, receiver, on-behalf-of, ordering within one block) into the affected function.
-- Check whether existing `contract-caller` / `tx-sender` assertions, `check-impl-auth`, `check-caller-auth`, pause states, caps, `min-out` slippage bounds, health checks, or Clarity's own overflow and underflow aborts already stop it.
-- Accept only a concrete loss, freezing, insolvency or unauthorized state change caused by this code.
-- Name the in-scope impact class explicitly and justify it.
-- Require exact file/function support and a reproducible Clarinet / vitest simnet PoC on a local fork.
+- Write the binding the question claims is broken as an explicit equality between two named values BEFORE tracing any code.
+- Trace the exact reachable path from the attacker's `MultiPayload`, deposit `msg`, contract call or deployed callee, and record every read and write of: the verified `PublicKey` and `DefusePayload::signer_id`, the `Nonce` and its `VersionedNonce` / `Salt` / deadline, each `TokenId` and its string form, every `internal_add_balance` / `internal_sub_balance` / `Amounts::add` / `sub`, the `TransferMatcher` deltas and `Transfers` produced by `finalize`, the fee taken by `Pips::fee_ceil`, every Promise scheduled and every `*_resolve_*` callback's re-credit.
+- Evaluate both sides of the equality before and after. If they still match, output no vulnerability.
+- Check whether `MultiPayload::verify`, `has_public_key`, `verify_intent_nonce`, `MaybeLegacyNonces::commit`, `SaltRegistry::is_valid`, `Lock::get_mut`, `TransferMatcher::finalize`, `assert_one_yocto`, `#[private]`, `#[pause]`, the `access_control_any` guards, or a `checked_*` arithmetic path already prevents the divergence.
+- State what the attacker gains or destroys per attempt and whether it is repeatable across accounts, tokens or batches.
+- Require exact file/fn support and a reproducible `cargo test` proof (unit test or `near-workspaces` sandbox), with no mainnet.
 
 ## Output
 If valid, output exactly:
@@ -298,19 +551,19 @@ If valid, output exactly:
 [2-3 sentences]
 
 ### Finding Description
-[Code path, root cause, attacker call arguments, exploit flow, and why existing checks fail]
+[The broken binding as an equality, the code path, root cause, the attacker's exact payload, msg or call, exploit flow, and why existing guards fail]
 
 ### Impact Explanation
-[Concrete scoped impact and the exact in-scope severity category it matches]
+[What is moved, credited, replayed, frozen or under-collected, whose funds, repeatability, blast radius, matching severity category]
 
 ### Likelihood Explanation
-[Preconditions, capital cost to the attacker, feasibility, repeatability]
+[Preconditions, required balances and accounts, attacker cost, feasibility, repeatability]
 
 ### Recommendation
 [Specific fix]
 
 ### Proof of Concept
-[Clarinet simnet test plan with expected assertions, run on a local fork]
+[cargo test plan with the exact assertions on both sides of the binding]
 
 If invalid, output exactly:
 #NoVulnerability found for this question.
@@ -322,7 +575,7 @@ No extra text.
 
 def validation_format(report: str) -> str:
     """
-    Generate a strict bounty-style validation prompt for Zest v2 security claims.
+    Generate a strict bounty-style validation prompt for NEAR Intents claims.
     """
     prompt = f"""# VALIDATION PROMPT
 
@@ -334,33 +587,33 @@ def validation_format(report: str) -> str:
 - Check SECURITY.md and Researcher.Md for scope, exclusions, and valid impact classes.
 - Do not create a new vulnerability if the submitted claim is weak or invalid.
 - Do not upgrade severity unless the provided evidence proves the higher impact.
-- Reject anything requiring a DAO signer, executor, market impl, authorized contract, miner, oracle publisher, node operator, or leaked keys.
-- OUT OF SCOPE, reject on sight: any flashloan logic (`flashloan`, its fee, its permission whitelist, `in-flashloan`) - though a flashloan used purely as capital for a different attack is fine; liquidation of disabled collateral and other deliberate safety design decisions; anything requiring DAO compromise or an accidental or incorrect DAO registry update, since full DAO control of the asset and egroup registries is intended design and egroup invariants needing global position knowledge are verified off-chain before approval.
-- Also reject: leaked keys, privileged addresses, external stablecoin depegs the attacker did not cause through a bug here, 51% / basic economic / governance attacks, Sybil, centralization risk, lack of liquidity, incorrect data supplied by third-party oracles, best-practice notes, feature requests, and test or configuration files. Oracle manipulation caused by a bug in THIS code stays in scope.
-- The impact must be one of: Critical - direct theft of user funds at rest or in motion other than unclaimed yield, permanent freezing of funds, or protocol insolvency; High - theft of unclaimed yield or royalties, permanent freezing of unclaimed yield or royalties, or temporary freezing of funds.
-- Reject Pyth and Wormhole internals, third-party contracts, `local-testing/**`, tests, mocks, deployment plans, `.toml`, docs, read-only aggregator and dependency-only findings.
-- Reject if the bug was already fixed, acknowledged, or covered by the published Clarity Alliance, Greybeard or Asymmetric audits.
-- Reject any PoC that requires testing against mainnet or a public testnet; only local forks are permitted.
-- A valid report must be triggerable by an ordinary Stacks principal on the currently deployed mainnet contracts.
-- A PoC is mandatory for every severity. Prefer #NoVulnerability over speculative reports.
+- A binding claim is only valid if the report states the broken equality between two named values and shows both sides concretely. Reject prose-only claims.
+- Reject anything requiring the DAO or a `Role` holder (`UnrestrictedWithdrawer`, `SaltManager`, `GarbageCollector`, `RelayerKeysManager`, `Pauser`, `UnrestrictedAccountUnlocker`), a relayer key, a contract upgrade, a victim's private key, a malicious validator or node, RPC or TLS interception, local or physical access, a compromised dependency, or social engineering.
+- OUT OF SCOPE, reject on sight: `contracts/escrow-swap/**`; tests, fixtures and mocks (`tests/**`, `**/tests/**`, `**/tests.rs`, `crates/testing/**`, `**/mock.rs`, `**/arbitrary.rs`, `**/fuzz/**`, `**/examples/**`); generated and tooling files (`**/build.rs`, `contract/abi.rs`, `**/near-gds/**`, `**/near-oa/**`, `crates/cli-utils/**`, `crates/wallet/sdk/**`), `*.toml`, `*.md`, `scripts/**`, `releases/**`; unbounded gas or storage consumption, denial of service, rate limiting, retry behaviour and resource exhaustion; griefing with no attacker profit; third-party crate defects with no path through this repository; best-practice notes; feature requests; theoretical findings with no demonstration.
+- The impact must be one of: Critical - tokens moved, credited or withdrawn without the owner's valid signature or authorisation, one signed payload settling more than once, a batch whose balance changes do not net to zero, a refund or resolver credit that does not match what failed to settle, a `TokenId` collision letting a worthless asset claim a valuable balance, protocol fees bypassed or over-collected, or user funds permanently frozen; High - an intent executed against a locked account or a contradictory lock state, a wallet contract executing an unauthorised `Request`, or `simulate_intents` diverging from `execute_intents` where a party settles on the report.
+- Reject claims that depend on a deployment ignoring the documented configuration, or that only harm the attacker's own funds.
+- Reject if the bug was already fixed, publicly disclosed, or is covered by an existing advisory or CHANGELOG entry for a supported version.
+- Reject a divergence with no authorisation, replay, conservation, settlement, identity or fee boundary crossed.
+- A valid report must be triggerable by an unprivileged attacker against the deployed Verifier running the current release.
+- A PoC is mandatory. Prefer #NoVulnerability over speculative reports.
 
 ## Required Validation Checks
 All must pass:
-1. Exact in-scope file, function, and line/code references.
-2. Clear root cause and broken security assumption.
-3. Reachable exploit path: preconditions -> attacker contract call -> trigger -> bad result.
-4. Existing caller assertions, impl auth, pause states, caps, slippage bounds, health checks and Clarity overflow aborts reviewed and shown insufficient.
-5. Concrete in-scope impact class named, with realistic likelihood and attacker capital cost.
-6. Reproducible proof: Clarinet / vitest simnet test on a local fork, or exact call steps.
-7. No rejection reason from the program exclusions above.
+1. Exact in-scope file, struct/fn, and line references.
+2. The binding written explicitly as an equality, with both sides shown before and after.
+3. Clear root cause: which unverified signer field, which missing nonce or salt check, which unchecked arithmetic, which attacker-controlled callback return, which `TokenId` encoding causes the divergence.
+4. Reachable exploit path: preconditions -> attacker `MultiPayload`, deposit `msg`, contract call or deployed callee -> call sequence -> observed divergence.
+5. `MultiPayload::verify`, `has_public_key`, `verify_intent_nonce`, `MaybeLegacyNonces::commit`, `SaltRegistry::is_valid`, `Lock::get_mut`, `TransferMatcher::finalize`, `assert_one_yocto`, `#[private]`, `#[pause]`, `access_control_any` and the `checked_*` arithmetic reviewed and shown insufficient.
+6. Impact stated concretely: how much of which token moves, whose, and whether it is repeatable.
+7. Reproducible proof: `cargo test` (unit or `near-workspaces` sandbox) with the asserted values, no mainnet.
 
 ## Silent Triage Questions
 Before output, internally answer:
-- Can an ordinary funded principal trigger this with its own calls or its own deployed contract, without any privileged role?
-- Does the deployed Clarity code actually behave as claimed?
-- Is the loss caused by this code, not by an oracle, a third-party token, a governance choice, or flashloan logic?
-- Which of the listed in-scope impact classes does it land on, exactly?
-- Would a program triager accept the proof?
+- What exactly is the equality, and does it actually fail?
+- Can an ordinary depositor, intent signer, token deployer or internet caller trigger it with no role and no victim key?
+- Is the flaw in this repository's in-scope code, not in a dependency, in escrow-swap, or in a careless deployment?
+- What value moves, or whose funds freeze, and is it repeatable?
+- Would a NEAR Intents triager accept the exploit path?
 - What exact test would prove it?
 
 ## Output
@@ -372,22 +625,22 @@ Audit Report
 [Clear vulnerability statement] - ([File: file_path])
 
 ## Summary
-[2-3 sentence summary of the bug and impact]
+[2-3 sentence summary of the broken binding and impact]
 
 ## Finding Description
-[Exact code path, root cause, exploit flow, and why existing checks fail]
+[Exact code path, the equality, root cause, exploit flow, and why existing guards fail]
 
 ## Impact Explanation
-[Concrete in-scope impact, severity rationale, and the exact category matched]
+[What is moved, replayed, unbalanced or frozen, affected party, repeatability, severity category]
 
 ## Likelihood Explanation
-[Attacker capability, preconditions, feasibility, repeatability]
+[Attacker capability, preconditions, configuration, cost, feasibility]
 
 ## Recommendation
 [Specific fix guidance]
 
 ## Proof of Concept
-[Minimal reproducible steps or Clarinet simnet test plan on a local fork]
+[Minimal reproducible steps or cargo test plan with concrete assertions]
 
 If invalid, output exactly:
 #NoVulnerability found for this question.
@@ -399,7 +652,7 @@ Output only one of the two outcomes above. No extra text.
 
 def scan_format(report: str) -> str:
     """
-    Generate a short cross-project analog scan prompt for Zest v2.
+    Generate a short cross-project analog scan prompt for NEAR Intents.
     """
     prompt = f"""# ANALOG SCAN PROMPT
 
@@ -407,18 +660,18 @@ def scan_format(report: str) -> str:
 {report}
 
 ## Rules
-- Use in-scope production repo context only (`mainnet/contracts/**`, excluding the dao directory). Do not ask for code or claim missing files.
+- Use in-scope repository context only (`contracts/defuse/**`, `contracts/wallet/**`, `contracts/poa/**`, `contracts/global-deployer/src/**`, `contracts/outlayer/app/src/**`, `contracts/treasury-logger/src/**`, `crates/**`), excluding tests, mocks, generated and tooling files. Do not ask for code or claim missing files.
 - Use the external report only as a bug-class hint, not as proof.
-- Keep only unprivileged-principal analogs in market entry points and health checks, oracle resolution and callcode transforms, the per-block index cache, position mask and collateral/debt accounting, egroup resolution, vault share math and interest accrual, treasury LP minting, or socialize-debt.
-- OUT OF SCOPE, reject on sight: any flashloan logic (`flashloan`, its fee, its permission whitelist, `in-flashloan`) - though a flashloan used purely as capital for a different attack is fine; liquidation of disabled collateral and other deliberate safety design decisions; anything requiring DAO compromise or an accidental or incorrect DAO registry update, since full DAO control of the asset and egroup registries is intended design and egroup invariants needing global position knowledge are verified off-chain before approval.
-- Also reject: leaked keys, privileged addresses, external stablecoin depegs the attacker did not cause through a bug here, 51% / basic economic / governance attacks, Sybil, centralization risk, lack of liquidity, incorrect data supplied by third-party oracles, best-practice notes, feature requests, and test or configuration files. Oracle manipulation caused by a bug in THIS code stays in scope.
-- The impact must be one of: Critical - direct theft of user funds at rest or in motion other than unclaimed yield, permanent freezing of funds, or protocol insolvency; High - theft of unclaimed yield or royalties, permanent freezing of unclaimed yield or royalties, or temporary freezing of funds.
-- Reject malicious-miner, chain-reorg, MEV-only, oracle-publisher, third-party token, `local-testing/**`, mock, deployment-plan, dependency-only and no-impact analogs.
+- Keep only unprivileged-attacker analogs that break a custody binding: a balance change versus the signature that authorised it, the times one signed `MultiPayload` settles versus one, the sum of a batch's deltas versus zero, value debited versus value delivered plus refunded, the asset a `TokenId` names versus the asset moved, fees owed versus fees collected.
+- OUT OF SCOPE, reject on sight: `contracts/escrow-swap/**`; tests, fixtures and mocks; generated and tooling files (`**/build.rs`, `contract/abi.rs`, `**/near-gds/**`, `**/near-oa/**`, `crates/cli-utils/**`, `crates/wallet/sdk/**`), `*.toml`, `*.md`, `scripts/**`, `releases/**`; unbounded gas or storage consumption, denial of service, rate limiting, retry behaviour and resource exhaustion; griefing with no attacker profit; anything requiring the DAO, a `Role` holder, a relayer key, an upgrade, a victim key, a malicious node, RPC interception, local access or social engineering; third-party crate defects with no path through this repository; best-practice notes; feature requests; theoretical findings.
+- The impact must be one of: Critical - tokens moved, credited or withdrawn without valid authorisation, one signed payload settling more than once, a batch that does not net to zero, a mismatched resolver refund, a `TokenId` collision, fees bypassed or over-collected, or funds permanently frozen; High - an intent executed against a locked account, a wallet executing an unauthorised `Request`, or `simulate_intents` diverging from `execute_intents`.
+- Reject analogs that depend on a deployment ignoring the documented configuration, and analogs with no authorisation, replay, conservation, settlement, identity or fee boundary crossed.
 
 ## Validate
-- Map the bug class to the strongest reachable Zest path from an ordinary principal's call or its own deployed contract.
-- Prove root cause with exact file/function support.
-- Name the in-scope impact class it lands on.
+- Map the bug class to the strongest reachable path in this repository and state the binding it would break as an equality.
+- Evaluate both sides before and after the attacker's payload, deposit or call sequence.
+- Prove root cause with exact file/fn support.
+- Accept only concrete value loss, an unauthorised move, a replayed settlement, an unbalanced ledger, or frozen funds.
 
 ## Output (Strict)
 If valid analog exists, output:

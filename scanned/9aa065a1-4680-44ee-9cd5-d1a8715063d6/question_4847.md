@@ -1,0 +1,13 @@
+# Q4847: tokens - refund routed to the wrong owner in a batch (4)
+
+## Question
+Given the receiver is a contract the attacker deployed that returns a crafted JSON value, can an unprivileged attacker, entering through the return value of the attacker's own FT/MT/receiver contract, fed into the `#[private]` resolve callback, exploit that `FT_TRANSFER_CALL_GAS_DEFAULT` in `contracts/defuse/core/src/intents/tokens.rs` derives the refund recipient from `previous_owner_ids.first()` (or an equivalent single-sender assumption) so a multi-owner batch refunds one party's assets to another, breaking the invariant `the account credited by a refund == the account that was debited for that exact token and amount` and leading to direct theft of user funds: custodied balances moved without the owner's authorisation?
+
+## Target
+- File/function: [contracts/defuse/core/src/intents/tokens.rs](contracts/defuse/core/src/intents/tokens.rs) - `FT_TRANSFER_CALL_GAS_DEFAULT` (cross-check `NativeWithdraw` in the same file)
+- Entrypoint: the return value of the attacker's own FT/MT/receiver contract, fed into the `#[private]` resolve callback
+- Attacker controls: the exact JSON the callee returns, whether it panics, and how much gas it burns
+- Exploit idea: The `require!(sender_id == previous_owner_id)` guard rejects approvals, but probe every path that constructs `previous_owner_ids` and whether a mismatch is reachable. Set-up: the receiver is a contract the attacker deployed that returns a crafted JSON value.
+- Invariant to test: the account credited by a refund == the account that was debited for that exact token and amount
+- Expected Immunefi impact: Critical - Direct theft of user funds: custodied balances moved without the owner's authorisation
+- Fast validation: Construct a batch with differing `previous_owner_ids`; assert the resolver rejects rather than misrouting.

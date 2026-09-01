@@ -1,0 +1,13 @@
+# Q5017: message - nonce window rotation permits replay (5)
+
+## Question
+Given the request is replayed against a sibling subwallet deployment, can an unprivileged attacker, entering through `w_execute_signed(msg: RequestMessage, proof: String)` - relayable by any account, replay a `RequestMessage` through `WalletAuthorization` in `contracts/wallet/src/message.rs` across the `old`/`current` bitmap rotation driven by `timeout` and `last_cleaned_at`, breaking the invariant `the number of times one signed `RequestMessage` executes == 1` and leading to direct theft of user funds via replay: one signed payload settles more than once?
+
+## Target
+- File/function: [contracts/wallet/src/message.rs](contracts/wallet/src/message.rs) - `WalletAuthorization` (cross-check `RequestMessage` in the same file)
+- Entrypoint: `w_execute_signed(msg: RequestMessage, proof: String)` - relayable by any account
+- Attacker controls: the entire `RequestMessage` (chain_id, signer_id, nonce, deadline, ops) and the `proof` string
+- Exploit idea: A nonce recorded in `current` moves to `old` and is eventually dropped; if the message's validity window outlives the bitmap retention, the same signed request executes twice. Set-up: the request is replayed against a sibling subwallet deployment.
+- Invariant to test: the number of times one signed `RequestMessage` executes == 1
+- Expected Immunefi impact: Critical - Direct theft of user funds via replay: one signed payload settles more than once
+- Fast validation: Advance the sandbox clock past `2 * timeout` and resubmit a still-valid signed request; assert rejection.
