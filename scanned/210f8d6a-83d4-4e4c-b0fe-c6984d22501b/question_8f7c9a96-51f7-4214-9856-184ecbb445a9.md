@@ -1,0 +1,1 @@
+[Target: RequestMessage::hash, RequestMessage::DOMAIN_SEPARATOR (contracts/wallet/src/message.rs:148-188)] Can an unprivileged attacker construct a `RequestMessage` whose borsh-serialized bytes collide across the `hash()` domain separation with an `OffchainMessage` (from `crates/signatures/nep641/src/message.rs`, `DOMAIN_SEPARATOR = b

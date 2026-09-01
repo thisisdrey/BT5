@@ -1,0 +1,1 @@
+Target: Amounts::with_apply_deltas / TokenDeltas default BTreeMap (contracts/defuse/core/src/intents/token_diff.rs:18, amounts.rs:126-133). Attacker action: sign a MultiPayload containing a TokenDiff whose `diff` BTreeMap, after JSON/borsh round-trip through `#[serde_as(as =

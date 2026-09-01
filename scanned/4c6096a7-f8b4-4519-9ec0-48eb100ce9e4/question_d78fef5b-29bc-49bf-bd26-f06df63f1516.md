@@ -1,0 +1,1 @@
+[Target: Contract::deposit + TokenId::Nep171 branch, contracts/defuse/src/contract/tokens/mod.rs lines 17-74, invoked for a TonConnect-signed batch mixing nep141/nep171/nep245/imt intents] `total_supply > 1` is only checked for `TokenId::Nep171`; can an attacker construct a `Nep245TokenId::new(some_contract,
