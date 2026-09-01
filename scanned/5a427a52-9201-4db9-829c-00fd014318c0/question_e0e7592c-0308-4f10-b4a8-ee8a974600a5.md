@@ -1,0 +1,1 @@
+})` balances outstanding; attacker's minter is `a.near`. Call sequence: `execute_intents([ImtMint{...}]) -> ImtTokens::into_generic_tokens -> ImtTokenId::new(minter_id, token_id) -> TokenId::Imt`. Binding: `ImtTokenId::from_str(&t.to_string()) == t` for every constructible `t`, i.e. `(minter_id=
