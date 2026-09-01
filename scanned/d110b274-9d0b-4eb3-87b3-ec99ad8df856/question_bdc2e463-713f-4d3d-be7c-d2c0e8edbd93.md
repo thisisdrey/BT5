@@ -1,0 +1,1 @@
+[File: contracts/defuse/src/contract/tokens/nep245/resolver.rs, fn mt_resolve_transfer, line 42] Can an attacker deploy a receiver contract and craft `token_ids` entries (via a `MultiPayload` invoking `mt_transfer_call`/`mt_batch_transfer_call` with attacker-supplied `token_ids: Vec<defuse_nep245::TokenId>` as raw strings) such that `token_id.parse().unwrap_or_else(|e| panic!(

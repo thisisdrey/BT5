@@ -1,0 +1,1 @@
+[File: contracts/defuse/core/src/engine/mod.rs, fn verify_intent_nonce -> Scope: Critical] Can an unprivileged attacker submit a signed `MultiPayload` with `nonce` such that `VersionedNonce::maybe_from(nonce)` returns `None` (any 32 bytes lacking the exact `VERSIONED_MAGIC_PREFIX = hex!(
