@@ -1,1 +1,0 @@
-[File: contracts/defuse/core/src/payload/raw.rs -> Scope: Critical] Can an attacker submit a `SignedRawEd25519Payload{payload, public_key, signature}` where `payload` is a JSON string containing a `signer_id` for a victim's account, and independently craft a byte-identical-looking-but-differently-parsed string (leveraging JSON whitespace/unicode-escape equivalence, e.g. `
