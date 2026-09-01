@@ -1,0 +1,1 @@
+, attached_deposit: ZERO}]` all within ONE `DefuseIntents` (the doc explicitly notes intents in one `DefuseIntents` fire concurrently, not in order). Preconditions: signer has balance 500 in T; attacker_contract deployed with `on_auth` that, upon receiving

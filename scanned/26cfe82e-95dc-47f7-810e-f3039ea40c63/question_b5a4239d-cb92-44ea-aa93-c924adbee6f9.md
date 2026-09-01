@@ -1,0 +1,1 @@
+-> self.deposit(victim_id, [(TokenId::Nep141(attacker's ft contract), X)],
