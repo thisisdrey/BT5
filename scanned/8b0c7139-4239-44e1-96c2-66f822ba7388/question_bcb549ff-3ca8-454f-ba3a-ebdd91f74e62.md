@@ -1,0 +1,1 @@
+[File: 'crates/primitives/token-id/src/imt.rs' -> Scope: Critical. Struct: `ImtTokenId{minter_id, token_id}`, fn: `ImtMint::execute_intent` / `ImtTokens::into_generic_tokens`.] Can an unprivileged ATTACKER sign an `ImtMint{receiver_id: attacker, tokens: {

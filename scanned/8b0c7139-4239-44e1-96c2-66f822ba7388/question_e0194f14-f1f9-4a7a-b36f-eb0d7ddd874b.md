@@ -1,0 +1,1 @@
+[File: 'contracts/defuse/src/contract/tokens/mod.rs' -> Scope: Critical. Fn: `Contract::deposit`, field: `owner.token_balances`.] Can an unprivileged ATTACKER controlling a fake NEP-171 contract `fake.near` call `nft_on_transfer` with `token_id` string set to the exact `Display` output of a real NEP-141 token already credited to a victim (e.g. `token_id =
