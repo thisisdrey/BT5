@@ -1,1 +1,0 @@
-[Target: RequestMessage::pay_for_gas (contracts/wallet/src/message.rs:40-54); WalletImpl::execute_signed (contracts/wallet/src/contract.rs:178-180)] Can an unprivileged relayer submit a signed `RequestMessage{pay_for_gas: true, ...}` via `w_execute_signed`, given that `execute_signed` currently unconditionally calls `env::panic_str(
