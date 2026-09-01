@@ -1,1 +1,0 @@
-- `self.accounts.get_or_create(previous_owner_id).as_inner_unchecked_mut()` bypasses the lock check entirely for crediting the refund. Binding to test: does bypassing the lock on refund-credit ever let an attacker (as the notify contract) trigger an refund credit to an account whose lock state should have frozen ALL balance changes per the contract's own invariant
