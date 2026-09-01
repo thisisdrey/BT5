@@ -1,0 +1,1 @@
+)` produce the IDENTICAL serialized string `contract_A:x:y`, letting a worthless token from a second `nft_token_id` value claim the balance slot of a genuine deposit from `contract_A`? Preconditions: attacker deploys `nft_issuer` contract named `contract_A` and mints token id `

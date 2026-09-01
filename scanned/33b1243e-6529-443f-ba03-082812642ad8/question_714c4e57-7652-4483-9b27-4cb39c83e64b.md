@@ -1,0 +1,1 @@
+: amount}, receiver_id: attacker}` where the map key (an NEP-245-style token_id string) itself contains a colon mimicking `<other_minter>:<token>`; does the resulting `ImtTokenId{minter_id: signer_id, token_id:

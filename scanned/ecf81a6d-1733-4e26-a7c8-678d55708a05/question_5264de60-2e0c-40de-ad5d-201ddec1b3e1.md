@@ -1,0 +1,1 @@
+Target: `TokenId` enum discriminants (crates/primitives/token-id/src/lib.rs) — `Nep141(Nep141TokenId)`, `Nep171(Nep171TokenId)`, `Nep245(Nep245TokenId)`, `Imt(ImtTokenId)`. Attacker action: deploys their own NEP-245 multi-token contract at account `evil.near` and mints a sub-token whose `token_id` string is exactly the wNEAR contract's account id (e.g. `token_id =
