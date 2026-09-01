@@ -1,1 +1,0 @@
-Target: `Nep171TokenId::from_str` / `Nep245TokenId::from_str` (crates/primitives/token-id/src/nep171.rs, nep245.rs), both doing `data.split_once(':')`. Can an unprivileged attacker who deploys their own NFT contract with account id containing the maximum-length characters and constructs an `nft_token_id` equal to the *empty string* (`
