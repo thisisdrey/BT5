@@ -1,1 +1,0 @@
-` is treated as an NFT (amount always 1) by the contract but the Verifier's fee code only sees `amount` as whatever `i128` delta the signer supplied, which the signer fully controls independent of the real contract semantics. Call sequence: attacker signs `TokenDiff{diff:{Nep245TokenId(mt,
