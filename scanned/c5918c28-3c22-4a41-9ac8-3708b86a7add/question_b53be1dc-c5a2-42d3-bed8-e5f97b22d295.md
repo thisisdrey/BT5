@@ -1,1 +1,0 @@
-In `contracts/defuse/src/contract/intents/mod.rs::execute_intents`, `Engine::new(self, ExecuteInspector::default()).execute_signed_intents(signed)` is called by `execute_intents(&mut self, signed: Vec<MultiPayload>)` with no predecessor/caller check — any account can be the transaction signer. Given that `#[pause(name =
