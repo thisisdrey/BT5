@@ -1,1 +1,0 @@
-[File: crates/kdf/src/schema/borsh.rs -> Scope: Critical] Can an attacker exploit `StorageDeposit` intent execution (`state.storage_deposit`, contracts/defuse/src/contract/intents/state.rs:265-297) which calls `self.withdraw(owner_id, [(wnear_token_id, amount)], Some(
