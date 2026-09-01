@@ -1,0 +1,1 @@
+[File: crates/near/nep245/src/token.rs -> Scope: Critical. FEES] Can an unprivileged signer set protocol_fee to Pips::MAX via a preceding privileged-looking but actually-attacker-reachable path (excluded if role-gated; if not role-gated, this is in-scope) is out of scope since fee-setting requires a Role holder -- SKIP.

@@ -1,0 +1,1 @@
+) can ACTUALLY be called twice for the same (sender,receiver,token) pair due to the `while` loop's sender/receiver advancement logic when `*send==0` and `*receive==0` simultaneously without advancing correctly, causing a duplicate `transfers.transfer` call that WOULD error (contradicting
