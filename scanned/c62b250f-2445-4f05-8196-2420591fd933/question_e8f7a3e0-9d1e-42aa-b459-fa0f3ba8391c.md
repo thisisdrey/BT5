@@ -1,1 +1,0 @@
-Target: `Contract::auth_call` (contracts/defuse/src/contract/intents/state.rs, `fn auth_call`) which for non-zero `attached_deposit` calls `self.withdraw(signer_id, [(wnear, deposit)], ...)` BEFORE `ext_wnear::near_withdraw(...).then(do_auth_call(...))`. Attacker action: sign `AuthCall{contract_id: attacker.near, msg:
