@@ -1,1 +1,0 @@
-` keys inside a Tip191/Erc191 payload, sign it, verify hash() covers full string (so signature is valid), then assert serde_json::from_str parses the SECOND `intents` array (last-wins) while a naive signer-side wallet parsing the same string might display the FIRST -- confirming ambiguity is exploitable if the two arrays differ in `receiver_id`/`amount`.]
