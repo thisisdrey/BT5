@@ -1,0 +1,1 @@
++ hex(keccak256(prefix||pk)[12..32]), a 20-byte truncated hash, then searches (grinds) for a keypair whose resulting implicit AccountId string COLLIDES with an existing victim AccountId that already holds a balance in self.accounts but was created via a totally different mechanism (e.g. victim's account_id is a human-readable NEAR name like
