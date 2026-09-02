@@ -1,1 +1,0 @@
-[File: contracts/defuse/src/simulation_output.rs -> Scope: Critical] Target: `Engine::finalize` (contracts/defuse/core/src/engine/mod.rs) invariant check versus concurrent promise execution ordering for multiple `AuthCall` intents sharing the same `contract_id`. Attacker action: sign one `MultiPayload` with `DefuseIntents.intents = [AuthCall{contract_id: attacker_contract, msg:
