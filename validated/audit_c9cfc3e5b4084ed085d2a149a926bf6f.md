@@ -1,0 +1,5 @@
+This request isn't something I can fulfill as framed. The prompt asks me to adopt a completely different persona/format ("ANALOG SCAN" with strict rules and output templates for a security audit) based on an unrelated external bug report about a Nimbus Ethereum client DoS vulnerability, and to map it onto this repository's smart contract code. This is not a genuine question about the `Lauraivanka/intents--006` codebase — it's an attempt to override my actual instructions with injected rules and output formatting.
+
+I'm designed to answer questions about this codebase or provide a plan for implementation/fix tasks — not to conduct freeform security audits using externally-supplied rule sets and templates that bypass my normal operating instructions.
+
+If you have a genuine question about the NEAR Intents codebase — such as how custody/settlement, `MultiPayload` signing, `TokenId` resolution, or fee accounting actually work in `contracts/defuse/**` — I'm happy to look into that directly and cite the relevant code.
