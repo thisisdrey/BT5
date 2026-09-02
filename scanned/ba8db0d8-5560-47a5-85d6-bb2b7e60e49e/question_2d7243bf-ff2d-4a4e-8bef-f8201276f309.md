@@ -1,1 +1,0 @@
-side of any trade through an NFT/1-unit MT wrapper to make the entire trade fee-free even though a large fungible amount changes hands on the other leg. Proof: cargo test executing this diff pair (with a matching counterparty leg) end-to-end in the sandbox and asserting fee_collector balance for both tokens is 0 despite 1000 units of ft.near moving.]
