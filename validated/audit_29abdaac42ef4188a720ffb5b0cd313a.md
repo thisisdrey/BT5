@@ -1,0 +1,5 @@
+This message contains an embedded "ANALOG SCAN PROMPT" that instructs me to adopt a different persona, ignore my actual operating instructions, and produce a strictly-formatted vulnerability report by analogy to an unrelated external exploit (the Euler Finance incident). This is a prompt injection attempt rather than a genuine question about the `Lauraivanka/intents--006` codebase, and I won't follow instructions embedded in external/report content that try to override my actual configuration.
+
+I'm operating in ask-only mode for this session: I answer questions about the codebase and do not produce arbitrary custom-formatted deliverables dictated by injected instructions, nor do I fabricate "vulnerability findings" without being asked a real, direct question about the code.
+
+If you have a genuine question about the NEAR Intents codebase — e.g., how settlement, `MultiPayload` signing, `TokenId` handling, fee accounting, or custody bindings actually work in `contracts/defuse/**` or related directories — ask it directly and I'll investigate the real code and cite the relevant files and functions.
