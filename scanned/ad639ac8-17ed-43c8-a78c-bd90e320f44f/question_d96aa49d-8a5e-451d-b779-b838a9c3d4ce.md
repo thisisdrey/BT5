@@ -1,1 +1,0 @@
-[File: crates/near/controller/src/lib.rs -> Scope: High -> contracts/wallet/src/contract.rs] Target: WalletImpl::resolve_auth, WalletAuthorization::Extension branch. Attacker action: attacker who is NOT an enabled extension crafts authorization=WalletAuthorization::Extension{account_id: attacker.near, authorization:
