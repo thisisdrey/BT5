@@ -1,0 +1,35 @@
+Confirmed via `TransferMatcher::finalize_into` (`contracts/defuse/core/src/engine/state/deltas.rs:337-391`): fee computation and the balance-matching invariant are two entirely separate mechanisms. `TransferMatcher` only guarantees that all deltas across a batch net to zero token-for-token — it has no knowledge of fees and does not aggregate deltas per-token-id across multiple `TokenDiff` intents before fee assessment. Fee assessment happens strictly per `TokenDiff.execute_intent` call, per token_id, using only that single intent's own `amount = delta.unsigned_abs()`.
+
+### Title
+Protocol fee bypass on Nep245/Imt tokens via splitting a transfer into unit-sized `TokenDiff` legs - (File: contracts/defuse/core/src/intents/token_diff.rs)
+
+### Summary
+`TokenDiff::token_fee` waives fees whenever `TokenIdType::Nep245 | TokenIdType::Imt` has `amount <= 1`, intended to exempt true NFT semantics, but the check is evaluated per individual `TokenDiff` intent leg, not on the aggregate volume moved by a signer in a batch/session. Since Nep245/Imt token_ids can represent arbitrary fungible balances (confirmed by tests wrapping fungible amounts like 100/200/300 units under `Nep245TokenId`), an attacker can split any volume `N` of such a token into `N` separate `TokenDiff` intents each moving exactly `1` unit, causing zero fee to be collected for the whole batch instead of `Pips::fee_ceil(fee, N)`.
+
+### Finding Description
+The broken binding: `fees_collected(T) == Pips::fee_ceil(fee, |Σ negative_deltas(T)|)` over the whole batch is what protocol economics intend, but the actual code computes `fees_collected(T) == Σ over each TokenDiff intent leg of Self::token_fee(T, |delta_leg|, fee).fee_ceil(|delta_leg|)` — i.e., fee is assessed leg-by-leg, not on the netted/aggregated amount.
+
+Code path:
+- `contracts/defuse/core/src/intents/token_diff.rs:59-78` (`TokenDiff::execute_intent`): for each `(token_id, delta)` pair in a single `TokenDiff`'s own `diff` map, if `delta < 0`, it computes `amount = delta.unsigned_abs()` and `fee = Self::token_fee(token_id, amount, protocol_fee).fee_ceil(amount)` — scoped only to that one intent's own leg.
+- `contracts/defuse/core/src/intents/token_diff.rs:206-216` (`token_fee`): `TokenIdType::Nep245 | TokenIdType::Imt if amount > 1 => {}` else `return Pips::ZERO` — the `amount <= 1` exemption is evaluated against this single leg's `amount`, never against a running/cumulative total for the token across the batch or across a session.
+- `contracts/defuse/core/src/intents/mod.rs:97-113` (`DefuseIntents::execute_intent`) iterates `self.intents` and calls `execute_intent` independently per intent, so nothing coalesces multiple `TokenDiff` intents on the same `token_id` before fee assessment.
+- `contracts/defuse/core/src/engine/state/deltas.rs:265-391` (`TransferMatcher::finalize`/`finalize_into`) only checks that deposits and withdrawals net to zero per token — it has no fee awareness and doesn't prevent or detect that the fee-exempt threshold was gamed by splitting.
+
+Attacker's exact flow: sign one `MultiPayload` (or `N` separate ones) containing `N` `TokenDiff` intents, each with `diff = {T: -1, T_other: +k}` (or any counter-leg satisfying the batch invariant with a counterparty/solver), where `T` is a `Nep245`/`Imt` token_id wrapping a fungible-like balance. Each of the `N` executions independently hits `amount = 1 <= 1` and returns `Pips::ZERO`, so `fees_collected` stays empty for every leg. The equivalent single `TokenDiff` with `delta = -N` on the same token would compute `amount = N > 1`, use the real `fee`, and owe `fee.fee_ceil(N) > 0`. No existing guard (`verify`, `has_public_key`, `verify_intent_nonce`, `TransferMatcher::finalize`, `assert_one_yocto`, `#[pause]`, ACL checks) inspects cross-intent aggregate amounts per token_id for fee purposes.
+
+### Impact Explanation
+Protocol fees are bypassed for the `fee_collector` on any Nep245/Imt-denominated flow that can be structured as unit-sized legs, matching the explicitly listed Critical category "protocol fees bypassed or over-collected." This does not steal funds from other users' balances (the `TransferMatcher` invariant still forces token-for-token balance to net to zero), but it deprives `fee_collector` of revenue it should have received, and is repeatable indefinitely across accounts/tokens/batches by any unprivileged signer, limited only by transaction gas/storage for constructing `N`-leg batches (explicitly out of scope as a separate DoS/gas concern, but does not block the fee-bypass claim itself for reasonably sized `N`).
+
+### Likelihood Explanation
+No special privilege, role, or victim key is required — any signer with a valid public key on their own Defuse account and any counterpart (a solver, or their own paired legs) satisfying the `TransferMatcher` invariant can execute this. It requires only that the traded asset is represented as a `Nep245` or `Imt` token_id with a fungible-like balance (already demonstrated in this codebase's own tests, e.g. `tests/src/tests/defuse/tokens/nep245/mod.rs` wrapping FT balances of 100/200/300 under `Nep245TokenId`). Cost is simply signing/submitting `N` intents instead of 1; feasibility scales linearly with `N` and is only bounded by gas/receipt size, which is explicitly out of scope to assess further here.
+
+### Recommendation
+Aggregate `amount` per `token_id` across all `TokenDiff` intents within the same execution (and ideally per signer per batch) before evaluating the `TokenIdType::Nep245 | TokenIdType::Imt` `amount > 1` exemption in `TokenDiff::token_fee`, e.g. by accumulating negative deltas per token in `Deltas`/`TransferMatcher` prior to fee assessment, or by removing/tightening the `amount <= 1` fee exemption so it only applies to token_ids that provably represent singleton (NFT-like) assets rather than any Nep245/Imt token_id.
+
+### Proof of Concept
+`cargo test` plan (near-workspaces sandbox, extending `tests/src/tests/defuse/intents/token_diff.rs`):
+1. Deploy Defuse with `fee = Pips::ONE_PERCENT` (or any nonzero fee) and an Nep245 token_id `T` wrapping a fungible balance, minted/deposited with `N = 100` units to `signer`.
+2. Construct a counterparty (`solver`) with matching positive legs so the batch's `TransferMatcher` invariant is satisfied.
+3. Case A (baseline): sign a single `TokenDiff{diff: {T: -100, T_out: solver_amount}}`, execute via `execute_intents`, assert `fees_collected` on `T` credited to `fee_collector` equals `fee.fee_ceil(100) > 0` (read via `mt_balance_of(fee_collector, T)`).
+4. Case B (exploit): sign 100 separate `TokenDiff{diff: {T: -1, T_out: solver_amount/100}}` intents (or bundle in one `MultiPayload`'s `intents` list) moving the same total `N=100` of `T`, execute via `execute_intents`, assert `mt_balance_of(fee_collector, T)` equals `0` despite the same total volume moved.
+5. Assert Case A's `fee_collector` balance for `T` (`> 0`) differs from Case B's (`== 0`), proving the binding `fees_collected(T) == fee.fee_ceil(fee, N)` is violated by splitting into unit legs.
