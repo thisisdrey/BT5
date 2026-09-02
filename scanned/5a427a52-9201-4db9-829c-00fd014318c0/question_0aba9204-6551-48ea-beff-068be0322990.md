@@ -1,1 +1,0 @@
-).to_string()`. Scoped impact: Critical — a worthless attacker-minted IMT credits/collides with a victim's valuable IMT balance. Proof idea: unit test in crates/primitives/token-id constructing both `ImtTokenId`s and asserting their `to_string()` outputs differ and each round-trips to itself, not the other.
