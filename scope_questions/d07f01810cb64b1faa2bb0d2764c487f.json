@@ -1,0 +1,152 @@
+[
+  {
+    "question": "'File Name: stackslib/src/net/api/getneighbors.rs -> Scope: High. ATTACHMENT AND ATTACHMENT-INVENTORY GOSSIP MUST MATCH THEIR COMMITTED HASH. `atlas/mod.rs`, `atlas/db.rs`, `atlas/download.rs`, `getattachment.rs` and `getattachmentsinv.rs` store and serve BNS attachments keyed by content hash, gossiped from peers. Show a peer serving an attachment whose bytes do not match the requested hash, poisoning the inventory so a valid attachment is deemed absent, or filling storage with attachments no on-chain name commits to. Name the impact: BNS resolution serving wrong data, or attachment storage exhaustion tied to a consensus commitment. Identity: the attachment bytes served for a hash == the bytes whose hash a confirmed name operation committed.'",
+    "url": "https://deepwiki.com/search/-generate-blockchainnode-netwo_9c9cefab-fed4-40d2-94da-5cbad05a5e94?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: stackslib/src/net/api/getpoxinfo.rs -> Scope: High. ATTACHMENT AND ATTACHMENT-INVENTORY GOSSIP MUST MATCH THEIR COMMITTED HASH. `atlas/mod.rs`, `atlas/db.rs`, `atlas/download.rs`, `getattachment.rs` and `getattachmentsinv.rs` store and serve BNS attachments keyed by content hash, gossiped from peers. Show a peer serving an attachment whose bytes do not match the requested hash, poisoning the inventory so a valid attachment is deemed absent, or filling storage with attachments no on-chain name commits to. Name the impact: BNS resolution serving wrong data, or attachment storage exhaustion tied to a consensus commitment. Identity: the attachment bytes served for a hash == the bytes whose hash a confirmed name operation committed.'",
+    "url": "https://deepwiki.com/search/-generate-blockchainnode-netwo_a0f3b413-d585-4f88-9bab-f392d79b6563?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: stackslib/src/net/api/getsigner.rs -> Scope: High. ATTACHMENT AND ATTACHMENT-INVENTORY GOSSIP MUST MATCH THEIR COMMITTED HASH. `atlas/mod.rs`, `atlas/db.rs`, `atlas/download.rs`, `getattachment.rs` and `getattachmentsinv.rs` store and serve BNS attachments keyed by content hash, gossiped from peers. Show a peer serving an attachment whose bytes do not match the requested hash, poisoning the inventory so a valid attachment is deemed absent, or filling storage with attachments no on-chain name commits to. Name the impact: BNS resolution serving wrong data, or attachment storage exhaustion tied to a consensus commitment. Identity: the attachment bytes served for a hash == the bytes whose hash a confirmed name operation committed.'",
+    "url": "https://deepwiki.com/search/-generate-blockchainnode-netwo_a415633a-50dd-407c-b6cb-0e8d7b3b5de7?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: stackslib/src/net/api/getsortition.rs -> Scope: High. ATTACHMENT AND ATTACHMENT-INVENTORY GOSSIP MUST MATCH THEIR COMMITTED HASH. `atlas/mod.rs`, `atlas/db.rs`, `atlas/download.rs`, `getattachment.rs` and `getattachmentsinv.rs` store and serve BNS attachments keyed by content hash, gossiped from peers. Show a peer serving an attachment whose bytes do not match the requested hash, poisoning the inventory so a valid attachment is deemed absent, or filling storage with attachments no on-chain name commits to. Name the impact: BNS resolution serving wrong data, or attachment storage exhaustion tied to a consensus commitment. Identity: the attachment bytes served for a hash == the bytes whose hash a confirmed name operation committed.'",
+    "url": "https://deepwiki.com/search/-generate-blockchainnode-netwo_a2118052-cdd2-4665-9d3c-0983314258e0?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: stackslib/src/net/api/getstackerdbchunk.rs -> Scope: High. ATTACHMENT AND ATTACHMENT-INVENTORY GOSSIP MUST MATCH THEIR COMMITTED HASH. `atlas/mod.rs`, `atlas/db.rs`, `atlas/download.rs`, `getattachment.rs` and `getattachmentsinv.rs` store and serve BNS attachments keyed by content hash, gossiped from peers. Show a peer serving an attachment whose bytes do not match the requested hash, poisoning the inventory so a valid attachment is deemed absent, or filling storage with attachments no on-chain name commits to. Name the impact: BNS resolution serving wrong data, or attachment storage exhaustion tied to a consensus commitment. Identity: the attachment bytes served for a hash == the bytes whose hash a confirmed name operation committed.'",
+    "url": "https://deepwiki.com/search/-generate-blockchainnode-netwo_95543100-9799-420b-a256-0feca8f32a70?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: stackslib/src/net/api/getstackerdbmetadata.rs -> Scope: High. ATTACHMENT AND ATTACHMENT-INVENTORY GOSSIP MUST MATCH THEIR COMMITTED HASH. `atlas/mod.rs`, `atlas/db.rs`, `atlas/download.rs`, `getattachment.rs` and `getattachmentsinv.rs` store and serve BNS attachments keyed by content hash, gossiped from peers. Show a peer serving an attachment whose bytes do not match the requested hash, poisoning the inventory so a valid attachment is deemed absent, or filling storage with attachments no on-chain name commits to. Name the impact: BNS resolution serving wrong data, or attachment storage exhaustion tied to a consensus commitment. Identity: the attachment bytes served for a hash == the bytes whose hash a confirmed name operation committed.'",
+    "url": "https://deepwiki.com/search/-generate-blockchainnode-netwo_6411f3b9-de0d-4548-a939-df53fd8b70ea?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: stackslib/src/net/api/getstackers.rs -> Scope: High. ATTACHMENT AND ATTACHMENT-INVENTORY GOSSIP MUST MATCH THEIR COMMITTED HASH. `atlas/mod.rs`, `atlas/db.rs`, `atlas/download.rs`, `getattachment.rs` and `getattachmentsinv.rs` store and serve BNS attachments keyed by content hash, gossiped from peers. Show a peer serving an attachment whose bytes do not match the requested hash, poisoning the inventory so a valid attachment is deemed absent, or filling storage with attachments no on-chain name commits to. Name the impact: BNS resolution serving wrong data, or attachment storage exhaustion tied to a consensus commitment. Identity: the attachment bytes served for a hash == the bytes whose hash a confirmed name operation committed.'",
+    "url": "https://deepwiki.com/search/-generate-blockchainnode-netwo_e6b696b4-8c42-4f3b-8a18-3ad0f4d739e5?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: stackslib/src/net/api/getstxtransfercost.rs -> Scope: High. ATTACHMENT AND ATTACHMENT-INVENTORY GOSSIP MUST MATCH THEIR COMMITTED HASH. `atlas/mod.rs`, `atlas/db.rs`, `atlas/download.rs`, `getattachment.rs` and `getattachmentsinv.rs` store and serve BNS attachments keyed by content hash, gossiped from peers. Show a peer serving an attachment whose bytes do not match the requested hash, poisoning the inventory so a valid attachment is deemed absent, or filling storage with attachments no on-chain name commits to. Name the impact: BNS resolution serving wrong data, or attachment storage exhaustion tied to a consensus commitment. Identity: the attachment bytes served for a hash == the bytes whose hash a confirmed name operation committed.'",
+    "url": "https://deepwiki.com/search/-generate-blockchainnode-netwo_d88e35d5-24ef-490c-a0a5-8393aa045aa1?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: stackslib/src/net/api/gettenure.rs -> Scope: High. ATTACHMENT AND ATTACHMENT-INVENTORY GOSSIP MUST MATCH THEIR COMMITTED HASH. `atlas/mod.rs`, `atlas/db.rs`, `atlas/download.rs`, `getattachment.rs` and `getattachmentsinv.rs` store and serve BNS attachments keyed by content hash, gossiped from peers. Show a peer serving an attachment whose bytes do not match the requested hash, poisoning the inventory so a valid attachment is deemed absent, or filling storage with attachments no on-chain name commits to. Name the impact: BNS resolution serving wrong data, or attachment storage exhaustion tied to a consensus commitment. Identity: the attachment bytes served for a hash == the bytes whose hash a confirmed name operation committed.'",
+    "url": "https://deepwiki.com/search/-generate-blockchainnode-netwo_5dee9d31-0c43-495a-83bf-411637d407b2?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: stackslib/src/net/api/gettenureblocks.rs -> Scope: High. ATTACHMENT AND ATTACHMENT-INVENTORY GOSSIP MUST MATCH THEIR COMMITTED HASH. `atlas/mod.rs`, `atlas/db.rs`, `atlas/download.rs`, `getattachment.rs` and `getattachmentsinv.rs` store and serve BNS attachments keyed by content hash, gossiped from peers. Show a peer serving an attachment whose bytes do not match the requested hash, poisoning the inventory so a valid attachment is deemed absent, or filling storage with attachments no on-chain name commits to. Name the impact: BNS resolution serving wrong data, or attachment storage exhaustion tied to a consensus commitment. Identity: the attachment bytes served for a hash == the bytes whose hash a confirmed name operation committed.'",
+    "url": "https://deepwiki.com/search/-generate-blockchainnode-netwo_5fd87f37-f721-41ed-8f78-829204f4288a?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: stackslib/src/net/api/gettenureblocksbyhash.rs -> Scope: High. ATTACHMENT AND ATTACHMENT-INVENTORY GOSSIP MUST MATCH THEIR COMMITTED HASH. `atlas/mod.rs`, `atlas/db.rs`, `atlas/download.rs`, `getattachment.rs` and `getattachmentsinv.rs` store and serve BNS attachments keyed by content hash, gossiped from peers. Show a peer serving an attachment whose bytes do not match the requested hash, poisoning the inventory so a valid attachment is deemed absent, or filling storage with attachments no on-chain name commits to. Name the impact: BNS resolution serving wrong data, or attachment storage exhaustion tied to a consensus commitment. Identity: the attachment bytes served for a hash == the bytes whose hash a confirmed name operation committed.'",
+    "url": "https://deepwiki.com/search/-generate-blockchainnode-netwo_fc2a319e-616f-4f31-87eb-cf29a1fb7446?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: stackslib/src/net/api/gettenureblocksbyheight.rs -> Scope: High. ATTACHMENT AND ATTACHMENT-INVENTORY GOSSIP MUST MATCH THEIR COMMITTED HASH. `atlas/mod.rs`, `atlas/db.rs`, `atlas/download.rs`, `getattachment.rs` and `getattachmentsinv.rs` store and serve BNS attachments keyed by content hash, gossiped from peers. Show a peer serving an attachment whose bytes do not match the requested hash, poisoning the inventory so a valid attachment is deemed absent, or filling storage with attachments no on-chain name commits to. Name the impact: BNS resolution serving wrong data, or attachment storage exhaustion tied to a consensus commitment. Identity: the attachment bytes served for a hash == the bytes whose hash a confirmed name operation committed.'",
+    "url": "https://deepwiki.com/search/-generate-blockchainnode-netwo_981d5c1e-23c3-492f-9dea-19e3906be179?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: stackslib/src/net/api/gettenureinfo.rs -> Scope: High. ATTACHMENT AND ATTACHMENT-INVENTORY GOSSIP MUST MATCH THEIR COMMITTED HASH. `atlas/mod.rs`, `atlas/db.rs`, `atlas/download.rs`, `getattachment.rs` and `getattachmentsinv.rs` store and serve BNS attachments keyed by content hash, gossiped from peers. Show a peer serving an attachment whose bytes do not match the requested hash, poisoning the inventory so a valid attachment is deemed absent, or filling storage with attachments no on-chain name commits to. Name the impact: BNS resolution serving wrong data, or attachment storage exhaustion tied to a consensus commitment. Identity: the attachment bytes served for a hash == the bytes whose hash a confirmed name operation committed.'",
+    "url": "https://deepwiki.com/search/-generate-blockchainnode-netwo_29fc5ef9-f8a9-4875-a2aa-37f5f488019a?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: stackslib/src/net/api/gettenuretip.rs -> Scope: High. ATTACHMENT AND ATTACHMENT-INVENTORY GOSSIP MUST MATCH THEIR COMMITTED HASH. `atlas/mod.rs`, `atlas/db.rs`, `atlas/download.rs`, `getattachment.rs` and `getattachmentsinv.rs` store and serve BNS attachments keyed by content hash, gossiped from peers. Show a peer serving an attachment whose bytes do not match the requested hash, poisoning the inventory so a valid attachment is deemed absent, or filling storage with attachments no on-chain name commits to. Name the impact: BNS resolution serving wrong data, or attachment storage exhaustion tied to a consensus commitment. Identity: the attachment bytes served for a hash == the bytes whose hash a confirmed name operation committed.'",
+    "url": "https://deepwiki.com/search/-generate-blockchainnode-netwo_95abda7e-d651-41cd-bac5-f0320e1cdaeb?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: stackslib/src/net/api/gettransaction.rs -> Scope: High. ATTACHMENT AND ATTACHMENT-INVENTORY GOSSIP MUST MATCH THEIR COMMITTED HASH. `atlas/mod.rs`, `atlas/db.rs`, `atlas/download.rs`, `getattachment.rs` and `getattachmentsinv.rs` store and serve BNS attachments keyed by content hash, gossiped from peers. Show a peer serving an attachment whose bytes do not match the requested hash, poisoning the inventory so a valid attachment is deemed absent, or filling storage with attachments no on-chain name commits to. Name the impact: BNS resolution serving wrong data, or attachment storage exhaustion tied to a consensus commitment. Identity: the attachment bytes served for a hash == the bytes whose hash a confirmed name operation committed.'",
+    "url": "https://deepwiki.com/search/-generate-blockchainnode-netwo_9ea02a36-6d42-4a10-bcb5-412d05aaa8fd?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: stackslib/src/net/api/gettransaction_unconfirmed.rs -> Scope: High. ATTACHMENT AND ATTACHMENT-INVENTORY GOSSIP MUST MATCH THEIR COMMITTED HASH. `atlas/mod.rs`, `atlas/db.rs`, `atlas/download.rs`, `getattachment.rs` and `getattachmentsinv.rs` store and serve BNS attachments keyed by content hash, gossiped from peers. Show a peer serving an attachment whose bytes do not match the requested hash, poisoning the inventory so a valid attachment is deemed absent, or filling storage with attachments no on-chain name commits to. Name the impact: BNS resolution serving wrong data, or attachment storage exhaustion tied to a consensus commitment. Identity: the attachment bytes served for a hash == the bytes whose hash a confirmed name operation committed.'",
+    "url": "https://deepwiki.com/search/-generate-blockchainnode-netwo_c8e91241-0e2d-416c-9f31-a47ef0a5eeae?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: stackslib/src/net/api/liststackerdbreplicas.rs -> Scope: High. ATTACHMENT AND ATTACHMENT-INVENTORY GOSSIP MUST MATCH THEIR COMMITTED HASH. `atlas/mod.rs`, `atlas/db.rs`, `atlas/download.rs`, `getattachment.rs` and `getattachmentsinv.rs` store and serve BNS attachments keyed by content hash, gossiped from peers. Show a peer serving an attachment whose bytes do not match the requested hash, poisoning the inventory so a valid attachment is deemed absent, or filling storage with attachments no on-chain name commits to. Name the impact: BNS resolution serving wrong data, or attachment storage exhaustion tied to a consensus commitment. Identity: the attachment bytes served for a hash == the bytes whose hash a confirmed name operation committed.'",
+    "url": "https://deepwiki.com/search/-generate-blockchainnode-netwo_2331f500-fb50-47ec-af91-1e6cb72219c9?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: stackslib/src/net/api/mod.rs -> Scope: High. ATTACHMENT AND ATTACHMENT-INVENTORY GOSSIP MUST MATCH THEIR COMMITTED HASH. `atlas/mod.rs`, `atlas/db.rs`, `atlas/download.rs`, `getattachment.rs` and `getattachmentsinv.rs` store and serve BNS attachments keyed by content hash, gossiped from peers. Show a peer serving an attachment whose bytes do not match the requested hash, poisoning the inventory so a valid attachment is deemed absent, or filling storage with attachments no on-chain name commits to. Name the impact: BNS resolution serving wrong data, or attachment storage exhaustion tied to a consensus commitment. Identity: the attachment bytes served for a hash == the bytes whose hash a confirmed name operation committed.'",
+    "url": "https://deepwiki.com/search/-generate-blockchainnode-netwo_6450ff33-815e-42b9-9f63-35adb261b694?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: stackslib/src/net/api/postblock.rs -> Scope: High. ATTACHMENT AND ATTACHMENT-INVENTORY GOSSIP MUST MATCH THEIR COMMITTED HASH. `atlas/mod.rs`, `atlas/db.rs`, `atlas/download.rs`, `getattachment.rs` and `getattachmentsinv.rs` store and serve BNS attachments keyed by content hash, gossiped from peers. Show a peer serving an attachment whose bytes do not match the requested hash, poisoning the inventory so a valid attachment is deemed absent, or filling storage with attachments no on-chain name commits to. Name the impact: BNS resolution serving wrong data, or attachment storage exhaustion tied to a consensus commitment. Identity: the attachment bytes served for a hash == the bytes whose hash a confirmed name operation committed.'",
+    "url": "https://deepwiki.com/search/-generate-blockchainnode-netwo_da627378-cb77-4dbf-928c-74a966aaa6f6?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: stackslib/src/net/api/postblock_proposal.rs -> Scope: High. ATTACHMENT AND ATTACHMENT-INVENTORY GOSSIP MUST MATCH THEIR COMMITTED HASH. `atlas/mod.rs`, `atlas/db.rs`, `atlas/download.rs`, `getattachment.rs` and `getattachmentsinv.rs` store and serve BNS attachments keyed by content hash, gossiped from peers. Show a peer serving an attachment whose bytes do not match the requested hash, poisoning the inventory so a valid attachment is deemed absent, or filling storage with attachments no on-chain name commits to. Name the impact: BNS resolution serving wrong data, or attachment storage exhaustion tied to a consensus commitment. Identity: the attachment bytes served for a hash == the bytes whose hash a confirmed name operation committed.'",
+    "url": "https://deepwiki.com/search/-generate-blockchainnode-netwo_dc1e46f8-b772-412a-bc93-179afdce071f?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: stackslib/src/net/api/postblock_v3.rs -> Scope: High. ATTACHMENT AND ATTACHMENT-INVENTORY GOSSIP MUST MATCH THEIR COMMITTED HASH. `atlas/mod.rs`, `atlas/db.rs`, `atlas/download.rs`, `getattachment.rs` and `getattachmentsinv.rs` store and serve BNS attachments keyed by content hash, gossiped from peers. Show a peer serving an attachment whose bytes do not match the requested hash, poisoning the inventory so a valid attachment is deemed absent, or filling storage with attachments no on-chain name commits to. Name the impact: BNS resolution serving wrong data, or attachment storage exhaustion tied to a consensus commitment. Identity: the attachment bytes served for a hash == the bytes whose hash a confirmed name operation committed.'",
+    "url": "https://deepwiki.com/search/-generate-blockchainnode-netwo_da7693d5-c416-41ca-b46c-f9d21cb3d3a3?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: stackslib/src/net/api/postfeerate.rs -> Scope: High. ATTACHMENT AND ATTACHMENT-INVENTORY GOSSIP MUST MATCH THEIR COMMITTED HASH. `atlas/mod.rs`, `atlas/db.rs`, `atlas/download.rs`, `getattachment.rs` and `getattachmentsinv.rs` store and serve BNS attachments keyed by content hash, gossiped from peers. Show a peer serving an attachment whose bytes do not match the requested hash, poisoning the inventory so a valid attachment is deemed absent, or filling storage with attachments no on-chain name commits to. Name the impact: BNS resolution serving wrong data, or attachment storage exhaustion tied to a consensus commitment. Identity: the attachment bytes served for a hash == the bytes whose hash a confirmed name operation committed.'",
+    "url": "https://deepwiki.com/search/-generate-blockchainnode-netwo_ce636ea5-25fd-4b75-a8fa-f0f0f805955f?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: stackslib/src/net/api/postmempoolquery.rs -> Scope: High. ATTACHMENT AND ATTACHMENT-INVENTORY GOSSIP MUST MATCH THEIR COMMITTED HASH. `atlas/mod.rs`, `atlas/db.rs`, `atlas/download.rs`, `getattachment.rs` and `getattachmentsinv.rs` store and serve BNS attachments keyed by content hash, gossiped from peers. Show a peer serving an attachment whose bytes do not match the requested hash, poisoning the inventory so a valid attachment is deemed absent, or filling storage with attachments no on-chain name commits to. Name the impact: BNS resolution serving wrong data, or attachment storage exhaustion tied to a consensus commitment. Identity: the attachment bytes served for a hash == the bytes whose hash a confirmed name operation committed.'",
+    "url": "https://deepwiki.com/search/-generate-blockchainnode-netwo_a39e797f-dcaa-49af-9164-f194921f42d5?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: stackslib/src/net/api/postmicroblock.rs -> Scope: High. ATTACHMENT AND ATTACHMENT-INVENTORY GOSSIP MUST MATCH THEIR COMMITTED HASH. `atlas/mod.rs`, `atlas/db.rs`, `atlas/download.rs`, `getattachment.rs` and `getattachmentsinv.rs` store and serve BNS attachments keyed by content hash, gossiped from peers. Show a peer serving an attachment whose bytes do not match the requested hash, poisoning the inventory so a valid attachment is deemed absent, or filling storage with attachments no on-chain name commits to. Name the impact: BNS resolution serving wrong data, or attachment storage exhaustion tied to a consensus commitment. Identity: the attachment bytes served for a hash == the bytes whose hash a confirmed name operation committed.'",
+    "url": "https://deepwiki.com/search/-generate-blockchainnode-netwo_e5eff7fa-c392-4de9-8a05-15f05de4f972?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: stackslib/src/net/api/poststackerdbchunk.rs -> Scope: High. ATTACHMENT AND ATTACHMENT-INVENTORY GOSSIP MUST MATCH THEIR COMMITTED HASH. `atlas/mod.rs`, `atlas/db.rs`, `atlas/download.rs`, `getattachment.rs` and `getattachmentsinv.rs` store and serve BNS attachments keyed by content hash, gossiped from peers. Show a peer serving an attachment whose bytes do not match the requested hash, poisoning the inventory so a valid attachment is deemed absent, or filling storage with attachments no on-chain name commits to. Name the impact: BNS resolution serving wrong data, or attachment storage exhaustion tied to a consensus commitment. Identity: the attachment bytes served for a hash == the bytes whose hash a confirmed name operation committed.'",
+    "url": "https://deepwiki.com/search/-generate-blockchainnode-netwo_66e4d864-076a-47ea-ac10-fc7c252ee50e?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: stackslib/src/net/api/posttransaction.rs -> Scope: High. ATTACHMENT AND ATTACHMENT-INVENTORY GOSSIP MUST MATCH THEIR COMMITTED HASH. `atlas/mod.rs`, `atlas/db.rs`, `atlas/download.rs`, `getattachment.rs` and `getattachmentsinv.rs` store and serve BNS attachments keyed by content hash, gossiped from peers. Show a peer serving an attachment whose bytes do not match the requested hash, poisoning the inventory so a valid attachment is deemed absent, or filling storage with attachments no on-chain name commits to. Name the impact: BNS resolution serving wrong data, or attachment storage exhaustion tied to a consensus commitment. Identity: the attachment bytes served for a hash == the bytes whose hash a confirmed name operation committed.'",
+    "url": "https://deepwiki.com/search/-generate-blockchainnode-netwo_5efe8efa-5095-4fe6-8745-964075240a95?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: stackslib/src/net/api/read_only/mod.rs -> Scope: High. ATTACHMENT AND ATTACHMENT-INVENTORY GOSSIP MUST MATCH THEIR COMMITTED HASH. `atlas/mod.rs`, `atlas/db.rs`, `atlas/download.rs`, `getattachment.rs` and `getattachmentsinv.rs` store and serve BNS attachments keyed by content hash, gossiped from peers. Show a peer serving an attachment whose bytes do not match the requested hash, poisoning the inventory so a valid attachment is deemed absent, or filling storage with attachments no on-chain name commits to. Name the impact: BNS resolution serving wrong data, or attachment storage exhaustion tied to a consensus commitment. Identity: the attachment bytes served for a hash == the bytes whose hash a confirmed name operation committed.'",
+    "url": "https://deepwiki.com/search/-generate-blockchainnode-netwo_038a3082-d64b-462d-a0c9-418d84a94148?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: stackslib/src/net/api/read_only/parse.rs -> Scope: High. ATTACHMENT AND ATTACHMENT-INVENTORY GOSSIP MUST MATCH THEIR COMMITTED HASH. `atlas/mod.rs`, `atlas/db.rs`, `atlas/download.rs`, `getattachment.rs` and `getattachmentsinv.rs` store and serve BNS attachments keyed by content hash, gossiped from peers. Show a peer serving an attachment whose bytes do not match the requested hash, poisoning the inventory so a valid attachment is deemed absent, or filling storage with attachments no on-chain name commits to. Name the impact: BNS resolution serving wrong data, or attachment storage exhaustion tied to a consensus commitment. Identity: the attachment bytes served for a hash == the bytes whose hash a confirmed name operation committed.'",
+    "url": "https://deepwiki.com/search/-generate-blockchainnode-netwo_d3d900fe-0d35-470c-a384-7bd52462e77a?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: stackslib/src/net/api/txsimulate.rs -> Scope: High. ATTACHMENT AND ATTACHMENT-INVENTORY GOSSIP MUST MATCH THEIR COMMITTED HASH. `atlas/mod.rs`, `atlas/db.rs`, `atlas/download.rs`, `getattachment.rs` and `getattachmentsinv.rs` store and serve BNS attachments keyed by content hash, gossiped from peers. Show a peer serving an attachment whose bytes do not match the requested hash, poisoning the inventory so a valid attachment is deemed absent, or filling storage with attachments no on-chain name commits to. Name the impact: BNS resolution serving wrong data, or attachment storage exhaustion tied to a consensus commitment. Identity: the attachment bytes served for a hash == the bytes whose hash a confirmed name operation committed.'",
+    "url": "https://deepwiki.com/search/-generate-blockchainnode-netwo_02f4ac41-aeb2-4af3-90bb-dfbe76b98299?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: stackslib/src/net/asn.rs -> Scope: High. ATTACHMENT AND ATTACHMENT-INVENTORY GOSSIP MUST MATCH THEIR COMMITTED HASH. `atlas/mod.rs`, `atlas/db.rs`, `atlas/download.rs`, `getattachment.rs` and `getattachmentsinv.rs` store and serve BNS attachments keyed by content hash, gossiped from peers. Show a peer serving an attachment whose bytes do not match the requested hash, poisoning the inventory so a valid attachment is deemed absent, or filling storage with attachments no on-chain name commits to. Name the impact: BNS resolution serving wrong data, or attachment storage exhaustion tied to a consensus commitment. Identity: the attachment bytes served for a hash == the bytes whose hash a confirmed name operation committed.'",
+    "url": "https://deepwiki.com/search/-generate-blockchainnode-netwo_0a99f4fd-00a8-4aac-a8f8-e3c10f98c03a?mode=deep",
+    "questions_generated": false
+  }
+]
