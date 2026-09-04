@@ -1,0 +1,152 @@
+[
+  {
+    "question": "'File Name: stackslib/src/chainstate/stacks/index/node.rs -> Scope: High. THE SIGNER EVENT STREAM MUST DELIVER ONLY WHAT THE SENDER SIGNED. `libsigner/src/http.rs`, `session.rs`, `events.rs` and `v0/messages.rs` frame and parse the StackerDB/event messages the signer binary consumes. Show a remote sender injecting a message the signer treats as authentic - a `SignerMessage` parsed before its origin is checked, a length field that lets one event body be read as another, a stale message replayed into the stream - so the signer acts on data no authorized party sent. Name the impact bounded to the signer transport (the consensus decision itself is another variant). Identity: every message the signer library surfaces to the runloop == a message an authorized StackerDB slot owner signed.'",
+    "url": "https://deepwiki.com/search/-generate-blockchainnode-netwo_a69c4336-f45f-409f-8dfb-2b2e93826fe8?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: stackslib/src/chainstate/stacks/index/profile.rs -> Scope: High. THE SIGNER EVENT STREAM MUST DELIVER ONLY WHAT THE SENDER SIGNED. `libsigner/src/http.rs`, `session.rs`, `events.rs` and `v0/messages.rs` frame and parse the StackerDB/event messages the signer binary consumes. Show a remote sender injecting a message the signer treats as authentic - a `SignerMessage` parsed before its origin is checked, a length field that lets one event body be read as another, a stale message replayed into the stream - so the signer acts on data no authorized party sent. Name the impact bounded to the signer transport (the consensus decision itself is another variant). Identity: every message the signer library surfaces to the runloop == a message an authorized StackerDB slot owner signed.'",
+    "url": "https://deepwiki.com/search/-generate-blockchainnode-netwo_62d2f510-3e4d-4695-8424-21cd27a28504?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: stackslib/src/chainstate/stacks/index/proofs.rs -> Scope: High. THE SIGNER EVENT STREAM MUST DELIVER ONLY WHAT THE SENDER SIGNED. `libsigner/src/http.rs`, `session.rs`, `events.rs` and `v0/messages.rs` frame and parse the StackerDB/event messages the signer binary consumes. Show a remote sender injecting a message the signer treats as authentic - a `SignerMessage` parsed before its origin is checked, a length field that lets one event body be read as another, a stale message replayed into the stream - so the signer acts on data no authorized party sent. Name the impact bounded to the signer transport (the consensus decision itself is another variant). Identity: every message the signer library surfaces to the runloop == a message an authorized StackerDB slot owner signed.'",
+    "url": "https://deepwiki.com/search/-generate-blockchainnode-netwo_508cde34-14c7-41fd-84b8-72947ef9a44a?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: stackslib/src/chainstate/stacks/index/squash.rs -> Scope: High. THE SIGNER EVENT STREAM MUST DELIVER ONLY WHAT THE SENDER SIGNED. `libsigner/src/http.rs`, `session.rs`, `events.rs` and `v0/messages.rs` frame and parse the StackerDB/event messages the signer binary consumes. Show a remote sender injecting a message the signer treats as authentic - a `SignerMessage` parsed before its origin is checked, a length field that lets one event body be read as another, a stale message replayed into the stream - so the signer acts on data no authorized party sent. Name the impact bounded to the signer transport (the consensus decision itself is another variant). Identity: every message the signer library surfaces to the runloop == a message an authorized StackerDB slot owner signed.'",
+    "url": "https://deepwiki.com/search/-generate-blockchainnode-netwo_33df1f9a-b187-4ce5-bfe4-f68344f953bb?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: stackslib/src/chainstate/stacks/index/squash/node_store.rs -> Scope: High. THE SIGNER EVENT STREAM MUST DELIVER ONLY WHAT THE SENDER SIGNED. `libsigner/src/http.rs`, `session.rs`, `events.rs` and `v0/messages.rs` frame and parse the StackerDB/event messages the signer binary consumes. Show a remote sender injecting a message the signer treats as authentic - a `SignerMessage` parsed before its origin is checked, a length field that lets one event body be read as another, a stale message replayed into the stream - so the signer acts on data no authorized party sent. Name the impact bounded to the signer transport (the consensus decision itself is another variant). Identity: every message the signer library surfaces to the runloop == a message an authorized StackerDB slot owner signed.'",
+    "url": "https://deepwiki.com/search/-generate-blockchainnode-netwo_5d214e03-46d3-4bbc-876a-e1d3f804f9da?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: stackslib/src/chainstate/stacks/index/squash/stream.rs -> Scope: High. THE SIGNER EVENT STREAM MUST DELIVER ONLY WHAT THE SENDER SIGNED. `libsigner/src/http.rs`, `session.rs`, `events.rs` and `v0/messages.rs` frame and parse the StackerDB/event messages the signer binary consumes. Show a remote sender injecting a message the signer treats as authentic - a `SignerMessage` parsed before its origin is checked, a length field that lets one event body be read as another, a stale message replayed into the stream - so the signer acts on data no authorized party sent. Name the impact bounded to the signer transport (the consensus decision itself is another variant). Identity: every message the signer library surfaces to the runloop == a message an authorized StackerDB slot owner signed.'",
+    "url": "https://deepwiki.com/search/-generate-blockchainnode-netwo_1f2c69ee-9cfa-482e-893e-44bc0777bf84?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: stackslib/src/chainstate/stacks/index/storage.rs -> Scope: High. THE SIGNER EVENT STREAM MUST DELIVER ONLY WHAT THE SENDER SIGNED. `libsigner/src/http.rs`, `session.rs`, `events.rs` and `v0/messages.rs` frame and parse the StackerDB/event messages the signer binary consumes. Show a remote sender injecting a message the signer treats as authentic - a `SignerMessage` parsed before its origin is checked, a length field that lets one event body be read as another, a stale message replayed into the stream - so the signer acts on data no authorized party sent. Name the impact bounded to the signer transport (the consensus decision itself is another variant). Identity: every message the signer library surfaces to the runloop == a message an authorized StackerDB slot owner signed.'",
+    "url": "https://deepwiki.com/search/-generate-blockchainnode-netwo_8a4374a7-9502-4ab3-8a7f-3ba84bb3c903?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: stackslib/src/chainstate/stacks/index/trie.rs -> Scope: High. THE SIGNER EVENT STREAM MUST DELIVER ONLY WHAT THE SENDER SIGNED. `libsigner/src/http.rs`, `session.rs`, `events.rs` and `v0/messages.rs` frame and parse the StackerDB/event messages the signer binary consumes. Show a remote sender injecting a message the signer treats as authentic - a `SignerMessage` parsed before its origin is checked, a length field that lets one event body be read as another, a stale message replayed into the stream - so the signer acts on data no authorized party sent. Name the impact bounded to the signer transport (the consensus decision itself is another variant). Identity: every message the signer library surfaces to the runloop == a message an authorized StackerDB slot owner signed.'",
+    "url": "https://deepwiki.com/search/-generate-blockchainnode-netwo_fd5b5de5-88c2-48f4-ba34-ed3fb158708b?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: stackslib/src/chainstate/stacks/index/trie_sql.rs -> Scope: High. THE SIGNER EVENT STREAM MUST DELIVER ONLY WHAT THE SENDER SIGNED. `libsigner/src/http.rs`, `session.rs`, `events.rs` and `v0/messages.rs` frame and parse the StackerDB/event messages the signer binary consumes. Show a remote sender injecting a message the signer treats as authentic - a `SignerMessage` parsed before its origin is checked, a length field that lets one event body be read as another, a stale message replayed into the stream - so the signer acts on data no authorized party sent. Name the impact bounded to the signer transport (the consensus decision itself is another variant). Identity: every message the signer library surfaces to the runloop == a message an authorized StackerDB slot owner signed.'",
+    "url": "https://deepwiki.com/search/-generate-blockchainnode-netwo_7160f2d9-d403-4471-82bd-1de7fee1526a?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: stackslib/src/chainstate/stacks/miner.rs -> Scope: High. THE SIGNER EVENT STREAM MUST DELIVER ONLY WHAT THE SENDER SIGNED. `libsigner/src/http.rs`, `session.rs`, `events.rs` and `v0/messages.rs` frame and parse the StackerDB/event messages the signer binary consumes. Show a remote sender injecting a message the signer treats as authentic - a `SignerMessage` parsed before its origin is checked, a length field that lets one event body be read as another, a stale message replayed into the stream - so the signer acts on data no authorized party sent. Name the impact bounded to the signer transport (the consensus decision itself is another variant). Identity: every message the signer library surfaces to the runloop == a message an authorized StackerDB slot owner signed.'",
+    "url": "https://deepwiki.com/search/-generate-blockchainnode-netwo_b711772a-7b26-4ca1-a7a2-bdddfe928166?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: stackslib/src/chainstate/stacks/mod.rs -> Scope: High. THE SIGNER EVENT STREAM MUST DELIVER ONLY WHAT THE SENDER SIGNED. `libsigner/src/http.rs`, `session.rs`, `events.rs` and `v0/messages.rs` frame and parse the StackerDB/event messages the signer binary consumes. Show a remote sender injecting a message the signer treats as authentic - a `SignerMessage` parsed before its origin is checked, a length field that lets one event body be read as another, a stale message replayed into the stream - so the signer acts on data no authorized party sent. Name the impact bounded to the signer transport (the consensus decision itself is another variant). Identity: every message the signer library surfaces to the runloop == a message an authorized StackerDB slot owner signed.'",
+    "url": "https://deepwiki.com/search/-generate-blockchainnode-netwo_0dcbce83-d036-4b3d-9442-1259da86267d?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: stackslib/src/chainstate/stacks/sbtc.rs -> Scope: High. THE SIGNER EVENT STREAM MUST DELIVER ONLY WHAT THE SENDER SIGNED. `libsigner/src/http.rs`, `session.rs`, `events.rs` and `v0/messages.rs` frame and parse the StackerDB/event messages the signer binary consumes. Show a remote sender injecting a message the signer treats as authentic - a `SignerMessage` parsed before its origin is checked, a length field that lets one event body be read as another, a stale message replayed into the stream - so the signer acts on data no authorized party sent. Name the impact bounded to the signer transport (the consensus decision itself is another variant). Identity: every message the signer library surfaces to the runloop == a message an authorized StackerDB slot owner signed.'",
+    "url": "https://deepwiki.com/search/-generate-blockchainnode-netwo_cab9df79-2ee7-427e-8513-3789aa21c40c?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: stackslib/src/chainstate/stacks/transaction.rs -> Scope: High. THE SIGNER EVENT STREAM MUST DELIVER ONLY WHAT THE SENDER SIGNED. `libsigner/src/http.rs`, `session.rs`, `events.rs` and `v0/messages.rs` frame and parse the StackerDB/event messages the signer binary consumes. Show a remote sender injecting a message the signer treats as authentic - a `SignerMessage` parsed before its origin is checked, a length field that lets one event body be read as another, a stale message replayed into the stream - so the signer acts on data no authorized party sent. Name the impact bounded to the signer transport (the consensus decision itself is another variant). Identity: every message the signer library surfaces to the runloop == a message an authorized StackerDB slot owner signed.'",
+    "url": "https://deepwiki.com/search/-generate-blockchainnode-netwo_d80cde42-f54c-45de-9273-60c9f31f983e?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: stackslib/src/clarity_vm/clarity.rs -> Scope: High. THE SIGNER EVENT STREAM MUST DELIVER ONLY WHAT THE SENDER SIGNED. `libsigner/src/http.rs`, `session.rs`, `events.rs` and `v0/messages.rs` frame and parse the StackerDB/event messages the signer binary consumes. Show a remote sender injecting a message the signer treats as authentic - a `SignerMessage` parsed before its origin is checked, a length field that lets one event body be read as another, a stale message replayed into the stream - so the signer acts on data no authorized party sent. Name the impact bounded to the signer transport (the consensus decision itself is another variant). Identity: every message the signer library surfaces to the runloop == a message an authorized StackerDB slot owner signed.'",
+    "url": "https://deepwiki.com/search/-generate-blockchainnode-netwo_f89bd4b7-2507-42d5-9ae2-4a4d2a567392?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: stackslib/src/clarity_vm/database/ephemeral.rs -> Scope: High. THE SIGNER EVENT STREAM MUST DELIVER ONLY WHAT THE SENDER SIGNED. `libsigner/src/http.rs`, `session.rs`, `events.rs` and `v0/messages.rs` frame and parse the StackerDB/event messages the signer binary consumes. Show a remote sender injecting a message the signer treats as authentic - a `SignerMessage` parsed before its origin is checked, a length field that lets one event body be read as another, a stale message replayed into the stream - so the signer acts on data no authorized party sent. Name the impact bounded to the signer transport (the consensus decision itself is another variant). Identity: every message the signer library surfaces to the runloop == a message an authorized StackerDB slot owner signed.'",
+    "url": "https://deepwiki.com/search/-generate-blockchainnode-netwo_5f40401c-02cd-4a0c-820d-1ababe0304c9?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: stackslib/src/clarity_vm/database/marf.rs -> Scope: High. THE SIGNER EVENT STREAM MUST DELIVER ONLY WHAT THE SENDER SIGNED. `libsigner/src/http.rs`, `session.rs`, `events.rs` and `v0/messages.rs` frame and parse the StackerDB/event messages the signer binary consumes. Show a remote sender injecting a message the signer treats as authentic - a `SignerMessage` parsed before its origin is checked, a length field that lets one event body be read as another, a stale message replayed into the stream - so the signer acts on data no authorized party sent. Name the impact bounded to the signer transport (the consensus decision itself is another variant). Identity: every message the signer library surfaces to the runloop == a message an authorized StackerDB slot owner signed.'",
+    "url": "https://deepwiki.com/search/-generate-blockchainnode-netwo_630eb028-5f36-41b6-aa5c-56d56af2b9c6?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: stackslib/src/clarity_vm/database/mod.rs -> Scope: High. THE SIGNER EVENT STREAM MUST DELIVER ONLY WHAT THE SENDER SIGNED. `libsigner/src/http.rs`, `session.rs`, `events.rs` and `v0/messages.rs` frame and parse the StackerDB/event messages the signer binary consumes. Show a remote sender injecting a message the signer treats as authentic - a `SignerMessage` parsed before its origin is checked, a length field that lets one event body be read as another, a stale message replayed into the stream - so the signer acts on data no authorized party sent. Name the impact bounded to the signer transport (the consensus decision itself is another variant). Identity: every message the signer library surfaces to the runloop == a message an authorized StackerDB slot owner signed.'",
+    "url": "https://deepwiki.com/search/-generate-blockchainnode-netwo_ab7ad35f-d6d1-405d-bdd8-9494a62047ca?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: stackslib/src/clarity_vm/mod.rs -> Scope: High. THE SIGNER EVENT STREAM MUST DELIVER ONLY WHAT THE SENDER SIGNED. `libsigner/src/http.rs`, `session.rs`, `events.rs` and `v0/messages.rs` frame and parse the StackerDB/event messages the signer binary consumes. Show a remote sender injecting a message the signer treats as authentic - a `SignerMessage` parsed before its origin is checked, a length field that lets one event body be read as another, a stale message replayed into the stream - so the signer acts on data no authorized party sent. Name the impact bounded to the signer transport (the consensus decision itself is another variant). Identity: every message the signer library surfaces to the runloop == a message an authorized StackerDB slot owner signed.'",
+    "url": "https://deepwiki.com/search/-generate-blockchainnode-netwo_678d5c74-393c-4ea8-99db-c777ed510ee7?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: stackslib/src/clarity_vm/special.rs -> Scope: High. THE SIGNER EVENT STREAM MUST DELIVER ONLY WHAT THE SENDER SIGNED. `libsigner/src/http.rs`, `session.rs`, `events.rs` and `v0/messages.rs` frame and parse the StackerDB/event messages the signer binary consumes. Show a remote sender injecting a message the signer treats as authentic - a `SignerMessage` parsed before its origin is checked, a length field that lets one event body be read as another, a stale message replayed into the stream - so the signer acts on data no authorized party sent. Name the impact bounded to the signer transport (the consensus decision itself is another variant). Identity: every message the signer library surfaces to the runloop == a message an authorized StackerDB slot owner signed.'",
+    "url": "https://deepwiki.com/search/-generate-blockchainnode-netwo_d3f0a7c2-0e0e-43d3-879e-f4b3127c9f33?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: stackslib/src/config/chain_data.rs -> Scope: High. THE SIGNER EVENT STREAM MUST DELIVER ONLY WHAT THE SENDER SIGNED. `libsigner/src/http.rs`, `session.rs`, `events.rs` and `v0/messages.rs` frame and parse the StackerDB/event messages the signer binary consumes. Show a remote sender injecting a message the signer treats as authentic - a `SignerMessage` parsed before its origin is checked, a length field that lets one event body be read as another, a stale message replayed into the stream - so the signer acts on data no authorized party sent. Name the impact bounded to the signer transport (the consensus decision itself is another variant). Identity: every message the signer library surfaces to the runloop == a message an authorized StackerDB slot owner signed.'",
+    "url": "https://deepwiki.com/search/-generate-blockchainnode-netwo_1b5a2365-42bd-4702-9010-eb82de522265?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: stackslib/src/config/mod.rs -> Scope: High. THE SIGNER EVENT STREAM MUST DELIVER ONLY WHAT THE SENDER SIGNED. `libsigner/src/http.rs`, `session.rs`, `events.rs` and `v0/messages.rs` frame and parse the StackerDB/event messages the signer binary consumes. Show a remote sender injecting a message the signer treats as authentic - a `SignerMessage` parsed before its origin is checked, a length field that lets one event body be read as another, a stale message replayed into the stream - so the signer acts on data no authorized party sent. Name the impact bounded to the signer transport (the consensus decision itself is another variant). Identity: every message the signer library surfaces to the runloop == a message an authorized StackerDB slot owner signed.'",
+    "url": "https://deepwiki.com/search/-generate-blockchainnode-netwo_67251cdc-15dc-42e2-aeb4-4896415fc74a?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: stackslib/src/core/mempool.rs -> Scope: High. THE SIGNER EVENT STREAM MUST DELIVER ONLY WHAT THE SENDER SIGNED. `libsigner/src/http.rs`, `session.rs`, `events.rs` and `v0/messages.rs` frame and parse the StackerDB/event messages the signer binary consumes. Show a remote sender injecting a message the signer treats as authentic - a `SignerMessage` parsed before its origin is checked, a length field that lets one event body be read as another, a stale message replayed into the stream - so the signer acts on data no authorized party sent. Name the impact bounded to the signer transport (the consensus decision itself is another variant). Identity: every message the signer library surfaces to the runloop == a message an authorized StackerDB slot owner signed.'",
+    "url": "https://deepwiki.com/search/-generate-blockchainnode-netwo_f8b44dca-929c-4f77-b982-ac2a686607f7?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: stackslib/src/core/mod.rs -> Scope: High. THE SIGNER EVENT STREAM MUST DELIVER ONLY WHAT THE SENDER SIGNED. `libsigner/src/http.rs`, `session.rs`, `events.rs` and `v0/messages.rs` frame and parse the StackerDB/event messages the signer binary consumes. Show a remote sender injecting a message the signer treats as authentic - a `SignerMessage` parsed before its origin is checked, a length field that lets one event body be read as another, a stale message replayed into the stream - so the signer acts on data no authorized party sent. Name the impact bounded to the signer transport (the consensus decision itself is another variant). Identity: every message the signer library surfaces to the runloop == a message an authorized StackerDB slot owner signed.'",
+    "url": "https://deepwiki.com/search/-generate-blockchainnode-netwo_c9f1c397-5923-436c-b2cd-d516d5f6fb71?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: stackslib/src/core/nonce_cache.rs -> Scope: High. THE SIGNER EVENT STREAM MUST DELIVER ONLY WHAT THE SENDER SIGNED. `libsigner/src/http.rs`, `session.rs`, `events.rs` and `v0/messages.rs` frame and parse the StackerDB/event messages the signer binary consumes. Show a remote sender injecting a message the signer treats as authentic - a `SignerMessage` parsed before its origin is checked, a length field that lets one event body be read as another, a stale message replayed into the stream - so the signer acts on data no authorized party sent. Name the impact bounded to the signer transport (the consensus decision itself is another variant). Identity: every message the signer library surfaces to the runloop == a message an authorized StackerDB slot owner signed.'",
+    "url": "https://deepwiki.com/search/-generate-blockchainnode-netwo_750a6a0c-8231-4de6-8e4d-98c69535015e?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: stackslib/src/cost_estimates/fee_medians.rs -> Scope: High. THE SIGNER EVENT STREAM MUST DELIVER ONLY WHAT THE SENDER SIGNED. `libsigner/src/http.rs`, `session.rs`, `events.rs` and `v0/messages.rs` frame and parse the StackerDB/event messages the signer binary consumes. Show a remote sender injecting a message the signer treats as authentic - a `SignerMessage` parsed before its origin is checked, a length field that lets one event body be read as another, a stale message replayed into the stream - so the signer acts on data no authorized party sent. Name the impact bounded to the signer transport (the consensus decision itself is another variant). Identity: every message the signer library surfaces to the runloop == a message an authorized StackerDB slot owner signed.'",
+    "url": "https://deepwiki.com/search/-generate-blockchainnode-netwo_d6fbb46f-7d53-4674-bbe8-c095242aa777?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: stackslib/src/cost_estimates/fee_rate_fuzzer.rs -> Scope: High. THE SIGNER EVENT STREAM MUST DELIVER ONLY WHAT THE SENDER SIGNED. `libsigner/src/http.rs`, `session.rs`, `events.rs` and `v0/messages.rs` frame and parse the StackerDB/event messages the signer binary consumes. Show a remote sender injecting a message the signer treats as authentic - a `SignerMessage` parsed before its origin is checked, a length field that lets one event body be read as another, a stale message replayed into the stream - so the signer acts on data no authorized party sent. Name the impact bounded to the signer transport (the consensus decision itself is another variant). Identity: every message the signer library surfaces to the runloop == a message an authorized StackerDB slot owner signed.'",
+    "url": "https://deepwiki.com/search/-generate-blockchainnode-netwo_34dec916-38cf-48eb-9f8d-dbde9eee2381?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: stackslib/src/cost_estimates/fee_scalar.rs -> Scope: High. THE SIGNER EVENT STREAM MUST DELIVER ONLY WHAT THE SENDER SIGNED. `libsigner/src/http.rs`, `session.rs`, `events.rs` and `v0/messages.rs` frame and parse the StackerDB/event messages the signer binary consumes. Show a remote sender injecting a message the signer treats as authentic - a `SignerMessage` parsed before its origin is checked, a length field that lets one event body be read as another, a stale message replayed into the stream - so the signer acts on data no authorized party sent. Name the impact bounded to the signer transport (the consensus decision itself is another variant). Identity: every message the signer library surfaces to the runloop == a message an authorized StackerDB slot owner signed.'",
+    "url": "https://deepwiki.com/search/-generate-blockchainnode-netwo_f6cdc16d-c482-4add-b1b4-fc85368aff96?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: stackslib/src/cost_estimates/metrics.rs -> Scope: High. THE SIGNER EVENT STREAM MUST DELIVER ONLY WHAT THE SENDER SIGNED. `libsigner/src/http.rs`, `session.rs`, `events.rs` and `v0/messages.rs` frame and parse the StackerDB/event messages the signer binary consumes. Show a remote sender injecting a message the signer treats as authentic - a `SignerMessage` parsed before its origin is checked, a length field that lets one event body be read as another, a stale message replayed into the stream - so the signer acts on data no authorized party sent. Name the impact bounded to the signer transport (the consensus decision itself is another variant). Identity: every message the signer library surfaces to the runloop == a message an authorized StackerDB slot owner signed.'",
+    "url": "https://deepwiki.com/search/-generate-blockchainnode-netwo_ae0d62ae-9670-460d-bd01-e457f9e1cef8?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: stackslib/src/cost_estimates/mod.rs -> Scope: High. THE SIGNER EVENT STREAM MUST DELIVER ONLY WHAT THE SENDER SIGNED. `libsigner/src/http.rs`, `session.rs`, `events.rs` and `v0/messages.rs` frame and parse the StackerDB/event messages the signer binary consumes. Show a remote sender injecting a message the signer treats as authentic - a `SignerMessage` parsed before its origin is checked, a length field that lets one event body be read as another, a stale message replayed into the stream - so the signer acts on data no authorized party sent. Name the impact bounded to the signer transport (the consensus decision itself is another variant). Identity: every message the signer library surfaces to the runloop == a message an authorized StackerDB slot owner signed.'",
+    "url": "https://deepwiki.com/search/-generate-blockchainnode-netwo_2f174644-e0b1-4df2-9066-43a0495369d6?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: stackslib/src/cost_estimates/pessimistic.rs -> Scope: High. THE SIGNER EVENT STREAM MUST DELIVER ONLY WHAT THE SENDER SIGNED. `libsigner/src/http.rs`, `session.rs`, `events.rs` and `v0/messages.rs` frame and parse the StackerDB/event messages the signer binary consumes. Show a remote sender injecting a message the signer treats as authentic - a `SignerMessage` parsed before its origin is checked, a length field that lets one event body be read as another, a stale message replayed into the stream - so the signer acts on data no authorized party sent. Name the impact bounded to the signer transport (the consensus decision itself is another variant). Identity: every message the signer library surfaces to the runloop == a message an authorized StackerDB slot owner signed.'",
+    "url": "https://deepwiki.com/search/-generate-blockchainnode-netwo_bc0562de-ab53-46a7-b7c2-3f03b0e9d1c3?mode=deep",
+    "questions_generated": false
+  }
+]
