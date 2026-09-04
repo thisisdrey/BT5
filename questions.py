@@ -6,9 +6,9 @@ from decouple import config
 # todo: if scope_files is: 500 > 50, 300 > 30 , 100 > 10
 MAX_REPO = 20
 # todo: the GitLab namespace/project path, for example group/project
-SOURCE_REPO = 'near/intents'
+SOURCE_REPO = 'stacks-network/stacks-core'
 # todo: the name of the repository
-REPO_NAME = 'intents'
+REPO_NAME = 'stacks-core'
 
 run_number = os.environ.get('GITHUB_RUN_NUMBER', '0')
 
@@ -46,329 +46,516 @@ else:
     else:
         BASE_URL = f"https://deepwiki.com/{SOURCE_REPO}"
 
+
 scope_files = [
     # =================================================================================
-    # LENS: FROM A MESSAGE AN ORDINARY USER SIGNS OFF-CHAIN TO SOMEBODY ELSE'S TOKENS
-    # LEAVING `intents.near`.
-    # NEAR Intents is a custodial multi-token ledger ("the Verifier"): users deposit
-    # NEP-141 / NEP-171 / NEP-245 assets, and every later move of those assets is
-    # authorised by an off-chain signature over a `DefusePayload`. Untrusted bytes enter
-    # through doors any unprivileged party fully controls: a `MultiPayload` handed to
-    # `execute_intents` / `simulate_intents` by ANY caller (the signature is the only
-    # authority - the predecessor is irrelevant), a `ft_on_transfer` / `nft_on_transfer` /
-    # `mt_on_transfer` deposit `msg`, a direct `ft_withdraw`-family call from an account
-    # that enabled `auth_by_predecessor_id`, and the return value of a receiver contract
-    # the attacker deploys and names in `msg` / `AuthCall::contract_id` /
-    # `NotifyOnTransfer` - which comes back into `*_resolve_*` callbacks.
-    # Those bytes end in one place: the `token_balances` of accounts inside the Verifier,
-    # and the real assets those balances are a claim on. A file belongs here only if an
-    # authorisation, conservation, replay or settlement invariant must hold across it.
+    # LENS: THE NETWORK BOUNDARY (P2P, RPC, STACKERDB, ATLAS).
+    # A node's open ports accept bytes from anyone. The files below sit on the path from
+    # an unauthenticated remote message - a P2P handshake, a gossiped block or tx, an
+    # HTTP request, a StackerDB chunk, an Atlas attachment - to one of three decisions:
+    # is this peer who it claims and allowed to say this, does the node's stored or
+    # relayed state match what was actually authorized, and does the handler stay within
+    # its resource and trust bounds. A question belongs here only if it closes on an
+    # equality between what a remote party authenticated and what the node stored,
+    # relayed or served - or a remotely reachable memory/panic fault with a named impact.
     # =================================================================================
+    # -- The P2P protocol: framing, handshake, and the chat state machine ---------------
 
-    # -- The engine: the only thing between a signed blob and someone else's balance ------
-    # `execute_signed_intent` verifies, binds a signer, commits a nonce and runs intents;
-    # `Deltas`/`TransferMatcher` must net every `TokenDiff` back to zero in `finalize`.
-    "contracts/defuse/core/src/engine/mod.rs",
-    "contracts/defuse/core/src/engine/state/mod.rs",
-    "contracts/defuse/core/src/engine/state/deltas.rs",
-    "contracts/defuse/core/src/engine/state/cached.rs",
-    "contracts/defuse/core/src/engine/inspector.rs",
-    "contracts/defuse/core/src/intents/mod.rs",
-    "contracts/defuse/core/src/intents/token_diff.rs",
-    "contracts/defuse/core/src/intents/tokens.rs",
-    "contracts/defuse/core/src/intents/account.rs",
-    "contracts/defuse/core/src/intents/auth.rs",
-    "contracts/defuse/core/src/intents/imt.rs",
-    "contracts/defuse/core/src/accounts.rs",
-    "contracts/defuse/core/src/amounts.rs",
-    "contracts/defuse/core/src/fees.rs",
-    "contracts/defuse/core/src/lock.rs",
-    "contracts/defuse/core/src/tokens.rs",
-    "contracts/defuse/core/src/error.rs",
-    "contracts/defuse/core/src/events/mod.rs",
-    "contracts/defuse/core/src/lib.rs",
+    # -- clarity-types: Clarity value, type and effect model -------------------------------
+    "clarity-types/src/effects/asset_map.rs",
+    "clarity-types/src/effects/mod.rs",
+    "clarity-types/src/errors/mod.rs",
+    "clarity-types/src/lib.rs",
+    "clarity-types/src/representations.rs",
+    "clarity-types/src/types/mod.rs",
+    "clarity-types/src/types/serialization.rs",
+    "clarity-types/src/types/signatures.rs",
+    "clarity-types/src/version.rs",
 
-    # -- Who signed it: the identity binding every intent rests on ------------------------
-    # Seven external signing standards collapse into one `PublicKey`, and a missing
-    # account falls back to `to_implicit_account_id()`.
-    "contracts/defuse/core/src/payload/mod.rs",
-    "contracts/defuse/core/src/payload/multi.rs",
-    "contracts/defuse/core/src/payload/nep413.rs",
-    "contracts/defuse/core/src/payload/erc191.rs",
-    "contracts/defuse/core/src/payload/tip191.rs",
-    "contracts/defuse/core/src/payload/sep53.rs",
-    "contracts/defuse/core/src/payload/raw.rs",
-    "contracts/defuse/core/src/payload/ton_connect.rs",
-    "contracts/defuse/core/src/payload/webauthn.rs",
-    "contracts/defuse/core/src/public_key.rs",
-    "contracts/defuse/core/src/signature.rs",
-    "crates/signatures/nep413/src/lib.rs",
-    "crates/signatures/nep461/src/lib.rs",
-    "crates/signatures/erc191/src/lib.rs",
-    "crates/signatures/tip191/src/lib.rs",
-    "crates/signatures/sep53/src/lib.rs",
-    "crates/signatures/ton-connect/src/lib.rs",
-    "crates/signatures/ton-connect/src/cell.rs",
-    "crates/signatures/webauthn/src/lib.rs",
-    "crates/signatures/webauthn/src/ed25519.rs",
-    "crates/signatures/webauthn/src/p256.rs",
-    "crates/crypto/src/curve.rs",
-    "crates/crypto/src/ed25519.rs",
-    "crates/crypto/src/secp256k1.rs",
-    "crates/crypto/src/p256.rs",
-    "crates/crypto/src/signer.rs",
-    "crates/crypto/src/fmt.rs",
-    "crates/crypto/src/lib.rs",
-    "crates/digest/src/lib.rs",
-    "crates/digest/src/sha2/mod.rs",
-    "crates/digest/src/sha2/near.rs",
-    "crates/digest/src/sha3/mod.rs",
-    "crates/digest/src/sha3/near.rs",
-    "crates/digest/src/ripemd/mod.rs",
-    "crates/digest/src/ripemd/near.rs",
-    "crates/digest/src/utils.rs",
+    # -- clarity: the Clarity language, analyser, interpreter, costs and database ----------
+    "clarity/src/libclarity.rs",
+    "clarity/src/vm/analysis/analysis_db.rs",
+    "clarity/src/vm/analysis/arithmetic_checker/mod.rs",
+    "clarity/src/vm/analysis/contract_interface_builder/mod.rs",
+    "clarity/src/vm/analysis/errors.rs",
+    "clarity/src/vm/analysis/mod.rs",
+    "clarity/src/vm/analysis/read_only_checker/mod.rs",
+    "clarity/src/vm/analysis/trait_checker/mod.rs",
+    "clarity/src/vm/analysis/type_checker/contexts.rs",
+    "clarity/src/vm/analysis/type_checker/mod.rs",
+    "clarity/src/vm/analysis/type_checker/v2_05/contexts.rs",
+    "clarity/src/vm/analysis/type_checker/v2_05/mod.rs",
+    "clarity/src/vm/analysis/type_checker/v2_05/natives/assets.rs",
+    "clarity/src/vm/analysis/type_checker/v2_05/natives/maps.rs",
+    "clarity/src/vm/analysis/type_checker/v2_05/natives/mod.rs",
+    "clarity/src/vm/analysis/type_checker/v2_05/natives/options.rs",
+    "clarity/src/vm/analysis/type_checker/v2_05/natives/sequences.rs",
+    "clarity/src/vm/analysis/type_checker/v2_1/contexts.rs",
+    "clarity/src/vm/analysis/type_checker/v2_1/mod.rs",
+    "clarity/src/vm/analysis/type_checker/v2_1/natives/assets.rs",
+    "clarity/src/vm/analysis/type_checker/v2_1/natives/conversions.rs",
+    "clarity/src/vm/analysis/type_checker/v2_1/natives/maps.rs",
+    "clarity/src/vm/analysis/type_checker/v2_1/natives/mod.rs",
+    "clarity/src/vm/analysis/type_checker/v2_1/natives/options.rs",
+    "clarity/src/vm/analysis/type_checker/v2_1/natives/post_conditions.rs",
+    "clarity/src/vm/analysis/type_checker/v2_1/natives/sequences.rs",
+    "clarity/src/vm/analysis/types.rs",
+    "clarity/src/vm/ast/definition_sorter/mod.rs",
+    "clarity/src/vm/ast/errors.rs",
+    "clarity/src/vm/ast/expression_identifier/mod.rs",
+    "clarity/src/vm/ast/mod.rs",
+    "clarity/src/vm/ast/parser/mod.rs",
+    "clarity/src/vm/ast/parser/v1.rs",
+    "clarity/src/vm/ast/parser/v2/lexer/error.rs",
+    "clarity/src/vm/ast/parser/v2/lexer/mod.rs",
+    "clarity/src/vm/ast/parser/v2/lexer/token.rs",
+    "clarity/src/vm/ast/parser/v2/mod.rs",
+    "clarity/src/vm/ast/stack_depth_checker.rs",
+    "clarity/src/vm/ast/sugar_expander/mod.rs",
+    "clarity/src/vm/ast/traits_resolver/mod.rs",
+    "clarity/src/vm/ast/types.rs",
+    "clarity/src/vm/callables.rs",
+    "clarity/src/vm/clarity.rs",
+    "clarity/src/vm/contexts.rs",
+    "clarity/src/vm/contracts.rs",
+    "clarity/src/vm/costs/constants.rs",
+    "clarity/src/vm/costs/cost_functions.rs",
+    "clarity/src/vm/costs/costs_1.rs",
+    "clarity/src/vm/costs/costs_2.rs",
+    "clarity/src/vm/costs/costs_2_testnet.rs",
+    "clarity/src/vm/costs/costs_3.rs",
+    "clarity/src/vm/costs/costs_4.rs",
+    "clarity/src/vm/costs/costs_5.rs",
+    "clarity/src/vm/costs/errors.rs",
+    "clarity/src/vm/costs/execution_cost.rs",
+    "clarity/src/vm/costs/mod.rs",
+    "clarity/src/vm/database/caching/mod.rs",
+    "clarity/src/vm/database/caching/weight_limited_fifo.rs",
+    "clarity/src/vm/database/clarity_db.rs",
+    "clarity/src/vm/database/clarity_store.rs",
+    "clarity/src/vm/database/key_value_wrapper.rs",
+    "clarity/src/vm/database/mod.rs",
+    "clarity/src/vm/database/sqlite.rs",
+    "clarity/src/vm/database/structures.rs",
+    "clarity/src/vm/diagnostic.rs",
+    "clarity/src/vm/errors.rs",
+    "clarity/src/vm/events.rs",
+    "clarity/src/vm/functions/arithmetic.rs",
+    "clarity/src/vm/functions/assets.rs",
+    "clarity/src/vm/functions/bitcoin.rs",
+    "clarity/src/vm/functions/boolean.rs",
+    "clarity/src/vm/functions/conversions.rs",
+    "clarity/src/vm/functions/crypto.rs",
+    "clarity/src/vm/functions/database.rs",
+    "clarity/src/vm/functions/define.rs",
+    "clarity/src/vm/functions/mod.rs",
+    "clarity/src/vm/functions/options.rs",
+    "clarity/src/vm/functions/post_conditions.rs",
+    "clarity/src/vm/functions/principals.rs",
+    "clarity/src/vm/functions/sequences.rs",
+    "clarity/src/vm/functions/tuples.rs",
+    "clarity/src/vm/hooks/internals.rs",
+    "clarity/src/vm/hooks/mod.rs",
+    "clarity/src/vm/hooks/trace.rs",
+    "clarity/src/vm/mod.rs",
+    "clarity/src/vm/representations.rs",
+    "clarity/src/vm/resource_limiter.rs",
+    "clarity/src/vm/tooling/mod.rs",
+    "clarity/src/vm/types/mod.rs",
+    "clarity/src/vm/types/serialization.rs",
+    "clarity/src/vm/types/signatures.rs",
+    "clarity/src/vm/variables.rs",
+    "clarity/src/vm/version.rs",
 
-    # -- Replay: one signature must move funds exactly once --------------------------------
-    "contracts/defuse/core/src/nonce/mod.rs",
-    "contracts/defuse/core/src/nonce/versioned.rs",
-    "contracts/defuse/core/src/nonce/salted.rs",
-    "contracts/defuse/core/src/nonce/expirable.rs",
-    "contracts/defuse/src/contract/accounts/account/nonces.rs",
-    "contracts/defuse/src/contract/state/salt_registry.rs",
-    "contracts/defuse/src/contract/salts.rs",
-    "contracts/defuse/src/contract/garbage_collector.rs",
-    "contracts/defuse/src/garbage_collector.rs",
-    "contracts/defuse/src/salts.rs",
-    "crates/bitmap/src/lib.rs",
-    "crates/bitmap/src/b256.rs",
-    "crates/primitives/time/src/lib.rs",
-    "crates/primitives/time/src/borsh.rs",
-    "crates/primitives/time/src/serde.rs",
-    "crates/primitives/time/src/error.rs",
+    # -- stacks-codec: transaction and message wire encoding -------------------------------
+    "stacks-codec/src/lib.rs",
+    "stacks-codec/src/strings.rs",
+    "stacks-codec/src/transaction.rs",
 
-    # -- The Verifier contract: entry points, accounts and persisted balances --------------
-    "contracts/defuse/src/contract/mod.rs",
-    "contracts/defuse/src/contract/intents/mod.rs",
-    "contracts/defuse/src/contract/intents/state.rs",
-    "contracts/defuse/src/contract/intents/execute.rs",
-    "contracts/defuse/src/contract/intents/simulate.rs",
-    "contracts/defuse/src/contract/intents/auth_call.rs",
-    "contracts/defuse/src/contract/intents/relayer.rs",
-    "contracts/defuse/src/contract/accounts/mod.rs",
-    "contracts/defuse/src/contract/accounts/state.rs",
-    "contracts/defuse/src/contract/accounts/force.rs",
-    "contracts/defuse/src/contract/accounts/account/mod.rs",
-    "contracts/defuse/src/contract/accounts/account/entry/mod.rs",
-    "contracts/defuse/src/contract/accounts/account/entry/v0.rs",
-    "contracts/defuse/src/contract/accounts/account/entry/v1.rs",
-    "contracts/defuse/src/contract/state/mod.rs",
-    "contracts/defuse/src/contract/state/v0.rs",
-    "contracts/defuse/src/contract/versioned/mod.rs",
-    "contracts/defuse/src/contract/versioned/v0.rs",
-    "contracts/defuse/src/contract/config.rs",
-    "contracts/defuse/src/contract/fees.rs",
-    "contracts/defuse/src/contract/admin.rs",
-    "contracts/defuse/src/contract/upgrade.rs",
-    "contracts/defuse/src/contract/events.rs",
-    "contracts/defuse/src/contract/prefix.rs",
-    "contracts/defuse/src/accounts.rs",
-    "contracts/defuse/src/intents.rs",
-    "contracts/defuse/src/fees.rs",
-    "contracts/defuse/src/far.rs",
-    "contracts/defuse/src/simulation_output.rs",
-    "contracts/defuse/src/lib.rs",
+    # -- crates/stacks-transactions: standalone transaction and post-condition checks ------
+    "crates/stacks-transactions/src/lib.rs",
 
-    # -- Settlement: assets crossing the contract boundary, and the callbacks that undo it --
-    # Balances are debited before the Promise resolves; every `*_resolve_*` re-credits.
-    "contracts/defuse/src/contract/tokens/mod.rs",
-    "contracts/defuse/src/contract/tokens/imt.rs",
-    "contracts/defuse/src/contract/tokens/nep141/mod.rs",
-    "contracts/defuse/src/contract/tokens/nep141/deposit.rs",
-    "contracts/defuse/src/contract/tokens/nep141/withdraw.rs",
-    "contracts/defuse/src/contract/tokens/nep141/native.rs",
-    "contracts/defuse/src/contract/tokens/nep141/storage_deposit.rs",
-    "contracts/defuse/src/contract/tokens/nep171/mod.rs",
-    "contracts/defuse/src/contract/tokens/nep171/deposit.rs",
-    "contracts/defuse/src/contract/tokens/nep171/withdraw.rs",
-    "contracts/defuse/src/contract/tokens/nep245/mod.rs",
-    "contracts/defuse/src/contract/tokens/nep245/core.rs",
-    "contracts/defuse/src/contract/tokens/nep245/deposit.rs",
-    "contracts/defuse/src/contract/tokens/nep245/withdraw.rs",
-    "contracts/defuse/src/contract/tokens/nep245/resolver.rs",
-    "contracts/defuse/src/contract/tokens/nep245/enumeration.rs",
-    "contracts/defuse/src/contract/tokens/nep245/force.rs",
-    "contracts/defuse/src/tokens/mod.rs",
-    "contracts/defuse/src/tokens/imt.rs",
-    "contracts/defuse/src/tokens/nep141.rs",
-    "contracts/defuse/src/tokens/nep171.rs",
-    "contracts/defuse/src/tokens/nep245.rs",
-    "crates/near/nep245/src/core.rs",
-    "crates/near/nep245/src/checked.rs",
-    "crates/near/nep245/src/resolver.rs",
-    "crates/near/nep245/src/receiver.rs",
-    "crates/near/nep245/src/enumeration.rs",
-    "crates/near/nep245/src/events.rs",
-    "crates/near/nep245/src/token.rs",
-    "crates/near/nep245/src/errors.rs",
-    "crates/near/nep245/src/lib.rs",
-    "crates/near/wnear/src/lib.rs",
-    "crates/near/auth-call/src/lib.rs",
-    "crates/near/promise/src/lib.rs",
-    "crates/near/promise/src/actions/mod.rs",
-    "crates/near/promise/src/actions/function_call.rs",
-    "crates/near/promise/src/actions/state_init.rs",
-    "crates/near/promise/src/actions/transfer.rs",
-    "crates/near/utils/src/lib.rs",
-    "crates/near/utils/src/promise.rs",
-    "crates/near/utils/src/event.rs",
-    "crates/near/utils/src/panic_on_clone.rs",
-    "crates/near/sender/src/lib.rs",
-    "crates/near/controller/src/lib.rs",
-    "crates/near/admin-utils/src/lib.rs",
-    "crates/near/admin-utils/src/full_access_keys.rs",
+    # -- stacks-common: addresses, hashing, secp256k1, codec and shared utils --------------
+    "stacks-common/src/address/b58.rs",
+    "stacks-common/src/address/c32.rs",
+    "stacks-common/src/address/c32_old.rs",
+    "stacks-common/src/address/mod.rs",
+    "stacks-common/src/alloc_tracker.rs",
+    "stacks-common/src/bitvec.rs",
+    "stacks-common/src/codec/macros.rs",
+    "stacks-common/src/codec/mod.rs",
+    "stacks-common/src/libcommon.rs",
+    "stacks-common/src/types/chainstate.rs",
+    "stacks-common/src/types/mod.rs",
+    "stacks-common/src/types/net.rs",
+    "stacks-common/src/types/sqlite.rs",
+    "stacks-common/src/util/chunked_encoding.rs",
+    "stacks-common/src/util/db.rs",
+    "stacks-common/src/util/ed25519.rs",
+    "stacks-common/src/util/hash.rs",
+    "stacks-common/src/util/log.rs",
+    "stacks-common/src/util/lru_cache.rs",
+    "stacks-common/src/util/macros.rs",
+    "stacks-common/src/util/mod.rs",
+    "stacks-common/src/util/pair.rs",
+    "stacks-common/src/util/pipe.rs",
+    "stacks-common/src/util/retry.rs",
+    "stacks-common/src/util/secp256k1/mod.rs",
+    "stacks-common/src/util/secp256k1/native.rs",
+    "stacks-common/src/util/secp256k1/wasm.rs",
+    "stacks-common/src/util/secp256r1.rs",
+    "stacks-common/src/util/serde_serializers.rs",
+    "stacks-common/src/util/uint.rs",
+    "stacks-common/src/util/vrf.rs",
 
-    # -- Token identity and arithmetic: what a balance is a claim on, and how much ---------
-    "crates/primitives/token-id/src/lib.rs",
-    "crates/primitives/token-id/src/nep141.rs",
-    "crates/primitives/token-id/src/nep171.rs",
-    "crates/primitives/token-id/src/nep245.rs",
-    "crates/primitives/token-id/src/imt.rs",
-    "crates/primitives/token-id/src/error.rs",
-    "crates/primitives/fees/src/lib.rs",
-    "crates/primitives/decimal/src/lib.rs",
-    "crates/primitives/decimal/src/ops.rs",
-    "crates/primitives/decimal/src/str.rs",
-    "crates/num-utils/src/lib.rs",
-    "crates/num-utils/src/add_sub.rs",
-    "crates/num-utils/src/mul.rs",
-    "crates/num-utils/src/div.rs",
-    "crates/num-utils/src/mul_div.rs",
-    "crates/map-utils/src/lib.rs",
-    "crates/map-utils/src/cleanup.rs",
-    "crates/map-utils/src/btree_map.rs",
-    "crates/map-utils/src/hash_map.rs",
-    "crates/map-utils/src/near.rs",
-    "crates/map-utils/src/iter.rs",
-    "crates/serde-utils/src/lib.rs",
-    "crates/serde-utils/src/base64.rs",
-    "crates/serde-utils/src/hex.rs",
-    "crates/serde-utils/src/seq.rs",
-    "crates/serde-utils/src/cow.rs",
-    "crates/serde-utils/src/tlb.rs",
-    "crates/borsh-utils/src/lib.rs",
-    "crates/borsh-utils/src/duration.rs",
-    "crates/borsh-utils/src/schema.rs",
-    "crates/io-utils/src/lib.rs",
+    # -- libsigner: signer transport, events and v0 messages -------------------------------
+    "libsigner/src/error.rs",
+    "libsigner/src/events.rs",
+    "libsigner/src/http.rs",
+    "libsigner/src/libsigner.rs",
+    "libsigner/src/runloop.rs",
+    "libsigner/src/session.rs",
+    "libsigner/src/signer_set.rs",
+    "libsigner/src/v0/messages.rs",
+    "libsigner/src/v0/mod.rs",
+    "libsigner/src/v0/signer_state.rs",
 
-    # -- Wallet contracts: NEP-641 authorisation for accounts that hold Verifier balances ---
-    "contracts/wallet/src/contract.rs",
-    "contracts/wallet/src/message.rs",
-    "contracts/wallet/src/nonces.rs",
-    "contracts/wallet/src/request/mod.rs",
-    "contracts/wallet/src/request/ops.rs",
-    "contracts/wallet/src/state.rs",
-    "contracts/wallet/src/schema.rs",
-    "contracts/wallet/src/events.rs",
-    "contracts/wallet/src/error.rs",
-    "contracts/wallet/src/lib.rs",
-    "contracts/wallet/signatures/ed25519/src/contract.rs",
-    "contracts/wallet/signatures/ed25519/src/signer.rs",
-    "contracts/wallet/signatures/ed25519/src/lib.rs",
-    "contracts/wallet/signatures/no-sign/src/contract.rs",
-    "contracts/wallet/signatures/no-sign/src/lib.rs",
-    "contracts/wallet/signatures/webauthn/src/lib.rs",
-    "contracts/wallet/signatures/webauthn/src/ed25519.rs",
-    "contracts/wallet/signatures/webauthn/src/p256.rs",
-    "contracts/wallet/signatures/webauthn/ed25519/src/lib.rs",
-    "contracts/wallet/signatures/webauthn/p256/src/lib.rs",
-    "crates/signatures/nep641/src/lib.rs",
-    "crates/signatures/nep641/src/message.rs",
-    "crates/signatures/nep641/src/access_keys.rs",
-    "crates/signatures/nep641/src/client.rs",
-    "crates/signatures/nep641/src/resolver/mod.rs",
-    "crates/signatures/nep641/src/resolver/contract.rs",
-    "crates/signatures/nep641/src/resolver/access_keys.rs",
-    "crates/signatures/nep641/src/resolver/error.rs",
-    "crates/mpc/signer/src/contract.rs",
-    "crates/mpc/signer/src/secp256k1.rs",
-    "crates/mpc/signer/src/ed25519.rs",
-    "crates/mpc/signer/src/convert.rs",
-    "crates/mpc/signer/src/lib.rs",
-    "crates/mpc/kdf/src/lib.rs",
-    "crates/mpc/kdf/src/ckd.rs",
-    "crates/mpc/kdf/src/tweak/mod.rs",
-    "crates/mpc/kdf/src/tweak/secp256k1.rs",
-    "crates/mpc/kdf/src/tweak/ed25519.rs",
-    "crates/mpc/ckd/src/lib.rs",
-    "crates/mpc/ckd/src/types.rs",
-    "crates/kdf/src/lib.rs",
-    "crates/kdf/src/ed25519.rs",
-    "crates/kdf/src/secp256k1.rs",
-    "crates/kdf/src/signer.rs",
-    "crates/kdf/src/schema/mod.rs",
-    "crates/kdf/src/schema/borsh.rs",
-    "crates/kdf/src/schema/digest.rs",
-    "crates/kdf/src/schema/hex.rs",
-    "crates/kdf/src/schema/additive.rs",
-    "crates/kdf/src/schema/reduce.rs",
+    # -- libstackerdb: StackerDB chunk signing and verification ----------------------------
+    "libstackerdb/src/libstackerdb.rs",
 
-    # -- Token issuers and deployers whose output the Verifier treats as a real asset -------
-    "contracts/poa/factory/src/contract.rs",
-    "contracts/poa/factory/src/lib.rs",
-    "contracts/poa/token/src/contract.rs",
-    "contracts/poa/token/src/lib.rs",
-    "contracts/global-deployer/src/contract.rs",
-    "contracts/global-deployer/src/state.rs",
-    "contracts/global-deployer/src/client.rs",
-    "contracts/global-deployer/src/events.rs",
-    "contracts/global-deployer/src/error.rs",
-    "contracts/global-deployer/src/lib.rs",
-    "contracts/outlayer/app/src/contract.rs",
-    "contracts/outlayer/app/src/state.rs",
-    "contracts/outlayer/app/src/client.rs",
-    "contracts/outlayer/app/src/events.rs",
-    "contracts/outlayer/app/src/error.rs",
-    "contracts/outlayer/app/src/lib.rs",
-    "contracts/treasury-logger/src/lib.rs",
-    "contracts/treasury-logger/src/state.rs",
-    "contracts/treasury-logger/src/event.rs",
+    # -- pox-locking: the Rust side that locks and unlocks STX for PoX/stacking ------------
+    "pox-locking/src/events.rs",
+    "pox-locking/src/events_24.rs",
+    "pox-locking/src/lib.rs",
+    "pox-locking/src/pox_1.rs",
+    "pox-locking/src/pox_2.rs",
+    "pox-locking/src/pox_3.rs",
+    "pox-locking/src/pox_4.rs",
+    "pox-locking/src/pox_5.rs",
+
+    # -- stacks-signer: the Nakamoto signer decision logic and chainstate view -------------
+    "stacks-signer/src/chainstate/mod.rs",
+    "stacks-signer/src/chainstate/v1.rs",
+    "stacks-signer/src/chainstate/v2.rs",
+    "stacks-signer/src/cli.rs",
+    "stacks-signer/src/client/mod.rs",
+    "stacks-signer/src/client/stackerdb.rs",
+    "stacks-signer/src/client/stacks_client.rs",
+    "stacks-signer/src/config.rs",
+    "stacks-signer/src/lib.rs",
+    "stacks-signer/src/main.rs",
+    "stacks-signer/src/monitor_signers.rs",
+    "stacks-signer/src/monitoring/mod.rs",
+    "stacks-signer/src/monitoring/prometheus.rs",
+    "stacks-signer/src/monitoring/server.rs",
+    "stacks-signer/src/runloop.rs",
+    "stacks-signer/src/signerdb.rs",
+    "stacks-signer/src/utils.rs",
+    "stacks-signer/src/v0/mod.rs",
+    "stacks-signer/src/v0/signer.rs",
+    "stacks-signer/src/v0/signer_state.rs",
+
+    # -- stacks-node: the node binary, run loops, miner, burnchain and event dispatch ------
+    "stacks-node/src/burnchains/bitcoin/core_controller.rs",
+    "stacks-node/src/burnchains/bitcoin/mod.rs",
+    "stacks-node/src/burnchains/bitcoin_regtest_controller.rs",
+    "stacks-node/src/burnchains/mod.rs",
+    "stacks-node/src/burnchains/rpc/bitcoin_rpc_client/mod.rs",
+    "stacks-node/src/burnchains/rpc/mod.rs",
+    "stacks-node/src/burnchains/rpc/rpc_transport/mod.rs",
+    "stacks-node/src/event_dispatcher.rs",
+    "stacks-node/src/event_dispatcher/db.rs",
+    "stacks-node/src/event_dispatcher/payloads.rs",
+    "stacks-node/src/event_dispatcher/stacker_db.rs",
+    "stacks-node/src/event_dispatcher/worker.rs",
+    "stacks-node/src/globals.rs",
+    "stacks-node/src/keychain.rs",
+    "stacks-node/src/main.rs",
+    "stacks-node/src/monitoring/mod.rs",
+    "stacks-node/src/monitoring/prometheus.rs",
+    "stacks-node/src/nakamoto_node.rs",
+    "stacks-node/src/nakamoto_node/miner.rs",
+    "stacks-node/src/nakamoto_node/miner_db.rs",
+    "stacks-node/src/nakamoto_node/peer.rs",
+    "stacks-node/src/nakamoto_node/relayer.rs",
+    "stacks-node/src/nakamoto_node/signer_coordinator.rs",
+    "stacks-node/src/nakamoto_node/stackerdb_listener.rs",
+    "stacks-node/src/neon_node.rs",
+    "stacks-node/src/node.rs",
+    "stacks-node/src/operations.rs",
+    "stacks-node/src/run_loop/boot_nakamoto.rs",
+    "stacks-node/src/run_loop/helium.rs",
+    "stacks-node/src/run_loop/mod.rs",
+    "stacks-node/src/run_loop/nakamoto.rs",
+    "stacks-node/src/run_loop/neon.rs",
+    "stacks-node/src/syncctl.rs",
+    "stacks-node/src/tenure.rs",
+
+    # -- stackslib: consensus, chainstate, the Clarity VM host, burn ops and the P2P/RPC network ----
+    "stackslib/src/burnchains/bitcoin/address.rs",
+    "stackslib/src/burnchains/bitcoin/bits.rs",
+    "stackslib/src/burnchains/bitcoin/blocks.rs",
+    "stackslib/src/burnchains/bitcoin/indexer.rs",
+    "stackslib/src/burnchains/bitcoin/keys.rs",
+    "stackslib/src/burnchains/bitcoin/messages.rs",
+    "stackslib/src/burnchains/bitcoin/mod.rs",
+    "stackslib/src/burnchains/bitcoin/network.rs",
+    "stackslib/src/burnchains/bitcoin/spv.rs",
+    "stackslib/src/burnchains/burnchain.rs",
+    "stackslib/src/burnchains/db.rs",
+    "stackslib/src/burnchains/indexer.rs",
+    "stackslib/src/burnchains/mod.rs",
+    "stackslib/src/chainstate/burn/atc.rs",
+    "stackslib/src/chainstate/burn/db/mod.rs",
+    "stackslib/src/chainstate/burn/db/processing.rs",
+    "stackslib/src/chainstate/burn/db/sortdb.rs",
+    "stackslib/src/chainstate/burn/distribution.rs",
+    "stackslib/src/chainstate/burn/mod.rs",
+    "stackslib/src/chainstate/burn/operations/delegate_stx.rs",
+    "stackslib/src/chainstate/burn/operations/leader_block_commit.rs",
+    "stackslib/src/chainstate/burn/operations/leader_key_register.rs",
+    "stackslib/src/chainstate/burn/operations/mod.rs",
+    "stackslib/src/chainstate/burn/operations/stack_stx.rs",
+    "stackslib/src/chainstate/burn/operations/transfer_stx.rs",
+    "stackslib/src/chainstate/burn/operations/vote_for_aggregate_key.rs",
+    "stackslib/src/chainstate/burn/sortition.rs",
+    "stackslib/src/chainstate/coordinator/comm.rs",
+    "stackslib/src/chainstate/coordinator/mod.rs",
+    "stackslib/src/chainstate/mod.rs",
+    "stackslib/src/chainstate/nakamoto/coordinator/mod.rs",
+    "stackslib/src/chainstate/nakamoto/keys.rs",
+    "stackslib/src/chainstate/nakamoto/miner.rs",
+    "stackslib/src/chainstate/nakamoto/mod.rs",
+    "stackslib/src/chainstate/nakamoto/shadow.rs",
+    "stackslib/src/chainstate/nakamoto/signer_set.rs",
+    "stackslib/src/chainstate/nakamoto/staging_blocks.rs",
+    "stackslib/src/chainstate/nakamoto/tenure.rs",
+    "stackslib/src/chainstate/stacks/address.rs",
+    "stackslib/src/chainstate/stacks/auth.rs",
+    "stackslib/src/chainstate/stacks/block.rs",
+    "stackslib/src/chainstate/stacks/boot/bns.clar",
+    "stackslib/src/chainstate/stacks/boot/contract_tests.rs",
+    "stackslib/src/chainstate/stacks/boot/cost-voting.clar",
+    "stackslib/src/chainstate/stacks/boot/costs-2.clar",
+    "stackslib/src/chainstate/stacks/boot/costs-3.clar",
+    "stackslib/src/chainstate/stacks/boot/costs-4.clar",
+    "stackslib/src/chainstate/stacks/boot/costs.clar",
+    "stackslib/src/chainstate/stacks/boot/docs.rs",
+    "stackslib/src/chainstate/stacks/boot/genesis.clar",
+    "stackslib/src/chainstate/stacks/boot/lockup.clar",
+    "stackslib/src/chainstate/stacks/boot/mod.rs",
+    "stackslib/src/chainstate/stacks/boot/pox-2.clar",
+    "stackslib/src/chainstate/stacks/boot/pox-3.clar",
+    "stackslib/src/chainstate/stacks/boot/pox-4.clar",
+    "stackslib/src/chainstate/stacks/boot/pox-5.clar",
+    "stackslib/src/chainstate/stacks/boot/pox-mainnet.clar",
+    "stackslib/src/chainstate/stacks/boot/pox.clar",
+    "stackslib/src/chainstate/stacks/boot/pox_2_tests.rs",
+    "stackslib/src/chainstate/stacks/boot/pox_3_tests.rs",
+    "stackslib/src/chainstate/stacks/boot/pox_4_tests.rs",
+    "stackslib/src/chainstate/stacks/boot/signers-0-xxx.clar",
+    "stackslib/src/chainstate/stacks/boot/signers-1-xxx.clar",
+    "stackslib/src/chainstate/stacks/boot/signers-voting.clar",
+    "stackslib/src/chainstate/stacks/boot/signers.clar",
+    "stackslib/src/chainstate/stacks/boot/signers_tests.rs",
+    "stackslib/src/chainstate/stacks/boot/sip-031.clar",
+    "stackslib/src/chainstate/stacks/db/accounts.rs",
+    "stackslib/src/chainstate/stacks/db/blocks.rs",
+    "stackslib/src/chainstate/stacks/db/contracts.rs",
+    "stackslib/src/chainstate/stacks/db/headers.rs",
+    "stackslib/src/chainstate/stacks/db/mod.rs",
+    "stackslib/src/chainstate/stacks/db/snapshot/blocks.rs",
+    "stackslib/src/chainstate/stacks/db/snapshot/burnchain.rs",
+    "stackslib/src/chainstate/stacks/db/snapshot/clarity.rs",
+    "stackslib/src/chainstate/stacks/db/snapshot/common.rs",
+    "stackslib/src/chainstate/stacks/db/snapshot/fork_storage.rs",
+    "stackslib/src/chainstate/stacks/db/snapshot/index.rs",
+    "stackslib/src/chainstate/stacks/db/snapshot/mod.rs",
+    "stackslib/src/chainstate/stacks/db/snapshot/sortition.rs",
+    "stackslib/src/chainstate/stacks/db/snapshot/spv.rs",
+    "stackslib/src/chainstate/stacks/db/transactions.rs",
+    "stackslib/src/chainstate/stacks/db/unconfirmed.rs",
+    "stackslib/src/chainstate/stacks/events.rs",
+    "stackslib/src/chainstate/stacks/index/bits.rs",
+    "stackslib/src/chainstate/stacks/index/blob_layout.rs",
+    "stackslib/src/chainstate/stacks/index/cache.rs",
+    "stackslib/src/chainstate/stacks/index/file.rs",
+    "stackslib/src/chainstate/stacks/index/marf.rs",
+    "stackslib/src/chainstate/stacks/index/mod.rs",
+    "stackslib/src/chainstate/stacks/index/node.rs",
+    "stackslib/src/chainstate/stacks/index/profile.rs",
+    "stackslib/src/chainstate/stacks/index/proofs.rs",
+    "stackslib/src/chainstate/stacks/index/squash.rs",
+    "stackslib/src/chainstate/stacks/index/squash/node_store.rs",
+    "stackslib/src/chainstate/stacks/index/squash/stream.rs",
+    "stackslib/src/chainstate/stacks/index/storage.rs",
+    "stackslib/src/chainstate/stacks/index/trie.rs",
+    "stackslib/src/chainstate/stacks/index/trie_sql.rs",
+    "stackslib/src/chainstate/stacks/miner.rs",
+    "stackslib/src/chainstate/stacks/mod.rs",
+    "stackslib/src/chainstate/stacks/sbtc.rs",
+    "stackslib/src/chainstate/stacks/transaction.rs",
+    "stackslib/src/clarity_vm/clarity.rs",
+    "stackslib/src/clarity_vm/database/ephemeral.rs",
+    "stackslib/src/clarity_vm/database/marf.rs",
+    "stackslib/src/clarity_vm/database/mod.rs",
+    "stackslib/src/clarity_vm/mod.rs",
+    "stackslib/src/clarity_vm/special.rs",
+    "stackslib/src/config/chain_data.rs",
+    "stackslib/src/config/mod.rs",
+    "stackslib/src/core/mempool.rs",
+    "stackslib/src/core/mod.rs",
+    "stackslib/src/core/nonce_cache.rs",
+    "stackslib/src/cost_estimates/fee_medians.rs",
+    "stackslib/src/cost_estimates/fee_rate_fuzzer.rs",
+    "stackslib/src/cost_estimates/fee_scalar.rs",
+    "stackslib/src/cost_estimates/metrics.rs",
+    "stackslib/src/cost_estimates/mod.rs",
+    "stackslib/src/cost_estimates/pessimistic.rs",
+    "stackslib/src/deps/mod.rs",
+    "stackslib/src/lib.rs",
+    "stackslib/src/monitoring/mod.rs",
+    "stackslib/src/monitoring/prometheus.rs",
+    "stackslib/src/net/api/blockreplay.rs",
+    "stackslib/src/net/api/blocksimulate.rs",
+    "stackslib/src/net/api/callreadonly.rs",
+    "stackslib/src/net/api/fastcallreadonly.rs",
+    "stackslib/src/net/api/get_tenure_tip_meta.rs",
+    "stackslib/src/net/api/get_tenures_fork_info.rs",
+    "stackslib/src/net/api/getaccount.rs",
+    "stackslib/src/net/api/getattachment.rs",
+    "stackslib/src/net/api/getattachmentsinv.rs",
+    "stackslib/src/net/api/getblock.rs",
+    "stackslib/src/net/api/getblock_v3.rs",
+    "stackslib/src/net/api/getblockbyheight.rs",
+    "stackslib/src/net/api/getclaritymarfvalue.rs",
+    "stackslib/src/net/api/getclaritymetadata.rs",
+    "stackslib/src/net/api/getconstantval.rs",
+    "stackslib/src/net/api/getcontractabi.rs",
+    "stackslib/src/net/api/getcontractsrc.rs",
+    "stackslib/src/net/api/getdatavar.rs",
+    "stackslib/src/net/api/getheaders.rs",
+    "stackslib/src/net/api/gethealth.rs",
+    "stackslib/src/net/api/getinfo.rs",
+    "stackslib/src/net/api/getistraitimplemented.rs",
+    "stackslib/src/net/api/getmapentry.rs",
+    "stackslib/src/net/api/getmicroblocks_confirmed.rs",
+    "stackslib/src/net/api/getmicroblocks_indexed.rs",
+    "stackslib/src/net/api/getmicroblocks_unconfirmed.rs",
+    "stackslib/src/net/api/getneighbors.rs",
+    "stackslib/src/net/api/getpoxinfo.rs",
+    "stackslib/src/net/api/getsigner.rs",
+    "stackslib/src/net/api/getsortition.rs",
+    "stackslib/src/net/api/getstackerdbchunk.rs",
+    "stackslib/src/net/api/getstackerdbmetadata.rs",
+    "stackslib/src/net/api/getstackers.rs",
+    "stackslib/src/net/api/getstxtransfercost.rs",
+    "stackslib/src/net/api/gettenure.rs",
+    "stackslib/src/net/api/gettenureblocks.rs",
+    "stackslib/src/net/api/gettenureblocksbyhash.rs",
+    "stackslib/src/net/api/gettenureblocksbyheight.rs",
+    "stackslib/src/net/api/gettenureinfo.rs",
+    "stackslib/src/net/api/gettenuretip.rs",
+    "stackslib/src/net/api/gettransaction.rs",
+    "stackslib/src/net/api/gettransaction_unconfirmed.rs",
+    "stackslib/src/net/api/liststackerdbreplicas.rs",
+    "stackslib/src/net/api/mod.rs",
+    "stackslib/src/net/api/postblock.rs",
+    "stackslib/src/net/api/postblock_proposal.rs",
+    "stackslib/src/net/api/postblock_v3.rs",
+    "stackslib/src/net/api/postfeerate.rs",
+    "stackslib/src/net/api/postmempoolquery.rs",
+    "stackslib/src/net/api/postmicroblock.rs",
+    "stackslib/src/net/api/poststackerdbchunk.rs",
+    "stackslib/src/net/api/posttransaction.rs",
+    "stackslib/src/net/api/read_only/mod.rs",
+    "stackslib/src/net/api/read_only/parse.rs",
+    "stackslib/src/net/api/txsimulate.rs",
+    "stackslib/src/net/asn.rs",
+    "stackslib/src/net/atlas/db.rs",
+    "stackslib/src/net/atlas/download.rs",
+    "stackslib/src/net/atlas/mod.rs",
+    "stackslib/src/net/chat.rs",
+    "stackslib/src/net/codec.rs",
+    "stackslib/src/net/connection.rs",
+    "stackslib/src/net/db.rs",
+    "stackslib/src/net/dns.rs",
+    "stackslib/src/net/download/epoch2x.rs",
+    "stackslib/src/net/download/mod.rs",
+    "stackslib/src/net/download/nakamoto/download_state_machine.rs",
+    "stackslib/src/net/download/nakamoto/mod.rs",
+    "stackslib/src/net/download/nakamoto/tenure.rs",
+    "stackslib/src/net/download/nakamoto/tenure_downloader.rs",
+    "stackslib/src/net/download/nakamoto/tenure_downloader_set.rs",
+    "stackslib/src/net/download/nakamoto/tenure_downloader_unconfirmed.rs",
+    "stackslib/src/net/http/common.rs",
+    "stackslib/src/net/http/error.rs",
+    "stackslib/src/net/http/mod.rs",
+    "stackslib/src/net/http/request.rs",
+    "stackslib/src/net/http/response.rs",
+    "stackslib/src/net/http/stream.rs",
+    "stackslib/src/net/httpcore.rs",
+    "stackslib/src/net/inv/epoch2x.rs",
+    "stackslib/src/net/inv/mod.rs",
+    "stackslib/src/net/inv/nakamoto.rs",
+    "stackslib/src/net/mempool/mod.rs",
+    "stackslib/src/net/mod.rs",
+    "stackslib/src/net/neighbors/comms.rs",
+    "stackslib/src/net/neighbors/db.rs",
+    "stackslib/src/net/neighbors/mod.rs",
+    "stackslib/src/net/neighbors/neighbor.rs",
+    "stackslib/src/net/neighbors/rpc.rs",
+    "stackslib/src/net/neighbors/walk.rs",
+    "stackslib/src/net/p2p.rs",
+    "stackslib/src/net/poll.rs",
+    "stackslib/src/net/prune.rs",
+    "stackslib/src/net/relay.rs",
+    "stackslib/src/net/rpc.rs",
+    "stackslib/src/net/server.rs",
+    "stackslib/src/net/stackerdb/config.rs",
+    "stackslib/src/net/stackerdb/db.rs",
+    "stackslib/src/net/stackerdb/mod.rs",
+    "stackslib/src/net/stackerdb/sync.rs",
+    "stackslib/src/net/unsolicited.rs",
+    "stackslib/src/util_lib/bloom.rs",
+    "stackslib/src/util_lib/boot.rs",
+    "stackslib/src/util_lib/db.rs",
+    "stackslib/src/util_lib/mod.rs",
+    "stackslib/src/util_lib/signed_structured_data.rs",
+    "stackslib/src/util_lib/strings.rs",
 
     # =================================================================================
-    # NOT IN THIS VARIANT:
-    # * `contracts/escrow-swap/**` - explicitly out of scope in the NEAR Intents
-    #   Smart Contracts bounty program.
-    # * `tests/**`, `**/tests/**`, `**/tests.rs`, `crates/testing/**`, `**/mock.rs`,
-    #   `**/arbitrary.rs`, `**/fuzz/**`, `**/examples/**` - tests, fixtures and mocks.
-    # * `**/build.rs`, `contracts/defuse/src/contract/abi.rs`, `**/near-gds/src/main.rs`,
-    #   `**/near-oa/src/main.rs`, `crates/cli-utils/**`, `crates/rand-compat/**`,
-    #   `crates/wallet/sdk/**` - generated artefacts, CLIs and off-chain SDK code with no
-    #   on-chain decision.
-    # * `*.toml`, `*.md`, `LICENSE`, `Makefile`, `scripts/**`, `releases/**`,
-    #   `rust-toolchain` - configuration, documentation and tooling.
+    # NOT AUDITED (excluded from every variant): tests, mocks and *test* files; fuzz and
+    # bench harnesses; test_util and the hooks/testing render helpers; docs/ and README;
+    # config, *.toml and CHANGELOG; generated tables (stx-genesis, genesis_data.rs) and
+    # build.rs; vendored third-party code under deps_common/ (bitcoin, httparse, bech32,
+    # ctrlc); the contrib/ tools and stacks-profiler; sample/ example contracts; and the
+    # *-testnet / *.tests.clar network- and test-only contract bodies. A defect in any of
+    # these is only in scope when it is reachable from the audited code above.
     # =================================================================================
 ]
 
 
 target_scopes = [
-    "Critical. A `TokenDiff` THAT DOES NOT NET TO ZERO. `TokenDiff::execute_intent` calls `Deltas::internal_apply_deltas` per `(token_id, delta)` and takes fees only on negative deltas via `TokenDiff::token_fee(...).fee_ceil(amount)`; the ONLY thing forcing the batch to conserve value is `TransferMatcher::finalize` at the very end of `Engine::finalize`, where `TokenTransferMatcher::finalize_into` pairs sorted deposits against withdrawals and `deltas.apply_delta` must leave `TokenDeltas` empty. Show an unprivileged signer who crafts a `MultiPayload` batch - self-cancelling deltas inside one `TokenDiff`, `i128::MIN` / `unsigned_abs` edges, an `Amounts::add` / `sub` path returning `None` late, a `saturating_sub` in `sub_add`, or an `unmatched == 0` overflow branch treated as success - so `execute_intents` commits balance changes whose sum is non-zero. Binding: sum of every `token_balances` change for token T across one `execute_intents` call == 0, and every `Transfers` entry has a signer who authorised it.",
+    "Critical. AN AUTH-GATED ENDPOINT MUST FAIL CLOSED. `postblock_v3.rs` requires the `authorization` header to equal the configured password only when `broadcast=1`; `poststackerdbchunk.rs`, `postmempoolquery.rs`, `callreadonly.rs`/`fastcallreadonly.rs` and the simulate endpoints each gate on an optional configured secret and reject with 401 when it is absent or mismatched. Show a remote request that reaches a privileged action without the secret: a preamble whose `authorization` header comparison is case- or whitespace-normalised, a missing-config branch that treats `None` as 'open' instead of 'disabled', a `broadcast` flag parsed so the authenticated path runs unauthenticated, a header injected twice where the last wins. Identity: the set of requests that execute the gated action == the set carrying the exact configured secret, and no request executes it when no secret is configured.",
 
-    "Critical. THE SIGNATURE SAYS ONE THING, `signer_id` SAYS ANOTHER. `Engine::execute_signed_intent` takes the `PublicKey` returned by `MultiPayload::verify()`, then trusts `DefusePayload::signer_id` from `extract_defuse_payload()` and only asks `StateView::has_public_key(&signer_id, &public_key)` - which, for an account with no entry in `self.accounts`, falls back to `account_id == public_key.to_implicit_account_id()`. Seven standards (`Nep413`, `Erc191`, `Tip191`, `RawEd25519`, `WebAuthn`, `TonConnect`, `Sep53`) feed that one check, each with its own envelope and `Payload::hash()`. Show an unprivileged party who gets `execute_signed_intent` to accept a payload as signed by a victim: an envelope byte-string one standard's `verify()` accepts that decodes to a different `DefusePayload` under another, `SignedWebAuthnPayload::extract_defuse_payload` reading `self.payload` while `hash()` digests it separately, a malleable or recoverable signature yielding an attacker-chosen `PublicKey`, a `serde(flatten)` field-shadowing in `Nep413DefuseMessage` / `DefusePayload`, or an implicit-account derivation the victim never registered. Binding: the `(signer_id, public_key)` pair the engine authorises with == the pair the holder of the private key actually signed for.",
+    "Critical. A STACKERDB CHUNK IS WRITABLE ONLY BY ITS SLOT OWNER. `libstackerdb.rs` (`StackerDBChunkData::verify`, `sign`), `stackerdb/db.rs` and `stackerdb/sync.rs` accept a chunk only when its signature recovers to the address that owns the slot and its version exceeds the stored version. Show a remote writer overwriting a slot they do not own or replaying an old chunk: a signature recovered over a hash that omits the slot id, version or contract so one signature validates another slot, a version comparison that accepts equal or lower versions, a sync path that stores a gossiped chunk before verifying its signature, a slot-to-owner mapping read from the wrong reward cycle. Identity: every stored or relayed StackerDB chunk == a chunk signed by the current owner of its slot, with a strictly greater version.",
 
-    "Critical. ONE SIGNATURE, TWO SETTLEMENTS. Replay protection is `verify_intent_nonce` plus `State::commit_nonce`. `VersionedNonce::maybe_from` returns `None` for any nonce lacking `VERSIONED_MAGIC_PREFIX`, and `verify_intent_nonce` then returns `Ok(())` with NO salt, NO nonce deadline and NO expiry check; for `V1(SaltedNonce { salt, nonce: ExpirableNonce { deadline, .. } })` the checks are `is_valid_salt`, `intent_deadline > deadline` and expiry. Commitment goes through `MaybeLegacyNonces::commit`, which rejects legacy-map hits but writes only to `self.nonces`, a `BitMap256` keyed by the top 248 bits; `Nonces::cleanup_by_prefix` clears a whole 256-bit word. Show an unprivileged party who executes one signed `DefuseIntents` twice - a borsh re-encoding of the same `VersionedNonce` producing a different 32-byte `Nonce`, a `Timestamp::now()` / `deadline` boundary, a nonce whose word was cleaned while the signature is still live, or `commit_nonce` succeeding on an account path that never persisted. Binding: the number of times a given signed `MultiPayload` moves funds == 1, for all time.",
+    "Critical. THE NODE MUST NOT RELAY OR STORE WHAT A PEER NEVER AUTHENTICATED. `relay.rs`, `unsolicited.rs` and `chat.rs` decide which gossiped blocks, microblocks, transactions and StackerDB messages a node forwards and stores; a message accepted here propagates network-wide. Show an unsolicited or forged message the node relays without verifying its origin or contents: a `StacksMessage` whose payload is trusted before `verify` on the preamble, a block accepted from a peer that did not win its sortition and forwarded before validation, a relay-hint loop that amplifies one message, a transaction stored in the mempool from a relay path that skips `will_admit_mempool_tx`. Identity: every message a node relays or stores == a message whose origin and contents it has verified against consensus rules.",
 
-    "Critical. THE BALANCE IS GONE BEFORE THE PROMISE RESOLVES. `internal_ft_withdraw` / `internal_nft_withdraw` / `internal_mt_withdraw` call `Contract::withdraw` to debit `token_balances` immediately, then schedule `do_*_withdraw` and a `#[private]` resolver - `ft_resolve_withdraw`, `mt_resolve_transfer`, `resolve_deposit_internal` - that re-credits from `promise_result_checked_json*`, a value the attacker's own token or receiver contract chooses. `ft_resolve_withdraw` credits `amount - used` where `used = amount` on ANY promise error for `is_call`, and `mt_resolve_transfer` clamps `refund.0` to `receiver_balance` and mutates `amounts` in place. Show an unprivileged party - the withdrawal target, a contract they deployed and named in `msg`, or a receiver they lock/drain between the call and the callback - who makes the refunded amount differ from the amount that failed to settle: a double credit, a refund routed to `previous_owner_ids.first()` rather than the real owner, a `token_ids.parse()` mismatch, or a settled transfer that is refunded anyway. Binding: (balance debited) == (assets that actually left the contract) + (amount re-credited by the resolver), per token, per receipt.",
+    "Critical. THE P2P HANDSHAKE MUST BIND A PEER TO ITS CLAIMED IDENTITY AND NETWORK. `codec.rs`, `chat.rs` and `net/db.rs` verify the handshake signature, the `network_id`/`chain_id`, the peer public key and the sequence/nonce that gate a session. Show a remote peer impersonating another, replaying a handshake, or crossing networks: a handshake signature verified over a message that omits the peer address or network id, a nonce or sequence accepted out of order so a replayed authenticated frame is processed, a `Preamble` whose length fields let a later message body be reinterpreted, a peer inserted into the frontier DB under an identity it did not prove. Identity: the peer identity and network the node associates with a connection == the identity and network the handshake signature actually authenticated.",
 
-    "Critical. RE-ENTERING THE VERIFIER FROM A CONTRACT THE ATTACKER WROTE. `AuthCall::execute_intent`, `Transfer`'s `NotifyOnTransfer` and `DepositMessage`'s `DepositAction::Notify` / `Execute` all hand control to an attacker-chosen `contract_id` / `receiver_id` via `on_auth()`, `mt_on_transfer()` or a re-entrant `execute_intents`, optionally deploying it first with `p.state_init(state_init, NearToken::ZERO)` (NEP-616) and `Contract::auth_call_callback_gas`. `Engine::finalize` has already run and the intents in one `DefuseIntents` fire concurrently. Show an unprivileged signer whose callee re-enters `execute_intents`, `ft_withdraw`, `mt_resolve_transfer` or `ft_resolve_deposit` and observes or mutates state between the debit and the settlement - spending a balance twice, taking a refund plus the goods, or having `do_auth_call`'s `promise_result_checked_void(0)` pass while the wNEAR unwrap did not fund it. Binding: the set of balance changes an `execute_intents` receipt commits == the set the signed intents authorise, regardless of what any callee does while it is in flight.",
+    "Critical. EVERY LENGTH-PREFIXED FIELD FROM THE WIRE MUST BE BOUNDS-CHECKED. `codec.rs`, `net/http/request.rs`, `net/http/stream.rs`, `httpcore.rs` and the `consensus_deserialize` implementations read counts and lengths an attacker chooses and allocate or index on them, bounded by `MAX_MESSAGE_LEN` / `MAX_PAYLOAD_LEN` and per-field caps. Show a remote message that causes an out-of-bounds read, an unchecked allocation sized by a wire field, an integer overflow in a length computation, a chunked-encoding or content-length mismatch that desynchronises the stream so the next request is attacker-framed, or a panic (`unwrap`, slice index, `expect`) reachable from parsing. Name the impact: remote crash (unauthenticated DoS of the node), memory disclosure, or request smuggling. Identity: bytes a handler reads for a field == bytes the validated length said were present, for every field an attacker sizes.",
 
-    "Critical. FEES AND ROUNDING THAT DO NOT CLOSE. `Pips::fee_ceil`, `Pips::invert`, `TokenDiff::token_fee` (which returns `Pips::ZERO` for `Nep171` and for `Nep245`/`Imt` when `amount <= 1`), `TokenDiff::supply_delta` / `closure_supply_delta` with `checked_mul_div_ceil` and `checked_mul_div_euclid`, and `UD128` arithmetic in `defuse_decimal` decide how much the `fee_collector` receives and how much a counterparty must supply. Show an unprivileged signer who splits or shapes deltas - many `|delta| == 1` NEP-245 legs, a token id whose `TokenIdType` classification changes the fee, a `fee_ceil` / `mul_div_euclid` rounding direction, or a `closure` that a solver signs against - so the protocol fee actually collected is less than the fee the executed deltas owed, or so the counterparty settles at a price the closure never implied. Binding: fees credited to `fee_collector` for token T == `Pips::fee_ceil` over every negative delta of T in the batch, and the value each party gives up == the value the signed deltas say.",
+    "Critical. A READ ENDPOINT MUST NOT RUN UNBOUNDED CLARITY OR SERVE ANOTHER FORK'S STATE. `callreadonly.rs` / `fastcallreadonly.rs` execute caller-supplied Clarity against a caller-named tip with a cost limit; `getmapentry.rs`, `getdatavar.rs`, `getclaritymarfvalue.rs`, `getstackerdbchunk.rs` and `postfeerate.rs` read state at a caller-named block. Show a remote caller running Clarity past the intended cost/read bound (a `fastcallreadonly` limiter that resets between sub-calls, a read-only call that mutates through a trait), reading state from a block on a non-canonical fork or an unconfirmed tip as if canonical, or a fee-rate estimate an attacker steers by crafted input. Name the impact: unauthenticated compute DoS, or a wallet/bridge served state that no canonical block committed. Identity: the state and cost a read endpoint returns == the state committed at the requested canonical block, within the configured bound.",
 
-    "Critical. TWO NAMES FOR ONE ASSET, ONE NAME FOR TWO. Every balance is keyed by a `TokenId` whose `Display` / `FromStr` round-trip in `defuse_token_id` (`nep141`, `nep171`, `nep245`, `imt`) is the only thing tying it to a real contract and token: `mt_resolve_transfer` re-parses `token_ids` from strings, `ft_on_transfer` builds a key from `env::predecessor_account_id()`, `MtTransferEvent` and `TokenDiff` carry `token_id.to_string()`, and `Nep245TokenId` / `Nep171TokenId` embed an arbitrary user-chosen sub-token string. Show an unprivileged party who mints a token, NFT or MT whose id makes two distinct `TokenId` values collide on `to_string()` - or one `TokenId` parse back to a different asset - so a deposit of a worthless asset credits a valuable balance, a withdrawal drains a different token than the one debited, or a resolver refunds the wrong key. Binding: `TokenId::from_str(&t.to_string()) == t` for every constructible `t`, and each `TokenId` maps to exactly one `(contract, token)` on chain.",
+    "High. ATTACHMENT AND ATTACHMENT-INVENTORY GOSSIP MUST MATCH THEIR COMMITTED HASH. `atlas/mod.rs`, `atlas/db.rs`, `atlas/download.rs`, `getattachment.rs` and `getattachmentsinv.rs` store and serve BNS attachments keyed by content hash, gossiped from peers. Show a peer serving an attachment whose bytes do not match the requested hash, poisoning the inventory so a valid attachment is deemed absent, or filling storage with attachments no on-chain name commits to. Name the impact: BNS resolution serving wrong data, or attachment storage exhaustion tied to a consensus commitment. Identity: the attachment bytes served for a hash == the bytes whose hash a confirmed name operation committed.",
 
-    "Critical. wNEAR SPENT, NEAR NEVER DELIVERED. `native_withdraw`, `storage_deposit` and a deposit-bearing `auth_call` all debit the signer's NEP-141 wNEAR balance through `Contract::withdraw`, then chain `ext_wnear::near_withdraw` into `do_native_withdraw` / `do_storage_deposit` / `do_auth_call`, and `FtWithdraw::storage_deposit` does the same inside `internal_ft_withdraw`. Each documents that the wNEAR is NOT refunded on failure, and the only guards are the `min_gas()` floors (`FT_TRANSFER_CALL_GAS_MIN`, `MT_BATCH_TRANSFER_GAS_MIN`, `AuthCall::MIN_GAS_DEFAULT`, `STATE_INIT_GAS`) plus `with_unused_gas_weight(0)` and `auth_call_callback_gas`'s `checked_add`. Show an unprivileged party who makes another user's wNEAR leave without the corresponding NEAR, storage deposit or `on_auth` ever happening - an attacker-chosen `receiver_id` or `contract_id` that makes the callback abort after the debit, a `min_gas` value that starves the callback but passes the floor, or a `state_init` that consumes the gas the settlement needed. Binding: wNEAR debited from an account == NEAR that actually reached the named receiver, or was returned to that account.",
+    "High. THE INVENTORY AND TENURE DOWNLOAD STATE MACHINE MUST NOT BE STEERED BY A PEER. `inv/nakamoto.rs`, `download/nakamoto/*` decide which tenures and blocks to fetch from which peer based on advertised inventories. Show a peer advertising a false inventory that makes the node skip a canonical tenure, loop re-downloading, accept a block for the wrong tenure slot, or wedge the download state machine so the node cannot follow the chain tip. Name the impact: the node stalls behind the canonical tip (availability) or accepts a mis-slotted block into staging. Identity: the tenure/block the node fetches and stages for a slot == the tenure/block the canonical inventory (verified against sortition) names for that slot.",
 
-    "High. A WALLET THAT EXECUTES A REQUEST NOBODY SIGNED FOR IT. `Wallet::w_execute_signed(msg, proof)` must reject a `RequestMessage` whose `chain_id` is another network, whose `signer_id` is not `env::current_account_id()`, or whose `nonce` is used, expired or from the future; `Nonces` is a dual-window `BitMap<BTreeMap<u32, u32>>` rotated by `timeout` and `last_cleaned_at`, and `w_execute_extension` trusts `env::predecessor_account_id()` against the enabled-extension set while `WalletOp::SetSignatureMode` / `AddExtension` mutate who may act. `SignatureSchema::verify_request_msg` (ed25519, webauthn-p256, webauthn-ed25519, no-sign) and the NEP-641 `AuthResolver` / `AuthorizationResolution` are the only authority. Show an unprivileged party who gets a wallet holding Verifier balances to execute a `Request` - a nonce replayed across the `old` / `current` window rotation, a `RequestMessage` re-encoded so `proof` still verifies, a `no-sign` or extension path reachable without authorisation, or an `AuthorizationResolution` accepted for the wrong `signer_id`. Binding: every `NearAction` a wallet executes == one its owner signed, for this chain and this account, exactly once.",
+    "High. THE SIGNER EVENT STREAM MUST DELIVER ONLY WHAT THE SENDER SIGNED. `libsigner/src/http.rs`, `session.rs`, `events.rs` and `v0/messages.rs` frame and parse the StackerDB/event messages the signer binary consumes. Show a remote sender injecting a message the signer treats as authentic - a `SignerMessage` parsed before its origin is checked, a length field that lets one event body be read as another, a stale message replayed into the stream - so the signer acts on data no authorized party sent. Name the impact bounded to the signer transport (the consensus decision itself is another variant). Identity: every message the signer library surfaces to the runloop == a message an authorized StackerDB slot owner signed.",
 
-    "Critical. THE MISSING BINDING - what nobody built. Nothing in this repository re-derives, after `execute_intents` returns, that the assets the Verifier still custodies equal the sum of all `token_balances` it owes; nothing ties a `TokenId` back to a live on-chain asset at withdrawal time; nothing bounds what an attacker-controlled callee does to state between a debit and its `*_resolve_*` callback; and nothing checks that a legacy (non-versioned) nonce was ever bounded by a salt or an expiry. Identify the FIRST point at which a byte an unprivileged party chose - a `MultiPayload` handed to `execute_intents`, a deposit `msg`, a `ft_withdraw`-family call under `auth_by_predecessor_id`, a value returned by a contract they deployed, or a `RequestMessage` sent to a wallet - becomes a credited balance, a released asset or a committed nonce with no independent party ever re-deriving it. Prove it with one `cargo test` asserting both the value used and the value that should have authorised it, and show that once they diverge nothing in the protocol reconciles them.",
+    "Critical. THE MISSING INVARIANT - what nobody built. No single choke point guarantees every remote byte is authenticated before it influences state: auth-gated endpoints each re-implement the secret check and can fail open; relay and unsolicited paths trust some messages before verification; length fields from the wire are bounds-checked field-by-field with no global guarantee; read endpoints trust a caller-named tip; StackerDB sync and gossip verify signatures at different points. Identify the FIRST remotely reachable point where an unauthenticated or unauthorized message influences stored state, relayed gossip, served state, or crashes the node, prove it with a Rust test in `stackslib::net` (or `libsigner`) that feeds crafted bytes to the handler and asserts either the authenticated-versus-stored equality or a panic/over-read, and show the impact is remote (an open port), needs no privileged role, and is one of: node crash / unauthenticated DoS, network-wide propagation of forged data, or state served that no canonical block committed.",
 ]
 
 
@@ -378,138 +565,112 @@ scope_scan = [
 
 def question_generator(target_file: str) -> str:
     """
-    Generate custody and authorization audit questions for one NEAR Intents target.
+    Generate network-boundary (P2P/RPC/StackerDB/Atlas) audit questions for one
+    stacks-core target.
 
     ```
     target_file format:
-    "'File Name: contracts/defuse/core/src/engine/state/deltas.rs -> Scope: Critical. ...'"
+    "'File Name: stackslib/src/net/relay.rs -> Scope: Critical. ...'"
     """
 
     prompt = f"""
     ```
 
-    Generate custody and authorization security audit questions for this exact
-    NEAR Intents target:
+    Generate blockchain-node network-security audit questions for this exact stacks-core
+    target:
 
     {target_file}
 
     Project focus:
-    NEAR Intents ("the Verifier", `intents.near`) is a custodial multi-token ledger on
-    NEAR. Users deposit NEP-141 / NEP-171 / NEP-245 assets, and every later move is
-    authorised by an off-chain signature over a `DefusePayload` carried in a
-    `MultiPayload`. Untrusted bytes enter through doors any unprivileged party controls:
-    a `MultiPayload` batch handed to `execute_intents` / `simulate_intents` by ANY caller
-    (the signature is the only authority - the predecessor is irrelevant), a
-    `ft_on_transfer` / `nft_on_transfer` / `mt_on_transfer` deposit `msg`, a direct
-    `ft_withdraw`-family call from an account that enabled `auth_by_predecessor_id`, a
-    `RequestMessage` sent to a wallet contract, and the return value of any contract the
-    attacker deploys and names in `msg`, `AuthCall::contract_id` or `NotifyOnTransfer` -
-    which flows back into the `*_resolve_*` callbacks. Those bytes end in one place: the
-    `token_balances` of accounts inside the Verifier and the real assets those balances
-    are a claim on. Anything that moves value the signer did not authorise, replays one
-    signature, breaks conservation across a batch, or leaves the ledger owing more than
-    it custodies is the bug.
+    stacks-core exposes P2P and RPC ports that accept bytes from anyone. Untrusted input
+    arrives as P2P handshakes and gossiped blocks/txs/StackerDB messages, HTTP requests to
+    the RPC API, StackerDB chunks, Atlas attachments, and advertised inventories that steer
+    the download state machine. The node decides (a) whether a peer is who it claims and
+    allowed to say this - handshake signatures, StackerDB slot-owner signatures, auth-gated
+    endpoint secrets; (b) whether stored or relayed state matches what was actually
+    authorized; (c) whether each handler stays within its resource and trust bounds. Anything
+    the node stores, relays or serves that a remote party did not authenticate, plus any
+    remotely reachable panic or over-read, is the bug.
 
     Rules:
     * Treat `File Name:` as the exact file.
     * Treat `Scope:` as the ONLY impact to target.
     * Assume full repo context is accessible.
     * Do not ask for code or say anything is missing.
-    * Use exact Rust symbols (module, struct, enum, fn, const, field) as they appear in the file.
-    * EVERY question must close on a binding that must hold across a call. State it explicitly
-      as an equality between two named values. Narrative questions are rejected.
-    * Attacker is unprivileged only: anyone who can send a NEAR transaction, call
-      `execute_intents` / `simulate_intents` with any `MultiPayload` batch, deposit tokens with
-      an arbitrary `msg`, deploy and control their own FT/NFT/MT and receiver contracts, create
-      accounts inside the Verifier and hold their own balances, and sign with their own keys
-      under any supported standard.
-    * Attacker is NOT the DAO or any `Role` holder (`UnrestrictedWithdrawer`, `SaltManager`,
-      `GarbageCollector`, `RelayerKeysManager`, `Pauser`, `UnrestrictedAccountUnlocker`), not a
-      relayer key holder, not a contract upgrader, and not the fee collector. They hold no
-      victim private key and no access-control role. No malicious validator or node, no key
-      compromise, no RPC or TLS interception, no local or physical access, no compromised
-      dependency, no social engineering.
+    * Use exact Rust symbols (function, struct, enum variant, constant like MAX_MESSAGE_LEN,
+      trait) as they appear in the file.
+    * EVERY question must close on an equality that must hold - authenticated-versus-stored,
+      served-versus-committed, bytes-read-versus-length - OR name a specific remotely
+      reachable memory/panic fault. State it explicitly. Vague questions are rejected.
+    * Attacker is unprivileged only: any remote party who can open a TCP connection to a
+      node's P2P or RPC port and send arbitrary bytes, run their own peer, own a StackerDB
+      slot they legitimately hold, and gossip messages. They do NOT hold the node's
+      configured RPC secret, another peer's or slot owner's key, or any admin role.
+    * Attacker is NOT the node operator, not a configured trusted peer with the secret, not a
+      signer or miner with another's key. No compromised dependency; no social engineering; no
+      physical or local-network access to the victim node.
     * PROGRAM EXCLUSIONS - a question landing in any of these wastes the whole batch:
-      - `contracts/escrow-swap/**` is OUT OF SCOPE for this program.
-      - Tests, fixtures and mocks (`tests/**`, `**/tests/**`, `**/tests.rs`,
-        `crates/testing/**`, `**/mock.rs`, `**/arbitrary.rs`, `**/fuzz/**`, `**/examples/**`),
-        generated and tooling files (`**/build.rs`, `contract/abi.rs`, `**/near-gds/**`,
-        `**/near-oa/**`, `crates/cli-utils/**`, `crates/wallet/sdk/**`), `*.toml`, `*.md`,
-        `scripts/**`, `releases/**` are OUT OF SCOPE.
-      - Unbounded gas or storage consumption, denial of service, rate limiting, retry
-        behaviour, queue depth, resource exhaustion, unbounded collections, memory hygiene
-        and log volume are OUT OF SCOPE.
-      - Griefing with no attacker profit, anything that only costs the attacker their own
-        funds, and anything requiring a DAO/role holder, relayer key or an upgrade are OUT OF
-        SCOPE.
-      - Defects in third-party crates (near-sdk, near-contract-standards, near-plugins, serde,
-        borsh, k256, p256, ed25519-dalek, bs58) with no exploit path through this repository's
-        own code are OUT OF SCOPE.
-      - Also excluded: leaked keys, best-practice notes, feature requests, and theoretical
-        findings with no demonstration.
-      - A weakness in this repository that manipulates a third-party crate into unsafe
-        behaviour remains fully in scope.
+      - epoch2x/neon pre-Nakamoto download and inv paths, the signer decision logic
+        (stacks-signer runloop/signerdb), and consensus block-validation internals are other
+        variants and OUT OF SCOPE here, as are README, tests, benches and config.
+      - Generic volumetric DDoS, bandwidth flooding and connection-slot exhaustion that only
+        require traffic volume are OUT OF SCOPE; a single-message crash, over-read, request
+        smuggling or amplification IS in scope (name it).
+      - Defects in tokio, rustls, serde or the OS TCP stack with no exploit path through this
+        repo's code are OUT OF SCOPE; a weakness here that misuses them is IN scope.
+      - Also excluded: leaked keys, privileged accounts, centralization risk, best-practice
+        notes, feature requests, missing HTTP security headers with no impact, and
+        theoretical findings.
     * IN-SCOPE IMPACTS - every question must land on one and name it:
-      Critical: tokens moved, credited or withdrawn without the owner's valid signature or
-      authorisation; one signed payload settling more than once; a batch whose balance changes
-      do not net to zero, so the Verifier owes more than it custodies; a refund or resolver
-      credit that does not match what failed to settle; a `TokenId` collision that lets a
-      worthless asset claim a valuable balance; protocol fees bypassed or over-collected; user
-      funds permanently frozen or unrecoverable.
-      High: an intent executed against a locked account, or a lock/unlock state that
-      contradicts what the contract enforces; a wallet contract executing a `Request` its owner
-      did not authorise for this chain and account; `simulate_intents` reporting an outcome
-      that `execute_intents` does not produce, when a party settles on that report.
-    * Every question must be a concrete real-world scenario an unprivileged attacker can
-      execute against the deployed Verifier - a `MultiPayload` they sign and submit, a deposit
-      `msg` they craft, a contract they deploy and name, a direct contract call they make. No
-      speculative resource-hygiene or memory questions.
-    * A panic or error is a finding only when it freezes funds, lets an unauthorised move
-      through, or leaves the ledger unbalanced - say which.
-    * Generate 40 to 80 high-signal questions.
+      Critical: remote node crash or unauthenticated DoS from a single or few messages;
+      unauthenticated/unauthorized write to node state or StackerDB; network-wide propagation
+      of forged blocks/txs/chunks; request smuggling or auth bypass on a gated endpoint;
+      memory disclosure.
+      High: serving state from a non-canonical block as canonical; steering a node off the
+      canonical tip via false inventory; attachment/BNS data mismatch; a bounded compute DoS
+      on a read endpoint.
+    * Every question must be a concrete real-world scenario a remote unprivileged party can
+      execute against a node's open port.
+    * A rejection is a finding only when it drops a valid message permanently or accepts a
+      forged one - say which.
+    * Generate 20 to 40 high-signal questions.
     * At least 70% must land on a Critical impact rather than a High one.
-    * Every question must be testable by a `cargo test` in this workspace (unit test, or the
-      `near-workspaces` sandbox harness), with no mainnet.
+    * Every question must be testable with a Rust test in `stackslib::net` or `libsigner`
+      feeding crafted bytes to the handler locally. Never propose testing on mainnet or a
+      public testnet.
     * Avoid generic checklist questions and repeated root causes.
-    * Prefer questions that name TWO values that must be equal and ask whether they are: the
-      value debited and the value delivered, the signer the signature proves and the
-      `signer_id` the engine uses, the times a nonce settles and one, the sum of deltas and
-      zero, the fee owed and the fee collected, the asset a `TokenId` names and the asset moved.
+    * Prefer questions that name TWO values that must be equal (authenticated vs stored,
+      served vs committed, bytes-read vs length) or a precise panic/over-read site.
 
     Known dead ends - do NOT generate questions about these:
-    * Anything needing a DAO or `Role` holder, a relayer key, a contract upgrade, or a victim's
-      private key.
-    * A bug in a dependency with no reachable path through this repository.
-    * Gas, storage growth, event log size, or an attacker burning only their own funds with no
-      protocol value moved and no other party harmed.
-    * Findings only reproducible in tests, mocks, fixtures or generated files.
-    * `contracts/escrow-swap/**`.
+    * Anything needing the node's RPC secret, another peer's or slot owner's key, or an admin role.
+    * Volumetric DDoS, bandwidth or connection-slot flooding needing only traffic volume.
+    * A dependency CVE with no reachable path through this repo's net code.
+    * Findings only in epoch2x/neon paths, the signer decision logic, or tests/tooling.
 
-    Core bindings (each question must close on one):
-    * AUTHORISATION: every balance change == one a valid signature or `auth_by_predecessor_id`
-      caller authorised, for that exact account and amount.
-    * REPLAY: the number of times a signed `MultiPayload` settles == 1, forever.
-    * CONSERVATION: the sum of all `token_balances` changes for a token across one call == 0,
-      and total balances owed == assets actually custodied.
-    * SETTLEMENT: value debited == value delivered plus value re-credited by the resolver.
-    * IDENTITY: the `(contract, token)` a `TokenId` names == the asset actually moved; the
-      `(signer_id, public_key)` authorised == the pair actually signed.
-    * FEES: fees credited to `fee_collector` == fees the executed deltas owed.
+    Core equalities / faults (each question must close on one):
+    * AUTHENTICATION: what the node stores/relays/acts on == what a remote party's signature
+      or configured secret authenticated.
+    * OWNERSHIP: every StackerDB chunk stored/relayed == one signed by its slot's current
+      owner, with a greater version.
+    * CANONICITY: state a read endpoint serves == state committed at the requested canonical block.
+    * BOUNDS: bytes a handler reads for a field == the validated length; no allocation or
+      index on an unchecked wire value.
+    * SAFETY: a named remotely reachable panic, over-read, smuggling or amplification site.
 
     Each question must include:
-    1. target struct/fn;
-    2. attacker action (a concrete signed `MultiPayload`, deposit `msg`, contract call, or a
-       contract they deploy, with its fields);
-    3. preconditions (existing accounts, balances, lock state, salt, deposited tokens);
-    4. call sequence through the code;
-    5. the binding that breaks, written as an equality;
-    6. scoped impact and whose funds are affected;
+    1. target function, struct or endpoint;
+    2. attacker action (a concrete message or request with the fields that matter);
+    3. preconditions (peer state, config, reward cycle, tip);
+    4. call sequence through framing, verification and storage/relay;
+    5. the equality or fault, written explicitly;
+    6. scoped impact and what is crashed, forged or exposed;
     7. proof idea.
 
     Output only valid Python. No markdown. No explanations.
 
     questions = [
-    "[File: {target_file}] [Method: struct_or_fn] Can an unprivileged ATTACKER_ACTION under PRECONDITIONS trigger CALL_SEQUENCE, breaking the binding BINDING_EQUALITY, causing scoped impact: SCOPE_IMPACT against PARTY? Proof idea: cargo test PARAMETERS asserting AUTHORISATION, REPLAY, CONSERVATION, SETTLEMENT, IDENTITY, or FEES.",
+    "[File: {target_file}] [Method: function_or_endpoint] Can a remote unprivileged ATTACKER_ACTION under PRECONDITIONS trigger CALL_SEQUENCE, breaking the equality/fault EQUALITY, causing scoped impact: SCOPE_IMPACT against PARTY? Proof idea: Rust net test PARAMETERS asserting AUTHENTICATION, OWNERSHIP, CANONICITY, BOUNDS, or SAFETY.",
     ]
     """
     return prompt
@@ -517,7 +678,7 @@ def question_generator(target_file: str) -> str:
 
 def audit_format(security_question: str) -> str:
     """
-    Generate a custody and authorization exploit-validation prompt for NEAR Intents.
+    Generate a network-boundary exploit-validation prompt for stacks-core.
     """
 
     prompt = f"""# SECURITY AUDIT PROMPT
@@ -527,19 +688,19 @@ def audit_format(security_question: str) -> str:
 
 ## Rules
 - Use existing repo context only. Analyze only this question and scoped impact.
-- Attacker is unprivileged only: anyone who can send a NEAR transaction, call `execute_intents` / `simulate_intents` with any `MultiPayload` batch, deposit tokens with an arbitrary `msg`, deploy and control their own FT/NFT/MT and receiver contracts, hold their own Verifier balances, and sign with their own keys. They are not the DAO or any `Role` holder (`UnrestrictedWithdrawer`, `SaltManager`, `GarbageCollector`, `RelayerKeysManager`, `Pauser`, `UnrestrictedAccountUnlocker`), not a relayer key holder, not an upgrader, not the fee collector, and hold no victim private key.
-- Reject malicious validators or nodes, key compromise, RPC or TLS interception, local or physical access, compromised dependencies and social engineering.
-- OUT OF SCOPE, reject on sight: `contracts/escrow-swap/**`; tests, fixtures and mocks (`tests/**`, `**/tests/**`, `**/tests.rs`, `crates/testing/**`, `**/mock.rs`, `**/arbitrary.rs`, `**/fuzz/**`, `**/examples/**`); generated and tooling files (`**/build.rs`, `contract/abi.rs`, `**/near-gds/**`, `**/near-oa/**`, `crates/cli-utils/**`, `crates/wallet/sdk/**`), `*.toml`, `*.md`, `scripts/**`, `releases/**`; unbounded gas or storage consumption, denial of service, rate limiting, retry behaviour and resource exhaustion; griefing with no attacker profit; anything requiring a DAO/role holder, relayer key or upgrade; third-party crate defects with no path through this repository; best-practice notes; feature requests; theoretical findings with no demonstration.
-- The impact must be one of: Critical - tokens moved, credited or withdrawn without the owner's valid signature or authorisation, one signed payload settling more than once, a batch whose balance changes do not net to zero so the Verifier owes more than it custodies, a refund or resolver credit that does not match what failed to settle, a `TokenId` collision letting a worthless asset claim a valuable balance, protocol fees bypassed or over-collected, or user funds permanently frozen; High - an intent executed against a locked account or a lock state contradicting what is enforced, a wallet contract executing a `Request` its owner did not authorise for this chain and account, or `simulate_intents` reporting an outcome `execute_intents` does not produce when a party settles on that report.
-- Focus on real impact: value leaving the Verifier that the signer never authorised.
+- Attacker is unprivileged only: any remote party who can connect to a node's P2P or RPC port and send arbitrary bytes, run their own peer, own a StackerDB slot they legitimately hold, and gossip messages. They do not hold the node's RPC secret, another peer's or slot owner's key, or any admin role, and have no local or physical access.
+- Reject compromised-dependency, social-engineering and local/physical-access assumptions, and any path requiring a privileged role or the configured secret.
+- OUT OF SCOPE, reject on sight: epoch2x/neon download and inv paths, the signer decision logic, consensus block-validation internals; README, tests, benches, config; volumetric DDoS, bandwidth flooding and connection-slot exhaustion needing only traffic volume; tokio/rustls/serde/OS-TCP defects with no exploit path through this repo's code; missing HTTP headers with no impact; best-practice notes; theoretical findings.
+- The impact must be one of: Critical - remote crash/unauthenticated DoS from few messages, unauthenticated/unauthorized write to state or StackerDB, network-wide propagation of forged data, request smuggling or auth bypass, memory disclosure; High - serving non-canonical state as canonical, steering a node off the tip via false inventory, attachment/BNS mismatch, bounded compute DoS on a read endpoint.
+- Focus on real impact: a forged message stored/relayed, a crash from a single message, or state served that no canonical block committed.
 
 ## Validate
-- Write the binding the question claims is broken as an explicit equality between two named values BEFORE tracing any code.
-- Trace the exact reachable path from the attacker's `MultiPayload`, deposit `msg`, contract call or deployed callee, and record every read and write of: the verified `PublicKey` and `DefusePayload::signer_id`, the `Nonce` and its `VersionedNonce` / `Salt` / deadline, each `TokenId` and its string form, every `internal_add_balance` / `internal_sub_balance` / `Amounts::add` / `sub`, the `TransferMatcher` deltas and `Transfers` produced by `finalize`, the fee taken by `Pips::fee_ceil`, every Promise scheduled and every `*_resolve_*` callback's re-credit.
-- Evaluate both sides of the equality before and after. If they still match, output no vulnerability.
-- Check whether `MultiPayload::verify`, `has_public_key`, `verify_intent_nonce`, `MaybeLegacyNonces::commit`, `SaltRegistry::is_valid`, `Lock::get_mut`, `TransferMatcher::finalize`, `assert_one_yocto`, `#[private]`, `#[pause]`, the `access_control_any` guards, or a `checked_*` arithmetic path already prevents the divergence.
-- State what the attacker gains or destroys per attempt and whether it is repeatable across accounts, tokens or batches.
-- Require exact file/fn support and a reproducible `cargo test` proof (unit test or `near-workspaces` sandbox), with no mainnet.
+- Write the equality or fault the question claims BEFORE tracing any code.
+- Trace the exact reachable path from the remote bytes and record every verification (signature, secret, length, version) and every store/relay/serve, and every allocation or index on a wire-controlled value.
+- Evaluate the equality before and after, or locate the exact panic/over-read site. If the guard holds, output no vulnerability.
+- Check whether the handshake/chunk signature check, the auth-gate, `MAX_MESSAGE_LEN`/`MAX_PAYLOAD_LEN` and per-field caps, `will_admit_mempool_tx`, or the canonical-tip resolution already prevents it.
+- State what the attacker achieves per message and whether it is repeatable, and confirm the port is remotely reachable with no privileged role.
+- Require exact file/function support and a reproducible Rust test feeding crafted bytes to the handler.
 
 ## Output
 If valid, output exactly:
@@ -551,19 +712,19 @@ If valid, output exactly:
 [2-3 sentences]
 
 ### Finding Description
-[The broken binding as an equality, the code path, root cause, the attacker's exact payload, msg or call, exploit flow, and why existing guards fail]
+[The broken equality or fault, the code path, root cause, the attacker's exact message, exploit flow, and why existing guards fail]
 
 ### Impact Explanation
-[What is moved, credited, replayed, frozen or under-collected, whose funds, repeatability, blast radius, matching severity category]
+[What is crashed, forged, written, smuggled or exposed, which party/nodes, repeatability, matching severity category]
 
 ### Likelihood Explanation
-[Preconditions, required balances and accounts, attacker cost, feasibility, repeatability]
+[Preconditions, peer/config/tip state required, attacker cost, remote reachability, repeatability]
 
 ### Recommendation
 [Specific fix]
 
 ### Proof of Concept
-[cargo test plan with the exact assertions on both sides of the binding]
+[Rust net test plan feeding crafted bytes, with the exact assertion or crash site]
 
 If invalid, output exactly:
 #NoVulnerability found for this question.
@@ -575,7 +736,7 @@ No extra text.
 
 def validation_format(report: str) -> str:
     """
-    Generate a strict bounty-style validation prompt for NEAR Intents claims.
+    Generate a strict bounty-style validation prompt for stacks-core network claims.
     """
     prompt = f"""# VALIDATION PROMPT
 
@@ -587,33 +748,32 @@ def validation_format(report: str) -> str:
 - Check SECURITY.md and Researcher.Md for scope, exclusions, and valid impact classes.
 - Do not create a new vulnerability if the submitted claim is weak or invalid.
 - Do not upgrade severity unless the provided evidence proves the higher impact.
-- A binding claim is only valid if the report states the broken equality between two named values and shows both sides concretely. Reject prose-only claims.
-- Reject anything requiring the DAO or a `Role` holder (`UnrestrictedWithdrawer`, `SaltManager`, `GarbageCollector`, `RelayerKeysManager`, `Pauser`, `UnrestrictedAccountUnlocker`), a relayer key, a contract upgrade, a victim's private key, a malicious validator or node, RPC or TLS interception, local or physical access, a compromised dependency, or social engineering.
-- OUT OF SCOPE, reject on sight: `contracts/escrow-swap/**`; tests, fixtures and mocks (`tests/**`, `**/tests/**`, `**/tests.rs`, `crates/testing/**`, `**/mock.rs`, `**/arbitrary.rs`, `**/fuzz/**`, `**/examples/**`); generated and tooling files (`**/build.rs`, `contract/abi.rs`, `**/near-gds/**`, `**/near-oa/**`, `crates/cli-utils/**`, `crates/wallet/sdk/**`), `*.toml`, `*.md`, `scripts/**`, `releases/**`; unbounded gas or storage consumption, denial of service, rate limiting, retry behaviour and resource exhaustion; griefing with no attacker profit; third-party crate defects with no path through this repository; best-practice notes; feature requests; theoretical findings with no demonstration.
-- The impact must be one of: Critical - tokens moved, credited or withdrawn without the owner's valid signature or authorisation, one signed payload settling more than once, a batch whose balance changes do not net to zero, a refund or resolver credit that does not match what failed to settle, a `TokenId` collision letting a worthless asset claim a valuable balance, protocol fees bypassed or over-collected, or user funds permanently frozen; High - an intent executed against a locked account or a contradictory lock state, a wallet contract executing an unauthorised `Request`, or `simulate_intents` diverging from `execute_intents` where a party settles on the report.
-- Reject claims that depend on a deployment ignoring the documented configuration, or that only harm the attacker's own funds.
-- Reject if the bug was already fixed, publicly disclosed, or is covered by an existing advisory or CHANGELOG entry for a supported version.
-- Reject a divergence with no authorisation, replay, conservation, settlement, identity or fee boundary crossed.
-- A valid report must be triggerable by an unprivileged attacker against the deployed Verifier running the current release.
+- A claim is only valid if the report states the broken equality (authenticated vs stored, served vs committed, bytes vs length) or names a precise remotely reachable panic/over-read, and shows it concretely. Reject prose-only claims.
+- Reject anything requiring the node's RPC secret, another peer's or slot owner's key, an admin role, local or physical access, a compromised dependency, or social engineering.
+- OUT OF SCOPE, reject on sight: epoch2x/neon download and inv paths, the signer decision logic, consensus block-validation internals; README, tests, benches, config; volumetric DDoS, bandwidth flooding and connection-slot exhaustion needing only traffic volume; tokio/rustls/serde/OS-TCP defects with no exploit path through this repo's code; missing HTTP headers with no impact; centralization risk; best-practice notes; feature requests; theoretical findings.
+- The impact must be one of: Critical - remote crash/unauthenticated DoS from few messages, unauthenticated/unauthorized write to state or StackerDB, network-wide propagation of forged data, request smuggling or auth bypass, memory disclosure; High - serving non-canonical state as canonical, steering a node off the tip via false inventory, attachment/BNS mismatch, bounded compute DoS on a read endpoint.
+- Reject claims that need only traffic volume, or whose only effect is on the attacker's own node.
+- Reject if the bug was already fixed, publicly disclosed, or covered by a known-issues list.
+- A valid report must be triggerable by a remote unprivileged party against a node's open port on the current code.
 - A PoC is mandatory. Prefer #NoVulnerability over speculative reports.
 
 ## Required Validation Checks
 All must pass:
-1. Exact in-scope file, struct/fn, and line references.
-2. The binding written explicitly as an equality, with both sides shown before and after.
-3. Clear root cause: which unverified signer field, which missing nonce or salt check, which unchecked arithmetic, which attacker-controlled callback return, which `TokenId` encoding causes the divergence.
-4. Reachable exploit path: preconditions -> attacker `MultiPayload`, deposit `msg`, contract call or deployed callee -> call sequence -> observed divergence.
-5. `MultiPayload::verify`, `has_public_key`, `verify_intent_nonce`, `MaybeLegacyNonces::commit`, `SaltRegistry::is_valid`, `Lock::get_mut`, `TransferMatcher::finalize`, `assert_one_yocto`, `#[private]`, `#[pause]`, `access_control_any` and the `checked_*` arithmetic reviewed and shown insufficient.
-6. Impact stated concretely: how much of which token moves, whose, and whether it is repeatable.
-7. Reproducible proof: `cargo test` (unit or `near-workspaces` sandbox) with the asserted values, no mainnet.
+1. Exact in-scope file, function/struct/endpoint, and line references.
+2. The equality or fault written explicitly, with both sides or the crash site shown.
+3. Clear root cause: which auth gap, ownership check, canonicity assumption, bounds check, or unsafe parse causes it.
+4. Reachable exploit path: preconditions -> remote bytes -> framing, verification and storage/relay sequence -> observed divergence or fault.
+5. The handshake/chunk signature check, the auth-gate, the length caps, `will_admit_mempool_tx`, and canonical-tip resolution reviewed and shown insufficient.
+6. Impact stated concretely: what is crashed, forged, written or exposed, and whether it is remote and repeatable.
+7. Reproducible proof: Rust test feeding crafted bytes to the handler with the asserted values or crash.
 
 ## Silent Triage Questions
 Before output, internally answer:
-- What exactly is the equality, and does it actually fail?
-- Can an ordinary depositor, intent signer, token deployer or internet caller trigger it with no role and no victim key?
-- Is the flaw in this repository's in-scope code, not in a dependency, in escrow-swap, or in a careless deployment?
-- What value moves, or whose funds freeze, and is it repeatable?
-- Would a NEAR Intents triager accept the exploit path?
+- What exactly is the equality or fault, and does it actually occur?
+- Can a remote party trigger it over an open port with no secret and no other party's key?
+- Is the flaw in this repo's net/libsigner code, not in a dependency or the OS stack?
+- What is crashed, forged, written or exposed, and can it be repeated remotely?
+- Would an Immunefi triager accept it under the remotely-exploitable / DoS severity system?
 - What exact test would prove it?
 
 ## Output
@@ -625,22 +785,22 @@ Audit Report
 [Clear vulnerability statement] - ([File: file_path])
 
 ## Summary
-[2-3 sentence summary of the broken binding and impact]
+[2-3 sentence summary of the broken equality/fault and impact]
 
 ## Finding Description
-[Exact code path, the equality, root cause, exploit flow, and why existing guards fail]
+[Exact code path, the equality or fault, root cause, exploit flow, and why existing guards fail]
 
 ## Impact Explanation
-[What is moved, replayed, unbalanced or frozen, affected party, repeatability, severity category]
+[What is crashed, forged, written, smuggled or exposed, affected party/nodes, repeatability, severity category]
 
 ## Likelihood Explanation
-[Attacker capability, preconditions, configuration, cost, feasibility]
+[Attacker capability, preconditions, remote reachability, cost, feasibility]
 
 ## Recommendation
 [Specific fix guidance]
 
 ## Proof of Concept
-[Minimal reproducible steps or cargo test plan with concrete assertions]
+[Minimal reproducible steps or Rust net test plan with concrete assertions or crash site]
 
 If invalid, output exactly:
 #NoVulnerability found for this question.
@@ -652,7 +812,7 @@ Output only one of the two outcomes above. No extra text.
 
 def scan_format(report: str) -> str:
     """
-    Generate a short cross-project analog scan prompt for NEAR Intents.
+    Generate a short cross-project analog scan prompt for the stacks-core network boundary.
     """
     prompt = f"""# ANALOG SCAN PROMPT
 
@@ -660,18 +820,18 @@ def scan_format(report: str) -> str:
 {report}
 
 ## Rules
-- Use in-scope repository context only (`contracts/defuse/**`, `contracts/wallet/**`, `contracts/poa/**`, `contracts/global-deployer/src/**`, `contracts/outlayer/app/src/**`, `contracts/treasury-logger/src/**`, `crates/**`), excluding tests, mocks, generated and tooling files. Do not ask for code or claim missing files.
+- Use in-scope repo context only (`stackslib/src/net/**` excluding epoch2x/neon paths, `libstackerdb/**`, and the `libsigner` transport files). Do not ask for code or claim missing files.
 - Use the external report only as a bug-class hint, not as proof.
-- Keep only unprivileged-attacker analogs that break a custody binding: a balance change versus the signature that authorised it, the times one signed `MultiPayload` settles versus one, the sum of a batch's deltas versus zero, value debited versus value delivered plus refunded, the asset a `TokenId` names versus the asset moved, fees owed versus fees collected.
-- OUT OF SCOPE, reject on sight: `contracts/escrow-swap/**`; tests, fixtures and mocks; generated and tooling files (`**/build.rs`, `contract/abi.rs`, `**/near-gds/**`, `**/near-oa/**`, `crates/cli-utils/**`, `crates/wallet/sdk/**`), `*.toml`, `*.md`, `scripts/**`, `releases/**`; unbounded gas or storage consumption, denial of service, rate limiting, retry behaviour and resource exhaustion; griefing with no attacker profit; anything requiring the DAO, a `Role` holder, a relayer key, an upgrade, a victim key, a malicious node, RPC interception, local access or social engineering; third-party crate defects with no path through this repository; best-practice notes; feature requests; theoretical findings.
-- The impact must be one of: Critical - tokens moved, credited or withdrawn without valid authorisation, one signed payload settling more than once, a batch that does not net to zero, a mismatched resolver refund, a `TokenId` collision, fees bypassed or over-collected, or funds permanently frozen; High - an intent executed against a locked account, a wallet executing an unauthorised `Request`, or `simulate_intents` diverging from `execute_intents`.
-- Reject analogs that depend on a deployment ignoring the documented configuration, and analogs with no authorisation, replay, conservation, settlement, identity or fee boundary crossed.
+- Keep only remote, unprivileged analogs that break an equality (authenticated vs stored, served vs committed, bytes vs length) or reach a precise panic/over-read: an auth-gate that fails open, a StackerDB chunk stored without a valid owner signature, forged gossip relayed, an unchecked wire length, or non-canonical state served as canonical.
+- OUT OF SCOPE, reject on sight: epoch2x/neon paths, the signer decision logic, consensus block-validation internals; README, tests, benches, config; volumetric DDoS, bandwidth flooding and connection-slot exhaustion needing only traffic volume; tokio/rustls/serde/OS-TCP defects with no path through this repo; anything requiring the node secret, another party's key or an admin role; missing HTTP headers with no impact; best-practice notes; theoretical findings.
+- The impact must be one of: Critical - remote crash/unauthenticated DoS from few messages, unauthenticated/unauthorized write to state or StackerDB, network-wide propagation of forged data, request smuggling or auth bypass, memory disclosure; High - serving non-canonical state as canonical, steering a node off the tip via false inventory, attachment/BNS mismatch, bounded compute DoS on a read endpoint.
+- Reject analogs needing only traffic volume or affecting only the attacker's own node.
 
 ## Validate
-- Map the bug class to the strongest reachable path in this repository and state the binding it would break as an equality.
-- Evaluate both sides before and after the attacker's payload, deposit or call sequence.
-- Prove root cause with exact file/fn support.
-- Accept only concrete value loss, an unauthorised move, a replayed settlement, an unbalanced ledger, or frozen funds.
+- Map the bug class to the strongest reachable path in this repo and state the equality or fault it would break.
+- Evaluate both sides before and after, or locate the exact fault site.
+- Prove root cause with exact file/function support.
+- Accept only concrete remote crash, unauthorized write, forged-data propagation, auth bypass, smuggling, memory disclosure, or non-canonical/mismatched data served.
 
 ## Output (Strict)
 If valid analog exists, output:

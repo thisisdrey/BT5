@@ -1,1 +1,0 @@
-The `finalize()` invariant check in `TransferMatcher::finalize` operates on the fully-accumulated deltas after all intents in the batch have been processed, not on an intermediate state computed mid-batch (analogous to Ajna's bug of checking LUP mid-operation instead of after the full move completes).

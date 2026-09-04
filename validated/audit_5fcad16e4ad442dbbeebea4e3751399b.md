@@ -1,1 +1,0 @@
-This confirms the file cited in the question does not contain the code in question. `crates/near/sender/src/lib.rs` only defines the `NearSender`/`DynNearSender` transaction-sending abstraction and has nothing to do with `TokenDiff::closure_many` or fee arithmetic.
