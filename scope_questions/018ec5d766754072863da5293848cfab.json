@@ -1,0 +1,152 @@
+[
+  {
+    "question": "'File Name: stackslib/src/deps/mod.rs -> Scope: High. THE INVENTORY AND TENURE DOWNLOAD STATE MACHINE MUST NOT BE STEERED BY A PEER. `inv/nakamoto.rs`, `download/nakamoto/*` decide which tenures and blocks to fetch from which peer based on advertised inventories. Show a peer advertising a false inventory that makes the node skip a canonical tenure, loop re-downloading, accept a block for the wrong tenure slot, or wedge the download state machine so the node cannot follow the chain tip. Name the impact: the node stalls behind the canonical tip (availability) or accepts a mis-slotted block into staging. Identity: the tenure/block the node fetches and stages for a slot == the tenure/block the canonical inventory (verified against sortition) names for that slot.'",
+    "url": "https://deepwiki.com/search/-generate-blockchainnode-netwo_335ec7c3-f019-4167-922d-bd0452662ad1?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: stackslib/src/lib.rs -> Scope: High. THE INVENTORY AND TENURE DOWNLOAD STATE MACHINE MUST NOT BE STEERED BY A PEER. `inv/nakamoto.rs`, `download/nakamoto/*` decide which tenures and blocks to fetch from which peer based on advertised inventories. Show a peer advertising a false inventory that makes the node skip a canonical tenure, loop re-downloading, accept a block for the wrong tenure slot, or wedge the download state machine so the node cannot follow the chain tip. Name the impact: the node stalls behind the canonical tip (availability) or accepts a mis-slotted block into staging. Identity: the tenure/block the node fetches and stages for a slot == the tenure/block the canonical inventory (verified against sortition) names for that slot.'",
+    "url": "https://deepwiki.com/search/-generate-blockchainnode-netwo_6728b027-a9cb-4fbd-9954-dc273dc54f91?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: stackslib/src/monitoring/mod.rs -> Scope: High. THE INVENTORY AND TENURE DOWNLOAD STATE MACHINE MUST NOT BE STEERED BY A PEER. `inv/nakamoto.rs`, `download/nakamoto/*` decide which tenures and blocks to fetch from which peer based on advertised inventories. Show a peer advertising a false inventory that makes the node skip a canonical tenure, loop re-downloading, accept a block for the wrong tenure slot, or wedge the download state machine so the node cannot follow the chain tip. Name the impact: the node stalls behind the canonical tip (availability) or accepts a mis-slotted block into staging. Identity: the tenure/block the node fetches and stages for a slot == the tenure/block the canonical inventory (verified against sortition) names for that slot.'",
+    "url": "https://deepwiki.com/search/-generate-blockchainnode-netwo_5b7c3d2b-4970-459f-a85f-26bf21f593c1?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: stackslib/src/monitoring/prometheus.rs -> Scope: High. THE INVENTORY AND TENURE DOWNLOAD STATE MACHINE MUST NOT BE STEERED BY A PEER. `inv/nakamoto.rs`, `download/nakamoto/*` decide which tenures and blocks to fetch from which peer based on advertised inventories. Show a peer advertising a false inventory that makes the node skip a canonical tenure, loop re-downloading, accept a block for the wrong tenure slot, or wedge the download state machine so the node cannot follow the chain tip. Name the impact: the node stalls behind the canonical tip (availability) or accepts a mis-slotted block into staging. Identity: the tenure/block the node fetches and stages for a slot == the tenure/block the canonical inventory (verified against sortition) names for that slot.'",
+    "url": "https://deepwiki.com/search/-generate-blockchainnode-netwo_9ca7ac8c-b5a3-491d-b80e-7d60ab60f574?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: stackslib/src/net/api/blockreplay.rs -> Scope: High. THE INVENTORY AND TENURE DOWNLOAD STATE MACHINE MUST NOT BE STEERED BY A PEER. `inv/nakamoto.rs`, `download/nakamoto/*` decide which tenures and blocks to fetch from which peer based on advertised inventories. Show a peer advertising a false inventory that makes the node skip a canonical tenure, loop re-downloading, accept a block for the wrong tenure slot, or wedge the download state machine so the node cannot follow the chain tip. Name the impact: the node stalls behind the canonical tip (availability) or accepts a mis-slotted block into staging. Identity: the tenure/block the node fetches and stages for a slot == the tenure/block the canonical inventory (verified against sortition) names for that slot.'",
+    "url": "https://deepwiki.com/search/-generate-blockchainnode-netwo_c4e3f310-f034-411f-b3a9-77cbdf7ccc2f?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: stackslib/src/net/api/blocksimulate.rs -> Scope: High. THE INVENTORY AND TENURE DOWNLOAD STATE MACHINE MUST NOT BE STEERED BY A PEER. `inv/nakamoto.rs`, `download/nakamoto/*` decide which tenures and blocks to fetch from which peer based on advertised inventories. Show a peer advertising a false inventory that makes the node skip a canonical tenure, loop re-downloading, accept a block for the wrong tenure slot, or wedge the download state machine so the node cannot follow the chain tip. Name the impact: the node stalls behind the canonical tip (availability) or accepts a mis-slotted block into staging. Identity: the tenure/block the node fetches and stages for a slot == the tenure/block the canonical inventory (verified against sortition) names for that slot.'",
+    "url": "https://deepwiki.com/search/-generate-blockchainnode-netwo_f14c664b-029e-49bc-a010-71e97278bb41?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: stackslib/src/net/api/callreadonly.rs -> Scope: High. THE INVENTORY AND TENURE DOWNLOAD STATE MACHINE MUST NOT BE STEERED BY A PEER. `inv/nakamoto.rs`, `download/nakamoto/*` decide which tenures and blocks to fetch from which peer based on advertised inventories. Show a peer advertising a false inventory that makes the node skip a canonical tenure, loop re-downloading, accept a block for the wrong tenure slot, or wedge the download state machine so the node cannot follow the chain tip. Name the impact: the node stalls behind the canonical tip (availability) or accepts a mis-slotted block into staging. Identity: the tenure/block the node fetches and stages for a slot == the tenure/block the canonical inventory (verified against sortition) names for that slot.'",
+    "url": "https://deepwiki.com/search/-generate-blockchainnode-netwo_d85f9431-e785-454c-8ea8-dbff2a48ad62?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: stackslib/src/net/api/fastcallreadonly.rs -> Scope: High. THE INVENTORY AND TENURE DOWNLOAD STATE MACHINE MUST NOT BE STEERED BY A PEER. `inv/nakamoto.rs`, `download/nakamoto/*` decide which tenures and blocks to fetch from which peer based on advertised inventories. Show a peer advertising a false inventory that makes the node skip a canonical tenure, loop re-downloading, accept a block for the wrong tenure slot, or wedge the download state machine so the node cannot follow the chain tip. Name the impact: the node stalls behind the canonical tip (availability) or accepts a mis-slotted block into staging. Identity: the tenure/block the node fetches and stages for a slot == the tenure/block the canonical inventory (verified against sortition) names for that slot.'",
+    "url": "https://deepwiki.com/search/-generate-blockchainnode-netwo_31167386-c711-4e20-8015-510270ba0fd9?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: stackslib/src/net/api/get_tenure_tip_meta.rs -> Scope: High. THE INVENTORY AND TENURE DOWNLOAD STATE MACHINE MUST NOT BE STEERED BY A PEER. `inv/nakamoto.rs`, `download/nakamoto/*` decide which tenures and blocks to fetch from which peer based on advertised inventories. Show a peer advertising a false inventory that makes the node skip a canonical tenure, loop re-downloading, accept a block for the wrong tenure slot, or wedge the download state machine so the node cannot follow the chain tip. Name the impact: the node stalls behind the canonical tip (availability) or accepts a mis-slotted block into staging. Identity: the tenure/block the node fetches and stages for a slot == the tenure/block the canonical inventory (verified against sortition) names for that slot.'",
+    "url": "https://deepwiki.com/search/-generate-blockchainnode-netwo_167d7e16-40ea-44b0-a543-ccb8ac4113ff?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: stackslib/src/net/api/get_tenures_fork_info.rs -> Scope: High. THE INVENTORY AND TENURE DOWNLOAD STATE MACHINE MUST NOT BE STEERED BY A PEER. `inv/nakamoto.rs`, `download/nakamoto/*` decide which tenures and blocks to fetch from which peer based on advertised inventories. Show a peer advertising a false inventory that makes the node skip a canonical tenure, loop re-downloading, accept a block for the wrong tenure slot, or wedge the download state machine so the node cannot follow the chain tip. Name the impact: the node stalls behind the canonical tip (availability) or accepts a mis-slotted block into staging. Identity: the tenure/block the node fetches and stages for a slot == the tenure/block the canonical inventory (verified against sortition) names for that slot.'",
+    "url": "https://deepwiki.com/search/-generate-blockchainnode-netwo_074c3f1e-399c-499c-aa35-b39ba9d264b1?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: stackslib/src/net/api/getaccount.rs -> Scope: High. THE INVENTORY AND TENURE DOWNLOAD STATE MACHINE MUST NOT BE STEERED BY A PEER. `inv/nakamoto.rs`, `download/nakamoto/*` decide which tenures and blocks to fetch from which peer based on advertised inventories. Show a peer advertising a false inventory that makes the node skip a canonical tenure, loop re-downloading, accept a block for the wrong tenure slot, or wedge the download state machine so the node cannot follow the chain tip. Name the impact: the node stalls behind the canonical tip (availability) or accepts a mis-slotted block into staging. Identity: the tenure/block the node fetches and stages for a slot == the tenure/block the canonical inventory (verified against sortition) names for that slot.'",
+    "url": "https://deepwiki.com/search/-generate-blockchainnode-netwo_b2b10e24-8a72-4221-841d-6bc5936d49a0?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: stackslib/src/net/api/getattachment.rs -> Scope: High. THE INVENTORY AND TENURE DOWNLOAD STATE MACHINE MUST NOT BE STEERED BY A PEER. `inv/nakamoto.rs`, `download/nakamoto/*` decide which tenures and blocks to fetch from which peer based on advertised inventories. Show a peer advertising a false inventory that makes the node skip a canonical tenure, loop re-downloading, accept a block for the wrong tenure slot, or wedge the download state machine so the node cannot follow the chain tip. Name the impact: the node stalls behind the canonical tip (availability) or accepts a mis-slotted block into staging. Identity: the tenure/block the node fetches and stages for a slot == the tenure/block the canonical inventory (verified against sortition) names for that slot.'",
+    "url": "https://deepwiki.com/search/-generate-blockchainnode-netwo_60a7541a-ca38-48a5-aefa-c92b1dcbd458?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: stackslib/src/net/api/getattachmentsinv.rs -> Scope: High. THE INVENTORY AND TENURE DOWNLOAD STATE MACHINE MUST NOT BE STEERED BY A PEER. `inv/nakamoto.rs`, `download/nakamoto/*` decide which tenures and blocks to fetch from which peer based on advertised inventories. Show a peer advertising a false inventory that makes the node skip a canonical tenure, loop re-downloading, accept a block for the wrong tenure slot, or wedge the download state machine so the node cannot follow the chain tip. Name the impact: the node stalls behind the canonical tip (availability) or accepts a mis-slotted block into staging. Identity: the tenure/block the node fetches and stages for a slot == the tenure/block the canonical inventory (verified against sortition) names for that slot.'",
+    "url": "https://deepwiki.com/search/-generate-blockchainnode-netwo_22edb1a2-7166-4915-9f74-67fa6508b916?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: stackslib/src/net/api/getblock.rs -> Scope: High. THE INVENTORY AND TENURE DOWNLOAD STATE MACHINE MUST NOT BE STEERED BY A PEER. `inv/nakamoto.rs`, `download/nakamoto/*` decide which tenures and blocks to fetch from which peer based on advertised inventories. Show a peer advertising a false inventory that makes the node skip a canonical tenure, loop re-downloading, accept a block for the wrong tenure slot, or wedge the download state machine so the node cannot follow the chain tip. Name the impact: the node stalls behind the canonical tip (availability) or accepts a mis-slotted block into staging. Identity: the tenure/block the node fetches and stages for a slot == the tenure/block the canonical inventory (verified against sortition) names for that slot.'",
+    "url": "https://deepwiki.com/search/-generate-blockchainnode-netwo_fea4106e-2b74-42e7-96e8-c2dcecf486df?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: stackslib/src/net/api/getblock_v3.rs -> Scope: High. THE INVENTORY AND TENURE DOWNLOAD STATE MACHINE MUST NOT BE STEERED BY A PEER. `inv/nakamoto.rs`, `download/nakamoto/*` decide which tenures and blocks to fetch from which peer based on advertised inventories. Show a peer advertising a false inventory that makes the node skip a canonical tenure, loop re-downloading, accept a block for the wrong tenure slot, or wedge the download state machine so the node cannot follow the chain tip. Name the impact: the node stalls behind the canonical tip (availability) or accepts a mis-slotted block into staging. Identity: the tenure/block the node fetches and stages for a slot == the tenure/block the canonical inventory (verified against sortition) names for that slot.'",
+    "url": "https://deepwiki.com/search/-generate-blockchainnode-netwo_39ddb95e-89fc-43aa-994e-d59dba3a132a?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: stackslib/src/net/api/getblockbyheight.rs -> Scope: High. THE INVENTORY AND TENURE DOWNLOAD STATE MACHINE MUST NOT BE STEERED BY A PEER. `inv/nakamoto.rs`, `download/nakamoto/*` decide which tenures and blocks to fetch from which peer based on advertised inventories. Show a peer advertising a false inventory that makes the node skip a canonical tenure, loop re-downloading, accept a block for the wrong tenure slot, or wedge the download state machine so the node cannot follow the chain tip. Name the impact: the node stalls behind the canonical tip (availability) or accepts a mis-slotted block into staging. Identity: the tenure/block the node fetches and stages for a slot == the tenure/block the canonical inventory (verified against sortition) names for that slot.'",
+    "url": "https://deepwiki.com/search/-generate-blockchainnode-netwo_e79bb135-27c0-4c69-9c46-5b531a2ec85a?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: stackslib/src/net/api/getclaritymarfvalue.rs -> Scope: High. THE INVENTORY AND TENURE DOWNLOAD STATE MACHINE MUST NOT BE STEERED BY A PEER. `inv/nakamoto.rs`, `download/nakamoto/*` decide which tenures and blocks to fetch from which peer based on advertised inventories. Show a peer advertising a false inventory that makes the node skip a canonical tenure, loop re-downloading, accept a block for the wrong tenure slot, or wedge the download state machine so the node cannot follow the chain tip. Name the impact: the node stalls behind the canonical tip (availability) or accepts a mis-slotted block into staging. Identity: the tenure/block the node fetches and stages for a slot == the tenure/block the canonical inventory (verified against sortition) names for that slot.'",
+    "url": "https://deepwiki.com/search/-generate-blockchainnode-netwo_429a26c2-6d1f-47ab-8aa3-17dbde77f34f?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: stackslib/src/net/api/getclaritymetadata.rs -> Scope: High. THE INVENTORY AND TENURE DOWNLOAD STATE MACHINE MUST NOT BE STEERED BY A PEER. `inv/nakamoto.rs`, `download/nakamoto/*` decide which tenures and blocks to fetch from which peer based on advertised inventories. Show a peer advertising a false inventory that makes the node skip a canonical tenure, loop re-downloading, accept a block for the wrong tenure slot, or wedge the download state machine so the node cannot follow the chain tip. Name the impact: the node stalls behind the canonical tip (availability) or accepts a mis-slotted block into staging. Identity: the tenure/block the node fetches and stages for a slot == the tenure/block the canonical inventory (verified against sortition) names for that slot.'",
+    "url": "https://deepwiki.com/search/-generate-blockchainnode-netwo_93065abd-126d-43fb-9ca3-0f10bff75393?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: stackslib/src/net/api/getconstantval.rs -> Scope: High. THE INVENTORY AND TENURE DOWNLOAD STATE MACHINE MUST NOT BE STEERED BY A PEER. `inv/nakamoto.rs`, `download/nakamoto/*` decide which tenures and blocks to fetch from which peer based on advertised inventories. Show a peer advertising a false inventory that makes the node skip a canonical tenure, loop re-downloading, accept a block for the wrong tenure slot, or wedge the download state machine so the node cannot follow the chain tip. Name the impact: the node stalls behind the canonical tip (availability) or accepts a mis-slotted block into staging. Identity: the tenure/block the node fetches and stages for a slot == the tenure/block the canonical inventory (verified against sortition) names for that slot.'",
+    "url": "https://deepwiki.com/search/-generate-blockchainnode-netwo_e42d04d0-8be0-45c1-96ef-fdbb69f31fa4?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: stackslib/src/net/api/getcontractabi.rs -> Scope: High. THE INVENTORY AND TENURE DOWNLOAD STATE MACHINE MUST NOT BE STEERED BY A PEER. `inv/nakamoto.rs`, `download/nakamoto/*` decide which tenures and blocks to fetch from which peer based on advertised inventories. Show a peer advertising a false inventory that makes the node skip a canonical tenure, loop re-downloading, accept a block for the wrong tenure slot, or wedge the download state machine so the node cannot follow the chain tip. Name the impact: the node stalls behind the canonical tip (availability) or accepts a mis-slotted block into staging. Identity: the tenure/block the node fetches and stages for a slot == the tenure/block the canonical inventory (verified against sortition) names for that slot.'",
+    "url": "https://deepwiki.com/search/-generate-blockchainnode-netwo_608bb273-1d1d-448c-9a55-2edd2441ba8e?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: stackslib/src/net/api/getcontractsrc.rs -> Scope: High. THE INVENTORY AND TENURE DOWNLOAD STATE MACHINE MUST NOT BE STEERED BY A PEER. `inv/nakamoto.rs`, `download/nakamoto/*` decide which tenures and blocks to fetch from which peer based on advertised inventories. Show a peer advertising a false inventory that makes the node skip a canonical tenure, loop re-downloading, accept a block for the wrong tenure slot, or wedge the download state machine so the node cannot follow the chain tip. Name the impact: the node stalls behind the canonical tip (availability) or accepts a mis-slotted block into staging. Identity: the tenure/block the node fetches and stages for a slot == the tenure/block the canonical inventory (verified against sortition) names for that slot.'",
+    "url": "https://deepwiki.com/search/-generate-blockchainnode-netwo_670e7f6b-4fd0-496a-8e16-fa319a17e48a?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: stackslib/src/net/api/getdatavar.rs -> Scope: High. THE INVENTORY AND TENURE DOWNLOAD STATE MACHINE MUST NOT BE STEERED BY A PEER. `inv/nakamoto.rs`, `download/nakamoto/*` decide which tenures and blocks to fetch from which peer based on advertised inventories. Show a peer advertising a false inventory that makes the node skip a canonical tenure, loop re-downloading, accept a block for the wrong tenure slot, or wedge the download state machine so the node cannot follow the chain tip. Name the impact: the node stalls behind the canonical tip (availability) or accepts a mis-slotted block into staging. Identity: the tenure/block the node fetches and stages for a slot == the tenure/block the canonical inventory (verified against sortition) names for that slot.'",
+    "url": "https://deepwiki.com/search/-generate-blockchainnode-netwo_f911742b-c8d5-4f03-923c-446aada1ee4f?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: stackslib/src/net/api/getheaders.rs -> Scope: High. THE INVENTORY AND TENURE DOWNLOAD STATE MACHINE MUST NOT BE STEERED BY A PEER. `inv/nakamoto.rs`, `download/nakamoto/*` decide which tenures and blocks to fetch from which peer based on advertised inventories. Show a peer advertising a false inventory that makes the node skip a canonical tenure, loop re-downloading, accept a block for the wrong tenure slot, or wedge the download state machine so the node cannot follow the chain tip. Name the impact: the node stalls behind the canonical tip (availability) or accepts a mis-slotted block into staging. Identity: the tenure/block the node fetches and stages for a slot == the tenure/block the canonical inventory (verified against sortition) names for that slot.'",
+    "url": "https://deepwiki.com/search/-generate-blockchainnode-netwo_5d477cee-19cf-4431-9271-78724f4ec536?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: stackslib/src/net/api/gethealth.rs -> Scope: High. THE INVENTORY AND TENURE DOWNLOAD STATE MACHINE MUST NOT BE STEERED BY A PEER. `inv/nakamoto.rs`, `download/nakamoto/*` decide which tenures and blocks to fetch from which peer based on advertised inventories. Show a peer advertising a false inventory that makes the node skip a canonical tenure, loop re-downloading, accept a block for the wrong tenure slot, or wedge the download state machine so the node cannot follow the chain tip. Name the impact: the node stalls behind the canonical tip (availability) or accepts a mis-slotted block into staging. Identity: the tenure/block the node fetches and stages for a slot == the tenure/block the canonical inventory (verified against sortition) names for that slot.'",
+    "url": "https://deepwiki.com/search/-generate-blockchainnode-netwo_af0623de-4c7c-4c3f-a0fa-24a401ca2fd0?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: stackslib/src/net/api/getinfo.rs -> Scope: High. THE INVENTORY AND TENURE DOWNLOAD STATE MACHINE MUST NOT BE STEERED BY A PEER. `inv/nakamoto.rs`, `download/nakamoto/*` decide which tenures and blocks to fetch from which peer based on advertised inventories. Show a peer advertising a false inventory that makes the node skip a canonical tenure, loop re-downloading, accept a block for the wrong tenure slot, or wedge the download state machine so the node cannot follow the chain tip. Name the impact: the node stalls behind the canonical tip (availability) or accepts a mis-slotted block into staging. Identity: the tenure/block the node fetches and stages for a slot == the tenure/block the canonical inventory (verified against sortition) names for that slot.'",
+    "url": "https://deepwiki.com/search/-generate-blockchainnode-netwo_a81c6578-2cae-4c51-9996-99a5df26b991?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: stackslib/src/net/api/getistraitimplemented.rs -> Scope: High. THE INVENTORY AND TENURE DOWNLOAD STATE MACHINE MUST NOT BE STEERED BY A PEER. `inv/nakamoto.rs`, `download/nakamoto/*` decide which tenures and blocks to fetch from which peer based on advertised inventories. Show a peer advertising a false inventory that makes the node skip a canonical tenure, loop re-downloading, accept a block for the wrong tenure slot, or wedge the download state machine so the node cannot follow the chain tip. Name the impact: the node stalls behind the canonical tip (availability) or accepts a mis-slotted block into staging. Identity: the tenure/block the node fetches and stages for a slot == the tenure/block the canonical inventory (verified against sortition) names for that slot.'",
+    "url": "https://deepwiki.com/search/-generate-blockchainnode-netwo_7e688d4f-8f74-4b38-b189-64f24cc05f95?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: stackslib/src/net/api/getmapentry.rs -> Scope: High. THE INVENTORY AND TENURE DOWNLOAD STATE MACHINE MUST NOT BE STEERED BY A PEER. `inv/nakamoto.rs`, `download/nakamoto/*` decide which tenures and blocks to fetch from which peer based on advertised inventories. Show a peer advertising a false inventory that makes the node skip a canonical tenure, loop re-downloading, accept a block for the wrong tenure slot, or wedge the download state machine so the node cannot follow the chain tip. Name the impact: the node stalls behind the canonical tip (availability) or accepts a mis-slotted block into staging. Identity: the tenure/block the node fetches and stages for a slot == the tenure/block the canonical inventory (verified against sortition) names for that slot.'",
+    "url": "https://deepwiki.com/search/-generate-blockchainnode-netwo_f84c86e5-2097-451c-b748-5c6b6c2bd4a8?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: stackslib/src/net/api/getmicroblocks_confirmed.rs -> Scope: High. THE INVENTORY AND TENURE DOWNLOAD STATE MACHINE MUST NOT BE STEERED BY A PEER. `inv/nakamoto.rs`, `download/nakamoto/*` decide which tenures and blocks to fetch from which peer based on advertised inventories. Show a peer advertising a false inventory that makes the node skip a canonical tenure, loop re-downloading, accept a block for the wrong tenure slot, or wedge the download state machine so the node cannot follow the chain tip. Name the impact: the node stalls behind the canonical tip (availability) or accepts a mis-slotted block into staging. Identity: the tenure/block the node fetches and stages for a slot == the tenure/block the canonical inventory (verified against sortition) names for that slot.'",
+    "url": "https://deepwiki.com/search/-generate-blockchainnode-netwo_73f3258d-5467-4661-bc85-094baac15aec?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: stackslib/src/net/api/getmicroblocks_indexed.rs -> Scope: High. THE INVENTORY AND TENURE DOWNLOAD STATE MACHINE MUST NOT BE STEERED BY A PEER. `inv/nakamoto.rs`, `download/nakamoto/*` decide which tenures and blocks to fetch from which peer based on advertised inventories. Show a peer advertising a false inventory that makes the node skip a canonical tenure, loop re-downloading, accept a block for the wrong tenure slot, or wedge the download state machine so the node cannot follow the chain tip. Name the impact: the node stalls behind the canonical tip (availability) or accepts a mis-slotted block into staging. Identity: the tenure/block the node fetches and stages for a slot == the tenure/block the canonical inventory (verified against sortition) names for that slot.'",
+    "url": "https://deepwiki.com/search/-generate-blockchainnode-netwo_e9198a0d-05dd-444a-9b19-679dcd5371b5?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: stackslib/src/net/api/getmicroblocks_unconfirmed.rs -> Scope: High. THE INVENTORY AND TENURE DOWNLOAD STATE MACHINE MUST NOT BE STEERED BY A PEER. `inv/nakamoto.rs`, `download/nakamoto/*` decide which tenures and blocks to fetch from which peer based on advertised inventories. Show a peer advertising a false inventory that makes the node skip a canonical tenure, loop re-downloading, accept a block for the wrong tenure slot, or wedge the download state machine so the node cannot follow the chain tip. Name the impact: the node stalls behind the canonical tip (availability) or accepts a mis-slotted block into staging. Identity: the tenure/block the node fetches and stages for a slot == the tenure/block the canonical inventory (verified against sortition) names for that slot.'",
+    "url": "https://deepwiki.com/search/-generate-blockchainnode-netwo_3280c785-5745-4f1d-a40a-0e13762af801?mode=deep",
+    "questions_generated": false
+  }
+]
