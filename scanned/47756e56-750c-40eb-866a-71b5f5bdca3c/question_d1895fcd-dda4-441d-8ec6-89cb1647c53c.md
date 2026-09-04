@@ -1,0 +1,1 @@
+[File: stackslib/src/net/atlas/download.rs -> Scope: High retry-starvation as data-loss] `AttachmentsBatchStateMachine::try_proceed`'s `Done` branch only re-enqueues a batch (`self.priority_queue.push(context.attachments_batch.clone())`) while `retry_count < connection_options.max_attachment_retry_count`; beyond that it just logs and drops the batch (`info!(
