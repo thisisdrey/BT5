@@ -1,0 +1,1 @@
+[File: stackslib/src/net/http/request.rs -> Scope: Critical] Can a remote attacker exploit `HttpRequestPreamble::add_header` (request.rs:143-168), which for non-reserved headers merges duplicate keys via `entry.and_modify(|entry| entry.push_str(
