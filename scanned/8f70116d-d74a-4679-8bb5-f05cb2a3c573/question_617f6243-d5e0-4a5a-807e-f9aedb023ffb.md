@@ -1,0 +1,1 @@
+and causing scoped impact: unauthenticated large-allocation DoS crashing the signer's event thread? Proof idea: Rust test sending a chunked-encoded body whose total decoded size approaches/exceeds MAX_MESSAGE_LEN through decode_http_body and asserting no bound rejects it before allocation, or that resource use scales unbounded relative to declared chunk sizes.
