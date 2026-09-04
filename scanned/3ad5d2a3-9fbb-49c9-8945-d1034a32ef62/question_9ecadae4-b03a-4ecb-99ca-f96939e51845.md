@@ -1,0 +1,1 @@
+[File: stackslib/src/net/chat.rs -> Scope: Critical.] Can a remote peer trigger a reachable `panic!` in `ConversationP2P::validate_handshake` (chat.rs:1053-1056) or `handle_handshake` (chat.rs:1245-1248), both of which do `match message.payload { StacksMessageType::Handshake(ref mut data) => ..., _ => panic!(
