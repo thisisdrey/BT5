@@ -1,0 +1,1 @@
+[File: 'stacks-node/src/burnchains/rpc/rpc_transport/mod.rs -> libsigner/src/events.rs SignerEventReceiver::next_event /shutdown handling'] Can any remote unprivileged party who can reach the signer's bound event-listener port send a bare `POST /shutdown` request (no authentication, no secret required per the code path `else if request.url() ==
