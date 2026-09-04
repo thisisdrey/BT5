@@ -1,0 +1,1 @@
+), i.e., an operator-set empty secret (equality edge case), or self.auth is None. Call sequence: with self.auth==None, the `let Some(password) = &self.auth else` branch returns Err(400) 'Bad Request' -- confirm this always fires before any header check, so the case 'None config == open' is NOT present here (fails closed). With self.auth==Some(

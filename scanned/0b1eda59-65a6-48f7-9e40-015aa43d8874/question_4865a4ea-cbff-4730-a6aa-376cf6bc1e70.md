@@ -1,0 +1,1 @@
+[File: stackslib/src/net/chat.rs -> Scope: Critical] Can a remote attacker trigger a panic in ConversationP2P::handle_handshake or validate_handshake (chat.rs:1053-1056, 1245-1248) via `match message.payload { StacksMessageType::Handshake(ref mut data) => ..., _ => panic!(
