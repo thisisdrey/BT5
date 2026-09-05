@@ -1,1 +1,0 @@
-in `NeighborStats`, subverting neighbor eviction and health bookkeeping used elsewhere in the P2P state machine. Proof: stackslib::net::chat test replaying an old signed `Ping` with an outdated but internally-consistent `Preamble` against a live `ConversationP2P` and asserting `last_contact_time` advances.
