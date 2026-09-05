@@ -1,1 +1,0 @@
-? Proof idea: Rust test in libsigner/src/events.rs feeding a chunk with a spoofed type_byte / payload body mismatch through TryFrom<StackerDBChunksEvent> and asserting the parsed message's real enum variant differs from what payload_kind implied.
