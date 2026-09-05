@@ -1,1 +1,0 @@
-and occupies the download schedule slot. Impact: High, node stalls waiting on inventory from an uncooperative peer while treating it as usable. Proof: Rust test that always responds NoSuchBurnchainBlock to GetNakamotoInv from a fixed peer and asserts inv.tenures_inv never gains the target reward cycle while the peer is not dropped.]
