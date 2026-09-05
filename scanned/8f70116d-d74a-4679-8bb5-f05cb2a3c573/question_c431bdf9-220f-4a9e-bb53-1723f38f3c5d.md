@@ -1,1 +1,0 @@
-? Proof idea: Rust test constructing a chunk whose first N bytes decode validly as T and appending arbitrary trailing bytes, feeding it to get_latest::<T>, and asserting deserialization succeeds despite trailing unconsumed data, then checking whether any call site treats the full byte length as authenticated.

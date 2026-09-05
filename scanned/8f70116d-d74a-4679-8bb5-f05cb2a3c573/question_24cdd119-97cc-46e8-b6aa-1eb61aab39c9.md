@@ -1,1 +1,0 @@
-and causing scoped impact: single-connection unauthenticated DoS on the event port? Proof idea: Rust test opening a TcpStream to a bound SignerEventReceiver, sending an HTTP/1.0 POST with no Content-Length and no close, and asserting next_event() never returns within a bounded timeout, confirming the stall.

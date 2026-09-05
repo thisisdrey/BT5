@@ -1,1 +1,0 @@
-by injecting an empty signal that downstream idle-timer/miner-liveness logic may misinterpret as a legitimate miner message arrival? Proof idea: Rust test posting a StackerDBChunksEvent with unparsable chunk.data for MINERS_NAME, asserting a SignerEvent::MinerMessages(vec![]) is returned and forwarded via forward_event rather than being rejected as unrecognized.

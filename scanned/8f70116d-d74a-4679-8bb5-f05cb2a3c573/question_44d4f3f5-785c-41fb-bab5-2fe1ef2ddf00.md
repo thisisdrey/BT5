@@ -1,1 +1,0 @@
-(a valid message is dropped, which the rules count as a finding)? Proof idea: Rust test constructing a properly-signed StackerDBChunkData with an out-of-range type-prefix byte, running it through TryFrom<StackerDBChunksEvent>, and asserting the resulting SignerEvent::SignerMessages.messages vector is empty despite a valid signature and slot ownership.

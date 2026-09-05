@@ -1,1 +1,0 @@
-, and if instead it panics on the fixed EMPTY_HEADER array bound, name that memory fault? Proof idea: Rust test calling decode_http_request with 33+ headers or a header value of length MAX_HTTP_HEADER_LEN+1 and asserting either the correct Err variant with no panic, or documenting a panic path.
