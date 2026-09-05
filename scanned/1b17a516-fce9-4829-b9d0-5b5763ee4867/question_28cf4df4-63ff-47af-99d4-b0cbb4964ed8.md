@@ -1,1 +1,0 @@
-[File: 'stacks-common/src/util/log.rs' -> Scope: High. Unauthenticated /shutdown endpoint] Can a remote unprivileged attacker send a single unauthenticated `POST /shutdown HTTP/1.1` request to the signer's `SignerEventReceiver` HTTP port, causing `next_event` (libsigner/src/events.rs) to match `request.url() ==
