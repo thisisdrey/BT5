@@ -1,1 +1,0 @@
-)? Proof idea: construct a payload where deserialize_body only consumes K of payload_len N bytes, verify that verify_payload_bytes succeeds over the full N bytes yet read_payload's cursor.position() reports K, and confirm the surplus (N-K) bytes are silently retained/reused in the connection buffer without independent authentication.
