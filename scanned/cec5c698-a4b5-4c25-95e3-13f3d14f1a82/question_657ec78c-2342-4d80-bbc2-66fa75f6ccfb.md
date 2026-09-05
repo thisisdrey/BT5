@@ -1,1 +1,0 @@
-) is checked for presence, then a direct `!=` string comparison gates access to Clarity execution. Equality/fault: the byte-exact authorization header supplied by the caller must equal the configured secret exactly for the endpoint to execute Clarity; any comparison logic (non-constant-time `!=`, or an empty-secret configuration accepted as valid `Some(
