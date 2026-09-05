@@ -1,1 +1,0 @@
-[File: 'stackslib/src/net/api/getstackerdbchunk.rs' -> Scope: Critical] The path regex `^/v2/stackerdb/(?P<address>...)/(?P<contract>...)/(?P<slot_id>[0-9]+)(/(?P<slot_version>[0-9]+)){0,1}$` and `request::get_u32(captures,
