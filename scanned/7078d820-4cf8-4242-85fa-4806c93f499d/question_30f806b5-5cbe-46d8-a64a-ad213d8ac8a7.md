@@ -1,1 +1,0 @@
-). Impact: High -- bypassing this would let the unconfirmed-tenure downloader chase a non-canonical tenure, stalling behind the real tip. Proof idea: build a forked sortition history, have the mock peer report the orphaned fork's consensus hash as its unconfirmed tenure, call `try_accept_tenure_info`, and assert `Err`.
