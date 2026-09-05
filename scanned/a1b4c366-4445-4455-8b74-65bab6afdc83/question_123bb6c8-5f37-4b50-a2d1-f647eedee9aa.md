@@ -1,1 +1,0 @@
-)`, so if the message's payload enum variant were mutated between the outer match and handle_handshake's inner match (e.g., via a shared &mut message across an intermediate callback), the panic fires? Impact: Critical, remotely reachable panic (named site chat.rs:1247 `panic!(

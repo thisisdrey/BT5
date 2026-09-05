@@ -1,1 +1,0 @@
-)`) causing thread/node crash if any code path invokes handle_handshake with a non-Handshake payload. Proof idea: directly unit-test handle_handshake with a StacksMessage whose payload is Ping instead of Handshake and assert the call panics rather than returning an Err.
