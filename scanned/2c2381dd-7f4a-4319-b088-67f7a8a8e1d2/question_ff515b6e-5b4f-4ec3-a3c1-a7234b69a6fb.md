@@ -1,1 +1,0 @@
-[File: stackslib/src/net/http/request.rs -> Scope: Critical panic on non-Handshake payload type confusion] Can a remote attacker cause validate_handshake or handle_handshake (chat.rs:1053-1056, 1245-1248) to be invoked with message.payload that is NOT StacksMessageType::Handshake, triggering the `_ => panic!(
