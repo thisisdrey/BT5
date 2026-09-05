@@ -1,1 +1,0 @@
-[File: libsigner/src/events.rs -> Scope: Critical. `SignerEventReceiver::next_event` unauthenticated `/shutdown`] Can any remote TCP peer who can reach the signer's bound event-receiver address (per `SignerEventReceiver::bind`) send `POST /shutdown` directly - since `next_event`'s handling of `request.url() ==
