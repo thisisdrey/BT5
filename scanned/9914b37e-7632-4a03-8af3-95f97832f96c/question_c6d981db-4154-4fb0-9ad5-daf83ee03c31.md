@@ -1,1 +1,0 @@
-[File: libsigner/src/events.rs -> Scope: NewBlockTransaction raw_tx smuggling] Can a remote event-dispatcher-adjacent sender (anyone who can reach the signer's `/new_block` HTTP endpoint bound by `SignerEventReceiver::bind`) POST a JSON body whose `transactions` array contains a `NewBlockTransaction{ raw_tx:
