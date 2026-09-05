@@ -1,1 +1,0 @@
-scoped as an unauthenticated single-connection DoS on the whole event stream? Proof idea: Rust test opening a TcpStream to a bound SignerEventReceiver, writing non-HTTP garbage bytes, not closing the socket, and asserting a legitimate second connection's StackerDBChunksEvent is still delivered to next_event() within a bounded timeout.
