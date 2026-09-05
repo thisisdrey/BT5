@@ -1,1 +1,0 @@
-[File: stackslib/src/util_lib/strings.rs -> Scope: High] Can a remote sender open a TCP connection to the signer's `SignerEventReceiver` and send a raw byte stream that is not valid HTTP but happens to make `tiny_http`'s `HttpServer::recv()` (events.rs line 420) return a `Request` whose `request.url()` string is attacker-controlled to exactly match `
