@@ -1,1 +1,0 @@
-[File: stacks-signer/src/chainstate/v2.rs -> Scope: High] Can a remote peer serving an `AttachmentInstance` derived from `AttachmentInstance::try_new_from_value` (mod.rs:186-236) craft a Clarity `attachment` tuple whose `metadata` value fails `consensus_serialize` at line 216 (`metadata.consensus_serialize(&mut serialized).expect(
