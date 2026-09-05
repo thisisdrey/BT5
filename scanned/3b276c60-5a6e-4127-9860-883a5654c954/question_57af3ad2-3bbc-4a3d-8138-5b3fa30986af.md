@@ -1,1 +1,0 @@
-responses to fingerprint fork state. Proof idea: Rust test in `stackslib::net::api::tests::getdatavar` forcing `get_data_with_proof` to return `Err` (e.g. via a deliberately corrupted MARF root) and asserting the handler still returns 404 rather than 500, exposing state confusion.]
