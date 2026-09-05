@@ -1,1 +1,0 @@
-X without ever holding X's private key. Proof idea: net test that signs one Handshake with a real private key, feeds the identical serialized bytes into two independent `ConversationP2P` instances (simulating two separate TCP connections to the same or different nodes) and asserts both accept it as valid via `handle_handshake` returning `(Some(accept), false)`.
