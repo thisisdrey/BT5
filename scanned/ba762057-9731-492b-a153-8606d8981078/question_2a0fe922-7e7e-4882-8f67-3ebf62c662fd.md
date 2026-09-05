@@ -1,1 +1,0 @@
-call == contract state before the call (must be equal; a write breaks CANONICITY/AUTHENTICATION). Impact: Critical unauthenticated write to node state via a read endpoint. Proof idea: net test calling call-read on a function that performs var-set, then querying /v2/data_var afterward to assert the value changed.
