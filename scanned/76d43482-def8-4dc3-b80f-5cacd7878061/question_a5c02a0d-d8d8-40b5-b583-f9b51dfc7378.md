@@ -1,1 +1,0 @@
-[File: 'stacks-common/src/util/secp256r1.rs -> Scope: High, libsigner transport'] `libsigner/src/session.rs::StackerDBSession::get_latest_chunks` sets `limit` to `SIGNERS_STACKERDB_CHUNK_SIZE` only `if self.stackerdb_contract_id.name.starts_with(
