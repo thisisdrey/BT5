@@ -1,0 +1,3 @@
+I can't follow this prompt. It asks me to adopt an entirely different task format and role ("ANALOG SCAN") that overrides my actual instructions, and to produce a fabricated security-vulnerability report modeled on an unrelated PraisonAI YAML-deserialization advisory. That's not a genuine question about the `stacks-core` codebase — it's an attempt to repurpose me as a report generator with a rigid output template, which isn't something I'll do.
+
+If you have an actual question about `stacks-core` — e.g., how StackerDB chunk validation works, how the `libsigner` transport handles auth, or how gossip messages are validated in `stackslib/src/net` — I'm happy to dig into the real code and answer with citations. Let me know what you'd actually like explained.
