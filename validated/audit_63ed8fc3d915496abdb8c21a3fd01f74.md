@@ -1,0 +1,1 @@
+Let me verify `SlotMetadata::verify`'s exact semantics to confirm the signed digest is `data_hash`, not `chunk`.
