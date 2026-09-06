@@ -1,0 +1,1 @@
+The actual code already enforces the correct order: signature verification happens before the version check.
