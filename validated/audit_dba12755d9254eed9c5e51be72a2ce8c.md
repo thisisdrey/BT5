@@ -1,0 +1,1 @@
+Now let's find where `AttachmentsDownloader.attachments` (produced by `Done` state) is consumed and checked against the requested `content_hash` before calling `insert_instantiated_attachment`.
