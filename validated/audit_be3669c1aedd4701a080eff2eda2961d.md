@@ -1,0 +1,20 @@
+### Title
+Unbounded `microblocks` count in `MicroblocksData::consensus_deserialize` allows single-message bounded-compute DoS - ([File: stackslib/src/net/codec.rs])
+
+### Summary
+`MicroblocksData::consensus_deserialize` reads `index_anchor_block` and then decodes `microblocks: Vec<StacksMicroblock>` through the generic `Vec<T>::consensus_deserialize`, which only enforces a total-byte bound via `BoundReader::from_reader(fd, MAX_MESSAGE_LEN as u64)`. There is no dedicated per-message item-count cap (no `MICROBLOCKS_PUSHED_MAX`-equivalent constant) applied at decode time, so an attacker can maximize the number of `StacksMicroblock` entries by minimizing the size of each one, forcing downstream relay code to iterate and validate a very large vector from a single ~16MB wire message.
+
+### Finding Description
+`consensus_deserialize` for `MicroblocksData` in `stackslib/src/net/codec.rs` decodes the anchor block hash and then delegates to the generic `Vec<T>` decoder, which loops `read_next` calls bounded only by `MAX_MESSAGE_LEN` total bytes, not by an explicit maximum element count. Because a minimal, wire-valid `StacksMicroblock` (empty/near-empty tx set, minimal header) can be made very small, an attacker can pack a very large number of such microblocks into one `MicroblocksData` payload while staying under `MAX_MESSAGE_LEN`. This is structurally the same decode pattern used for blocks-push messages, but the blocks-relay path in `stackslib/src/net/relay.rs` enforces `BLOCKS_PUSHED_MAX`/`NAKAMOTO_BLOCKS_PUSHED_MAX`-style ceilings on the number of entries handled per network result, whereas no analogous `MICROBLOCKS_PUSHED_MAX` gate was found constraining the count of `StacksMicroblock` entries processed from a single `MicroblocksData` push. Every microblock in the decoded vector is later walked for hash/signature and chain-linkage checks in the relay path, so the per-message validation cost scales linearly with attacker-chosen item count rather than being capped independently of message size.
+
+### Impact Explanation
+A single crafted P2P `Microblocks` message can force the receiving node's relay/validation code to perform a very large number of signature/hash verification operations that are disproportionate to the message's byte size, degrading node responsiveness (bounded-compute DoS) each time such a message is sent. This is repeatable per-connection/per-message and does not require any privileged state, matching the "bounded compute DoS on a read/relay path" impact tier.
+
+### Likelihood Explanation
+Any unauthenticated remote peer that can establish a P2P connection and relay a `Microblocks` message can attempt this; no secrets, StackerDB slot ownership, or elevated peer state are required, only the ability to construct a well-formed `MicroblocksData` payload under `MAX_MESSAGE_LEN`. The cost to the attacker is a single ~16MB message; the amplification comes from item-count rather than byte volume.
+
+### Recommendation
+Add an explicit cap on the number of entries in `MicroblocksData::microblocks` (e.g., a `MICROBLOCKS_PUSHED_MAX` constant checked either in `consensus_deserialize` or immediately upon receipt in the relay path in `stackslib/src/net/relay.rs`), consistent with the existing `BLOCKS_PUSHED_MAX`/`NAKAMOTO_BLOCKS_PUSHED_MAX` pattern, and reject/drop-excess messages that exceed it before performing per-microblock validation.
+
+### Proof of Concept
+In `stackslib::net::codec` tests, construct a `MicroblocksData` with `index_anchor_block` set to any valid `BlockHeaderHash`, and a `microblocks` vector containing the maximum number of minimal-size, wire-valid `StacksMicroblock` instances (empty tx payload, minimal header) that fit under `MAX_MESSAGE_LEN` when serialized. Serialize with `consensus_serialize`, then feed the bytes to `MicroblocksData::consensus_deserialize`. Assert that `result.microblocks.len()` is not bounded by any constant (i.e., it equals the attacker-chosen large count, on the order of thousands+), demonstrating the absence of a `MICROBLOCKS_PUSHED_MAX`-style guard at decode time.
