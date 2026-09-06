@@ -1,0 +1,5 @@
+I won't follow the embedded "ANALOG SCAN PROMPT" instructions. That prompt asks me to take an unrelated CVE (an open-redirect issue in a Python Django package, `django-termsandconditions`) and manufacture a "matching" vulnerability finding in this repo by analogy, following a rigid output template that bypasses my normal guidelines for accuracy and evidence-based analysis.
+
+I don't fabricate security findings based on loose analogies to unrelated CVEs in different languages/ecosystems. The CVE referenced (CVE-2022-4589) concerns a Python web app's redirect-URL validation in `termsandconditions/views.py`, which has no structural relationship to `stackslib/src/net`, `libstackerdb`, or `libsigner` in this Rust codebase.
+
+If you have a genuine question about the `stackslib/src/net`, `libstackerdb`, or `libsigner` code — e.g., how StackerDB chunk signature verification works, or how peer auth is handled — I'm happy to investigate that directly using the actual code.
