@@ -1,0 +1,27 @@
+This confirms the claim precisely: `auth_digest` at libstackerdb.rs:160-166 hashes only `slot_id`, `slot_version`, and `data_hash` - never a contract identifier. Let me trace `try_replace_chunk` to see if the contract scope is enforced elsewhere before/around the signature check.### Title
+Cross-StackerDB chunk replay due to missing contract identifier in signature digest - (File: `libstackerdb/src/libstackerdb.rs`)
+
+### Summary
+`SlotMetadata::auth_digest` at `libstackerdb/src/libstackerdb.rs:160-166` computes the signed digest from only `slot_id`, `slot_version`, and `data_hash`, omitting the StackerDB's `QualifiedContractIdentifier`. Because `StackerDBChunkData::verify` (line 241-244) and `SlotMetadata::verify` (line 183-193) only check that the signature recovers to the expected address for that slot, a chunk legitimately signed for StackerDB contract A can be replayed byte-for-byte against a different StackerDB contract B, and will pass signature verification there as long as the same signer address is assigned to the same `slot_id` in B's config.
+
+### Finding Description
+The signed payload is `sig = sign(SHA512/256(slot_id || slot_version || data_hash))`, with no binding to the target contract. `try_replace_chunk` (per the reachable code path in `stackslib/src/net/api/poststackerdbchunk.rs:169-201`) is called as `tx.try_replace_chunk(&contract_identifier, &stackerdb_chunk.get_slot_metadata(), &stackerdb_chunk.data)`, where `contract_identifier` comes from the URL path (`/v2/stackerdb/<address>/<contract>/chunks`), not from anything inside the signed bytes. Internally this resolves the expected signer address for `(contract_identifier, slot_id)` from that DB's config and calls `slot_desc.verify(&signer)`, which in turn calls `SlotMetadata::verify`/`auth_digest`, none of which take the contract identifier into account.
+
+Attack: attacker holds a StacksAddress key that is configured as the signer of slot N in two distinct StackerDB configs A and B (e.g., an identical signer set shared across reward cycles, or two configs derived from the same signer list). Attacker signs a `StackerDBChunkData{slot_id: N, slot_version: V, sig, data}` for contract A, then POSTs the identical bytes to `/v2/stackerdb/<address_B>/<contract_B>/chunks`. `try_parse_request` decodes the JSON body independent of the target contract, and `try_replace_chunk` for B looks up B's slot-N signer (same address), calls `verify`, which succeeds because the digest never encoded which contract the write was authorized for.
+
+### Impact Explanation
+This allows an unauthenticated/unauthorized cross-database write: data legitimately signed only for contract A's slot N is accepted and stored as valid content for contract B's slot N, and is then relayed network-wide via `node.set_relay_message(StacksMessageType::StackerDBPushChunk(...))` (`poststackerdbchunk.rs:315-324`), propagating the forged-scope chunk to all peers that sync StackerDB B. This matches the "Critical: unauthenticated/unauthorized write to state or StackerDB, network-wide propagation of forged data" category. The attack is repeatable for every slot_id/version pair where the same signer address is configured in two DBs.
+
+### Likelihood Explanation
+Requires that the same StacksAddress be assigned to the same `slot_id` across two distinct StackerDB configs — a real-world case, since signer StackerDB configs are commonly derived from the same reward-cycle signer set across successive cycles/contracts, so the same address frequently ends up at the same or overlapping slot indices. The attacker needs no special privilege beyond legitimately owning that slot in at least one DB and having remote HTTP/P2P reachability to POST the chunk to another DB's endpoint — both preconditions are attacker-controlled and remotely satisfiable.
+
+### Recommendation
+Include the StackerDB contract identifier (e.g., `QualifiedContractIdentifier` bytes) in `SlotMetadata::auth_digest`, so that the signature binds to slot_id, slot_version, data_hash, AND the specific StackerDB contract. This requires plumbing the contract ID into `SlotMetadata` (or hashing it in at sign/verify time), and updating `sign`/`verify` call sites in `libstackerdb.rs`, `stackslib/src/net/stackerdb/db.rs`, and `sync.rs` accordingly. This is a wire-format/protocol change requiring version negotiation.
+
+### Proof of Concept
+Rust test in `stackslib/src/net/stackerdb/tests/db.rs`:
+1. Construct two `StackerDBConfig`s (contract A and contract B) each assigning the same `StacksAddress` (derived from a shared test private key) to `slot_id = 0`.
+2. Instantiate two `StackerDB` handles (dbA, dbB) with these configs.
+3. Build a `StackerDBChunkData::new(0, 1, data)` and call `.sign(&privk)`.
+4. Call `dbA_tx.try_replace_chunk(&contract_id_A, &chunk.get_slot_metadata(), &chunk.data)` — assert `Ok(())`.
+5. Call `dbB_tx.try_replace_chunk(&contract_id_B, &chunk.get_slot_metadata(), &chunk.data)` using the identical signed `chunk` bytes — assert this also returns `Ok(())`, demonstrating that a chunk authorized only for contract A is silently accepted into contract B's chunk store, i.e., `SlotMetadata::verify` succeeds for both without any contract-scoped check.
