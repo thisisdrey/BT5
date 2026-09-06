@@ -1,0 +1,28 @@
+### Title
+Unbounded attachment content size accepted via `insert_instantiated_attachment`/`insert_uninstantiated_attachment`, bypassing `attachments_max_size` - ([File: stackslib/src/net/atlas/db.rs])
+
+### Summary
+`AtlasConfig.attachments_max_size` is enforced only in `AtlasDB::should_keep_attachment` (`stackslib/src/net/atlas/db.rs:249-266`), which gates the RPC `/v2/transactions` POST-with-attachment path. The Atlas peer-to-peer download path — where a remote peer serves a `GetAttachment` HTTP response — calls `AtlasDB::insert_instantiated_attachment` / `insert_uninstantiated_attachment` directly, neither of which checks `attachment.content.len()` against `attachments_max_size` before writing to SQLite.
+
+### Finding Description
+The claimed invariant is: every stored `Attachment.content` must satisfy `content.len() <= atlas_config.attachments_max_size`. This is true only on the mempool/RPC insertion path via `should_keep_attachment` (`stackslib/src/net/atlas/db.rs:261`), which is invoked from `RPCPostTransactionRequestHandler::try_handle_request` before calling `insert_uninstantiated_attachment` (`stackslib/src/net/api/posttransaction.rs:233-248`).
+
+The P2P attachment-download flow does not go through this gate. `AttachmentsBatchStateContext::extend_with_attachments` (`stackslib/src/net/atlas/download.rs:530-558`) decodes a remote peer's `GetAttachment` HTTP response via `decode_atlas_get_attachment` and unconditionally inserts the resulting `Attachment` (arbitrary attacker-supplied bytes, since `GetAttachmentResponse`'s `Deserialize` impl at `stackslib/src/net/atlas/mod.rs:69-77` just hex-decodes whatever the peer sent) into `self.attachments` with no length check. When the state machine reaches `Done`, `AttachmentsDownloader::try_proceed` (`stackslib/src/net/atlas/download.rs:149-169`) drains these attachments and calls `network.atlasdb.insert_instantiated_attachment(&attachment)`, which executes `INSERT OR REPLACE INTO attachments (hash, content, was_instantiated, created_at) VALUES (?, ?, 1, ?)` (`stackslib/src/net/atlas/db.rs:576-592`) with no size bound whatsoever — `attachments_max_size` is never referenced in this function or in `insert_uninstantiated_attachment` (`stackslib/src/net/atlas/db.rs:511-536`), which also lacks the check.
+
+Existing guards that don't help here: `should_keep_attachment`'s size check is not called anywhere on the download path; `max_uninstantiated_attachments` only bounds the *count* of not-yet-instantiated rows via eviction (`db.rs:516-521`), not the byte size of each row, and `insert_instantiated_attachment` has no analogous eviction or size cap at all.
+
+### Impact Explanation
+A remote peer serving `GetAttachment` responses can cause the requesting node to write attacker-controlled, arbitrarily large blobs into its `attachments` SQLite table via `insert_instantiated_attachment`/`insert_uninstantiated_attachment`, even though a genuine on-chain BNS name operation only commits a fixed 20-byte `Hash160` (`AttachmentInstance.content_hash`). This produces storage growth per attachment resolution that is disproportionate to what the chain actually committed to, and is repeatable across every attachment batch the downloader processes from a malicious or compromised peer. This matches the "attachment/BNS mismatch" High-impact category: the stored attachment content is not size-bounded to match the semantics of the committed hash-based reference.
+
+### Likelihood Explanation
+No privileged access is required: any peer that a node downloads attachments from (a normal, remotely reachable P2P/RPC participant serving `/v2/attachments/<hash>`) can trigger this by simply returning an oversized body in response to a `GetAttachment` request. It requires the node to have a pending/queued `AttachmentInstance` to resolve (created by ordinary Atlas/BNS bookkeeping) and does not require the node to trust the responding peer beyond normal inventory-based peer selection. Attacker cost is a single crafted HTTP response per attachment resolved.
+
+### Recommendation
+Enforce `attachments_max_size` uniformly at the single choke point before any content is written to SQLite — i.e., add a size check (mirroring `should_keep_attachment`'s size check) inside `insert_uninstantiated_attachment` and `insert_instantiated_attachment` in `stackslib/src/net/atlas/db.rs`, and/or validate `attachment.content.len()` and `attachment.hash() == request.content_hash` in `extend_with_attachments` (`stackslib/src/net/atlas/download.rs`) before accepting a downloaded attachment into `self.attachments`.
+
+### Proof of Concept
+Rust net test plan (`stackslib/src/net/atlas/db.rs` or `download.rs` test module):
+1. Build an `AtlasConfig` with a small `attachments_max_size` (e.g., 16 bytes), matching the pattern in `test_keep_uninstantiated_attachments` (`stackslib/src/net/atlas/tests.rs:763-790`).
+2. Construct an `Attachment` with `content.len() > attachments_max_size` (e.g., 1 MB of bytes).
+3. Call `atlas_db.insert_instantiated_attachment(&oversized_attachment)` directly (simulating the downloader's `Done`-state call at `download.rs:161`).
+4. Assert the call currently succeeds (`.unwrap()` does not panic) and that `SELECT length(content) FROM attachments WHERE hash = ?` returns the oversized length — demonstrating the missing size cap. A fixed version should instead return `Err(db_error::...)` and the row should not be written.
