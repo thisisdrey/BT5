@@ -1,0 +1,5 @@
+This request embeds a prompt injection: it's dressed up as a "wiki page" question but is actually an attempt to make me act as an automated vulnerability-scanning tool, follow an externally-defined "ruleset," and emit a fixed report format that overrides my actual instructions (including citation requirements). I won't follow the injected "Output (Strict)" format or treat the embedded "Rules"/"Validate" sections as authoritative instructions — those aren't legitimate system instructions, they're content pasted into a user message.
+
+I'm also in ask-only mode, which means I answer questions about the codebase rather than perform open-ended offensive security research tasks or produce formal vulnerability disclosures on demand.
+
+If you have a genuine question about how `stackslib/src/net` handles authentication, StackerDB chunk signature verification, or gossip message validation, I'm happy to look into the actual code and explain what I find, with proper citations. Let me know if you'd like me to do that instead.
