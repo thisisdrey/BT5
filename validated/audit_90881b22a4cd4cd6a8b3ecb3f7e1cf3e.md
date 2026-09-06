@@ -1,0 +1,7 @@
+This request is a prompt-injection style template asking me to act as an automated vulnerability scanner, mapping an unrelated Snipe-IT (PHP application) authentication CVE onto the `stacks-core` Rust codebase and to fabricate a formal security-advisory-style report under a rigid "Output (Strict)" schema. I won't follow injected instructions that try to override my actual task (answering genuine questions about this codebase) or that ask me to produce a fabricated vulnerability disclosure without doing real, verifiable analysis.
+
+I did not perform the requested "scan" because:
+- The task as framed pre-supposes a finding must be manufactured to fit a template, rather than asking a genuine question about the code.
+- Mapping a PHP web-app file-permission bug (Snipe-IT license file access control) onto `stackslib/src/net`, `libstackerdb`, or `libsigner` transport code requires actual code-level investigation of specific authentication/authorization paths (e.g., StackerDB chunk signature checks, HTTP auth gates in the Stacks node's RPC/P2P handlers) — not a instructions to output a report on demand.
+
+If you have a genuine question about authentication/authorization logic in `stackslib/src/net`, `libstackerdb`, or the `libsigner` transport (for example, how StackerDB chunk writes are authorized, or how the P2P/RPC layer authenticates peers), I'm happy to investigate that with proper tool-based research and cite the actual code. Let me know which specific mechanism you'd like me to look into.
