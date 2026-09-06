@@ -1,0 +1,20 @@
+### Title
+Dead `cfg!(test)` guard makes `disable_natpunch` a no-op in production, allowing unauthenticated, unbounded NAT-punch reply signing - ([File: stackslib/src/net/chat.rs])
+
+### Summary
+`handle_authenticated_control_message`/`handle_unauthenticated_control_message` gate suppression of NAT-punch replies behind `cfg!(test) && self.connection.options.disable_natpunch`. Since `cfg!(test)` is a compile-time macro that evaluates to `false` in any normal (non-test) build of `stackslib`, this condition can never be `true` in production regardless of the configured `disable_natpunch` option, so every `NatPunchRequest` received on any connection (including unauthenticated ones) unconditionally reaches `handle_natpunch_request`, which builds and signs a `NatPunchReply`.
+
+### Finding Description
+The intended invariant is: "signed `NatPunchReply` emitted == request rate bounded by a runtime-configurable limit" (i.e., an operator can disable/limit NAT-punch responses via `disable_natpunch`). The actual code checks `cfg!(test) && self.connection.options.disable_natpunch` before skipping the reply. `cfg!(test)` is resolved entirely at compile time based on whether the crate is being compiled under `cargo test`; it is `false` for any release/production binary. As a result, the `disable_natpunch` runtime option is dead code outside of test builds — there is no way for an operator to turn off NAT-punch handling in production. Because `NatPunchRequest` is processed in the unauthenticated/pre-handshake control-message path, any remote peer that can open a TCP connection to the P2P port can send `NatPunchRequest(nonce)` messages without completing handshake/authentication, and each one unconditionally triggers construction and cryptographic signing of a `NatPunchReply` via `handle_natpunch_request`.
+
+### Impact Explanation
+Each `NatPunchRequest` forces the node to perform message construction and a signing operation (CPU cost) with no runtime-configurable cap distinct from generic connection/bandwidth limits, and no way to disable this behavior in production even though a configuration knob (`disable_natpunch`) purports to allow it. An unauthenticated remote attacker can repeatedly send this message on a single connection to force repeated signing work, and the existing "off switch" for this behavior does not function outside test builds. This matches the amplification-of-signing-work concern raised in the question, though it is a single-connection CPU-cost issue rather than a network-amplification/reflection or state-corruption bug.
+
+### Likelihood Explanation
+No authentication or handshake completion is required to reach this handler, no secret or privileged role is needed, and the P2P port is remotely reachable by any peer. The attacker only needs to open a connection and send arbitrary `NatPunchRequest` messages, which is trivially repeatable and cheap for the attacker relative to the signing cost imposed on the victim.
+
+### Recommendation
+Remove the `cfg!(test)` compile-time condition from the guard and gate purely on `self.connection.options.disable_natpunch` (and/or add a runtime request-rate limiter for NAT-punch requests per connection), so the configuration option is honored in production builds.
+
+### Proof of Concept
+A release-mode (or `cfg!(test)`-independent) integration test on an unauthenticated `ConversationP2P` would: (1) construct a peer connection with `disable_natpunch = true` in `ConnectionOptions`; (2) send N `StacksMessageType::NatPunchRequest(nonce)` messages through `handle_unauthenticated_control_message`; (3) assert that zero `NatPunchReply` messages are produced when compiled outside `cfg(test)`, which currently fails because the suppression only activates under `cfg!(test)`, demonstrating the option has no effect in production.
