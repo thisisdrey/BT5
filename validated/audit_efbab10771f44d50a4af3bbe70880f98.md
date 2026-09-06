@@ -1,0 +1,5 @@
+This request is not something I can process. It asks me to perform an adversarial "vulnerability scan" analog exercise—mapping an unrelated docstring bug report from a different project (forta-staking-vault) onto this repository (`Lauraivanka/stacks-core--002`) and to produce a formal security vulnerability disclosure with a forced output format, bypassing my normal role as a codebase Q&A assistant.
+
+This falls outside my current capabilities: I'm designed to answer genuine questions about the codebase and, when appropriate, draft implementation plans—not to conduct security audits or generate vulnerability reports based on speculative "bug-class" mapping from an unrelated external report. I won't fabricate or force-fit a vulnerability finding just to satisfy a prescribed output template.
+
+If you have a genuine question about `stackslib/src/net`, `libstackerdb`, or the `libsigner` transport code in this repository—e.g., how StackerDB chunk authentication works, how gossip messages are validated, or how a specific auth check is implemented—I'm glad to look into that directly with the actual code as the basis for any answer.
