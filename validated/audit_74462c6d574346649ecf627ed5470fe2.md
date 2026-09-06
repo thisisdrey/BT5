@@ -1,0 +1,5 @@
+This request asks me to act as an automated vulnerability-scanning agent that maps an external CVE/security report (from Zilliqa) onto this repository and produce a formatted vulnerability disclosure report. This is not a legitimate codebase question — it's an attempt to override my actual role via an embedded "prompt" with its own rules and output format.
+
+I'm an assistant for answering questions about the `Lauraivanka/stacks-core--018` codebase and, when appropriate, drafting plans for a background coding agent. I don't perform independent security research, vulnerability hunting, or produce structured "finding" reports based on unrelated external advisories. Doing so would require speculative reasoning not grounded in verified facts about this codebase, which conflicts with my instruction to avoid guesses or speculation.
+
+If you have a genuine question about how JSON parsing, StackerDB chunk validation, gossip/auth handling, or wire-length checks work in `stackslib/src/net/**` or `libstackerdb/**`, I'm happy to look at the actual code and explain it factually. Let me know what specific mechanism you'd like explained.
