@@ -1,0 +1,48 @@
+### Title
+Broken `ReliabilityReport::score()` lets a lying, non-serving peer permanently entrench itself as the sole selected source for an attachment, causing AtlasDB inventory to never resolve bit=1 - (File: `stackslib/src/net/atlas/download.rs`)
+
+### Summary
+`AttachmentRequest::get_most_reliable_source` (`download.rs:1073-1079`) always selects exactly one peer — the one with the highest `ReliabilityReport::score()` — to fetch a given attachment's content from, out of all peers that *claim* to have it in their inventory. The `score()` function (`download.rs:1299-1305`) is mathematically broken: it is dominated by `total_requests_sent` (`n`) regardless of success/failure, so failing a request does not meaningfully lower a peer's score relative to succeeding. Combined with the fact that only the currently-selected top peer receives the extra content-request attempt each retry cycle (bumping its own `n` further), a peer can entrench itself as "most reliable" indefinitely while never delivering valid attachment bytes.
+
+### Finding Description
+The claimed equality — "inventory-served-availability must eventually equal committed-and-obtainable-from-honest-peers" — is broken by the peer-selection/scoring logic, not by any authentication/signature bypass.
+
+`AttachmentsBatchStateContext::get_prioritized_attachments_requests` (`download.rs:404-478`) builds an `AttachmentRequest` whose `sources` field is the set of *all* peers that advertised (via `GetAttachmentsInvResponse.pages[].inventory`) that they hold the content (`download.rs:439-458`). However, `Requestable::get_url()` for `AttachmentRequest` (`download.rs:1104-1108`) — used both to decide which URL actually receives the HTTP GET (`PeerNetwork::begin_request`, `epoch2x.rs:1916-1975`) and to decide which peer's `ReliabilityReport` gets updated in `extend_with_attachments` (`download.rs:530-558`) — always calls `get_most_reliable_source()` (`download.rs:1074-1079`), which picks the single highest-`score()` peer via `max_by_key`. No fallback to a second source is attempted within the same cycle if the top pick fails; the whole batch is simply requeued via `bump_retry_count` (`download.rs:1183-1194`) with exponential backoff, and `get_prioritized_attachments_requests` is recomputed next cycle using the *same* selection logic.
+
+The scoring bug: `ReliabilityReport::score()` (`download.rs:1299-1305`):
+```rust
+self.total_requests_success * 1000 / (n * 1000) + n
+```
+This reduces to `floor(success/n) + n` (0 or 1, plus n), meaning score is essentially just `total_requests_sent`. A peer's score is **not decreased by failures** — every request attempt (success or failure) increments `n`, and thus the score, by ~1. Since inventory (`/v2/attachments/inv`) requests are broadcast to *every* known peer each cycle (`get_prioritized_attachments_inventory_requests`, `download.rs:376-402`), an attacker only needs to answer inventory requests truthfully (cheap, no real content needed) to keep its `n`/`success` growing in lock-step with honest peers on that dimension. But because only the *currently top-ranked* peer is chosen to receive the actual content request each cycle, that peer alone accrues an **extra** `n` increment per cycle (whether it succeeds or fails to deliver the bytes) — while the honest peer, never selected, accrues no extra `n` from content requests at all. This creates a positive feedback loop: once a lying peer is selected once, its `n` (and hence `score()`) climbs strictly faster than the un-selected honest peer's, so `max_by_key` keeps re-selecting the same lying peer every retry cycle, regardless of it never returning valid attachment bytes (extend_with_attachments only calls `bump_failed_requests`, not any penalty capable of overturning the accumulated `n` lead).
+
+Exploit flow:
+1. Attacker peer connects as an ordinary outbound-sync peer and is included in `network.get_outbound_sync_peers()` (`download.rs:116`).
+2. Attacker's `/v2/attachments/inv` handler always returns a well-formed `GetAttachmentsInvResponse` with bit=1 set for the target `content_hash`'s position, regardless of truth.
+3. Attacker's `/v2/attachments/<hash>` handler always fails (times out, returns 404, or returns undecodable payload).
+4. On the first tie or by chance selection, the attacker becomes the `get_most_reliable_source()` winner for that `AttachmentRequest`.
+5. Every retry cycle thereafter, the attacker is the only peer contacted for content, so its `n` (and score) is systematically higher than the honest peer's, cementing its position as the winner.
+6. This repeats until `AttachmentsBatch.retry_count >= connection_options.max_attachment_retry_count` (`download.rs:191-192`), at which point the batch is dropped entirely (`download.rs:199-203`) and never retried again.
+7. `AttachmentsBatchStateContext::extend_with_attachments` never inserts the real bytes into `context.attachments`, so `AttachmentsDownloader::run`'s `Done` branch (`download.rs:153-169`) never calls `atlasdb.insert_instantiated_attachment` for this content — the AtlasDB inventory bit for that `content_hash` never flips to 1, and `/v2/attachments/inv` reports bit=0 forever for a name operation that was validly committed on-chain and is actually obtainable from an honest peer.
+
+No handshake/signature check, `MAX_MESSAGE_LEN`, or auth gate is relevant here — this is purely a peer-selection/reliability-scoring logic defect operating entirely within already-authenticated HTTP RPC responses.
+
+### Impact Explanation
+The impact matches the "attachment/BNS mismatch" High-severity category: the local node's authoritative attachment inventory (served over `/v2/attachments/inv`, consumed by BNS resolvers/clients) permanently reports an attachment as absent even though it was committed on-chain by a valid name operation and is obtainable from an honest, reachable peer. This causes persistent BNS name-resolution failure for any name depending on that attachment, for any client relying on this node's `/v2/attachments/inv` or `/v2/attachments/<hash>` endpoints. The condition is durable (post retry-exhaustion, the batch is dropped and not retried), and the attacker's cost is trivial: run one ordinary peer that answers inventory requests truthfully-shaped but always fails/lies on the content GET.
+
+### Likelihood Explanation
+- Preconditions: attacker only needs to be a normal outbound-sync-reachable peer with a resolvable data URL — no privileged role, no secret, no StackerDB slot needed.
+- The attacker's messages are ordinary, well-formed HTTP RPC responses (inventory pages, and failed/garbage content responses) — fully within reach of an unprivileged remote party.
+- The feedback loop is deterministic once the lying peer is first selected (which happens with non-trivial probability from tie-breaks or from being queried at all), and is self-reinforcing rather than requiring luck to persist.
+- Repeatable per attachment/content_hash; the attacker can apply this simultaneously across many `AttachmentsBatch`es tracking different attachments.
+- I was not able to fully confirm the exact default value of `max_attachment_retry_count` in this session (grep found matches in `config/mod.rs` and `connection.rs` but I did not get to read the actual default), so the precise number of cycles needed to reach "drop" state is unconfirmed, though the mechanism holds regardless of that value.
+
+### Recommendation
+Fix `ReliabilityReport::score()` so that failed requests genuinely lower a peer's relative ranking (e.g., a true success ratio, or a Wilson/Bayesian-smoothed ratio that doesn't degenerate into "score ≈ n"), and change `AttachmentRequest`/`get_most_reliable_source` to try multiple/all advertising sources within a single retry cycle (e.g., round-robin or attempt all sources until one succeeds) rather than committing exclusively to a single top-ranked peer whose ranking can be entrenched by its own request volume.
+
+### Proof of Concept
+Rust unit test plan in `stackslib/src/net/atlas/tests.rs` (extending the existing `test_downloader_context_attachment_requests`-style harness):
+1. Construct two `ReliabilityReport`s: `honest = ReliabilityReport::new(20, 20)` (always succeeds, low volume) and `liar = ReliabilityReport::new(100, 80)` (fails 20 content attempts but has been "selected" more due to entrenchment).
+2. Assert `liar.score() > honest.score()` (concretely `honest.score() == 21`, `liar.score() == 100`), proving the ranking inversion directly from `ReliabilityReport::score()` (`download.rs:1299-1305`).
+3. Build an `AttachmentRequest` with `sources = {honest_url: honest, liar_url: liar}` and assert `request.get_url() == &liar_url` via `get_most_reliable_source()` (`download.rs:1074-1079`), confirming the lying/failing peer is selected as the sole target despite the honest peer's perfect success rate.
+4. Simulate N retry cycles: each cycle call `extend_with_attachments` with a `None`/failed response for the liar's URL only (never contacting honest), bump `liar`'s `n` further, and re-assert `get_most_reliable_source()` still returns the liar every time — demonstrating the entrenchment never self-corrects.
+5. Assert that after `connection_options.max_attachment_retry_count` cycles, the batch is dropped (`download.rs:199-203`) and the local `AtlasDB` (via `find_attachment`) never contains the content for that `content_hash`, i.e., its inventory bit remains 0 permanently.
