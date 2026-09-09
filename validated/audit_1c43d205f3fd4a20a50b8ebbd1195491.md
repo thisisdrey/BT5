@@ -1,1 +1,0 @@
-Now let me examine the actual `add_downloaded_chunk` and `validate_downloaded_chunk` call ordering in `sync.rs`.

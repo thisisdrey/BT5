@@ -1,1 +1,0 @@
-functions.grep_search:16{"pattern": "impl StackerDBChunkData|fn sign|fn verify|fn data_hash|fn get_slot_metadata", "include": "stackslib/src/net/**/*.rs"}

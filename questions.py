@@ -6,9 +6,9 @@ from decouple import config
 # todo: if scope_files is: 500 > 50, 300 > 30 , 100 > 10
 MAX_REPO = 20
 # todo: the GitLab namespace/project path, for example group/project
-SOURCE_REPO = 'stacks-network/stacks-core'
+SOURCE_REPO = 'ethereum/go-ethereum'
 # todo: the name of the repository
-REPO_NAME = 'stacks-core'
+REPO_NAME = 'go-ethereum'
 
 run_number = os.environ.get('GITHUB_RUN_NUMBER', '0')
 
@@ -49,513 +49,321 @@ else:
 
 scope_files = [
     # =================================================================================
-    # LENS: THE NETWORK BOUNDARY (P2P, RPC, STACKERDB, ATLAS).
-    # A node's open ports accept bytes from anyone. The files below sit on the path from
-    # an unauthenticated remote message - a P2P handshake, a gossiped block or tx, an
-    # HTTP request, a StackerDB chunk, an Atlas attachment - to one of three decisions:
-    # is this peer who it claims and allowed to say this, does the node's stored or
-    # relayed state match what was actually authorized, and does the handler stay within
-    # its resource and trust bounds. A question belongs here only if it closes on an
-    # equality between what a remote party authenticated and what the node stored,
-    # relayed or served - or a remotely reachable memory/panic fault with a named impact.
+    # LENS: CONSENSUS STATE TRANSITION AND BLOCK VALIDITY (go-ethereum / Geth).
+    # Every Geth node on mainnet decodes a block, validates its header and body, runs
+    # each transaction through the EVM and StateDB, and produces (stateRoot,
+    # receiptsRoot, gasUsed, logsBloom) that must equal what the Ethereum spec and
+    # every other client produce. Attacker input is a signed transaction, a deployed
+    # contract's bytecode, a blob sidecar, or a block any permissionless builder or
+    # proposer can craft. The files below sit on the path from those inputs to one of
+    # four decisions: is the block valid, what state root results, how much gas and
+    # ETH moved, and what is persisted as canonical. A question belongs here only if
+    # it can be closed by an equality between the spec's result and Geth's result.
     # =================================================================================
-    # -- The P2P protocol: framing, handshake, and the chat state machine ---------------
+    # -- core: block import, validation, processing, gas pool, genesis and chain config -
+    # blockchain.go owns insertChain, ProcessBlock, reorg, SetCanonical, writeBlockWithState;
+    # state_processor.go owns Process, ApplyTransactionWithEVM, the system-contract calls
+    # (beacon root, parent hash, withdrawal / consolidation queues) and AssembleBlock.
+    "core/block_validator.go",
+    "core/blockchain.go",
+    "core/blockchain_insert.go",
+    "core/blockchain_reader.go",
+    "core/error.go",
+    "core/evm.go",
+    "core/gaspool.go",
+    "core/genesis.go",
+    "core/genesis_alloc.go",
+    "core/headerchain.go",
+    "core/jumpdest.go",
+    "core/sender_cacher.go",
+    "core/state_prefetcher.go",
+    "core/state_processor.go",
+    "core/state_processor_parallel.go",
+    "core/state_transition.go",
+    "core/stateless.go",
+    "core/types.go",
+    "core/stateless/database.go",
+    "core/stateless/encoding.go",
+    "core/stateless/witness.go",
 
-    # -- clarity-types: Clarity value, type and effect model -------------------------------
-    "clarity-types/src/effects/asset_map.rs",
-    "clarity-types/src/effects/mod.rs",
-    "clarity-types/src/errors/mod.rs",
-    "clarity-types/src/lib.rs",
-    "clarity-types/src/representations.rs",
-    "clarity-types/src/types/mod.rs",
-    "clarity-types/src/types/serialization.rs",
-    "clarity-types/src/types/signatures.rs",
-    "clarity-types/src/version.rs",
+    # -- core/vm: interpreter, opcodes, gas tables, access lists, precompiles and cache --
+    "core/vm/analysis_legacy.go",
+    "core/vm/common.go",
+    "core/vm/contract.go",
+    "core/vm/contracts.go",
+    "core/vm/eips.go",
+    "core/vm/errors.go",
+    "core/vm/evm.go",
+    "core/vm/gas.go",
+    "core/vm/gas_table.go",
+    "core/vm/gascosts.go",
+    "core/vm/instructions.go",
+    "core/vm/interface.go",
+    "core/vm/interpreter.go",
+    "core/vm/jump_table.go",
+    "core/vm/jump_table_export.go",
+    "core/vm/jumpdests.go",
+    "core/vm/memory.go",
+    "core/vm/memory_table.go",
+    "core/vm/opcodes.go",
+    "core/vm/operations_acl.go",
+    "core/vm/precompile_cache.go",
+    "core/vm/stack.go",
+    "core/vm/stack_table.go",
 
-    # -- clarity: the Clarity language, analyser, interpreter, costs and database ----------
-    "clarity/src/libclarity.rs",
-    "clarity/src/vm/analysis/analysis_db.rs",
-    "clarity/src/vm/analysis/arithmetic_checker/mod.rs",
-    "clarity/src/vm/analysis/contract_interface_builder/mod.rs",
-    "clarity/src/vm/analysis/errors.rs",
-    "clarity/src/vm/analysis/mod.rs",
-    "clarity/src/vm/analysis/read_only_checker/mod.rs",
-    "clarity/src/vm/analysis/trait_checker/mod.rs",
-    "clarity/src/vm/analysis/type_checker/contexts.rs",
-    "clarity/src/vm/analysis/type_checker/mod.rs",
-    "clarity/src/vm/analysis/type_checker/v2_05/contexts.rs",
-    "clarity/src/vm/analysis/type_checker/v2_05/mod.rs",
-    "clarity/src/vm/analysis/type_checker/v2_05/natives/assets.rs",
-    "clarity/src/vm/analysis/type_checker/v2_05/natives/maps.rs",
-    "clarity/src/vm/analysis/type_checker/v2_05/natives/mod.rs",
-    "clarity/src/vm/analysis/type_checker/v2_05/natives/options.rs",
-    "clarity/src/vm/analysis/type_checker/v2_05/natives/sequences.rs",
-    "clarity/src/vm/analysis/type_checker/v2_1/contexts.rs",
-    "clarity/src/vm/analysis/type_checker/v2_1/mod.rs",
-    "clarity/src/vm/analysis/type_checker/v2_1/natives/assets.rs",
-    "clarity/src/vm/analysis/type_checker/v2_1/natives/conversions.rs",
-    "clarity/src/vm/analysis/type_checker/v2_1/natives/maps.rs",
-    "clarity/src/vm/analysis/type_checker/v2_1/natives/mod.rs",
-    "clarity/src/vm/analysis/type_checker/v2_1/natives/options.rs",
-    "clarity/src/vm/analysis/type_checker/v2_1/natives/post_conditions.rs",
-    "clarity/src/vm/analysis/type_checker/v2_1/natives/sequences.rs",
-    "clarity/src/vm/analysis/types.rs",
-    "clarity/src/vm/ast/definition_sorter/mod.rs",
-    "clarity/src/vm/ast/errors.rs",
-    "clarity/src/vm/ast/expression_identifier/mod.rs",
-    "clarity/src/vm/ast/mod.rs",
-    "clarity/src/vm/ast/parser/mod.rs",
-    "clarity/src/vm/ast/parser/v1.rs",
-    "clarity/src/vm/ast/parser/v2/lexer/error.rs",
-    "clarity/src/vm/ast/parser/v2/lexer/mod.rs",
-    "clarity/src/vm/ast/parser/v2/lexer/token.rs",
-    "clarity/src/vm/ast/parser/v2/mod.rs",
-    "clarity/src/vm/ast/stack_depth_checker.rs",
-    "clarity/src/vm/ast/sugar_expander/mod.rs",
-    "clarity/src/vm/ast/traits_resolver/mod.rs",
-    "clarity/src/vm/ast/types.rs",
-    "clarity/src/vm/callables.rs",
-    "clarity/src/vm/clarity.rs",
-    "clarity/src/vm/contexts.rs",
-    "clarity/src/vm/contracts.rs",
-    "clarity/src/vm/costs/constants.rs",
-    "clarity/src/vm/costs/cost_functions.rs",
-    "clarity/src/vm/costs/costs_1.rs",
-    "clarity/src/vm/costs/costs_2.rs",
-    "clarity/src/vm/costs/costs_2_testnet.rs",
-    "clarity/src/vm/costs/costs_3.rs",
-    "clarity/src/vm/costs/costs_4.rs",
-    "clarity/src/vm/costs/costs_5.rs",
-    "clarity/src/vm/costs/errors.rs",
-    "clarity/src/vm/costs/execution_cost.rs",
-    "clarity/src/vm/costs/mod.rs",
-    "clarity/src/vm/database/caching/mod.rs",
-    "clarity/src/vm/database/caching/weight_limited_fifo.rs",
-    "clarity/src/vm/database/clarity_db.rs",
-    "clarity/src/vm/database/clarity_store.rs",
-    "clarity/src/vm/database/key_value_wrapper.rs",
-    "clarity/src/vm/database/mod.rs",
-    "clarity/src/vm/database/sqlite.rs",
-    "clarity/src/vm/database/structures.rs",
-    "clarity/src/vm/diagnostic.rs",
-    "clarity/src/vm/errors.rs",
-    "clarity/src/vm/events.rs",
-    "clarity/src/vm/functions/arithmetic.rs",
-    "clarity/src/vm/functions/assets.rs",
-    "clarity/src/vm/functions/bitcoin.rs",
-    "clarity/src/vm/functions/boolean.rs",
-    "clarity/src/vm/functions/conversions.rs",
-    "clarity/src/vm/functions/crypto.rs",
-    "clarity/src/vm/functions/database.rs",
-    "clarity/src/vm/functions/define.rs",
-    "clarity/src/vm/functions/mod.rs",
-    "clarity/src/vm/functions/options.rs",
-    "clarity/src/vm/functions/post_conditions.rs",
-    "clarity/src/vm/functions/principals.rs",
-    "clarity/src/vm/functions/sequences.rs",
-    "clarity/src/vm/functions/tuples.rs",
-    "clarity/src/vm/hooks/internals.rs",
-    "clarity/src/vm/hooks/mod.rs",
-    "clarity/src/vm/hooks/trace.rs",
-    "clarity/src/vm/mod.rs",
-    "clarity/src/vm/representations.rs",
-    "clarity/src/vm/resource_limiter.rs",
-    "clarity/src/vm/tooling/mod.rs",
-    "clarity/src/vm/types/mod.rs",
-    "clarity/src/vm/types/serialization.rs",
-    "clarity/src/vm/types/signatures.rs",
-    "clarity/src/vm/variables.rs",
-    "clarity/src/vm/version.rs",
+    # -- core/state: StateDB, journal, snapshots, access lists, transient storage, readers -
+    "core/state/access_list.go",
+    "core/state/database.go",
+    "core/state/database_code.go",
+    "core/state/database_history.go",
+    "core/state/database_iterator.go",
+    "core/state/database_mpt.go",
+    "core/state/iterator.go",
+    "core/state/journal.go",
+    "core/state/reader.go",
+    "core/state/reader_eip_7928.go",
+    "core/state/reader_stater.go",
+    "core/state/state_object.go",
+    "core/state/statedb.go",
+    "core/state/statedb_eip_7928.go",
+    "core/state/statedb_hooked.go",
+    "core/state/stateupdate.go",
+    "core/state/transient_storage.go",
+    "core/state/trie_prefetcher.go",
+    "core/state/snapshot/context.go",
+    "core/state/snapshot/conversion.go",
+    "core/state/snapshot/difflayer.go",
+    "core/state/snapshot/disklayer.go",
+    "core/state/snapshot/generate.go",
+    "core/state/snapshot/holdable_iterator.go",
+    "core/state/snapshot/iterator.go",
+    "core/state/snapshot/iterator_binary.go",
+    "core/state/snapshot/iterator_fast.go",
+    "core/state/snapshot/journal.go",
+    "core/state/snapshot/snapshot.go",
+    "core/state/snapshot/utils.go",
 
-    # -- stacks-codec: transaction and message wire encoding -------------------------------
-    "stacks-codec/src/lib.rs",
-    "stacks-codec/src/strings.rs",
-    "stacks-codec/src/transaction.rs",
+    # -- core/types: block, header, transactions, signing, sidecars, receipts, BAL --------
+    "core/types/account.go",
+    "core/types/block.go",
+    "core/types/bloom9.go",
+    "core/types/custody_bitmap.go",
+    "core/types/deposit.go",
+    "core/types/hashes.go",
+    "core/types/hashing.go",
+    "core/types/log.go",
+    "core/types/receipt.go",
+    "core/types/state_account.go",
+    "core/types/transaction.go",
+    "core/types/transaction_marshalling.go",
+    "core/types/transaction_signing.go",
+    "core/types/tx_access_list.go",
+    "core/types/tx_blob.go",
+    "core/types/tx_dynamic_fee.go",
+    "core/types/tx_legacy.go",
+    "core/types/tx_setcode.go",
+    "core/types/withdrawal.go",
+    "core/types/bal/bal.go",
+    "core/types/bal/bal_encoding.go",
+    "core/types/bal/bal_lookup.go",
 
-    # -- crates/stacks-transactions: standalone transaction and post-condition checks ------
-    "crates/stacks-transactions/src/lib.rs",
+    # -- core/txpool: transaction admission, nonce ordering, blob pool, delegation limits --
+    "core/txpool/errors.go",
+    "core/txpool/reserver.go",
+    "core/txpool/subpool.go",
+    "core/txpool/txpool.go",
+    "core/txpool/validation.go",
+    "core/txpool/txorder/ordering.go",
+    "core/txpool/legacypool/legacypool.go",
+    "core/txpool/legacypool/list.go",
+    "core/txpool/legacypool/noncer.go",
+    "core/txpool/legacypool/queue.go",
+    "core/txpool/blobpool/blobpool.go",
+    "core/txpool/blobpool/buffer.go",
+    "core/txpool/blobpool/cache.go",
+    "core/txpool/blobpool/config.go",
+    "core/txpool/blobpool/conversion.go",
+    "core/txpool/blobpool/evictheap.go",
+    "core/txpool/blobpool/interface.go",
+    "core/txpool/blobpool/limbo.go",
+    "core/txpool/blobpool/lookup.go",
+    "core/txpool/blobpool/priority.go",
+    "core/txpool/blobpool/slotter.go",
 
-    # -- stacks-common: addresses, hashing, secp256k1, codec and shared utils --------------
-    "stacks-common/src/address/b58.rs",
-    "stacks-common/src/address/c32.rs",
-    "stacks-common/src/address/c32_old.rs",
-    "stacks-common/src/address/mod.rs",
-    "stacks-common/src/alloc_tracker.rs",
-    "stacks-common/src/bitvec.rs",
-    "stacks-common/src/codec/macros.rs",
-    "stacks-common/src/codec/mod.rs",
-    "stacks-common/src/libcommon.rs",
-    "stacks-common/src/types/chainstate.rs",
-    "stacks-common/src/types/mod.rs",
-    "stacks-common/src/types/net.rs",
-    "stacks-common/src/types/sqlite.rs",
-    "stacks-common/src/util/chunked_encoding.rs",
-    "stacks-common/src/util/db.rs",
-    "stacks-common/src/util/ed25519.rs",
-    "stacks-common/src/util/hash.rs",
-    "stacks-common/src/util/log.rs",
-    "stacks-common/src/util/lru_cache.rs",
-    "stacks-common/src/util/macros.rs",
-    "stacks-common/src/util/mod.rs",
-    "stacks-common/src/util/pair.rs",
-    "stacks-common/src/util/pipe.rs",
-    "stacks-common/src/util/retry.rs",
-    "stacks-common/src/util/secp256k1/mod.rs",
-    "stacks-common/src/util/secp256k1/native.rs",
-    "stacks-common/src/util/secp256k1/wasm.rs",
-    "stacks-common/src/util/secp256r1.rs",
-    "stacks-common/src/util/serde_serializers.rs",
-    "stacks-common/src/util/uint.rs",
-    "stacks-common/src/util/vrf.rs",
+    # -- core/rawdb: chain, state and receipt persistence, freezer, schema ----------------
+    "core/rawdb/accessors_chain.go",
+    "core/rawdb/accessors_history.go",
+    "core/rawdb/accessors_indexes.go",
+    "core/rawdb/accessors_metadata.go",
+    "core/rawdb/accessors_snapshot.go",
+    "core/rawdb/accessors_state.go",
+    "core/rawdb/accessors_trie.go",
+    "core/rawdb/ancient_scheme.go",
+    "core/rawdb/ancient_utils.go",
+    "core/rawdb/chain_freezer.go",
+    "core/rawdb/chain_iterator.go",
+    "core/rawdb/database.go",
+    "core/rawdb/freezer.go",
+    "core/rawdb/freezer_batch.go",
+    "core/rawdb/freezer_meta.go",
+    "core/rawdb/freezer_table.go",
+    "core/rawdb/freezer_utils.go",
+    "core/rawdb/schema.go",
+    "core/rawdb/table.go",
 
-    # -- libsigner: signer transport, events and v0 messages -------------------------------
-    "libsigner/src/error.rs",
-    "libsigner/src/events.rs",
-    "libsigner/src/http.rs",
-    "libsigner/src/libsigner.rs",
-    "libsigner/src/runloop.rs",
-    "libsigner/src/session.rs",
-    "libsigner/src/signer_set.rs",
-    "libsigner/src/v0/messages.rs",
-    "libsigner/src/v0/mod.rs",
-    "libsigner/src/v0/signer_state.rs",
+    # -- consensus and params: header rules, base fee, blob gas, fork schedule, constants --
+    "consensus/consensus.go",
+    "consensus/errors.go",
+    "consensus/beacon/consensus.go",
+    "consensus/misc/dao.go",
+    "consensus/misc/gaslimit.go",
+    "consensus/misc/eip1559/eip1559.go",
+    "consensus/misc/eip4844/eip4844.go",
+    "params/config.go",
+    "params/dao.go",
+    "params/denomination.go",
+    "params/network_params.go",
+    "params/protocol_params.go",
+    "params/forks/forks.go",
 
-    # -- libstackerdb: StackerDB chunk signing and verification ----------------------------
-    "libstackerdb/src/libstackerdb.rs",
+    # -- crypto: signature recovery, hashing, KZG, curve arithmetic behind precompiles ------
+    "crypto/crypto.go",
+    "crypto/keccak.go",
+    "crypto/signature_cgo.go",
+    "crypto/signature_nocgo.go",
+    "crypto/secp256k1/curve.go",
+    "crypto/secp256k1/scalar_mult_cgo.go",
+    "crypto/secp256k1/scalar_mult_nocgo.go",
+    "crypto/secp256k1/secp256.go",
+    "crypto/secp256r1/verifier.go",
+    "crypto/kzg4844/kzg4844.go",
+    "crypto/kzg4844/kzg4844_ckzg_cgo.go",
+    "crypto/kzg4844/kzg4844_ckzg_nocgo.go",
+    "crypto/kzg4844/kzg4844_gokzg.go",
+    "crypto/bn256/bn256_fast.go",
+    "crypto/bn256/bn256_slow.go",
+    "crypto/bn256/cloudflare/bn256.go",
+    "crypto/bn256/cloudflare/curve.go",
+    "crypto/bn256/cloudflare/gfp.go",
+    "crypto/bn256/cloudflare/gfp2.go",
+    "crypto/bn256/cloudflare/gfp6.go",
+    "crypto/bn256/cloudflare/gfp12.go",
+    "crypto/bn256/cloudflare/optate.go",
+    "crypto/bn256/cloudflare/twist.go",
+    "crypto/bn256/gnark/g1.go",
+    "crypto/bn256/gnark/g2.go",
+    "crypto/bn256/gnark/pairing.go",
+    "crypto/blake2b/blake2b.go",
+    "crypto/blake2b/blake2b_generic.go",
+    "crypto/blake2b/blake2b_ref.go",
+    "crypto/blake2b/blake2x.go",
+    "crypto/keccak/hashes.go",
+    "crypto/keccak/keccakf.go",
+    "crypto/keccak/sha3.go",
 
-    # -- pox-locking: the Rust side that locks and unlocks STX for PoX/stacking ------------
-    "pox-locking/src/events.rs",
-    "pox-locking/src/events_24.rs",
-    "pox-locking/src/lib.rs",
-    "pox-locking/src/pox_1.rs",
-    "pox-locking/src/pox_2.rs",
-    "pox-locking/src/pox_3.rs",
-    "pox-locking/src/pox_4.rs",
-    "pox-locking/src/pox_5.rs",
+    # -- rlp: the decoder every block, header, transaction and receipt passes through -----
+    "rlp/decode.go",
+    "rlp/encbuffer.go",
+    "rlp/encode.go",
+    "rlp/iterator.go",
+    "rlp/raw.go",
+    "rlp/typecache.go",
 
-    # -- stacks-signer: the Nakamoto signer decision logic and chainstate view -------------
-    "stacks-signer/src/chainstate/mod.rs",
-    "stacks-signer/src/chainstate/v1.rs",
-    "stacks-signer/src/chainstate/v2.rs",
-    "stacks-signer/src/cli.rs",
-    "stacks-signer/src/client/mod.rs",
-    "stacks-signer/src/client/stackerdb.rs",
-    "stacks-signer/src/client/stacks_client.rs",
-    "stacks-signer/src/config.rs",
-    "stacks-signer/src/lib.rs",
-    "stacks-signer/src/main.rs",
-    "stacks-signer/src/monitor_signers.rs",
-    "stacks-signer/src/monitoring/mod.rs",
-    "stacks-signer/src/monitoring/prometheus.rs",
-    "stacks-signer/src/monitoring/server.rs",
-    "stacks-signer/src/runloop.rs",
-    "stacks-signer/src/signerdb.rs",
-    "stacks-signer/src/utils.rs",
-    "stacks-signer/src/v0/mod.rs",
-    "stacks-signer/src/v0/signer.rs",
-    "stacks-signer/src/v0/signer_state.rs",
+    # -- trie and triedb: state root computation, proofs, path-based persistence ----------
+    "trie/bytepool.go",
+    "trie/committer.go",
+    "trie/encoding.go",
+    "trie/errors.go",
+    "trie/hasher.go",
+    "trie/iterator.go",
+    "trie/list_hasher.go",
+    "trie/node.go",
+    "trie/node_enc.go",
+    "trie/proof.go",
+    "trie/secure_trie.go",
+    "trie/stacktrie.go",
+    "trie/stacktrie_partial.go",
+    "trie/tracer.go",
+    "trie/trie.go",
+    "trie/trie_id.go",
+    "trie/trie_reader.go",
+    "trie/trienode/node.go",
+    "trie/trienode/proof.go",
+    "triedb/database.go",
+    "triedb/history.go",
+    "triedb/preimages.go",
+    "triedb/states.go",
+    "triedb/database/database.go",
+    "triedb/hashdb/database.go",
+    "triedb/pathdb/buffer.go",
+    "triedb/pathdb/context.go",
+    "triedb/pathdb/database.go",
+    "triedb/pathdb/difflayer.go",
+    "triedb/pathdb/disklayer.go",
+    "triedb/pathdb/errors.go",
+    "triedb/pathdb/execute.go",
+    "triedb/pathdb/flush.go",
+    "triedb/pathdb/history.go",
+    "triedb/pathdb/history_reader.go",
+    "triedb/pathdb/history_state.go",
+    "triedb/pathdb/history_trienode.go",
+    "triedb/pathdb/iterator.go",
+    "triedb/pathdb/journal.go",
+    "triedb/pathdb/layertree.go",
+    "triedb/pathdb/lookup.go",
+    "triedb/pathdb/nodes.go",
+    "triedb/pathdb/reader.go",
+    "triedb/pathdb/states.go",
+    "triedb/pathdb/verifier.go",
 
-    # -- stacks-node: the node binary, run loops, miner, burnchain and event dispatch ------
-    "stacks-node/src/burnchains/bitcoin/core_controller.rs",
-    "stacks-node/src/burnchains/bitcoin/mod.rs",
-    "stacks-node/src/burnchains/bitcoin_regtest_controller.rs",
-    "stacks-node/src/burnchains/mod.rs",
-    "stacks-node/src/burnchains/rpc/bitcoin_rpc_client/mod.rs",
-    "stacks-node/src/burnchains/rpc/mod.rs",
-    "stacks-node/src/burnchains/rpc/rpc_transport/mod.rs",
-    "stacks-node/src/event_dispatcher.rs",
-    "stacks-node/src/event_dispatcher/db.rs",
-    "stacks-node/src/event_dispatcher/payloads.rs",
-    "stacks-node/src/event_dispatcher/stacker_db.rs",
-    "stacks-node/src/event_dispatcher/worker.rs",
-    "stacks-node/src/globals.rs",
-    "stacks-node/src/keychain.rs",
-    "stacks-node/src/main.rs",
-    "stacks-node/src/monitoring/mod.rs",
-    "stacks-node/src/monitoring/prometheus.rs",
-    "stacks-node/src/nakamoto_node.rs",
-    "stacks-node/src/nakamoto_node/miner.rs",
-    "stacks-node/src/nakamoto_node/miner_db.rs",
-    "stacks-node/src/nakamoto_node/peer.rs",
-    "stacks-node/src/nakamoto_node/relayer.rs",
-    "stacks-node/src/nakamoto_node/signer_coordinator.rs",
-    "stacks-node/src/nakamoto_node/stackerdb_listener.rs",
-    "stacks-node/src/neon_node.rs",
-    "stacks-node/src/node.rs",
-    "stacks-node/src/operations.rs",
-    "stacks-node/src/run_loop/boot_nakamoto.rs",
-    "stacks-node/src/run_loop/helium.rs",
-    "stacks-node/src/run_loop/mod.rs",
-    "stacks-node/src/run_loop/nakamoto.rs",
-    "stacks-node/src/run_loop/neon.rs",
-    "stacks-node/src/syncctl.rs",
-    "stacks-node/src/tenure.rs",
-
-    # -- stackslib: consensus, chainstate, the Clarity VM host, burn ops and the P2P/RPC network ----
-    "stackslib/src/burnchains/bitcoin/address.rs",
-    "stackslib/src/burnchains/bitcoin/bits.rs",
-    "stackslib/src/burnchains/bitcoin/blocks.rs",
-    "stackslib/src/burnchains/bitcoin/indexer.rs",
-    "stackslib/src/burnchains/bitcoin/keys.rs",
-    "stackslib/src/burnchains/bitcoin/messages.rs",
-    "stackslib/src/burnchains/bitcoin/mod.rs",
-    "stackslib/src/burnchains/bitcoin/network.rs",
-    "stackslib/src/burnchains/bitcoin/spv.rs",
-    "stackslib/src/burnchains/burnchain.rs",
-    "stackslib/src/burnchains/db.rs",
-    "stackslib/src/burnchains/indexer.rs",
-    "stackslib/src/burnchains/mod.rs",
-    "stackslib/src/chainstate/burn/atc.rs",
-    "stackslib/src/chainstate/burn/db/mod.rs",
-    "stackslib/src/chainstate/burn/db/processing.rs",
-    "stackslib/src/chainstate/burn/db/sortdb.rs",
-    "stackslib/src/chainstate/burn/distribution.rs",
-    "stackslib/src/chainstate/burn/mod.rs",
-    "stackslib/src/chainstate/burn/operations/delegate_stx.rs",
-    "stackslib/src/chainstate/burn/operations/leader_block_commit.rs",
-    "stackslib/src/chainstate/burn/operations/leader_key_register.rs",
-    "stackslib/src/chainstate/burn/operations/mod.rs",
-    "stackslib/src/chainstate/burn/operations/stack_stx.rs",
-    "stackslib/src/chainstate/burn/operations/transfer_stx.rs",
-    "stackslib/src/chainstate/burn/operations/vote_for_aggregate_key.rs",
-    "stackslib/src/chainstate/burn/sortition.rs",
-    "stackslib/src/chainstate/coordinator/comm.rs",
-    "stackslib/src/chainstate/coordinator/mod.rs",
-    "stackslib/src/chainstate/mod.rs",
-    "stackslib/src/chainstate/nakamoto/coordinator/mod.rs",
-    "stackslib/src/chainstate/nakamoto/keys.rs",
-    "stackslib/src/chainstate/nakamoto/miner.rs",
-    "stackslib/src/chainstate/nakamoto/mod.rs",
-    "stackslib/src/chainstate/nakamoto/shadow.rs",
-    "stackslib/src/chainstate/nakamoto/signer_set.rs",
-    "stackslib/src/chainstate/nakamoto/staging_blocks.rs",
-    "stackslib/src/chainstate/nakamoto/tenure.rs",
-    "stackslib/src/chainstate/stacks/address.rs",
-    "stackslib/src/chainstate/stacks/auth.rs",
-    "stackslib/src/chainstate/stacks/block.rs",
-    "stackslib/src/chainstate/stacks/boot/bns.clar",
-    "stackslib/src/chainstate/stacks/boot/contract_tests.rs",
-    "stackslib/src/chainstate/stacks/boot/cost-voting.clar",
-    "stackslib/src/chainstate/stacks/boot/costs-2.clar",
-    "stackslib/src/chainstate/stacks/boot/costs-3.clar",
-    "stackslib/src/chainstate/stacks/boot/costs-4.clar",
-    "stackslib/src/chainstate/stacks/boot/costs.clar",
-    "stackslib/src/chainstate/stacks/boot/docs.rs",
-    "stackslib/src/chainstate/stacks/boot/genesis.clar",
-    "stackslib/src/chainstate/stacks/boot/lockup.clar",
-    "stackslib/src/chainstate/stacks/boot/mod.rs",
-    "stackslib/src/chainstate/stacks/boot/pox-2.clar",
-    "stackslib/src/chainstate/stacks/boot/pox-3.clar",
-    "stackslib/src/chainstate/stacks/boot/pox-4.clar",
-    "stackslib/src/chainstate/stacks/boot/pox-5.clar",
-    "stackslib/src/chainstate/stacks/boot/pox-mainnet.clar",
-    "stackslib/src/chainstate/stacks/boot/pox.clar",
-    "stackslib/src/chainstate/stacks/boot/pox_2_tests.rs",
-    "stackslib/src/chainstate/stacks/boot/pox_3_tests.rs",
-    "stackslib/src/chainstate/stacks/boot/pox_4_tests.rs",
-    "stackslib/src/chainstate/stacks/boot/signers-0-xxx.clar",
-    "stackslib/src/chainstate/stacks/boot/signers-1-xxx.clar",
-    "stackslib/src/chainstate/stacks/boot/signers-voting.clar",
-    "stackslib/src/chainstate/stacks/boot/signers.clar",
-    "stackslib/src/chainstate/stacks/boot/signers_tests.rs",
-    "stackslib/src/chainstate/stacks/boot/sip-031.clar",
-    "stackslib/src/chainstate/stacks/db/accounts.rs",
-    "stackslib/src/chainstate/stacks/db/blocks.rs",
-    "stackslib/src/chainstate/stacks/db/contracts.rs",
-    "stackslib/src/chainstate/stacks/db/headers.rs",
-    "stackslib/src/chainstate/stacks/db/mod.rs",
-    "stackslib/src/chainstate/stacks/db/snapshot/blocks.rs",
-    "stackslib/src/chainstate/stacks/db/snapshot/burnchain.rs",
-    "stackslib/src/chainstate/stacks/db/snapshot/clarity.rs",
-    "stackslib/src/chainstate/stacks/db/snapshot/common.rs",
-    "stackslib/src/chainstate/stacks/db/snapshot/fork_storage.rs",
-    "stackslib/src/chainstate/stacks/db/snapshot/index.rs",
-    "stackslib/src/chainstate/stacks/db/snapshot/mod.rs",
-    "stackslib/src/chainstate/stacks/db/snapshot/sortition.rs",
-    "stackslib/src/chainstate/stacks/db/snapshot/spv.rs",
-    "stackslib/src/chainstate/stacks/db/transactions.rs",
-    "stackslib/src/chainstate/stacks/db/unconfirmed.rs",
-    "stackslib/src/chainstate/stacks/events.rs",
-    "stackslib/src/chainstate/stacks/index/bits.rs",
-    "stackslib/src/chainstate/stacks/index/blob_layout.rs",
-    "stackslib/src/chainstate/stacks/index/cache.rs",
-    "stackslib/src/chainstate/stacks/index/file.rs",
-    "stackslib/src/chainstate/stacks/index/marf.rs",
-    "stackslib/src/chainstate/stacks/index/mod.rs",
-    "stackslib/src/chainstate/stacks/index/node.rs",
-    "stackslib/src/chainstate/stacks/index/profile.rs",
-    "stackslib/src/chainstate/stacks/index/proofs.rs",
-    "stackslib/src/chainstate/stacks/index/squash.rs",
-    "stackslib/src/chainstate/stacks/index/squash/node_store.rs",
-    "stackslib/src/chainstate/stacks/index/squash/stream.rs",
-    "stackslib/src/chainstate/stacks/index/storage.rs",
-    "stackslib/src/chainstate/stacks/index/trie.rs",
-    "stackslib/src/chainstate/stacks/index/trie_sql.rs",
-    "stackslib/src/chainstate/stacks/miner.rs",
-    "stackslib/src/chainstate/stacks/mod.rs",
-    "stackslib/src/chainstate/stacks/sbtc.rs",
-    "stackslib/src/chainstate/stacks/transaction.rs",
-    "stackslib/src/clarity_vm/clarity.rs",
-    "stackslib/src/clarity_vm/database/ephemeral.rs",
-    "stackslib/src/clarity_vm/database/marf.rs",
-    "stackslib/src/clarity_vm/database/mod.rs",
-    "stackslib/src/clarity_vm/mod.rs",
-    "stackslib/src/clarity_vm/special.rs",
-    "stackslib/src/config/chain_data.rs",
-    "stackslib/src/config/mod.rs",
-    "stackslib/src/core/mempool.rs",
-    "stackslib/src/core/mod.rs",
-    "stackslib/src/core/nonce_cache.rs",
-    "stackslib/src/cost_estimates/fee_medians.rs",
-    "stackslib/src/cost_estimates/fee_rate_fuzzer.rs",
-    "stackslib/src/cost_estimates/fee_scalar.rs",
-    "stackslib/src/cost_estimates/metrics.rs",
-    "stackslib/src/cost_estimates/mod.rs",
-    "stackslib/src/cost_estimates/pessimistic.rs",
-    "stackslib/src/deps/mod.rs",
-    "stackslib/src/lib.rs",
-    "stackslib/src/monitoring/mod.rs",
-    "stackslib/src/monitoring/prometheus.rs",
-    "stackslib/src/net/api/blockreplay.rs",
-    "stackslib/src/net/api/blocksimulate.rs",
-    "stackslib/src/net/api/callreadonly.rs",
-    "stackslib/src/net/api/fastcallreadonly.rs",
-    "stackslib/src/net/api/get_tenure_tip_meta.rs",
-    "stackslib/src/net/api/get_tenures_fork_info.rs",
-    "stackslib/src/net/api/getaccount.rs",
-    "stackslib/src/net/api/getattachment.rs",
-    "stackslib/src/net/api/getattachmentsinv.rs",
-    "stackslib/src/net/api/getblock.rs",
-    "stackslib/src/net/api/getblock_v3.rs",
-    "stackslib/src/net/api/getblockbyheight.rs",
-    "stackslib/src/net/api/getclaritymarfvalue.rs",
-    "stackslib/src/net/api/getclaritymetadata.rs",
-    "stackslib/src/net/api/getconstantval.rs",
-    "stackslib/src/net/api/getcontractabi.rs",
-    "stackslib/src/net/api/getcontractsrc.rs",
-    "stackslib/src/net/api/getdatavar.rs",
-    "stackslib/src/net/api/getheaders.rs",
-    "stackslib/src/net/api/gethealth.rs",
-    "stackslib/src/net/api/getinfo.rs",
-    "stackslib/src/net/api/getistraitimplemented.rs",
-    "stackslib/src/net/api/getmapentry.rs",
-    "stackslib/src/net/api/getmicroblocks_confirmed.rs",
-    "stackslib/src/net/api/getmicroblocks_indexed.rs",
-    "stackslib/src/net/api/getmicroblocks_unconfirmed.rs",
-    "stackslib/src/net/api/getneighbors.rs",
-    "stackslib/src/net/api/getpoxinfo.rs",
-    "stackslib/src/net/api/getsigner.rs",
-    "stackslib/src/net/api/getsortition.rs",
-    "stackslib/src/net/api/getstackerdbchunk.rs",
-    "stackslib/src/net/api/getstackerdbmetadata.rs",
-    "stackslib/src/net/api/getstackers.rs",
-    "stackslib/src/net/api/getstxtransfercost.rs",
-    "stackslib/src/net/api/gettenure.rs",
-    "stackslib/src/net/api/gettenureblocks.rs",
-    "stackslib/src/net/api/gettenureblocksbyhash.rs",
-    "stackslib/src/net/api/gettenureblocksbyheight.rs",
-    "stackslib/src/net/api/gettenureinfo.rs",
-    "stackslib/src/net/api/gettenuretip.rs",
-    "stackslib/src/net/api/gettransaction.rs",
-    "stackslib/src/net/api/gettransaction_unconfirmed.rs",
-    "stackslib/src/net/api/liststackerdbreplicas.rs",
-    "stackslib/src/net/api/mod.rs",
-    "stackslib/src/net/api/postblock.rs",
-    "stackslib/src/net/api/postblock_proposal.rs",
-    "stackslib/src/net/api/postblock_v3.rs",
-    "stackslib/src/net/api/postfeerate.rs",
-    "stackslib/src/net/api/postmempoolquery.rs",
-    "stackslib/src/net/api/postmicroblock.rs",
-    "stackslib/src/net/api/poststackerdbchunk.rs",
-    "stackslib/src/net/api/posttransaction.rs",
-    "stackslib/src/net/api/read_only/mod.rs",
-    "stackslib/src/net/api/read_only/parse.rs",
-    "stackslib/src/net/api/txsimulate.rs",
-    "stackslib/src/net/asn.rs",
-    "stackslib/src/net/atlas/db.rs",
-    "stackslib/src/net/atlas/download.rs",
-    "stackslib/src/net/atlas/mod.rs",
-    "stackslib/src/net/chat.rs",
-    "stackslib/src/net/codec.rs",
-    "stackslib/src/net/connection.rs",
-    "stackslib/src/net/db.rs",
-    "stackslib/src/net/dns.rs",
-    "stackslib/src/net/download/epoch2x.rs",
-    "stackslib/src/net/download/mod.rs",
-    "stackslib/src/net/download/nakamoto/download_state_machine.rs",
-    "stackslib/src/net/download/nakamoto/mod.rs",
-    "stackslib/src/net/download/nakamoto/tenure.rs",
-    "stackslib/src/net/download/nakamoto/tenure_downloader.rs",
-    "stackslib/src/net/download/nakamoto/tenure_downloader_set.rs",
-    "stackslib/src/net/download/nakamoto/tenure_downloader_unconfirmed.rs",
-    "stackslib/src/net/http/common.rs",
-    "stackslib/src/net/http/error.rs",
-    "stackslib/src/net/http/mod.rs",
-    "stackslib/src/net/http/request.rs",
-    "stackslib/src/net/http/response.rs",
-    "stackslib/src/net/http/stream.rs",
-    "stackslib/src/net/httpcore.rs",
-    "stackslib/src/net/inv/epoch2x.rs",
-    "stackslib/src/net/inv/mod.rs",
-    "stackslib/src/net/inv/nakamoto.rs",
-    "stackslib/src/net/mempool/mod.rs",
-    "stackslib/src/net/mod.rs",
-    "stackslib/src/net/neighbors/comms.rs",
-    "stackslib/src/net/neighbors/db.rs",
-    "stackslib/src/net/neighbors/mod.rs",
-    "stackslib/src/net/neighbors/neighbor.rs",
-    "stackslib/src/net/neighbors/rpc.rs",
-    "stackslib/src/net/neighbors/walk.rs",
-    "stackslib/src/net/p2p.rs",
-    "stackslib/src/net/poll.rs",
-    "stackslib/src/net/prune.rs",
-    "stackslib/src/net/relay.rs",
-    "stackslib/src/net/rpc.rs",
-    "stackslib/src/net/server.rs",
-    "stackslib/src/net/stackerdb/config.rs",
-    "stackslib/src/net/stackerdb/db.rs",
-    "stackslib/src/net/stackerdb/mod.rs",
-    "stackslib/src/net/stackerdb/sync.rs",
-    "stackslib/src/net/unsolicited.rs",
-    "stackslib/src/util_lib/bloom.rs",
-    "stackslib/src/util_lib/boot.rs",
-    "stackslib/src/util_lib/db.rs",
-    "stackslib/src/util_lib/mod.rs",
-    "stackslib/src/util_lib/signed_structured_data.rs",
-    "stackslib/src/util_lib/strings.rs",
+    # -- engine API and block building: where a builder's payload enters and leaves Geth --
+    "beacon/engine/bapl_encode.go",
+    "beacon/engine/epe_encode.go",
+    "beacon/engine/errors.go",
+    "beacon/engine/types.go",
+    "eth/catalyst/api.go",
+    "eth/catalyst/queue.go",
+    "miner/miner.go",
+    "miner/payload_building.go",
+    "miner/pending.go",
+    "miner/worker.go",
 
     # =================================================================================
-    # NOT AUDITED (excluded from every variant): tests, mocks and *test* files; fuzz and
-    # bench harnesses; test_util and the hooks/testing render helpers; docs/ and README;
-    # config, *.toml and CHANGELOG; generated tables (stx-genesis, genesis_data.rs) and
-    # build.rs; vendored third-party code under deps_common/ (bitcoin, httparse, bech32,
-    # ctrlc); the contrib/ tools and stacks-profiler; sample/ example contracts; and the
-    # *-testnet / *.tests.clar network- and test-only contract bodies. A defect in any of
-    # these is only in scope when it is reachable from the audited code above.
+    # NOT AUDITED (excluded from every variant): every *_test.go, tests/, fuzzers and
+    # testing helpers (chain_makers.go, api_testing.go, dbtest, ancienttest, testrand,
+    # testlog); generated code (gen_*.go, *_generated.go, *.pb.go, gencodec outputs
+    # ed_codec.go / epe_decode.go / pa_codec.go) and mkalloc.go; metrics.go files, log,
+    # event and telemetry; p2p/, eth/protocols/, eth/downloader/, eth/fetcher/ and
+    # discovery (malicious-peer surface); rpc/, internal/ethapi/, graphql/, eth/filters,
+    # eth/tracers, ethclient/ and console (JSON-RPC surface); cmd/, accounts/, signer/,
+    # node/, ethdb/ drivers; pre-merge engines (ethash, clique) and pre-activation code
+    # (verkle, bintrie, transitiontrie, overlay, database_ubt); go.mod, Makefile, docs
+    # and README. A defect in any of these is only in scope when it is reachable from
+    # the audited code above through a transaction or block executed on mainnet.
     # =================================================================================
 ]
 
 
 target_scopes = [
-    "Critical. AN AUTH-GATED ENDPOINT MUST FAIL CLOSED. `postblock_v3.rs` requires the `authorization` header to equal the configured password only when `broadcast=1`; `poststackerdbchunk.rs`, `postmempoolquery.rs`, `callreadonly.rs`/`fastcallreadonly.rs` and the simulate endpoints each gate on an optional configured secret and reject with 401 when it is absent or mismatched. Show a remote request that reaches a privileged action without the secret: a preamble whose `authorization` header comparison is case- or whitespace-normalised, a missing-config branch that treats `None` as 'open' instead of 'disabled', a `broadcast` flag parsed so the authenticated path runs unauthenticated, a header injected twice where the last wins. Identity: the set of requests that execute the gated action == the set carrying the exact configured secret, and no request executes it when no secret is configured.",
+    "Critical. THE OPCODE RESULT GETH COMPUTES MUST EQUAL THE SPEC'S. `EVMInterpreter.Run` dispatches through `JumpTable` entries whose `execute`, `constantGas`, `dynamicGas`, `memorySize` and stack bounds are assembled by `newOsakaInstructionSet` and mutated in place by `enable1153`, `enable5656`, `enable6780`, `enable7702`, `enable7939`, `enable7843`, `enable8024`; `opExtCodeCopy`, `opExtCodeHash` and `opExtCodeSize` read through `EVM.resolveCode` / `resolveCodeHash` for EIP-7702 delegations; `opSelfdestruct` and `enable6780` only send balance unless `CreateContract` marked the account new in this tx; `opBlobHash`, `opMcopy`, `opTload`, `opTstore` and `opBlockhash` guard indices; `gasSStoreEIP2200`, `makeGasSStoreFunc`, `gasCallEIP2929`, `gasExtCodeCopyEIP2929` and `makeCallVariantGasCallEIP7702` compute warm/cold and delegation surcharges; `Memory.Resize` and `calcMemSize64` bound expansion. Probe every place a contract any user can deploy reads or writes a value other clients would not: an EXTCODE* on a delegated account returning the target's code instead of the 23-byte designator; a SELFDESTRUCT in a CREATE2-redeployed address in the same tx; an SSTORE refund path where original, current and new values collide; a MCOPY with overlapping src/dst and length 0; a CLZ or shift on a 256-bit edge value; a gas constant that differs from `params` for one fork. Identity: (stack, memory, storage, gasUsed, halt reason) after each opcode == the EIP-defined result, so every client computes the same stateRoot.",
 
-    "Critical. A STACKERDB CHUNK IS WRITABLE ONLY BY ITS SLOT OWNER. `libstackerdb.rs` (`StackerDBChunkData::verify`, `sign`), `stackerdb/db.rs` and `stackerdb/sync.rs` accept a chunk only when its signature recovers to the address that owns the slot and its version exceeds the stored version. Show a remote writer overwriting a slot they do not own or replaying an old chunk: a signature recovered over a hash that omits the slot id, version or contract so one signature validates another slot, a version comparison that accepts equal or lower versions, a sync path that stores a gossiped chunk before verifying its signature, a slot-to-owner mapping read from the wrong reward cycle. Identity: every stored or relayed StackerDB chunk == a chunk signed by the current owner of its slot, with a strictly greater version.",
+    "Critical. THE PRECOMPILE OUTPUT AND GAS MUST EQUAL THE SPEC FOR EVERY INPUT LENGTH. `RunPrecompiledContract` charges `RequiredGas` then calls `Run`, consulting `PrecompileCache.load` / `store` with the key from `precompileCacheKey` built from each contract's `NormalizeInput` (`normalizeZeroPadded` strips trailing zero bytes) and `Cacheable`; `bigModExp.RequiredGas` implements EIP-7883 limits and `Run` falls back for base or modulus of length 0; `ecrecover.Run` validates `v`, `r`, `s` bounds; `bls12381G1MultiExp`, `bls12381G2MultiExp`, `bls12381Pairing`, `decodePointG1`, `decodePointG2` enforce subgroup and encoding; `kzgPointEvaluation.Run` checks `versionedHash`, field canonicality and `VerifyProof`; `p256Verify.Run` wraps `secp256r1.Verify`; `blake2F.Run` reads the final flag byte; `bn256PairingIstanbul` uses `newCurvePoint` / `newTwistPoint`. Show a call any contract can make where Geth returns a result, success flag or gas that differs from the EIP: two distinct inputs whose normalized cache key collides and return a stale output; a padded input accepted where the spec requires exact length; an out-of-range field element or non-canonical point accepted; a modexp with oversized exponent charged less than specified; a p256 signature with r or s at the group order. Identity: (output, success, gasUsed) of the precompile == the spec's function applied to the raw input, independent of cache state.",
 
-    "Critical. THE NODE MUST NOT RELAY OR STORE WHAT A PEER NEVER AUTHENTICATED. `relay.rs`, `unsolicited.rs` and `chat.rs` decide which gossiped blocks, microblocks, transactions and StackerDB messages a node forwards and stores; a message accepted here propagates network-wide. Show an unsolicited or forged message the node relays without verifying its origin or contents: a `StacksMessage` whose payload is trusted before `verify` on the preamble, a block accepted from a peer that did not win its sortition and forwarded before validation, a relay-hint loop that amplifies one message, a transaction stored in the mempool from a relay path that skips `will_admit_mempool_tx`. Identity: every message a node relays or stores == a message whose origin and contents it has verified against consensus rules.",
+    "Critical. A SET-CODE AUTHORIZATION MUST ONLY CHANGE THE CODE OF THE ACCOUNT THAT SIGNED IT, ONCE, IN THE RIGHT ORDER. `stateTransition.applyAuthorizations` iterates `SetCodeAuthorization` entries through `validateAuthorization` (`Authority` via `SigHash` and `crypto.Ecrecover`, chain id 0 or current, nonce equals account nonce, code empty or a delegation) and `applyAuthorization` (`AddressToDelegation`, `SetCode`, `SetNonce`, refund via `params.CallNewAccountGas - params.TxAuthTupleGas`, the `authorities` map for duplicate authorities); `ParseDelegation` recognises the `0xef0100` prefix; `EVM.resolveCode` follows one hop; `preCheck` rejects a sender with non-delegation code (EIP-3607) and `TransactionToMessage` requires a non-nil `To` and non-empty `AuthList`; `LegacyPool.validateAuth`, `checkDelegationLimit` and `lookup.addAuthorities` gate the pool. Show a type-4 transaction any user can sign that leaves an account's code, nonce or balance different from the spec: a duplicate authority whose second tuple is applied with the wrong nonce; an authority whose `s` is above half the curve order or `v` above 1 still recovered; a delegation to a precompile or to another delegated account resolved two hops; a refund granted for an authority that already had code; a sender that delegates to itself and then executes; an authorization applied before `buyGas` fails so state is mutated by an invalid tx. Identity: after the tx, `GetCode(authority)` and `GetNonce(authority)` for every tuple == the EIP-7702 result, and no other account's code changed.",
 
-    "Critical. THE P2P HANDSHAKE MUST BIND A PEER TO ITS CLAIMED IDENTITY AND NETWORK. `codec.rs`, `chat.rs` and `net/db.rs` verify the handshake signature, the `network_id`/`chain_id`, the peer public key and the sequence/nonce that gate a session. Show a remote peer impersonating another, replaying a handshake, or crossing networks: a handshake signature verified over a message that omits the peer address or network id, a nonce or sequence accepted out of order so a replayed authenticated frame is processed, a `Preamble` whose length fields let a later message body be reinterpreted, a peer inserted into the frontier DB under an identity it did not prove. Identity: the peer identity and network the node associates with a connection == the identity and network the handshake signature actually authenticated.",
+    "Critical. GAS AND ETH MUST BE CONSERVED EXACTLY THROUGH BUYGAS, EXECUTION AND SETTLEMENT. `TransactionToMessage` computes `GasPrice` from `GasFeeCap`, `GasTipCap` and `baseFee`; `IntrinsicGas` and `FloorDataGas` (EIP-7623 tokens, EIP-3860 init-code words, access list and auth tuples) feed `buyGas` which charges `gas * gasPrice + blobGas * blobFee` and `initRuntimeGasBudget`; `preCheck` enforces nonce, EIP-3607, fee caps, `MaxFeePerBlobGas` and blob hash versions; `execute` routes to `executeCreate` or `executeCall`, `chargeCallRecipientEIP2780`; `settleGas` applies `calcRefund` (quotient 5 post-3529), the floor, and pays `effectiveTip` to `Coinbase`; `GasPool.SubGas` bounds the block; `MakeReceipt` records `CumulativeGasUsed`, `Status` and logs; `ApplyTransactionWithEVM` sets `blobGasUsed`. Show a transaction any account can send where the sender's balance, the coinbase's balance and the burned base fee do not sum to the pre-state: a refund exceeding gasUsed/5; a floor gas applied after refund instead of before; a create with `To == nil` and value where the contract address already holds balance; an overflow in `gas * gasPrice` or in the blob fee multiplication; a failed tx that still credits the coinbase or mutates a nonce twice; a `CumulativeGasUsed` in the receipt that differs from `GasPool` accounting so `receiptsRoot` diverges. Identity: sum of all balances after == sum before plus coinbase tip minus burned base and blob fees, and `header.GasUsed` == the sum of receipts' gas the spec defines.",
 
-    "Critical. EVERY LENGTH-PREFIXED FIELD FROM THE WIRE MUST BE BOUNDS-CHECKED. `codec.rs`, `net/http/request.rs`, `net/http/stream.rs`, `httpcore.rs` and the `consensus_deserialize` implementations read counts and lengths an attacker chooses and allocate or index on them, bounded by `MAX_MESSAGE_LEN` / `MAX_PAYLOAD_LEN` and per-field caps. Show a remote message that causes an out-of-bounds read, an unchecked allocation sized by a wire field, an integer overflow in a length computation, a chunked-encoding or content-length mismatch that desynchronises the stream so the next request is attacker-framed, or a panic (`unwrap`, slice index, `expect`) reachable from parsing. Name the impact: remote crash (unauthenticated DoS of the node), memory disclosure, or request smuggling. Identity: bytes a handler reads for a field == bytes the validated length said were present, for every field an attacker sizes.",
+    "Critical. THE BLOCK GETH ACCEPTS MUST BE EXACTLY THE BLOCK THE SPEC ACCEPTS. `ConsensusAPI.newPayload` converts through `engine.ExecutableDataToBlock` (`DecodeTransactions`, `attachAccessList`, `validateRequests` ordering and requestsHash, blob hashes versus `versionedHashes`, `parentBeaconBlockRoot`) then `InsertBlockWithoutSetHead`; `Beacon.verifyHeader` checks difficulty, nonce, uncles, timestamp, `gasLimit` via `VerifyGaslimit`, `extra`, `withdrawalsHash`, `VerifyEIP1559Header` with `CalcBaseFee`, `VerifyEIP4844Header` with `CalcExcessBlobGas` (Osaka / BPO1 / BPO2 schedules via `latestBlobConfig`) and `parentBeaconRoot`; `BlockValidator.ValidateBody` checks `txHash`, `uncleHash`, `withdrawalsHash`, `blobGasUsed`, blob count against `MaxBlobsPerBlock` and `MaxBlobGasPerBlock`; `ValidateState` compares `Bloom`, `ReceiptHash`, `Root` and `requestsHash`; `StateProcessor.Process` runs `ProcessBeaconBlockRoot`, `ProcessParentBlockHash`, then `ProcessWithdrawalQueue`, `ProcessConsolidationQueue`, `ParseDepositLogs` through `processRequestsSystemCall` with `systemCallGasBudget`; `Beacon.Finalize` applies `Withdrawal` amounts in Gwei. Show a block any builder or proposer can construct that Geth accepts and another client rejects, or the reverse: a blob count valid under BPO1 but checked against the Cancun config at a fork boundary timestamp; an `excessBlobGas` computed with the pre-Osaka formula after Osaka; a requests list with an empty type or unsorted types that still hashes right; a deposit log with a malformed length that `ParseDepositLogs` skips instead of failing; a withdrawal amount overflow in Gwei-to-Wei; a system call that reverts and is silently ignored. Identity: `InsertChain` accepts block B if and only if the execution spec accepts B, and the resulting `stateRoot` is equal.",
 
-    "Critical. A READ ENDPOINT MUST NOT RUN UNBOUNDED CLARITY OR SERVE ANOTHER FORK'S STATE. `callreadonly.rs` / `fastcallreadonly.rs` execute caller-supplied Clarity against a caller-named tip with a cost limit; `getmapentry.rs`, `getdatavar.rs`, `getclaritymarfvalue.rs`, `getstackerdbchunk.rs` and `postfeerate.rs` read state at a caller-named block. Show a remote caller running Clarity past the intended cost/read bound (a `fastcallreadonly` limiter that resets between sub-calls, a read-only call that mutates through a trait), reading state from a block on a non-canonical fork or an unconfirmed tip as if canonical, or a fee-rate estimate an attacker steers by crafted input. Name the impact: unauthenticated compute DoS, or a wallet/bridge served state that no canonical block committed. Identity: the state and cost a read endpoint returns == the state committed at the requested canonical block, within the configured bound.",
+    "Critical. THE STATE ROOT MUST REFLECT EXACTLY THE JOURNALED CHANGES. `StateDB.Snapshot` / `RevertToSnapshot` walk `journal.revertToSnapshot` over entries such as `createObjectChange`, `createContractChange`, `selfDestructChange`, `balanceChange`, `nonceChange`, `storageChange`, `codeChange`, `transientStorageChange`, `accessListAddAccountChange`, `accessListAddSlotChange`; `Finalise` deletes empty (EIP-161) and self-destructed objects, resets `transientStorage` per tx and, on Amsterdam, emits the `bal.ConstructionBlockAccessList`; `IntermediateRoot` and `Commit` push dirty objects through `triePrefetcher` and `stateUpdate`; `CreateContract` marks `newContract` used by `SelfDestruct6780`; `Prepare` builds the EIP-2929 warm set from sender, coinbase, `dst`, precompiles and the access list; `StateDB.Copy` duplicates journal state for `ProcessParallel`; `hookedStateDB` wraps every mutation. Show a transaction sequence any user can submit where the root Geth commits differs from the spec: a revert that restores a self-destructed object but not its `newContract` flag; a storage slot written, reverted and written again whose `originStorage` no longer matches disk; an empty account touched then credited zero that is deleted in one path and kept in another; a transient slot surviving into the next transaction; a journal entry whose `revert` is a no-op for the field that changed; a parallel prefetch that commits a stale `stateObject`. Identity: `IntermediateRoot` after tx i == the root of applying the spec's state changes for txs 0..i to the parent root, in both the sequential and parallel processors.",
 
-    "High. ATTACHMENT AND ATTACHMENT-INVENTORY GOSSIP MUST MATCH THEIR COMMITTED HASH. `atlas/mod.rs`, `atlas/db.rs`, `atlas/download.rs`, `getattachment.rs` and `getattachmentsinv.rs` store and serve BNS attachments keyed by content hash, gossiped from peers. Show a peer serving an attachment whose bytes do not match the requested hash, poisoning the inventory so a valid attachment is deemed absent, or filling storage with attachments no on-chain name commits to. Name the impact: BNS resolution serving wrong data, or attachment storage exhaustion tied to a consensus commitment. Identity: the attachment bytes served for a hash == the bytes whose hash a confirmed name operation committed.",
+    "Critical. THE TRANSACTION GETH DECODES AND ATTRIBUTES MUST BE THE ONE THAT WAS SIGNED. `Transaction.UnmarshalBinary` / `decodeTyped` dispatch on the first byte to `BlobTx.decode` (`blobTxWithBlobsV0` / `blobTxWithBlobsV1` sidecar forms, `BlobTxSidecar.ToV1`, `ValidateBlobCommitmentHashes`, `CellProofsAt`), `SetCodeTx.decode`, `DynamicFeeTx`, `AccessListTx` and `LegacyTx`; `rlp.Decode` enforces canonical integers and list lengths; `Sender` caches by `Signer` and calls `modernSigner.Sender` or `EIP155Signer.Sender` into `recoverPlain` (`crypto.ValidateSignatureValues`, homestead `s` bound, `Ecrecover`) with `deriveChainId`; `MakeSigner` picks the signer by fork; `Transaction.Hash` and `sigHash` encode the fields the signer covers; `kzg4844.CalcBlobHashV1` and `IsValidVersionedHash` bind sidecars to `BlobHashes`; `txpool.ValidateCells` / `validateCellsOsaka` and `blobpool.conversionQueue.convert` migrate V0 proofs to cell proofs; `GetBlobsV4` serves cells by `CustodyBitmap`. Show a byte string any user can broadcast that Geth attributes, hashes or includes differently from the spec: two encodings recovering different senders for one hash; a legacy tx with `v` encoding a chain id whose parity is misread; a blob tx whose commitments match `BlobHashes` but whose cell proofs verify against another blob; a sidecar V1 with proof count not equal to `CellsPerBlob * blobs` that `ToV1` accepts; a setcode tx with an empty auth list decoded as valid; a non-canonical RLP integer that the decoder accepts but the spec rejects. Identity: (sender, hash, fields, blobs) Geth derives from bytes B == the (sender, hash, fields, blobs) every other client derives from B.",
 
-    "High. THE INVENTORY AND TENURE DOWNLOAD STATE MACHINE MUST NOT BE STEERED BY A PEER. `inv/nakamoto.rs`, `download/nakamoto/*` decide which tenures and blocks to fetch from which peer based on advertised inventories. Show a peer advertising a false inventory that makes the node skip a canonical tenure, loop re-downloading, accept a block for the wrong tenure slot, or wedge the download state machine so the node cannot follow the chain tip. Name the impact: the node stalls behind the canonical tip (availability) or accepts a mis-slotted block into staging. Identity: the tenure/block the node fetches and stages for a slot == the tenure/block the canonical inventory (verified against sortition) names for that slot.",
+    "High. EVERY TRANSACTION THE POOL PROMOTES MUST BE EXECUTABLE, AND EVERY BLOCK GETH BUILDS MUST BE VALID. `txpool.ValidateTransaction` checks type, size, gas limit against `head.GasLimit`, fee caps, `IntrinsicGas`, `FloorDataGas`, blob count and `validateBlobSidecar`; `ValidateTransactionWithState` checks nonce, cost against `ExistingBalance` and `FirstNonceGap`; `LegacyPool.add`, `enqueueTx`, `promoteTx`, `promoteExecutables`, `demoteUnexecutables`, `truncatePending` and `reset` maintain per-account `list` ordering with `noncer`; `BlobPool.addLocked`, `recheck`, `reorg`, `reinject`, `limbo` and `evictGapped` handle inclusion and reorgs; `checkDelegationLimit` and `HasPendingAuth` gate accounts with delegations; `Miner.fillTransactions`, `commitTransactions`, `commitBlobTransaction`, `txFitsSize` and `applyTransaction` assemble the payload that `Payload.Resolve` hands to the proposer through `GetPayloadV5`. Show a transaction any user can send that makes every Geth proposer build a block other clients reject, or that sits in pending while being unexecutable so ordinary users' transactions are excluded: a blob tx promoted whose sidecar was converted to a proof version the block cannot carry; a nonce list where a replacement lowers the cost below balance for later txs still marked pending; a delegated account's second tx admitted past `checkDelegationLimit` via the blob pool; a builder including a tx whose `FloorDataGas` exceeds the block's remaining gas after `GasPool` accounting; a reorg that reinjects a tx already included on the new head. Identity: the set of txs in `Pending` == the set executable on the head state, and every block `buildPayload` returns passes `ValidateBody` and `ValidateState` on every client.",
 
-    "High. THE SIGNER EVENT STREAM MUST DELIVER ONLY WHAT THE SENDER SIGNED. `libsigner/src/http.rs`, `session.rs`, `events.rs` and `v0/messages.rs` frame and parse the StackerDB/event messages the signer binary consumes. Show a remote sender injecting a message the signer treats as authentic - a `SignerMessage` parsed before its origin is checked, a length field that lets one event body be read as another, a stale message replayed into the stream - so the signer acts on data no authorized party sent. Name the impact bounded to the signer transport (the consensus decision itself is another variant). Identity: every message the signer library surfaces to the runloop == a message an authorized StackerDB slot owner signed.",
+    "High. THE CANONICAL CHAIN AND STATE GETH PERSISTS MUST EQUAL WHAT IT EXECUTED. `BlockChain.writeBlockWithState` writes block, receipts and `statedb.Commit` through `triedb.Update` into `pathdb.layerTree.add` / `diffLayer` / `diskLayer.commit`, with `buffer.flush`, `journal` and `history` for reverts; `reorg` collects deleted and added chains, rewrites `rawdb.WriteCanonicalHash`, `WriteTxLookupEntries`, deletes stale lookups and emits removed logs; `SetCanonical`, `insertSideChain` and `recoverAncestors` handle blocks whose parent state is missing; `setHeadBeyondRoot`, `rewindPathHead` and `rewindHashHead` roll back on restart; `rawdb.chainFreezer.freeze` moves finalized blocks into `freezerTable` with `freezerBatch` indexes; `snapshot.Tree.Update`, `diffLayer.flatten`, `journal` and `generate` mirror state for fast reads; `pathdb.Recover` replays `history`. Show a valid block or reorg sequence any builder can cause on mainnet after which a Geth node answers a different head, state or receipt than it executed, or cannot follow the chain without manual intervention: a reorg deeper than the diff-layer window that rewinds to a root the snapshot no longer has; a side-chain insert that writes canonical hashes for blocks never executed; a freezer batch written with an index ahead of its data; a tx lookup left pointing at a reorged block; a pathdb journal loaded after a crash whose top layer root differs from the written head. Identity: (canonical hash, state root, receipts) stored for height h == (hash, root, receipts) produced by the last `ProcessBlock` that set h canonical.",
 
-    "Critical. THE MISSING INVARIANT - what nobody built. No single choke point guarantees every remote byte is authenticated before it influences state: auth-gated endpoints each re-implement the secret check and can fail open; relay and unsolicited paths trust some messages before verification; length fields from the wire are bounds-checked field-by-field with no global guarantee; read endpoints trust a caller-named tip; StackerDB sync and gossip verify signatures at different points. Identify the FIRST remotely reachable point where an unauthenticated or unauthorized message influences stored state, relayed gossip, served state, or crashes the node, prove it with a Rust test in `stackslib::net` (or `libsigner`) that feeds crafted bytes to the handler and asserts either the authenticated-versus-stored equality or a panic/over-read, and show the impact is remote (an open port), needs no privileged role, and is one of: node crash / unauthenticated DoS, network-wide propagation of forged data, or state served that no canonical block committed.",
+    "Critical. THE MISSING INVARIANT - what nobody built. No check ties the `PrecompileCache` output back to the raw input once `NormalizeInput` accepted it; nothing asserts `ValidateState`'s root comparison ran on the same `StateDB` that `ProcessParallel` committed; the fork-schedule predicates (`IsOsaka`, `IsBPO1`, `IsBPO2`, `IsAmsterdam`) are read separately by the blob config, precompile set, jump table and signer with no single rule set proving they agree at a boundary timestamp; system-contract calls in `processRequestsSystemCall` treat a revert or empty code as a soft error; the `blobpool` conversion path trusts proof counts it did not verify; `ExecutableDataToBlock` reconstructs a header from fields the CL supplied and only later checks the hash. Identify the FIRST place one of these unstated equalities is violated by an unprivileged party through a transaction, deployed contract, blob sidecar or permissionless block, prove it with a Go test (`core.GenerateChain`, `state_processor` fixtures or an execution-spec state test) that asserts both sides (spec result versus Geth result, ETH before versus after, accepted set versus spec set, persisted versus executed) and show that no later step in `insertChain` can detect or reverse it.",
 ]
 
 
@@ -565,112 +373,115 @@ scope_scan = [
 
 def question_generator(target_file: str) -> str:
     """
-    Generate network-boundary (P2P/RPC/StackerDB/Atlas) audit questions for one
-    stacks-core target.
+    Generate consensus / state-transition / block-validity audit questions for one go-ethereum target.
 
     ```
     target_file format:
-    "'File Name: stackslib/src/net/relay.rs -> Scope: Critical. ...'"
+    "'File Name: core/vm/instructions.go -> Scope: Critical. ...'"
     """
 
     prompt = f"""
     ```
 
-    Generate blockchain-node network-security audit questions for this exact stacks-core
-    target:
+    Generate execution-client consensus security audit questions for this exact
+    go-ethereum target:
 
     {target_file}
 
     Project focus:
-    stacks-core exposes P2P and RPC ports that accept bytes from anyone. Untrusted input
-    arrives as P2P handshakes and gossiped blocks/txs/StackerDB messages, HTTP requests to
-    the RPC API, StackerDB chunks, Atlas attachments, and advertised inventories that steer
-    the download state machine. The node decides (a) whether a peer is who it claims and
-    allowed to say this - handshake signatures, StackerDB slot-owner signatures, auth-gated
-    endpoint secrets; (b) whether stored or relayed state matches what was actually
-    authorized; (c) whether each handler stays within its resource and trust bounds. Anything
-    the node stores, relays or serves that a remote party did not authenticate, plus any
-    remotely reachable panic or over-read, is the bug.
+    Geth is the majority Ethereum execution client. Every node decodes a block,
+    verifies its header and body, runs each transaction through the EVM and StateDB,
+    applies system contracts and withdrawals, and produces (stateRoot, receiptsRoot,
+    gasUsed, logsBloom) that must equal what the execution spec and every other client
+    produce. Untrusted input enters as a signed transaction of any type, the bytecode
+    of a contract anyone can deploy, a blob sidecar, or a block any permissionless
+    builder or proposer submits. The system decides (a) whether the block is valid;
+    (b) what state root, receipts and gas result; (c) how much ETH moved and where;
+    (d) what is persisted as canonical. Anything Geth accepts, computes, charges or
+    stores that the spec does not is the bug.
 
     Rules:
     * Treat `File Name:` as the exact file.
     * Treat `Scope:` as the ONLY impact to target.
     * Assume full repo context is accessible.
     * Do not ask for code or say anything is missing.
-    * Use exact Rust symbols (function, struct, enum variant, constant like MAX_MESSAGE_LEN,
-      trait) as they appear in the file.
-    * EVERY question must close on an equality that must hold - authenticated-versus-stored,
-      served-versus-committed, bytes-read-versus-length - OR name a specific remotely
-      reachable memory/panic fault. State it explicitly. Vague questions are rejected.
-    * Attacker is unprivileged only: any remote party who can open a TCP connection to a
-      node's P2P or RPC port and send arbitrary bytes, run their own peer, own a StackerDB
-      slot they legitimately hold, and gossip messages. They do NOT hold the node's
-      configured RPC secret, another peer's or slot owner's key, or any admin role.
-    * Attacker is NOT the node operator, not a configured trusted peer with the secret, not a
-      signer or miner with another's key. No compromised dependency; no social engineering; no
-      physical or local-network access to the victim node.
+    * Use exact Go symbols (exported function, method, constant, opcode, error var,
+      struct field) as they appear in the file.
+    * EVERY question must close on an equality that must hold across a call. State it
+      explicitly. Narrative questions with no stated equality are rejected.
+    * Attacker is unprivileged only: an ordinary mainnet account with its own ETH and
+      keys, a contract deployer, a blob-transaction sender, or a permissionless block
+      builder or proposer whose block every node executes. They may send any
+      transaction and order their own transactions and contract calls.
+    * Attacker is NOT a malicious peer, node, RPC client or Engine API caller, not the
+      node operator, not a majority of validators, and holds no leaked key. No
+      malicious peer or devp2p message; no compromised dependency or machine; no
+      social engineering.
     * PROGRAM EXCLUSIONS - a question landing in any of these wastes the whole batch:
-      - epoch2x/neon pre-Nakamoto download and inv paths, the signer decision logic
-        (stacks-signer runloop/signerdb), and consensus block-validation internals are other
-        variants and OUT OF SCOPE here, as are README, tests, benches and config.
-      - Generic volumetric DDoS, bandwidth flooding and connection-slot exhaustion that only
-        require traffic volume are OUT OF SCOPE; a single-message crash, over-read, request
-        smuggling or amplification IS in scope (name it).
-      - Defects in tokio, rustls, serde or the OS TCP stack with no exploit path through this
-        repo's code are OUT OF SCOPE; a weakness here that misuses them is IN scope.
-      - Also excluded: leaked keys, privileged accounts, centralization risk, best-practice
-        notes, feature requests, missing HTTP security headers with no impact, and
-        theoretical findings.
+      - Tests, fuzzers, generated code (gen_*.go, *_generated.go, *.pb.go), cmd/,
+        docs and build files are OUT OF SCOPE.
+      - Denial of service, resource exhaustion, unbounded memory or disk growth, slow
+        paths, rate limiting and timeouts are OUT OF SCOPE. A deterministic panic or
+        halt from one valid transaction or block is IN scope.
+      - Anything reachable only through a publicly exposed JSON-RPC, GraphQL, Beacon
+        or Engine API, or through p2p/devp2p/discovery messages, is OUT OF SCOPE.
+      - Pre-merge engines (ethash, clique) and code not activated on mainnet (verkle,
+        binary trie, overlay transition) are OUT OF SCOPE; Amsterdam-gated code is High
+        at most unless it also changes pre-Amsterdam execution.
+      - Also excluded: publicly known or already fixed issues, leaked keys, 51% or
+        economic attacks, centralization risk, best-practice notes, feature requests,
+        spec ambiguities with no client divergence, and theoretical findings.
     * IN-SCOPE IMPACTS - every question must land on one and name it:
-      Critical: remote node crash or unauthenticated DoS from a single or few messages;
-      unauthenticated/unauthorized write to node state or StackerDB; network-wide propagation
-      of forged blocks/txs/chunks; request smuggling or auth bypass on a gated endpoint;
-      memory disclosure.
-      High: serving state from a non-canonical block as canonical; steering a node off the
-      canonical tip via false inventory; attachment/BNS data mismatch; a bounded compute DoS
-      on a read endpoint.
-    * Every question must be a concrete real-world scenario a remote unprivileged party can
-      execute against a node's open port.
-    * A rejection is a finding only when it drops a valid message permanently or accepts a
-      forged one - say which.
-    * Generate 20 to 40 high-signal questions.
+      Critical: a consensus split where Geth accepts or rejects a mainnet block other
+      clients treat oppositely, or commits a different stateRoot; ETH created, stolen
+      or burned from an account the attacker does not control; a single transaction
+      or block that crashes or halts every Geth node.
+      High: every Geth proposer building an invalid block from one transaction; state
+      or chain persistence that no longer matches what was executed after a valid
+      block or reorg; a gas or receipt divergence that only surfaces on a rare path.
+    * Every question must be a concrete real-world scenario an unprivileged party can
+      trigger with a transaction, deployed contract, blob or block on mainnet rules.
+    * A returned error is a finding only when it rejects a spec-valid block or accepts
+      a spec-invalid one - say which.
+    * Generate 40 to 80 high-signal questions.
     * At least 70% must land on a Critical impact rather than a High one.
-    * Every question must be testable with a Rust test in `stackslib::net` or `libsigner`
-      feeding crafted bytes to the handler locally. Never propose testing on mainnet or a
-      public testnet.
+    * Every question must be testable locally with a Go test (`core.GenerateChain`, a
+      `StateProcessor` fixture, `vm/runtime`, or an execution-spec state test) on a
+      private chain. Never propose testing on mainnet or a public testnet.
     * Avoid generic checklist questions and repeated root causes.
-    * Prefer questions that name TWO values that must be equal (authenticated vs stored,
-      served vs committed, bytes-read vs length) or a precise panic/over-read site.
+    * Prefer questions that name TWO values that must be equal and ask whether they are:
+      Geth result and spec result, ETH before and after, gas charged and gas specified,
+      block accepted and block spec-valid, state persisted and state executed.
 
     Known dead ends - do NOT generate questions about these:
-    * Anything needing the node's RPC secret, another peer's or slot owner's key, or an admin role.
-    * Volumetric DDoS, bandwidth or connection-slot flooding needing only traffic volume.
-    * A dependency CVE with no reachable path through this repo's net code.
-    * Findings only in epoch2x/neon paths, the signer decision logic, or tests/tooling.
+    * Anything needing a malicious peer, node operator, RPC caller, CL client or
+      validator majority.
+    * DoS, memory, disk, logging, or a user harming only their own balance.
+    * Code paths not active on mainnet through the current fork schedule.
+    * Findings only reproducible through tests or tooling.
 
-    Core equalities / faults (each question must close on one):
-    * AUTHENTICATION: what the node stores/relays/acts on == what a remote party's signature
-      or configured secret authenticated.
-    * OWNERSHIP: every StackerDB chunk stored/relayed == one signed by its slot's current
-      owner, with a greater version.
-    * CANONICITY: state a read endpoint serves == state committed at the requested canonical block.
-    * BOUNDS: bytes a handler reads for a field == the validated length; no allocation or
-      index on an unchecked wire value.
-    * SAFETY: a named remotely reachable panic, over-read, smuggling or amplification site.
+    Core equalities (each question must close on one):
+    * SPEC PARITY: (stateRoot, receiptsRoot, gasUsed, logs) Geth computes == the spec's.
+    * VALIDITY TRUTH: the set of blocks and txs Geth accepts == the set the spec accepts.
+    * ETH CONSERVATION: balances after == balances before + issuance - burn, exactly.
+    * GAS TRUTH: gas charged and refunded == gas the EIPs define for that input.
+    * CODE TRUTH: code, nonce and storage changed == accounts the tx authorised.
+    * PERSISTENCE TRUTH: (head, root, receipts) stored == (head, root, receipts) executed.
 
     Each question must include:
-    1. target function, struct or endpoint;
-    2. attacker action (a concrete message or request with the fields that matter);
-    3. preconditions (peer state, config, reward cycle, tip);
-    4. call sequence through framing, verification and storage/relay;
-    5. the equality or fault, written explicitly;
-    6. scoped impact and what is crashed, forged or exposed;
+    1. target exported function, method, opcode or constant;
+    2. attacker input (the concrete transaction fields, bytecode, blob, authorization
+       or block fields that matter);
+    3. preconditions (fork, account state, prior txs in the block, cache state);
+    4. call sequence through block import, state transition, EVM and StateDB;
+    5. the equality that breaks, written explicitly;
+    6. scoped impact and which nodes or accounts are affected;
     7. proof idea.
 
     Output only valid Python. No markdown. No explanations.
 
     questions = [
-    "[File: {target_file}] [Method: function_or_endpoint] Can a remote unprivileged ATTACKER_ACTION under PRECONDITIONS trigger CALL_SEQUENCE, breaking the equality/fault EQUALITY, causing scoped impact: SCOPE_IMPACT against PARTY? Proof idea: Rust net test PARAMETERS asserting AUTHENTICATION, OWNERSHIP, CANONICITY, BOUNDS, or SAFETY.",
+    "[File: {target_file}] [Method: function_name] Can an unprivileged ATTACKER_INPUT under PRECONDITIONS trigger CALL_SEQUENCE, breaking the equality EQUALITY, causing scoped impact: SCOPE_IMPACT against PARTY? Proof idea: Go test PARAMETERS asserting SPEC_PARITY, VALIDITY_TRUTH, ETH_CONSERVATION, GAS_TRUTH, CODE_TRUTH, or PERSISTENCE_TRUTH.",
     ]
     """
     return prompt
@@ -678,7 +489,7 @@ def question_generator(target_file: str) -> str:
 
 def audit_format(security_question: str) -> str:
     """
-    Generate a network-boundary exploit-validation prompt for stacks-core.
+    Generate a consensus / state-transition exploit-validation prompt for go-ethereum.
     """
 
     prompt = f"""# SECURITY AUDIT PROMPT
@@ -688,19 +499,19 @@ def audit_format(security_question: str) -> str:
 
 ## Rules
 - Use existing repo context only. Analyze only this question and scoped impact.
-- Attacker is unprivileged only: any remote party who can connect to a node's P2P or RPC port and send arbitrary bytes, run their own peer, own a StackerDB slot they legitimately hold, and gossip messages. They do not hold the node's RPC secret, another peer's or slot owner's key, or any admin role, and have no local or physical access.
-- Reject compromised-dependency, social-engineering and local/physical-access assumptions, and any path requiring a privileged role or the configured secret.
-- OUT OF SCOPE, reject on sight: epoch2x/neon download and inv paths, the signer decision logic, consensus block-validation internals; README, tests, benches, config; volumetric DDoS, bandwidth flooding and connection-slot exhaustion needing only traffic volume; tokio/rustls/serde/OS-TCP defects with no exploit path through this repo's code; missing HTTP headers with no impact; best-practice notes; theoretical findings.
-- The impact must be one of: Critical - remote crash/unauthenticated DoS from few messages, unauthenticated/unauthorized write to state or StackerDB, network-wide propagation of forged data, request smuggling or auth bypass, memory disclosure; High - serving non-canonical state as canonical, steering a node off the tip via false inventory, attachment/BNS mismatch, bounded compute DoS on a read endpoint.
-- Focus on real impact: a forged message stored/relayed, a crash from a single message, or state served that no canonical block committed.
+- Attacker is unprivileged only: an ordinary mainnet account with its own ETH and keys, a contract deployer, a blob-transaction sender, or a permissionless block builder or proposer whose block every node executes. They may send any transaction and order their own calls.
+- Reject anything requiring a malicious peer, node, RPC or Engine API caller, the node operator, a validator majority, a leaked key, a compromised dependency or machine, or social engineering.
+- OUT OF SCOPE, reject on sight: tests, fuzzers, generated code (gen_*.go, *_generated.go, *.pb.go), cmd/, docs, build files; denial of service, resource exhaustion, unbounded memory or disk growth, slow paths, rate limiting, timeouts; anything reachable only through exposed JSON-RPC, GraphQL, Beacon or Engine API or p2p messages; pre-merge engines and code not activated on mainnet (verkle, binary trie, overlay); publicly known or fixed issues; 51% or economic attacks; centralization risk; best-practice notes; theoretical findings. A deterministic panic or halt from one valid transaction or block is IN scope.
+- The impact must be one of: Critical - a consensus split where Geth accepts or rejects a mainnet block other clients treat oppositely or commits a different stateRoot, ETH created, stolen or burned from an account the attacker does not control, a single transaction or block that crashes or halts every Geth node; High - every Geth proposer building an invalid block from one transaction, persistence that no longer matches execution after a valid block or reorg, a gas or receipt divergence on a rare path.
+- Focus on real impact: something Geth accepts, computes, charges or stores that the spec does not.
 
 ## Validate
-- Write the equality or fault the question claims BEFORE tracing any code.
-- Trace the exact reachable path from the remote bytes and record every verification (signature, secret, length, version) and every store/relay/serve, and every allocation or index on a wire-controlled value.
-- Evaluate the equality before and after, or locate the exact panic/over-read site. If the guard holds, output no vulnerability.
-- Check whether the handshake/chunk signature check, the auth-gate, `MAX_MESSAGE_LEN`/`MAX_PAYLOAD_LEN` and per-field caps, `will_admit_mempool_tx`, or the canonical-tip resolution already prevents it.
-- State what the attacker achieves per message and whether it is repeatable, and confirm the port is remotely reachable with no privileged role.
-- Require exact file/function support and a reproducible Rust test feeding crafted bytes to the handler.
+- Write the equality the question claims is broken between two named values BEFORE tracing any code.
+- Trace the exact reachable path from the attacker's transaction, bytecode, blob or block and record every read and write of `gas` / `GasBudget` / refund, balance, nonce, code, storage and transient slots, `Root` / `ReceiptHash` / `Bloom` / `GasUsed`, `excessBlobGas` / `baseFee`, and the canonical hash or layer written.
+- Evaluate both sides of the equality before and after against the EIP text. If they still match, output no vulnerability.
+- Check whether `verifyHeader`, `ValidateBody`, `ValidateState`, `preCheck`, `IntrinsicGas` / `FloorDataGas`, `validateAuthorization`, `ValidateSignatureValues`, `RequiredGas`, `Prepare`, `Finalise`, the journal revert, or the execution-spec tests in tests/ already prevent the divergence.
+- State what the attacker gains per transaction or block and whether it is repeatable.
+- Require exact file/function support and a reproducible Go test on a private chain.
 
 ## Output
 If valid, output exactly:
@@ -712,19 +523,19 @@ If valid, output exactly:
 [2-3 sentences]
 
 ### Finding Description
-[The broken equality or fault, the code path, root cause, the attacker's exact message, exploit flow, and why existing guards fail]
+[The broken equality, the code path, root cause, the attacker's exact input, exploit flow, and why existing guards fail]
 
 ### Impact Explanation
-[What is crashed, forged, written, smuggled or exposed, which party/nodes, repeatability, matching severity category]
+[What is accepted, computed, charged or stored wrongly, which nodes or accounts, repeatability, matching severity category]
 
 ### Likelihood Explanation
-[Preconditions, peer/config/tip state required, attacker cost, remote reachability, repeatability]
+[Preconditions, fork and state required, attacker cost, feasibility, repeatability]
 
 ### Recommendation
 [Specific fix]
 
 ### Proof of Concept
-[Rust net test plan feeding crafted bytes, with the exact assertion or crash site]
+[Go test plan with the exact assertions on both sides of the equality]
 
 If invalid, output exactly:
 #NoVulnerability found for this question.
@@ -736,7 +547,7 @@ No extra text.
 
 def validation_format(report: str) -> str:
     """
-    Generate a strict bounty-style validation prompt for stacks-core network claims.
+    Generate a strict bounty-style validation prompt for go-ethereum claims.
     """
     prompt = f"""# VALIDATION PROMPT
 
@@ -748,32 +559,32 @@ def validation_format(report: str) -> str:
 - Check SECURITY.md and Researcher.Md for scope, exclusions, and valid impact classes.
 - Do not create a new vulnerability if the submitted claim is weak or invalid.
 - Do not upgrade severity unless the provided evidence proves the higher impact.
-- A claim is only valid if the report states the broken equality (authenticated vs stored, served vs committed, bytes vs length) or names a precise remotely reachable panic/over-read, and shows it concretely. Reject prose-only claims.
-- Reject anything requiring the node's RPC secret, another peer's or slot owner's key, an admin role, local or physical access, a compromised dependency, or social engineering.
-- OUT OF SCOPE, reject on sight: epoch2x/neon download and inv paths, the signer decision logic, consensus block-validation internals; README, tests, benches, config; volumetric DDoS, bandwidth flooding and connection-slot exhaustion needing only traffic volume; tokio/rustls/serde/OS-TCP defects with no exploit path through this repo's code; missing HTTP headers with no impact; centralization risk; best-practice notes; feature requests; theoretical findings.
-- The impact must be one of: Critical - remote crash/unauthenticated DoS from few messages, unauthenticated/unauthorized write to state or StackerDB, network-wide propagation of forged data, request smuggling or auth bypass, memory disclosure; High - serving non-canonical state as canonical, steering a node off the tip via false inventory, attachment/BNS mismatch, bounded compute DoS on a read endpoint.
-- Reject claims that need only traffic volume, or whose only effect is on the attacker's own node.
+- A claim is only valid if the report states the broken equality between two named values and shows both sides concretely. Reject prose-only claims.
+- Reject anything requiring a malicious peer, node, RPC or Engine API caller, the node operator, a validator majority, a leaked key, a compromised dependency or machine, or social engineering.
+- OUT OF SCOPE, reject on sight: tests, fuzzers, generated code (gen_*.go, *_generated.go, *.pb.go), cmd/, docs, build files; denial of service, resource exhaustion, unbounded memory or disk growth, slow paths, rate limiting, timeouts; anything reachable only through exposed JSON-RPC, GraphQL, Beacon or Engine API or p2p messages; pre-merge engines and code not activated on mainnet (verkle, binary trie, overlay); publicly known or fixed issues; 51% or economic attacks; centralization risk; best-practice notes; feature requests; theoretical findings. A deterministic panic or halt from one valid transaction or block is IN scope.
+- The impact must be one of: Critical - a consensus split where Geth accepts or rejects a mainnet block other clients treat oppositely or commits a different stateRoot, ETH created, stolen or burned from an account the attacker does not control, a single transaction or block that crashes or halts every Geth node; High - every Geth proposer building an invalid block from one transaction, persistence that no longer matches execution after a valid block or reorg, a gas or receipt divergence on a rare path.
+- Reject claims where the only loss is the attacker's own balance or gas.
 - Reject if the bug was already fixed, publicly disclosed, or covered by a known-issues list.
-- A valid report must be triggerable by a remote unprivileged party against a node's open port on the current code.
+- A valid report must be triggerable by an unprivileged party against the current code with a transaction, deployed contract, blob or block under mainnet fork rules.
 - A PoC is mandatory. Prefer #NoVulnerability over speculative reports.
 
 ## Required Validation Checks
 All must pass:
-1. Exact in-scope file, function/struct/endpoint, and line references.
-2. The equality or fault written explicitly, with both sides or the crash site shown.
-3. Clear root cause: which auth gap, ownership check, canonicity assumption, bounds check, or unsafe parse causes it.
-4. Reachable exploit path: preconditions -> remote bytes -> framing, verification and storage/relay sequence -> observed divergence or fault.
-5. The handshake/chunk signature check, the auth-gate, the length caps, `will_admit_mempool_tx`, and canonical-tip resolution reviewed and shown insufficient.
-6. Impact stated concretely: what is crashed, forged, written or exposed, and whether it is remote and repeatable.
-7. Reproducible proof: Rust test feeding crafted bytes to the handler with the asserted values or crash.
+1. Exact in-scope file, function/method/opcode/constant, and line references.
+2. The equality written explicitly, with both sides shown before and after, citing the EIP or spec text.
+3. Clear root cause: which opcode or precompile semantic, gas or refund rule, signature or decoding rule, header or body check, journal or persistence step causes it.
+4. Reachable exploit path: preconditions -> attacker transaction or block -> block import, state transition, EVM and StateDB sequence -> observed divergence.
+5. `verifyHeader`, `ValidateBody`, `ValidateState`, `preCheck`, `IntrinsicGas` / `FloorDataGas`, `validateAuthorization`, `ValidateSignatureValues`, `RequiredGas`, `Prepare`, `Finalise`, the journal revert and the execution-spec tests reviewed and shown insufficient.
+6. Impact stated concretely: which nodes split, which accounts lose or gain, and whether it is repeatable.
+7. Reproducible proof: Go test on a private chain with the asserted values.
 
 ## Silent Triage Questions
 Before output, internally answer:
-- What exactly is the equality or fault, and does it actually occur?
-- Can a remote party trigger it over an open port with no secret and no other party's key?
-- Is the flaw in this repo's net/libsigner code, not in a dependency or the OS stack?
-- What is crashed, forged, written or exposed, and can it be repeated remotely?
-- Would an Immunefi triager accept it under the remotely-exploitable / DoS severity system?
+- What exactly is the equality, and does it actually fail against the spec?
+- Can an ordinary account, contract or permissionless builder trigger it with no privileged role and no peer-level access?
+- Is the flaw in this repo's code, not in the spec, the CL client or a dependency?
+- What is accepted, computed, charged or stored wrongly, who is affected, and can it be repeated?
+- Would the Ethereum Foundation bug bounty panel accept the exploit path for Geth?
 - What exact test would prove it?
 
 ## Output
@@ -785,22 +596,22 @@ Audit Report
 [Clear vulnerability statement] - ([File: file_path])
 
 ## Summary
-[2-3 sentence summary of the broken equality/fault and impact]
+[2-3 sentence summary of the broken equality and impact]
 
 ## Finding Description
-[Exact code path, the equality or fault, root cause, exploit flow, and why existing guards fail]
+[Exact code path, the equality, root cause, exploit flow, and why existing guards fail]
 
 ## Impact Explanation
-[What is crashed, forged, written, smuggled or exposed, affected party/nodes, repeatability, severity category]
+[What is accepted, computed, charged or stored wrongly, affected nodes or accounts, repeatability, severity category]
 
 ## Likelihood Explanation
-[Attacker capability, preconditions, remote reachability, cost, feasibility]
+[Attacker capability, preconditions, fork and state required, cost, feasibility]
 
 ## Recommendation
 [Specific fix guidance]
 
 ## Proof of Concept
-[Minimal reproducible steps or Rust net test plan with concrete assertions or crash site]
+[Minimal reproducible steps or Go test plan with concrete assertions]
 
 If invalid, output exactly:
 #NoVulnerability found for this question.
@@ -812,7 +623,7 @@ Output only one of the two outcomes above. No extra text.
 
 def scan_format(report: str) -> str:
     """
-    Generate a short cross-project analog scan prompt for the stacks-core network boundary.
+    Generate a short cross-project analog scan prompt for go-ethereum.
     """
     prompt = f"""# ANALOG SCAN PROMPT
 
@@ -820,18 +631,18 @@ def scan_format(report: str) -> str:
 {report}
 
 ## Rules
-- Use in-scope repo context only (`stackslib/src/net/**` excluding epoch2x/neon paths, `libstackerdb/**`, and the `libsigner` transport files). Do not ask for code or claim missing files.
+- Use in-scope repo context only (`core/**`, `consensus/**`, `params/**`, `crypto/**`, `rlp/**`, `trie/**`, `triedb/**`, `beacon/engine/**`, `eth/catalyst/**`, `miner/**`, excluding tests, fuzzers, generated files, metrics and pre-activation code). Do not ask for code or claim missing files.
 - Use the external report only as a bug-class hint, not as proof.
-- Keep only remote, unprivileged analogs that break an equality (authenticated vs stored, served vs committed, bytes vs length) or reach a precise panic/over-read: an auth-gate that fails open, a StackerDB chunk stored without a valid owner signature, forged gossip relayed, an unchecked wire length, or non-canonical state served as canonical.
-- OUT OF SCOPE, reject on sight: epoch2x/neon paths, the signer decision logic, consensus block-validation internals; README, tests, benches, config; volumetric DDoS, bandwidth flooding and connection-slot exhaustion needing only traffic volume; tokio/rustls/serde/OS-TCP defects with no path through this repo; anything requiring the node secret, another party's key or an admin role; missing HTTP headers with no impact; best-practice notes; theoretical findings.
-- The impact must be one of: Critical - remote crash/unauthenticated DoS from few messages, unauthenticated/unauthorized write to state or StackerDB, network-wide propagation of forged data, request smuggling or auth bypass, memory disclosure; High - serving non-canonical state as canonical, steering a node off the tip via false inventory, attachment/BNS mismatch, bounded compute DoS on a read endpoint.
-- Reject analogs needing only traffic volume or affecting only the attacker's own node.
+- Keep only unprivileged analogs that break an equality: a block or transaction Geth accepts that the spec rejects or the reverse, a stateRoot or receipt that differs from the spec, ETH created or moved without authorisation, gas charged that differs from the EIPs, code or nonce changed on an account that did not authorise it, or a persisted head or state that differs from what was executed.
+- OUT OF SCOPE, reject on sight: tests, fuzzers, generated code, cmd/, docs, build files; denial of service, resource exhaustion, unbounded memory or disk growth, slow paths, rate limiting, timeouts; anything reachable only through exposed JSON-RPC, GraphQL, Beacon or Engine API; malicious peer, node or devp2p assumptions; pre-merge engines and code not activated on mainnet; publicly known or fixed issues; 51% or economic attacks; centralization risk; best-practice notes; theoretical findings. A deterministic panic or halt from one valid transaction or block is IN scope.
+- The impact must be one of: Critical - a consensus split where Geth accepts or rejects a mainnet block other clients treat oppositely or commits a different stateRoot, ETH created, stolen or burned from an account the attacker does not control, a single transaction or block that crashes or halts every Geth node; High - every Geth proposer building an invalid block from one transaction, persistence that no longer matches execution after a valid block or reorg, a gas or receipt divergence on a rare path.
+- Reject analogs where the only loss is the attacker's own balance or gas.
 
 ## Validate
-- Map the bug class to the strongest reachable path in this repo and state the equality or fault it would break.
-- Evaluate both sides before and after, or locate the exact fault site.
+- Map the bug class to the strongest reachable path in this repo and state the equality it would break.
+- Evaluate both sides before and after the attacker's transaction or block against the EIP text.
 - Prove root cause with exact file/function support.
-- Accept only concrete remote crash, unauthorized write, forged-data propagation, auth bypass, smuggling, memory disclosure, or non-canonical/mismatched data served.
+- Accept only concrete consensus divergence, unauthorised ETH or code change, wrong gas, network-wide crash, invalid block production, or persistence mismatch.
 
 ## Output (Strict)
 If valid analog exists, output:
