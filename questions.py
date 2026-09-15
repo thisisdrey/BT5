@@ -4,13 +4,12 @@ import os
 from decouple import config
 
 # todo: if scope_files is: 500 > 50, 300 > 30 , 100 > 10
-MAX_REPO = 20
-# todo: the GitLab namespace/project path, for example group/project
-SOURCE_REPO = 'ethereum/go-ethereum'
+MAX_REPO = 30
+# todo: the path from https://github.com/tronprotocol/java-tron
+SOURCE_REPO = "tronprotocol/java-tron"
 # todo: the name of the repository
-REPO_NAME = 'go-ethereum'
-
-run_number = os.environ.get('GITHUB_RUN_NUMBER', '0')
+REPO_NAME = "java-tron"
+run_number = os.environ.get('GITHUB_RUN_NUMBER') or os.environ.get('CI_PIPELINE_IID', '0')
 
 
 def get_cyclic_index(run_number, max_index=100):
@@ -46,324 +45,369 @@ else:
     else:
         BASE_URL = f"https://deepwiki.com/{SOURCE_REPO}"
 
-
 scope_files = [
     # =================================================================================
-    # LENS: CONSENSUS STATE TRANSITION AND BLOCK VALIDITY (go-ethereum / Geth).
-    # Every Geth node on mainnet decodes a block, validates its header and body, runs
-    # each transaction through the EVM and StateDB, and produces (stateRoot,
-    # receiptsRoot, gasUsed, logsBloom) that must equal what the Ethereum spec and
-    # every other client produce. Attacker input is a signed transaction, a deployed
-    # contract's bytecode, a blob sidecar, or a block any permissionless builder or
-    # proposer can craft. The files below sit on the path from those inputs to one of
-    # four decisions: is the block valid, what state root results, how much gas and
-    # ETH moved, and what is persisted as canonical. A question belongs here only if
-    # it can be closed by an equality between the spec's result and Geth's result.
+    # Transaction admission: signature, permission, tapos and duplicate checks every
+    # broadcast transaction passes before it is executed
     # =================================================================================
-    # -- core: block import, validation, processing, gas pool, genesis and chain config -
-    # blockchain.go owns insertChain, ProcessBlock, reorg, SetCanonical, writeBlockWithState;
-    # state_processor.go owns Process, ApplyTransactionWithEVM, the system-contract calls
-    # (beacon root, parent hash, withdrawal / consolidation queues) and AssembleBlock.
-    "core/block_validator.go",
-    "core/blockchain.go",
-    "core/blockchain_insert.go",
-    "core/blockchain_reader.go",
-    "core/error.go",
-    "core/evm.go",
-    "core/gaspool.go",
-    "core/genesis.go",
-    "core/genesis_alloc.go",
-    "core/headerchain.go",
-    "core/jumpdest.go",
-    "core/sender_cacher.go",
-    "core/state_prefetcher.go",
-    "core/state_processor.go",
-    "core/state_processor_parallel.go",
-    "core/state_transition.go",
-    "core/stateless.go",
-    "core/types.go",
-    "core/stateless/database.go",
-    "core/stateless/encoding.go",
-    "core/stateless/witness.go",
-
-    # -- core/vm: interpreter, opcodes, gas tables, access lists, precompiles and cache --
-    "core/vm/analysis_legacy.go",
-    "core/vm/common.go",
-    "core/vm/contract.go",
-    "core/vm/contracts.go",
-    "core/vm/eips.go",
-    "core/vm/errors.go",
-    "core/vm/evm.go",
-    "core/vm/gas.go",
-    "core/vm/gas_table.go",
-    "core/vm/gascosts.go",
-    "core/vm/instructions.go",
-    "core/vm/interface.go",
-    "core/vm/interpreter.go",
-    "core/vm/jump_table.go",
-    "core/vm/jump_table_export.go",
-    "core/vm/jumpdests.go",
-    "core/vm/memory.go",
-    "core/vm/memory_table.go",
-    "core/vm/opcodes.go",
-    "core/vm/operations_acl.go",
-    "core/vm/precompile_cache.go",
-    "core/vm/stack.go",
-    "core/vm/stack_table.go",
-
-    # -- core/state: StateDB, journal, snapshots, access lists, transient storage, readers -
-    "core/state/access_list.go",
-    "core/state/database.go",
-    "core/state/database_code.go",
-    "core/state/database_history.go",
-    "core/state/database_iterator.go",
-    "core/state/database_mpt.go",
-    "core/state/iterator.go",
-    "core/state/journal.go",
-    "core/state/reader.go",
-    "core/state/reader_eip_7928.go",
-    "core/state/reader_stater.go",
-    "core/state/state_object.go",
-    "core/state/statedb.go",
-    "core/state/statedb_eip_7928.go",
-    "core/state/statedb_hooked.go",
-    "core/state/stateupdate.go",
-    "core/state/transient_storage.go",
-    "core/state/trie_prefetcher.go",
-    "core/state/snapshot/context.go",
-    "core/state/snapshot/conversion.go",
-    "core/state/snapshot/difflayer.go",
-    "core/state/snapshot/disklayer.go",
-    "core/state/snapshot/generate.go",
-    "core/state/snapshot/holdable_iterator.go",
-    "core/state/snapshot/iterator.go",
-    "core/state/snapshot/iterator_binary.go",
-    "core/state/snapshot/iterator_fast.go",
-    "core/state/snapshot/journal.go",
-    "core/state/snapshot/snapshot.go",
-    "core/state/snapshot/utils.go",
-
-    # -- core/types: block, header, transactions, signing, sidecars, receipts, BAL --------
-    "core/types/account.go",
-    "core/types/block.go",
-    "core/types/bloom9.go",
-    "core/types/custody_bitmap.go",
-    "core/types/deposit.go",
-    "core/types/hashes.go",
-    "core/types/hashing.go",
-    "core/types/log.go",
-    "core/types/receipt.go",
-    "core/types/state_account.go",
-    "core/types/transaction.go",
-    "core/types/transaction_marshalling.go",
-    "core/types/transaction_signing.go",
-    "core/types/tx_access_list.go",
-    "core/types/tx_blob.go",
-    "core/types/tx_dynamic_fee.go",
-    "core/types/tx_legacy.go",
-    "core/types/tx_setcode.go",
-    "core/types/withdrawal.go",
-    "core/types/bal/bal.go",
-    "core/types/bal/bal_encoding.go",
-    "core/types/bal/bal_lookup.go",
-
-    # -- core/txpool: transaction admission, nonce ordering, blob pool, delegation limits --
-    "core/txpool/errors.go",
-    "core/txpool/reserver.go",
-    "core/txpool/subpool.go",
-    "core/txpool/txpool.go",
-    "core/txpool/validation.go",
-    "core/txpool/txorder/ordering.go",
-    "core/txpool/legacypool/legacypool.go",
-    "core/txpool/legacypool/list.go",
-    "core/txpool/legacypool/noncer.go",
-    "core/txpool/legacypool/queue.go",
-    "core/txpool/blobpool/blobpool.go",
-    "core/txpool/blobpool/buffer.go",
-    "core/txpool/blobpool/cache.go",
-    "core/txpool/blobpool/config.go",
-    "core/txpool/blobpool/conversion.go",
-    "core/txpool/blobpool/evictheap.go",
-    "core/txpool/blobpool/interface.go",
-    "core/txpool/blobpool/limbo.go",
-    "core/txpool/blobpool/lookup.go",
-    "core/txpool/blobpool/priority.go",
-    "core/txpool/blobpool/slotter.go",
-
-    # -- core/rawdb: chain, state and receipt persistence, freezer, schema ----------------
-    "core/rawdb/accessors_chain.go",
-    "core/rawdb/accessors_history.go",
-    "core/rawdb/accessors_indexes.go",
-    "core/rawdb/accessors_metadata.go",
-    "core/rawdb/accessors_snapshot.go",
-    "core/rawdb/accessors_state.go",
-    "core/rawdb/accessors_trie.go",
-    "core/rawdb/ancient_scheme.go",
-    "core/rawdb/ancient_utils.go",
-    "core/rawdb/chain_freezer.go",
-    "core/rawdb/chain_iterator.go",
-    "core/rawdb/database.go",
-    "core/rawdb/freezer.go",
-    "core/rawdb/freezer_batch.go",
-    "core/rawdb/freezer_meta.go",
-    "core/rawdb/freezer_table.go",
-    "core/rawdb/freezer_utils.go",
-    "core/rawdb/schema.go",
-    "core/rawdb/table.go",
-
-    # -- consensus and params: header rules, base fee, blob gas, fork schedule, constants --
-    "consensus/consensus.go",
-    "consensus/errors.go",
-    "consensus/beacon/consensus.go",
-    "consensus/misc/dao.go",
-    "consensus/misc/gaslimit.go",
-    "consensus/misc/eip1559/eip1559.go",
-    "consensus/misc/eip4844/eip4844.go",
-    "params/config.go",
-    "params/dao.go",
-    "params/denomination.go",
-    "params/network_params.go",
-    "params/protocol_params.go",
-    "params/forks/forks.go",
-
-    # -- crypto: signature recovery, hashing, KZG, curve arithmetic behind precompiles ------
-    "crypto/crypto.go",
-    "crypto/keccak.go",
-    "crypto/signature_cgo.go",
-    "crypto/signature_nocgo.go",
-    "crypto/secp256k1/curve.go",
-    "crypto/secp256k1/scalar_mult_cgo.go",
-    "crypto/secp256k1/scalar_mult_nocgo.go",
-    "crypto/secp256k1/secp256.go",
-    "crypto/secp256r1/verifier.go",
-    "crypto/kzg4844/kzg4844.go",
-    "crypto/kzg4844/kzg4844_ckzg_cgo.go",
-    "crypto/kzg4844/kzg4844_ckzg_nocgo.go",
-    "crypto/kzg4844/kzg4844_gokzg.go",
-    "crypto/bn256/bn256_fast.go",
-    "crypto/bn256/bn256_slow.go",
-    "crypto/bn256/cloudflare/bn256.go",
-    "crypto/bn256/cloudflare/curve.go",
-    "crypto/bn256/cloudflare/gfp.go",
-    "crypto/bn256/cloudflare/gfp2.go",
-    "crypto/bn256/cloudflare/gfp6.go",
-    "crypto/bn256/cloudflare/gfp12.go",
-    "crypto/bn256/cloudflare/optate.go",
-    "crypto/bn256/cloudflare/twist.go",
-    "crypto/bn256/gnark/g1.go",
-    "crypto/bn256/gnark/g2.go",
-    "crypto/bn256/gnark/pairing.go",
-    "crypto/blake2b/blake2b.go",
-    "crypto/blake2b/blake2b_generic.go",
-    "crypto/blake2b/blake2b_ref.go",
-    "crypto/blake2b/blake2x.go",
-    "crypto/keccak/hashes.go",
-    "crypto/keccak/keccakf.go",
-    "crypto/keccak/sha3.go",
-
-    # -- rlp: the decoder every block, header, transaction and receipt passes through -----
-    "rlp/decode.go",
-    "rlp/encbuffer.go",
-    "rlp/encode.go",
-    "rlp/iterator.go",
-    "rlp/raw.go",
-    "rlp/typecache.go",
-
-    # -- trie and triedb: state root computation, proofs, path-based persistence ----------
-    "trie/bytepool.go",
-    "trie/committer.go",
-    "trie/encoding.go",
-    "trie/errors.go",
-    "trie/hasher.go",
-    "trie/iterator.go",
-    "trie/list_hasher.go",
-    "trie/node.go",
-    "trie/node_enc.go",
-    "trie/proof.go",
-    "trie/secure_trie.go",
-    "trie/stacktrie.go",
-    "trie/stacktrie_partial.go",
-    "trie/tracer.go",
-    "trie/trie.go",
-    "trie/trie_id.go",
-    "trie/trie_reader.go",
-    "trie/trienode/node.go",
-    "trie/trienode/proof.go",
-    "triedb/database.go",
-    "triedb/history.go",
-    "triedb/preimages.go",
-    "triedb/states.go",
-    "triedb/database/database.go",
-    "triedb/hashdb/database.go",
-    "triedb/pathdb/buffer.go",
-    "triedb/pathdb/context.go",
-    "triedb/pathdb/database.go",
-    "triedb/pathdb/difflayer.go",
-    "triedb/pathdb/disklayer.go",
-    "triedb/pathdb/errors.go",
-    "triedb/pathdb/execute.go",
-    "triedb/pathdb/flush.go",
-    "triedb/pathdb/history.go",
-    "triedb/pathdb/history_reader.go",
-    "triedb/pathdb/history_state.go",
-    "triedb/pathdb/history_trienode.go",
-    "triedb/pathdb/iterator.go",
-    "triedb/pathdb/journal.go",
-    "triedb/pathdb/layertree.go",
-    "triedb/pathdb/lookup.go",
-    "triedb/pathdb/nodes.go",
-    "triedb/pathdb/reader.go",
-    "triedb/pathdb/states.go",
-    "triedb/pathdb/verifier.go",
-
-    # -- engine API and block building: where a builder's payload enters and leaves Geth --
-    "beacon/engine/bapl_encode.go",
-    "beacon/engine/epe_encode.go",
-    "beacon/engine/errors.go",
-    "beacon/engine/types.go",
-    "eth/catalyst/api.go",
-    "eth/catalyst/queue.go",
-    "miner/miner.go",
-    "miner/payload_building.go",
-    "miner/pending.go",
-    "miner/worker.go",
+    "chainbase/src/main/java/org/tron/core/capsule/TransactionCapsule.java",
+    "chainbase/src/main/java/org/tron/core/capsule/BlockCapsule.java",
+    "chainbase/src/main/java/org/tron/core/capsule/AccountCapsule.java",
+    "chainbase/src/main/java/org/tron/core/capsule/ReceiptCapsule.java",
+    "chainbase/src/main/java/org/tron/core/capsule/TransactionInfoCapsule.java",
+    "chainbase/src/main/java/org/tron/core/capsule/TransactionResultCapsule.java",
+    "chainbase/src/main/java/org/tron/core/capsule/TransactionRetCapsule.java",
+    "chainbase/src/main/java/org/tron/core/capsule/utils/TransactionUtil.java",
+    "chainbase/src/main/java/org/tron/core/db/TransactionTrace.java",
+    "chainbase/src/main/java/org/tron/core/db/TransactionStore.java",
+    "chainbase/src/main/java/org/tron/core/db/TransactionCache.java",
+    "chainbase/src/main/java/org/tron/core/db/RecentTransactionStore.java",
+    "chainbase/src/main/java/org/tron/core/db/RecentBlockStore.java",
+    "chainbase/src/main/java/org/tron/core/db2/common/TxCacheDB.java",
+    "actuator/src/main/java/org/tron/core/utils/TransactionUtil.java",
+    "actuator/src/main/java/org/tron/core/utils/TransactionRegister.java",
 
     # =================================================================================
-    # NOT AUDITED (excluded from every variant): every *_test.go, tests/, fuzzers and
-    # testing helpers (chain_makers.go, api_testing.go, dbtest, ancienttest, testrand,
-    # testlog); generated code (gen_*.go, *_generated.go, *.pb.go, gencodec outputs
-    # ed_codec.go / epe_decode.go / pa_codec.go) and mkalloc.go; metrics.go files, log,
-    # event and telemetry; p2p/, eth/protocols/, eth/downloader/, eth/fetcher/ and
-    # discovery (malicious-peer surface); rpc/, internal/ethapi/, graphql/, eth/filters,
-    # eth/tracers, ethclient/ and console (JSON-RPC surface); cmd/, accounts/, signer/,
-    # node/, ethdb/ drivers; pre-merge engines (ethash, clique) and pre-activation code
-    # (verkle, bintrie, transitiontrie, overlay, database_ubt); go.mod, Makefile, docs
-    # and README. A defect in any of these is only in scope when it is reachable from
-    # the audited code above through a transaction or block executed on mainnet.
+    # Block pipeline: the code every honest node runs on a block carrying the
+    # attacker's transaction - divergence or a throw here halts or splits the chain
     # =================================================================================
+    "framework/src/main/java/org/tron/core/db/Manager.java",
+    "framework/src/main/java/org/tron/core/db/PendingManager.java",
+    "framework/src/main/java/org/tron/core/db/HistoryBlockHashUtil.java",
+    "framework/src/main/java/org/tron/core/db/accountstate/callback/AccountStateCallBack.java",
+    "framework/src/main/java/org/tron/core/db/accountstate/TrieService.java",
+    "chainbase/src/main/java/org/tron/core/ChainBaseManager.java",
+    "chainbase/src/main/java/org/tron/core/db/KhaosDatabase.java",
+    "chainbase/src/main/java/org/tron/core/db/BlockStore.java",
+    "chainbase/src/main/java/org/tron/core/db/BlockIndexStore.java",
+    "chainbase/src/main/java/org/tron/core/db/TronStoreWithRevoking.java",
+    "chainbase/src/main/java/org/tron/core/db/TronDatabase.java",
+    "chainbase/src/main/java/org/tron/core/db2/core/SnapshotManager.java",
+    "chainbase/src/main/java/org/tron/core/db2/core/SnapshotImpl.java",
+    "chainbase/src/main/java/org/tron/core/db2/core/SnapshotRoot.java",
+    "chainbase/src/main/java/org/tron/core/db2/core/AbstractSnapshot.java",
+    "chainbase/src/main/java/org/tron/core/db2/core/Chainbase.java",
+    "chainbase/src/main/java/org/tron/common/utils/ForkController.java",
+    "chainbase/src/main/java/org/tron/common/utils/ForkUtils.java",
+    "chainbase/src/main/java/org/tron/core/capsule/utils/BlockUtil.java",
+    "chainbase/src/main/java/org/tron/core/capsule/utils/MerkleTree.java",
+    "common/src/main/java/org/tron/common/utils/MerkleRoot.java",
+
+    # =================================================================================
+    # Consensus and reward accounting reachable from an ordinary vote, delegation
+    # or withdrawal transaction
+    # =================================================================================
+    "consensus/src/main/java/org/tron/consensus/dpos/DposService.java",
+    "consensus/src/main/java/org/tron/consensus/dpos/DposSlot.java",
+    "consensus/src/main/java/org/tron/consensus/dpos/MaintenanceManager.java",
+    "consensus/src/main/java/org/tron/consensus/dpos/IncentiveManager.java",
+    "consensus/src/main/java/org/tron/consensus/dpos/StatisticManager.java",
+    "consensus/src/main/java/org/tron/consensus/dpos/StateManager.java",
+    "consensus/src/main/java/org/tron/consensus/ConsensusDelegate.java",
+    "consensus/src/main/java/org/tron/consensus/pbft/PbftManager.java",
+    "consensus/src/main/java/org/tron/consensus/pbft/PbftMessageHandle.java",
+    "consensus/src/main/java/org/tron/consensus/pbft/message/PbftBaseMessage.java",
+    "consensus/src/main/java/org/tron/consensus/pbft/message/PbftMessage.java",
+    "chainbase/src/main/java/org/tron/core/capsule/PbftSignCapsule.java",
+    "chainbase/src/main/java/org/tron/core/service/MortgageService.java",
+    "chainbase/src/main/java/org/tron/core/service/RewardViCalService.java",
+    "chainbase/src/main/java/org/tron/core/store/DelegationStore.java",
+    "chainbase/src/main/java/org/tron/core/store/WitnessStore.java",
+    "chainbase/src/main/java/org/tron/core/store/WitnessScheduleStore.java",
+    "chainbase/src/main/java/org/tron/core/store/VotesStore.java",
+    "chainbase/src/main/java/org/tron/core/capsule/VotesCapsule.java",
+    "chainbase/src/main/java/org/tron/core/capsule/WitnessCapsule.java",
+    "framework/src/main/java/org/tron/core/consensus/ProposalController.java",
+    "framework/src/main/java/org/tron/core/consensus/ProposalService.java",
+
+    # =================================================================================
+    # Actuators: one per broadcastable contract type - the value-moving surface any
+    # funded address reaches directly
+    # =================================================================================
+    "actuator/src/main/java/org/tron/core/actuator/AbstractActuator.java",
+    "actuator/src/main/java/org/tron/core/actuator/ActuatorCreator.java",
+    "actuator/src/main/java/org/tron/core/actuator/ActuatorFactory.java",
+    "actuator/src/main/java/org/tron/core/actuator/TransferActuator.java",
+    "actuator/src/main/java/org/tron/core/actuator/TransferAssetActuator.java",
+    "actuator/src/main/java/org/tron/core/actuator/CreateAccountActuator.java",
+    "actuator/src/main/java/org/tron/core/actuator/UpdateAccountActuator.java",
+    "actuator/src/main/java/org/tron/core/actuator/SetAccountIdActuator.java",
+    "actuator/src/main/java/org/tron/core/actuator/AccountPermissionUpdateActuator.java",
+    "actuator/src/main/java/org/tron/core/actuator/AssetIssueActuator.java",
+    "actuator/src/main/java/org/tron/core/actuator/UpdateAssetActuator.java",
+    "actuator/src/main/java/org/tron/core/actuator/ParticipateAssetIssueActuator.java",
+    "actuator/src/main/java/org/tron/core/actuator/UnfreezeAssetActuator.java",
+    "actuator/src/main/java/org/tron/core/actuator/FreezeBalanceActuator.java",
+    "actuator/src/main/java/org/tron/core/actuator/FreezeBalanceV2Actuator.java",
+    "actuator/src/main/java/org/tron/core/actuator/UnfreezeBalanceActuator.java",
+    "actuator/src/main/java/org/tron/core/actuator/UnfreezeBalanceV2Actuator.java",
+    "actuator/src/main/java/org/tron/core/actuator/CancelAllUnfreezeV2Actuator.java",
+    "actuator/src/main/java/org/tron/core/actuator/WithdrawExpireUnfreezeActuator.java",
+    "actuator/src/main/java/org/tron/core/actuator/DelegateResourceActuator.java",
+    "actuator/src/main/java/org/tron/core/actuator/UnDelegateResourceActuator.java",
+    "actuator/src/main/java/org/tron/core/actuator/WithdrawBalanceActuator.java",
+    "actuator/src/main/java/org/tron/core/actuator/VoteWitnessActuator.java",
+    "actuator/src/main/java/org/tron/core/actuator/UpdateBrokerageActuator.java",
+    "actuator/src/main/java/org/tron/core/actuator/WitnessCreateActuator.java",
+    "actuator/src/main/java/org/tron/core/actuator/WitnessUpdateActuator.java",
+    "actuator/src/main/java/org/tron/core/actuator/ProposalCreateActuator.java",
+    "actuator/src/main/java/org/tron/core/actuator/ProposalApproveActuator.java",
+    "actuator/src/main/java/org/tron/core/actuator/ProposalDeleteActuator.java",
+    "actuator/src/main/java/org/tron/core/actuator/UpdateSettingContractActuator.java",
+    "actuator/src/main/java/org/tron/core/actuator/UpdateEnergyLimitContractActuator.java",
+    "actuator/src/main/java/org/tron/core/actuator/ClearABIContractActuator.java",
+    "actuator/src/main/java/org/tron/core/actuator/ShieldedTransferActuator.java",
+    "actuator/src/main/java/org/tron/core/utils/ProposalUtil.java",
+
+    # =================================================================================
+    # Bancor exchange and the on-chain market: attacker-chosen quantities drive the
+    # pricing and order-matching arithmetic directly
+    # =================================================================================
+    "actuator/src/main/java/org/tron/core/actuator/AbstractExchangeActuator.java",
+    "actuator/src/main/java/org/tron/core/actuator/ExchangeCreateActuator.java",
+    "actuator/src/main/java/org/tron/core/actuator/ExchangeInjectActuator.java",
+    "actuator/src/main/java/org/tron/core/actuator/ExchangeWithdrawActuator.java",
+    "actuator/src/main/java/org/tron/core/actuator/ExchangeTransactionActuator.java",
+    "actuator/src/main/java/org/tron/core/actuator/MarketSellAssetActuator.java",
+    "actuator/src/main/java/org/tron/core/actuator/MarketCancelOrderActuator.java",
+    "chainbase/src/main/java/org/tron/core/capsule/ExchangeProcessor.java",
+    "chainbase/src/main/java/org/tron/core/capsule/SafeExchangeProcessor.java",
+    "chainbase/src/main/java/org/tron/core/capsule/ExchangeCapsule.java",
+    "chainbase/src/main/java/org/tron/core/capsule/utils/MarketUtils.java",
+    "chainbase/src/main/java/org/tron/core/capsule/MarketOrderCapsule.java",
+    "chainbase/src/main/java/org/tron/core/capsule/MarketAccountOrderCapsule.java",
+    "chainbase/src/main/java/org/tron/core/capsule/MarketOrderIdListCapsule.java",
+    "chainbase/src/main/java/org/tron/core/capsule/MarketPriceCapsule.java",
+    "chainbase/src/main/java/org/tron/core/store/MarketOrderStore.java",
+    "chainbase/src/main/java/org/tron/core/store/MarketAccountStore.java",
+    "chainbase/src/main/java/org/tron/core/store/MarketPairPriceToOrderStore.java",
+    "chainbase/src/main/java/org/tron/core/store/MarketPairToPriceStore.java",
+    "platform/src/main/java/common/org/tron/common/utils/MarketComparator.java",
+    "platform/src/main/java/common/org/tron/common/utils/MarketOrderPriceComparatorForLevelDB.java",
+
+    # =================================================================================
+    # TVM: interpreter, metering and stateful native contracts an attacker reaches by
+    # deploying and calling their own contract
+    # =================================================================================
+    "actuator/src/main/java/org/tron/core/actuator/VMActuator.java",
+    "actuator/src/main/java/org/tron/core/vm/VM.java",
+    "actuator/src/main/java/org/tron/core/vm/Op.java",
+    "actuator/src/main/java/org/tron/core/vm/Operation.java",
+    "actuator/src/main/java/org/tron/core/vm/OperationActions.java",
+    "actuator/src/main/java/org/tron/core/vm/OperationRegistry.java",
+    "actuator/src/main/java/org/tron/core/vm/JumpTable.java",
+    "actuator/src/main/java/org/tron/core/vm/EnergyCost.java",
+    "actuator/src/main/java/org/tron/core/vm/PrecompiledContracts.java",
+    "actuator/src/main/java/org/tron/core/vm/program/Program.java",
+    "actuator/src/main/java/org/tron/core/vm/program/Memory.java",
+    "actuator/src/main/java/org/tron/core/vm/program/Stack.java",
+    "actuator/src/main/java/org/tron/core/vm/program/Storage.java",
+    "actuator/src/main/java/org/tron/core/vm/program/ContractState.java",
+    "actuator/src/main/java/org/tron/core/vm/program/ProgramPrecompile.java",
+    "actuator/src/main/java/org/tron/core/vm/program/invoke/ProgramInvokeFactory.java",
+    "actuator/src/main/java/org/tron/core/vm/program/invoke/ProgramInvokeImpl.java",
+    "actuator/src/main/java/org/tron/core/vm/repository/RepositoryImpl.java",
+    "actuator/src/main/java/org/tron/core/vm/repository/Key.java",
+    "actuator/src/main/java/org/tron/core/vm/repository/Value.java",
+    "actuator/src/main/java/org/tron/core/vm/nativecontract/FreezeBalanceV2Processor.java",
+    "actuator/src/main/java/org/tron/core/vm/nativecontract/UnfreezeBalanceV2Processor.java",
+    "actuator/src/main/java/org/tron/core/vm/nativecontract/DelegateResourceProcessor.java",
+    "actuator/src/main/java/org/tron/core/vm/nativecontract/UnDelegateResourceProcessor.java",
+    "actuator/src/main/java/org/tron/core/vm/nativecontract/CancelAllUnfreezeV2Processor.java",
+    "actuator/src/main/java/org/tron/core/vm/nativecontract/WithdrawExpireUnfreezeProcessor.java",
+    "actuator/src/main/java/org/tron/core/vm/nativecontract/WithdrawRewardProcessor.java",
+    "actuator/src/main/java/org/tron/core/vm/nativecontract/VoteWitnessProcessor.java",
+    "actuator/src/main/java/org/tron/core/vm/nativecontract/FreezeBalanceProcessor.java",
+    "actuator/src/main/java/org/tron/core/vm/nativecontract/UnfreezeBalanceProcessor.java",
+    "actuator/src/main/java/org/tron/core/vm/utils/FreezeV2Util.java",
+    "actuator/src/main/java/org/tron/core/vm/utils/VoteRewardUtil.java",
+    "actuator/src/main/java/org/tron/core/vm/utils/MUtil.java",
+    "actuator/src/main/java/org/tron/core/vm/VMUtils.java",
+    "actuator/src/main/java/org/tron/core/vm/config/ConfigLoader.java",
+    "common/src/main/java/org/tron/core/vm/config/VMConfig.java",
+    "common/src/main/java/org/tron/common/runtime/vm/DataWord.java",
+    "common/src/main/java/org/tron/common/runtime/vm/LogInfo.java",
+    "framework/src/main/java/org/tron/common/runtime/RuntimeImpl.java",
+    "chainbase/src/main/java/org/tron/common/runtime/InternalTransaction.java",
+    "chainbase/src/main/java/org/tron/common/runtime/ProgramResult.java",
+
+    # =================================================================================
+    # Resource model: bandwidth and energy metering that decides whether an attacker
+    # pays for what they consume
+    # =================================================================================
+    "chainbase/src/main/java/org/tron/core/db/ResourceProcessor.java",
+    "chainbase/src/main/java/org/tron/core/db/BandwidthProcessor.java",
+    "chainbase/src/main/java/org/tron/core/db/EnergyProcessor.java",
+    "chainbase/src/main/java/org/tron/core/store/DynamicPropertiesStore.java",
+    "chainbase/src/main/java/org/tron/core/store/AccountStore.java",
+    "chainbase/src/main/java/org/tron/core/store/AccountAssetStore.java",
+    "chainbase/src/main/java/org/tron/core/store/AccountIdIndexStore.java",
+    "chainbase/src/main/java/org/tron/core/store/AccountIndexStore.java",
+    "chainbase/src/main/java/org/tron/core/store/DelegatedResourceStore.java",
+    "chainbase/src/main/java/org/tron/core/store/DelegatedResourceAccountIndexStore.java",
+    "chainbase/src/main/java/org/tron/core/capsule/DelegatedResourceCapsule.java",
+    "chainbase/src/main/java/org/tron/core/capsule/DelegatedResourceAccountIndexCapsule.java",
+    "chainbase/src/main/java/org/tron/core/capsule/ContractStateCapsule.java",
+    "chainbase/src/main/java/org/tron/core/capsule/AssetIssueCapsule.java",
+    "chainbase/src/main/java/org/tron/core/capsule/utils/AssetUtil.java",
+    "chainbase/src/main/java/org/tron/core/store/AssetIssueStore.java",
+    "chainbase/src/main/java/org/tron/core/store/AssetIssueV2Store.java",
+    "chainbase/src/main/java/org/tron/core/store/ContractStore.java",
+    "chainbase/src/main/java/org/tron/core/store/ContractStateStore.java",
+    "chainbase/src/main/java/org/tron/core/store/CodeStore.java",
+    "chainbase/src/main/java/org/tron/core/store/AbiStore.java",
+    "chainbase/src/main/java/org/tron/core/store/StorageRowStore.java",
+    "chainbase/src/main/java/org/tron/core/store/ProposalStore.java",
+    "chainbase/src/main/java/org/tron/core/store/ExchangeStore.java",
+    "chainbase/src/main/java/org/tron/core/store/ExchangeV2Store.java",
+    "chainbase/src/main/java/org/tron/common/utils/Commons.java",
+
+    # =================================================================================
+    # Cryptographic primitives behind signature recovery, address derivation and hashing
+    # =================================================================================
+    "crypto/src/main/java/org/tron/common/crypto/ECKey.java",
+    "crypto/src/main/java/org/tron/common/crypto/Rsv.java",
+    "crypto/src/main/java/org/tron/common/crypto/SignUtils.java",
+    "crypto/src/main/java/org/tron/common/crypto/Hash.java",
+    "crypto/src/main/java/org/tron/common/crypto/Blake2bfMessageDigest.java",
+    "crypto/src/main/java/org/tron/common/crypto/sm2/SM2.java",
+    "crypto/src/main/java/org/tron/common/crypto/sm2/SM2Signer.java",
+    "crypto/src/main/java/org/tron/common/crypto/zksnark/BN128.java",
+    "crypto/src/main/java/org/tron/common/crypto/zksnark/BN128G1.java",
+    "crypto/src/main/java/org/tron/common/crypto/zksnark/BN128G2.java",
+    "crypto/src/main/java/org/tron/common/crypto/zksnark/PairingCheck.java",
+    "crypto/src/main/java/org/tron/common/crypto/zksnark/Fp2.java",
+    "crypto/src/main/java/org/tron/common/crypto/zksnark/Fp12.java",
+    "crypto/src/main/java/org/tron/common/crypto/cryptohash/Keccak256.java",
+    "common/src/main/java/org/tron/common/utils/Sha256Hash.java",
+    "common/src/main/java/org/tron/common/utils/DecodeUtil.java",
+    "common/src/main/java/org/tron/common/utils/Base58.java",
+    "common/src/main/java/org/tron/common/utils/Bech32.java",
+    "common/src/main/java/org/tron/common/utils/ByteArray.java",
+    "common/src/main/java/org/tron/common/utils/ByteUtil.java",
+    "common/src/main/java/org/tron/common/utils/BIUtil.java",
+    "common/src/main/java/org/tron/common/utils/CompactEncoder.java",
+    "common/src/main/java/org/tron/common/math/Maths.java",
+    "common/src/main/java/org/tron/common/math/StrictMathWrapper.java",
+    "framework/src/main/java/org/tron/core/trie/TrieImpl.java",
+    "framework/src/main/java/org/tron/core/trie/TrieKey.java",
+    "framework/src/main/java/org/tron/core/capsule/utils/RLP.java",
+
+    # =================================================================================
+    # Shielded transaction path: note commitments, nullifiers and merkle vouchers an
+    # attacker supplies wholesale
+    # =================================================================================
+    "framework/src/main/java/org/tron/core/zen/ZenTransactionBuilder.java",
+    "framework/src/main/java/org/tron/core/zen/ShieldedTRC20ParametersBuilder.java",
+    "framework/src/main/java/org/tron/core/zen/note/Note.java",
+    "framework/src/main/java/org/tron/core/zen/note/NoteEncryption.java",
+    "framework/src/main/java/org/tron/core/zen/address/KeyIo.java",
+    "framework/src/main/java/org/tron/core/zen/address/SpendingKey.java",
+    "chainbase/src/main/java/org/tron/common/zksnark/MerkleContainer.java",
+    "chainbase/src/main/java/org/tron/common/zksnark/IncrementalMerkleTreeContainer.java",
+    "chainbase/src/main/java/org/tron/common/zksnark/IncrementalMerkleVoucherContainer.java",
+    "chainbase/src/main/java/org/tron/common/zksnark/MerklePath.java",
+    "chainbase/src/main/java/org/tron/common/zksnark/JLibrustzcash.java",
+    "chainbase/src/main/java/org/tron/common/zksnark/LibrustzcashParam.java",
+    "chainbase/src/main/java/org/tron/core/store/NullifierStore.java",
+    "chainbase/src/main/java/org/tron/core/store/IncrementalMerkleTreeStore.java",
+
+    # =================================================================================
+    # Public query and broadcast API: HTTP, gRPC and JSON-RPC surfaces any anonymous
+    # client can call on a public FullNode
+    # =================================================================================
+    "framework/src/main/java/org/tron/core/Wallet.java",
+    "framework/src/main/java/org/tron/core/services/RpcApiService.java",
+    "framework/src/main/java/org/tron/core/services/NodeInfoService.java",
+    "framework/src/main/java/org/tron/core/services/WalletOnCursor.java",
+    "framework/src/main/java/org/tron/core/services/interfaceOnSolidity/WalletOnSolidity.java",
+    "framework/src/main/java/org/tron/core/services/interfaceOnPBFT/WalletOnPBFT.java",
+    "framework/src/main/java/org/tron/core/services/http/Util.java",
+    "framework/src/main/java/org/tron/core/services/http/PostParams.java",
+    "framework/src/main/java/org/tron/core/services/http/JsonFormat.java",
+    "framework/src/main/java/org/tron/core/services/http/RateLimiterServlet.java",
+    "framework/src/main/java/org/tron/core/services/http/BroadcastServlet.java",
+    "framework/src/main/java/org/tron/core/services/http/BroadcastHexServlet.java",
+    "framework/src/main/java/org/tron/core/services/http/TriggerSmartContractServlet.java",
+    "framework/src/main/java/org/tron/core/services/http/TriggerConstantContractServlet.java",
+    "framework/src/main/java/org/tron/core/services/http/EstimateEnergyServlet.java",
+    "framework/src/main/java/org/tron/core/services/http/GetTransactionSignWeightServlet.java",
+    "framework/src/main/java/org/tron/core/services/http/GetTransactionApprovedListServlet.java",
+    "framework/src/main/java/org/tron/core/services/http/GetBlockByLimitNextServlet.java",
+    "framework/src/main/java/org/tron/core/services/http/GetPaginatedAssetIssueListServlet.java",
+    "framework/src/main/java/org/tron/core/services/http/GetPaginatedExchangeListServlet.java",
+    "framework/src/main/java/org/tron/core/services/http/GetPaginatedProposalListServlet.java",
+    "framework/src/main/java/org/tron/core/services/http/GetMarketOrderListByPairServlet.java",
+    "framework/src/main/java/org/tron/core/services/http/GetDelegatedResourceAccountIndexServlet.java",
+    "framework/src/main/java/org/tron/core/services/jsonrpc/TronJsonRpcImpl.java",
+    "framework/src/main/java/org/tron/core/services/jsonrpc/JsonRpcApiUtil.java",
+    "framework/src/main/java/org/tron/core/services/jsonrpc/JsonRpcServlet.java",
+    "framework/src/main/java/org/tron/core/services/jsonrpc/types/BuildArguments.java",
+    "framework/src/main/java/org/tron/core/services/jsonrpc/types/CallArguments.java",
+    "framework/src/main/java/org/tron/core/services/jsonrpc/types/BlockResult.java",
+    "framework/src/main/java/org/tron/core/services/jsonrpc/types/TransactionResult.java",
+    "framework/src/main/java/org/tron/core/services/jsonrpc/types/TransactionReceipt.java",
+    "framework/src/main/java/org/tron/core/services/jsonrpc/filters/LogFilter.java",
+    "framework/src/main/java/org/tron/core/services/jsonrpc/filters/LogFilterWrapper.java",
+    "framework/src/main/java/org/tron/core/services/jsonrpc/filters/LogBlockQuery.java",
+    "framework/src/main/java/org/tron/core/services/jsonrpc/filters/LogMatch.java",
+    "framework/src/main/java/org/tron/core/services/filter/HttpApiAccessFilter.java",
+    "framework/src/main/java/org/tron/core/services/filter/LiteFnQueryHttpFilter.java",
+    "framework/src/main/java/org/tron/core/services/filter/LiteFnQueryGrpcInterceptor.java",
+    "framework/src/main/java/org/tron/core/services/filter/CachedBodyRequestWrapper.java",
+    "framework/src/main/java/org/tron/core/services/ratelimiter/RateLimiterInterceptor.java",
+    "framework/src/main/java/org/tron/core/services/ratelimiter/RateLimiterContainer.java",
+    "framework/src/main/java/org/tron/core/services/ratelimiter/GlobalRateLimiter.java",
+    "framework/src/main/java/org/tron/core/services/ratelimiter/RpcApiAccessInterceptor.java",
+    "framework/src/main/java/org/tron/core/services/ratelimiter/adapter/IPQPSRateLimiterAdapter.java",
+    "framework/src/main/java/org/tron/core/services/ratelimiter/adapter/GlobalPreemptibleAdapter.java",
+    "framework/src/main/java/org/tron/core/services/ratelimiter/adapter/QpsRateLimiterAdapter.java",
+
+    # =================================================================================
+    # Event and log derivation driven by attacker-authored contract output
+    # =================================================================================
+    "framework/src/main/java/org/tron/common/logsfilter/ContractEventParser.java",
+    "framework/src/main/java/org/tron/common/logsfilter/ContractEventParserAbi.java",
+    "framework/src/main/java/org/tron/common/logsfilter/ContractEventParserJson.java",
+    "framework/src/main/java/org/tron/common/logsfilter/capsule/ContractTriggerCapsule.java",
+    "framework/src/main/java/org/tron/common/logsfilter/capsule/TransactionLogTriggerCapsule.java",
+    "framework/src/main/java/org/tron/common/runtime/LogEventWrapper.java",
+    "framework/src/main/java/org/tron/core/services/event/BlockEventGet.java",
+    "framework/src/main/java/org/tron/core/services/event/BlockEventCache.java",
+    "chainbase/src/main/java/org/tron/common/bloom/Bloom.java",
+    "chainbase/src/main/java/org/tron/core/store/SectionBloomStore.java",
+
+    # =================================================================================
+    # Storage engine and iteration primitives every unbounded query bottoms out in
+    # =================================================================================
+    "chainbase/src/main/java/org/tron/common/storage/leveldb/LevelDbDataSourceImpl.java",
+    "chainbase/src/main/java/org/tron/common/storage/rocksdb/RocksDbDataSourceImpl.java",
+    "chainbase/src/main/java/org/tron/core/db/common/iterator/StoreIterator.java",
+    "chainbase/src/main/java/org/tron/core/db/common/iterator/RockStoreIterator.java",
+    "chainbase/src/main/java/org/tron/core/db/common/iterator/DBIterator.java",
+    "chainbase/src/main/java/org/tron/core/db2/common/LevelDB.java",
+    "chainbase/src/main/java/org/tron/core/db2/common/RocksDB.java",
+    "chainbase/src/main/java/org/tron/core/db2/common/WrappedByteArray.java",
+    "common/src/main/java/org/tron/common/cache/TronCache.java",
+    "common/src/main/java/org/tron/common/utils/SlidingWindowCounter.java",
+    "common/src/main/java/org/tron/common/utils/StringUtil.java",
+    "common/src/main/java/org/tron/common/utils/JsonUtil.java",
+    "common/src/main/java/org/tron/json/JSONObject.java",
+    "common/src/main/java/org/tron/json/JSONArray.java",
 ]
 
 
 target_scopes = [
-    "Critical. THE OPCODE RESULT GETH COMPUTES MUST EQUAL THE SPEC'S. `EVMInterpreter.Run` dispatches through `JumpTable` entries whose `execute`, `constantGas`, `dynamicGas`, `memorySize` and stack bounds are assembled by `newOsakaInstructionSet` and mutated in place by `enable1153`, `enable5656`, `enable6780`, `enable7702`, `enable7939`, `enable7843`, `enable8024`; `opExtCodeCopy`, `opExtCodeHash` and `opExtCodeSize` read through `EVM.resolveCode` / `resolveCodeHash` for EIP-7702 delegations; `opSelfdestruct` and `enable6780` only send balance unless `CreateContract` marked the account new in this tx; `opBlobHash`, `opMcopy`, `opTload`, `opTstore` and `opBlockhash` guard indices; `gasSStoreEIP2200`, `makeGasSStoreFunc`, `gasCallEIP2929`, `gasExtCodeCopyEIP2929` and `makeCallVariantGasCallEIP7702` compute warm/cold and delegation surcharges; `Memory.Resize` and `calcMemSize64` bound expansion. Probe every place a contract any user can deploy reads or writes a value other clients would not: an EXTCODE* on a delegated account returning the target's code instead of the 23-byte designator; a SELFDESTRUCT in a CREATE2-redeployed address in the same tx; an SSTORE refund path where original, current and new values collide; a MCOPY with overlapping src/dst and length 0; a CLZ or shift on a 256-bit edge value; a gas constant that differs from `params` for one fork. Identity: (stack, memory, storage, gasUsed, halt reason) after each opcode == the EIP-defined result, so every client computes the same stateRoot.",
-
-    "Critical. THE PRECOMPILE OUTPUT AND GAS MUST EQUAL THE SPEC FOR EVERY INPUT LENGTH. `RunPrecompiledContract` charges `RequiredGas` then calls `Run`, consulting `PrecompileCache.load` / `store` with the key from `precompileCacheKey` built from each contract's `NormalizeInput` (`normalizeZeroPadded` strips trailing zero bytes) and `Cacheable`; `bigModExp.RequiredGas` implements EIP-7883 limits and `Run` falls back for base or modulus of length 0; `ecrecover.Run` validates `v`, `r`, `s` bounds; `bls12381G1MultiExp`, `bls12381G2MultiExp`, `bls12381Pairing`, `decodePointG1`, `decodePointG2` enforce subgroup and encoding; `kzgPointEvaluation.Run` checks `versionedHash`, field canonicality and `VerifyProof`; `p256Verify.Run` wraps `secp256r1.Verify`; `blake2F.Run` reads the final flag byte; `bn256PairingIstanbul` uses `newCurvePoint` / `newTwistPoint`. Show a call any contract can make where Geth returns a result, success flag or gas that differs from the EIP: two distinct inputs whose normalized cache key collides and return a stale output; a padded input accepted where the spec requires exact length; an out-of-range field element or non-canonical point accepted; a modexp with oversized exponent charged less than specified; a p256 signature with r or s at the group order. Identity: (output, success, gasUsed) of the precompile == the spec's function applied to the raw input, independent of cache state.",
-
-    "Critical. A SET-CODE AUTHORIZATION MUST ONLY CHANGE THE CODE OF THE ACCOUNT THAT SIGNED IT, ONCE, IN THE RIGHT ORDER. `stateTransition.applyAuthorizations` iterates `SetCodeAuthorization` entries through `validateAuthorization` (`Authority` via `SigHash` and `crypto.Ecrecover`, chain id 0 or current, nonce equals account nonce, code empty or a delegation) and `applyAuthorization` (`AddressToDelegation`, `SetCode`, `SetNonce`, refund via `params.CallNewAccountGas - params.TxAuthTupleGas`, the `authorities` map for duplicate authorities); `ParseDelegation` recognises the `0xef0100` prefix; `EVM.resolveCode` follows one hop; `preCheck` rejects a sender with non-delegation code (EIP-3607) and `TransactionToMessage` requires a non-nil `To` and non-empty `AuthList`; `LegacyPool.validateAuth`, `checkDelegationLimit` and `lookup.addAuthorities` gate the pool. Show a type-4 transaction any user can sign that leaves an account's code, nonce or balance different from the spec: a duplicate authority whose second tuple is applied with the wrong nonce; an authority whose `s` is above half the curve order or `v` above 1 still recovered; a delegation to a precompile or to another delegated account resolved two hops; a refund granted for an authority that already had code; a sender that delegates to itself and then executes; an authorization applied before `buyGas` fails so state is mutated by an invalid tx. Identity: after the tx, `GetCode(authority)` and `GetNonce(authority)` for every tuple == the EIP-7702 result, and no other account's code changed.",
-
-    "Critical. GAS AND ETH MUST BE CONSERVED EXACTLY THROUGH BUYGAS, EXECUTION AND SETTLEMENT. `TransactionToMessage` computes `GasPrice` from `GasFeeCap`, `GasTipCap` and `baseFee`; `IntrinsicGas` and `FloorDataGas` (EIP-7623 tokens, EIP-3860 init-code words, access list and auth tuples) feed `buyGas` which charges `gas * gasPrice + blobGas * blobFee` and `initRuntimeGasBudget`; `preCheck` enforces nonce, EIP-3607, fee caps, `MaxFeePerBlobGas` and blob hash versions; `execute` routes to `executeCreate` or `executeCall`, `chargeCallRecipientEIP2780`; `settleGas` applies `calcRefund` (quotient 5 post-3529), the floor, and pays `effectiveTip` to `Coinbase`; `GasPool.SubGas` bounds the block; `MakeReceipt` records `CumulativeGasUsed`, `Status` and logs; `ApplyTransactionWithEVM` sets `blobGasUsed`. Show a transaction any account can send where the sender's balance, the coinbase's balance and the burned base fee do not sum to the pre-state: a refund exceeding gasUsed/5; a floor gas applied after refund instead of before; a create with `To == nil` and value where the contract address already holds balance; an overflow in `gas * gasPrice` or in the blob fee multiplication; a failed tx that still credits the coinbase or mutates a nonce twice; a `CumulativeGasUsed` in the receipt that differs from `GasPool` accounting so `receiptsRoot` diverges. Identity: sum of all balances after == sum before plus coinbase tip minus burned base and blob fees, and `header.GasUsed` == the sum of receipts' gas the spec defines.",
-
-    "Critical. THE BLOCK GETH ACCEPTS MUST BE EXACTLY THE BLOCK THE SPEC ACCEPTS. `ConsensusAPI.newPayload` converts through `engine.ExecutableDataToBlock` (`DecodeTransactions`, `attachAccessList`, `validateRequests` ordering and requestsHash, blob hashes versus `versionedHashes`, `parentBeaconBlockRoot`) then `InsertBlockWithoutSetHead`; `Beacon.verifyHeader` checks difficulty, nonce, uncles, timestamp, `gasLimit` via `VerifyGaslimit`, `extra`, `withdrawalsHash`, `VerifyEIP1559Header` with `CalcBaseFee`, `VerifyEIP4844Header` with `CalcExcessBlobGas` (Osaka / BPO1 / BPO2 schedules via `latestBlobConfig`) and `parentBeaconRoot`; `BlockValidator.ValidateBody` checks `txHash`, `uncleHash`, `withdrawalsHash`, `blobGasUsed`, blob count against `MaxBlobsPerBlock` and `MaxBlobGasPerBlock`; `ValidateState` compares `Bloom`, `ReceiptHash`, `Root` and `requestsHash`; `StateProcessor.Process` runs `ProcessBeaconBlockRoot`, `ProcessParentBlockHash`, then `ProcessWithdrawalQueue`, `ProcessConsolidationQueue`, `ParseDepositLogs` through `processRequestsSystemCall` with `systemCallGasBudget`; `Beacon.Finalize` applies `Withdrawal` amounts in Gwei. Show a block any builder or proposer can construct that Geth accepts and another client rejects, or the reverse: a blob count valid under BPO1 but checked against the Cancun config at a fork boundary timestamp; an `excessBlobGas` computed with the pre-Osaka formula after Osaka; a requests list with an empty type or unsorted types that still hashes right; a deposit log with a malformed length that `ParseDepositLogs` skips instead of failing; a withdrawal amount overflow in Gwei-to-Wei; a system call that reverts and is silently ignored. Identity: `InsertChain` accepts block B if and only if the execution spec accepts B, and the resulting `stateRoot` is equal.",
-
-    "Critical. THE STATE ROOT MUST REFLECT EXACTLY THE JOURNALED CHANGES. `StateDB.Snapshot` / `RevertToSnapshot` walk `journal.revertToSnapshot` over entries such as `createObjectChange`, `createContractChange`, `selfDestructChange`, `balanceChange`, `nonceChange`, `storageChange`, `codeChange`, `transientStorageChange`, `accessListAddAccountChange`, `accessListAddSlotChange`; `Finalise` deletes empty (EIP-161) and self-destructed objects, resets `transientStorage` per tx and, on Amsterdam, emits the `bal.ConstructionBlockAccessList`; `IntermediateRoot` and `Commit` push dirty objects through `triePrefetcher` and `stateUpdate`; `CreateContract` marks `newContract` used by `SelfDestruct6780`; `Prepare` builds the EIP-2929 warm set from sender, coinbase, `dst`, precompiles and the access list; `StateDB.Copy` duplicates journal state for `ProcessParallel`; `hookedStateDB` wraps every mutation. Show a transaction sequence any user can submit where the root Geth commits differs from the spec: a revert that restores a self-destructed object but not its `newContract` flag; a storage slot written, reverted and written again whose `originStorage` no longer matches disk; an empty account touched then credited zero that is deleted in one path and kept in another; a transient slot surviving into the next transaction; a journal entry whose `revert` is a no-op for the field that changed; a parallel prefetch that commits a stale `stateObject`. Identity: `IntermediateRoot` after tx i == the root of applying the spec's state changes for txs 0..i to the parent root, in both the sequential and parallel processors.",
-
-    "Critical. THE TRANSACTION GETH DECODES AND ATTRIBUTES MUST BE THE ONE THAT WAS SIGNED. `Transaction.UnmarshalBinary` / `decodeTyped` dispatch on the first byte to `BlobTx.decode` (`blobTxWithBlobsV0` / `blobTxWithBlobsV1` sidecar forms, `BlobTxSidecar.ToV1`, `ValidateBlobCommitmentHashes`, `CellProofsAt`), `SetCodeTx.decode`, `DynamicFeeTx`, `AccessListTx` and `LegacyTx`; `rlp.Decode` enforces canonical integers and list lengths; `Sender` caches by `Signer` and calls `modernSigner.Sender` or `EIP155Signer.Sender` into `recoverPlain` (`crypto.ValidateSignatureValues`, homestead `s` bound, `Ecrecover`) with `deriveChainId`; `MakeSigner` picks the signer by fork; `Transaction.Hash` and `sigHash` encode the fields the signer covers; `kzg4844.CalcBlobHashV1` and `IsValidVersionedHash` bind sidecars to `BlobHashes`; `txpool.ValidateCells` / `validateCellsOsaka` and `blobpool.conversionQueue.convert` migrate V0 proofs to cell proofs; `GetBlobsV4` serves cells by `CustodyBitmap`. Show a byte string any user can broadcast that Geth attributes, hashes or includes differently from the spec: two encodings recovering different senders for one hash; a legacy tx with `v` encoding a chain id whose parity is misread; a blob tx whose commitments match `BlobHashes` but whose cell proofs verify against another blob; a sidecar V1 with proof count not equal to `CellsPerBlob * blobs` that `ToV1` accepts; a setcode tx with an empty auth list decoded as valid; a non-canonical RLP integer that the decoder accepts but the spec rejects. Identity: (sender, hash, fields, blobs) Geth derives from bytes B == the (sender, hash, fields, blobs) every other client derives from B.",
-
-    "High. EVERY TRANSACTION THE POOL PROMOTES MUST BE EXECUTABLE, AND EVERY BLOCK GETH BUILDS MUST BE VALID. `txpool.ValidateTransaction` checks type, size, gas limit against `head.GasLimit`, fee caps, `IntrinsicGas`, `FloorDataGas`, blob count and `validateBlobSidecar`; `ValidateTransactionWithState` checks nonce, cost against `ExistingBalance` and `FirstNonceGap`; `LegacyPool.add`, `enqueueTx`, `promoteTx`, `promoteExecutables`, `demoteUnexecutables`, `truncatePending` and `reset` maintain per-account `list` ordering with `noncer`; `BlobPool.addLocked`, `recheck`, `reorg`, `reinject`, `limbo` and `evictGapped` handle inclusion and reorgs; `checkDelegationLimit` and `HasPendingAuth` gate accounts with delegations; `Miner.fillTransactions`, `commitTransactions`, `commitBlobTransaction`, `txFitsSize` and `applyTransaction` assemble the payload that `Payload.Resolve` hands to the proposer through `GetPayloadV5`. Show a transaction any user can send that makes every Geth proposer build a block other clients reject, or that sits in pending while being unexecutable so ordinary users' transactions are excluded: a blob tx promoted whose sidecar was converted to a proof version the block cannot carry; a nonce list where a replacement lowers the cost below balance for later txs still marked pending; a delegated account's second tx admitted past `checkDelegationLimit` via the blob pool; a builder including a tx whose `FloorDataGas` exceeds the block's remaining gas after `GasPool` accounting; a reorg that reinjects a tx already included on the new head. Identity: the set of txs in `Pending` == the set executable on the head state, and every block `buildPayload` returns passes `ValidateBody` and `ValidateState` on every client.",
-
-    "High. THE CANONICAL CHAIN AND STATE GETH PERSISTS MUST EQUAL WHAT IT EXECUTED. `BlockChain.writeBlockWithState` writes block, receipts and `statedb.Commit` through `triedb.Update` into `pathdb.layerTree.add` / `diffLayer` / `diskLayer.commit`, with `buffer.flush`, `journal` and `history` for reverts; `reorg` collects deleted and added chains, rewrites `rawdb.WriteCanonicalHash`, `WriteTxLookupEntries`, deletes stale lookups and emits removed logs; `SetCanonical`, `insertSideChain` and `recoverAncestors` handle blocks whose parent state is missing; `setHeadBeyondRoot`, `rewindPathHead` and `rewindHashHead` roll back on restart; `rawdb.chainFreezer.freeze` moves finalized blocks into `freezerTable` with `freezerBatch` indexes; `snapshot.Tree.Update`, `diffLayer.flatten`, `journal` and `generate` mirror state for fast reads; `pathdb.Recover` replays `history`. Show a valid block or reorg sequence any builder can cause on mainnet after which a Geth node answers a different head, state or receipt than it executed, or cannot follow the chain without manual intervention: a reorg deeper than the diff-layer window that rewinds to a root the snapshot no longer has; a side-chain insert that writes canonical hashes for blocks never executed; a freezer batch written with an index ahead of its data; a tx lookup left pointing at a reorged block; a pathdb journal loaded after a crash whose top layer root differs from the written head. Identity: (canonical hash, state root, receipts) stored for height h == (hash, root, receipts) produced by the last `ProcessBlock` that set h canonical.",
-
-    "Critical. THE MISSING INVARIANT - what nobody built. No check ties the `PrecompileCache` output back to the raw input once `NormalizeInput` accepted it; nothing asserts `ValidateState`'s root comparison ran on the same `StateDB` that `ProcessParallel` committed; the fork-schedule predicates (`IsOsaka`, `IsBPO1`, `IsBPO2`, `IsAmsterdam`) are read separately by the blob config, precompile set, jump table and signer with no single rule set proving they agree at a boundary timestamp; system-contract calls in `processRequestsSystemCall` treat a revert or empty code as a soft error; the `blobpool` conversion path trusts proof counts it did not verify; `ExecutableDataToBlock` reconstructs a header from fields the CL supplied and only later checks the hash. Identify the FIRST place one of these unstated equalities is violated by an unprivileged party through a transaction, deployed contract, blob sidecar or permissionless block, prove it with a Go test (`core.GenerateChain`, `state_processor` fixtures or an execution-spec state test) that asserts both sides (spec result versus Geth result, ETH before versus after, accepted set versus spec set, persisted versus executed) and show that no later step in `insertChain` can detect or reverse it.",
+    "Critical. An unprivileged attacker gets a transaction accepted against an account whose key they do not hold, performing an unauthorized account operation: validateSignature, checkWeight, getWeight, getPermission and getApprovedList in chainbase/src/main/java/org/tron/core/capsule/TransactionCapsule.java, validate in actuator/src/main/java/org/tron/core/actuator/AccountPermissionUpdateActuator.java, signatureToKeyBytes, recoverFromSignature, verify and validateComponents in crypto/src/main/java/org/tron/common/crypto/ECKey.java, fromSignature in Rsv.java, SignUtils.java dispatch, or validateMultiSign and ecRecover in actuator/src/main/java/org/tron/core/vm/PrecompiledContracts.java accept a malleable, over-length, duplicated or reordered signature so the weight threshold is met without the owner's key.",
+    "Critical. A single broadcast transaction makes honest FullNodes disagree on the resulting state or block hash, forcing an unintended chain split that needs a hard fork: processTransaction, applyBlock, pushBlock, consumeBandwidth and validateTapos in framework/src/main/java/org/tron/core/db/Manager.java, pass and passNew in chainbase/src/main/java/org/tron/common/utils/ForkController.java, the getEnergyLimit/hasEnergy paths in chainbase/src/main/java/org/tron/core/db/TransactionTrace.java, VMConfig feature flags read in actuator/src/main/java/org/tron/core/vm/config/ConfigLoader.java, or the pow/round/multiplyAndDivide helpers in common/src/main/java/org/tron/common/math/Maths.java and StrictMathWrapper.java produce a version-, JDK- or ordering-dependent result that only some nodes reproduce.",
+    "Critical. A transaction or a contract call an attacker broadcasts throws an unhandled error inside block application, so every node that processes the containing block crashes, wedges or stops confirming new transactions: processTransaction and applyBlock in framework/src/main/java/org/tron/core/db/Manager.java, push and getBlock in chainbase/src/main/java/org/tron/core/db/KhaosDatabase.java, merge, flush and revoke in chainbase/src/main/java/org/tron/core/db2/core/SnapshotManager.java and SnapshotImpl.java, execute in actuator/src/main/java/org/tron/core/actuator/VMActuator.java, or the exception mapping in TransactionTrace.java and framework/src/main/java/org/tron/common/runtime/RuntimeImpl.java turn attacker-chosen contract data into a node-fatal throw rather than a rejected transaction.",
+    "Critical. An attacker mints, duplicates or destroys balance that was never backed, breaking TRX or TRC10 supply conservation: execute and validate in TransferActuator.java, TransferAssetActuator.java, ParticipateAssetIssueActuator.java, AssetIssueActuator.java and UnfreezeAssetActuator.java under actuator/src/main/java/org/tron/core/actuator/, addBalance, setBalance, addAssetAmountV2 and reduceAssetAmountV2 in chainbase/src/main/java/org/tron/core/capsule/AccountCapsule.java, adjustBalance and adjustAssetBalanceV2 in chainbase/src/main/java/org/tron/common/utils/Commons.java, or the exchange/withdraw arithmetic in chainbase/src/main/java/org/tron/core/capsule/ExchangeProcessor.java let a chosen amount, precision or asset id overflow, truncate or credit twice.",
+    "Critical. The stake, delegation and reward accounting pays an attacker value they never staked or permanently freezes a victim's principal: execute and validate in FreezeBalanceV2Actuator.java, UnfreezeBalanceV2Actuator.java, CancelAllUnfreezeV2Actuator.java, WithdrawExpireUnfreezeActuator.java, DelegateResourceActuator.java, UnDelegateResourceActuator.java and WithdrawBalanceActuator.java under actuator/src/main/java/org/tron/core/actuator/, the mirrored processors in actuator/src/main/java/org/tron/core/vm/nativecontract/, getCanDelegatedMaxSize and getCanWithdrawUnfreezeAmount in actuator/src/main/java/org/tron/core/vm/utils/FreezeV2Util.java, and withdrawReward, queryReward, computeReward and adjustAllowance in chainbase/src/main/java/org/tron/core/service/MortgageService.java miscount unfreezing entries, delegation locks, vote weight or cycle boundaries.",
+    "Critical. A contract an attacker deploys and calls executes work the TVM never charges for, or charges differently across nodes, letting them consume block capacity for free or break gas determinism: the opcode handlers in actuator/src/main/java/org/tron/core/vm/OperationActions.java and OperationRegistry.java, spendEnergy, memoryExpand, getMemSize and the CALL/CREATE frames in actuator/src/main/java/org/tron/core/vm/program/Program.java and Memory.java, the cost functions in actuator/src/main/java/org/tron/core/vm/EnergyCost.java, getEnergyLimit and checkEnergyLimit in chainbase/src/main/java/org/tron/core/db/TransactionTrace.java, useEnergy in chainbase/src/main/java/org/tron/core/db/EnergyProcessor.java, or the storage and refund accounting in actuator/src/main/java/org/tron/core/vm/program/Storage.java and vm/repository/RepositoryImpl.java undercharge or double-refund a reachable execution path.",
+    "Critical. An attacker escapes bandwidth and fee accounting or evades the duplicate-transaction and expiration checks, so they can flood mainnet with free transactions or replay one: consumeBandwidth, useTransactionFee, useAssetAccountNet and consumeForCreateNewAccount in chainbase/src/main/java/org/tron/core/db/BandwidthProcessor.java, consumeBandwidth in ResourceProcessor.java, validateTapos, validateDup, validateCommon and pushTransaction in framework/src/main/java/org/tron/core/db/Manager.java, has and put in chainbase/src/main/java/org/tron/core/db2/common/TxCacheDB.java, chainbase/src/main/java/org/tron/core/db/RecentTransactionStore.java and RecentBlockStore.java, or getTransactionId and getSerializedSize in chainbase/src/main/java/org/tron/core/capsule/TransactionCapsule.java let two distinct payloads share an id or one payload bypass the size and expiration limits.",
+    "Critical. A single anonymous HTTP, gRPC or JSON-RPC request to a public FullNode exhausts memory or blocks the service thread pool until the node stops answering and stops confirming transactions: countVote, getAssetIssueList, getPaginatedAssetIssueList, getPaginatedProposalList, getPaginatedExchangeList, getMarketOrderListByPair, getMarketPairList, getDelegatedResourceAccountIndex, getBlockByLimitNext, triggerConstantContract and estimateEnergy in framework/src/main/java/org/tron/core/Wallet.java, getLogs, ethCall, ethEstimateGas and buildTransaction in framework/src/main/java/org/tron/core/services/jsonrpc/TronJsonRpcImpl.java with filters/LogFilterWrapper.java and LogBlockQuery.java, parse in framework/src/main/java/org/tron/core/services/http/JsonFormat.java and Util.java, or the limiters in framework/src/main/java/org/tron/core/services/ratelimiter/ perform an unbounded store scan or unchecked allocation driven by one request parameter.",
+    "High. An attacker permanently corrupts or wedges shared on-chain state that other users depend on, censoring their transactions or stranding their assets: the order and price indexes in chainbase/src/main/java/org/tron/core/capsule/utils/MarketUtils.java, MarketOrderCapsule.java, MarketAccountOrderCapsule.java and the MarketPairPriceToOrderStore/MarketPairToPriceStore under chainbase/src/main/java/org/tron/core/store/, matching order in MarketSellAssetActuator.java and MarketCancelOrderActuator.java with platform/src/main/java/common/org/tron/common/utils/MarketComparator.java, the nullifier and voucher bookkeeping in chainbase/src/main/java/org/tron/common/zksnark/MerkleContainer.java and IncrementalMerkleTreeContainer.java with NullifierStore.java, or the pending queue handling in framework/src/main/java/org/tron/core/db/PendingManager.java leave an entry no owner can ever cancel, withdraw or re-broadcast.",
+    "Critical/High blind spot. An ordinary funded account or anonymous API client abuses an assumption java-tron never wrote down: two distinct payloads that serialize to the same transaction id or the same store key under ByteArray, WrappedByteArray or a capsule's key builder, a protobuf field that validate() reads but execute() re-reads after mutation, an address accepted by DecodeUtil.addressValid but rejected or normalized elsewhere, a limit enforced on the HTTP servlet but not on the gRPC or JSON-RPC path to the same Wallet method, a proposal-gated feature flag whose old and new branches disagree on stored state, a value that survives the actuator but overflows only once ContractStateCapsule, DelegationStore or SectionBloomStore reads it back, a revoking-session error path that commits half its writes, or a cache in TxCacheDB, TronCache or KhaosDatabase that answers differently from the store it fronts - yielding an unauthorized account operation, unbacked balance, permanently frozen funds, a node crash on block application, an unintended chain split, or an RPC-API the node can no longer serve.",
 ]
 
 
@@ -373,115 +417,59 @@ scope_scan = [
 
 def question_generator(target_file: str) -> str:
     """
-    Generate consensus / state-transition / block-validity audit questions for one go-ethereum target.
+    Generate exploit-focused audit and fuzzing questions for one java-tron target.
 
     ```
     target_file format:
-    "'File Name: core/vm/instructions.go -> Scope: Critical. ...'"
+    "'File Name: actuator/src/main/java/org/tron/core/actuator/TransferActuator.java -> Scope: Critical. ...'"
     """
 
     prompt = f"""
     ```
 
-    Generate execution-client consensus security audit questions for this exact
-    go-ethereum target:
+    Generate exploit-focused security audit questions for this exact java-tron target:
 
     {target_file}
 
     Project focus:
-    Geth is the majority Ethereum execution client. Every node decodes a block,
-    verifies its header and body, runs each transaction through the EVM and StateDB,
-    applies system contracts and withdrawals, and produces (stateRoot, receiptsRoot,
-    gasUsed, logsBloom) that must equal what the execution spec and every other client
-    produce. Untrusted input enters as a signed transaction of any type, the bytecode
-    of a contract anyone can deploy, a blob sidecar, or a block any permissionless
-    builder or proposer submits. The system decides (a) whether the block is valid;
-    (b) what state root, receipts and gas result; (c) how much ETH moved and where;
-    (d) what is persisted as canonical. Anything Geth accepts, computes, charges or
-    stores that the spec does not is the bug.
+    java-tron is the TRON mainnet FullNode. Focus only on what an ordinary user reaches: signing and broadcasting any Transaction contract type (Transfer, TransferAsset, AssetIssue, ParticipateAssetIssue, FreezeBalanceV2, UnfreezeBalanceV2, CancelAllUnfreezeV2, WithdrawExpireUnfreeze, DelegateResource, UnDelegateResource, WithdrawBalance, VoteWitness, AccountPermissionUpdate, UpdateAccount, SetAccountId, ExchangeCreate/Inject/Withdraw/Transaction, MarketSellAsset, MarketCancelOrder, CreateSmartContract, TriggerSmartContract, ShieldedTransfer) through a public FullNode, deploying and calling their own TVM contract, and calling the public HTTP, gRPC and JSON-RPC endpoints anonymously. Downstream of that: actuator validate/execute, TVM execution and energy metering, bandwidth and energy consumption, stake/delegation/reward accounting, store writes and indexes, block application on every honest node, and the query paths those endpoints reach.
 
     Rules:
-    * Treat `File Name:` as the exact file.
+    * Treat `File Name:` as the exact file/class.
     * Treat `Scope:` as the ONLY impact to target.
     * Assume full repo context is accessible.
     * Do not ask for code or say anything is missing.
-    * Use exact Go symbols (exported function, method, constant, opcode, error var,
-      struct field) as they appear in the file.
-    * EVERY question must close on an equality that must hold across a call. State it
-      explicitly. Narrative questions with no stated equality are rejected.
-    * Attacker is unprivileged only: an ordinary mainnet account with its own ETH and
-      keys, a contract deployer, a blob-transaction sender, or a permissionless block
-      builder or proposer whose block every node executes. They may send any
-      transaction and order their own transactions and contract calls.
-    * Attacker is NOT a malicious peer, node, RPC client or Engine API caller, not the
-      node operator, not a majority of validators, and holds no leaked key. No
-      malicious peer or devp2p message; no compromised dependency or machine; no
-      social engineering.
-    * PROGRAM EXCLUSIONS - a question landing in any of these wastes the whole batch:
-      - Tests, fuzzers, generated code (gen_*.go, *_generated.go, *.pb.go), cmd/,
-        docs and build files are OUT OF SCOPE.
-      - Denial of service, resource exhaustion, unbounded memory or disk growth, slow
-        paths, rate limiting and timeouts are OUT OF SCOPE. A deterministic panic or
-        halt from one valid transaction or block is IN scope.
-      - Anything reachable only through a publicly exposed JSON-RPC, GraphQL, Beacon
-        or Engine API, or through p2p/devp2p/discovery messages, is OUT OF SCOPE.
-      - Pre-merge engines (ethash, clique) and code not activated on mainnet (verkle,
-        binary trie, overlay transition) are OUT OF SCOPE; Amsterdam-gated code is High
-        at most unless it also changes pre-Amsterdam execution.
-      - Also excluded: publicly known or already fixed issues, leaked keys, 51% or
-        economic attacks, centralization risk, best-practice notes, feature requests,
-        spec ambiguities with no client divergence, and theoretical findings.
-    * IN-SCOPE IMPACTS - every question must land on one and name it:
-      Critical: a consensus split where Geth accepts or rejects a mainnet block other
-      clients treat oppositely, or commits a different stateRoot; ETH created, stolen
-      or burned from an account the attacker does not control; a single transaction
-      or block that crashes or halts every Geth node.
-      High: every Geth proposer building an invalid block from one transaction; state
-      or chain persistence that no longer matches what was executed after a valid
-      block or reorg; a gas or receipt divergence that only surfaces on a rare path.
-    * Every question must be a concrete real-world scenario an unprivileged party can
-      trigger with a transaction, deployed contract, blob or block on mainnet rules.
-    * A returned error is a finding only when it rejects a spec-valid block or accepts
-      a spec-invalid one - say which.
+    * Use exact symbols (Java class, method, field, enum constant, or capsule/store name) when possible.
+    * Attacker is unprivileged only: anyone who funds a TRON address and broadcasts signed transactions, deploys and calls their own smart contract, creates their own asset, exchange or market order, or sends anonymous HTTP/gRPC/JSON-RPC requests to a public FullNode. They control only their own keys.
+    * Attacker is NOT a super representative, witness, block producer, committee member, node operator or database operator, and holds no other user's key. Never assume a malicious peer, malicious node, malicious SR, p2p/gossip/sync attacker, network-level DoS or flooding, leaked key, non-default config, or social engineering.
+    * Out of scope, never ask about: p2p networking and peer handling, block production and witness scheduling by an SR, the toolkit/CLI plugins, node startup and config parsing, metrics and logging, deployment and infra, dependency versions.
+    * Ignore test files, mocks, benchmarks, docs, generated protobuf classes, and config-only findings.
+    * Every question must describe a real signed transaction, contract deployment, contract call, or single API request the attacker actually submits through a valid entrypoint. No generic unbounded-allocation, memory-growth or resource-exhaustion speculation; no "what if the input is huge" without a concrete submitted payload and a concrete broken invariant.
     * Generate 40 to 80 high-signal questions.
-    * At least 70% must land on a Critical impact rather than a High one.
-    * Every question must be testable locally with a Go test (`core.GenerateChain`, a
-      `StateProcessor` fixture, `vm/runtime`, or an execution-spec state test) on a
-      private chain. Never propose testing on mainnet or a public testnet.
+    * At least 70% must target an unauthorized account operation, direct theft or permanent freezing of funds, unbacked balance or supply inflation, a node crash or halt on block application, an unintended chain split between honest nodes, or a public API a FullNode can no longer serve.
+    * Every question must be testable by a `./gradlew :actuator:test`, `:chainbase:test`, `:consensus:test`, `:crypto:test`, `:common:test` or `:framework:test` JUnit test, or a single-node block-application flow test.
     * Avoid generic checklist questions and repeated root causes.
-    * Prefer questions that name TWO values that must be equal and ask whether they are:
-      Geth result and spec result, ETH before and after, gas charged and gas specified,
-      block accepted and block spec-valid, state persisted and state executed.
 
-    Known dead ends - do NOT generate questions about these:
-    * Anything needing a malicious peer, node operator, RPC caller, CL client or
-      validator majority.
-    * DoS, memory, disk, logging, or a user harming only their own balance.
-    * Code paths not active on mainnet through the current fork schedule.
-    * Findings only reproducible through tests or tooling.
-
-    Core equalities (each question must close on one):
-    * SPEC PARITY: (stateRoot, receiptsRoot, gasUsed, logs) Geth computes == the spec's.
-    * VALIDITY TRUTH: the set of blocks and txs Geth accepts == the set the spec accepts.
-    * ETH CONSERVATION: balances after == balances before + issuance - burn, exactly.
-    * GAS TRUTH: gas charged and refunded == gas the EIPs define for that input.
-    * CODE TRUTH: code, nonce and storage changed == accounts the tx authorised.
-    * PERSISTENCE TRUTH: (head, root, receipts) stored == (head, root, receipts) executed.
+    Core invariants:
+    * Authorization: state changes to an account happen only when signatures meeting that account's active permission threshold, counted once per distinct key, are present.
+    * Value conservation: TRX and TRC10 debited on one side are credited exactly once on the other; fees, rewards, stake and delegated resources are never created, duplicated or stranded.
+    * Metering integrity: every byte and every opcode an attacker causes to execute is charged to a resource they actually own, identically on every node.
+    * Determinism: given the same block, every honest node at the same fork version reaches the same state root, receipt and block hash.
+    * Availability: no single submitted transaction or API request can crash a node, stop block application, or make a public endpoint permanently unable to answer other users.
 
     Each question must include:
-    1. target exported function, method, opcode or constant;
-    2. attacker input (the concrete transaction fields, bytecode, blob, authorization
-       or block fields that matter);
-    3. preconditions (fork, account state, prior txs in the block, cache state);
-    4. call sequence through block import, state transition, EVM and StateDB;
-    5. the equality that breaks, written explicitly;
-    6. scoped impact and which nodes or accounts are affected;
+    1. target class/method;
+    2. attacker action (a concrete transaction, contract deployment, contract call or API request: contract type, fields, calldata, parameters);
+    3. preconditions (accounts, TRX balance, staked resources, deployed contract, issued asset or created order the attacker relies on);
+    4. execution sequence;
+    5. invariant tested;
+    6. scoped impact;
     7. proof idea.
 
     Output only valid Python. No markdown. No explanations.
 
     questions = [
-    "[File: {target_file}] [Method: function_name] Can an unprivileged ATTACKER_INPUT under PRECONDITIONS trigger CALL_SEQUENCE, breaking the equality EQUALITY, causing scoped impact: SCOPE_IMPACT against PARTY? Proof idea: Go test PARAMETERS asserting SPEC_PARITY, VALIDITY_TRUTH, ETH_CONSERVATION, GAS_TRUTH, CODE_TRUTH, or PERSISTENCE_TRUTH.",
+    "[File: {target_file}] [Function: symbol_or_method] Can an unprivileged ATTACKER_ACTION under PRECONDITIONS trigger EXECUTION_SEQUENCE, violating INVARIANT, causing scoped impact: SCOPE_IMPACT? Proof idea: gradle JUnit test / single-node block-application test PARAMETERS and assert AUTHORIZATION, VALUE_CONSERVATION, METERING_INTEGRITY, DETERMINISM, or AVAILABILITY.",
     ]
     """
     return prompt
@@ -489,7 +477,7 @@ def question_generator(target_file: str) -> str:
 
 def audit_format(security_question: str) -> str:
     """
-    Generate a consensus / state-transition exploit-validation prompt for go-ethereum.
+    Generate a focused java-tron exploit-validation prompt.
     """
 
     prompt = f"""# SECURITY AUDIT PROMPT
@@ -499,19 +487,18 @@ def audit_format(security_question: str) -> str:
 
 ## Rules
 - Use existing repo context only. Analyze only this question and scoped impact.
-- Attacker is unprivileged only: an ordinary mainnet account with its own ETH and keys, a contract deployer, a blob-transaction sender, or a permissionless block builder or proposer whose block every node executes. They may send any transaction and order their own calls.
-- Reject anything requiring a malicious peer, node, RPC or Engine API caller, the node operator, a validator majority, a leaked key, a compromised dependency or machine, or social engineering.
-- OUT OF SCOPE, reject on sight: tests, fuzzers, generated code (gen_*.go, *_generated.go, *.pb.go), cmd/, docs, build files; denial of service, resource exhaustion, unbounded memory or disk growth, slow paths, rate limiting, timeouts; anything reachable only through exposed JSON-RPC, GraphQL, Beacon or Engine API or p2p messages; pre-merge engines and code not activated on mainnet (verkle, binary trie, overlay); publicly known or fixed issues; 51% or economic attacks; centralization risk; best-practice notes; theoretical findings. A deterministic panic or halt from one valid transaction or block is IN scope.
-- The impact must be one of: Critical - a consensus split where Geth accepts or rejects a mainnet block other clients treat oppositely or commits a different stateRoot, ETH created, stolen or burned from an account the attacker does not control, a single transaction or block that crashes or halts every Geth node; High - every Geth proposer building an invalid block from one transaction, persistence that no longer matches execution after a valid block or reorg, a gas or receipt divergence on a rare path.
-- Focus on real impact: something Geth accepts, computes, charges or stores that the spec does not.
+- Attacker is unprivileged only: anyone who funds a TRON address and broadcasts signed transactions, deploys and calls their own smart contract, issues their own asset or order, or sends anonymous HTTP/gRPC/JSON-RPC requests to a public FullNode. No SR, witness, committee member, node operator, database access, or foreign-key access.
+- Reject malicious-SR, malicious-witness, malicious-committee, malicious-peer, malicious-node, p2p/gossip/sync, network-level DoS or request flooding, leaked-key, and misconfiguration-only paths.
+- Reject 51%-style, sybil and centralization claims, economic-design critique, self-harm (attacker only damages their own account), and monitoring, CLI/toolkit, logging, deployment, dependency-only, and test/mock/generated/config-only findings.
+- Reject generic unbounded-allocation or storage-growth claims with no concrete submitted payload and no broken invariant.
+- Focus on real chain impact: an unauthorized operation on an account whose key the attacker lacks, direct theft or permanent freezing of user funds, unbacked balance or supply inflation, a node crash or halt while applying a block, an unintended chain split between honest nodes, private-key or secret disclosure, remote code execution, or a public RPC/HTTP API the node can no longer serve.
 
 ## Validate
-- Write the equality the question claims is broken between two named values BEFORE tracing any code.
-- Trace the exact reachable path from the attacker's transaction, bytecode, blob or block and record every read and write of `gas` / `GasBudget` / refund, balance, nonce, code, storage and transient slots, `Root` / `ReceiptHash` / `Bloom` / `GasUsed`, `excessBlobGas` / `baseFee`, and the canonical hash or layer written.
-- Evaluate both sides of the equality before and after against the EIP text. If they still match, output no vulnerability.
-- Check whether `verifyHeader`, `ValidateBody`, `ValidateState`, `preCheck`, `IntrinsicGas` / `FloorDataGas`, `validateAuthorization`, `ValidateSignatureValues`, `RequiredGas`, `Prepare`, `Finalise`, the journal revert, or the execution-spec tests in tests/ already prevent the divergence.
-- State what the attacker gains per transaction or block and whether it is repeatable.
-- Require exact file/function support and a reproducible Go test on a private chain.
+- Trace the exact reachable path from the attacker's signed transaction, contract call or API request into the affected method.
+- Check whether signature and permission verification, actuator validate(), tapos/expiration/duplicate checks, bandwidth and energy metering, fork-version gating via ForkController and VMConfig, store key construction, rate limiters, or existing exception handling already stop it.
+- Confirm the path is reachable on current mainnet configuration and the active proposal/fork parameters, not only behind a disabled flag.
+- Accept only concrete unauthorized account operation, fund loss or freezing, unbacked balance, node crash or halt, chain split, key disclosure, RCE, or lasting API unavailability.
+- Require exact file/method support and a reproducible gradle JUnit or single-node block-application PoC.
 
 ## Output
 If valid, output exactly:
@@ -523,19 +510,19 @@ If valid, output exactly:
 [2-3 sentences]
 
 ### Finding Description
-[The broken equality, the code path, root cause, the attacker's exact input, exploit flow, and why existing guards fail]
+[Code path, root cause, attacker payload, exploit flow, and why checks fail]
 
 ### Impact Explanation
-[What is accepted, computed, charged or stored wrongly, which nodes or accounts, repeatability, matching severity category]
+[Concrete scoped impact and severity: Critical (unauthorized account operation, direct theft or permanent freezing of funds, unbacked balance or supply inflation, node takeover or RCE, private-key disclosure, network unable to confirm new transactions, unintended chain split requiring a hard fork) or High (RPC-API or protocol-implementation DoS from a single request or transaction, transaction-origination censorship, corruption of shared on-chain indexes)]
 
 ### Likelihood Explanation
-[Preconditions, fork and state required, attacker cost, feasibility, repeatability]
+[Preconditions, accounts and balance needed, feasibility, repeatability]
 
 ### Recommendation
 [Specific fix]
 
 ### Proof of Concept
-[Go test plan with the exact assertions on both sides of the equality]
+[gradle JUnit test / single-node block-application test plan with expected assertions]
 
 If invalid, output exactly:
 #NoVulnerability found for this question.
@@ -545,85 +532,9 @@ No extra text.
     return prompt
 
 
-def validation_format(report: str) -> str:
-    """
-    Generate a strict bounty-style validation prompt for go-ethereum claims.
-    """
-    prompt = f"""# VALIDATION PROMPT
-
-## Security Claim
-{report}
-
-## Rules
-- Validate only the submitted claim.
-- Check SECURITY.md and Researcher.Md for scope, exclusions, and valid impact classes.
-- Do not create a new vulnerability if the submitted claim is weak or invalid.
-- Do not upgrade severity unless the provided evidence proves the higher impact.
-- A claim is only valid if the report states the broken equality between two named values and shows both sides concretely. Reject prose-only claims.
-- Reject anything requiring a malicious peer, node, RPC or Engine API caller, the node operator, a validator majority, a leaked key, a compromised dependency or machine, or social engineering.
-- OUT OF SCOPE, reject on sight: tests, fuzzers, generated code (gen_*.go, *_generated.go, *.pb.go), cmd/, docs, build files; denial of service, resource exhaustion, unbounded memory or disk growth, slow paths, rate limiting, timeouts; anything reachable only through exposed JSON-RPC, GraphQL, Beacon or Engine API or p2p messages; pre-merge engines and code not activated on mainnet (verkle, binary trie, overlay); publicly known or fixed issues; 51% or economic attacks; centralization risk; best-practice notes; feature requests; theoretical findings. A deterministic panic or halt from one valid transaction or block is IN scope.
-- The impact must be one of: Critical - a consensus split where Geth accepts or rejects a mainnet block other clients treat oppositely or commits a different stateRoot, ETH created, stolen or burned from an account the attacker does not control, a single transaction or block that crashes or halts every Geth node; High - every Geth proposer building an invalid block from one transaction, persistence that no longer matches execution after a valid block or reorg, a gas or receipt divergence on a rare path.
-- Reject claims where the only loss is the attacker's own balance or gas.
-- Reject if the bug was already fixed, publicly disclosed, or covered by a known-issues list.
-- A valid report must be triggerable by an unprivileged party against the current code with a transaction, deployed contract, blob or block under mainnet fork rules.
-- A PoC is mandatory. Prefer #NoVulnerability over speculative reports.
-
-## Required Validation Checks
-All must pass:
-1. Exact in-scope file, function/method/opcode/constant, and line references.
-2. The equality written explicitly, with both sides shown before and after, citing the EIP or spec text.
-3. Clear root cause: which opcode or precompile semantic, gas or refund rule, signature or decoding rule, header or body check, journal or persistence step causes it.
-4. Reachable exploit path: preconditions -> attacker transaction or block -> block import, state transition, EVM and StateDB sequence -> observed divergence.
-5. `verifyHeader`, `ValidateBody`, `ValidateState`, `preCheck`, `IntrinsicGas` / `FloorDataGas`, `validateAuthorization`, `ValidateSignatureValues`, `RequiredGas`, `Prepare`, `Finalise`, the journal revert and the execution-spec tests reviewed and shown insufficient.
-6. Impact stated concretely: which nodes split, which accounts lose or gain, and whether it is repeatable.
-7. Reproducible proof: Go test on a private chain with the asserted values.
-
-## Silent Triage Questions
-Before output, internally answer:
-- What exactly is the equality, and does it actually fail against the spec?
-- Can an ordinary account, contract or permissionless builder trigger it with no privileged role and no peer-level access?
-- Is the flaw in this repo's code, not in the spec, the CL client or a dependency?
-- What is accepted, computed, charged or stored wrongly, who is affected, and can it be repeated?
-- Would the Ethereum Foundation bug bounty panel accept the exploit path for Geth?
-- What exact test would prove it?
-
-## Output
-If valid, output exactly:
-
-Audit Report
-
-## Title
-[Clear vulnerability statement] - ([File: file_path])
-
-## Summary
-[2-3 sentence summary of the broken equality and impact]
-
-## Finding Description
-[Exact code path, the equality, root cause, exploit flow, and why existing guards fail]
-
-## Impact Explanation
-[What is accepted, computed, charged or stored wrongly, affected nodes or accounts, repeatability, severity category]
-
-## Likelihood Explanation
-[Attacker capability, preconditions, fork and state required, cost, feasibility]
-
-## Recommendation
-[Specific fix guidance]
-
-## Proof of Concept
-[Minimal reproducible steps or Go test plan with concrete assertions]
-
-If invalid, output exactly:
-#NoVulnerability found for this question.
-
-Output only one of the two outcomes above. No extra text.
-"""
-    return prompt
-
-
 def scan_format(report: str) -> str:
     """
-    Generate a short cross-project analog scan prompt for go-ethereum.
+    Generate a short cross-project analog scan prompt for java-tron.
     """
     prompt = f"""# ANALOG SCAN PROMPT
 
@@ -631,18 +542,16 @@ def scan_format(report: str) -> str:
 {report}
 
 ## Rules
-- Use in-scope repo context only (`core/**`, `consensus/**`, `params/**`, `crypto/**`, `rlp/**`, `trie/**`, `triedb/**`, `beacon/engine/**`, `eth/catalyst/**`, `miner/**`, excluding tests, fuzzers, generated files, metrics and pre-activation code). Do not ask for code or claim missing files.
+- Use in-scope production repo context only. Do not ask for code or claim missing files.
 - Use the external report only as a bug-class hint, not as proof.
-- Keep only unprivileged analogs that break an equality: a block or transaction Geth accepts that the spec rejects or the reverse, a stateRoot or receipt that differs from the spec, ETH created or moved without authorisation, gas charged that differs from the EIPs, code or nonce changed on an account that did not authorise it, or a persisted head or state that differs from what was executed.
-- OUT OF SCOPE, reject on sight: tests, fuzzers, generated code, cmd/, docs, build files; denial of service, resource exhaustion, unbounded memory or disk growth, slow paths, rate limiting, timeouts; anything reachable only through exposed JSON-RPC, GraphQL, Beacon or Engine API; malicious peer, node or devp2p assumptions; pre-merge engines and code not activated on mainnet; publicly known or fixed issues; 51% or economic attacks; centralization risk; best-practice notes; theoretical findings. A deterministic panic or halt from one valid transaction or block is IN scope.
-- The impact must be one of: Critical - a consensus split where Geth accepts or rejects a mainnet block other clients treat oppositely or commits a different stateRoot, ETH created, stolen or burned from an account the attacker does not control, a single transaction or block that crashes or halts every Geth node; High - every Geth proposer building an invalid block from one transaction, persistence that no longer matches execution after a valid block or reorg, a gas or receipt divergence on a rare path.
-- Reject analogs where the only loss is the attacker's own balance or gas.
+- Keep only analogs an unprivileged transaction broadcaster, contract deployer, asset issuer, order placer or anonymous API client can reach: signature and permission verification, actuator validate/execute for any broadcastable contract type, TVM opcodes, precompiles and energy metering, bandwidth accounting, stake/delegation/reward math, exchange and market order handling, capsule and store key construction, block application in Manager, or the HTTP/gRPC/JSON-RPC query paths into Wallet and TronJsonRpcImpl.
+- Reject malicious-SR, malicious-witness, malicious-committee, malicious-peer, malicious-node, p2p/sync, network-DoS, leaked-key, monitoring, CLI/toolkit, deployment, mocked-only paths, dependency-only bugs, and no-impact analogs.
+- Medium, High and Critical only; no low, or resource-only analogs.
 
 ## Validate
-- Map the bug class to the strongest reachable path in this repo and state the equality it would break.
-- Evaluate both sides before and after the attacker's transaction or block against the EIP text.
-- Prove root cause with exact file/function support.
-- Accept only concrete consensus divergence, unauthorised ETH or code change, wrong gas, network-wide crash, invalid block production, or persistence mismatch.
+- Map the bug class to the strongest reachable java-tron path from a single signed transaction, contract call or API request.
+- Prove root cause with exact file/method support.
+- Accept only concrete unauthorized account operation, theft or permanent freezing of funds, unbacked balance, node crash or halt, chain split, key disclosure, RCE, or an API the node can no longer serve.
 
 ## Output (Strict)
 If valid analog exists, output:
@@ -661,5 +570,81 @@ If not, output exactly:
 #NoVulnerability found for this question.
 
 No extra text.
+"""
+    return prompt
+
+
+def validation_format(report: str) -> str:
+    """
+    Generate a strict bounty-style validation prompt for java-tron security claims.
+    """
+    prompt = f"""# VALIDATION PROMPT
+
+## Security Claim
+{report}
+
+## Rules
+- Validate only the submitted claim.
+- Check SECURITY.md and Researcher.Md for scope, exclusions, and valid impact classes.
+- Do not create a new vulnerability if the submitted claim is weak or invalid.
+- Do not upgrade severity unless the provided evidence proves the higher impact.
+- Focus on High and Critical; reject informational, best-practice, and resource-only reports.
+- Reject malicious-SR, malicious-witness, malicious-committee, malicious-peer, malicious-node, p2p/gossip/sync, network-level DoS or request flooding, monitoring endpoints, CLI and toolkit plugins, logging, deployment and infra, dependency-only, docs/style, generated-protobuf, and test/mock/config-only issues.
+- Reject if the exploit needs super-representative, witness, committee, node-operator, database or privileged access, another user's key, victim social engineering, a non-default config, a disabled proposal flag, or anything outside what an unprivileged user can put in a signed transaction, a contract call, or an anonymous API request.
+- Reject 51%-style majority attacks, sybil and centralization claims, economic-design critique, and self-harm where the attacker only damages their own account.
+- Reject if the bug was fixed, acknowledged, or publicly disclosed already, per the eligibility rules.
+- A valid report must be triggerable by an unprivileged transaction broadcaster, contract deployer or anonymous API client, unless the claim proves escalation from that starting point.
+- The final impact must map to an in-scope category: Critical - remote code execution or node takeover, private-key or secret disclosure, unauthorized operation on an account whose key the attacker lacks, direct theft or permanent freezing of user funds, unbacked balance or supply inflation, the network unable to confirm new transactions, or an unintended chain split requiring a hard fork; High - DoS of the RPC/HTTP/JSON-RPC API or of the TRON protocol implementation from a single request or transaction, transaction-origination censorship, or corruption of shared on-chain state other users depend on.
+- Prefer #NoVulnerability over speculative reports.
+
+## Required Validation Checks
+All must pass:
+1. Exact in-scope file, class, method, and line/code references.
+2. Clear root cause and broken authorization, value-conservation, metering-integrity, determinism, or availability invariant.
+3. Reachable exploit path: preconditions (attacker accounts, TRX balance, staked resources, deployed contract, issued asset) -> signed transaction, contract call or API request -> trigger -> bad result.
+4. Existing signature and permission verification, actuator validate(), tapos/expiration/duplicate checks, bandwidth and energy metering, fork-version and VMConfig gating, store key construction, rate limiters, and exception handling reviewed and shown insufficient.
+5. Concrete in-scope High/Critical impact with realistic likelihood.
+6. Reproducible proof path: gradle JUnit PoC against the real classes, or exact steps in a single-node block-application flow.
+7. No obvious rejection reason from SECURITY.md, known issues, privilege assumptions, or scope exclusions.
+
+## Silent Triage Questions
+Before output, internally answer:
+- Can an ordinary user trigger this by broadcasting a transaction, deploying or calling a contract, or sending one anonymous API request, without SR, committee, node-operator, or foreign-key access?
+- Does the code actually behave as claimed on current mainnet configuration and active fork parameters?
+- Is the impact caused by this code, not by a privileged actor, a peer, or a dependency?
+- Is the fund loss, unauthorized operation, crash, split or API outage concrete rather than hypothetical, and does it harm someone other than the attacker?
+- Would a TRON triager accept the proof-of-concept?
+- What exact test would prove it?
+
+## Output
+If valid, output exactly:
+
+Audit Report
+
+## Title
+[Clear vulnerability statement] - ([File: file_path])
+
+## Summary
+[2-3 sentence summary of the bug and impact]
+
+## Finding Description
+[Exact code path, root cause, exploit flow, and why existing checks fail]
+
+## Impact Explanation
+[Concrete in-scope impact, severity rationale, and TRON bounty category]
+
+## Likelihood Explanation
+[Attacker capability, accounts and balance required, feasibility, repeatability]
+
+## Recommendation
+[Specific fix guidance]
+
+## Proof of Concept
+[Minimal reproducible steps or gradle JUnit / single-node block-application test plan]
+
+If invalid, output exactly:
+#NoVulnerability found for this question.
+
+Output only one of the two outcomes above. No extra text.
 """
     return prompt
