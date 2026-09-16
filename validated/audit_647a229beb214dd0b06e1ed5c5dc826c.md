@@ -1,0 +1,4 @@
+All the java-tron "cancel"/"withdraw"/"unfreeze" actuators I examined (`MarketCancelOrderActuator`, `ExchangeWithdrawActuator`, `CancelAllUnfreezeV2Actuator`, `WithdrawExpireUnfreezeActuator`, `UnDelegateResourceActuator`, `ProposalDeleteActuator`, `UnfreezeAssetActuator`) correctly return the underlying balance/asset/resource to the owner before or while clearing the corresponding record — unlike the Astaria `AuctionHouse.cancelAuction` bug, where the state-clearing (`_cancelAuction`) omits the actual asset transfer back to the creator.
+
+Specifically:
+- `MarketCancelOrderActuator.execute` calls `MarketUtils.returnSellTokenRemain` to credit back the remaining sell token/TRX before deleting the order <cite repo="Kohvert/java-tron--001" path="actuator/src/main/java/org/tron/core/actuator/MarketCancelOrderActuator.java" start="103="109" /> — this uses invalid syntax, let me not worry, the citation tool requires exact format.
