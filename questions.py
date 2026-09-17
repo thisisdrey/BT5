@@ -4,11 +4,11 @@ import os
 from decouple import config
 
 # todo: if scope_files is: 500 > 50, 300 > 30 , 100 > 10
-MAX_REPO = 30
-# todo: the path from https://github.com/tronprotocol/java-tron
-SOURCE_REPO = "tronprotocol/java-tron"
+MAX_REPO = 23
+# todo: the path from https://github.com/WebKit/WebKit
+SOURCE_REPO = "WebKit/WebKit"
 # todo: the name of the repository
-REPO_NAME = "java-tron"
+REPO_NAME = "WebKit"
 run_number = os.environ.get('GITHUB_RUN_NUMBER') or os.environ.get('CI_PIPELINE_IID', '0')
 
 
@@ -45,369 +45,162 @@ else:
     else:
         BASE_URL = f"https://deepwiki.com/{SOURCE_REPO}"
 
+
 scope_files = [
     # =================================================================================
-    # Transaction admission: signature, permission, tapos and duplicate checks every
-    # broadcast transaction passes before it is executed
+    # JavaScriptCore JIT: type confusion / OOB from mis-speculated types in DFG/FTL/B3
     # =================================================================================
-    "chainbase/src/main/java/org/tron/core/capsule/TransactionCapsule.java",
-    "chainbase/src/main/java/org/tron/core/capsule/BlockCapsule.java",
-    "chainbase/src/main/java/org/tron/core/capsule/AccountCapsule.java",
-    "chainbase/src/main/java/org/tron/core/capsule/ReceiptCapsule.java",
-    "chainbase/src/main/java/org/tron/core/capsule/TransactionInfoCapsule.java",
-    "chainbase/src/main/java/org/tron/core/capsule/TransactionResultCapsule.java",
-    "chainbase/src/main/java/org/tron/core/capsule/TransactionRetCapsule.java",
-    "chainbase/src/main/java/org/tron/core/capsule/utils/TransactionUtil.java",
-    "chainbase/src/main/java/org/tron/core/db/TransactionTrace.java",
-    "chainbase/src/main/java/org/tron/core/db/TransactionStore.java",
-    "chainbase/src/main/java/org/tron/core/db/TransactionCache.java",
-    "chainbase/src/main/java/org/tron/core/db/RecentTransactionStore.java",
-    "chainbase/src/main/java/org/tron/core/db/RecentBlockStore.java",
-    "chainbase/src/main/java/org/tron/core/db2/common/TxCacheDB.java",
-    "actuator/src/main/java/org/tron/core/utils/TransactionUtil.java",
-    "actuator/src/main/java/org/tron/core/utils/TransactionRegister.java",
+    "Source/JavaScriptCore/dfg/DFGByteCodeParser.cpp",
+    "Source/JavaScriptCore/dfg/DFGAbstractInterpreterInlines.h",
+    "Source/JavaScriptCore/dfg/DFGArgumentsEliminationPhase.cpp",
+    "Source/JavaScriptCore/dfg/DFGFixupPhase.cpp",
+    "Source/JavaScriptCore/dfg/DFGConstantFoldingPhase.cpp",
+    "Source/JavaScriptCore/dfg/DFGIntegerRangeOptimizationPhase.cpp",
+    "Source/JavaScriptCore/dfg/DFGSpeculativeJIT.cpp",
+    "Source/JavaScriptCore/ftl/FTLLowerDFGToB3.cpp",
+    "Source/JavaScriptCore/b3/B3ReduceStrength.cpp",
+    "Source/JavaScriptCore/bytecode/CodeBlock.cpp",
+    "Source/JavaScriptCore/runtime/CommonSlowPaths.cpp",
 
     # =================================================================================
-    # Block pipeline: the code every honest node runs on a block carrying the
-    # attacker's transaction - divergence or a throw here halts or splits the chain
+    # JSC runtime objects/arrays/typed arrays: butterfly OOB, structure type confusion
     # =================================================================================
-    "framework/src/main/java/org/tron/core/db/Manager.java",
-    "framework/src/main/java/org/tron/core/db/PendingManager.java",
-    "framework/src/main/java/org/tron/core/db/HistoryBlockHashUtil.java",
-    "framework/src/main/java/org/tron/core/db/accountstate/callback/AccountStateCallBack.java",
-    "framework/src/main/java/org/tron/core/db/accountstate/TrieService.java",
-    "chainbase/src/main/java/org/tron/core/ChainBaseManager.java",
-    "chainbase/src/main/java/org/tron/core/db/KhaosDatabase.java",
-    "chainbase/src/main/java/org/tron/core/db/BlockStore.java",
-    "chainbase/src/main/java/org/tron/core/db/BlockIndexStore.java",
-    "chainbase/src/main/java/org/tron/core/db/TronStoreWithRevoking.java",
-    "chainbase/src/main/java/org/tron/core/db/TronDatabase.java",
-    "chainbase/src/main/java/org/tron/core/db2/core/SnapshotManager.java",
-    "chainbase/src/main/java/org/tron/core/db2/core/SnapshotImpl.java",
-    "chainbase/src/main/java/org/tron/core/db2/core/SnapshotRoot.java",
-    "chainbase/src/main/java/org/tron/core/db2/core/AbstractSnapshot.java",
-    "chainbase/src/main/java/org/tron/core/db2/core/Chainbase.java",
-    "chainbase/src/main/java/org/tron/common/utils/ForkController.java",
-    "chainbase/src/main/java/org/tron/common/utils/ForkUtils.java",
-    "chainbase/src/main/java/org/tron/core/capsule/utils/BlockUtil.java",
-    "chainbase/src/main/java/org/tron/core/capsule/utils/MerkleTree.java",
-    "common/src/main/java/org/tron/common/utils/MerkleRoot.java",
+    "Source/JavaScriptCore/runtime/JSArray.cpp",
+    "Source/JavaScriptCore/runtime/ArrayPrototype.cpp",
+    "Source/JavaScriptCore/runtime/JSArrayBufferView.cpp",
+    "Source/JavaScriptCore/runtime/JSTypedArrayViewPrototype.cpp",
+    "Source/JavaScriptCore/runtime/JSGenericTypedArrayViewInlines.h",
+    "Source/JavaScriptCore/runtime/Structure.cpp",
+    "Source/JavaScriptCore/runtime/JSObject.cpp",
+    "Source/JavaScriptCore/runtime/JSGlobalObject.cpp",
 
     # =================================================================================
-    # Consensus and reward accounting reachable from an ordinary vote, delegation
-    # or withdrawal transaction
+    # JSC regexp & WebAssembly: OOB / corruption from crafted patterns and modules
     # =================================================================================
-    "consensus/src/main/java/org/tron/consensus/dpos/DposService.java",
-    "consensus/src/main/java/org/tron/consensus/dpos/DposSlot.java",
-    "consensus/src/main/java/org/tron/consensus/dpos/MaintenanceManager.java",
-    "consensus/src/main/java/org/tron/consensus/dpos/IncentiveManager.java",
-    "consensus/src/main/java/org/tron/consensus/dpos/StatisticManager.java",
-    "consensus/src/main/java/org/tron/consensus/dpos/StateManager.java",
-    "consensus/src/main/java/org/tron/consensus/ConsensusDelegate.java",
-    "consensus/src/main/java/org/tron/consensus/pbft/PbftManager.java",
-    "consensus/src/main/java/org/tron/consensus/pbft/PbftMessageHandle.java",
-    "consensus/src/main/java/org/tron/consensus/pbft/message/PbftBaseMessage.java",
-    "consensus/src/main/java/org/tron/consensus/pbft/message/PbftMessage.java",
-    "chainbase/src/main/java/org/tron/core/capsule/PbftSignCapsule.java",
-    "chainbase/src/main/java/org/tron/core/service/MortgageService.java",
-    "chainbase/src/main/java/org/tron/core/service/RewardViCalService.java",
-    "chainbase/src/main/java/org/tron/core/store/DelegationStore.java",
-    "chainbase/src/main/java/org/tron/core/store/WitnessStore.java",
-    "chainbase/src/main/java/org/tron/core/store/WitnessScheduleStore.java",
-    "chainbase/src/main/java/org/tron/core/store/VotesStore.java",
-    "chainbase/src/main/java/org/tron/core/capsule/VotesCapsule.java",
-    "chainbase/src/main/java/org/tron/core/capsule/WitnessCapsule.java",
-    "framework/src/main/java/org/tron/core/consensus/ProposalController.java",
-    "framework/src/main/java/org/tron/core/consensus/ProposalService.java",
+    "Source/JavaScriptCore/runtime/RegExp.cpp",
+    "Source/JavaScriptCore/yarr/YarrInterpreter.cpp",
+    "Source/JavaScriptCore/yarr/YarrJIT.cpp",
+    "Source/JavaScriptCore/wasm/WasmFunctionParser.h",
+    "Source/JavaScriptCore/wasm/WasmSectionParser.cpp",
+    "Source/JavaScriptCore/wasm/WasmBBQJIT.cpp",
 
     # =================================================================================
-    # Actuators: one per broadcastable contract type - the value-moving surface any
-    # funded address reaches directly
+    # WebCore HTML/XML/CSS parsing: renderer memory corruption from attacker markup
     # =================================================================================
-    "actuator/src/main/java/org/tron/core/actuator/AbstractActuator.java",
-    "actuator/src/main/java/org/tron/core/actuator/ActuatorCreator.java",
-    "actuator/src/main/java/org/tron/core/actuator/ActuatorFactory.java",
-    "actuator/src/main/java/org/tron/core/actuator/TransferActuator.java",
-    "actuator/src/main/java/org/tron/core/actuator/TransferAssetActuator.java",
-    "actuator/src/main/java/org/tron/core/actuator/CreateAccountActuator.java",
-    "actuator/src/main/java/org/tron/core/actuator/UpdateAccountActuator.java",
-    "actuator/src/main/java/org/tron/core/actuator/SetAccountIdActuator.java",
-    "actuator/src/main/java/org/tron/core/actuator/AccountPermissionUpdateActuator.java",
-    "actuator/src/main/java/org/tron/core/actuator/AssetIssueActuator.java",
-    "actuator/src/main/java/org/tron/core/actuator/UpdateAssetActuator.java",
-    "actuator/src/main/java/org/tron/core/actuator/ParticipateAssetIssueActuator.java",
-    "actuator/src/main/java/org/tron/core/actuator/UnfreezeAssetActuator.java",
-    "actuator/src/main/java/org/tron/core/actuator/FreezeBalanceActuator.java",
-    "actuator/src/main/java/org/tron/core/actuator/FreezeBalanceV2Actuator.java",
-    "actuator/src/main/java/org/tron/core/actuator/UnfreezeBalanceActuator.java",
-    "actuator/src/main/java/org/tron/core/actuator/UnfreezeBalanceV2Actuator.java",
-    "actuator/src/main/java/org/tron/core/actuator/CancelAllUnfreezeV2Actuator.java",
-    "actuator/src/main/java/org/tron/core/actuator/WithdrawExpireUnfreezeActuator.java",
-    "actuator/src/main/java/org/tron/core/actuator/DelegateResourceActuator.java",
-    "actuator/src/main/java/org/tron/core/actuator/UnDelegateResourceActuator.java",
-    "actuator/src/main/java/org/tron/core/actuator/WithdrawBalanceActuator.java",
-    "actuator/src/main/java/org/tron/core/actuator/VoteWitnessActuator.java",
-    "actuator/src/main/java/org/tron/core/actuator/UpdateBrokerageActuator.java",
-    "actuator/src/main/java/org/tron/core/actuator/WitnessCreateActuator.java",
-    "actuator/src/main/java/org/tron/core/actuator/WitnessUpdateActuator.java",
-    "actuator/src/main/java/org/tron/core/actuator/ProposalCreateActuator.java",
-    "actuator/src/main/java/org/tron/core/actuator/ProposalApproveActuator.java",
-    "actuator/src/main/java/org/tron/core/actuator/ProposalDeleteActuator.java",
-    "actuator/src/main/java/org/tron/core/actuator/UpdateSettingContractActuator.java",
-    "actuator/src/main/java/org/tron/core/actuator/UpdateEnergyLimitContractActuator.java",
-    "actuator/src/main/java/org/tron/core/actuator/ClearABIContractActuator.java",
-    "actuator/src/main/java/org/tron/core/actuator/ShieldedTransferActuator.java",
-    "actuator/src/main/java/org/tron/core/utils/ProposalUtil.java",
+    "Source/WebCore/html/parser/HTMLDocumentParser.cpp",
+    "Source/WebCore/html/parser/HTMLTreeBuilder.cpp",
+    "Source/WebCore/html/parser/HTMLTokenizer.cpp",
+    "Source/WebCore/html/parser/HTMLConstructionSite.cpp",
+    "Source/WebCore/xml/parser/XMLDocumentParser.cpp",
+    "Source/WebCore/xml/XSLTProcessorLibxslt.cpp",
+    "Source/WebCore/css/parser/CSSParser.cpp",
+    "Source/WebCore/css/parser/CSSTokenizer.cpp",
+    "Source/WebCore/css/parser/CSSSelectorParser.cpp",
+    "Source/WebCore/css/parser/CSSPropertyParser.cpp",
 
     # =================================================================================
-    # Bancor exchange and the on-chain market: attacker-chosen quantities drive the
-    # pricing and order-matching arithmetic directly
+    # WebCore DOM lifecycle & editing: use-after-free from tree mutation / callbacks
     # =================================================================================
-    "actuator/src/main/java/org/tron/core/actuator/AbstractExchangeActuator.java",
-    "actuator/src/main/java/org/tron/core/actuator/ExchangeCreateActuator.java",
-    "actuator/src/main/java/org/tron/core/actuator/ExchangeInjectActuator.java",
-    "actuator/src/main/java/org/tron/core/actuator/ExchangeWithdrawActuator.java",
-    "actuator/src/main/java/org/tron/core/actuator/ExchangeTransactionActuator.java",
-    "actuator/src/main/java/org/tron/core/actuator/MarketSellAssetActuator.java",
-    "actuator/src/main/java/org/tron/core/actuator/MarketCancelOrderActuator.java",
-    "chainbase/src/main/java/org/tron/core/capsule/ExchangeProcessor.java",
-    "chainbase/src/main/java/org/tron/core/capsule/SafeExchangeProcessor.java",
-    "chainbase/src/main/java/org/tron/core/capsule/ExchangeCapsule.java",
-    "chainbase/src/main/java/org/tron/core/capsule/utils/MarketUtils.java",
-    "chainbase/src/main/java/org/tron/core/capsule/MarketOrderCapsule.java",
-    "chainbase/src/main/java/org/tron/core/capsule/MarketAccountOrderCapsule.java",
-    "chainbase/src/main/java/org/tron/core/capsule/MarketOrderIdListCapsule.java",
-    "chainbase/src/main/java/org/tron/core/capsule/MarketPriceCapsule.java",
-    "chainbase/src/main/java/org/tron/core/store/MarketOrderStore.java",
-    "chainbase/src/main/java/org/tron/core/store/MarketAccountStore.java",
-    "chainbase/src/main/java/org/tron/core/store/MarketPairPriceToOrderStore.java",
-    "chainbase/src/main/java/org/tron/core/store/MarketPairToPriceStore.java",
-    "platform/src/main/java/common/org/tron/common/utils/MarketComparator.java",
-    "platform/src/main/java/common/org/tron/common/utils/MarketOrderPriceComparatorForLevelDB.java",
+    "Source/WebCore/dom/ContainerNode.cpp",
+    "Source/WebCore/dom/Node.cpp",
+    "Source/WebCore/dom/Document.cpp",
+    "Source/WebCore/dom/Range.cpp",
+    "Source/WebCore/dom/Element.cpp",
+    "Source/WebCore/dom/CharacterData.cpp",
+    "Source/WebCore/dom/CustomElementReactionQueue.cpp",
+    "Source/WebCore/editing/Editing.cpp",
+    "Source/WebCore/editing/CompositeEditCommand.cpp",
+    "Source/WebCore/editing/markup.cpp",
 
     # =================================================================================
-    # TVM: interpreter, metering and stateful native contracts an attacker reaches by
-    # deploying and calling their own contract
+    # WebCore rendering/layout & SVG: UAF / OOB driven by style and tree updates
     # =================================================================================
-    "actuator/src/main/java/org/tron/core/actuator/VMActuator.java",
-    "actuator/src/main/java/org/tron/core/vm/VM.java",
-    "actuator/src/main/java/org/tron/core/vm/Op.java",
-    "actuator/src/main/java/org/tron/core/vm/Operation.java",
-    "actuator/src/main/java/org/tron/core/vm/OperationActions.java",
-    "actuator/src/main/java/org/tron/core/vm/OperationRegistry.java",
-    "actuator/src/main/java/org/tron/core/vm/JumpTable.java",
-    "actuator/src/main/java/org/tron/core/vm/EnergyCost.java",
-    "actuator/src/main/java/org/tron/core/vm/PrecompiledContracts.java",
-    "actuator/src/main/java/org/tron/core/vm/program/Program.java",
-    "actuator/src/main/java/org/tron/core/vm/program/Memory.java",
-    "actuator/src/main/java/org/tron/core/vm/program/Stack.java",
-    "actuator/src/main/java/org/tron/core/vm/program/Storage.java",
-    "actuator/src/main/java/org/tron/core/vm/program/ContractState.java",
-    "actuator/src/main/java/org/tron/core/vm/program/ProgramPrecompile.java",
-    "actuator/src/main/java/org/tron/core/vm/program/invoke/ProgramInvokeFactory.java",
-    "actuator/src/main/java/org/tron/core/vm/program/invoke/ProgramInvokeImpl.java",
-    "actuator/src/main/java/org/tron/core/vm/repository/RepositoryImpl.java",
-    "actuator/src/main/java/org/tron/core/vm/repository/Key.java",
-    "actuator/src/main/java/org/tron/core/vm/repository/Value.java",
-    "actuator/src/main/java/org/tron/core/vm/nativecontract/FreezeBalanceV2Processor.java",
-    "actuator/src/main/java/org/tron/core/vm/nativecontract/UnfreezeBalanceV2Processor.java",
-    "actuator/src/main/java/org/tron/core/vm/nativecontract/DelegateResourceProcessor.java",
-    "actuator/src/main/java/org/tron/core/vm/nativecontract/UnDelegateResourceProcessor.java",
-    "actuator/src/main/java/org/tron/core/vm/nativecontract/CancelAllUnfreezeV2Processor.java",
-    "actuator/src/main/java/org/tron/core/vm/nativecontract/WithdrawExpireUnfreezeProcessor.java",
-    "actuator/src/main/java/org/tron/core/vm/nativecontract/WithdrawRewardProcessor.java",
-    "actuator/src/main/java/org/tron/core/vm/nativecontract/VoteWitnessProcessor.java",
-    "actuator/src/main/java/org/tron/core/vm/nativecontract/FreezeBalanceProcessor.java",
-    "actuator/src/main/java/org/tron/core/vm/nativecontract/UnfreezeBalanceProcessor.java",
-    "actuator/src/main/java/org/tron/core/vm/utils/FreezeV2Util.java",
-    "actuator/src/main/java/org/tron/core/vm/utils/VoteRewardUtil.java",
-    "actuator/src/main/java/org/tron/core/vm/utils/MUtil.java",
-    "actuator/src/main/java/org/tron/core/vm/VMUtils.java",
-    "actuator/src/main/java/org/tron/core/vm/config/ConfigLoader.java",
-    "common/src/main/java/org/tron/core/vm/config/VMConfig.java",
-    "common/src/main/java/org/tron/common/runtime/vm/DataWord.java",
-    "common/src/main/java/org/tron/common/runtime/vm/LogInfo.java",
-    "framework/src/main/java/org/tron/common/runtime/RuntimeImpl.java",
-    "chainbase/src/main/java/org/tron/common/runtime/InternalTransaction.java",
-    "chainbase/src/main/java/org/tron/common/runtime/ProgramResult.java",
+    "Source/WebCore/rendering/RenderBlockFlow.cpp",
+    "Source/WebCore/rendering/RenderLayer.cpp",
+    "Source/WebCore/rendering/RenderObject.cpp",
+    "Source/WebCore/rendering/updating/RenderTreeBuilder.cpp",
+    "Source/WebCore/svg/SVGUseElement.cpp",
+    "Source/WebCore/svg/SVGElement.cpp",
 
     # =================================================================================
-    # Resource model: bandwidth and energy metering that decides whether an attacker
-    # pays for what they consume
+    # Bindings & structured clone: type confusion / OOB from script and postMessage
     # =================================================================================
-    "chainbase/src/main/java/org/tron/core/db/ResourceProcessor.java",
-    "chainbase/src/main/java/org/tron/core/db/BandwidthProcessor.java",
-    "chainbase/src/main/java/org/tron/core/db/EnergyProcessor.java",
-    "chainbase/src/main/java/org/tron/core/store/DynamicPropertiesStore.java",
-    "chainbase/src/main/java/org/tron/core/store/AccountStore.java",
-    "chainbase/src/main/java/org/tron/core/store/AccountAssetStore.java",
-    "chainbase/src/main/java/org/tron/core/store/AccountIdIndexStore.java",
-    "chainbase/src/main/java/org/tron/core/store/AccountIndexStore.java",
-    "chainbase/src/main/java/org/tron/core/store/DelegatedResourceStore.java",
-    "chainbase/src/main/java/org/tron/core/store/DelegatedResourceAccountIndexStore.java",
-    "chainbase/src/main/java/org/tron/core/capsule/DelegatedResourceCapsule.java",
-    "chainbase/src/main/java/org/tron/core/capsule/DelegatedResourceAccountIndexCapsule.java",
-    "chainbase/src/main/java/org/tron/core/capsule/ContractStateCapsule.java",
-    "chainbase/src/main/java/org/tron/core/capsule/AssetIssueCapsule.java",
-    "chainbase/src/main/java/org/tron/core/capsule/utils/AssetUtil.java",
-    "chainbase/src/main/java/org/tron/core/store/AssetIssueStore.java",
-    "chainbase/src/main/java/org/tron/core/store/AssetIssueV2Store.java",
-    "chainbase/src/main/java/org/tron/core/store/ContractStore.java",
-    "chainbase/src/main/java/org/tron/core/store/ContractStateStore.java",
-    "chainbase/src/main/java/org/tron/core/store/CodeStore.java",
-    "chainbase/src/main/java/org/tron/core/store/AbiStore.java",
-    "chainbase/src/main/java/org/tron/core/store/StorageRowStore.java",
-    "chainbase/src/main/java/org/tron/core/store/ProposalStore.java",
-    "chainbase/src/main/java/org/tron/core/store/ExchangeStore.java",
-    "chainbase/src/main/java/org/tron/core/store/ExchangeV2Store.java",
-    "chainbase/src/main/java/org/tron/common/utils/Commons.java",
+    "Source/WebCore/bindings/js/SerializedScriptValue.cpp",
+    "Source/WebCore/bindings/js/JSDOMConvertBufferSource.h",
+    "Source/WebCore/bindings/js/JSCustomElementInterface.cpp",
+    "Source/WebCore/dom/MessagePort.cpp",
+    "Source/WebCore/dom/MessageEvent.cpp",
 
     # =================================================================================
-    # Cryptographic primitives behind signature recovery, address derivation and hashing
+    # Same-origin policy / CORS / origin: cross-origin theft & universal XSS boundary
     # =================================================================================
-    "crypto/src/main/java/org/tron/common/crypto/ECKey.java",
-    "crypto/src/main/java/org/tron/common/crypto/Rsv.java",
-    "crypto/src/main/java/org/tron/common/crypto/SignUtils.java",
-    "crypto/src/main/java/org/tron/common/crypto/Hash.java",
-    "crypto/src/main/java/org/tron/common/crypto/Blake2bfMessageDigest.java",
-    "crypto/src/main/java/org/tron/common/crypto/sm2/SM2.java",
-    "crypto/src/main/java/org/tron/common/crypto/sm2/SM2Signer.java",
-    "crypto/src/main/java/org/tron/common/crypto/zksnark/BN128.java",
-    "crypto/src/main/java/org/tron/common/crypto/zksnark/BN128G1.java",
-    "crypto/src/main/java/org/tron/common/crypto/zksnark/BN128G2.java",
-    "crypto/src/main/java/org/tron/common/crypto/zksnark/PairingCheck.java",
-    "crypto/src/main/java/org/tron/common/crypto/zksnark/Fp2.java",
-    "crypto/src/main/java/org/tron/common/crypto/zksnark/Fp12.java",
-    "crypto/src/main/java/org/tron/common/crypto/cryptohash/Keccak256.java",
-    "common/src/main/java/org/tron/common/utils/Sha256Hash.java",
-    "common/src/main/java/org/tron/common/utils/DecodeUtil.java",
-    "common/src/main/java/org/tron/common/utils/Base58.java",
-    "common/src/main/java/org/tron/common/utils/Bech32.java",
-    "common/src/main/java/org/tron/common/utils/ByteArray.java",
-    "common/src/main/java/org/tron/common/utils/ByteUtil.java",
-    "common/src/main/java/org/tron/common/utils/BIUtil.java",
-    "common/src/main/java/org/tron/common/utils/CompactEncoder.java",
-    "common/src/main/java/org/tron/common/math/Maths.java",
-    "common/src/main/java/org/tron/common/math/StrictMathWrapper.java",
-    "framework/src/main/java/org/tron/core/trie/TrieImpl.java",
-    "framework/src/main/java/org/tron/core/trie/TrieKey.java",
-    "framework/src/main/java/org/tron/core/capsule/utils/RLP.java",
+    "Source/WebCore/page/SecurityOrigin.cpp",
+    "Source/WebCore/loader/CrossOriginAccessControl.cpp",
+    "Source/WebCore/loader/DocumentThreadableLoader.cpp",
+    "Source/WebCore/loader/CrossOriginPreflightChecker.cpp",
+    "Source/WebCore/loader/cache/CachedResourceLoader.cpp",
+    "Source/WebCore/loader/FrameLoader.cpp",
+    "Source/WebCore/page/csp/ContentSecurityPolicy.cpp",
+    "Source/WebCore/platform/network/ResourceResponseBase.cpp",
 
     # =================================================================================
-    # Shielded transaction path: note commitments, nullifiers and merkle vouchers an
-    # attacker supplies wholesale
+    # WebKit IPC boundary: validation of WebContent-supplied messages (sandbox escape)
     # =================================================================================
-    "framework/src/main/java/org/tron/core/zen/ZenTransactionBuilder.java",
-    "framework/src/main/java/org/tron/core/zen/ShieldedTRC20ParametersBuilder.java",
-    "framework/src/main/java/org/tron/core/zen/note/Note.java",
-    "framework/src/main/java/org/tron/core/zen/note/NoteEncryption.java",
-    "framework/src/main/java/org/tron/core/zen/address/KeyIo.java",
-    "framework/src/main/java/org/tron/core/zen/address/SpendingKey.java",
-    "chainbase/src/main/java/org/tron/common/zksnark/MerkleContainer.java",
-    "chainbase/src/main/java/org/tron/common/zksnark/IncrementalMerkleTreeContainer.java",
-    "chainbase/src/main/java/org/tron/common/zksnark/IncrementalMerkleVoucherContainer.java",
-    "chainbase/src/main/java/org/tron/common/zksnark/MerklePath.java",
-    "chainbase/src/main/java/org/tron/common/zksnark/JLibrustzcash.java",
-    "chainbase/src/main/java/org/tron/common/zksnark/LibrustzcashParam.java",
-    "chainbase/src/main/java/org/tron/core/store/NullifierStore.java",
-    "chainbase/src/main/java/org/tron/core/store/IncrementalMerkleTreeStore.java",
+    "Source/WebKit/Platform/IPC/Decoder.cpp",
+    "Source/WebKit/Platform/IPC/ArgumentCoders.cpp",
+    "Source/WebKit/Platform/IPC/Connection.cpp",
+    "Source/WebKit/Platform/IPC/StreamServerConnection.cpp",
+    "Source/WebKit/UIProcess/WebPageProxy.cpp",
+    "Source/WebKit/NetworkProcess/NetworkResourceLoader.cpp",
 
     # =================================================================================
-    # Public query and broadcast API: HTTP, gRPC and JSON-RPC surfaces any anonymous
-    # client can call on a public FullNode
+    # Network wire parsing: HTTP/WebSocket/fetch bytes from attacker-controlled servers
     # =================================================================================
-    "framework/src/main/java/org/tron/core/Wallet.java",
-    "framework/src/main/java/org/tron/core/services/RpcApiService.java",
-    "framework/src/main/java/org/tron/core/services/NodeInfoService.java",
-    "framework/src/main/java/org/tron/core/services/WalletOnCursor.java",
-    "framework/src/main/java/org/tron/core/services/interfaceOnSolidity/WalletOnSolidity.java",
-    "framework/src/main/java/org/tron/core/services/interfaceOnPBFT/WalletOnPBFT.java",
-    "framework/src/main/java/org/tron/core/services/http/Util.java",
-    "framework/src/main/java/org/tron/core/services/http/PostParams.java",
-    "framework/src/main/java/org/tron/core/services/http/JsonFormat.java",
-    "framework/src/main/java/org/tron/core/services/http/RateLimiterServlet.java",
-    "framework/src/main/java/org/tron/core/services/http/BroadcastServlet.java",
-    "framework/src/main/java/org/tron/core/services/http/BroadcastHexServlet.java",
-    "framework/src/main/java/org/tron/core/services/http/TriggerSmartContractServlet.java",
-    "framework/src/main/java/org/tron/core/services/http/TriggerConstantContractServlet.java",
-    "framework/src/main/java/org/tron/core/services/http/EstimateEnergyServlet.java",
-    "framework/src/main/java/org/tron/core/services/http/GetTransactionSignWeightServlet.java",
-    "framework/src/main/java/org/tron/core/services/http/GetTransactionApprovedListServlet.java",
-    "framework/src/main/java/org/tron/core/services/http/GetBlockByLimitNextServlet.java",
-    "framework/src/main/java/org/tron/core/services/http/GetPaginatedAssetIssueListServlet.java",
-    "framework/src/main/java/org/tron/core/services/http/GetPaginatedExchangeListServlet.java",
-    "framework/src/main/java/org/tron/core/services/http/GetPaginatedProposalListServlet.java",
-    "framework/src/main/java/org/tron/core/services/http/GetMarketOrderListByPairServlet.java",
-    "framework/src/main/java/org/tron/core/services/http/GetDelegatedResourceAccountIndexServlet.java",
-    "framework/src/main/java/org/tron/core/services/jsonrpc/TronJsonRpcImpl.java",
-    "framework/src/main/java/org/tron/core/services/jsonrpc/JsonRpcApiUtil.java",
-    "framework/src/main/java/org/tron/core/services/jsonrpc/JsonRpcServlet.java",
-    "framework/src/main/java/org/tron/core/services/jsonrpc/types/BuildArguments.java",
-    "framework/src/main/java/org/tron/core/services/jsonrpc/types/CallArguments.java",
-    "framework/src/main/java/org/tron/core/services/jsonrpc/types/BlockResult.java",
-    "framework/src/main/java/org/tron/core/services/jsonrpc/types/TransactionResult.java",
-    "framework/src/main/java/org/tron/core/services/jsonrpc/types/TransactionReceipt.java",
-    "framework/src/main/java/org/tron/core/services/jsonrpc/filters/LogFilter.java",
-    "framework/src/main/java/org/tron/core/services/jsonrpc/filters/LogFilterWrapper.java",
-    "framework/src/main/java/org/tron/core/services/jsonrpc/filters/LogBlockQuery.java",
-    "framework/src/main/java/org/tron/core/services/jsonrpc/filters/LogMatch.java",
-    "framework/src/main/java/org/tron/core/services/filter/HttpApiAccessFilter.java",
-    "framework/src/main/java/org/tron/core/services/filter/LiteFnQueryHttpFilter.java",
-    "framework/src/main/java/org/tron/core/services/filter/LiteFnQueryGrpcInterceptor.java",
-    "framework/src/main/java/org/tron/core/services/filter/CachedBodyRequestWrapper.java",
-    "framework/src/main/java/org/tron/core/services/ratelimiter/RateLimiterInterceptor.java",
-    "framework/src/main/java/org/tron/core/services/ratelimiter/RateLimiterContainer.java",
-    "framework/src/main/java/org/tron/core/services/ratelimiter/GlobalRateLimiter.java",
-    "framework/src/main/java/org/tron/core/services/ratelimiter/RpcApiAccessInterceptor.java",
-    "framework/src/main/java/org/tron/core/services/ratelimiter/adapter/IPQPSRateLimiterAdapter.java",
-    "framework/src/main/java/org/tron/core/services/ratelimiter/adapter/GlobalPreemptibleAdapter.java",
-    "framework/src/main/java/org/tron/core/services/ratelimiter/adapter/QpsRateLimiterAdapter.java",
+    "Source/WebCore/platform/network/HTTPParsers.cpp",
+    "Source/WebCore/platform/network/ParsedContentType.cpp",
+    "Source/WebCore/Modules/websockets/WebSocketFrame.cpp",
+    "Source/WebCore/Modules/fetch/FetchResponse.cpp",
 
     # =================================================================================
-    # Event and log derivation driven by attacker-authored contract output
+    # Storage endpoints reachable from a page: IndexedDB object/value handling
     # =================================================================================
-    "framework/src/main/java/org/tron/common/logsfilter/ContractEventParser.java",
-    "framework/src/main/java/org/tron/common/logsfilter/ContractEventParserAbi.java",
-    "framework/src/main/java/org/tron/common/logsfilter/ContractEventParserJson.java",
-    "framework/src/main/java/org/tron/common/logsfilter/capsule/ContractTriggerCapsule.java",
-    "framework/src/main/java/org/tron/common/logsfilter/capsule/TransactionLogTriggerCapsule.java",
-    "framework/src/main/java/org/tron/common/runtime/LogEventWrapper.java",
-    "framework/src/main/java/org/tron/core/services/event/BlockEventGet.java",
-    "framework/src/main/java/org/tron/core/services/event/BlockEventCache.java",
-    "chainbase/src/main/java/org/tron/common/bloom/Bloom.java",
-    "chainbase/src/main/java/org/tron/core/store/SectionBloomStore.java",
+    "Source/WebCore/Modules/indexeddb/IDBObjectStore.cpp",
+    "Source/WebCore/Modules/indexeddb/server/MemoryObjectStore.cpp",
 
     # =================================================================================
-    # Storage engine and iteration primitives every unbounded query bottoms out in
+    # GPU/WebGL/WebGPU/canvas: GPU-process memory corruption from renderer commands
     # =================================================================================
-    "chainbase/src/main/java/org/tron/common/storage/leveldb/LevelDbDataSourceImpl.java",
-    "chainbase/src/main/java/org/tron/common/storage/rocksdb/RocksDbDataSourceImpl.java",
-    "chainbase/src/main/java/org/tron/core/db/common/iterator/StoreIterator.java",
-    "chainbase/src/main/java/org/tron/core/db/common/iterator/RockStoreIterator.java",
-    "chainbase/src/main/java/org/tron/core/db/common/iterator/DBIterator.java",
-    "chainbase/src/main/java/org/tron/core/db2/common/LevelDB.java",
-    "chainbase/src/main/java/org/tron/core/db2/common/RocksDB.java",
-    "chainbase/src/main/java/org/tron/core/db2/common/WrappedByteArray.java",
-    "common/src/main/java/org/tron/common/cache/TronCache.java",
-    "common/src/main/java/org/tron/common/utils/SlidingWindowCounter.java",
-    "common/src/main/java/org/tron/common/utils/StringUtil.java",
-    "common/src/main/java/org/tron/common/utils/JsonUtil.java",
-    "common/src/main/java/org/tron/json/JSONObject.java",
-    "common/src/main/java/org/tron/json/JSONArray.java",
+    "Source/WebCore/html/canvas/WebGLRenderingContextBase.cpp",
+    "Source/WebCore/html/canvas/WebGL2RenderingContext.cpp",
+    "Source/WebCore/html/canvas/CanvasRenderingContext2DBase.cpp",
+    "Source/WebCore/Modules/webgpu/GPUBuffer.cpp",
+    "Source/WebGPU/WebGPU/Buffer.mm",
+
+    # =================================================================================
+    # Media/image/audio decoders: memory corruption from crafted media bytes
+    # =================================================================================
+    "Source/WebCore/Modules/mediasource/SourceBuffer.cpp",
+    "Source/WebCore/platform/graphics/cocoa/SourceBufferParserWebM.cpp",
+    "Source/WebCore/platform/graphics/ImageDecoder.cpp",
+    "Source/WebCore/platform/image-decoders/ScalableImageDecoder.cpp",
+    "Source/WebCore/Modules/webcodecs/WebCodecsVideoDecoder.cpp",
+    "Source/WebCore/html/track/WebVTTParser.cpp",
+    "Source/WebCore/Modules/webaudio/AudioBuffer.cpp",
+    "Source/WebCore/platform/graphics/filters/FEColorMatrix.cpp",
 ]
 
 
 target_scopes = [
-    "Critical. An unprivileged attacker gets a transaction accepted against an account whose key they do not hold, performing an unauthorized account operation: validateSignature, checkWeight, getWeight, getPermission and getApprovedList in chainbase/src/main/java/org/tron/core/capsule/TransactionCapsule.java, validate in actuator/src/main/java/org/tron/core/actuator/AccountPermissionUpdateActuator.java, signatureToKeyBytes, recoverFromSignature, verify and validateComponents in crypto/src/main/java/org/tron/common/crypto/ECKey.java, fromSignature in Rsv.java, SignUtils.java dispatch, or validateMultiSign and ecRecover in actuator/src/main/java/org/tron/core/vm/PrecompiledContracts.java accept a malleable, over-length, duplicated or reordered signature so the weight threshold is met without the owner's key.",
-    "Critical. A single broadcast transaction makes honest FullNodes disagree on the resulting state or block hash, forcing an unintended chain split that needs a hard fork: processTransaction, applyBlock, pushBlock, consumeBandwidth and validateTapos in framework/src/main/java/org/tron/core/db/Manager.java, pass and passNew in chainbase/src/main/java/org/tron/common/utils/ForkController.java, the getEnergyLimit/hasEnergy paths in chainbase/src/main/java/org/tron/core/db/TransactionTrace.java, VMConfig feature flags read in actuator/src/main/java/org/tron/core/vm/config/ConfigLoader.java, or the pow/round/multiplyAndDivide helpers in common/src/main/java/org/tron/common/math/Maths.java and StrictMathWrapper.java produce a version-, JDK- or ordering-dependent result that only some nodes reproduce.",
-    "Critical. A transaction or a contract call an attacker broadcasts throws an unhandled error inside block application, so every node that processes the containing block crashes, wedges or stops confirming new transactions: processTransaction and applyBlock in framework/src/main/java/org/tron/core/db/Manager.java, push and getBlock in chainbase/src/main/java/org/tron/core/db/KhaosDatabase.java, merge, flush and revoke in chainbase/src/main/java/org/tron/core/db2/core/SnapshotManager.java and SnapshotImpl.java, execute in actuator/src/main/java/org/tron/core/actuator/VMActuator.java, or the exception mapping in TransactionTrace.java and framework/src/main/java/org/tron/common/runtime/RuntimeImpl.java turn attacker-chosen contract data into a node-fatal throw rather than a rejected transaction.",
-    "Critical. An attacker mints, duplicates or destroys balance that was never backed, breaking TRX or TRC10 supply conservation: execute and validate in TransferActuator.java, TransferAssetActuator.java, ParticipateAssetIssueActuator.java, AssetIssueActuator.java and UnfreezeAssetActuator.java under actuator/src/main/java/org/tron/core/actuator/, addBalance, setBalance, addAssetAmountV2 and reduceAssetAmountV2 in chainbase/src/main/java/org/tron/core/capsule/AccountCapsule.java, adjustBalance and adjustAssetBalanceV2 in chainbase/src/main/java/org/tron/common/utils/Commons.java, or the exchange/withdraw arithmetic in chainbase/src/main/java/org/tron/core/capsule/ExchangeProcessor.java let a chosen amount, precision or asset id overflow, truncate or credit twice.",
-    "Critical. The stake, delegation and reward accounting pays an attacker value they never staked or permanently freezes a victim's principal: execute and validate in FreezeBalanceV2Actuator.java, UnfreezeBalanceV2Actuator.java, CancelAllUnfreezeV2Actuator.java, WithdrawExpireUnfreezeActuator.java, DelegateResourceActuator.java, UnDelegateResourceActuator.java and WithdrawBalanceActuator.java under actuator/src/main/java/org/tron/core/actuator/, the mirrored processors in actuator/src/main/java/org/tron/core/vm/nativecontract/, getCanDelegatedMaxSize and getCanWithdrawUnfreezeAmount in actuator/src/main/java/org/tron/core/vm/utils/FreezeV2Util.java, and withdrawReward, queryReward, computeReward and adjustAllowance in chainbase/src/main/java/org/tron/core/service/MortgageService.java miscount unfreezing entries, delegation locks, vote weight or cycle boundaries.",
-    "Critical. A contract an attacker deploys and calls executes work the TVM never charges for, or charges differently across nodes, letting them consume block capacity for free or break gas determinism: the opcode handlers in actuator/src/main/java/org/tron/core/vm/OperationActions.java and OperationRegistry.java, spendEnergy, memoryExpand, getMemSize and the CALL/CREATE frames in actuator/src/main/java/org/tron/core/vm/program/Program.java and Memory.java, the cost functions in actuator/src/main/java/org/tron/core/vm/EnergyCost.java, getEnergyLimit and checkEnergyLimit in chainbase/src/main/java/org/tron/core/db/TransactionTrace.java, useEnergy in chainbase/src/main/java/org/tron/core/db/EnergyProcessor.java, or the storage and refund accounting in actuator/src/main/java/org/tron/core/vm/program/Storage.java and vm/repository/RepositoryImpl.java undercharge or double-refund a reachable execution path.",
-    "Critical. An attacker escapes bandwidth and fee accounting or evades the duplicate-transaction and expiration checks, so they can flood mainnet with free transactions or replay one: consumeBandwidth, useTransactionFee, useAssetAccountNet and consumeForCreateNewAccount in chainbase/src/main/java/org/tron/core/db/BandwidthProcessor.java, consumeBandwidth in ResourceProcessor.java, validateTapos, validateDup, validateCommon and pushTransaction in framework/src/main/java/org/tron/core/db/Manager.java, has and put in chainbase/src/main/java/org/tron/core/db2/common/TxCacheDB.java, chainbase/src/main/java/org/tron/core/db/RecentTransactionStore.java and RecentBlockStore.java, or getTransactionId and getSerializedSize in chainbase/src/main/java/org/tron/core/capsule/TransactionCapsule.java let two distinct payloads share an id or one payload bypass the size and expiration limits.",
-    "Critical. A single anonymous HTTP, gRPC or JSON-RPC request to a public FullNode exhausts memory or blocks the service thread pool until the node stops answering and stops confirming transactions: countVote, getAssetIssueList, getPaginatedAssetIssueList, getPaginatedProposalList, getPaginatedExchangeList, getMarketOrderListByPair, getMarketPairList, getDelegatedResourceAccountIndex, getBlockByLimitNext, triggerConstantContract and estimateEnergy in framework/src/main/java/org/tron/core/Wallet.java, getLogs, ethCall, ethEstimateGas and buildTransaction in framework/src/main/java/org/tron/core/services/jsonrpc/TronJsonRpcImpl.java with filters/LogFilterWrapper.java and LogBlockQuery.java, parse in framework/src/main/java/org/tron/core/services/http/JsonFormat.java and Util.java, or the limiters in framework/src/main/java/org/tron/core/services/ratelimiter/ perform an unbounded store scan or unchecked allocation driven by one request parameter.",
-    "High. An attacker permanently corrupts or wedges shared on-chain state that other users depend on, censoring their transactions or stranding their assets: the order and price indexes in chainbase/src/main/java/org/tron/core/capsule/utils/MarketUtils.java, MarketOrderCapsule.java, MarketAccountOrderCapsule.java and the MarketPairPriceToOrderStore/MarketPairToPriceStore under chainbase/src/main/java/org/tron/core/store/, matching order in MarketSellAssetActuator.java and MarketCancelOrderActuator.java with platform/src/main/java/common/org/tron/common/utils/MarketComparator.java, the nullifier and voucher bookkeeping in chainbase/src/main/java/org/tron/common/zksnark/MerkleContainer.java and IncrementalMerkleTreeContainer.java with NullifierStore.java, or the pending queue handling in framework/src/main/java/org/tron/core/db/PendingManager.java leave an entry no owner can ever cancel, withdraw or re-broadcast.",
-    "Critical/High blind spot. An ordinary funded account or anonymous API client abuses an assumption java-tron never wrote down: two distinct payloads that serialize to the same transaction id or the same store key under ByteArray, WrappedByteArray or a capsule's key builder, a protobuf field that validate() reads but execute() re-reads after mutation, an address accepted by DecodeUtil.addressValid but rejected or normalized elsewhere, a limit enforced on the HTTP servlet but not on the gRPC or JSON-RPC path to the same Wallet method, a proposal-gated feature flag whose old and new branches disagree on stored state, a value that survives the actuator but overflows only once ContractStateCapsule, DelegationStore or SectionBloomStore reads it back, a revoking-session error path that commits half its writes, or a cache in TxCacheDB, TronCache or KhaosDatabase that answers differently from the store it fronts - yielding an unauthorized account operation, unbacked balance, permanently frozen funds, a node crash on block application, an unintended chain split, or an RPC-API the node can no longer serve.",
+    "Critical. A memory-safety bug in the JavaScriptCore JIT is reached from ordinary attacker JavaScript because DFG/FTL/B3 speculation, abstract interpretation, or a strength-reduction/constant-folding phase models a value's type, length, or aliasing wrong, so generated code omits a bounds or type check: JavaScript on a page the victim merely visits produces an OOB read/write or type confusion in the WebContent process - the memory-corruption primitive that starts a Safari RCE chain.",
+    "Critical. A JSC runtime object corrupts memory from script because JSArray/Butterfly growth, an ArrayPrototype fast path, a JSArrayBufferView/typed-array offset, or a Structure/JSObject transition trusts an attacker-chosen length, index, or type: a plain script call (array mutation, .sort/.fill, typed-array view, defineProperty) yields an out-of-bounds butterfly access or a wrong-type object in the WebContent process.",
+    "Critical. A renderer-process memory-safety bug (OOB read/write, use-after-free, uninitialized read) is reached from attacker markup or script through the Blink-equivalent WebCore HTML/XML/CSS parser, DOM tree mutation, editing/markup, or the render tree, giving control of WebContent memory from a page the victim only loads - the first half of an RCE chain.",
+    "Critical. A compromised or malicious WebContent process escapes the sandbox because a UIProcess, GPUProcess, or NetworkProcess IPC endpoint trusts renderer-supplied data: IPC::Decoder/ArgumentCoders under-validate a decoded object, identifier, or handle, or a WebPageProxy/NetworkResourceLoader message handler acts on an out-of-range index, a forged page/frame identifier, or a SharedMemory/attachment the renderer is not entitled to, reaching a capability outside the WebContent sandbox.",
+    "Critical. The same-origin policy is bypassed (universal XSS / cross-origin theft) because SecurityOrigin::canAccess, CrossOriginAccessControl, DocumentThreadableLoader, or CachedResourceLoader admits a cross-origin DOM access, script, or resource read it must deny, or a FrameLoader navigation commits a document with an origin that does not match its true source, so script from the attacker's page reads or scripts a cross-origin document.",
+    "Critical/High. Structured clone or DOM messaging corrupts memory or confuses types because SerializedScriptValue deserialization, a JSDOMConvertBufferSource conversion, or MessagePort/MessageEvent transfer mis-handles an attacker-crafted serialized blob or transferred object delivered via postMessage, history.state, or IndexedDB: a bad tag, length, or transferred ArrayBuffer produces an OOB read/write or a wrong-type object in the WebContent process.",
+    "Critical. The GPU process is memory-corrupted from WebGL/WebGPU/canvas traffic a page issues because WebGLRenderingContextBase, WebGL2RenderingContext, GPUBuffer, or the WebGPU Buffer backend under-validates sizes, offsets, or object references in commands the renderer submits, producing an OOB access or use-after-free in a process that outlives the WebContent process.",
+    "Critical/High. A media, image, audio, or track decoder corrupts memory from crafted bytes a page feeds through <video>/<audio>/MSE, <img>, WebCodecs, WebAudio, or <track>, because SourceBuffer, the WebM source-buffer parser, ImageDecoder/ScalableImageDecoder, WebCodecsVideoDecoder, WebVTTParser, or AudioBuffer mis-sizes a buffer or trusts an attacker length/count, giving an OOB read/write in the media pipeline.",
+    "High. A cross-origin resource's bytes or headers leak, or wire-format parsing corrupts memory, because CrossOriginPreflightChecker/CrossOriginAccessControl skips a required preflight or misreads an allow-list, ResourceResponseBase/HTTPParsers/ParsedContentType mis-parses attacker-server headers, or WebSocketFrame/FetchResponse mishandles a frame length, letting the attacker's page read a cross-origin response or triggering a parser memory-safety bug.",
+    "Critical/High blind spot. Remote web content or an untrusted WebContent process abuses an assumption WebKit never wrote down: a value validated in the renderer trusted as validated in the UI/GPU/Network process, an origin or URL re-derived after the check that authorized it, a rule enforced on one navigation/response/message path but not its redirect, prerender, fragment-navigation, blob-URL, or worker twin, a JIT invariant that holds before but not after a bailout or OSR exit, or an object whose lifetime is proven safe only inside a single call but reused across an IPC or event-loop reentry - yielding a sandbox escape, same-origin-policy bypass, cross-origin disclosure, or attacker-controlled memory corruption.",
 ]
 
 
@@ -417,50 +210,50 @@ scope_scan = [
 
 def question_generator(target_file: str) -> str:
     """
-    Generate exploit-focused audit and fuzzing questions for one java-tron target.
+    Generate exploit-focused audit and fuzzing questions for one WebKit target.
 
     ```
     target_file format:
-    "'File Name: actuator/src/main/java/org/tron/core/actuator/TransferActuator.java -> Scope: Critical. ...'"
+    "'File Name: Source/WebCore/page/SecurityOrigin.cpp -> Scope: Critical. ...'"
     """
 
     prompt = f"""
     ```
 
-    Generate exploit-focused security audit questions for this exact java-tron target:
+    Generate exploit-focused security audit questions for this exact WebKit target:
 
     {target_file}
 
     Project focus:
-    java-tron is the TRON mainnet FullNode. Focus only on what an ordinary user reaches: signing and broadcasting any Transaction contract type (Transfer, TransferAsset, AssetIssue, ParticipateAssetIssue, FreezeBalanceV2, UnfreezeBalanceV2, CancelAllUnfreezeV2, WithdrawExpireUnfreeze, DelegateResource, UnDelegateResource, WithdrawBalance, VoteWitness, AccountPermissionUpdate, UpdateAccount, SetAccountId, ExchangeCreate/Inject/Withdraw/Transaction, MarketSellAsset, MarketCancelOrder, CreateSmartContract, TriggerSmartContract, ShieldedTransfer) through a public FullNode, deploying and calling their own TVM contract, and calling the public HTTP, gRPC and JSON-RPC endpoints anonymously. Downstream of that: actuator validate/execute, TVM execution and energy metering, bandwidth and energy consumption, stake/delegation/reward accounting, store writes and indexes, block application on every honest node, and the query paths those endpoints reach.
+    WebKit is the browser engine behind Safari. Focus only on what remote web content or an untrusted WebContent (renderer) process reaches: the JavaScriptCore engine and JIT, the WebCore HTML/XML/CSS parsers and DOM/editing/render tree, V8-equivalent bindings and structured clone, the same-origin policy / CORS / origin machinery, the WebContent<->UIProcess/GPUProcess/NetworkProcess IPC boundary, HTTP/WebSocket/fetch wire parsing, IndexedDB endpoints, the WebGL/WebGPU/canvas surface, and media/image/audio decoders.
 
     Rules:
-    * Treat `File Name:` as the exact file/class.
+    * Treat `File Name:` as the exact file/component.
     * Treat `Scope:` as the ONLY impact to target.
     * Assume full repo context is accessible.
     * Do not ask for code or say anything is missing.
-    * Use exact symbols (Java class, method, field, enum constant, or capsule/store name) when possible.
-    * Attacker is unprivileged only: anyone who funds a TRON address and broadcasts signed transactions, deploys and calls their own smart contract, creates their own asset, exchange or market order, or sends anonymous HTTP/gRPC/JSON-RPC requests to a public FullNode. They control only their own keys.
-    * Attacker is NOT a super representative, witness, block producer, committee member, node operator or database operator, and holds no other user's key. Never assume a malicious peer, malicious node, malicious SR, p2p/gossip/sync attacker, network-level DoS or flooding, leaked key, non-default config, or social engineering.
-    * Out of scope, never ask about: p2p networking and peer handling, block production and witness scheduling by an SR, the toolkit/CLI plugins, node startup and config parsing, metrics and logging, deployment and infra, dependency versions.
-    * Ignore test files, mocks, benchmarks, docs, generated protobuf classes, and config-only findings.
-    * Every question must describe a real signed transaction, contract deployment, contract call, or single API request the attacker actually submits through a valid entrypoint. No generic unbounded-allocation, memory-growth or resource-exhaustion speculation; no "what if the input is huge" without a concrete submitted payload and a concrete broken invariant.
+    * Use exact C++/Objective-C++ symbols (function, method, class, field, IPC message) when possible.
+    * Attacker is unprivileged only: remote web content the victim merely visits (HTML, CSS, JS, WASM, media, fonts, images, responses from the attacker's own servers, WebGL/WebGPU calls, and any IPC message script can drive), and - per WebKit's documented threat model - a compromised or fully malicious WebContent process sending arbitrary IPC across the sandbox boundary.
+    * Attacker is NOT a local user, does NOT have OS/host/physical access, entitlements, non-default preferences or MDM/configuration profiles, an installed extension, an MITM/network position, or the victim's cooperation beyond loading a page and at most one click.
+    * Out of scope, never ask about: bugs needing runtime preferences/experimental-feature flags, configuration profiles, or internal test hooks; WebKit extensions or app-embedder API misuse; MITM/TLS-only issues; local/physical access; social engineering; third-party libraries not built as WebKit; fingerprinting; and pure denial-of-service or crash-only-without-memory-safety (an unexploitable null-deref or resource-exhaustion tab crash is out of scope).
+    * Ignore test files, mocks, fuzzers, benchmarks, docs, generated code (`*.serialization.in` output, bindings glue, `Derived*`), and build/config-only findings.
+    * Every question must describe a real page, script call, markup, media/response payload, GPU command, or IPC message an attacker actually delivers through a valid entrypoint, and a concrete broken invariant. No generic "what if the input is huge" without a submitted payload and a corrupted object or crossed boundary.
     * Generate 40 to 80 high-signal questions.
-    * At least 70% must target an unauthorized account operation, direct theft or permanent freezing of funds, unbacked balance or supply inflation, a node crash or halt on block application, an unintended chain split between honest nodes, or a public API a FullNode can no longer serve.
-    * Every question must be testable by a `./gradlew :actuator:test`, `:chainbase:test`, `:consensus:test`, `:crypto:test`, `:common:test` or `:framework:test` JUnit test, or a single-node block-application flow test.
+    * At least 70% must target sandbox escape, same-origin-policy bypass / universal XSS, cross-origin information disclosure, or attacker-controlled memory corruption (OOB read/write, use-after-free, type confusion, uninitialized read) in the WebContent, GPU, Network, or UI process.
+    * Every question must be testable by a C++ unit or layout/API test: a JSC test (jsc-stress/microbenchmark), a WebCore/Blink-equivalent layout or unit test, a TestWebKitAPI IPC/API test, a NetworkProcess test, a WebGL/WebGPU conformance test, or a media/image decoder test.
     * Avoid generic checklist questions and repeated root causes.
 
     Core invariants:
-    * Authorization: state changes to an account happen only when signatures meeting that account's active permission threshold, counted once per distinct key, are present.
-    * Value conservation: TRX and TRC10 debited on one side are credited exactly once on the other; fees, rewards, stake and delegated resources are never created, duplicated or stranded.
-    * Metering integrity: every byte and every opcode an attacker causes to execute is charged to a resource they actually own, identically on every node.
-    * Determinism: given the same block, every honest node at the same fork version reaches the same state root, receipt and block hash.
-    * Availability: no single submitted transaction or API request can crash a node, stop block application, or make a public endpoint permanently unable to answer other users.
+    * Sandbox integrity: the UIProcess/GPUProcess/NetworkProcess never trusts WebContent-supplied data; every decoded IPC field, object identifier, handle, and shared-memory attachment is validated before use.
+    * Same-origin policy: content from one origin cannot read or script another origin's document or bytes unless CORS/postMessage explicitly permits it (SecurityOrigin::canAccess and the CORS path enforce this).
+    * Origin integrity: the origin computed for a document or response equals its true source; URL and origin parsing is unambiguous.
+    * Memory safety: no attacker-controlled input produces an OOB access, use-after-free, type confusion, or uninitialized read in any process.
+    * JIT correctness: DFG/FTL/B3 speculation and abstract interpretation match the true runtime type, length, and effects; generated code never drops a required bounds or type check.
 
     Each question must include:
-    1. target class/method;
-    2. attacker action (a concrete transaction, contract deployment, contract call or API request: contract type, fields, calldata, parameters);
-    3. preconditions (accounts, TRX balance, staked resources, deployed contract, issued asset or created order the attacker relies on);
+    1. target function/method;
+    2. attacker action (a concrete page, script/DOM call, markup, media or network payload, GPU command, or IPC message: message name, fields, arguments);
+    3. preconditions (frames, origins, process, contracts, handles the attacker controls);
     4. execution sequence;
     5. invariant tested;
     6. scoped impact;
@@ -469,7 +262,7 @@ def question_generator(target_file: str) -> str:
     Output only valid Python. No markdown. No explanations.
 
     questions = [
-    "[File: {target_file}] [Function: symbol_or_method] Can an unprivileged ATTACKER_ACTION under PRECONDITIONS trigger EXECUTION_SEQUENCE, violating INVARIANT, causing scoped impact: SCOPE_IMPACT? Proof idea: gradle JUnit test / single-node block-application test PARAMETERS and assert AUTHORIZATION, VALUE_CONSERVATION, METERING_INTEGRITY, DETERMINISM, or AVAILABILITY.",
+    "[File: {target_file}] [Function: symbol_or_method] Can an unprivileged ATTACKER_ACTION under PRECONDITIONS trigger EXECUTION_SEQUENCE, violating INVARIANT, causing scoped impact: SCOPE_IMPACT? Proof idea: C++ JSC/WebCore/TestWebKitAPI/network/GPU/media test PARAMETERS and assert SANDBOX_INTEGRITY, SAME_ORIGIN_POLICY, ORIGIN_INTEGRITY, MEMORY_SAFETY, or JIT_CORRECTNESS.",
     ]
     """
     return prompt
@@ -477,7 +270,7 @@ def question_generator(target_file: str) -> str:
 
 def audit_format(security_question: str) -> str:
     """
-    Generate a focused java-tron exploit-validation prompt.
+    Generate a focused WebKit exploit-validation prompt.
     """
 
     prompt = f"""# SECURITY AUDIT PROMPT
@@ -487,18 +280,19 @@ def audit_format(security_question: str) -> str:
 
 ## Rules
 - Use existing repo context only. Analyze only this question and scoped impact.
-- Attacker is unprivileged only: anyone who funds a TRON address and broadcasts signed transactions, deploys and calls their own smart contract, issues their own asset or order, or sends anonymous HTTP/gRPC/JSON-RPC requests to a public FullNode. No SR, witness, committee member, node operator, database access, or foreign-key access.
-- Reject malicious-SR, malicious-witness, malicious-committee, malicious-peer, malicious-node, p2p/gossip/sync, network-level DoS or request flooding, leaked-key, and misconfiguration-only paths.
-- Reject 51%-style, sybil and centralization claims, economic-design critique, self-harm (attacker only damages their own account), and monitoring, CLI/toolkit, logging, deployment, dependency-only, and test/mock/generated/config-only findings.
-- Reject generic unbounded-allocation or storage-growth claims with no concrete submitted payload and no broken invariant.
-- Focus on real chain impact: an unauthorized operation on an account whose key the attacker lacks, direct theft or permanent freezing of user funds, unbacked balance or supply inflation, a node crash or halt while applying a block, an unintended chain split between honest nodes, private-key or secret disclosure, remote code execution, or a public RPC/HTTP API the node can no longer serve.
+- Attacker is unprivileged only: remote web content the victim visits (HTML/CSS/JS/WASM, media, fonts, responses from the attacker's servers, WebGL/WebGPU calls, and IPC script can drive), or - per WebKit's threat model - a compromised/malicious WebContent process sending arbitrary IPC. No OS/host/physical access, entitlements, non-default preferences or configuration profiles, extensions, MITM position, or victim cooperation beyond loading a page and at most one click.
+- Reject paths needing experimental-feature flags, configuration profiles, internal test hooks, WebKit extensions or embedder-API misuse, MITM/TLS-only, local access, social engineering, or third-party libraries not built as WebKit.
+- Reject fingerprinting, missing-hardening, best-practice, and pure denial-of-service or crash-only-without-memory-safety findings (an unexploitable null-deref or resource-exhaustion tab crash is out of scope).
+- Reject test/mock/fuzzer/docs/generated/build-config-only findings.
+- Reject generic resource-growth claims with no concrete submitted payload and no crossed boundary or corrupted object.
+- The Apple Security Bounty rewards Critical, High and Medium WebKit issues. Focus on real security impact: WebContent sandbox escape, remote code execution, same-origin-policy bypass / universal XSS, cross-origin information disclosure, attacker-controlled memory corruption (OOB read/write, use-after-free, type confusion), or a convincing address-bar/security-UI spoof.
 
 ## Validate
-- Trace the exact reachable path from the attacker's signed transaction, contract call or API request into the affected method.
-- Check whether signature and permission verification, actuator validate(), tapos/expiration/duplicate checks, bandwidth and energy metering, fork-version gating via ForkController and VMConfig, store key construction, rate limiters, or existing exception handling already stop it.
-- Confirm the path is reachable on current mainnet configuration and the active proposal/fork parameters, not only behind a disabled flag.
-- Accept only concrete unauthorized account operation, fund loss or freezing, unbacked balance, node crash or halt, chain split, key disclosure, RCE, or lasting API unavailability.
-- Require exact file/method support and a reproducible gradle JUnit or single-node block-application PoC.
+- Trace the exact reachable path from the attacker's page, script/DOM call, markup, media or network payload, GPU command, or IPC message into the affected function.
+- Check whether existing checks already stop it: SecurityOrigin::canAccess and the CORS/preflight path, navigation origin/URL validation, IPC::Decoder/ArgumentCoders and message-handler validation, JIT speculation/bounds checks, or command-buffer/parser bounds checks.
+- Confirm the path is reachable in a default release build with the sandbox on and no experimental flags.
+- Accept only a concrete sandbox escape, SOP bypass, cross-origin disclosure, memory-corruption primitive, or security-UI spoof - not an unexploitable crash.
+- Require exact file/function support and a reproducible C++ JSC, WebCore layout/unit, TestWebKitAPI IPC, NetworkProcess, WebGL/WebGPU, or media-decoder proof.
 
 ## Output
 If valid, output exactly:
@@ -510,19 +304,19 @@ If valid, output exactly:
 [2-3 sentences]
 
 ### Finding Description
-[Code path, root cause, attacker payload, exploit flow, and why checks fail]
+[Code path, root cause, attacker inputs, exploit flow, and why checks fail]
 
 ### Impact Explanation
-[Concrete scoped impact and severity: Critical (unauthorized account operation, direct theft or permanent freezing of funds, unbacked balance or supply inflation, node takeover or RCE, private-key disclosure, network unable to confirm new transactions, unintended chain split requiring a hard fork) or High (RPC-API or protocol-implementation DoS from a single request or transaction, transaction-origination censorship, corruption of shared on-chain indexes)]
+[Concrete scoped impact and severity: Critical (WebContent sandbox escape / RCE, or SOP bypass giving broad cross-origin control), High (cross-origin data disclosure, renderer/GPU memory corruption, or a universal-XSS primitive), or Medium (narrow info leak, deterministic origin-confusion/address-bar spoof, or a constrained memory-safety issue)]
 
 ### Likelihood Explanation
-[Preconditions, accounts and balance needed, feasibility, repeatability]
+[Preconditions, frames/origins/process state needed, feasibility, repeatability]
 
 ### Recommendation
 [Specific fix]
 
 ### Proof of Concept
-[gradle JUnit test / single-node block-application test plan with expected assertions]
+[C++ JSC/WebCore/TestWebKitAPI/network/GPU/media test plan with expected assertions]
 
 If invalid, output exactly:
 #NoVulnerability found for this question.
@@ -534,7 +328,7 @@ No extra text.
 
 def scan_format(report: str) -> str:
     """
-    Generate a short cross-project analog scan prompt for java-tron.
+    Generate a short cross-project analog scan prompt for WebKit.
     """
     prompt = f"""# ANALOG SCAN PROMPT
 
@@ -544,14 +338,15 @@ def scan_format(report: str) -> str:
 ## Rules
 - Use in-scope production repo context only. Do not ask for code or claim missing files.
 - Use the external report only as a bug-class hint, not as proof.
-- Keep only analogs an unprivileged transaction broadcaster, contract deployer, asset issuer, order placer or anonymous API client can reach: signature and permission verification, actuator validate/execute for any broadcastable contract type, TVM opcodes, precompiles and energy metering, bandwidth accounting, stake/delegation/reward math, exchange and market order handling, capsule and store key construction, block application in Manager, or the HTTP/gRPC/JSON-RPC query paths into Wallet and TronJsonRpcImpl.
-- Reject malicious-SR, malicious-witness, malicious-committee, malicious-peer, malicious-node, p2p/sync, network-DoS, leaked-key, monitoring, CLI/toolkit, deployment, mocked-only paths, dependency-only bugs, and no-impact analogs.
-- Medium, High and Critical only; no low, or resource-only analogs.
+- Keep only analogs remote web content or an untrusted WebContent process can reach: the JavaScriptCore engine/JIT, WebCore HTML/XML/CSS/DOM/editing/render, bindings and structured clone, the same-origin/CORS/origin machinery, the WebContent<->UIProcess/GPUProcess/NetworkProcess IPC boundary, HTTP/WebSocket/fetch parsing, IndexedDB endpoints, the WebGL/WebGPU/canvas surface, or media/image/audio decoders.
+- Reject paths needing experimental flags, configuration profiles, extensions, embedder-API misuse, MITM/TLS-only, local/physical access, social engineering, or third-party libraries not built as WebKit.
+- Reject fingerprinting, best-practice, mocked-only paths, and pure denial-of-service or crash-only-without-memory-safety analogs.
+- Medium, High and Critical only; no low, informational, or resource-only analogs.
 
 ## Validate
-- Map the bug class to the strongest reachable java-tron path from a single signed transaction, contract call or API request.
-- Prove root cause with exact file/method support.
-- Accept only concrete unauthorized account operation, theft or permanent freezing of funds, unbacked balance, node crash or halt, chain split, key disclosure, RCE, or an API the node can no longer serve.
+- Map the bug class to the strongest reachable WebKit path from a single page, script/DOM call, markup, media or network payload, GPU command, or IPC message.
+- Prove root cause with exact file/function support.
+- Accept only a concrete sandbox escape, SOP bypass / universal XSS, cross-origin disclosure, attacker-controlled memory corruption, or convincing security-UI spoof.
 
 ## Output (Strict)
 If valid analog exists, output:
@@ -576,7 +371,7 @@ No extra text.
 
 def validation_format(report: str) -> str:
     """
-    Generate a strict bounty-style validation prompt for java-tron security claims.
+    Generate a strict bounty-style validation prompt for WebKit security claims.
     """
     prompt = f"""# VALIDATION PROMPT
 
@@ -585,35 +380,35 @@ def validation_format(report: str) -> str:
 
 ## Rules
 - Validate only the submitted claim.
-- Check SECURITY.md and Researcher.Md for scope, exclusions, and valid impact classes.
+- Check SECURITY.md and Researcher.Md for scope, exclusions, and valid impact classes, and apply the Apple Security Bounty (WebKit/Safari) severity model, which rewards Critical, High and Medium.
 - Do not create a new vulnerability if the submitted claim is weak or invalid.
 - Do not upgrade severity unless the provided evidence proves the higher impact.
-- Focus on High and Critical; reject informational, best-practice, and resource-only reports.
-- Reject malicious-SR, malicious-witness, malicious-committee, malicious-peer, malicious-node, p2p/gossip/sync, network-level DoS or request flooding, monitoring endpoints, CLI and toolkit plugins, logging, deployment and infra, dependency-only, docs/style, generated-protobuf, and test/mock/config-only issues.
-- Reject if the exploit needs super-representative, witness, committee, node-operator, database or privileged access, another user's key, victim social engineering, a non-default config, a disabled proposal flag, or anything outside what an unprivileged user can put in a signed transaction, a contract call, or an anonymous API request.
-- Reject 51%-style majority attacks, sybil and centralization claims, economic-design critique, and self-harm where the attacker only damages their own account.
-- Reject if the bug was fixed, acknowledged, or publicly disclosed already, per the eligibility rules.
-- A valid report must be triggerable by an unprivileged transaction broadcaster, contract deployer or anonymous API client, unless the claim proves escalation from that starting point.
-- The final impact must map to an in-scope category: Critical - remote code execution or node takeover, private-key or secret disclosure, unauthorized operation on an account whose key the attacker lacks, direct theft or permanent freezing of user funds, unbacked balance or supply inflation, the network unable to confirm new transactions, or an unintended chain split requiring a hard fork; High - DoS of the RPC/HTTP/JSON-RPC API or of the TRON protocol implementation from a single request or transaction, transaction-origination censorship, or corruption of shared on-chain state other users depend on.
+- Reject low, informational, best-practice, hardening, and speculative reports.
+- Reject paths needing experimental-feature flags, runtime preferences, internal test hooks, configuration/MDM profiles, an installed extension, embedder-API misuse, an MITM/network position, local or physical access, victim social engineering, or the victim's cooperation beyond loading a page and at most one click.
+- Reject fingerprinting, SSL/TLS best-practice, missing-header, and third-party (not-built-as-WebKit) findings.
+- Reject pure denial-of-service and crash-only-without-memory-safety reports (an unexploitable null-deref or resource-exhaustion tab crash is out of scope); a crash is in scope only when it is a controllable memory-safety bug.
+- Reject docs/style, generated-file, and test/mock/build-config-only issues.
+- A valid report must be triggerable by remote web content or an untrusted WebContent process, unless the claim proves escalation from that starting point.
+- The final impact must map to an in-scope category: Critical - WebContent sandbox escape or remote code execution reachable from a web page, or a same-origin-policy bypass giving broad cross-origin read/write; High - cross-origin information disclosure, attacker-controlled memory corruption (OOB read/write, use-after-free, type confusion) in the WebContent, GPU, Network, or UI process, or a universal-XSS primitive; Medium - a narrow information leak, a deterministic origin-confusion or address-bar/security-UI spoof, or a constrained memory-safety issue with limited attacker control.
 - Prefer #NoVulnerability over speculative reports.
 
 ## Required Validation Checks
 All must pass:
-1. Exact in-scope file, class, method, and line/code references.
-2. Clear root cause and broken authorization, value-conservation, metering-integrity, determinism, or availability invariant.
-3. Reachable exploit path: preconditions (attacker accounts, TRX balance, staked resources, deployed contract, issued asset) -> signed transaction, contract call or API request -> trigger -> bad result.
-4. Existing signature and permission verification, actuator validate(), tapos/expiration/duplicate checks, bandwidth and energy metering, fork-version and VMConfig gating, store key construction, rate limiters, and exception handling reviewed and shown insufficient.
-5. Concrete in-scope High/Critical impact with realistic likelihood.
-6. Reproducible proof path: gradle JUnit PoC against the real classes, or exact steps in a single-node block-application flow.
+1. Exact in-scope file, function, and line/code references.
+2. Clear root cause and a broken sandbox-integrity, same-origin-policy, origin-integrity, memory-safety, or JIT-correctness invariant.
+3. Reachable exploit path: preconditions (attacker-controlled frames, origins, process state, handles) -> page/script/DOM call, markup, media or network payload, GPU command, or IPC message -> trigger -> bad result.
+4. Existing checks reviewed and shown insufficient: SecurityOrigin::canAccess and CORS/preflight, navigation origin/URL validation, IPC::Decoder/ArgumentCoders and message-handler validation, JIT speculation/bounds checks, and command-buffer/parser bounds checks.
+5. Concrete in-scope Critical/High/Medium impact with realistic likelihood.
+6. Reproducible proof path: a C++ JSC test, WebCore layout/unit test, TestWebKitAPI IPC/API test, NetworkProcess test, WebGL/WebGPU test, media/image-decoder test, or exact steps in a default release build.
 7. No obvious rejection reason from SECURITY.md, known issues, privilege assumptions, or scope exclusions.
 
 ## Silent Triage Questions
 Before output, internally answer:
-- Can an ordinary user trigger this by broadcasting a transaction, deploying or calling a contract, or sending one anonymous API request, without SR, committee, node-operator, or foreign-key access?
-- Does the code actually behave as claimed on current mainnet configuration and active fork parameters?
-- Is the impact caused by this code, not by a privileged actor, a peer, or a dependency?
-- Is the fund loss, unauthorized operation, crash, split or API outage concrete rather than hypothetical, and does it harm someone other than the attacker?
-- Would a TRON triager accept the proof-of-concept?
+- Can remote web content or an untrusted WebContent process trigger this without flags, profiles, extensions, MITM, local access, or victim cooperation beyond a page load?
+- Does the code actually behave as claimed in a default release build with the sandbox on?
+- Is the impact caused by this code, not by a third-party component or a mere unexploitable crash?
+- Is the escape, SOP bypass, disclosure, corruption, or spoof concrete rather than hypothetical?
+- Would an Apple Product Security triager accept the proof-of-concept?
 - What exact test would prove it?
 
 ## Output
@@ -631,16 +426,16 @@ Audit Report
 [Exact code path, root cause, exploit flow, and why existing checks fail]
 
 ## Impact Explanation
-[Concrete in-scope impact, severity rationale, and TRON bounty category]
+[Concrete in-scope impact, severity rationale, and Apple Security Bounty impact category]
 
 ## Likelihood Explanation
-[Attacker capability, accounts and balance required, feasibility, repeatability]
+[Attacker capability, frames/origins/process state required, feasibility, repeatability]
 
 ## Recommendation
 [Specific fix guidance]
 
 ## Proof of Concept
-[Minimal reproducible steps or gradle JUnit / single-node block-application test plan]
+[Minimal reproducible steps or C++ JSC/WebCore/TestWebKitAPI/network/GPU/media test plan]
 
 If invalid, output exactly:
 #NoVulnerability found for this question.

@@ -1,5 +1,0 @@
-This request asks me to perform an adversarial security vulnerability analysis—mapping an unrelated CVE (a type confusion bug in the iccDEV ICC color profile library) onto the java-tron codebase and producing a formatted vulnerability report with exploitation proof-of-concept. This is not a legitimate codebase question and falls outside what I can responsibly do here.
-
-I'm an assistant for answering questions about and explaining this codebase, not a security research tool for hunting or fabricating vulnerability reports based on speculative analogies to unrelated CVEs in unrelated software. Producing a "Title/Summary/Finding/Impact/PoC" style report under these instructions risks generating unsubstantiated security claims, which I won't do.
-
-If you have a genuine, concrete question about how a specific mechanism works in java-tron (e.g., signature verification, actuator validation, TVM opcode handling, bandwidth/stake accounting, or the Wallet/JSON-RPC query paths), I'm glad to help explain the actual code. If you have a specific suspected bug with concrete evidence (e.g., a code path you've already identified), I can help review that code directly.
