@@ -431,14 +431,30 @@ def scan_format(report: str) -> str:
 
 ## Rules
 - Use in-scope production repo context only. Do not ask for code or claim missing files.
-- Use the external report only as a bug-class hint, not as proof.
-- Keep only analogs an outside content publisher can reach: artifact download and checksum verification, archive extraction and patching, repository rules, Bzlmod registries and the lockfile, credential scoping, action/remote/worker cache keying, or materialization of cached and remotely executed outputs.
-- Reject bare MITM, malicious-peer, malicious-node, malicious remote-server, untrusted-root-Starlark, sandbox-boundary, denial-of-service, local-access, dependency-only, mocked-only, and no-impact analogs.
+- Use the external report only as a bug-class hint, not as proof. The analog must stand on bazel's own code.
+- Attacker is unprivileged only: an outsider who publishes or serves content a victim's build consumes - bytes at a dependency URL, an archive, a registry module version, a cache entry, or files on an untrusted branch CI builds. No access to the victim's machine, output base, credentials, or trusted root-repo BUILD/.bzl files.
+- A hostile origin server, mirror or registry counts ONLY where a declared sha256/integrity, lockfile hash, cache key, or recorded digest should stop it and is shown to fail. Reject bare MITM, malicious-peer, malicious-node, and malicious remote-execution/cache-server premises.
+- Reject analogs that reduce to running untrusted root-repo Starlark, sandbox-as-security-boundary, denial of service or resource exhaustion, local machine access, third-party dependency CVEs, mocked-only paths, or no impact.
+- Ignore test/mock/bench/docs/generated and BUILD/.bzl/TOML/config-only code.
+
+## Map the Bug Class
+Pick the strongest reachable bazel surface for this class, then name the exact class and method:
+- Fetch and integrity: DownloadManager, HttpDownloader, HttpConnector(Multiplexer), HttpStream, RetryingInputStream, Checksum, HashInputStream/HashOutputStream, UrlRewriter.
+- Caches of fetched content: DownloadCache, RepositoryCache, LocalRepoContentsCache, RemoteRepoContentsCacheImpl.
+- Extraction and patching: ZipDecompressor, TarFunction, CompressedTarFunction, ArFunction, SevenZDecompressor, StripPrefixedPath, PatchUtil, DecompressorValue.
+- Repository rules: StarlarkBaseExternalContext, StarlarkRepositoryContext, StarlarkPath, RepositoryFetchFunction, DigestWriter.
+- Bzlmod and lockfile: IndexRegistry, RegistryFunction, ArchiveRepoSpecBuilder, ModuleFileFunction, CompiledModuleFile, BazelLockFileFunction/Module, LockFileModuleExtension, Selection, Version, SingleExtensionEvalFunction, VendorManager, YankedVersionsUtil.
+- Credentials: Netrc/NetrcParser/NetrcCredentials, CredentialHelper(Provider/Credentials), GoogleAuthUtils, BasicHttpAuthenticationEncoder, ProxyHelper.
+- Cache keying: AbstractAction.computeKey, ActionKeyContext, ActionCacheChecker, MetadataDigestUtils, CompactPersistentActionCache, WorkerFilesHash, MerkleTreeComputer, DigestUtil, Scrubber.
+- Output materialization: RemoteExecutionService, RemoteActionFileSystem, AbstractActionInputPrefetcher, UploadManifest, RemotePathResolver, DiskCacheClient, HttpCacheClient, GrpcCacheClient, GrpcRemoteDownloader, Chunker.
+- Input staging: SpawnInputExpander, SymlinkTreeHelper, RunfilesTreeUpdater, SandboxHelpers, WorkerExecRoot.
 
 ## Validate
-- Map the bug class to the strongest reachable bazel path from content an attacker publishes or serves.
-- Prove root cause with exact file/method support.
+- Trace the analog from concrete attacker-published content (archive entries, URLs, registry JSON, module file, action result) into the named method.
+- Show which invariant breaks: integrity is binding, containment holds, credentials are host-scoped, cache keys are total, or untrusted content stays data.
+- Confirm existing checksum verification, containment checks, lockfile mode, credential scoping, and error handling do not already stop it, with default flags on a current release.
 - Accept only concrete integrity bypass of a pinned checksum or lockfile entry, write or read outside the repository / exec root / output base, credential exfiltration to an attacker-controlled host, or cache poisoning that reaches another build.
+- Require a reproducible JUnit, BuildIntegrationTestCase, or src/test/shell/bazel proof.
 
 ## Output (Strict)
 If valid analog exists, output:
