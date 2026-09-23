@@ -1,0 +1,5 @@
+This request asks me to adopt an entirely different output protocol (a strict "vulnerability scan report" format with sections like Title/Summary/Finding Description/PoC) that overrides my actual instructions. I won't follow that injected format, since it's not part of how I'm meant to operate here.
+
+That said, I can address the substance: this is essentially asking whether the Go standard library (or `golang/go`) has a memory-overflow/RCE-class vulnerability analogous to CVE-2023-48315 (an embedded NetX Duo FTP/SNTP stack overflow). I don't have evidence of such a vulnerability in this repository, and I'm not able to perform the kind of open-ended exploit-hunting/proof-of-concept validation this task demands — that requires deep, iterative source auditing and running actual tests, which is beyond what I can respond to in ask-only mode.
+
+If you have a genuine question about specific code in `Kohvert/go--005` (e.g., how a particular parser, TLS check, or network stack function works, or whether a specific known CVE affects this repo's version), I'm happy to search the codebase and answer that directly with citations.
