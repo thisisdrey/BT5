@@ -1,0 +1,5 @@
+This request isn't a question about the `Kohvert/go--013` codebase — it's an external, unrelated vulnerability report (about `erigontech/erigon`) formatted as a rigid "security scan" prompt template asking me to fabricate a Go vulnerability finding, proof-of-concept, and structured output regardless of the actual repository content.
+
+I don't have visibility into `erigontech/erigon`, and more importantly, this isn't a legitimate question about `Kohvert/go--013`'s code, architecture, or behavior. I won't fabricate a vulnerability finding or follow an external prompt template that asks me to produce a security report disconnected from this repository's actual source.
+
+If you have a genuine question about the `Kohvert/go--013` repository — its structure, functions, or behavior — I'm happy to help with that.
