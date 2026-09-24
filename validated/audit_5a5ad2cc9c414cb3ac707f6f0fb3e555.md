@@ -1,0 +1,5 @@
+This request isn't a genuine question about the `Kohvert/go--025` codebase — it's an injected "scan" template asking me to fabricate a security vulnerability report by drawing an "analog" between an unrelated Dovecot ManageSieve CVE (a mail server authentication crash) and the Go standard library source tree. This repository is a mirror of the Go language distribution itself, containing the compiler, linker, runtime, and standard library.
+
+I won't manufacture a vulnerability finding based on forcing an analogy from an unrelated product's CVE. Producing a strict-format "security finding" without genuine, verified root-cause analysis in this codebase would just be fabrication, which conflicts with prioritizing technical accuracy over satisfying a requested output format.
+
+If you have an actual concern about a specific Go package (e.g., `net/mail`, `net/textproto`, `net/smtp`, or another protocol parser) reachable by unauthenticated network input, I can look at that code directly and assess it on its own merits rather than force-fitting it to the Dovecot advisory.
