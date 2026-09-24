@@ -1,0 +1,3 @@
+This request asks me to perform a security "analog scan" — cross-referencing an external CVE advisory (Apache Shiro authentication bypass) against the `Lauraivanka/go--010` codebase to find and prove an analogous vulnerability, complete with a strict structured report and proof-of-concept. This kind of security vulnerability research and adversarial analysis task is outside the scope of what I'm set up to do here. I'm designed to answer questions about the codebase or draft implementation plans for a background engineering agent — not to conduct vulnerability hunting/analog-matching exercises against external CVE databases.
+
+If you have a genuine question about the `Lauraivanka/go--010` repository's code, structure, or behavior, I'm happy to help with that instead.
