@@ -4,13 +4,12 @@ import os
 from decouple import config
 
 # todo: if scope_files is: 500 > 50, 300 > 30 , 100 > 10
-MAX_REPO = 12
-# todo: the GitLab namespace/project path, for example group/project
-SOURCE_REPO = 'autonomoussoftware/metronome-synth-public'
+MAX_REPO = 30
+# todo: the path from https://github.com/tronprotocol/java-tron
+SOURCE_REPO = "tronprotocol/java-tron"
 # todo: the name of the repository
-REPO_NAME = 'metronome-synth-public'
-
-run_number = os.environ.get('GITHUB_RUN_NUMBER', '0')
+REPO_NAME = "java-tron"
+run_number = os.environ.get('GITHUB_RUN_NUMBER') or os.environ.get('CI_PIPELINE_IID', '0')
 
 
 def get_cyclic_index(run_number, max_index=100):
@@ -48,82 +47,367 @@ else:
 
 scope_files = [
     # =================================================================================
-    # Identity and access: Operator batching, SynthContext sender resolution, roles
+    # Transaction admission: signature, permission, tapos and duplicate checks every
+    # broadcast transaction passes before it is executed
     # =================================================================================
-    "contracts/Operator.sol",
-    "contracts/utils/SynthContext.sol",
-    "contracts/access/Governable.sol",
-    "contracts/access/Manageable.sol",
-    "contracts/utils/Pauseable.sol",
+    "chainbase/src/main/java/org/tron/core/capsule/TransactionCapsule.java",
+    "chainbase/src/main/java/org/tron/core/capsule/BlockCapsule.java",
+    "chainbase/src/main/java/org/tron/core/capsule/AccountCapsule.java",
+    "chainbase/src/main/java/org/tron/core/capsule/ReceiptCapsule.java",
+    "chainbase/src/main/java/org/tron/core/capsule/TransactionInfoCapsule.java",
+    "chainbase/src/main/java/org/tron/core/capsule/TransactionResultCapsule.java",
+    "chainbase/src/main/java/org/tron/core/capsule/TransactionRetCapsule.java",
+    "chainbase/src/main/java/org/tron/core/capsule/utils/TransactionUtil.java",
+    "chainbase/src/main/java/org/tron/core/db/TransactionTrace.java",
+    "chainbase/src/main/java/org/tron/core/db/TransactionStore.java",
+    "chainbase/src/main/java/org/tron/core/db/TransactionCache.java",
+    "chainbase/src/main/java/org/tron/core/db/RecentTransactionStore.java",
+    "chainbase/src/main/java/org/tron/core/db/RecentBlockStore.java",
+    "chainbase/src/main/java/org/tron/core/db2/common/TxCacheDB.java",
+    "actuator/src/main/java/org/tron/core/utils/TransactionUtil.java",
+    "actuator/src/main/java/org/tron/core/utils/TransactionRegister.java",
 
     # =================================================================================
-    # Core CDP: pool accounting, collateral receipts, debt issuance/interest, treasury custody
+    # Block pipeline: the code every honest node runs on a block carrying the
+    # attacker's transaction - divergence or a throw here halts or splits the chain
     # =================================================================================
-    "contracts/Pool.sol",
-    "contracts/PoolRegistry.sol",
-    "contracts/DepositToken.sol",
-    "contracts/DebtToken.sol",
-    "contracts/SyntheticToken.sol",
-    "contracts/Treasury.sol",
-    "contracts/FeeProvider.sol",
+    "framework/src/main/java/org/tron/core/db/Manager.java",
+    "framework/src/main/java/org/tron/core/db/PendingManager.java",
+    "framework/src/main/java/org/tron/core/db/HistoryBlockHashUtil.java",
+    "framework/src/main/java/org/tron/core/db/accountstate/callback/AccountStateCallBack.java",
+    "framework/src/main/java/org/tron/core/db/accountstate/TrieService.java",
+    "chainbase/src/main/java/org/tron/core/ChainBaseManager.java",
+    "chainbase/src/main/java/org/tron/core/db/KhaosDatabase.java",
+    "chainbase/src/main/java/org/tron/core/db/BlockStore.java",
+    "chainbase/src/main/java/org/tron/core/db/BlockIndexStore.java",
+    "chainbase/src/main/java/org/tron/core/db/TronStoreWithRevoking.java",
+    "chainbase/src/main/java/org/tron/core/db/TronDatabase.java",
+    "chainbase/src/main/java/org/tron/core/db2/core/SnapshotManager.java",
+    "chainbase/src/main/java/org/tron/core/db2/core/SnapshotImpl.java",
+    "chainbase/src/main/java/org/tron/core/db2/core/SnapshotRoot.java",
+    "chainbase/src/main/java/org/tron/core/db2/core/AbstractSnapshot.java",
+    "chainbase/src/main/java/org/tron/core/db2/core/Chainbase.java",
+    "chainbase/src/main/java/org/tron/common/utils/ForkController.java",
+    "chainbase/src/main/java/org/tron/common/utils/ForkUtils.java",
+    "chainbase/src/main/java/org/tron/core/capsule/utils/BlockUtil.java",
+    "chainbase/src/main/java/org/tron/core/capsule/utils/MerkleTree.java",
+    "common/src/main/java/org/tron/common/utils/MerkleRoot.java",
 
     # =================================================================================
-    # Leverage / flash repay and user-facing gateways
+    # Consensus and reward accounting reachable from an ordinary vote, delegation
+    # or withdrawal transaction
     # =================================================================================
-    "contracts/SmartFarmingManager.sol",
-    "contracts/NativeTokenGateway.sol",
-    "contracts/VesperGateway.sol",
+    "consensus/src/main/java/org/tron/consensus/dpos/DposService.java",
+    "consensus/src/main/java/org/tron/consensus/dpos/DposSlot.java",
+    "consensus/src/main/java/org/tron/consensus/dpos/MaintenanceManager.java",
+    "consensus/src/main/java/org/tron/consensus/dpos/IncentiveManager.java",
+    "consensus/src/main/java/org/tron/consensus/dpos/StatisticManager.java",
+    "consensus/src/main/java/org/tron/consensus/dpos/StateManager.java",
+    "consensus/src/main/java/org/tron/consensus/ConsensusDelegate.java",
+    "consensus/src/main/java/org/tron/consensus/pbft/PbftManager.java",
+    "consensus/src/main/java/org/tron/consensus/pbft/PbftMessageHandle.java",
+    "consensus/src/main/java/org/tron/consensus/pbft/message/PbftBaseMessage.java",
+    "consensus/src/main/java/org/tron/consensus/pbft/message/PbftMessage.java",
+    "chainbase/src/main/java/org/tron/core/capsule/PbftSignCapsule.java",
+    "chainbase/src/main/java/org/tron/core/service/MortgageService.java",
+    "chainbase/src/main/java/org/tron/core/service/RewardViCalService.java",
+    "chainbase/src/main/java/org/tron/core/store/DelegationStore.java",
+    "chainbase/src/main/java/org/tron/core/store/WitnessStore.java",
+    "chainbase/src/main/java/org/tron/core/store/WitnessScheduleStore.java",
+    "chainbase/src/main/java/org/tron/core/store/VotesStore.java",
+    "chainbase/src/main/java/org/tron/core/capsule/VotesCapsule.java",
+    "chainbase/src/main/java/org/tron/core/capsule/WitnessCapsule.java",
+    "framework/src/main/java/org/tron/core/consensus/ProposalController.java",
+    "framework/src/main/java/org/tron/core/consensus/ProposalService.java",
 
     # =================================================================================
-    # Cross-chain synth bridging (LayerZero OFT)
+    # Actuators: one per broadcastable contract type - the value-moving surface any
+    # funded address reaches directly
     # =================================================================================
-    "contracts/ProxyOFT.sol",
+    "actuator/src/main/java/org/tron/core/actuator/AbstractActuator.java",
+    "actuator/src/main/java/org/tron/core/actuator/ActuatorCreator.java",
+    "actuator/src/main/java/org/tron/core/actuator/ActuatorFactory.java",
+    "actuator/src/main/java/org/tron/core/actuator/TransferActuator.java",
+    "actuator/src/main/java/org/tron/core/actuator/TransferAssetActuator.java",
+    "actuator/src/main/java/org/tron/core/actuator/CreateAccountActuator.java",
+    "actuator/src/main/java/org/tron/core/actuator/UpdateAccountActuator.java",
+    "actuator/src/main/java/org/tron/core/actuator/SetAccountIdActuator.java",
+    "actuator/src/main/java/org/tron/core/actuator/AccountPermissionUpdateActuator.java",
+    "actuator/src/main/java/org/tron/core/actuator/AssetIssueActuator.java",
+    "actuator/src/main/java/org/tron/core/actuator/UpdateAssetActuator.java",
+    "actuator/src/main/java/org/tron/core/actuator/ParticipateAssetIssueActuator.java",
+    "actuator/src/main/java/org/tron/core/actuator/UnfreezeAssetActuator.java",
+    "actuator/src/main/java/org/tron/core/actuator/FreezeBalanceActuator.java",
+    "actuator/src/main/java/org/tron/core/actuator/FreezeBalanceV2Actuator.java",
+    "actuator/src/main/java/org/tron/core/actuator/UnfreezeBalanceActuator.java",
+    "actuator/src/main/java/org/tron/core/actuator/UnfreezeBalanceV2Actuator.java",
+    "actuator/src/main/java/org/tron/core/actuator/CancelAllUnfreezeV2Actuator.java",
+    "actuator/src/main/java/org/tron/core/actuator/WithdrawExpireUnfreezeActuator.java",
+    "actuator/src/main/java/org/tron/core/actuator/DelegateResourceActuator.java",
+    "actuator/src/main/java/org/tron/core/actuator/UnDelegateResourceActuator.java",
+    "actuator/src/main/java/org/tron/core/actuator/WithdrawBalanceActuator.java",
+    "actuator/src/main/java/org/tron/core/actuator/VoteWitnessActuator.java",
+    "actuator/src/main/java/org/tron/core/actuator/UpdateBrokerageActuator.java",
+    "actuator/src/main/java/org/tron/core/actuator/WitnessCreateActuator.java",
+    "actuator/src/main/java/org/tron/core/actuator/WitnessUpdateActuator.java",
+    "actuator/src/main/java/org/tron/core/actuator/ProposalCreateActuator.java",
+    "actuator/src/main/java/org/tron/core/actuator/ProposalApproveActuator.java",
+    "actuator/src/main/java/org/tron/core/actuator/ProposalDeleteActuator.java",
+    "actuator/src/main/java/org/tron/core/actuator/UpdateSettingContractActuator.java",
+    "actuator/src/main/java/org/tron/core/actuator/UpdateEnergyLimitContractActuator.java",
+    "actuator/src/main/java/org/tron/core/actuator/ClearABIContractActuator.java",
+    "actuator/src/main/java/org/tron/core/actuator/ShieldedTransferActuator.java",
+    "actuator/src/main/java/org/tron/core/utils/ProposalUtil.java",
 
     # =================================================================================
-    # AMO supply, rewards and airdrops
+    # Bancor exchange and the on-chain market: attacker-chosen quantities drive the
+    # pricing and order-matching arithmetic directly
     # =================================================================================
-    "contracts/AMO.sol",
-    "contracts/RewardsDistributor.sol",
-    "contracts/MetAirdrop.sol",
-    "contracts/utils/RecurringAirdrop.sol",
+    "actuator/src/main/java/org/tron/core/actuator/AbstractExchangeActuator.java",
+    "actuator/src/main/java/org/tron/core/actuator/ExchangeCreateActuator.java",
+    "actuator/src/main/java/org/tron/core/actuator/ExchangeInjectActuator.java",
+    "actuator/src/main/java/org/tron/core/actuator/ExchangeWithdrawActuator.java",
+    "actuator/src/main/java/org/tron/core/actuator/ExchangeTransactionActuator.java",
+    "actuator/src/main/java/org/tron/core/actuator/MarketSellAssetActuator.java",
+    "actuator/src/main/java/org/tron/core/actuator/MarketCancelOrderActuator.java",
+    "chainbase/src/main/java/org/tron/core/capsule/ExchangeProcessor.java",
+    "chainbase/src/main/java/org/tron/core/capsule/SafeExchangeProcessor.java",
+    "chainbase/src/main/java/org/tron/core/capsule/ExchangeCapsule.java",
+    "chainbase/src/main/java/org/tron/core/capsule/utils/MarketUtils.java",
+    "chainbase/src/main/java/org/tron/core/capsule/MarketOrderCapsule.java",
+    "chainbase/src/main/java/org/tron/core/capsule/MarketAccountOrderCapsule.java",
+    "chainbase/src/main/java/org/tron/core/capsule/MarketOrderIdListCapsule.java",
+    "chainbase/src/main/java/org/tron/core/capsule/MarketPriceCapsule.java",
+    "chainbase/src/main/java/org/tron/core/store/MarketOrderStore.java",
+    "chainbase/src/main/java/org/tron/core/store/MarketAccountStore.java",
+    "chainbase/src/main/java/org/tron/core/store/MarketPairPriceToOrderStore.java",
+    "chainbase/src/main/java/org/tron/core/store/MarketPairToPriceStore.java",
+    "platform/src/main/java/common/org/tron/common/utils/MarketComparator.java",
+    "platform/src/main/java/common/org/tron/common/utils/MarketOrderPriceComparatorForLevelDB.java",
 
     # =================================================================================
-    # Shared primitives: math, account sets, reentrancy guards, token sweeping
+    # TVM: interpreter, metering and stateful native contracts an attacker reaches by
+    # deploying and calling their own contract
     # =================================================================================
-    "contracts/lib/WadRayMath.sol",
-    "contracts/lib/MappedEnumerableSet.sol",
-    "contracts/utils/ReentrancyGuardTransient.sol",
-    "contracts/utils/ReentrancyGuardDeprecated.sol",
-    "contracts/utils/TokenHolder.sol",
+    "actuator/src/main/java/org/tron/core/actuator/VMActuator.java",
+    "actuator/src/main/java/org/tron/core/vm/VM.java",
+    "actuator/src/main/java/org/tron/core/vm/Op.java",
+    "actuator/src/main/java/org/tron/core/vm/Operation.java",
+    "actuator/src/main/java/org/tron/core/vm/OperationActions.java",
+    "actuator/src/main/java/org/tron/core/vm/OperationRegistry.java",
+    "actuator/src/main/java/org/tron/core/vm/JumpTable.java",
+    "actuator/src/main/java/org/tron/core/vm/EnergyCost.java",
+    "actuator/src/main/java/org/tron/core/vm/PrecompiledContracts.java",
+    "actuator/src/main/java/org/tron/core/vm/program/Program.java",
+    "actuator/src/main/java/org/tron/core/vm/program/Memory.java",
+    "actuator/src/main/java/org/tron/core/vm/program/Stack.java",
+    "actuator/src/main/java/org/tron/core/vm/program/Storage.java",
+    "actuator/src/main/java/org/tron/core/vm/program/ContractState.java",
+    "actuator/src/main/java/org/tron/core/vm/program/ProgramPrecompile.java",
+    "actuator/src/main/java/org/tron/core/vm/program/invoke/ProgramInvokeFactory.java",
+    "actuator/src/main/java/org/tron/core/vm/program/invoke/ProgramInvokeImpl.java",
+    "actuator/src/main/java/org/tron/core/vm/repository/RepositoryImpl.java",
+    "actuator/src/main/java/org/tron/core/vm/repository/Key.java",
+    "actuator/src/main/java/org/tron/core/vm/repository/Value.java",
+    "actuator/src/main/java/org/tron/core/vm/nativecontract/FreezeBalanceV2Processor.java",
+    "actuator/src/main/java/org/tron/core/vm/nativecontract/UnfreezeBalanceV2Processor.java",
+    "actuator/src/main/java/org/tron/core/vm/nativecontract/DelegateResourceProcessor.java",
+    "actuator/src/main/java/org/tron/core/vm/nativecontract/UnDelegateResourceProcessor.java",
+    "actuator/src/main/java/org/tron/core/vm/nativecontract/CancelAllUnfreezeV2Processor.java",
+    "actuator/src/main/java/org/tron/core/vm/nativecontract/WithdrawExpireUnfreezeProcessor.java",
+    "actuator/src/main/java/org/tron/core/vm/nativecontract/WithdrawRewardProcessor.java",
+    "actuator/src/main/java/org/tron/core/vm/nativecontract/VoteWitnessProcessor.java",
+    "actuator/src/main/java/org/tron/core/vm/nativecontract/FreezeBalanceProcessor.java",
+    "actuator/src/main/java/org/tron/core/vm/nativecontract/UnfreezeBalanceProcessor.java",
+    "actuator/src/main/java/org/tron/core/vm/utils/FreezeV2Util.java",
+    "actuator/src/main/java/org/tron/core/vm/utils/VoteRewardUtil.java",
+    "actuator/src/main/java/org/tron/core/vm/utils/MUtil.java",
+    "actuator/src/main/java/org/tron/core/vm/VMUtils.java",
+    "actuator/src/main/java/org/tron/core/vm/config/ConfigLoader.java",
+    "common/src/main/java/org/tron/core/vm/config/VMConfig.java",
+    "common/src/main/java/org/tron/common/runtime/vm/DataWord.java",
+    "common/src/main/java/org/tron/common/runtime/vm/LogInfo.java",
+    "framework/src/main/java/org/tron/common/runtime/RuntimeImpl.java",
+    "chainbase/src/main/java/org/tron/common/runtime/InternalTransaction.java",
+    "chainbase/src/main/java/org/tron/common/runtime/ProgramResult.java",
 
     # =================================================================================
-    # Upgradeable storage layouts (versioned slots behind live proxies)
+    # Resource model: bandwidth and energy metering that decides whether an attacker
+    # pays for what they consume
     # =================================================================================
-    "contracts/storage/PoolStorage.sol",
-    "contracts/storage/PoolRegistryStorage.sol",
-    "contracts/storage/DepositTokenStorage.sol",
-    "contracts/storage/DebtTokenStorage.sol",
-    "contracts/storage/SyntheticTokenStorage.sol",
-    "contracts/storage/TreasuryStorage.sol",
-    "contracts/storage/FeeProviderStorage.sol",
-    "contracts/storage/SmartFarmingManagerStorage.sol",
-    "contracts/storage/ProxyOFTStorage.sol",
-    "contracts/storage/RewardsDistributorStorage.sol",
-    "contracts/storage/AMOStorage.sol",
+    "chainbase/src/main/java/org/tron/core/db/ResourceProcessor.java",
+    "chainbase/src/main/java/org/tron/core/db/BandwidthProcessor.java",
+    "chainbase/src/main/java/org/tron/core/db/EnergyProcessor.java",
+    "chainbase/src/main/java/org/tron/core/store/DynamicPropertiesStore.java",
+    "chainbase/src/main/java/org/tron/core/store/AccountStore.java",
+    "chainbase/src/main/java/org/tron/core/store/AccountAssetStore.java",
+    "chainbase/src/main/java/org/tron/core/store/AccountIdIndexStore.java",
+    "chainbase/src/main/java/org/tron/core/store/AccountIndexStore.java",
+    "chainbase/src/main/java/org/tron/core/store/DelegatedResourceStore.java",
+    "chainbase/src/main/java/org/tron/core/store/DelegatedResourceAccountIndexStore.java",
+    "chainbase/src/main/java/org/tron/core/capsule/DelegatedResourceCapsule.java",
+    "chainbase/src/main/java/org/tron/core/capsule/DelegatedResourceAccountIndexCapsule.java",
+    "chainbase/src/main/java/org/tron/core/capsule/ContractStateCapsule.java",
+    "chainbase/src/main/java/org/tron/core/capsule/AssetIssueCapsule.java",
+    "chainbase/src/main/java/org/tron/core/capsule/utils/AssetUtil.java",
+    "chainbase/src/main/java/org/tron/core/store/AssetIssueStore.java",
+    "chainbase/src/main/java/org/tron/core/store/AssetIssueV2Store.java",
+    "chainbase/src/main/java/org/tron/core/store/ContractStore.java",
+    "chainbase/src/main/java/org/tron/core/store/ContractStateStore.java",
+    "chainbase/src/main/java/org/tron/core/store/CodeStore.java",
+    "chainbase/src/main/java/org/tron/core/store/AbiStore.java",
+    "chainbase/src/main/java/org/tron/core/store/StorageRowStore.java",
+    "chainbase/src/main/java/org/tron/core/store/ProposalStore.java",
+    "chainbase/src/main/java/org/tron/core/store/ExchangeStore.java",
+    "chainbase/src/main/java/org/tron/core/store/ExchangeV2Store.java",
+    "chainbase/src/main/java/org/tron/common/utils/Commons.java",
+
+    # =================================================================================
+    # Cryptographic primitives behind signature recovery, address derivation and hashing
+    # =================================================================================
+    "crypto/src/main/java/org/tron/common/crypto/ECKey.java",
+    "crypto/src/main/java/org/tron/common/crypto/Rsv.java",
+    "crypto/src/main/java/org/tron/common/crypto/SignUtils.java",
+    "crypto/src/main/java/org/tron/common/crypto/Hash.java",
+    "crypto/src/main/java/org/tron/common/crypto/Blake2bfMessageDigest.java",
+    "crypto/src/main/java/org/tron/common/crypto/sm2/SM2.java",
+    "crypto/src/main/java/org/tron/common/crypto/sm2/SM2Signer.java",
+    "crypto/src/main/java/org/tron/common/crypto/zksnark/BN128.java",
+    "crypto/src/main/java/org/tron/common/crypto/zksnark/BN128G1.java",
+    "crypto/src/main/java/org/tron/common/crypto/zksnark/BN128G2.java",
+    "crypto/src/main/java/org/tron/common/crypto/zksnark/PairingCheck.java",
+    "crypto/src/main/java/org/tron/common/crypto/zksnark/Fp2.java",
+    "crypto/src/main/java/org/tron/common/crypto/zksnark/Fp12.java",
+    "crypto/src/main/java/org/tron/common/crypto/cryptohash/Keccak256.java",
+    "common/src/main/java/org/tron/common/utils/Sha256Hash.java",
+    "common/src/main/java/org/tron/common/utils/DecodeUtil.java",
+    "common/src/main/java/org/tron/common/utils/Base58.java",
+    "common/src/main/java/org/tron/common/utils/Bech32.java",
+    "common/src/main/java/org/tron/common/utils/ByteArray.java",
+    "common/src/main/java/org/tron/common/utils/ByteUtil.java",
+    "common/src/main/java/org/tron/common/utils/BIUtil.java",
+    "common/src/main/java/org/tron/common/utils/CompactEncoder.java",
+    "common/src/main/java/org/tron/common/math/Maths.java",
+    "common/src/main/java/org/tron/common/math/StrictMathWrapper.java",
+    "framework/src/main/java/org/tron/core/trie/TrieImpl.java",
+    "framework/src/main/java/org/tron/core/trie/TrieKey.java",
+    "framework/src/main/java/org/tron/core/capsule/utils/RLP.java",
+
+    # =================================================================================
+    # Shielded transaction path: note commitments, nullifiers and merkle vouchers an
+    # attacker supplies wholesale
+    # =================================================================================
+    "framework/src/main/java/org/tron/core/zen/ZenTransactionBuilder.java",
+    "framework/src/main/java/org/tron/core/zen/ShieldedTRC20ParametersBuilder.java",
+    "framework/src/main/java/org/tron/core/zen/note/Note.java",
+    "framework/src/main/java/org/tron/core/zen/note/NoteEncryption.java",
+    "framework/src/main/java/org/tron/core/zen/address/KeyIo.java",
+    "framework/src/main/java/org/tron/core/zen/address/SpendingKey.java",
+    "chainbase/src/main/java/org/tron/common/zksnark/MerkleContainer.java",
+    "chainbase/src/main/java/org/tron/common/zksnark/IncrementalMerkleTreeContainer.java",
+    "chainbase/src/main/java/org/tron/common/zksnark/IncrementalMerkleVoucherContainer.java",
+    "chainbase/src/main/java/org/tron/common/zksnark/MerklePath.java",
+    "chainbase/src/main/java/org/tron/common/zksnark/JLibrustzcash.java",
+    "chainbase/src/main/java/org/tron/common/zksnark/LibrustzcashParam.java",
+    "chainbase/src/main/java/org/tron/core/store/NullifierStore.java",
+    "chainbase/src/main/java/org/tron/core/store/IncrementalMerkleTreeStore.java",
+
+    # =================================================================================
+    # Public query and broadcast API: HTTP, gRPC and JSON-RPC surfaces any anonymous
+    # client can call on a public FullNode
+    # =================================================================================
+    "framework/src/main/java/org/tron/core/Wallet.java",
+    "framework/src/main/java/org/tron/core/services/RpcApiService.java",
+    "framework/src/main/java/org/tron/core/services/NodeInfoService.java",
+    "framework/src/main/java/org/tron/core/services/WalletOnCursor.java",
+    "framework/src/main/java/org/tron/core/services/interfaceOnSolidity/WalletOnSolidity.java",
+    "framework/src/main/java/org/tron/core/services/interfaceOnPBFT/WalletOnPBFT.java",
+    "framework/src/main/java/org/tron/core/services/http/Util.java",
+    "framework/src/main/java/org/tron/core/services/http/PostParams.java",
+    "framework/src/main/java/org/tron/core/services/http/JsonFormat.java",
+    "framework/src/main/java/org/tron/core/services/http/RateLimiterServlet.java",
+    "framework/src/main/java/org/tron/core/services/http/BroadcastServlet.java",
+    "framework/src/main/java/org/tron/core/services/http/BroadcastHexServlet.java",
+    "framework/src/main/java/org/tron/core/services/http/TriggerSmartContractServlet.java",
+    "framework/src/main/java/org/tron/core/services/http/TriggerConstantContractServlet.java",
+    "framework/src/main/java/org/tron/core/services/http/EstimateEnergyServlet.java",
+    "framework/src/main/java/org/tron/core/services/http/GetTransactionSignWeightServlet.java",
+    "framework/src/main/java/org/tron/core/services/http/GetTransactionApprovedListServlet.java",
+    "framework/src/main/java/org/tron/core/services/http/GetBlockByLimitNextServlet.java",
+    "framework/src/main/java/org/tron/core/services/http/GetPaginatedAssetIssueListServlet.java",
+    "framework/src/main/java/org/tron/core/services/http/GetPaginatedExchangeListServlet.java",
+    "framework/src/main/java/org/tron/core/services/http/GetPaginatedProposalListServlet.java",
+    "framework/src/main/java/org/tron/core/services/http/GetMarketOrderListByPairServlet.java",
+    "framework/src/main/java/org/tron/core/services/http/GetDelegatedResourceAccountIndexServlet.java",
+    "framework/src/main/java/org/tron/core/services/jsonrpc/TronJsonRpcImpl.java",
+    "framework/src/main/java/org/tron/core/services/jsonrpc/JsonRpcApiUtil.java",
+    "framework/src/main/java/org/tron/core/services/jsonrpc/JsonRpcServlet.java",
+    "framework/src/main/java/org/tron/core/services/jsonrpc/types/BuildArguments.java",
+    "framework/src/main/java/org/tron/core/services/jsonrpc/types/CallArguments.java",
+    "framework/src/main/java/org/tron/core/services/jsonrpc/types/BlockResult.java",
+    "framework/src/main/java/org/tron/core/services/jsonrpc/types/TransactionResult.java",
+    "framework/src/main/java/org/tron/core/services/jsonrpc/types/TransactionReceipt.java",
+    "framework/src/main/java/org/tron/core/services/jsonrpc/filters/LogFilter.java",
+    "framework/src/main/java/org/tron/core/services/jsonrpc/filters/LogFilterWrapper.java",
+    "framework/src/main/java/org/tron/core/services/jsonrpc/filters/LogBlockQuery.java",
+    "framework/src/main/java/org/tron/core/services/jsonrpc/filters/LogMatch.java",
+    "framework/src/main/java/org/tron/core/services/filter/HttpApiAccessFilter.java",
+    "framework/src/main/java/org/tron/core/services/filter/LiteFnQueryHttpFilter.java",
+    "framework/src/main/java/org/tron/core/services/filter/LiteFnQueryGrpcInterceptor.java",
+    "framework/src/main/java/org/tron/core/services/filter/CachedBodyRequestWrapper.java",
+    "framework/src/main/java/org/tron/core/services/ratelimiter/RateLimiterInterceptor.java",
+    "framework/src/main/java/org/tron/core/services/ratelimiter/RateLimiterContainer.java",
+    "framework/src/main/java/org/tron/core/services/ratelimiter/GlobalRateLimiter.java",
+    "framework/src/main/java/org/tron/core/services/ratelimiter/RpcApiAccessInterceptor.java",
+    "framework/src/main/java/org/tron/core/services/ratelimiter/adapter/IPQPSRateLimiterAdapter.java",
+    "framework/src/main/java/org/tron/core/services/ratelimiter/adapter/GlobalPreemptibleAdapter.java",
+    "framework/src/main/java/org/tron/core/services/ratelimiter/adapter/QpsRateLimiterAdapter.java",
+
+    # =================================================================================
+    # Event and log derivation driven by attacker-authored contract output
+    # =================================================================================
+    "framework/src/main/java/org/tron/common/logsfilter/ContractEventParser.java",
+    "framework/src/main/java/org/tron/common/logsfilter/ContractEventParserAbi.java",
+    "framework/src/main/java/org/tron/common/logsfilter/ContractEventParserJson.java",
+    "framework/src/main/java/org/tron/common/logsfilter/capsule/ContractTriggerCapsule.java",
+    "framework/src/main/java/org/tron/common/logsfilter/capsule/TransactionLogTriggerCapsule.java",
+    "framework/src/main/java/org/tron/common/runtime/LogEventWrapper.java",
+    "framework/src/main/java/org/tron/core/services/event/BlockEventGet.java",
+    "framework/src/main/java/org/tron/core/services/event/BlockEventCache.java",
+    "chainbase/src/main/java/org/tron/common/bloom/Bloom.java",
+    "chainbase/src/main/java/org/tron/core/store/SectionBloomStore.java",
+
+    # =================================================================================
+    # Storage engine and iteration primitives every unbounded query bottoms out in
+    # =================================================================================
+    "chainbase/src/main/java/org/tron/common/storage/leveldb/LevelDbDataSourceImpl.java",
+    "chainbase/src/main/java/org/tron/common/storage/rocksdb/RocksDbDataSourceImpl.java",
+    "chainbase/src/main/java/org/tron/core/db/common/iterator/StoreIterator.java",
+    "chainbase/src/main/java/org/tron/core/db/common/iterator/RockStoreIterator.java",
+    "chainbase/src/main/java/org/tron/core/db/common/iterator/DBIterator.java",
+    "chainbase/src/main/java/org/tron/core/db2/common/LevelDB.java",
+    "chainbase/src/main/java/org/tron/core/db2/common/RocksDB.java",
+    "chainbase/src/main/java/org/tron/core/db2/common/WrappedByteArray.java",
+    "common/src/main/java/org/tron/common/cache/TronCache.java",
+    "common/src/main/java/org/tron/common/utils/SlidingWindowCounter.java",
+    "common/src/main/java/org/tron/common/utils/StringUtil.java",
+    "common/src/main/java/org/tron/common/utils/JsonUtil.java",
+    "common/src/main/java/org/tron/json/JSONObject.java",
+    "common/src/main/java/org/tron/json/JSONArray.java",
 ]
 
 
 target_scopes = [
-    "Critical. An unprivileged caller acts as another account, because Operator.execute/getActualMsgSender, the transient MSG_SENDER slot, or SynthContext._msgSender resolves the wrong actor - a nested or re-entered call, a stale or zero slot, a contract that mixes msg.sender with _msgSender(), or a SynthContext check (onlyPool, onlyIfCanMint/Burn/Seize, onlyIfSmartFarmingManager, ProxyOFT._debitFrom from_ check, Treasury.pull) passing for the Operator - letting the attacker move a victim's synths, deposit tokens, debt, allowances, or anything left in the Operator.",
-    "Critical. Collateral backing open debt leaves the Treasury, or deposit tokens are minted without matching underlying, because DepositToken deposit/withdraw/transfer/transferFrom/flashWithdraw/withdrawFrom, _revertIfLocked/unlockedBalanceOf, the Treasury balance-delta measurement, Treasury.pull, or NativeTokenGateway/VesperGateway deposit/withdraw with attacker-chosen pool_/vToken_ mis-accounts amounts, fees, or lock state, draining other users' collateral.",
-    "Critical. Synthetic tokens are minted without the matching debt, or debt is erased without burning synth, because DebtToken issue/mint/flashIssue/repay/repayAll/_mint/_burn, principalOf/debtIndexOf/debtIndex interest math, accrueInterest (including the pendingInterestFee try/catch), fee quotes, or Pool.debtPositionOf/depositOf/debtOf rounding lets a borrower exceed the issuable limit or lower their debt, leaving the protocol insolvent.",
-    "Critical. Pool.liquidate seizes more collateral than the repaid debt plus configured fees, liquidates a healthy position, or lets a borrower make an underwater position unliquidatable, because quoteLiquidateOut/In/Max, the maxLiquidable ratio check, debtFloorInUsd, multi-token debtOf/depositOf valuation, DepositToken.seize fee split, or accrue-before-check ordering is wrong, causing theft from borrowers or unrecoverable bad debt.",
-    "Critical. An attacker extracts value from the synth system through oracle-priced paths, because Pool.swap/quoteSwapIn/quoteSwapOut, issue, leverage, or liquidation price assets with a MasterOracle quote the attacker can move in the same transaction (flash loan, vault-share donation to pricePerShare-based collateral such as vaTokens, AMM price used by the swapper), letting them mint, swap, or seize for more than they pay.",
-    "Critical. SmartFarmingManager.leverage or flashRepay ends with debt not backed by the collateral deposited, pays a user from funds that are not theirs, or strands user funds, because the attacker-chosen tokenIn_, balance-delta measurement around the swapper, flashIssue then DebtToken.mint ordering, flashWithdraw without a lock check, repay-fee math, leftover synth refund, or the final debtPositionOf health check can be abused, including via token callbacks during the swap.",
-    "Critical. Cross-chain synth supply is created or destroyed incorrectly, because ProxyOFT._debitFrom/_creditTo/sendFrom, the inherited OFTCore/ComposableOFTCore receive path (PT_SEND_AND_CALL, _sendAndCallAck, onOFTReceived), NonblockingLzApp retryMessage/retryOFTReceived, or the SyntheticToken totalBridgedIn/totalBridgedOut caps let an unprivileged user get credited twice, debit someone else, or have a burned transfer permanently uncreditable.",
-    "High. Unclaimed rewards or airdrops are stolen, inflated, or permanently frozen, because the permissionless RewardsDistributor updateBeforeMintOrBurn/updateBeforeTransfer/claimRewards, the accountIndexOf==0 to INITIAL_INDEX fallback, DebtToken balances growing through interest without a checkpoint, the DepositToken/DebtToken transfer hooks, or the RecurringAirdrop/MetAirdrop leaf, claimed[] accounting and esMET lockFor path lets an attacker claim more than they earned or someone else's share.",
-    "Critical. An unprivileged attacker permanently or temporarily freezes a victim's funds, because dust DepositToken transfers push the victim to MAX_TOKENS_PER_USER in MappedEnumerableSet, debtFloorInUsd blocks the victim's repay or exit, a reverting rewards hook or pool/registry state check sits on the withdraw, repay or liquidation path, or bridged-supply and total-supply caps can be filled so victims cannot withdraw collateral, repay debt, or receive bridged synth.",
-    "Critical/High blind spot. An unprivileged user breaks an assumption Metronome never wrote down: a value checked in one contract and trusted as still valid in another in the same transaction (health, lock, supply cap, price), a check enforced on the direct path but missing on its Operator, gateway, SmartFarmingManager or bridge twin, a new ProxyOFT/Operator/transient-guard version running on storage slots written by an older layout, a shutdown or pause flag that blocks exits but not entries, or rounding that always favors the caller and can be repeated - yielding theft, insolvency, or permanently frozen funds.",
+    "Critical. An unprivileged attacker gets a transaction accepted against an account whose key they do not hold, performing an unauthorized account operation: validateSignature, checkWeight, getWeight, getPermission and getApprovedList in chainbase/src/main/java/org/tron/core/capsule/TransactionCapsule.java, validate in actuator/src/main/java/org/tron/core/actuator/AccountPermissionUpdateActuator.java, signatureToKeyBytes, recoverFromSignature, verify and validateComponents in crypto/src/main/java/org/tron/common/crypto/ECKey.java, fromSignature in Rsv.java, SignUtils.java dispatch, or validateMultiSign and ecRecover in actuator/src/main/java/org/tron/core/vm/PrecompiledContracts.java accept a malleable, over-length, duplicated or reordered signature so the weight threshold is met without the owner's key.",
+    "Critical. A single broadcast transaction makes honest FullNodes disagree on the resulting state or block hash, forcing an unintended chain split that needs a hard fork: processTransaction, applyBlock, pushBlock, consumeBandwidth and validateTapos in framework/src/main/java/org/tron/core/db/Manager.java, pass and passNew in chainbase/src/main/java/org/tron/common/utils/ForkController.java, the getEnergyLimit/hasEnergy paths in chainbase/src/main/java/org/tron/core/db/TransactionTrace.java, VMConfig feature flags read in actuator/src/main/java/org/tron/core/vm/config/ConfigLoader.java, or the pow/round/multiplyAndDivide helpers in common/src/main/java/org/tron/common/math/Maths.java and StrictMathWrapper.java produce a version-, JDK- or ordering-dependent result that only some nodes reproduce.",
+    "Critical. A transaction or a contract call an attacker broadcasts throws an unhandled error inside block application, so every node that processes the containing block crashes, wedges or stops confirming new transactions: processTransaction and applyBlock in framework/src/main/java/org/tron/core/db/Manager.java, push and getBlock in chainbase/src/main/java/org/tron/core/db/KhaosDatabase.java, merge, flush and revoke in chainbase/src/main/java/org/tron/core/db2/core/SnapshotManager.java and SnapshotImpl.java, execute in actuator/src/main/java/org/tron/core/actuator/VMActuator.java, or the exception mapping in TransactionTrace.java and framework/src/main/java/org/tron/common/runtime/RuntimeImpl.java turn attacker-chosen contract data into a node-fatal throw rather than a rejected transaction.",
+    "Critical. An attacker mints, duplicates or destroys balance that was never backed, breaking TRX or TRC10 supply conservation: execute and validate in TransferActuator.java, TransferAssetActuator.java, ParticipateAssetIssueActuator.java, AssetIssueActuator.java and UnfreezeAssetActuator.java under actuator/src/main/java/org/tron/core/actuator/, addBalance, setBalance, addAssetAmountV2 and reduceAssetAmountV2 in chainbase/src/main/java/org/tron/core/capsule/AccountCapsule.java, adjustBalance and adjustAssetBalanceV2 in chainbase/src/main/java/org/tron/common/utils/Commons.java, or the exchange/withdraw arithmetic in chainbase/src/main/java/org/tron/core/capsule/ExchangeProcessor.java let a chosen amount, precision or asset id overflow, truncate or credit twice.",
+    "Critical. The stake, delegation and reward accounting pays an attacker value they never staked or permanently freezes a victim's principal: execute and validate in FreezeBalanceV2Actuator.java, UnfreezeBalanceV2Actuator.java, CancelAllUnfreezeV2Actuator.java, WithdrawExpireUnfreezeActuator.java, DelegateResourceActuator.java, UnDelegateResourceActuator.java and WithdrawBalanceActuator.java under actuator/src/main/java/org/tron/core/actuator/, the mirrored processors in actuator/src/main/java/org/tron/core/vm/nativecontract/, getCanDelegatedMaxSize and getCanWithdrawUnfreezeAmount in actuator/src/main/java/org/tron/core/vm/utils/FreezeV2Util.java, and withdrawReward, queryReward, computeReward and adjustAllowance in chainbase/src/main/java/org/tron/core/service/MortgageService.java miscount unfreezing entries, delegation locks, vote weight or cycle boundaries.",
+    "Critical. A contract an attacker deploys and calls executes work the TVM never charges for, or charges differently across nodes, letting them consume block capacity for free or break gas determinism: the opcode handlers in actuator/src/main/java/org/tron/core/vm/OperationActions.java and OperationRegistry.java, spendEnergy, memoryExpand, getMemSize and the CALL/CREATE frames in actuator/src/main/java/org/tron/core/vm/program/Program.java and Memory.java, the cost functions in actuator/src/main/java/org/tron/core/vm/EnergyCost.java, getEnergyLimit and checkEnergyLimit in chainbase/src/main/java/org/tron/core/db/TransactionTrace.java, useEnergy in chainbase/src/main/java/org/tron/core/db/EnergyProcessor.java, or the storage and refund accounting in actuator/src/main/java/org/tron/core/vm/program/Storage.java and vm/repository/RepositoryImpl.java undercharge or double-refund a reachable execution path.",
+    "Critical. An attacker escapes bandwidth and fee accounting or evades the duplicate-transaction and expiration checks, so they can flood mainnet with free transactions or replay one: consumeBandwidth, useTransactionFee, useAssetAccountNet and consumeForCreateNewAccount in chainbase/src/main/java/org/tron/core/db/BandwidthProcessor.java, consumeBandwidth in ResourceProcessor.java, validateTapos, validateDup, validateCommon and pushTransaction in framework/src/main/java/org/tron/core/db/Manager.java, has and put in chainbase/src/main/java/org/tron/core/db2/common/TxCacheDB.java, chainbase/src/main/java/org/tron/core/db/RecentTransactionStore.java and RecentBlockStore.java, or getTransactionId and getSerializedSize in chainbase/src/main/java/org/tron/core/capsule/TransactionCapsule.java let two distinct payloads share an id or one payload bypass the size and expiration limits.",
+    "Critical. A single anonymous HTTP, gRPC or JSON-RPC request to a public FullNode exhausts memory or blocks the service thread pool until the node stops answering and stops confirming transactions: countVote, getAssetIssueList, getPaginatedAssetIssueList, getPaginatedProposalList, getPaginatedExchangeList, getMarketOrderListByPair, getMarketPairList, getDelegatedResourceAccountIndex, getBlockByLimitNext, triggerConstantContract and estimateEnergy in framework/src/main/java/org/tron/core/Wallet.java, getLogs, ethCall, ethEstimateGas and buildTransaction in framework/src/main/java/org/tron/core/services/jsonrpc/TronJsonRpcImpl.java with filters/LogFilterWrapper.java and LogBlockQuery.java, parse in framework/src/main/java/org/tron/core/services/http/JsonFormat.java and Util.java, or the limiters in framework/src/main/java/org/tron/core/services/ratelimiter/ perform an unbounded store scan or unchecked allocation driven by one request parameter.",
+    "High. An attacker permanently corrupts or wedges shared on-chain state that other users depend on, censoring their transactions or stranding their assets: the order and price indexes in chainbase/src/main/java/org/tron/core/capsule/utils/MarketUtils.java, MarketOrderCapsule.java, MarketAccountOrderCapsule.java and the MarketPairPriceToOrderStore/MarketPairToPriceStore under chainbase/src/main/java/org/tron/core/store/, matching order in MarketSellAssetActuator.java and MarketCancelOrderActuator.java with platform/src/main/java/common/org/tron/common/utils/MarketComparator.java, the nullifier and voucher bookkeeping in chainbase/src/main/java/org/tron/common/zksnark/MerkleContainer.java and IncrementalMerkleTreeContainer.java with NullifierStore.java, or the pending queue handling in framework/src/main/java/org/tron/core/db/PendingManager.java leave an entry no owner can ever cancel, withdraw or re-broadcast.",
+    "Critical/High blind spot. An ordinary funded account or anonymous API client abuses an assumption java-tron never wrote down: two distinct payloads that serialize to the same transaction id or the same store key under ByteArray, WrappedByteArray or a capsule's key builder, a protobuf field that validate() reads but execute() re-reads after mutation, an address accepted by DecodeUtil.addressValid but rejected or normalized elsewhere, a limit enforced on the HTTP servlet but not on the gRPC or JSON-RPC path to the same Wallet method, a proposal-gated feature flag whose old and new branches disagree on stored state, a value that survives the actuator but overflows only once ContractStateCapsule, DelegationStore or SectionBloomStore reads it back, a revoking-session error path that commits half its writes, or a cache in TxCacheDB, TronCache or KhaosDatabase that answers differently from the store it fronts - yielding an unauthorized account operation, unbacked balance, permanently frozen funds, a node crash on block application, an unintended chain split, or an RPC-API the node can no longer serve.",
 ]
 
 
@@ -133,51 +417,50 @@ scope_scan = [
 
 def question_generator(target_file: str) -> str:
     """
-    Generate exploit-focused audit and fuzzing questions for one metronome-synth target.
+    Generate exploit-focused audit and fuzzing questions for one java-tron target.
 
     ```
     target_file format:
-    "'File Name: contracts/Pool.sol -> Scope: Critical. ...'"
+    "'File Name: actuator/src/main/java/org/tron/core/actuator/TransferActuator.java -> Scope: Critical. ...'"
     """
 
     prompt = f"""
     ```
 
-    Generate exploit-focused security audit questions for this exact metronome-synth target:
+    Generate exploit-focused security audit questions for this exact java-tron target:
 
     {target_file}
 
     Project focus:
-    Metronome Synth is a CDP synthetic-asset protocol (Ethereum, Optimism and other L2s). Users deposit collateral into DepositTokens (held by Treasury), issue msAssets against DebtTokens, swap synths at oracle price in Pool, get liquidated in Pool, leverage/flash-repay through SmartFarmingManager, bridge synths via ProxyOFT (LayerZero), batch calls through Operator (SynthContext resolves the real sender), and earn rewards/airdrops.
+    java-tron is the TRON mainnet FullNode. Focus only on what an ordinary user reaches: signing and broadcasting any Transaction contract type (Transfer, TransferAsset, AssetIssue, ParticipateAssetIssue, FreezeBalanceV2, UnfreezeBalanceV2, CancelAllUnfreezeV2, WithdrawExpireUnfreeze, DelegateResource, UnDelegateResource, WithdrawBalance, VoteWitness, AccountPermissionUpdate, UpdateAccount, SetAccountId, ExchangeCreate/Inject/Withdraw/Transaction, MarketSellAsset, MarketCancelOrder, CreateSmartContract, TriggerSmartContract, ShieldedTransfer) through a public FullNode, deploying and calling their own TVM contract, and calling the public HTTP, gRPC and JSON-RPC endpoints anonymously. Downstream of that: actuator validate/execute, TVM execution and energy metering, bandwidth and energy consumption, stake/delegation/reward accounting, store writes and indexes, block application on every honest node, and the query paths those endpoints reach.
 
     Rules:
-    * Treat `File Name:` as the exact file/contract.
+    * Treat `File Name:` as the exact file/class.
     * Treat `Scope:` as the ONLY impact to target.
     * Assume full repo context is accessible.
     * Do not ask for code or say anything is missing.
-    * Use exact Solidity symbols (contract, function, modifier, storage variable) when possible.
-    * Attacker is unprivileged only: any EOA or attacker-deployed contract calling public/external functions directly or through Operator.execute, NativeTokenGateway or VesperGateway, using flash loans, own ERC20s/fake pools/fake vTokens passed as arguments, front-running, donations, and AMM trades.
-    * Attacker is NOT governor, guardian, AMO keeper, tokenSpeedKeeper, fee collector, proxy admin, oracle operator, LayerZero endpoint/relayer/DVN, or a trusted remote ProxyOFT. Never base a question on a malicious peer, node, relayer, or bridge.
-    * Out of scope, never ask about: incorrect third-party oracle data (manipulation reachable in one transaction IS in scope), governance parameter choices, centralization, external stablecoin depeg, Sybil, 51% attacks, gas/unbounded-loop/out-of-gas DoS, best practices, and issues already in the audits/ reports.
-    * Ignore test files, mocks, scripts, deploy, interfaces-only, dependencies/ (unless reached through Metronome code), and config-only findings.
-    * Every question must be a concrete real-world scenario reachable from a valid entry point (deposit, withdraw, issue, repay, repayAll, liquidate, swap, leverage, flashRepay, sendFrom, claimRewards, claim, gateway deposit/withdraw, Operator.execute). No generic unbounded-allocation or memory speculation.
+    * Use exact symbols (Java class, method, field, enum constant, or capsule/store name) when possible.
+    * Attacker is unprivileged only: anyone who funds a TRON address and broadcasts signed transactions, deploys and calls their own smart contract, creates their own asset, exchange or market order, or sends anonymous HTTP/gRPC/JSON-RPC requests to a public FullNode. They control only their own keys.
+    * Attacker is NOT a super representative, witness, block producer, committee member, node operator or database operator, and holds no other user's key. Never assume a malicious peer, malicious node, malicious SR, p2p/gossip/sync attacker, network-level DoS or flooding, leaked key, non-default config, or social engineering.
+    * Out of scope, never ask about: p2p networking and peer handling, block production and witness scheduling by an SR, the toolkit/CLI plugins, node startup and config parsing, metrics and logging, deployment and infra, dependency versions.
+    * Ignore test files, mocks, benchmarks, docs, generated protobuf classes, and config-only findings.
+    * Every question must describe a real signed transaction, contract deployment, contract call, or single API request the attacker actually submits through a valid entrypoint. No generic unbounded-allocation, memory-growth or resource-exhaustion speculation; no "what if the input is huge" without a concrete submitted payload and a concrete broken invariant.
     * Generate 40 to 80 high-signal questions.
-    * At least 70% must target direct theft of user funds, protocol insolvency (unbacked synth or bad debt), or permanent freezing of funds; the rest may target theft/freezing of unclaimed yield or temporary freezing.
-    * Every question must be provable with a Hardhat or Foundry mainnet-fork test.
+    * At least 70% must target an unauthorized account operation, direct theft or permanent freezing of funds, unbacked balance or supply inflation, a node crash or halt on block application, an unintended chain split between honest nodes, or a public API a FullNode can no longer serve.
+    * Every question must be testable by a `./gradlew :actuator:test`, `:chainbase:test`, `:consensus:test`, `:crypto:test`, `:common:test` or `:framework:test` JUnit test, or a single-node block-application flow test.
     * Avoid generic checklist questions and repeated root causes.
 
     Core invariants:
-    * Identity: an account's synths, deposit tokens, debt and allowances change only by that account's own call (direct or via Operator) or a rule-conforming liquidation.
-    * Solvency: after any user action, debt stays within the issuable limit, every synth minted is matched by debt, AMO supply, or a bridged-in credit, and underlying leaving Treasury equals deposit tokens burned.
-    * Liquidation: only unhealthy positions, repaid amount <= maxLiquidable share, seized collateral == repaid value plus configured fees.
-    * Bridge conservation: each burn on the source chain is credited exactly once on the destination.
-    * Rewards: accrued = balance x index delta since the account's last checkpoint, claimed once.
-    * Liveness: when not shut down, users can always repay, withdraw unlocked collateral, and exit.
+    * Authorization: state changes to an account happen only when signatures meeting that account's active permission threshold, counted once per distinct key, are present.
+    * Value conservation: TRX and TRC10 debited on one side are credited exactly once on the other; fees, rewards, stake and delegated resources are never created, duplicated or stranded.
+    * Metering integrity: every byte and every opcode an attacker causes to execute is charged to a resource they actually own, identically on every node.
+    * Determinism: given the same block, every honest node at the same fork version reaches the same state root, receipt and block hash.
+    * Availability: no single submitted transaction or API request can crash a node, stop block application, or make a public endpoint permanently unable to answer other users.
 
     Each question must include:
-    1. target contract/function;
-    2. attacker action (concrete calls, arguments, contracts deployed);
-    3. preconditions (pool state, victim position, fees, flags);
+    1. target class/method;
+    2. attacker action (a concrete transaction, contract deployment, contract call or API request: contract type, fields, calldata, parameters);
+    3. preconditions (accounts, TRX balance, staked resources, deployed contract, issued asset or created order the attacker relies on);
     4. execution sequence;
     5. invariant tested;
     6. scoped impact;
@@ -186,7 +469,7 @@ def question_generator(target_file: str) -> str:
     Output only valid Python. No markdown. No explanations.
 
     questions = [
-    "[File: {target_file}] [Function: contract.function] Can an unprivileged ATTACKER_ACTION under PRECONDITIONS trigger EXECUTION_SEQUENCE, violating INVARIANT, causing scoped impact: SCOPE_IMPACT? Proof idea: fork test PARAMETERS and assert IDENTITY, SOLVENCY, LIQUIDATION, BRIDGE_CONSERVATION, REWARDS, or LIVENESS.",
+    "[File: {target_file}] [Function: symbol_or_method] Can an unprivileged ATTACKER_ACTION under PRECONDITIONS trigger EXECUTION_SEQUENCE, violating INVARIANT, causing scoped impact: SCOPE_IMPACT? Proof idea: gradle JUnit test / single-node block-application test PARAMETERS and assert AUTHORIZATION, VALUE_CONSERVATION, METERING_INTEGRITY, DETERMINISM, or AVAILABILITY.",
     ]
     """
     return prompt
@@ -194,7 +477,7 @@ def question_generator(target_file: str) -> str:
 
 def audit_format(security_question: str) -> str:
     """
-    Generate a focused metronome-synth exploit-validation prompt.
+    Generate a focused java-tron exploit-validation prompt.
     """
 
     prompt = f"""# SECURITY AUDIT PROMPT
@@ -204,18 +487,18 @@ def audit_format(security_question: str) -> str:
 
 ## Rules
 - Use existing repo context only. Analyze only this question and scoped impact.
-- Attacker is unprivileged only: any EOA or attacker-deployed contract using public entry points directly or via Operator/gateways, flash loans, own tokens/fake pools/fake vTokens as arguments, front-running, donations, and AMM trades.
-- Attacker is not governor, guardian, keeper, fee collector, proxy admin, oracle operator, or LayerZero endpoint/relayer/trusted remote. Reject malicious-peer, malicious-node, and malicious-bridge premises.
-- Reject incorrect third-party oracle data (same-transaction manipulation is allowed), governance parameter choices, centralization, stablecoin depeg, Sybil, gas/unbounded-loop DoS, best practices, and issues already in audits/.
-- Reject test/mock/script/deploy/dependencies-only and config-only findings.
-- Focus on real impact: direct theft of user funds, protocol insolvency, permanent freezing of funds, theft or freezing of unclaimed yield, or temporary freezing of funds.
+- Attacker is unprivileged only: anyone who funds a TRON address and broadcasts signed transactions, deploys and calls their own smart contract, issues their own asset or order, or sends anonymous HTTP/gRPC/JSON-RPC requests to a public FullNode. No SR, witness, committee member, node operator, database access, or foreign-key access.
+- Reject malicious-SR, malicious-witness, malicious-committee, malicious-peer, malicious-node, p2p/gossip/sync, network-level DoS or request flooding, leaked-key, and misconfiguration-only paths.
+- Reject 51%-style, sybil and centralization claims, economic-design critique, self-harm (attacker only damages their own account), and monitoring, CLI/toolkit, logging, deployment, dependency-only, and test/mock/generated/config-only findings.
+- Reject generic unbounded-allocation or storage-growth claims with no concrete submitted payload and no broken invariant.
+- Focus on real chain impact: an unauthorized operation on an account whose key the attacker lacks, direct theft or permanent freezing of user funds, unbacked balance or supply inflation, a node crash or halt while applying a block, an unintended chain split between honest nodes, private-key or secret disclosure, remote code execution, or a public RPC/HTTP API the node can no longer serve.
 
 ## Validate
-- Trace the exact reachable path from a public entry point (deposit, withdraw, issue, repay, liquidate, swap, leverage, flashRepay, sendFrom, claimRewards, claim, gateway, Operator.execute) into the affected function.
-- Check whether modifiers, _revertIfLocked, the final health check, supply caps, nonReentrant, SynthContext sender checks, or pause/shutdown flags already stop it.
-- Confirm it works against the current deployed configuration, not only with an unusual governor setting.
-- Accept only a concrete loss, insolvency, or freeze with a quantified amount.
-- Require exact file/function support and a reproducible Hardhat or Foundry fork PoC.
+- Trace the exact reachable path from the attacker's signed transaction, contract call or API request into the affected method.
+- Check whether signature and permission verification, actuator validate(), tapos/expiration/duplicate checks, bandwidth and energy metering, fork-version gating via ForkController and VMConfig, store key construction, rate limiters, or existing exception handling already stop it.
+- Confirm the path is reachable on current mainnet configuration and the active proposal/fork parameters, not only behind a disabled flag.
+- Accept only concrete unauthorized account operation, fund loss or freezing, unbacked balance, node crash or halt, chain split, key disclosure, RCE, or lasting API unavailability.
+- Require exact file/method support and a reproducible gradle JUnit or single-node block-application PoC.
 
 ## Output
 If valid, output exactly:
@@ -227,19 +510,19 @@ If valid, output exactly:
 [2-3 sentences]
 
 ### Finding Description
-[Code path, root cause, attacker inputs, exploit flow, and why existing checks fail]
+[Code path, root cause, attacker payload, exploit flow, and why checks fail]
 
 ### Impact Explanation
-[Concrete scoped impact and matching category: Theft of User Funds, Protocol Insolvency, Permanent Freezing of Funds, Theft/Freezing of Unclaimed Yield, or Temporary Freezing of Funds]
+[Concrete scoped impact and severity: Critical (unauthorized account operation, direct theft or permanent freezing of funds, unbacked balance or supply inflation, node takeover or RCE, private-key disclosure, network unable to confirm new transactions, unintended chain split requiring a hard fork) or High (RPC-API or protocol-implementation DoS from a single request or transaction, transaction-origination censorship, corruption of shared on-chain indexes)]
 
 ### Likelihood Explanation
-[Preconditions, attacker cost, feasibility, repeatability]
+[Preconditions, accounts and balance needed, feasibility, repeatability]
 
 ### Recommendation
 [Specific fix]
 
 ### Proof of Concept
-[Fork test plan with expected assertions]
+[gradle JUnit test / single-node block-application test plan with expected assertions]
 
 If invalid, output exactly:
 #NoVulnerability found for this question.
@@ -249,87 +532,9 @@ No extra text.
     return prompt
 
 
-def validation_format(report: str) -> str:
-    """
-    Generate a strict Immunefi-style validation prompt for metronome-synth security claims.
-    """
-    prompt = f"""# VALIDATION PROMPT
-
-## Security Claim
-{report}
-
-## Rules
-- Validate only the submitted claim.
-- Check SECURITY.md and Researcher.Md for scope, exclusions, and valid impact classes.
-- Do not create a new vulnerability if the submitted claim is weak or invalid.
-- Do not upgrade severity unless the provided evidence proves the higher impact.
-- Accepted severities (Immunefi smart contract program): Critical, High, and Medium. Reject Low, informational, hardening, and best-practice submissions.
-- Critical: direct theft of any user funds at rest or in motion (other than unclaimed yield), protocol insolvency, or permanent freezing of funds.
-- High: theft or permanent freezing of unclaimed yield (RewardsDistributor, MetAirdrop), or temporary freezing of funds.
-- Medium: contract fails to deliver promised returns without losing value, or griefing that damages users or the protocol with no profit to the attacker.
-- Reject if the exploit needs governor, guardian, keeper, fee collector, proxy admin, or oracle operator privileges, leaked keys, victim social engineering, or a malicious LayerZero endpoint, relayer, DVN, trusted remote, peer, or node.
-- Reject incorrect third-party oracle data, external stablecoin depeg not caused by the bug, governance/economic 51% attacks, Sybil, lack of liquidity, centralization risk, gas/unbounded-loop DoS, and DoS against project assets.
-- Reject third-party dependency bugs not reachable through Metronome code, docs/style, and test/mock/script/deploy/config-only issues.
-- Reject if already reported, exploited by the reporter, or listed in the audits/ reports.
-- A valid report must be triggerable by an unprivileged user through a public entry point, unless the claim proves escalation from that starting point.
-- Prefer #NoVulnerability over speculative reports.
-
-## Required Validation Checks
-All must pass:
-1. Exact in-scope file, contract, function, and line references.
-2. Clear root cause and broken security assumption.
-3. Reachable exploit path: preconditions -> attacker calls -> trigger -> loss, insolvency, or freeze.
-4. Modifiers, lock checks, health checks, supply caps, reentrancy guards, SynthContext sender checks, and pause/shutdown flags reviewed and shown insufficient.
-5. Concrete in-scope impact with a quantified amount, realistic likelihood, and correct severity.
-6. Reproducible Hardhat or Foundry fork PoC (mandatory per program rules; local fork only).
-7. No obvious rejection reason from SECURITY.md, known issues, privilege assumptions, or scope exclusions.
-
-## Silent Triage Questions
-Before output, internally answer:
-- Can an unprivileged user trigger this through a public entry point?
-- Does the code actually behave as claimed on the deployed version and configuration?
-- Is the loss caused by this code, not by oracle error, governance choice, or victim mistake?
-- Is the theft, insolvency, or freeze concrete and quantified rather than hypothetical?
-- Would the Metronome Immunefi triager accept the PoC?
-- What exact test would prove it?
-
-## Output
-If valid, output exactly:
-
-Audit Report
-
-## Title
-[Clear vulnerability statement] - ([File: file_path])
-
-## Summary
-[2-3 sentence summary of the bug and impact]
-
-## Finding Description
-[Exact code path, root cause, exploit flow, and why existing checks fail]
-
-## Impact Explanation
-[Concrete in-scope impact, severity rationale, and Immunefi impact category]
-
-## Likelihood Explanation
-[Attacker capability, capital needed, feasibility, repeatability]
-
-## Recommendation
-[Specific fix guidance]
-
-## Proof of Concept
-[Minimal reproducible steps or fork test plan]
-
-If invalid, output exactly:
-#NoVulnerability found for this question.
-
-Output only one of the two outcomes above. No extra text.
-"""
-    return prompt
-
-
 def scan_format(report: str) -> str:
     """
-    Generate a short cross-project analog scan prompt for metronome-synth.
+    Generate a short cross-project analog scan prompt for java-tron.
     """
     prompt = f"""# ANALOG SCAN PROMPT
 
@@ -338,34 +543,17 @@ def scan_format(report: str) -> str:
 
 ## Rules
 - Use in-scope production repo context only. Do not ask for code or claim missing files.
-- Use the external report only as a bug-class hint, not as proof. The analog must stand on Metronome's own code.
-- Attacker is unprivileged only: any EOA or attacker-deployed contract using public entry points directly or via Operator.execute/gateways, flash loans, own tokens/fake pools/fake vTokens as arguments, front-running, donations, and AMM trades.
-- Reject analogs needing governor, guardian, keeper, fee collector, proxy admin, oracle operator, or a malicious LayerZero endpoint/relayer/DVN/trusted remote, peer, or node.
-- Reject incorrect third-party oracle data (same-transaction manipulation is allowed), governance parameter choices, centralization, stablecoin depeg, Sybil, gas/unbounded-loop DoS, best practices, mocked-only paths, known audits/ issues, or no impact.
-- Ignore test/mock/script/deploy/dependencies-only and config-only code.
-
-## Map the Bug Class
-Pick the strongest reachable Metronome surface for this class, then name the exact contract and function:
-- Meta-sender / multicall / trusted forwarder: Operator.execute, getActualMsgSender, transient MSG_SENDER, SynthContext._msgSender and every modifier built on it (onlyPool, onlyIfCanMint/Burn/Seize, onlyIfSmartFarmingManager), RecurringAirdrop using msg.sender.
-- Lending collateral / vault shares / fee-on-transfer: DepositToken deposit/withdraw/transfer/transferFrom, _revertIfLocked, unlockedBalanceOf, Treasury balance delta and pull, NativeTokenGateway, VesperGateway (attacker-chosen pool_/vToken_).
-- Borrow / interest index / debt shares: DebtToken issue/mint/flashIssue/repay/repayAll, principalOf, debtIndexOf, accrueInterest, pendingInterestFee, Pool.debtPositionOf/depositOf/debtOf.
-- Liquidation math / bad debt: Pool.liquidate, quoteLiquidateOut/In/Max, maxLiquidable, debtFloorInUsd, DepositToken.seize fee split.
-- Oracle-priced swaps / price manipulation: Pool.swap, quoteSwapIn/Out, FeeProvider.swapFees, MasterOracle quotes of vault-share collateral, SmartFarmingManager._calculateLeverageDebtAmount.
-- Flash loans / leverage / zaps with external swapper: SmartFarmingManager.leverage and flashRepay, arbitrary tokenIn_, balance-delta swaps, leftover refunds, final health check, token callbacks.
-- Bridge / OFT: ProxyOFT._debitFrom/_creditTo/sendFrom, OFTCore/ComposableOFTCore receive and PT_SEND_AND_CALL, retryMessage/retryOFTReceived, SyntheticToken bridged-in/out caps.
-- Rewards index / staking checkpoints: RewardsDistributor updateBeforeMintOrBurn/updateBeforeTransfer/claimRewards, accountIndexOf fallback, DebtToken interest-growing balances.
-- Merkle airdrop: RecurringAirdrop.claim leaf encoding, claimed[] across root updates, MetAirdrop esMET lockFor.
-- Rounding / decimals / precision: WadRayMath half-up wadMul/wadDiv, fee quotes in/out, non-18-decimal collateral, repeatable rounding in the caller's favor.
-- Reentrancy / cross-contract state: ReentrancyGuardTransient per-contract slots, read-only reentrancy on debtPositionOf during token or ETH callbacks, cross-contract calls between Pool, DepositToken, DebtToken, Treasury.
-- Account list / freeze griefing: MappedEnumerableSet, MAX_TOKENS_PER_USER via dust transfers, pause/shutdown flags blocking exits.
-- Upgradeable storage: versioned storage layouts, initializers, and gaps across upgrades.
+- Use the external report only as a bug-class hint, not as proof.
+- Keep only analogs an unprivileged transaction broadcaster, contract deployer, asset issuer, order placer or anonymous API client can reach: signature and permission verification, actuator validate/execute for any broadcastable contract type, TVM opcodes, precompiles and energy metering, bandwidth accounting, stake/delegation/reward math, exchange and market order handling, capsule and store key construction, block application in Manager, or the HTTP/gRPC/JSON-RPC query paths into Wallet and TronJsonRpcImpl.
+- Reject malicious-SR, malicious-witness, malicious-committee, malicious-peer, malicious-node, p2p/sync, network-DoS, leaked-key, monitoring, CLI/toolkit, deployment, mocked-only paths, dependency-only bugs, and no-impact analogs.
+- Medium, High and Critical only; no low, or resource-only analogs.
+- Known team rejection, do not report anything like it: "The PBFT related code has not been put into use on the main TRON network, and it will not be enabled in the future. It will have little impact on the chain. So it is not supposed to be a valid issue, and the report is closed for now." Reject any analog in PBFT code (consensus/pbft, PbftManager, PbftMessageHandle, PBFT messages, interfaceOnPBFT/WalletOnPBFT, PBFT-gated solidity/confirmation paths) or in any other code that is not enabled or used on TRON mainnet.
 
 ## Validate
-- Trace the analog from a public entry point with concrete attacker calls and arguments into the named function.
-- Show which invariant breaks: identity, solvency, liquidation bounds, bridge conservation, reward accrual, or liveness.
-- Confirm modifiers, lock/health checks, supply caps, reentrancy guards, SynthContext checks, and pause flags do not already stop it on the deployed configuration.
-- Accept only direct theft of user funds, protocol insolvency, permanent freezing of funds, theft/freezing of unclaimed yield, or temporary freezing of funds.
-- Require a reproducible Hardhat or Foundry fork proof.
+- Map the bug class to the strongest reachable java-tron path from a single signed transaction, contract call or API request.
+- Confirm the code path is live on TRON mainnet; if it depends on PBFT or any disabled, unused or never-activated feature, output #NoVulnerability.
+- Prove root cause with exact file/method support.
+- Accept only concrete unauthorized account operation, theft or permanent freezing of funds, unbacked balance, node crash or halt, chain split, key disclosure, RCE, or an API the node can no longer serve.
 
 ## Output (Strict)
 If valid analog exists, output:
@@ -384,5 +572,81 @@ If not, output exactly:
 #NoVulnerability found for this question.
 
 No extra text.
+"""
+    return prompt
+
+
+def validation_format(report: str) -> str:
+    """
+    Generate a strict bounty-style validation prompt for java-tron security claims.
+    """
+    prompt = f"""# VALIDATION PROMPT
+
+## Security Claim
+{report}
+
+## Rules
+- Validate only the submitted claim.
+- Check SECURITY.md and Researcher.Md for scope, exclusions, and valid impact classes.
+- Do not create a new vulnerability if the submitted claim is weak or invalid.
+- Do not upgrade severity unless the provided evidence proves the higher impact.
+- Focus on High and Critical; reject informational, best-practice, and resource-only reports.
+- Reject malicious-SR, malicious-witness, malicious-committee, malicious-peer, malicious-node, p2p/gossip/sync, network-level DoS or request flooding, monitoring endpoints, CLI and toolkit plugins, logging, deployment and infra, dependency-only, docs/style, generated-protobuf, and test/mock/config-only issues.
+- Reject if the exploit needs super-representative, witness, committee, node-operator, database or privileged access, another user's key, victim social engineering, a non-default config, a disabled proposal flag, or anything outside what an unprivileged user can put in a signed transaction, a contract call, or an anonymous API request.
+- Reject 51%-style majority attacks, sybil and centralization claims, economic-design critique, and self-harm where the attacker only damages their own account.
+- Reject if the bug was fixed, acknowledged, or publicly disclosed already, per the eligibility rules.
+- A valid report must be triggerable by an unprivileged transaction broadcaster, contract deployer or anonymous API client, unless the claim proves escalation from that starting point.
+- The final impact must map to an in-scope category: Critical - remote code execution or node takeover, private-key or secret disclosure, unauthorized operation on an account whose key the attacker lacks, direct theft or permanent freezing of user funds, unbacked balance or supply inflation, the network unable to confirm new transactions, or an unintended chain split requiring a hard fork; High - DoS of the RPC/HTTP/JSON-RPC API or of the TRON protocol implementation from a single request or transaction, transaction-origination censorship, or corruption of shared on-chain state other users depend on.
+- Prefer #NoVulnerability over speculative reports.
+
+## Required Validation Checks
+All must pass:
+1. Exact in-scope file, class, method, and line/code references.
+2. Clear root cause and broken authorization, value-conservation, metering-integrity, determinism, or availability invariant.
+3. Reachable exploit path: preconditions (attacker accounts, TRX balance, staked resources, deployed contract, issued asset) -> signed transaction, contract call or API request -> trigger -> bad result.
+4. Existing signature and permission verification, actuator validate(), tapos/expiration/duplicate checks, bandwidth and energy metering, fork-version and VMConfig gating, store key construction, rate limiters, and exception handling reviewed and shown insufficient.
+5. Concrete in-scope High/Critical impact with realistic likelihood.
+6. Reproducible proof path: gradle JUnit PoC against the real classes, or exact steps in a single-node block-application flow.
+7. No obvious rejection reason from SECURITY.md, known issues, privilege assumptions, or scope exclusions.
+
+## Silent Triage Questions
+Before output, internally answer:
+- Can an ordinary user trigger this by broadcasting a transaction, deploying or calling a contract, or sending one anonymous API request, without SR, committee, node-operator, or foreign-key access?
+- Does the code actually behave as claimed on current mainnet configuration and active fork parameters?
+- Is the impact caused by this code, not by a privileged actor, a peer, or a dependency?
+- Is the fund loss, unauthorized operation, crash, split or API outage concrete rather than hypothetical, and does it harm someone other than the attacker?
+- Would a TRON triager accept the proof-of-concept?
+- What exact test would prove it?
+
+## Output
+If valid, output exactly:
+
+Audit Report
+
+## Title
+[Clear vulnerability statement] - ([File: file_path])
+
+## Summary
+[2-3 sentence summary of the bug and impact]
+
+## Finding Description
+[Exact code path, root cause, exploit flow, and why existing checks fail]
+
+## Impact Explanation
+[Concrete in-scope impact, severity rationale, and TRON bounty category]
+
+## Likelihood Explanation
+[Attacker capability, accounts and balance required, feasibility, repeatability]
+
+## Recommendation
+[Specific fix guidance]
+
+## Proof of Concept
+[Minimal reproducible steps or gradle JUnit / single-node block-application test plan]
+
+If invalid, output exactly:
+#NoVulnerability found for this question.
+
+Output only one of the two outcomes above. No extra text.
 """
     return prompt
